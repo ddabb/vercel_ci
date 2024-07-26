@@ -3,7 +3,7 @@ import http from 'http';
 export default async function handler(request, response) {
     try {
         const weatherData = await new Promise((resolve, reject) => {
-            https.get('https://t.weather.itboy.net/api/weather/city/101010100', (res) => {
+            http.get('http://t.weather.itboy.net/api/weather/city/101010100', (res) => {
                 let data = '';
 
                 // A chunk of data has been received.
