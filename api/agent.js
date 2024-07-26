@@ -1,5 +1,5 @@
 import https from 'https';
-
+const xml2js = require('xml2js');
 async function sendRequest(content) {
   try {
     // 定义请求的配置对象
@@ -68,10 +68,26 @@ async function sendRequest(content) {
 }
 
 export default async function handler(request, response) {
+
+
   try {
-    const content = '我从上午十点玩到下午一点';
-    const result = await sendRequest(content);
-    response.status(200).send(result);
+
+    request.on('data', (chunk) => {
+        body += chunk.toString(); // 转换Buffer到string
+    });
+    request.on('end', async () => {
+        try {
+            const parsedXML = await xml2js.parseStringPromise(body, { explicitArray: false });
+            const { Content } = parsedXML.xml;
+            const res = await sendRequest(Content);
+            response.status(200).send(res);
+        } catch (err) {
+            console.error('Error parsing XML:', err);
+            response.status(500).send('Error parsing XML');
+        }
+    });
+
+  
   } catch (error) {
     response.status(500).send(`sendRequest发生内部服务器错误。${error.message}`);
   }
