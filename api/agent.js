@@ -78,7 +78,8 @@ export default async function handler(request, response) {
     request.on('end', async () => {
         try {
             const parsedXML = await xml2js.parseStringPromise(body, { explicitArray: false });
-            const { Content } = parsedXML.xml;
+           
+            const Content = parsedXML.xml;
             const res = await sendRequest(Content);
             response.status(200).send(res);
         } catch (err) {
