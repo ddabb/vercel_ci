@@ -1,4 +1,4 @@
-import https from 'https';
+import http from 'http';
 
 export default async function handler(request, response) {
     try {
