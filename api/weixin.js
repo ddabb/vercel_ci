@@ -17,7 +17,7 @@ export default function handler(request, response) {
         });
 
 
-    } else {
+    } else if(request.method === 'POST'){
         response.status(200).send(` ${request.method} Hello World!`);
     }
 }
