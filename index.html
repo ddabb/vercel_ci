@@ -10,8 +10,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
     <style>
         body {
-            padding-top: 70px;
-            /* Offset for fixed navbar */
+            padding-top: 70px; /* Offset for fixed navbar */
         }
 
         .navbar {
@@ -30,11 +29,39 @@
             margin-right: 5px;
         }
 
+        .content-section {
+            margin-top: 2rem;
+        }
+
+        .content-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .content-list li {
+            margin-bottom: 0.5rem;
+        }
+
+        .content-list a {
+            display: inline-flex;
+            align-items: center;
+        }
+
+        .content-list a i {
+            margin-right: 0.5rem;
+        }
+
         footer {
             margin-top: 3rem;
             padding-top: 1rem;
             padding-bottom: 1rem;
             border-top: 1px solid #e9ecef;
+        }
+
+        @media (max-width: 767px) {
+            .content-section {
+                margin-top: 4rem; /* Increase the offset on smaller screens */
+            }
         }
     </style>
 </head>
@@ -66,43 +93,40 @@
             </div>
         </nav>
     </header>
-    <main>
-        <div class="container">
-            <div class="row mt-5">
-                <div class="col-md-8">
-                    <div class="card mb-4">
-                        <div class="card-body">
-                            <h3>文章区</h3>
-                            <p>这里是文章区，你可以阅读各种类型的文章。</p>
-                            <h3>文章列表</h3>
-                            <ul>
-                                <li><a href="html/articles/artcles1.html" target="_blank"><i
-                                            class="bi bi-file-text"></i> 文章一</a></li>
-                                <li><a href="html/articles/artcile2.html" target="_blank"><i
-                                            class="bi bi-file-text"></i> 文章二</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="card-body">
-                            <h3>内容区</h3>
-                            <p>在内容区，你可以欣赏精美的图片和摄影作品。</p>
-                        </div>
+    <main class="container">
+        <div class="content-section row mt-5">
+            <div class="col-md-8">
+                <div class="card mb-4">
+                    <div class="card-body">
+                        <h3>文章区</h3>
+                        <p>这里是文章区，你可以阅读各种类型的文章。</p>
+                        <h3 class="mt-4">文章列表</h3>
+                        <ul class="content-list">
+                            <li><a href="html/articles/artcles1.html" target="_blank"><i class="bi bi-file-text"></i> 文章一</a></li>
+                            <li><a href="html/articles/artcile2.html" target="_blank"><i class="bi bi-file-text"></i> 文章二</a></li>
+                        </ul>
                     </div>
                 </div>
-                <div class="col-md-4">
-                    <div class="card">
-                        <div class="card-body">
-                            <h3>在线工具</h3>
-                            <p>功能区提供了丰富的工具和服务，满足你的各种需求。</p>
-                            <h3>功能列表</h3>
-                            <ul>
-                                <li><a href="html/funs/oddEven.html" target="_blank"><i class="bi bi-calculator"></i>
-                                        判断奇数偶数</a></li>
-                                <li><a href="html/funs/leapyear.html" target="_blank"><i class="bi bi-tools"></i>
-                                        判断是否是闰年</a></li>
-                            </ul>
-                        </div>
+                <div class="card">
+                    <div class="card-body">
+                        <h3>网站计划</h3>
+                        <p>该站点创建的初衷是提供一个公众号自动回复消息的功能，以便于更好的支持微信公众号《60分加油站》的运营。然而，我发现运营微信公众号和个人网站是两个不同的领域，因此我决定建立一个独立的网站。我之前有使用hexo搭建网站的经验，所以这次我想尝试一些新的东西。</p>
+                        <p>这个网站将主要记录自助台球店的相关事宜，分享一些图片，以及一些实用的小功能。它将是一个纯粹的静态网站，因此我甚至没有购买ECS云空间，这只是我的个人兴趣和尝试。</p>
+                        <p>将来，我计划为网站增加一些小游戏，如2024、数独和五子棋。由于这些游戏不需要记忆功能，实现起来相对简单。</p>
+                        <p>我的另一个目标是完成一个流水布局来预览图片，这需要我学习更多的CSS技巧。我还希望实现一个websocket聊天机器人，为网站的访问者提供更好的交互体验。</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h3>在线工具</h3>
+                        <p>功能区提供了丰富的工具和服务，满足你的各种需求。</p>
+                        <h3 class="mt-4">功能列表</h3>
+                        <ul class="content-list">
+                            <li><a href="html/funs/oddEven.html" target="_blank"><i class="bi bi-calculator"></i> 判断奇数偶数</a></li>
+                            <li><a href="html/funs/leapyear.html" target="_blank"><i class="bi bi-tools"></i> 判断是否是闰年</a></li>
+                        </ul>
                     </div>
                 </div>
             </div>
