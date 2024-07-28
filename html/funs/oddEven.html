@@ -1,31 +1,49 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
-    <meta charset="utf-8">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>奇偶数判断</title>
+<script>
+// 定义一个函数来发送请求并处理响应
+async function checkOddEven() {
+  // 获取用户输入的数字
+  const numberInput = document.getElementById('numberInput').value;
+  try {
+    // 发送POST请求到服务器端点
+    const response = await fetch('/api/oddEven', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({ body: parseInt(numberInput, 10) })
+    });
+
+    // 解析响应
+    const data = await response.json();
+
+    // 更新页面上的内容
+    document.getElementById('result').textContent = data.message;
+  } catch (error) {
+    console.error('Error:', error);
+    document === '发生错误，请重试';
+  }
+}
+
+// 为输入框添加输入事件监听器
+document.getElementById('numberInput').addEventListener('input', checkOddEven);
+</script>
 </head>
-
 <body>
-    <input type="text" id="num" placeholder="请输入大于0的整数" title="请输入大于0的整数" />
-    <script>
-        const input = document.getElementById('num');
-        input.addEventListener('input', event => {
-            const num = event.target.value;
-            if (num === '') {
-                return;
-            } else if (/^\d+$/.test(num) && num > 0) {
-                const script = document.createElement('script');
-                // 重构：将./js/oddEven.js 修改为正确的路径./api/oddEven.js 
-                script.src = './api/oddEven.js';
-                script.onload = () => {
-                    app.checkOddEven(num);
-                };
-                document.body.appendChild(script);
-            } else {
-              alert("请输入大于0的整数"); 
-            }
-        });
-    </script>
-</body>
 
+<h1>奇偶数判断</h1>
+
+<!-- 创建一个输入框 -->
+<label for="numberInput">请输入一个数字:</label>
+<input type="text" id="numberInput" placeholder="输入数字">
+
+<!-- 显示结果的区域 -->
+<p id="result"></p>
+
+</body>
 </html>
