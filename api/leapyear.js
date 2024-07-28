@@ -32,7 +32,7 @@ export default async function handler(request, response) {
                     response.status(200).json({ message: isLeapYear? '闰年' : '平年' });
                 } catch (parseError) {
                     console.error("JSON 解析错误:", parseError);
-                    response.status(400).json({ error: '请求体格式不正确' });
+                    response.status(400).json({ error: `请求体格式不正确${body}` });
                 }
             });
         } catch (error) {

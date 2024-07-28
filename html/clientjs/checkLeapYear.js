@@ -1,6 +1,6 @@
 let controller; // 声明在函数作用域外，以便可以被清除
 
-function checkOddEven() {
+function checkLeapYear() {
   // 创建一个新的 AbortController 实例，用于控制 fetch 请求
   controller = new AbortController();
   const signal = controller.signal;
