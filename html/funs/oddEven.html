@@ -4,18 +4,45 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>奇偶数判断</title>
+<style>
+  body, html {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, sans-serif;
+  }
+
+  .container {
+    text-align: center;
+  }
+
+  #numberInput {
+    width: 200px; /* 你可以根据需要调整宽度 */
+    padding: 10px;
+    margin-bottom: 10px;
+  }
+
+  #result {
+    margin-top: 10px;
+  }
+</style>
 <script src="../clientjs/checkOddEven.js"></script>
 </head>
 <body>
 
-<h1>奇偶数判断</h1>
+<div class="container">
+  <h1>奇偶数判断</h1>
 
-<!-- 创建一个输入框 -->
-<label for="numberInput">请输入一个数字：</label>
-<input type="text" id="numberInput" placeholder="输入数字" onchange="checkOddEven()">
+  <!-- 创建一个输入框 -->
+  <label for="numberInput">请输入一个数字：</label>
+  <input type="text" id="numberInput" placeholder="输入数字" oninput="checkOddEven()">
 
-<!-- 显示结果的区域 -->
-<p id="result"></p>
+  <!-- 显示结果的区域 -->
+  <p id="result"></p>
+</div>
 
 </body>
 </html>
