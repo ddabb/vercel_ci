@@ -26,7 +26,7 @@ async function checkOddEven() {
     document.getElementById('result').textContent = data.message;
   } catch (error) {
     console.error('Error:', error);
-    document === '发生错误，请重试';
+    document.getElementById('result').innerHTML = '发生错误，请重试';
   }
 }
 
@@ -39,7 +39,7 @@ document.getElementById('numberInput').addEventListener('input', checkOddEven);
 <h1>奇偶数判断</h1>
 
 <!-- 创建一个输入框 -->
-<label for="numberInput">请输入一个数字:</label>
+<label for="numberInput">请输入一个数字：</label>
 <input type="text" id="numberInput" placeholder="输入数字">
 
 <!-- 显示结果的区域 -->
