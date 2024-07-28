@@ -24,7 +24,7 @@ function checkOddEven() {
     headers: {
       "Content-Type": "application/json",
     },
-    body: JSON.stringify({ number: parseInt(numberInput, 10) }), // 将数字作为整数发送
+    body: JSON.stringify({ number: numberInput }), // 假设 numberInput 是一个字符串
     signal: signal,
   })
     .then(response => {
