@@ -48,7 +48,7 @@ export default async function handler(request, response) {
           const data = await parseXML(body);
 
           // 打印解析后的数据以检查
-          console.log('Parsed data:', data);
+          console.info('Parsed data:', data);
 
           if (data.xml && data.xml.MsgType && data.xml.MsgType[0] === 'text') {
             await handleTextMessage(data.xml, response);
@@ -78,7 +78,7 @@ async function handleTextMessage(message, response) {
   const fromUserName = message.FromUserName[0];
   const content = message.Content[0];
 
-  console.log(`Received text message from ${fromUserName}: ${content}`);
+  console.info(`Received text message from ${fromUserName}: ${content}`);
   const reply = `
     <xml>
     <ToUserName><![CDATA[${toUserName}]]></ToUserName>
@@ -88,7 +88,7 @@ async function handleTextMessage(message, response) {
     <Content><![CDATA[已收到您的消息：${content}]]></Content>
   </xml>`;
 
-
+  console.info(`回复消息内容为 ${reply}`);
   response.writeHead(200, { 'Content-Type': 'application/xml' });
   response.end(reply);
 }
