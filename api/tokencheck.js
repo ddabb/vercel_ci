@@ -79,8 +79,7 @@ async function handleTextMessage(message, response) {
   const content = message.Content[0];
 
   console.log(`Received text message from ${fromUserName}: ${content}`);
-
-  const reply = `<?xml version="1.0" encoding="UTF-8"?>  
+  const reply = `
     <xml>
     <ToUserName><![CDATA[${toUserName}]]></ToUserName>
     <FromUserName><![CDATA[${fromUserName}]]></FromUserName>
@@ -88,6 +87,7 @@ async function handleTextMessage(message, response) {
     <MsgType><![CDATA[text]]></MsgType>
     <Content><![CDATA[已收到您的消息：${content}]]></Content>
   </xml>`;
+
 
   response.writeHead(200, { 'Content-Type': 'application/xml' });
   response.end(reply);
