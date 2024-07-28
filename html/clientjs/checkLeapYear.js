@@ -18,7 +18,6 @@ function checkLeapYear() {
     return;
   }
 
-  // 如果输入是正整数，继续执行
   fetch("/api/leapyear", {
     method: "POST",
     headers: {
@@ -29,7 +28,10 @@ function checkLeapYear() {
   })
     .then(response => {
       if (!response.ok) {
-        throw new Error(`HTTP error! status: ${response.status}`);
+        // 尝试获取更多的错误详情
+        return response.text().then(text => {
+          throw new Error(`HTTP error! status: ${response.status}, message: ${text}`);
+        });
       }
       return response.json();
     })
@@ -40,8 +42,8 @@ function checkLeapYear() {
       if (error.name === "AbortError") {
         console.log("Fetch aborted");
       } else {
-        console.error("Error:", error);
-        updateUI({ message: "发生错误，请重试" }, numberInput); // 传递 numberInput 给 updateUI
+        console.error("Error:", error.message); // 输出具体的错误信息
+        updateUI({ message: error.message }, numberInput); // 传递具体的错误信息给 updateUI
       }
     });
 }
