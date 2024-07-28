@@ -42,3 +42,9 @@ function checkOddEven() {
       }
     });
 }
+
+function updateUI(data, numberInput) {
+  const resultElement = document.getElementById("result");
+  resultElement.textContent = `你输入的 ${numberInput} 是一个 ${data.message}`;
+  resultElement.style.color = data.message === "奇数" ? "blue" : "green";
+}
