@@ -1,10 +1,9 @@
-const express = require('express');
-const app = express();
+export default async function handler(request, response) {
+  try {
 
-app.get('/', (req, res) => {
-  res.send('欢迎来到 60score.com');
-});
-
-app.listen(3000, () => {
-  console.log('服务器运行在 http://localhost:3000');
-});
+    response.status(200).send('欢迎来到 60score.com');
+  } catch (error) {
+    console.error('捕获到全局错误:', error.message);
+    response.status(500).send(`发生内部服务器错误。${error.message}`);
+  }
+}
