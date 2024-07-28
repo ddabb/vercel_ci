@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>判断是否是闰年</title>
+<style>
+  body, html {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, sans-serif;
+  }
+
+  .container {
+    text-align: center;
+  }
+
+  #numberInput {
+  width: 300px; /* 增加宽度 */
+  padding: 15px; /* 增加内边距 */
+  margin-bottom: 10px;
+}
+
+  #result {
+    margin-top: 10px;
+  }
+</style>
+<script src="../clientjs/checkLeapYear.js"></script>
+</head>
+<body>
+
+<div class="container">
+  <h1>判断是否是闰年</h1>
+
+  <!-- 创建一个输入框 -->
+  <label for="numberInput">请输入一个数字：</label>
+  <input type="text" id="numberInput" placeholder="输入数字" oninput="checkOddEven()">
+
+  <!-- 显示结果的区域 -->
+  <p id="result"></p>
+</div>
+
+</body>
+</html>
