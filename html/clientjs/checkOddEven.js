@@ -21,30 +21,24 @@ function checkOddEven() {
     headers: {
       "Content-Type": "application/json",
     },
-    body: JSON.stringify({ body: BigInt(numberInput) }),
+    body: JSON.stringify({ body: numberInput.toString() }), // 将BigInt转换为字符串
     signal: signal,
   })
-  .then(response => {
-    if (!response.ok) {
-      throw new Error(`HTTP error! status: ${response.status}`);
-    }
-    return response.json();
-  })
-  .then(data => {
-    updateUI(data, numberInput);
-  })
-  .catch(error => {
-    if (error.name === "AbortError") {
-      console.log("Fetch aborted");
-    } else {
-      console.error("Error:", error);
-      updateUI({ message: "发生错误，请重试" }, numberInput);
-    }
-  });
-}
-
-function updateUI(data, numberInput) {
-  const resultElement = document.getElementById("result");
-  resultElement.textContent = `你输入的 ${numberInput} 是一个 ${data.message}`;
-  resultElement.style.color = data.message === "奇数" ? "blue" : "green";
+    .then(response => {
+      if (!response.ok) {
+        throw new Error(`HTTP error! status: ${response.status}`);
+      }
+      return response.json();
+    })
+    .then(data => {
+      updateUI(data, numberInput);
+    })
+    .catch(error => {
+      if (event.name === "AbortError") {
+        console.log("Fetch aborted");
+      } else {
+        console.error("Error:", error);
+        updateUI({ message: "发生错误，请重试" }, numberInput);
+      }
+    });
 }
