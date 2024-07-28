@@ -1,41 +1,39 @@
-let controller = new AbortController();
-let signal = controller.signal;
-
 function checkOddEven() {
+  const controller = new AbortController();
+  const signal = controller.signal;
+
   // 清除之前的控制器，防止内存泄漏
   if (controller) {
     controller.abort();
   }
 
-  controller = new AbortController();
-  signal = controller.signal;
-
   const numberInput = document.getElementById("numberInput").value;
-  const number = parseInt(numberInput, 10);
 
-  if (isNaN(number)) {
-    updateUI({ message: "请输入一个有效的整数" }, numberInput);
+  // 使用正则表达式验证输入是否为正整数
+  if (!/^\d+$/.test(numberInput)) {
+    updateUI({ message: "请输入一个正整数" }, numberInput);
     return;
   }
 
+  // 如果输入是正整数，继续执行
   fetch("/api/oddEven", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
     },
-    body: JSON.stringify({ number }),
+    body: JSON.stringify({ body: BigInt(numberInput) }),
     signal: signal,
   })
- .then(response => {
+  .then(response => {
     if (!response.ok) {
       throw new Error(`HTTP error! status: ${response.status}`);
     }
     return response.json();
   })
- .then(data => {
+  .then(data => {
     updateUI(data, numberInput);
   })
- .catch(error => {
+  .catch(error => {
     if (error.name === "AbortError") {
       console.log("Fetch aborted");
     } else {
@@ -47,12 +45,6 @@ function checkOddEven() {
 
 function updateUI(data, numberInput) {
   const resultElement = document.getElementById("result");
-  if (data.message === "奇数" || data.message === "偶数") {
-    resultElement.textContent = `你输入的 ${numberInput} 是一个 ${data.message}`;
-    resultElement.style.setProperty('color', data.message === "奇数"? "blue" : "green");
-  } else {
-    resultElement.textContent = data.message;
-    resultElement.style.setProperty('color', "red");
-  }
- 
+  resultElement.textContent = `你输入的 ${numberInput} 是一个 ${data.message}`;
+  resultElement.style.color = data.message === "奇数" ? "blue" : "green";
 }
