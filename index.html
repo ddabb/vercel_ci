@@ -2,65 +2,83 @@
 <html lang="zh-CN">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>60score.com</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>60score.com</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 
 <body>
-    <h1>欢迎来到 60score.com</h1>
-    <div class="container">
-        <div class="row">
-            <div class="article col-md-4">
-                <h2>文章区</h2>
-                <p>这里是文章区，你可以阅读各种类型的文章。</p>
+  <h1>欢迎来到 60score.com</h1>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4">
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h3 class="panel-title">文章区</h3>
+          </div>
+          <div class="panel-body">
+            <p>这里是文章区，你可以阅读各种类型的文章。</p>
+            <div class="articles">
+              <h3>文章列表</h3>
+              <ul>
+                <li><a href="html/articles/article1.html" target="_blank">文章一</a></li>
+                <li><a href="html/articles/article2.html" target="_blank">文章二</a></li>
+              </ul>
             </div>
-                <div class="content col-md-4">
-                <h2>内容区</h2>
-                <p>在照片区，你可以欣赏精美的图片和摄影作品。</p>
-                <div class="articles">
-                    <h3>文章列表</h3>
-                    <ul>
-                    <li><a href="html/articles/arsicle1.html" target="_blank">文章一</a></li>
-                    <li><a href="html/articles/arsicle2.html" target="_blank">文章二</a></li>
-                    </ul>
-                </div>
-                <div class="funs">
-                    <h3>功能列表</h3>
-                    <ul>
-                    <li><a href="html/funs/oddEven.html" target="_blank">判断奇数偶数</a></li>
-                    <li><a href="html/funs/function2.html" target="_blank">功能二</a></li>
-                    </ul>
-                </div>
-                </div>
-     
-            </div>
-            <div class="function col-md-4">
-                <h2>功能区</h2>
-                <p>功能区提供了丰富的工具和服务，满足你的各种需求。</p>
-            </div>
-
+          </div>
         </div>
+      </div>
+      <div class="col-md-4">
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h3 class="panel-title">内容区</h3>
+          </div>
+          <div class="panel-body">
+            <p>在内容区，你可以欣赏精美的图片和摄影作品。</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h3 class="panel-title">功能区</h3>
+          </div>
+          <div class="panel-body">
+            <p>功能区提供了丰富的工具和服务，满足你的各种需求。</p>
+            <div class="funs">
+              <h3>功能列表</h3>
+              <ul>
+                <li><a href="html/funs/oddEven.html" target="_blank">判断奇数偶数</a></li>
+                <li><a href="html/funs/function2.html" target="_blank">功能二</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <div class="container">
-            <a class="navbar-brand" href="#">60score.com</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <a class="nav-link" href="html/jieshao.html">网站介绍</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="html/xingqu.html">兴趣爱好</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
+  </div>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+      <a class="navbar-brand" href="#">60score.com</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="html/jieshao.html">网站介绍</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="html/xingqu.html">兴趣爱好</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.min.js"></script>
 </body>
 
 </html>
