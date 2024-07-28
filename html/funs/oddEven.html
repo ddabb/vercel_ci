@@ -6,7 +6,7 @@
 </head>
 
 <body>
-    <input type="text" id="num" />
+    <input type="text" id="num" placeholder="请输入大于0的整数" title="请输入大于0的整数" />
     <script>
         const input = document.getElementById('num');
         input.addEventListener('input', event => {
@@ -15,11 +15,14 @@
                 return;
             } else if (/^\d+$/.test(num) && num > 0) {
                 const script = document.createElement('script');
-                script.src = './js/oddEven.js';
+                // 重构：将./js/oddEven.js 修改为正确的路径./api/oddEven.js 
+                script.src = './api/oddEven.js';
                 script.onload = () => {
                     app.checkOddEven(num);
                 };
                 document.body.appendChild(script);
+            } else {
+              alert("请输入大于0的整数"); 
             }
         });
     </script>
