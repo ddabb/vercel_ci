@@ -17,16 +17,42 @@
 
   .container {
     text-align: center;
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+
+  h1 {
+    margin-bottom: 20px;
   }
 
   #numberInput {
-  width: 300px; /* 增加宽度 */
-  padding: 15px; /* 增加内边距 */
-  margin-bottom: 10px;
-}
+    width: 300px;
+    padding: 15px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
 
   #result {
-    margin-top: 10px;
+    margin-top: 20px;
+    font-size: 1.2em;
+    color: #333;
+  }
+
+  .back-button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  .back-button:hover {
+    background-color: #0056b3;
   }
 </style>
 <script src="../clientjs/checkOddEven.js"></script>
@@ -42,7 +68,16 @@
 
   <!-- 显示结果的区域 -->
   <p id="result"></p>
+
+  <!-- 返回按钮 -->
+  <button class="back-button" onclick="goBack()">返回首页</button>
 </div>
+
+<script>
+  function goBack() {
+    window.location.href = 'index.html';
+  }
+</script>
 
 </body>
 </html>
