@@ -23,7 +23,7 @@ function checkLeapYear() {
     headers: {
       "Content-Type": "application/json",
     },
-    body: JSON.stringify({ number: numberInput }), // 假设 numberInput 是一个字符串
+    body: JSON.stringify({ number: numberInput.toString() }), // 确保 numberInput 是字符串
     signal: signal,
   })
     .then(response => {
