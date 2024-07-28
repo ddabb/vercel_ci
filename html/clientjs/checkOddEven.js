@@ -1,27 +1,58 @@
-// 定义一个函数来发送请求并处理响应
-async function checkOddEven() {
-  // 获取用户输入的数字
-  const numberInput = document.getElementById("numberInput").value;
+let controller = new AbortController();
+let signal = controller.signal;
 
-  try {
-    // 发送 POST 请求到服务器端点
-    const response = await fetch("/api/oddEven", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({ number: parseInt(numberInput, 10) }), 
-    });
-
-    // 解析响应
-    const data = await response.json();
-
-    // 更新页面上的内容
-    const resultElement = document.getElementById("result"); 
-    resultElement.textContent = `你输入的 ${numberInput} 是一个${data.message}`; 
-    resultElement.style.color = data.message === "奇数"? "red" : "green"; 
-  } catch (error) {
-    console.error("Error:", error);
-    document.getElementById("result").innerHTML = "发生错误，请重试";
+function checkOddEven() {
+  // 清除之前的控制器，防止内存泄漏
+  if (controller) {
+    controller.abort();
   }
+
+  controller = new AbortController();
+  signal = controller.signal;
+
+  const numberInput = document.getElementById("numberInput").value;
+  const number = parseInt(numberInput, 10);
+
+  if (isNaN(number)) {
+    updateUI({ message: "请输入一个有效的整数" }, numberInput);
+    return;
+  }
+
+  fetch("/api/oddEven", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({ number }),
+    signal: signal,
+  })
+ .then(response => {
+    if (!response.ok) {
+      throw new Error(`HTTP error! status: ${response.status}`);
+    }
+    return response.json();
+  })
+ .then(data => {
+    updateUI(data, numberInput);
+  })
+ .catch(error => {
+    if (error.name === "AbortError") {
+      console.log("Fetch aborted");
+    } else {
+      console.error("Error:", error);
+      updateUI({ message: "发生错误，请重试" }, numberInput);
+    }
+  });
+}
+
+function updateUI(data, numberInput) {
+  const resultElement = document.getElementById("result");
+  if (data.message === "奇数" || data.message === "偶数") {
+    resultElement.textContent = `你输入的 ${numberInput} 是一个 ${data.message}`;
+    resultElement.style.setProperty('color', data.message === "奇数"? "blue" : "green");
+  } else {
+    resultElement.textContent = data.message;
+    resultElement.style.setProperty('color', "red");
+  }
+ 
 }
