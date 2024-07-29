@@ -67,9 +67,15 @@ export default async function handler(request, response) {
                         if (res.statusCode === 200) {
                             try {
                                 const responseData = JSON.parse(data);
-                                // 提取第一个 content 字段
-                                const firstContent = responseData.choices[0].message.content[0].text;
-                                response.status(200).send(firstContent);
+                                if (responseData.choices && responseData.choices.length > 0 &&
+                                    responseData.choices[0].message && responseData.choices[0].message.content &&
+                                    responseData.choices[0].message.content.length > 0) {
+                                    const firstContent = responseData.choices[0].message.content[0].text;
+                                    response.status(200).send(firstContent);
+                                } else {
+                                    console.error('响应数据格式不正确');
+                                    response.status(500).send('响应数据格式不正确');
+                                }
                             } catch (error) {
                                 console.error('解析响应数据时出现问题:', error.message);
                                 response.status(500).send(`解析响应数据时出现问题: ${error.message}`);
