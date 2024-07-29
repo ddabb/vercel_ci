@@ -2,42 +2,63 @@
 <html>
 
 <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="UTF-8">
     <title>聊天机器人</title>
     <style>
-     .chat-container {
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+        }
+
+        .chat-container {
             display: flex;
             flex-direction: column;
             max-width: 600px;
-            margin: 0 auto;
+            margin: 20px auto;
+            background-color: white;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
         }
 
-     .message-list {
+        .message-list {
             flex-grow: 1;
             padding: 10px;
             overflow-y: auto;
         }
 
-     .message {
+        .message {
             margin-bottom: 10px;
             padding: 5px;
             border-radius: 5px;
         }
 
-     .message:last-child {
+        .message:last-child {
             margin-bottom: 0;
         }
 
-     .user-message {
+        .user-message {
             text-align: right;
             background-color: #e1ffc7;
         }
 
-     .bot-message {
+        .bot-message {
             background-color: #c7e1ff;
         }
 
-     .input-container {
+        .input-container {
             display: flex;
             padding: 10px;
             border-top: 1px solid #ccc;
@@ -63,6 +84,23 @@
 
         button:hover {
             background-color: #0056b3;
+        }
+
+        /* 响应式设计 */
+        @media (max-width: 600px) {
+            .chat-container {
+                width: 100%;
+                margin: 10px 0;
+            }
+
+            .input-container {
+                flex-direction: column;
+            }
+
+            input[type="text"], button {
+                width: 100%;
+                margin: 5px 0;
+            }
         }
     </style>
 </head>
@@ -94,11 +132,17 @@
             if (message) {
                 const chatOutput = document.getElementById('chatOutput');
                 const userMessageElement = document.createElement('div');
-                userMessageElement.className = 'essage user-message';
+                userMessageElement.className = 'message user-message';
                 userMessageElement.innerHTML = `<p>${message}</p>`;
                 chatOutput.appendChild(userMessageElement);
 
                 messageInput.value = ''; // 清空输入框
+
+                // 显示思考提示
+                const thinkingMessage = document.createElement('div');
+                thinkingMessage.className = 'message bot-message';
+                thinkingMessage.innerHTML = '<p>机器人正在思考...</p>';
+                chatOutput.appendChild(thinkingMessage);
 
                 // 发送请求到API
                 fetch('/api/aichat', {
@@ -108,14 +152,17 @@
                     },
                     body: JSON.stringify({ message: message })
                 })
-             .then(response => response.text())
-             .then(data => {
+                .then(response => response.text())
+                .then(data => {
+                    // 移除思考提示
+                    chatOutput.removeChild(thinkingMessage);
+
                     const botMessageElement = document.createElement('div');
-                    botMessageElement.className = 'essage bot-message';
+                    botMessageElement.className = 'message bot-message';
                     botMessageElement.innerHTML = `<p>${data}</p>`;
                     chatOutput.appendChild(botMessageElement);
                 })
-             .catch(error => {
+                .catch(error => {
                     console.error('Error:', error);
                 });
             }
@@ -130,3 +177,5 @@
         });
     </script>
 </body>
+
+</html>
