@@ -63,6 +63,7 @@ export default async function handler(request, response) {
                     });
 
                     // 所有数据片段接收完毕
+                    // 所有数据片段接收完毕
                     res.on('end', () => {
                         if (res.statusCode === 200) {
                             try {
@@ -70,7 +71,7 @@ export default async function handler(request, response) {
                                 if (responseData.choices && responseData.choices.length > 0 &&
                                     responseData.choices[0].message && responseData.choices[0].message.content &&
                                     responseData.choices[0].message.content.length > 0) {
-                                    const firstContent = responseData.choices[0].message.content[0].text;
+                                    const firstContent = responseData.choices[0].message.content; // 直接访问 content 属性
                                     response.status(200).send(firstContent);
                                 } else {
                                     console.error('响应数据格式不正确');
