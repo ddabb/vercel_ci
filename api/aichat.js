@@ -65,7 +65,15 @@ export default async function handler(request, response) {
                     // 所有数据片段接收完毕
                     res.on('end', () => {
                         if (res.statusCode === 200) {
-                            response.status(200).json(JSON.parse(data));
+                            try {
+                                const responseData = JSON.parse(data);
+                                // 提取第一个 content 字段
+                                const firstContent = responseData.choices[0].message.content[0].text;
+                                response.status(200).send(firstContent);
+                            } catch (error) {
+                                console.error('解析响应数据时出现问题:', error.message);
+                                response.status(500).send(`解析响应数据时出现问题: ${error.message}`);
+                            }
                         } else {
                             console.error('请求失败，状态码:', res.statusCode);
                             response.status(res.statusCode).send(`请求失败，状态码: ${res.statusCode}`);
