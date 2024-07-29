@@ -230,7 +230,8 @@
             { date: "2024-03-01", title: "Event 3", side: "left" },
             { date: "2024-04-01", title: "Event 4", side: "right" },
         ];
-
+        // 对事件按日期降序排序
+        events.sort((a, b) => new Date(b.date) - new Date(a.date));
         function createTimelineElement(event) {
             const eventDiv = document.createElement("div");
             eventDiv.className = `timeline-event timeline-${event.side}`;
