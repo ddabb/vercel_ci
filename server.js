@@ -4,11 +4,21 @@ const app = express();
 // 使用 express.json() 中间件来解析 JSON 请求体
 app.use(express.json());
 
-// 导入你的 oddEven 处理函数
-const oddEvenHandler = require('./app/oddEven');
+const statusHandlers = new Map([
+  [404, () => res.sendFile(path.join(__dirname, '404.html'))],
+  [500, () => res.sendFile(path.join(__dirname, '500.html'))],
 
-// 设置路由
-app.post('/api/oddEven', oddEvenHandler);
+]);
+// 错误处理中间件 - 如果没有匹配的路由，则发送 404.html
+app.use((req, res, next) => {
+  const handler = statusHandlers.get(res.statusCode);
+  if (handler) {
+    handler();
+  } else {
+    next();
+  }
+});
+
 
 // 启动服务器
 const PORT = process.env.PORT || 3000;
