@@ -148,6 +148,10 @@
                         <h3 class="mb-0">时间线</h3>
                     </div>
                     <div class="card-body">
+                        <button class="btn btn-primary" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#timeline" aria-expanded="false" aria-controls="timeline">
+                            展开/折叠时间线
+                        </button>
                         <div id="timeline" class="timeline collapse show">
                             <!-- 动态生成的内容将插入到这里 -->
                         </div>
@@ -244,18 +248,29 @@
             `;
             return eventDiv;
         }
+        async function fetchAndRenderTimeline() {
+            try {
+                const response = await fetch('/jsons/timeline.json'); // 使用相对路径
+                if (!response.ok) {
+                    throw new Error(`Failed to fetch timeline data: ${response.status}`);
+                }
+                const events = await response.json();
+                // 对事件按日期降序排序
+                events.sort((a, b) => new Date(b.date) - new Date(a.date));
 
-        function renderTimeline() {
-            const timelineContainer = document.getElementById("timeline");
-            timelineContainer.innerHTML = ""; // 清空现有内容
-            events.forEach(event => {
-                const element = createTimelineElement(event);
-                timelineContainer.appendChild(element);
-            });
+                const timelineContainer = document.getElementById("timeline");
+                timelineContainer.innerHTML = ""; // 清空现有内容
+                events.forEach(event => {
+                    const element = createTimelineElement(event);
+                    timelineContainer.appendChild(element);
+                });
+            } catch (error) {
+                console.error('Error fetching or rendering timeline:', error);
+            }
         }
 
         // 初始化时间线
-        renderTimeline();
+        fetchAndRenderTimeline();
 
         // 控制时间线的折叠
         const timelineToggle = new bootstrap.Collapse('#timeline', {

@@ -1,0 +1,6 @@
+[
+    { "date": "2024-01-01", "title": "Event 1", "side": "left" },
+    { "date": "2024-02-01", "title": "Event 2", "side": "right" },
+    { "date": "2024-03-01", "title": "Event 3", "side": "left" },
+    { "date": "2024-04-01", "title": "Event 4", "side": "right" }
+]
