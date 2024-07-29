@@ -56,17 +56,25 @@
             height: 30px;
             border-radius: 50%;
             margin-right: 5px;
+            background-size: cover;
+            background-position: center;
         }
 
         .user-message {
-            text-align: right;
+            justify-content: flex-end;
             background-color: #e1ffc7;
-            flex-grow: 1;
         }
 
         .bot-message {
+            justify-content: flex-start;
             background-color: #c7e1ff;
-            flex-grow: 1;
+        }
+
+        .message-text {
+            display: inline-block;
+            max-width: 70%;
+            padding: 5px 10px;
+            border-radius: 5px;
         }
 
         .input-container {
@@ -125,7 +133,9 @@
             <div class="message-list" id="chatOutput">
                 <div class="message bot-message">
                     <div class="avatar bg-primary rounded-circle"></div>
-                    <p>您好，欢迎来到 24 小时无人自助台球厅，我是店里的机器人管家，有什么可以帮助您的吗？</p>
+                    <div class="message-text">
+                        <p>您好，欢迎来到 24 小时无人自助台球厅，我是店里的机器人管家，有什么可以帮助您的吗？</p>
+                    </div>
                 </div>
             </div>
             <div class="input-container">
@@ -145,8 +155,10 @@
                 const userMessageElement = document.createElement('div');
                 userMessageElement.className = 'message user-message';
                 userMessageElement.innerHTML = `
+                    <div class="message-text">
+                        <p>${message}</p>
+                    </div>
                     <div class="avatar bg-success rounded-circle"></div>
-                    <p>${message}</p>
                 `;
                 chatOutput.appendChild(userMessageElement);
 
@@ -157,7 +169,9 @@
                 thinkingMessage.className = 'message bot-message';
                 thinkingMessage.innerHTML = `
                     <div class="avatar bg-primary rounded-circle"></div>
-                    <p>机器人正在思考...</p>
+                    <div class="message-text">
+                        <p>机器人正在思考...</p>
+                    </div>
                 `;
                 chatOutput.appendChild(thinkingMessage);
 
@@ -178,7 +192,9 @@
                     botMessageElement.className = 'message bot-message';
                     botMessageElement.innerHTML = `
                         <div class="avatar bg-primary rounded-circle"></div>
-                        <p>${data}</p>
+                        <div class="message-text">
+                            <p>${data}</p>
+                        </div>
                     `;
                     chatOutput.appendChild(botMessageElement);
                 })
