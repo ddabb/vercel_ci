@@ -2,123 +2,131 @@
 <html>
 
 <head>
-  <meta charset="UTF-8">
-  <title>聊天机器人</title>
-  <style>
-    .chat-container {
-      display: flex;
-      flex-direction: column;
-      max-width: 600px;
-      margin: 0 auto;
-    }
+    <meta charset="UTF-8">
+    <title>聊天机器人</title>
+    <style>
+     .chat-container {
+            display: flex;
+            flex-direction: column;
+            max-width: 600px;
+            margin: 0 auto;
+        }
 
-    .message-list {
-      flex-grow: 1;
-      padding: 10px;
-      overflow-y: auto;
-    }
+     .message-list {
+            flex-grow: 1;
+            padding: 10px;
+            overflow-y: auto;
+        }
 
-    .message {
-      margin-bottom: 10px;
-      padding: 5px;
-      border-radius: 5px;
-    }
+     .message {
+            margin-bottom: 10px;
+            padding: 5px;
+            border-radius: 5px;
+        }
 
-    .message:last-child {
-      margin-bottom: 0;
-    }
+     .message:last-child {
+            margin-bottom: 0;
+        }
 
-    .user-message {
-      text-align: right;
-      background-color: #e1ffc7;
-    }
+     .user-message {
+            text-align: right;
+            background-color: #e1ffc7;
+        }
 
-    .bot-message {
-      background-color: #c7e1ff;
-    }
+     .bot-message {
+            background-color: #c7e1ff;
+        }
 
-    .input-container {
-      display: flex;
-      padding: 10px;
-      border-top: 1px solid #ccc;
-    }
+     .input-container {
+            display: flex;
+            padding: 10px;
+            border-top: 1px solid #ccc;
+        }
 
-    input[type="text"] {
-      flex-grow: 1;
-      padding: 5px;
-      border: 1px solid #ccc;
-      border-radius: 5px;
-      outline: none;
-    }
+        input[type="text"] {
+            flex-grow: 1;
+            padding: 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            outline: none;
+        }
 
-    button {
-      margin-left: 10px;
-      padding: 5px 10px;
-      border: none;
-      border-radius: 5px;
-      background-color: #007bff;
-      color: white;
-      cursor: pointer;
-    }
+        button {
+            margin-left: 10px;
+            padding: 5px 10px;
+            border: none;
+            border-radius: 5px;
+            background-color: #007bff;
+            color: white;
+            cursor: pointer;
+        }
 
-    button:hover {
-      background-color: #0056b3;
-    }
-  </style>
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
 </head>
 
 <body>
-  <header>
-    <h1>聊天机器人</h1>
-  </header>
+    <header>
+        <h1>聊天机器人</h1>
+    </header>
 
-  <main>
-    <div class="chat-container">
-      <div class="message-list" id="chatOutput">
-        <div class="message user-message">
-          <p>您好，欢迎来到 24 小时无人自助台球厅，我是店里的机器人管家，有什么可以帮助您的吗？</p>
+    <main>
+        <div class="chat-container">
+            <div class="message-list" id="chatOutput">
+                <div class="message user-message">
+                    <p>您好，欢迎来到 24 小时无人自助台球厅，我是店里的机器人管家，有什么可以帮助您的吗？</p>
+                </div>
+            </div>
+            <div class="input-container">
+                <input type="text" id="messageInput" placeholder="输入消息...">
+                <button id="sendButton">发送</button>
+            </div>
         </div>
-      </div>
-      <div class="input-container">
-        <input type="text" id="messageInput" placeholder="输入消息...">
-        <button id="sendButton">发送</button>
-      </div>
-    </div>
-  </main>
+    </main>
 
-  <script>
-    document.getElementById('sendButton').addEventListener('click', function() {
-      const messageInput = document.getElementById('messageInput');
-      const message = messageInput.value.trim();
+    <script>
+        document.getElementById('sendButton').addEventListener('click', function() {
+            const messageInput = document.getElementById('messageInput');
+            const message = messageInput.value.trim();
 
-      if (message) {
-        const chatOutput = document.getElementById('chatOutput');
-        const userMessageElement = document.createElement('div');
-        userMessageElement.className = 'message user-message';
-        userMessageElement.innerHTML = `<p>${message}</p>`;
-        chatOutput.appendChild(userMessageElement);
+            if (message) {
+                const chatOutput = document.getElementById('chatOutput');
+                const userMessageElement = document.createElement('div');
+                userMessageElement.className = 'essage user-message';
+                userMessageElement.innerHTML = `<p>${message}</p>`;
+                chatOutput.appendChild(userMessageElement);
 
-        messageInput.value = ''; // 清空输入框
+                messageInput.value = ''; // 清空输入框
 
-        // 发送请求到API
-        fetch('/api/aichat', {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json'
-          },
-          body: JSON.stringify({ message: message })
-        })
-        .then(response => response.text())
-        .then(data => {
-          const botMessageElement = document.createElement('div');
-          botMessageElement.className = 'message bot-message';
-          botMessageElement.innerHTML = `<p>${data}</p>`;
-          chatOutput.appendChild(botMessageElement);
-        })
-        .catch(error => {
-          console.error('Error:', error);
+                // 发送请求到API
+                fetch('/api/aichat', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({ message: message })
+                })
+             .then(response => response.text())
+             .then(data => {
+                    const botMessageElement = document.createElement('div');
+                    botMessageElement.className = 'essage bot-message';
+                    botMessageElement.innerHTML = `<p>${data}</p>`;
+                    chatOutput.appendChild(botMessageElement);
+                })
+             .catch(error => {
+                    console.error('Error:', error);
+                });
+            }
         });
-      }
-    });
-  </script>
+
+        // 为输入框添加键盘事件监听器
+        document.getElementById('messageInput').addEventListener('keyup', function(event) {
+            if (event.key === 'Enter') {
+                // 模拟点击发送按钮
+                document.getElementById('sendButton').click();
+            }
+        });
+    </script>
 </body>
