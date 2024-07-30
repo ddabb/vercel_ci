@@ -18,11 +18,11 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "lint-staged"
+      "pre-commit": "node update-mdfiles-json.js && git add jsons/mdfiles.json"
     }
   },
   "lint-staged": {
-    "api/getmdfiles.js": ["node api/getmdfiles.js", "git add jsons/mdfiles.json"]
+    "mdfiles/**/*": ["node update-mdfiles-json.js", "git add jsons/mdfiles.json"]
   }
   
 }
