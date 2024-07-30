@@ -11,18 +11,5 @@
     "https": "^1.0.0",
     "node-fetch": "^3.3.2",
     "xml2js": "^0.6.2"
-  },
-  "devDependencies": {
-    "husky": "^9.1.4",
-    "lint-staged": "^15.2.7"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "node update-mdfiles-json.js && git add jsons/mdfiles.json"
-    }
-  },
-  "lint-staged": {
-    "mdfiles/**/*": ["node update-mdfiles-json.js", "git add jsons/mdfiles.json"]
   }
-  
 }
