@@ -67,30 +67,6 @@
             /* 清除浮动 */
         }
 
-        .timeline-event:before {
-            content: "";
-            position: absolute;
-            top: 0;
-            bottom: 0;
-            left: 50%;
-            margin-left: -1px;
-            width: 2px;
-            background-color: #ccc;
-        }
-
-        .timeline-badge {
-            position: absolute;
-            top: 16px;
-            left: 50%;
-            margin-left: -10px;
-            width: 20px;
-            height: 20px;
-            border-radius: 50%;
-            background-color: #fff;
-            border: 2px solid #3498db;
-            /* 更改边框颜色 */
-        }
-
         .timeline-content {
             padding: 15px;
             border: 1px solid #ddd;
@@ -100,14 +76,7 @@
             line-height: 1.5;
         }
 
-        .timeline-left .timeline-badge {
-            left: -30px;
-        }
 
-        .timeline-right .timeline-badge {
-            right: -30px;
-            left: auto;
-        }
 
         .timeline-left .timeline-content {
             float: left;
@@ -141,10 +110,7 @@
                 display: none;
             }
 
-            .timeline-badge {
-                display: none;
-            }
-
+      
             .timeline-left .timeline-content,
             .timeline-right .timeline-content {
                 float: none !important;
@@ -273,7 +239,7 @@
             const eventDiv = document.createElement("div");
             eventDiv.className = `timeline-event timeline-${event.side}`;
             eventDiv.innerHTML = `
-                <div class="timeline-badge"></div>
+             
                 <div class="timeline-content">
                     <h4>${event.title}</h4>
                     <p>${event.date}</p>
