@@ -49,6 +49,8 @@ if [ -f "$JSON_OUTPUT_PATH" ]; then
     git add "$JSON_OUTPUT_PATH"
     # 自动提交更改
     git commit -m "Update mdfiles.json"
+    # 自动推送更改到远程仓库
+    git push
 else
     echo "Generated JSON file not found: $JSON_OUTPUT_PATH"
     exit 1
