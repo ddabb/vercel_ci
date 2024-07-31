@@ -1,6 +1,6 @@
 const fs = require('fs');
 const path = require('path');
-const marked = require('marked');
+import marked from 'marked'; 
 
 export default async function handler(request, response) {
   if (request.method !== 'GET') {
