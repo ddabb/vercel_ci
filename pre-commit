@@ -36,6 +36,8 @@ fi
 if [[ -f "$JSON_OUTPUT_PATH" ]]; then
   # 将生成的 mdfiles.json 添加到暂存区
   git add "$JSON_OUTPUT_PATH"
+  # 自动提交更改
+  git commit -m "Update mdfiles.json"
 else
   echo "Generated JSON file not found: $JSON_OUTPUT_PATH"
   exit 1
