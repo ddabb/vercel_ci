@@ -6,8 +6,8 @@ if ! command -v realpath >/dev/null 2>&1 || ! command -v cygpath >/dev/null 2>&1
 fi
 
 # 使用 cygpath 将 Windows 风格的路径转换为 Unix 风格的路径
-NODE_SCRIPT=$(cygpath -u "../NodeAgent/update-mdfiles-json.js")
-JSON_OUTPUT_PATH=$(cygpath -u "../NodeAgent/jsons/mdfiles.json")
+NODE_SCRIPT=$(cygpath -u "NodeAgent/update-mdfiles-json.js")
+JSON_OUTPUT_PATH=$(cygpath -u "NodeAgent/jsons/mdfiles.json")
 
 # 获取绝对路径
 NODE_SCRIPT_ABSOLUTE=$(realpath "$NODE_SCRIPT")
