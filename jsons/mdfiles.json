@@ -1,34 +1,22 @@
 [
   {
-    "name": "html文件创建.md",
+    "name": "pre-commit.md",
     "order": 1
   },
   {
-    "name": "pre-commit.md",
+    "name": "兼容linux和windows的hooks.md",
     "order": 2
   },
   {
-    "name": "个人发展计划.md",
+    "name": "写公众号和建立独立网站的差异对比.md",
     "order": 3
   },
   {
-    "name": "兼容linux和windows的hooks.md",
+    "name": "探索未知的宇宙奥秘.md",
     "order": 4
   },
   {
-    "name": "写公众号和建立独立网站的差异对比.md",
-    "order": 5
-  },
-  {
-    "name": "探索未知的宇宙奥秘.md",
-    "order": 6
-  },
-  {
     "name": "文章示例.md",
-    "order": 7
-  },
-  {
-    "name": "测试文件新增.md",
-    "order": 8
+    "order": 5
   }
 ]
