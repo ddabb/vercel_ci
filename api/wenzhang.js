@@ -1,8 +1,8 @@
 const fs = require('fs');
 const path = require('path');
-import marked from 'marked'; 
+const marked = require('marked');
 
-export default async function handler(request, response) {
+module.exports = async function handler(request, response) {
   if (request.method !== 'GET') {
     return response.status(405).end(); // Method Not Allowed
   }
@@ -10,7 +10,6 @@ export default async function handler(request, response) {
   const articleName = request.query.name;
 
   try {
-    // 使用 path.join() 和 __dirname 构建 articlePath
     const mdFilesDirectory = path.join(__dirname, '..', 'mdfiles');
     const articlePath = path.join(mdFilesDirectory, `${articleName}.md`);
 
@@ -20,6 +19,13 @@ export default async function handler(request, response) {
     response.status(200).json({ title: articleName, content: articleContent });
   } catch (error) {
     console.error('Error reading article:', error);
-    response.status(404).json({ message: `Article not found${error}` });
+    // 添加 mdFilesDirectory 和 articlePath 到错误响应中
+    response.status(404).json({
+      message: `Article not found: ${error.message}`,
+      errorDetails: {
+        mdFilesDirectory,
+        articlePath
+      }
+    });
   }
-}
+};
