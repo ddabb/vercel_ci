@@ -3,11 +3,12 @@ const path = require('path');
 const marked = require('marked');
 
 module.exports = async function handler(request, response) {
-    if (request.method!== 'GET') {
+    debugger
+    if (request.method!== 'POST') {
         return response.status(405).end(); // Method Not Allowed
     }
 
-    const articleName = request.query.name;
+    const articleName = request.body.name; // 从请求体中获取 name 参数
 
     try {
         const mdFilesDirectory = path.join(__dirname, '..', 'dfiles');
