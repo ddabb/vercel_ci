@@ -1,84 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <link rel="icon" href="../../logo.svg" type="image/svg+xml">
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>判断是否是闰年</title>
-<style>
-  body, html {
-    height: 100%;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-family: Arial, sans-serif;
-  }
-
-  .container {
-    text-align: center;
-    background-color: #f9f9f9;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  }
-
-  h1 {
-    margin-bottom: 20px;
-  }
-
-  #numberInput {
-    width: 300px;
-    padding: 15px;
-    margin-bottom: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-  }
-
-  #result {
-    margin-top: 20px;
-    font-size: 1.2em;
-    color: #333;
-  }
-
-  .back-button {
-    margin-top: 20px;
-    padding: 10px 20px;
-    background-color: #007bff;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-
-  .back-button:hover {
-    background-color: #0056b3;
-  }
-</style>
-<script src="../../js/checkLeapYear.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>判断是否是闰年</title>
+  <link rel="stylesheet" href="../../css/leapyear.css">
+  <script src="../../js/checkLeapYear.js"></script>
 </head>
+
 <body>
 
-<div class="container">
-  <h1>判断是否是闰年</h1>
+  <div class="container">
+    <h1>判断是否是闰年</h1>
 
-  <!-- 创建一个输入框 -->
-  <label for="numberInput">请输入一个数字：</label>
-  <input type="text" id="numberInput" placeholder="输入数字" oninput="checkLeapYear()">
+    <!-- 创建一个输入框 -->
+    <label for="numberInput">请输入一个数字：</label>
+    <input type="text" id="numberInput" placeholder="输入数字" oninput="checkLeapYear()">
 
-  <!-- 显示结果的区域 -->
-  <p id="result"></p>
+    <!-- 显示结果的区域 -->
+    <p id="result"></p>
 
-  <!-- 返回按钮 -->
-  <button class="back-button" onclick="goBack()">返回首页</button>
-</div>
+    <!-- 返回按钮 -->
+    <button class="back-button" onclick="goBack()">返回首页</button>
+  </div>
 
-<script>
-  function goBack() {
-    window.location.href = '../../index.html';
-  }
-</script>
+  <script>
+    function goBack() {
+      window.location.href = '../../index.html';
+    }
+  </script>
 
 </body>
+
 </html>
