@@ -25,8 +25,8 @@ else
 fi
 
 # 输出绝对路径
-echo "Absolute path of Node.js script: $NODE_SCRIPT"
-echo "Absolute path of generated JSON file: $JSON_OUTPUT_PATH"
+echo "Node.js脚本的绝对路径: $NODE_SCRIPT"
+echo "生成的JSON文件的绝对路径: $JSON_OUTPUT_PATH"
 
 # 检查 Node.js 脚本是否存在
 if [ ! -f "$NODE_SCRIPT" ]; then
