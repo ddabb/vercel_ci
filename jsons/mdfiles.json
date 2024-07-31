@@ -1,22 +1,30 @@
 [
   {
-    "name": "pre-commit.md",
+    "name": "linux-pre-commit.md",
     "order": 1
   },
   {
-    "name": "兼容linux和windows的hooks.md",
+    "name": "pre-commit.md",
     "order": 2
   },
   {
-    "name": "写公众号和建立独立网站的差异对比.md",
+    "name": "兼容linux和windows的hooks.md",
     "order": 3
   },
   {
-    "name": "探索未知的宇宙奥秘.md",
+    "name": "写公众号和建立独立网站的差异对比.md",
     "order": 4
   },
   {
-    "name": "文章示例.md",
+    "name": "探索未知的宇宙奥秘.md",
     "order": 5
+  },
+  {
+    "name": "文章示例.md",
+    "order": 6
+  },
+  {
+    "name": "测试洗过.md",
+    "order": 7
   }
 ]
