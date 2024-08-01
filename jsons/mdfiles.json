@@ -1,30 +1,18 @@
 [
   {
-    "name": "linux-pre-commit.md",
+    "name": "写公众号和建立独立网站的差异对比.md",
     "order": 1
   },
   {
-    "name": "pre-commit.md",
+    "name": "探索未知的宇宙奥秘.md",
     "order": 2
   },
   {
-    "name": "兼容linux和windows的hooks.md",
+    "name": "文章示例.md",
     "order": 3
   },
   {
-    "name": "写公众号和建立独立网站的差异对比.md",
+    "name": "聊一下王孙组合的一些个人思考.md",
     "order": 4
-  },
-  {
-    "name": "探索未知的宇宙奥秘.md",
-    "order": 5
-  },
-  {
-    "name": "文章示例.md",
-    "order": 6
-  },
-  {
-    "name": "测试验证功能.md",
-    "order": 7
   }
 ]
