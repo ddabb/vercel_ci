@@ -1,4 +1,5 @@
 /* style.css */
+/* 通用样式 */
 body {
   font-family: Arial, sans-serif;
   line-height: 1.6;
@@ -6,22 +7,40 @@ body {
   background-color: #f4f4f4;
   margin: 0;
   padding: 0;
+  height: 100vh;
+  width: 100vw;
 }
 
+/* 全局重置样式 */
+* {
+  margin: 0;
+  padding: 0;
+  cursor: none; /* 注意：这个属性可能会影响到页面上其他元素的默认行为，建议谨慎使用 */
+}
+
+/* 容器样式 */
 .container {
   max-width: 100%;
-  /* Make the container full width */
   margin: auto;
   padding: 20px;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
+/* 搜索表单相关样式 */
 #search-form {
   margin-bottom: 20px;
 }
 
 #search-input {
   width: 100%;
-  /* Make search input full width */
   padding: 10px;
   border: 1px solid #ccc;
   border-radius: 5px;
@@ -29,7 +48,6 @@ body {
 
 #search-button {
   width: 100%;
-  /* Make search button full width */
   padding: 10px 20px;
   background: #007bff;
   color: #fff;
@@ -39,6 +57,7 @@ body {
   transition: background 0.3s ease;
 }
 
+/* 文章列表相关样式 */
 #article-list {
   list-style: none;
   padding: 0;
@@ -55,6 +74,7 @@ body {
   transition: all 0.3s ease;
 }
 
+/* 分页相关样式 */
 #pagination {
   margin-top: 20px;
 }
@@ -66,4 +86,80 @@ body {
   margin-right: 5px;
   cursor: pointer;
   transition: all 0.3s ease;
+}
+
+/* 用户资料相关样式 */
+img {
+  width: 150px;
+  height: 150px;
+  border-radius: 0%;
+}
+
+.profile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.name {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-top: 1rem;
+}
+
+.bio {
+  font-size: 1.5rem;
+  margin-top: 2rem;
+}
+
+.follow-btn {
+  width: 150px;
+  height: 50px;
+  border: none;
+  border-radius: 25px;
+  background-color: #007bff;
+  color: #fff;
+  font-size: 1.2rem;
+  cursor: pointer;
+  margin: 2rem auto 0;
+  transition: background-color 0.3s ease;
+}
+
+.follow-btn:hover {
+  background-color: #0069d9;
+}
+
+/* 表单相关样式 */
+h1 {
+  margin-bottom: 20px;
+}
+
+#numberInput {
+  width: 300px;
+  padding: 15px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+#result {
+  margin-top: 20px;
+  font-size: 1.2em;
+  color: #333;
+}
+
+/* 返回按钮样式 */
+.back-button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.back-button:hover {
+  background-color: #0056b3;
 }
