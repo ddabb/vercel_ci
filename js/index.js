@@ -62,15 +62,15 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 function createTimelineElement(event) {
-  const eventDiv = document.createElement("div");
+  const eventDiv = document.createElement('div');
   eventDiv.className = `timeline-event timeline-${event.side}`;
   eventDiv.innerHTML = `
-             
-                <div class="timeline-content">
-                    <h4>${event.title}</h4>
-                    <p>${event.date}</p>
-                </div>
-            `;
+    <div class="timeline-point"></div>
+    <div class="timeline-content">
+      <h4 class="timeline-title">${event.title}</h4>
+      <p class="timeline-date">${event.date}</p>
+    </div>
+  `;
   return eventDiv;
 }
 async function fetchAndRenderTimeline() {
