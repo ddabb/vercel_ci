@@ -14,7 +14,63 @@ body {
   margin: auto;
   padding: 20px;
 }
+/* 对话相关样式 */
+.chat-container {
+  max-width: 800px; /* 设置聊天容器的最大宽度 */
+  margin: 0 auto; /* 居中聊天容器 */
+  padding: 20px; /* 添加内边距 */
+  background-color: #fff; /* 设置背景颜色 */
+  border-radius: 10px; /* 设置圆角 */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* 添加阴影效果 */
+  overflow-y: auto; /* 设置垂直滚动条 */
+  height: 400px; /* 设置聊天容器的高度 */
+}
 
+.message-list {
+  padding: 10px; /* 添加内边距 */
+}
+
+.message {
+  margin-bottom: 10px; /* 设置消息之间的间距 */
+  display: flex; /* 使用Flexbox布局 */
+}
+
+.bot-message,
+.user-message {
+  padding: 10px 15px; /* 设置消息内容的内边距 */
+  border-radius: 0.5rem; /* 设置圆角 */
+}
+
+.bot-message {
+  background-color: #007bff; /* 设置机器人的背景颜色 */
+  color: #fff; /* 设置机器人的文字颜色 */
+  align-self: flex-start; /* 机器人消息靠左 */
+}
+
+.bot-message .avatar {
+  margin-right: 10px; /* 设置机器人头像与消息内容的间距 */
+}
+
+.user-message {
+  background-color: #dc3545; /* 设置用户的背景颜色 */
+  color: #fff; /* 设置用户的文字颜色 */
+  align-self: flex-end; /* 用户消息靠右 */
+}
+
+.user-message .avatar {
+  margin-left: 10px; /* 设置用户头像与消息内容的间距 */
+}
+
+.avatar {
+  width: 40px; /* 设置头像的宽度 */
+  height: 40px; /* 设置头像的高度 */
+  background-color: #ccc; /* 设置头像的背景颜色 */
+  border-radius: 50%; /* 设置头像的圆角 */
+}
+
+.message-text {
+  display: inline-block; /* 使消息文本块级显示 */
+}
 /* 搜索表单相关样式 */
 #search-form {
   margin-bottom: 20px;
