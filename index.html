@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
     <link rel="stylesheet" href="/css/index.css">
     <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/autochat.css">
 </head>
 
 <body>
@@ -40,18 +41,26 @@
         </nav>
     </header>
     <main class="container-fluid">
-        <!-- Website Articles -->
+
         <div class="row mt-5">
             <div class="col-lg-8 col-md-12">
                 <div class="card mb-4">
                     <div class="card-body">
-                        <h3>网站文章</h3>
-                        <div id="search-form">
-                            <input type="text" id="search-input" placeholder="找故事">
-                            <button id="search-button">找找看</button>
+                        <h3>聊天机器人</h3>
+                        <div class="chat-container">
+                            <div class="message-list" id="chatOutput">
+                                <div class="message bot-message">
+                                    <div class="avatar bg-primary rounded-circle"></div>
+                                    <div class="message-text">
+                                        <p>您好，欢迎来到 24 小时无人自助台球厅，我是店里的机器人管家，有什么可以帮助您的吗？</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="input-container">
+                                <input type="text" id="messageInput" placeholder="输入消息...">
+                                <button id="sendButton">发送</button>
+                            </div>
                         </div>
-                        <ul id="article-list"></ul>
-                        <div id="pagination"></div>
                     </div>
                 </div>
             </div>
@@ -67,6 +76,24 @@
                     </div>
                 </div>
             </div>
+        </div>
+
+        <!-- Website Articles -->
+        <div class="row mt-5">
+            <div class="col-lg-8 col-md-12">
+                <div class="card mb-4">
+                    <div class="card-body">
+                        <h3>网站文章</h3>
+                        <div id="search-form">
+                            <input type="text" id="search-input" placeholder="找故事">
+                            <button id="search-button">找找看</button>
+                        </div>
+                        <ul id="article-list"></ul>
+                        <div id="pagination"></div>
+                    </div>
+                </div>
+            </div>
+
         </div>
 
         <!-- Official Account Articles -->
@@ -124,6 +151,7 @@
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
     <script src="/js/index.js"></script>
+    <script src="/js/autochat.js"></script>
 </body>
 
 </html>
