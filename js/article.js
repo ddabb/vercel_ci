@@ -21,7 +21,6 @@ document.addEventListener('DOMContentLoaded', function () {
     })
     .then(data => {
       console.log(data);
-      document.getElementById('article-title').textContent = data.title;
       document.querySelector('title').textContent = data.title; // 更新 <title> 标签
       document.getElementById('article-content').innerHTML = data.content;
     })
