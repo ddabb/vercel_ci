@@ -100,3 +100,15 @@ footer {
         margin: 0 0 20px;
     }
 }
+
+/* 在 /css/index.css 或 /css/style.css 中添加以下样式 */
+#photo-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* 根据可用空间自动创建列 */
+    grid-gap: 1rem; /* 设置网格间隙 */
+  }
+  
+  .grid-item {
+    width: 100%; /* 确保图片宽度适应其网格单元格 */
+    height: auto; /* 图片高度自动调整以保持原始宽高比 */
+  }
