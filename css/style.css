@@ -14,6 +14,7 @@ body {
   margin: auto;
   padding: 20px;
 }
+
 /* 对话相关样式 */
 .chat-container {
   max-width: 800px; /* 设置聊天容器的最大宽度 */
@@ -64,6 +65,7 @@ body {
 .avatar {
   width: 40px; /* 设置头像的宽度 */
   height: 40px; /* 设置头像的高度 */
+  object-fit: cover; /* 保持头像的纵横比并填充圆形区域，避免形变 */
   background-color: #ccc; /* 设置头像的背景颜色 */
   border-radius: 50%; /* 设置头像的圆角 */
 }
@@ -71,6 +73,7 @@ body {
 .message-text {
   display: inline-block; /* 使消息文本块级显示 */
 }
+
 /* 搜索表单相关样式 */
 #search-form {
   margin-bottom: 20px;
@@ -254,4 +257,42 @@ h1 {
 .timeline-date {
   color: #999;
   font-size: 0.9em;
+}
+
+/* ... your existing CSS ... */
+
+/* Custom styles for the modal */
+.modal-dialog {
+  width: 100%; /* Full width on smaller devices */
+  max-width: 800px; /* Limit the width on larger devices */
+}
+
+
+/* Optionally, you can add a maximize button */
+.maximize-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+}
+
+.modal-body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.modal-body img {
+  max-width: 100%;
+  max-height: 80vh; /* Limit the height of the image to 80% of the viewport height */
+  object-fit: contain; /* Ensures the image scales down but does not scale up */
+}
+
+.image-alt {
+  margin-top: 0.5rem; /* Add some space between the image and the alt text */
+  font-size: 0.9em; /* Adjust the font size as needed */
+  color: #555; /* Change the color of the alt text */
+  text-align: center; /* Center the text under the image */
 }
