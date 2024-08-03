@@ -3,14 +3,14 @@ body {
   font-family: Arial, sans-serif;
   line-height: 1.6;
   color: #333;
-  background-color: #f4f4f4;
+  background-color: #FEDE06; /* 主色调背景 */
   margin: 0;
   padding: 0;
 }
 
 /* 容器样式 */
 .container {
-  max-width: 1200px; /* 调整为合适的宽度 */
+  max-width: 100%; /* 移动设备适应性 */
   margin: auto;
   padding: 20px;
 }
@@ -259,21 +259,11 @@ h1 {
   font-size: 0.9em;
 }
 
-/* ... your existing CSS ... */
-
 /* Custom styles for the modal */
 .modal-dialog {
   width: 100%; /* Full width on smaller devices */
   max-width: 800px; /* Limit the width on larger devices */
-}
-
-
-/* Optionally, you can add a maximize button */
-.maximize-btn {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  cursor: pointer;
+  background-color: #fff; /* White background for better contrast */
 }
 
 .modal-body {
@@ -295,4 +285,20 @@ h1 {
   font-size: 0.9em; /* Adjust the font size as needed */
   color: #555; /* Change the color of the alt text */
   text-align: center; /* Center the text under the image */
+}
+
+/* 自定义导航栏位置样式 */
+.navbar-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end; /* 将导航栏对齐到容器的底部 */
+  min-height: 100vh; /* 确保容器至少占满整个视口高度 */
+  background-color: #FEDE06; /* 主色调背景 */
+}
+
+/* 媒体查询，仅在屏幕宽度小于或等于991px时生效 */
+@media (max-width: 991px) {
+  .navbar-container {
+    height: auto; /* 在小屏幕上，高度自动调整 */
+  }
 }

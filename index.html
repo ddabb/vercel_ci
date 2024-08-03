@@ -13,37 +13,39 @@
 
 <body>
   <header>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="#">
-          <i class="bi bi-globe"></i> 无人自助站
-        </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav">
-            <li class="nav-item">
-              <a class="nav-link" href="index.html">首页</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="photos.html">相册</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="tools.html">小工具</a>
-            </li>
-          </ul>
+    <div class="navbar-container">
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">
+            <i class="bi bi-globe"></i> 无人自助站
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link" href="index.html">首页</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="photos.html">相册</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="tools.html">小工具</a>
+              </li>
+            </ul>
+          </div>
         </div>
-      </div>
-    </nav>
+      </nav>
+    </div>
   </header>
   <main class="container-fluid">
     <div class="row mt-5">
       <div class="col-lg-8 col-md-12">
         <div class="card mb-4">
           <div class="card-body">
-            <h3>聊天机器人</h3>
+            <h3>龙井、方大城店自助台球管家</h3>
             <div class="chat-container">
               <div class="message-list" id="chatOutput">
                 <div class="message bot-message">
@@ -64,11 +66,10 @@
       <div class="col-lg-4 col-md-12">
         <div class="card">
           <div class="card-body">
-            <h3>网站计划</h3>
-            <p>该站点创建的初衷是提供一个公众号自动回复消息的功能，以便于更好的支持微信公众号《60分加油站》的运营。然而，我发现运营微信公众号和个人网站是两个不同的领域，因此我决定建立一个独立的网站。我之前有使用hexo搭建网站的经验，所以这次我想尝试一些新的东西。</p>
-            <p>这个网站将主要记录自助台球店的相关事宜，分享一些图片，以及一些实用的小功能。它将是一个纯粹的静态网站，因此我甚至没有购买ECS云空间，这只是我的个人兴趣和尝试。</p>
-            <p>将来，我计划为网站增加一些小游戏，如2024、数独和五子棋。由于这些游戏不需要记忆功能，实现起来相对简单。</p>
-            <p>我的另一个目标是完成一个流水布局来预览图片，这需要我学习更多的CSS技巧。我还希望实现一个websocket聊天机器人，为网站的访问者提供更好的交互体验。</p>
+            <h3>网站介绍</h3>
+            <p>
+              本网站旨在辅助深圳龙井、方大城24小时无人自助台球店的运营，弥补人工服务无法覆盖的时间段，确保球友们能够随时享受服务。虽然我们尽力提供高效的服务，但有时球友可能仍需要联系人工客服解决问题。在等待台球室空闲时，球友们可以通过阅读台球店的故事或店主的故事来消磨时光，增添生活的乐趣。
+            </p>
           </div>
         </div>
       </div>
@@ -117,8 +118,8 @@
             <h3 class="mb-0">网站时间线</h3>
           </div>
           <div class="card-body">
-            <button class="btn btn-primary" type="button" data-bs-toggle="collapse"
-              data-bs-target="#timeline" aria-expanded="false" aria-controls="timeline">
+            <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#timeline"
+              aria-expanded="false" aria-controls="timeline">
               展开/折叠
             </button>
             <div id="timeline" class="timeline collapse show">
