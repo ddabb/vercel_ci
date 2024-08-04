@@ -108,6 +108,7 @@ body {
   /* 设置头像的背景颜色 */
   border-radius: 50%;
   margin-left: 10px;
+  flex-shrink: 0;
   /* 设置用户头像与消息内容的间距 */
   /* 设置头像的圆角 */
 }
