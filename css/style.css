@@ -44,14 +44,29 @@ body {
   /* 设置消息之间的间距 */
   display: flex;
   /* 使用Flexbox布局 */
+
+  align-items: center;
 }
 
-.bot-message,
-.user-message {
+.bot-message {
   padding: 10px 15px;
   /* 设置消息内容的内边距 */
   border-radius: 0.5rem;
   /* 设置圆角 */
+}
+
+.user-message {
+  padding: 10px 15px;
+  /* 设置消息内容的内边距 */
+  border-radius: 0.5rem;
+  justify-content: flex-end;
+  /* 设置圆角 */
+}
+
+.message-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 
 .bot-message {
@@ -73,7 +88,7 @@ body {
   /* 设置用户的背景颜色 */
   color: #fff;
   /* 设置用户的文字颜色 */
-  align-self: flex-end;
+  /* align-self: flex-end; */
   /* 用户消息靠右 */
 }
 
@@ -92,7 +107,16 @@ body {
   background-color: #ccc;
   /* 设置头像的背景颜色 */
   border-radius: 50%;
+  margin-left: 10px;
+  /* 设置用户头像与消息内容的间距 */
   /* 设置头像的圆角 */
+}
+
+.user-message .message-text {
+  align-self: flex-end;
+  /* 让文本内容靠右 */
+  text-align: right;
+  /* 文本内容右对齐 */
 }
 
 .message-text {

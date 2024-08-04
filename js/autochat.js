@@ -7,11 +7,13 @@ document.getElementById('sendButton').addEventListener('click', function () {
         const userMessageElement = document.createElement('div');
         userMessageElement.className = 'message user-message';
         userMessageElement.innerHTML = `
-            <div class="message-text">
-                <p>${message}</p>
-            </div>
-            <div class="avatar bg-success rounded-circle"></div>
-        `;
+    <div class="message-container">
+        <div class="message-text">
+            <p>${message}</p>
+        </div>
+        <div class="avatar bg-success rounded-circle"></div>
+    </div>
+`;
         chatOutput.appendChild(userMessageElement);
 
         messageInput.value = ''; // 清空输入框
