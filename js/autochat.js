@@ -15,6 +15,7 @@ document.getElementById('sendButton').addEventListener('click', function () {
     </div>
 `;
         chatOutput.appendChild(userMessageElement);
+        adjustChatContainerHeight();
 
         messageInput.value = ''; // 清空输入框
 
@@ -51,12 +52,13 @@ document.getElementById('sendButton').addEventListener('click', function () {
                 </div>
             `;
                 chatOutput.appendChild(botMessageElement);
+                adjustChatContainerHeight();
             })
             .catch(error => {
                 console.error('Error:', error);
             });
     }
-    adjustChatContainerHeight();
+
 });
 
 // 为输入框添加键盘事件监听器
@@ -69,13 +71,16 @@ document.getElementById('messageInput').addEventListener('keyup', function (even
 
 document.getElementById('toggleChatArea').addEventListener('click', toggleChatArea);
 function adjustChatContainerHeight() {
+    debugger
     const chatContainer = document.querySelector('.chat-container');
     chatContainer.style.height = 'auto'; // 重置高度为自动
     const newHeight = chatContainer.scrollHeight; // 获取新的实际高度
+    console.log("newHeight" + newHeight);
     chatContainer.style.height = newHeight + 'px'; // 设置新的高度
 }
 
 function toggleChatArea() {
+    debugger
     const chatAreaContainer = document.getElementById('chatAreaContainer');
     if (chatAreaContainer.style.display === 'none') {
         chatAreaContainer.style.display = 'block'; // 显示对话区域

@@ -4,7 +4,6 @@ body {
   line-height: 1.6;
   color: #333;
   background-color: #FEDE06;
-  /* 主色调背景 */
   margin: 0;
   padding: 0;
 }
@@ -12,7 +11,6 @@ body {
 /* 容器样式 */
 .container {
   max-width: 100%;
-  /* 移动设备适应性 */
   margin: auto;
   padding: 20px;
 }
@@ -20,47 +18,38 @@ body {
 /* 对话相关样式 */
 .chat-container {
   max-width: 800px;
-  /* 设置聊天容器的最大宽度 */
   margin: 0 auto;
-  /* 居中聊天容器 */
   padding: 20px;
-  /* 添加内边距 */
   background-color: #fff;
-  /* 设置背景颜色 */
   border-radius: 10px;
-  /* 设置圆角 */
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  /* 添加阴影效果 */
-  /* 移除 height 和 overflow-y 属性 */
 }
 
 .message-list {
   padding: 10px;
-  /* 添加内边距 */
 }
 
 .message {
   margin-bottom: 10px;
-  /* 设置消息之间的间距 */
   display: flex;
-  /* 使用Flexbox布局 */
-
   align-items: center;
 }
 
+/* 更新消息的背景色和文字色 */
 .bot-message {
+  background: linear-gradient(to right, #FFC107, #FFA000);
+  color: #333;
+  align-self: flex-start;
   padding: 10px 15px;
-  /* 设置消息内容的内边距 */
   border-radius: 0.5rem;
-  /* 设置圆角 */
 }
 
 .user-message {
-  padding: 10px 15px;
-  /* 设置消息内容的内边距 */
-  border-radius: 0.5rem;
+  background: linear-gradient(to right, #4CAF50, #388E3C);
+  color: #fff;
   justify-content: flex-end;
-  /* 设置圆角 */
+  padding: 10px 15px;
+  border-radius: 0.5rem;
 }
 
 .message-container {
@@ -69,60 +58,36 @@ body {
   gap: 10px;
 }
 
-.bot-message {
-  background-color: #007bff;
-  /* 设置机器人的背景颜色 */
-  color: #fff;
-  /* 设置机器人的文字颜色 */
-  align-self: flex-start;
-  /* 机器人消息靠左 */
+.bot-message .avatar,
+.user-message .avatar {
+  width: 40px;
+  height: 40px;
+  object-fit: cover;
+  background-color: #ccc;
+  border-radius: 50%;
+  flex-shrink: 0;
 }
 
 .bot-message .avatar {
   margin-right: 10px;
-  /* 设置机器人头像与消息内容的间距 */
-}
-
-.user-message {
-  background-color: #dc3545;
-  /* 设置用户的背景颜色 */
-  color: #fff;
-  /* 设置用户的文字颜色 */
-  /* align-self: flex-end; */
-  /* 用户消息靠右 */
 }
 
 .user-message .avatar {
   margin-left: 10px;
-  /* 设置用户头像与消息内容的间距 */
-}
-
-.avatar {
-  width: 40px;
-  /* 设置头像的宽度 */
-  height: 40px;
-  /* 设置头像的高度 */
-  object-fit: cover;
-  /* 保持头像的纵横比并填充圆形区域，避免形变 */
-  background-color: #ccc;
-  /* 设置头像的背景颜色 */
-  border-radius: 50%;
-  margin-left: 10px;
-  flex-shrink: 0;
-  /* 设置用户头像与消息内容的间距 */
-  /* 设置头像的圆角 */
 }
 
 .user-message .message-text {
   align-self: flex-end;
-  /* 让文本内容靠右 */
   text-align: right;
-  /* 文本内容右对齐 */
 }
 
 .message-text {
   display: inline-block;
-  /* 使消息文本块级显示 */
+}
+
+.search-container {
+  display: flex;
+  /* 使用 Flexbox 布局 */
 }
 
 /* 搜索表单相关样式 */
@@ -131,10 +96,14 @@ body {
 }
 
 #search-input {
-  width: 100%;
+  flex-grow: 1;
+  /* 让输入框占据剩余空间 */
   padding: 10px;
   border: 1px solid #ccc;
-  border-radius: 5px;
+  border-radius: 5px 0 0 5px;
+  /* 左边圆角 */
+  outline: none;
+  /* 移除焦点时的轮廓 */
 }
 
 #search-button {
@@ -142,11 +111,12 @@ body {
   background: #007bff;
   color: #fff;
   border: none;
-  border-radius: 5px;
+  border-radius: 0 5px 5px 0;
+  /* 右边圆角 */
   cursor: pointer;
   transition: background 0.3s ease;
-  margin-left: 10px;
-  /* 添加间距 */
+  margin-left: -1px;
+  /* 与输入框紧密相连 */
 }
 
 /* 文章列表相关样式 */
@@ -168,7 +138,7 @@ body {
 
 /* 分页相关样式 */
 #pagination {
-  margin-top: 20px;
+  margin-top: 5px;
 }
 
 #pagination button {
@@ -179,9 +149,14 @@ body {
   cursor: pointer;
   transition: all 0.3s ease;
   border-radius: 5px;
-  /* 添加圆角 */
-  pointer-events: auto;
-  /* 添加 pointer-events 样式 */
+}
+
+#article-list a {
+  display: block;
+  padding-bottom: 3px;
+  /* 更紧凑的间距 */
+  border-bottom: 1px solid #eee;
+  /* 可选：添加底部边框以区分链接 */
 }
 
 /* 用户资料相关样式 */
@@ -316,11 +291,8 @@ h1 {
 /* Custom styles for the modal */
 .modal-dialog {
   width: 100%;
-  /* Full width on smaller devices */
   max-width: 800px;
-  /* Limit the width on larger devices */
   background-color: #fff;
-  /* White background for better contrast */
 }
 
 .modal-body {
@@ -334,20 +306,14 @@ h1 {
 .modal-body img {
   max-width: 100%;
   max-height: 80vh;
-  /* Limit the height of the image to 80% of the viewport height */
   object-fit: contain;
-  /* Ensures the image scales down but does not scale up */
 }
 
 .image-alt {
   margin-top: 0.5rem;
-  /* Add some space between the image and the alt text */
   font-size: 0.9em;
-  /* Adjust the font size as needed */
   color: #555;
-  /* Change the color of the alt text */
   text-align: center;
-  /* Center the text under the image */
 }
 
 /* 自定义导航栏位置样式 */
@@ -355,17 +321,13 @@ h1 {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  /* 将导航栏对齐到容器的底部 */
   min-height: 100vh;
-  /* 确保容器至少占满整个视口高度 */
   background-color: #FEDE06;
-  /* 主色调背景 */
 }
 
 /* 媒体查询，仅在屏幕宽度小于或等于991px时生效 */
 @media (max-width: 991px) {
   .navbar-container {
     height: auto;
-    /* 在小屏幕上，高度自动调整 */
   }
 }
