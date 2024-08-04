@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', function () {
     .then(data => {
       console.log(data);
       document.querySelector('title').textContent = data.title; // 更新 <title> 标签
-      document.getElementById('article-title').textContent = data.title; // 新增：更新文章标题
+  
       document.getElementById('article-content').innerHTML = data.content;
     })
     .catch(error => {
