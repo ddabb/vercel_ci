@@ -356,12 +356,32 @@ h1 {
   z-index: 1000;
   /* 确保页脚在其他内容之上 */
   background-color: #f8f9fa;
-  padding: 1rem;
+  padding: 0;
 }
 
-.sticky-footer-container {
-  overflow: auto;
-  /* 或者 overflow: scroll; */
+.sticky-footer p {
+  line-height: 1;
+  /* 减少line-height以让文本更紧凑 */
+  margin: 0;
+  /* 移除默认的margin */
+}
+
+
+
+
+.sticky-footer .container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* 水平居中 */
+  height: 30px;
+  /* 设置footer的高度 */
+}
+
+
+.sticky-footer a {
+  margin: 0 5px;
+  /* 给链接添加左右间距 */
 }
 
 /* 媒体查询，仅在屏幕宽度小于或等于991px时生效 */
