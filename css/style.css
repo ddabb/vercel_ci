@@ -172,6 +172,24 @@ img {
   text-align: center;
 }
 
+.profile img[src="../wechat.jpg"] {
+  width: 150px;
+  /* 设置为合适的宽度 */
+  height: 150px;
+  /* 设置为合适的 高度*/
+  object-fit: contain;
+  /* 保持图片比例，让图片完全显示在设定的宽高内 */
+}
+
+.profile img[src="../wexin.jpg"] {
+  width: 210px;
+  /* 设置为合适的宽度 */
+  height: 280px;
+  /* 设置为合适的高度 */
+  object-fit: contain;
+  /* 保持图片比例，让图片完全显示在设定的宽高内 */
+}
+
 .name {
   font-size: 3rem;
   font-weight: bold;
