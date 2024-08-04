@@ -46,8 +46,10 @@
         <div class="card">
           <div class="card-body">
             <h3>龙井、方大城店自助台球管家</h3>
-            <div class="chat-area-container" id="chatAreaContainer">
-              <div class="chat-container">
+            <button class="btn btn-primary" id="toggleButton">显示/隐藏自助管家</button>
+            <div class="chat-area-container">
+              <!-- 注意这里添加了 collapse 类，并且加上了 show 类 -->
+              <div class="chat-container collapse show" id="chatArea">
                 <div class="message-list" id="chatOutput">
                   <!-- 消息列表 -->
                 </div>
@@ -57,7 +59,6 @@
                 </div>
               </div>
             </div>
-            <button id="toggleChatArea">显示/隐藏对话区域</button>
           </div>
         </div>
       </div>

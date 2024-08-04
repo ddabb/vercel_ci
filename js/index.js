@@ -101,3 +101,12 @@ fetchAndRenderTimeline();
 const timelineToggle = new bootstrap.Collapse('#timeline', {
   toggle: false
 });
+
+document.getElementById('toggleButton').addEventListener('click', function () {
+  var chatArea = document.getElementById('chatArea');
+  if (chatArea.classList.contains('show')) {
+    chatArea.classList.remove('show');
+  } else {
+    chatArea.classList.add('show');
+  }
+});
