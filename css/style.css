@@ -343,6 +343,23 @@ h1 {
   background-color: #FEDE06;
 }
 
+.sticky-footer {
+  position: -webkit-sticky;
+  /* Safari */
+  position: sticky;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background-color: #f8f9fa;
+  padding: 1rem;
+}
+
+.sticky-footer-container {
+  overflow: auto;
+  /* 或者 overflow: scroll; */
+}
+
 /* 媒体查询，仅在屏幕宽度小于或等于991px时生效 */
 @media (max-width: 991px) {
   .navbar-container {
