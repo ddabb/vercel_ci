@@ -43,27 +43,27 @@
   <main class="container-fluid">
     <div class="row mt-5">
       <div class="col-lg-8 col-md-12">
-        <div class="card mb-4">
+        <div class="card">
           <div class="card-body">
             <h3>龙井、方大城店自助台球管家</h3>
-            <div class="chat-container">
-              <div class="message-list" id="chatOutput">
-                <div class="message bot-message">
-                  <div class="avatar bg-primary rounded-circle"></div>
-                  <div class="message-text">
-                    <p>您好，欢迎来到 24 小时无人自助台球厅，我是店里的机器人管家，有什么可以帮助您的吗？</p>
-                  </div>
+            <div class="chat-area-container" id="chatAreaContainer">
+              <div class="chat-container">
+                <div class="message-list" id="chatOutput">
+                  <!-- 消息列表 -->
+                </div>
+                <div class="input-container">
+                  <input type="text" id="messageInput" placeholder="输入消息...">
+                  <button id="sendButton">发送</button>
                 </div>
               </div>
-              <div class="input-container">
-                <input type="text" id="messageInput" placeholder="输入消息...">
-                <button id="sendButton">发送</button>
-              </div>
             </div>
+            <button id="toggleChatArea">显示/隐藏对话区域</button>
           </div>
         </div>
       </div>
-      <div class="col-lg-4 col-md-12">
+    </div>
+    <div class="row mt-5">
+      <div class="col-lg-8 col-md-12">
         <div class="card">
           <div class="card-body">
             <h3>网站介绍</h3>

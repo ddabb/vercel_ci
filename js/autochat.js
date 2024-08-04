@@ -1,4 +1,4 @@
-document.getElementById('sendButton').addEventListener('click', function() {
+document.getElementById('sendButton').addEventListener('click', function () {
     const messageInput = document.getElementById('messageInput');
     const message = messageInput.value.trim();
 
@@ -35,31 +35,49 @@ document.getElementById('sendButton').addEventListener('click', function() {
             },
             body: JSON.stringify({ message: message })
         })
-        .then(response => response.text())
-        .then(data => {
-            // 移除思考提示
-            chatOutput.removeChild(thinkingMessage);
+            .then(response => response.text())
+            .then(data => {
+                // 移除思考提示
+                chatOutput.removeChild(thinkingMessage);
 
-            const botMessageElement = document.createElement('div');
-            botMessageElement.className = 'message bot-message';
-            botMessageElement.innerHTML = `
+                const botMessageElement = document.createElement('div');
+                botMessageElement.className = 'message bot-message';
+                botMessageElement.innerHTML = `
                 <div class="avatar bg-primary rounded-circle"></div>
                 <div class="message-text">
                     <p>${data}</p>
                 </div>
             `;
-            chatOutput.appendChild(botMessageElement);
-        })
-        .catch(error => {
-            console.error('Error:', error);
-        });
+                chatOutput.appendChild(botMessageElement);
+            })
+            .catch(error => {
+                console.error('Error:', error);
+            });
     }
+    adjustChatContainerHeight();
 });
 
 // 为输入框添加键盘事件监听器
-document.getElementById('messageInput').addEventListener('keyup', function(event) {
+document.getElementById('messageInput').addEventListener('keyup', function (event) {
     if (event.key === 'Enter') {
         // 模拟点击发送按钮
         document.getElementById('sendButton').click();
     }
 });
+
+document.getElementById('toggleChatArea').addEventListener('click', toggleChatArea);
+function adjustChatContainerHeight() {
+    const chatContainer = document.querySelector('.chat-container');
+    chatContainer.style.height = 'auto'; // 重置高度为自动
+    const newHeight = chatContainer.scrollHeight; // 获取新的实际高度
+    chatContainer.style.height = newHeight + 'px'; // 设置新的高度
+}
+
+function toggleChatArea() {
+    const chatAreaContainer = document.getElementById('chatAreaContainer');
+    if (chatAreaContainer.style.display === 'none') {
+        chatAreaContainer.style.display = 'block'; // 显示对话区域
+    } else {
+        chatAreaContainer.style.display = 'none'; // 隐藏对话区域
+    }
+}
