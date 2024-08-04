@@ -343,14 +343,18 @@ h1 {
   background-color: #FEDE06;
 }
 
+
 .sticky-footer {
-  position: -webkit-sticky;
-  /* Safari */
-  position: sticky;
+  position: fixed;
+  /* 将页脚固定在底部 */
   bottom: 0;
+  /* 紧贴底部 */
   left: 0;
+  /* 左侧紧贴 */
   right: 0;
+  /* 右侧紧贴 */
   z-index: 1000;
+  /* 确保页脚在其他内容之上 */
   background-color: #f8f9fa;
   padding: 1rem;
 }
