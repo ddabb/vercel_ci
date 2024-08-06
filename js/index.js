@@ -99,7 +99,7 @@ fetchAndRenderTimeline();
 
 // 控制时间线的折叠
 const timelineToggle = new bootstrap.Collapse('#timeline', {
-  toggle: false
+  toggle: true
 });
 
 document.getElementById('toggleButton').addEventListener('click', function () {
