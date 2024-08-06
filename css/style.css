@@ -366,8 +366,15 @@ h1 {
   /* 移除默认的margin */
 }
 
+.nav-item {
+  margin-right: 15px;
+  /* 按钮间距，可以根据需要调整 */
+}
 
-
+.nav-item:last-child {
+  margin-right: 0;
+  /* 移除最后一个按钮的右边距 */
+}
 
 .sticky-footer .container {
   display: flex;
@@ -388,23 +395,5 @@ h1 {
 @media (max-width: 991px) {
   .navbar-container {
     height: auto;
-  }
-}
-
-@media (max-width: 576px) {
-
-  /* xs breakpoint */
-  .navbar-nav {
-    overflow-x: auto;
-    white-space: nowrap;
-  }
-
-  .nav-item {
-    padding-left: 5px;
-    padding-right: 5px;
-  }
-
-  .nav-link {
-    font-size: 14px;
   }
 }
