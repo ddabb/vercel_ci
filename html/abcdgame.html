@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Page</title>
+    <script src="../js/abcdgame.js"></script>
+    <link href="../css/abcdgame.css" rel="stylesheet">
+</head>
+<body>
+
+
+    <!-- 按钮部分 -->
+    <div id="buttons" style="display:block">
+        <button class="play" onclick="gameStart()" style="left: -25rpx; top: 175rpx;">{{start}}</button>
+        <button class="play" onclick="redo()" style="left: 337rpx; top: 174rpx;">撤销</button>
+        <button class="play" onclick="save()" style="left: 149rpx; top: 174rpx;">保存</button>
+        <button class="play" onclick="gameRank()" style="left: 528rpx; top: 174rpx;">排行榜</button>
+    </div>
+
+    <!-- 游戏部分 -->
+    <div id="gameArea" style="display: block"></div>
+        <!-- 矩阵部分 -->
+        <div id="matrix">
+            <!-- 使用JavaScript动态生成矩阵 -->
+        </div>
+
+        <!-- 游戏结束信息 -->
+        <div id="gameOverInfo">
+            <p>当前得分：{{score}}</p>
+            <p>我的最高分：{{bestScore}}</p>
+            <p>{{endMsg}}</p>
+            <img class="logo" src="/images/pIndex.png" alt="Logo">
+        </div>
+    </div>
+
+
+</body>
+</html>
