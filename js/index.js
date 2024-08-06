@@ -29,7 +29,7 @@ document.addEventListener('DOMContentLoaded', function () {
       link.href = `/html/article.html?name=${encodeURIComponent(article.name.replace('.md', ''))}`;
       link.textContent = article.title || article.name.replace('.md', '');
       articleList.appendChild(link);
-      articleList.appendChild(document.createElement('br'));
+      // articleList.appendChild(document.createElement('br'));
     });
   }
 
