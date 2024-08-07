@@ -95,7 +95,7 @@ body {
   margin-bottom: 20px;
 }
 
-#search-input {
+#search-input-md {
   flex-grow: 1;
   /* 让输入框占据剩余空间 */
   padding: 10px;
@@ -106,7 +106,7 @@ body {
   /* 移除焦点时的轮廓 */
 }
 
-#search-button {
+#search-button-md {
   padding: 10px 20px;
   background: #007bff;
   color: #fff;
@@ -120,12 +120,12 @@ body {
 }
 
 /* 文章列表相关样式 */
-#article-list {
+#article-list-md {
   list-style: none;
   padding: 0;
 }
 
-#article-list a {
+#article-list-md a {
   display: block;
   margin-bottom: 3px;
   padding: 10px;
@@ -137,11 +137,11 @@ body {
 }
 
 /* 分页相关样式 */
-#pagination {
+#pagination-md {
   margin-top: 5px;
 }
 
-#pagination button {
+#pagination-md button {
   background: #fff;
   border: 1px solid #ccc;
   padding: 5px 10px;
@@ -151,7 +151,7 @@ body {
   border-radius: 5px;
 }
 
-#article-list a {
+#article-list-md a {
   display: block;
   padding-bottom: 3px;
   /* 更紧凑的间距 */
