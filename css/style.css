@@ -88,7 +88,17 @@ body {
   gap: 10px;
 }
 
-.bot-message .avatar,
+/* 修改后的机器人头像样式 */
+.bot-message .avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-image: url('/logo.svg');
+  background-size: cover;
+  flex-shrink: 0;
+  margin-right: 10px;
+}
+
 .user-message .avatar {
   width: 40px;
   height: 40px;
