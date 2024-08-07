@@ -2,58 +2,85 @@
 
 # 安装 coreutils(如果尚未安装)
 if ! command -v realpath >/dev/null 2>&1 || ! command -v cygpath >/dev/null 2>&1; then
-    if [ "$(uname)" = "Darwin" ]; then
-        # macOS
-        brew install coreutils
-    elif [ "$(uname)" = "Linux" ]; then
-        # Linux
-        sudo apt-get install coreutils
-    else
-        # Windows (Cygwin)
-        apt-cyg install coreutils
-    fi
+  if [ "$(uname)" = "Darwin" ]; then
+    # macOS
+    brew install coreutils
+  elif [ "$(uname)" = "Linux" ]; then
+    # Linux
+    sudo apt-get install coreutils
+  else
+    # Windows (Cygwin)
+    apt-cyg install coreutils
+  fi
 fi
 
 # 使用 cygpath 将 Windows 风格的路径转换为 Unix 风格的路径
 # 对于非 Windows 系统，cygpath 可能不可用，因此我们使用 realpath
 if [ "$(uname)" = "Darwin" ] || [ "$(uname)" = "Linux" ]; then
-    NODE_SCRIPT=$(realpath "../NodeAgent/update-mdfiles-json.js")
-    JSON_OUTPUT_PATH=$(realpath "../NodeAgent/jsons/mdfiles.json")
+  NODE_SCRIPT_UPDATE_MDFILES_JSON=$(realpath "../NodeAgent/update-mdfiles-json.js")
+  JSON_OUTPUT_PATH_MDFILES_JSON=$(realpath "../NodeAgent/jsons/mdfiles.json")
+  NODE_SCRIPT_GEN_SITEMAP=$(realpath "../NodeAgent/gen-sitemap.js")
+  XML_OUTPUT_PATH_SITEMAP=$(realpath "../NodeAgent/sitemap.xml")
 else
-    NODE_SCRIPT=$(cygpath -u "../NodeAgent/update-mdfiles-json.js")
-    JSON_OUTPUT_PATH=$(cygpath -u "../NodeAgent/jsons/mdfiles.json")
+  NODE_SCRIPT_UPDATE_MDFILES_JSON=$(cygpath -u "../NodeAgent/update-mdfiles-json.js")
+  JSON_OUTPUT_PATH_MDFILES_JSON=$(cygpath -u "../NodeAgent/jsons/mdfiles.json")
+  NODE_SCRIPT_GEN_SITEMAP=$(cygpath -u "../NodeAgent/gen-sitemap.js")
+  XML_OUTPUT_PATH_SITEMAP=$(cygpath -u "../NodeAgent/sitemap.xml")
 fi
 
 # 输出绝对路径
-echo "Absolute path of Node.js script: $NODE_SCRIPT"
-echo "Absolute path of generated JSON file: $JSON_OUTPUT_PATH"
+echo "Absolute path of Node.js script for updating mdfiles.json: $NODE_SCRIPT_UPDATE_MDFILES_JSON"
+echo "Absolute path of generated JSON file for mdfiles.json: $JSON_OUTPUT_PATH_MDFILES_JSON"
+echo "Absolute path of Node.js script for generating sitemap.xml: $NODE_SCRIPT_GEN_SITEMAP"
+echo "Absolute path of generated XML file for sitemap.xml: $XML_OUTPUT_PATH_SITEMAP"
 
 # 检查 Node.js 脚本是否存在
-if [ ! -f "$NODE_SCRIPT" ]; then
-    echo "Node.js script not found: $NODE_SCRIPT"
-    exit 1
+if [ ! -f "$NODE_SCRIPT_UPDATE_MDFILES_JSON" ]; then
+  echo "Node.js script for updating mdfiles.json not found: $NODE_SCRIPT_UPDATE_MDFILES_JSON"
+  exit 1
+fi
+
+if [ ! -f "$NODE_SCRIPT_GEN_SITEMAP" ]; then
+  echo "Node.js script for generating sitemap.xml not found: $NODE_SCRIPT_GEN_SITEMAP"
+  exit 1
 fi
 
 # 检查 Node.js 是否可用
 if command -v node >/dev/null 2>&1; then
-    # 执行 Node.js 脚本
-    node "$NODE_SCRIPT"
+  # 执行 Node.js 脚本以更新 mdfiles.json
+  node "$NODE_SCRIPT_UPDATE_MDFILES_JSON"
+
+  # 执行 Node.js 脚本以生成 sitemap.xml
+  node "$NODE_SCRIPT_GEN_SITEMAP"
 else
-    echo "Node.js is not installed or not in PATH."
-    exit 1
+  echo "Node.js is not installed or not in PATH."
+  exit 1
 fi
 
-# 检查生成的 JSON 文件是否存在
-if [ -f "$JSON_OUTPUT_PATH" ]; then
-    # 将生成的 mdfiles.json 添加到暂存区
-    git add "$JSON_OUTPUT_PATH"
-    # 自动提交更改
-    git commit -m "Update mdfiles.json"
-    # 自动推送更改到远程仓库
-    git push
-else
-    echo "Generated JSON file not found: $JSON_OUTPUT_PATH"
+# 函数用于检查文件是否存在且内容已变更
+check_and_add_to_staging() {
+  local file_path=$1
+  if [ -f "$file_path" ]; then
+    git diff --quiet "$file_path" && git diff --staged "$file_path" > /dev/null
+    if [ $? -ne 0 ]; then
+      # 文件内容已变更，添加到暂存区
+      git add "$file_path"
+    fi
+  else
+    echo "Generated file not found: $file_path"
     exit 1
+  fi
+}
+
+# 检查生成的 mdfiles.json 和 sitemap.xml 文件是否存在且内容已变更
+check_and_add_to_staging "$JSON_OUTPUT_PATH_MDFILES_JSON"
+check_and_add_to_staging "$XML_OUTPUT_PATH_SITEMAP"
+
+# 如果有文件被添加到暂存区，则自动提交更改
+if git diff --staged --quiet HEAD; then
+  echo "No changes to commit."
+else
+  git commit -m "Update mdfiles.json and sitemap.xml"
 fi
 
 exit 0
