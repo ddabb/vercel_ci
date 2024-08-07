@@ -7,13 +7,15 @@ document.getElementById('sendButton').addEventListener('click', function () {
         const userMessageElement = document.createElement('div');
         userMessageElement.className = 'message user-message';
         userMessageElement.innerHTML = `
-    <div class="message-container">
-        <div class="message-text">
+        <div class="message-container">
+          <div class="message-text">
             <p>${message}</p>
+          </div>
+          <div class="avatar-container">
+            <img src="/user.png" alt="User Avatar" class="avatar bg-success rounded-circle">
+          </div>
         </div>
-        <div class="avatar bg-success rounded-circle"></div>
-    </div>
-`;
+      `;
         chatOutput.appendChild(userMessageElement);
         adjustChatContainerHeight();
 
