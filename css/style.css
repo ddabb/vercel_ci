@@ -24,7 +24,9 @@ body {
   max-width: 1200px; /* 最大宽度 */
   padding: 20px;
 }
-
+.date-input {
+  margin-bottom: 10px;
+}
 .input-container-modified {
   display: flex;
   /* 使用 Flexbox 布局 */
