@@ -29,7 +29,7 @@ document.getElementById('sendButton').addEventListener('click', function () {
             </div>
         `;
         chatOutput.appendChild(thinkingMessage);
-
+        adjustChatContainerHeight();
         // 发送请求到API
         fetch('/api/aichat', {
             method: 'POST',

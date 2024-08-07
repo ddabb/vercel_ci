@@ -105,6 +105,7 @@ body {
   object-fit: cover;
   background-color: #ccc;
   border-radius: 50%;
+  background-image: url('/user.png');
   flex-shrink: 0;
 }
 
