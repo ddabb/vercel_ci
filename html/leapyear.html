@@ -46,13 +46,22 @@
       <div class="mb-3">
         <p id="result" class="lead"></p>
       </div>
-      <div>
-        <button class="btn btn-primary me-2" onclick="window.location.href='../index.html'">返回首页</button>
-        <button class="btn btn-secondary" onclick="window.location.href='../tools.html'">返回工具</button>
+      <div class="row">
+        <div class="col">
+          <button class="btn btn-primary me-2" onclick="goBack(); return false;">返回首页</button>
+          <button class="btn btn-secondary" onclick="goBackTool();return false;">返回工具</button>
+        </div>
       </div>
     </form>
   </main>
-
+  <script>
+    function goBack() {
+      window.location.href = '/index.html';
+    }
+    function goBackTool() {
+      window.location.href = '/tools.html';
+    }
+  </script>
   <div class="sticky-footer-container">
     <footer class="sticky-footer text-center text-lg-start bg-light text-muted">
       <div class="container text-center py-1">

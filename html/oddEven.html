@@ -20,19 +20,19 @@
     <div>
       <nav class="navbar navbar-light bg-light">
         <div class="container-fluid">
-            <ul class="navbar-nav d-flex flex-row flex-wrap">
-                <li class="nav-item">
-                    <a class="nav-link" href="../index.html">首页</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="../photos.html">相册</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="../tools.html">小工具</a>
-                </li>
-            </ul>
+          <ul class="navbar-nav d-flex flex-row flex-wrap">
+            <li class="nav-item">
+              <a class="nav-link" href="../index.html">首页</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../photos.html">相册</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../tools.html">小工具</a>
+            </li>
+          </ul>
         </div>
-    </nav>
+      </nav>
     </div>
   </header>
 
@@ -53,8 +53,8 @@
       </div>
       <div class="row">
         <div class="col">
-          <button class="btn btn-primary me-2" onclick="goBack()">返回首页</button>
-          <button class="btn btn-secondary" onclick="goBackTool()">返回工具</button>
+          <button class="btn btn-primary me-2" onclick="goBack(); return false;">返回首页</button>
+          <button class="btn btn-secondary" onclick="goBackTool();return false;">返回工具</button>
         </div>
       </div>
     </form>
@@ -62,10 +62,10 @@
 
   <script>
     function goBack() {
-      window.location.href = '../index.html';
+      window.location.href = '/index.html';
     }
     function goBackTool() {
-      window.location.href = '../tools.html';
+      window.location.href = '/tools.html';
     }
   </script>
   <div class="sticky-footer-container">
