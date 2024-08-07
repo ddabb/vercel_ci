@@ -400,9 +400,6 @@ h1 {
 /* 自定义导航栏位置样式 */
 .navbar-container {
   display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  min-height: 100vh;
   background-color: #FEDE06;
 }
 
