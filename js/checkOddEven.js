@@ -19,12 +19,12 @@ function checkOddEven() {
   }
 
   // 如果输入是正整数，继续执行
-  fetch("/api/oddEven", {
+  fetch("/api/mathlogic", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
     },
-    body: JSON.stringify({ number: numberInput }), // 假设 numberInput 是一个字符串
+    body: JSON.stringify({ number: numberInput, callType: "oddEven" }), // 假设 numberInput 是一个字符串
     signal: signal,
   })
     .then(response => {

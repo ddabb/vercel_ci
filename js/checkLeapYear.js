@@ -18,12 +18,12 @@ function checkLeapYear() {
     return;
   }
 
-  fetch("/api/leapyear", {
+  fetch("/api/mathlogic", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
     },
-    body: JSON.stringify({ number: numberInput.toString() }), // 确保 numberInput 是字符串
+    body: JSON.stringify({ number: numberInput.toString(), callType: "leapyear" }), // 确保 numberInput 是字符串
     signal: signal,
   })
     .then(response => {

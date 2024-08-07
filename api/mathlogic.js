@@ -1,3 +1,5 @@
+// mathlogic.js
+
 export default async function handler(request, response) {
   try {
     let body = '';
@@ -9,9 +11,9 @@ export default async function handler(request, response) {
       try {
         // 将接收到的数据解析为 JSON 对象
         const requestBody = JSON.parse(body);
-        // 验证请求体是否包含 number 字段
-        if (!requestBody.number) {
-          return response.status(400).json({ error: '请求体必须包含 number 字段' });
+        // 验证请求体是否包含 number 和 callType 字段
+        if (!requestBody.number || !requestBody.callType) {
+          return response.status(400).json({ error: '请求体必须包含 number 和 callType 字段' });
         }
         let numberStr;
         // 如果 number 是数字，则先转换为字符串
@@ -26,10 +28,25 @@ export default async function handler(request, response) {
         }
         // 尝试将字符串转换为 BigInt
         const number = BigInt(numberStr);
-        // 检查数字是否为偶数
-        const isEven = (number % BigInt(2n) === BigInt(0n));
+
+        // 根据 callType 调用不同的功能
+        let result;
+        switch (requestBody.callType) {
+          case 'leapyear':
+            // 判断是否为闰年: 闰年的条件是能被4整除但不能被100整除，或者能被400整除
+            result = (number % BigInt(4n) === BigInt(0n)) && (number % BigInt(100n) !== BigInt(0n) || number % BigInt(400n) === BigInt(0n));
+            break;
+          case 'oddEven':
+            // 检查数字是否为偶数
+            result = (number % BigInt(2n) === BigInt(0n));
+            break;
+          default:
+            return response.status(400).json({ error: '无效的 callType 值，有效值为 leapyear 或 oddEven' });
+        }
+
         // 返回结果
-        response.status(200).json({ message: isEven ? '偶数' : '奇数' });
+        const message = requestBody.callType === 'leapyear' ? (result ? '闰年' : '平年') : (result ? '偶数' : '奇数');
+        response.status(200).json({ message });
       } catch (parseError) {
         console.error("JSON 解析错误:", parseError);
         response.status(400).json({ error: '请求体格式不正确' });
