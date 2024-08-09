@@ -1,8 +1,12 @@
 {
     "rewrites": [
-        {
-            "source": "/",
-            "destination": "/html/test.html"
-        }
+      {
+        "source": "/",
+        "destination": "/html/test.html"
+      },
+      {
+        "source": "/indel.html",
+        "destination": "/html/test.html"
+      }
     ]
-}
+  }
