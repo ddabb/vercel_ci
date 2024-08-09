@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta name="baidu-site-verification" content="codeva-dM9hHRE36M" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>龙井、方大城自助台球管家</title>
+  <meta name="keywords" content="台球厅,自助台球,龙井,方大城">
+  <meta name="description" content="欢迎来到龙井、方大城自助台球管家的官方网站！我们是一家位于龙井和方大城地区的自助台球厅，提供高品质的台球设施和优质的服务。">
+  <link rel="icon" href="logo.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/css/style.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+</head>
+
+<body>
+  <header>
+    <div>
+      <nav class="navbar navbar-light bg-light">
+        <div class="container-fluid">
+          <ul class="navbar-nav d-flex flex-row flex-wrap">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">首页</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="photos.html">相册</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="tools.html">小工具</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+  </header>
+  <main class="container-fluid">
+    <div class="row mt-5">
+      <div class="col-lg-8 col-md-12">
+        <div class="card">
+          <div class="card-body">
+            <h3>自助小管家</h3>
+            <button class="btn btn-primary" id="toggleButton">显示/隐藏</button>
+            <div class="chat-area-container">
+              <div class="chat-container collapse show" id="chatArea">
+                <div class="message-list" id="chatOutput">
+                  <!-- 引导语 -->
+                  <div class="message bot-message">
+                    <div class="avatar-container">
+                      <img src="/logo.svg" alt="Bot Avatar" class="avatar bg-primary rounded-circle">
+                    </div>
+                    <div class="message-text">
+                      <p>您好！我是龙井、方大城店的自助台球管家，很高兴为您服务。您可以问我关于台球桌预订、游戏规则、店内活动等任何问题。</p>
+                    </div>
+                  </div>
+                  <div class="message bot-message">
+                    <div class="avatar-container">
+                      <img src="/logo.svg" alt="Bot Avatar" class="avatar bg-primary rounded-circle">
+                    </div>
+                    <div class="message-text">
+                      <p>例如，您可以说：“我想预订今晚的台球桌”，或“告诉我台球的基本规则”。如果您有任何疑问，请随时发问。</p>
+                    </div>
+                  </div>
+                  <!-- 消息列表 -->
+                </div>
+                <div class="input-container-modified">
+                  <input type="text" id="messageInput" placeholder="跟自助小管家唠唠...">
+                  <button id="sendButton">发送</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 网站文章 -->
+    <div class="row mt-5">
+      <div class="col-lg-8 col-md-12">
+        <div class="card mb-4">
+          <div class="card-body">
+            <div class="card-header">
+              <h3>店长笔记</h3>
+            </div>
+            <div id="search-form">
+              <div class="search-container">
+                <input type="text" id="search-input-md" placeholder="看看店长都记录了些啥...">
+                <button id="search-button-md">找找看</button>
+              </div>
+            </div>
+            <ul id="article-list-md"></ul>
+            <div id="pagination-md"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 公众号文章 -->
+    <div class="row">
+      <div class="col-lg-8 col-md-12">
+        <div class="card mb-4">
+          <div class="card-body">
+            <div class="card-header">
+              <h3>公众号文章</h3>
+            </div>
+            <div id="search-form-weixin">
+              <div class="search-container">
+                <input type="text" id="search-input-weixin" placeholder="搜索公众号内容...">
+                <button id="search-button-weixin">找找看</button>
+              </div>
+            </div>
+            <ul id="article-list-weixin"></ul>
+            <div id="pagination-weixin"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- 时间线部分 -->
+    <div class="row mt-5">
+      <div class="col-lg-8 col-md-12">
+        <div class="card mb-4">
+          <div class="card-header">
+            <h3 class="mb-0">更新日志</h3>
+          </div>
+          <div class="card-body">
+            <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#timeline"
+              aria-expanded="false" aria-controls="timeline">
+              展开/折叠
+            </button>
+            <div id="timeline" class="timeline collapse show">
+              <!-- 动态时间线内容将被插入此处 -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  <div class="sticky-footer-container">
+    <footer class="sticky-footer text-center text-lg-start bg-light text-muted">
+      <div class="container text-center py-1">
+        <section>
+
+          <p>
+            <a href="html/aboutus.html">关于我们</a> |
+            <a href="html/contactus.html">联系店长</a>
+          </p>
+        </section>
+      </div>
+    </footer>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+  <script src="/js/index.js"></script>
+  <script src="/js/autochat.js"></script>
+</body>
+
+</html>
