@@ -5,8 +5,8 @@ const app = express();
 app.use(express.json());
 
 const statusHandlers = new Map([
-  [404, () => res.sendFile(path.join(__dirname, '404.html'))],
-  [500, () => res.sendFile(path.join(__dirname, '500.html'))],
+  [404, () => res.sendFile(path.join(__dirname, "html", '404.html'))],
+  [500, () => res.sendFile(path.join(__dirname, "html", '500.html'))],
 
 ]);
 // 错误处理中间件 - 如果没有匹配的路由，则发送 404.html
