@@ -441,6 +441,11 @@ h1 {
   /* 移除默认的margin */
 }
 
+main {
+  margin-bottom: 50px;
+  /* 根据页脚的高度调整这个值 */
+}
+
 .nav-item {
   margin-right: 15px;
   /* 按钮间距，可以根据需要调整 */
