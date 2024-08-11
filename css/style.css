@@ -20,13 +20,17 @@ body {
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  width: 80%; /* 或者你希望的任何宽度 */
-  max-width: 1200px; /* 最大宽度 */
+  width: 80%;
+  /* 或者你希望的任何宽度 */
+  max-width: 1200px;
+  /* 最大宽度 */
   padding: 20px;
 }
+
 .date-input {
   margin-bottom: 10px;
 }
+
 .input-container-modified {
   display: flex;
   /* 使用 Flexbox 布局 */
@@ -515,5 +519,45 @@ h1 {
 @media (max-width: 991px) {
   .navbar-container {
     height: auto;
+  }
+}
+
+/* 通用样式保持不变... */
+
+/* 新增媒体查询 */
+@media (max-width: 767px) {
+
+  /* 或者使用适合您的断点 */
+  .sticky-footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #f8f9fa;
+    padding: 10px 0;
+    /* 调整padding以适应内容 */
+    display: flex;
+    justify-content: center;
+    /* 水平居中 */
+    align-items: center;
+    /* 垂直居中 */
+  }
+
+  .sticky-footer .container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: auto;
+    /* 允许内容决定高度 */
+  }
+
+  .sticky-footer p {
+    margin: 0;
+    /* 移除默认的margin */
+  }
+
+  .sticky-footer a {
+    margin: 0 5px;
+    /* 给链接添加左右间距 */
   }
 }
