@@ -71,22 +71,38 @@ document.getElementById('messageInput').addEventListener('keyup', function (even
     }
 });
 
-document.getElementById('toggleChatArea').addEventListener('click', toggleChatArea);
+const toggleButton = document.getElementById('toggleChatArea');
+if (toggleButton) {
+    toggleButton.addEventListener('click', toggleChatArea);
+} else {
+    console.error('Element with ID "toggleChatArea" not found.');
+}
+
+
 function adjustChatContainerHeight() {
     debugger
     const chatContainer = document.querySelector('.chat-container');
-    chatContainer.style.height = 'auto'; // 重置高度为自动
-    const newHeight = chatContainer.scrollHeight; // 获取新的实际高度
-    console.log("newHeight" + newHeight);
-    chatContainer.style.height = newHeight + 'px'; // 设置新的高度
+    if (chatContainer) {
+        chatContainer.style.height = 'auto'; // 重置高度为自动
+        const newHeight = chatContainer.scrollHeight; // 获取新的实际高度
+        console.log("newHeight" + newHeight);
+        chatContainer.style.height = newHeight + 'px'; // 设置新的高度
+    } else {
+        console.error('Element with class "chat-container" not found.');
+    }
+
 }
 
 function toggleChatArea() {
     debugger
     const chatAreaContainer = document.getElementById('chatAreaContainer');
-    if (chatAreaContainer.style.display === 'none') {
-        chatAreaContainer.style.display = 'block'; // 显示对话区域
+    if (chatAreaContainer) {
+        if (chatAreaContainer.style.display === 'none') {
+            chatAreaContainer.style.display = 'block';
+        } else {
+            chatAreaContainer.style.display = 'none';
+        }
     } else {
-        chatAreaContainer.style.display = 'none'; // 隐藏对话区域
+        console.error('Element with ID "chatAreaContainer" not found.');
     }
 }
