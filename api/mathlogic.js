@@ -1,4 +1,4 @@
-// mathlogic.js
+const idcard = require("idcard-tool");
 
 export default async function handler(request, response) {
   try {
@@ -9,43 +9,48 @@ export default async function handler(request, response) {
 
     request.on('end', () => {
       try {
-        // 将接收到的数据解析为 JSON 对象
         const requestBody = JSON.parse(body);
-        // 验证请求体是否包含 number 和 callType 字段
         if (!requestBody.number || !requestBody.callType) {
           return response.status(400).json({ error: '请求体必须包含 number 和 callType 字段' });
         }
-        let numberStr;
-        // 如果 number 是数字，则先转换为字符串
-        if (typeof requestBody.number === 'number') {
-          numberStr = requestBody.number.toString();
-        } else {
-          numberStr = requestBody.number;
-        }
-        // 验证 number 字段是否为字符串且仅包含数字
-        if (typeof numberStr !== 'string' || !/^[0-9]+$/.test(numberStr)) {
-          return response.status(400).json({ error: '数据格式不正确，number 字段必须是数字字符串' });
-        }
-        // 尝试将字符串转换为 BigInt
-        const number = BigInt(numberStr);
 
-        // 根据 callType 调用不同的功能
+        let numberStr;
         let result;
         switch (requestBody.callType) {
           case 'leapyear':
-            // 判断是否为闰年: 闰年的条件是能被4整除但不能被100整除，或者能被400整除
-            result = (number % BigInt(4n) === BigInt(0n)) && (number % BigInt(100n) !== BigInt(0n) || number % BigInt(400n) === BigInt(0n));
+            numberStr = typeof requestBody.number === 'number' ? requestBody.number.toString() : requestBody.number;
+            if (typeof numberStr !== 'string' || !/^[0-9]+$/.test(numberStr)) {
+              return response.status(400).json({ error: '数据格式不正确，number 字段必须是数字字符串' });
+            }
+            result = (BigInt(numberStr) % BigInt(4n) === BigInt(0n)) && (BigInt(numberStr) % BigInt(100n) !== BigInt(0n) || BigInt(numberStr) % BigInt(400n) === BigInt(0n));
             break;
           case 'oddEven':
-            // 检查数字是否为偶数
-            result = (number % BigInt(2n) === BigInt(0n));
+            numberStr = typeof requestBody.number === 'number' ? requestBody.number.toString() : requestBody.number;
+            if (typeof numberStr !== 'string' || !/^[0-9]+$/.test(numberStr)) {
+              return response.status(400).json({ error: '数据格式不正确，number 字段必须是数字字符串' });
+            }
+            result = (BigInt(numberStr) % BigInt(2n) === BigInt(0n));
+            break;
+          case 'IdCard':
+            numberStr = typeof requestBody.number === 'number' ? requestBody.number.toString() : requestBody.number;
+            if (typeof numberStr !== 'string' || !/^(?:[0-9]{18}|[JZ][0-9]{16}[0-9Xx])$/i.test(numberStr)) {
+              return response.status(400).json({ error: '数据格式不正确，number 字段必须是有效的身份证号码字符串' });
+            }
+            result = idcard(numberStr.toUpperCase());
             break;
           default:
-            return response.status(400).json({ error: '无效的 callType 值，有效值为 leapyear 或 oddEven' });
+            return response.status(400).json({ error: '无效的 callType 值，有效值为 leapyear, oddEven 或 IdCard' });
         }
 
-        // 返回结果
-        const message = requestBody.callType === 'leapyear' ? (result ? '闰年' : '平年') : (result ? '偶数' : '奇数');
+        let message;
+        if (requestBody.callType === 'leapyear') {
+          message = result ? '闰年' : '平年';
+        } else if (requestBody.callType === 'oddEven') {
+          message = result ? '偶数' : '奇数';
+        } else if (requestBody.callType === 'IdCard') {
+          message = JSON.stringify(result);
+        }
+
         response.status(200).json({ message });
       } catch (parseError) {
         console.error("JSON 解析错误:", parseError);

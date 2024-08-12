@@ -9,6 +9,7 @@
     "express": "^4.19.2",
     "http": "^0.0.1-security",
     "https": "^1.0.0",
+    "idcard-tool": "^1.0.1",
     "marked": "^13.0.3",
     "node-fetch": "^3.3.2",
     "showdown": "^2.1.0",
