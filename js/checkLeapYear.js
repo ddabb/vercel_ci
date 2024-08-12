@@ -10,7 +10,7 @@ function checkLeapYear() {
     controller.abort(); // 取消旧请求
   }
 
-  const numberInput = document.getElementById("numberInput").value;
+  const numberInput = document.getElementById("yearInput").value;
 
   // 使用正则表达式验证输入是否为正整数
   if (!/^\d+$/.test(numberInput)) {
