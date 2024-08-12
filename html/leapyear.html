@@ -49,20 +49,13 @@
       </div>
       <div class="row">
         <div class="col">
-          <button class="btn btn-primary me-2" onclick="goBack(); return false;">返回首页</button>
-          <button class="btn btn-secondary" onclick="goBackTool();return false;">返回工具</button>
+          <a class="btn btn-primary me-2" href="./index.html" role="button">返回首页</a>
+          <a class="btn btn-secondary" href="./tools.html" role="button">返回工具</a>
         </div>
       </div>
     </form>
   </main>
-  <script>
-    function goBack() {
-      window.location.href = '/html/index.html';
-    }
-    function goBackTool() {
-      window.location.href = '/html/tools.html';
-    }
-  </script>
+
   <div class="sticky-footer-container">
     <footer class="sticky-footer text-center text-lg-start bg-light text-muted">
       <div class="container text-center py-1">
