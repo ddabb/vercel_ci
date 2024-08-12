@@ -46,18 +46,31 @@ function checkIdCard() {
 
 function updateUI(data, idCardInput) {
     const resultElement = document.getElementById("result");
-    if (data.message && typeof data.message === 'object') {
-        // 假设 data.message 是一个对象
-        resultElement.textContent = `你输入的 ${idCardInput} 的验证结果是：\n`;
-        resultElement.textContent += `类型：${data.message.type}\n`;
-        resultElement.textContent += `签发地点：${data.message.sign}\n`;
-        resultElement.textContent += `国家：${data.message.country}\n`;
-        resultElement.textContent += `生日：${data.message.birthday}\n`;
-        resultElement.textContent += `性别：${data.message.sex}\n`;
-        resultElement.textContent += `验证状态：${data.message.isValid ? '有效' : '无效'}`;
-        result湖Element.style.color = data.message.isValid ? "green" : "red";
+    let message = data.message;
+
+    try {
+        // 尝试解析 message 为 JSON 对象
+        message = JSON.parse(message);
+    } catch (e) {
+        // 如果解析失败，则 message 保持为字符串
+    }
+
+    if (typeof message === 'object' && message !== null) {
+        // 假设 message 是一个对象
+        let output = `你输入的 ${idCardInput} 的验证结果是：\n`;
+        output += `类型：${message.type}\n`;
+        output += `签发地点：${message.sign}\n`;
+        output += `国家：${message.country}\n`;
+        output += `生日：${message.birthday}\n`;
+        output += `性别：${message.sex}\n`;
+        output += `验证状态：${message.isValid ? '有效' : '无效'}`;
+
+        // 使用 <pre> 标签确保文本按行显示且靠左对齐
+        resultElement.innerHTML = `<pre>${output}</pre>`;
+        resultElement.style.color = message.isValid ? "green" : "red";
     } else {
-        resultElement.textContent = data.message;
+        // 如果 message 不是一个对象，显示原始的 message
+        resultElement.textContent = message;
         resultElement.style.color = "red";
     }
 }
