@@ -1,14 +1,12 @@
-let controller; // 声明在函数作用域外，以便可以被清除
+let controller; // 声明在全局作用域中，以便可以被清除
 
 function checkIdCard() {
     // 创建一个新的 AbortController 实例，用于控制 fetch 请求
-    controller = new AbortController();
-    const signal = controller.signal;
-
-    // 清除之前的控制器，防止内存泄漏
-    if (controller && controller !== null) { // 检查是否已经存在旧控制器
+    if (controller) {
         controller.abort(); // 取消旧请求
     }
+    controller = new AbortController();
+    const signal = controller.signal;
 
     const idCardInput = document.getElementById("idCardInput").value;
 
@@ -57,7 +55,7 @@ function updateUI(data, idCardInput) {
         resultElement.textContent += `生日：${data.message.birthday}\n`;
         resultElement.textContent += `性别：${data.message.sex}\n`;
         resultElement.textContent += `验证状态：${data.message.isValid ? '有效' : '无效'}`;
-        resultElement.style.color = data.message.isValid ? "green" : "red";
+        result湖Element.style.color = data.message.isValid ? "green" : "red";
     } else {
         resultElement.textContent = data.message;
         resultElement.style.color = "red";
