@@ -3,7 +3,7 @@ const path = require('path');
 
 // 基础目录
 const baseHtmlDir = 'html';
-const domain = 'https://www.60score.com'; // 替换为你的域名
+const domain = 'https://www.60score.com/html'; // 替换为你的域名
 
 // 创建站点地图的开头
 let sitemapXml = '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n';
