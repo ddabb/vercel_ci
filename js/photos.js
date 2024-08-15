@@ -13,16 +13,16 @@ document.addEventListener('DOMContentLoaded', () => {
         imgElement.classList.add('grid-item');
         imgElement.style.cursor = 'pointer';
 
-        imgElement.addEventListener('click', function() {
+        imgElement.addEventListener('click', function () {
           const modalImage = document.getElementById('modalImage');
           const modalImageAlt = document.getElementById('modalImageAlt');
           modalImage.src = imgElement.src;
           modalImage.alt = imgElement.alt;
-          
+
           // Remove file extension from alt text
           const altTextWithoutExtension = removeFileExtension(modalImage.alt);
           modalImageAlt.textContent = altTextWithoutExtension;
-          
+
           modal.show();
         });
 
