@@ -18,7 +18,8 @@ const promises = dirs.map(dir => {
           const filePath = path.join(dir, file.name);
           return fs.stat(filePath).then(stats => {
             const lastmod = stats.mtime.toISOString().substring(0, 10);
-            return `<url><loc>${domain}${filePath}</loc><lastmod>${lastmod}</lastmod></url>\n`;
+            const urlPath = filePath.replace(/\\/g, '/');
+            return `<url><loc>${domain}${urlPath}</loc><lastmod>${lastmod}</lastmod></url>\n`;
           });
         });
     });
