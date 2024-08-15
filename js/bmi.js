@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', function () {
     };
 
     function calculateBMI() {
-        const height = parseFloat(heightSlider.value) / 100; // 转换为米
+        const height = parseFloat(heightSlider.value); // 转换为米
         const weight = parseFloat(weightSlider.value);
 
         const bmi = weight / (height * height);
@@ -46,7 +46,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 break;
         }
 
-        result.textContent = `您的身高是 ${heightSlider.value} cm，体重是 ${weightSlider.value} kg，BMI是 ${bmi.toFixed(2)}，属于 ${category}。${advice}`;
+        result.textContent = `您的身高是 ${heightSlider.value} m，体重是 ${weightSlider.value} kg，BMI是 ${bmi.toFixed(2)}，属于 ${category}。${advice}`;
         result.className = 'lead bmi-result ' + categoryMap[category];
     }
 
