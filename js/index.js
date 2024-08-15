@@ -30,7 +30,7 @@ document.addEventListener('DOMContentLoaded', function () {
       const link = document.createElement('a');
       // 构建直接指向mdhtml文件夹中HTML文件的链接
       link.href = `/mdhtml/${encodedArticleName}`;
-      link.textContent = article.title || article.name.replace('.html', '');
+      link.textContent = article.title || article.name.replace('.md', '');
       articleList.appendChild(link);
     });
   }
