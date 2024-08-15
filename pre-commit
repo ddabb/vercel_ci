@@ -21,11 +21,13 @@ if [ "$(uname)" = "Darwin" ] || [ "$(uname)" = "Linux" ]; then
   JSON_OUTPUT_PATH_MDFILES_JSON=$(realpath "../NodeAgent/jsons/mdfiles.json")
   NODE_SCRIPT_GEN_SITEMAP=$(realpath "../NodeAgent/gen-sitemap.js")
   XML_OUTPUT_PATH_SITEMAP=$(realpath "../NodeAgent/sitemap.xml")
+  NODE_SCRIPT_MD2HTML=$(realpath "../NodeAgent/md2html.js") # 添加 md2html 脚本的绝对路径
 else
   NODE_SCRIPT_UPDATE_MDFILES_JSON=$(cygpath -u "../NodeAgent/update-mdfiles-json.js")
   JSON_OUTPUT_PATH_MDFILES_JSON=$(cygpath -u "../NodeAgent/jsons/mdfiles.json")
   NODE_SCRIPT_GEN_SITEMAP=$(cygpath -u "../NodeAgent/gen-sitemap.js")
   XML_OUTPUT_PATH_SITEMAP=$(cygpath -u "../NodeAgent/sitemap.xml")
+  NODE_SCRIPT_MD2HTML=$(cygpath -u "../NodeAgent/md2html.js") # 添加 md2html 脚本的绝对路径
 fi
 
 # 输出绝对路径
@@ -33,6 +35,7 @@ echo "Absolute path of Node.js script for updating mdfiles.json: $NODE_SCRIPT_UP
 echo "Absolute path of generated JSON file for mdfiles.json: $JSON_OUTPUT_PATH_MDFILES_JSON"
 echo "Absolute path of Node.js script for generating sitemap.xml: $NODE_SCRIPT_GEN_SITEMAP"
 echo "Absolute path of generated XML file for sitemap.xml: $XML_OUTPUT_PATH_SITEMAP"
+echo "Absolute path of Node.js script for md2html: $NODE_SCRIPT_MD2HTML" # 输出 md2html 脚本的绝对路径
 
 # 检查 Node.js 脚本是否存在
 if [ ! -f "$NODE_SCRIPT_UPDATE_MDFILES_JSON" ]; then
@@ -45,10 +48,18 @@ if [ ! -f "$NODE_SCRIPT_GEN_SITEMAP" ]; then
   exit 1
 fi
 
+if [ ! -f "$NODE_SCRIPT_MD2HTML" ]; then
+  echo "Node.js script for md2html not found: $NODE_SCRIPT_MD2HTML"
+  exit 1
+fi
+
 # 检查 Node.js 是否可用
 if command -v node >/dev/null 2>&1; then
   # 执行 Node.js 脚本以更新 mdfiles.json
   node "$NODE_SCRIPT_UPDATE_MDFILES_JSON"
+
+  # 执行 md2html 脚本
+  node "$NODE_SCRIPT_MD2HTML"
 
   # 执行 Node.js 脚本以生成 sitemap.xml
   node "$NODE_SCRIPT_GEN_SITEMAP"
@@ -80,7 +91,7 @@ check_and_add_to_staging "$XML_OUTPUT_PATH_SITEMAP"
 if git diff --staged --quiet HEAD; then
   echo "No changes to commit."
 else
-  git commit -m "Update mdfiles.json and sitemap.xml"
+  git commit -m "Update mdfiles.json, sitemap.xml, and generate HTML files"
 fi
 
 exit 0
