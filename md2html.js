@@ -31,10 +31,25 @@ async function ensureComponentsDirectory(componentsDirectory) {
   }
 }
 
+async function readEjsFile(filePath) {
+  try {
+    return await fs.readFile(filePath, 'utf8');
+  } catch (error) {
+    console.error(`Error reading EJS file: ${filePath}`, error);
+    throw error;
+  }
+}
+
 async function updateHtmlFile(htmlFilePath, htmlContent, outputFilePath) {
   console.log(`Updating HTML file: ${outputFilePath}`);
   try {
-    const updatedHtml = await ejs.renderFile(htmlFilePath, { articleContent: htmlContent }, { escape: false });
+    const headerContent = await readEjsFile(path.join(__dirname, 'components', 'header.ejs'));
+    const footerContent = await readEjsFile(path.join(__dirname, 'components', 'footer.ejs'));
+    const updatedHtml = await ejs.renderFile(htmlFilePath, {
+      articleContent: htmlContent,
+      headerContent: headerContent,
+      footerContent: footerContent
+    }, { escape: false });
     await fs.writeFile(outputFilePath, updatedHtml);
   } catch (error) {
     console.error(`Error updating HTML file: ${outputFilePath}`, error);
@@ -66,7 +81,7 @@ async function mdToHtml(mdFilesDirectory = 'mdfiles', genhtmlDirectory = 'mdhtml
       await updateHtmlFile(htmlTemplatePath, htmlContent, outputFilePath);
     }
 
-    console.log(`Updated ${genhtmlDirectory}`);
+    console.log('Error during mdToHtml process:');
   } catch (error) {
     console.error('Error during mdToHtml process:', error);
   }
