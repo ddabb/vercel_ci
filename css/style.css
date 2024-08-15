@@ -441,6 +441,26 @@ h1 {
   /* 移除默认的margin */
 }
 
+body .bmi-result {
+  font-size: 1.5rem;
+}
+
+body .underweight {
+  color: green;
+}
+
+body .normal {
+  color: black;
+}
+
+body .overweight {
+  color: orange;
+}
+
+body .obese {
+  color: red;
+}
+
 main {
   margin-bottom: 50px;
   /* 根据页脚的高度调整这个值 */
