@@ -25,9 +25,12 @@ document.addEventListener('DOMContentLoaded', function () {
     articleList.innerHTML = ''; // 清空旧的文章列表
 
     articles.forEach(article => {
+      // 使用encodeURIComponent对文章名称进行编码
+      const encodedArticleName = encodeURIComponent(article.name.replace('.md', '.html'));
       const link = document.createElement('a');
-      link.href = `/html/article.html?name=${encodeURIComponent(article.name.replace('.md', ''))}`;
-      link.textContent = article.title || article.name.replace('.md', '');
+      // 构建直接指向mdhtml文件夹中HTML文件的链接
+      link.href = `/mdhtml/${encodedArticleName}`;
+      link.textContent = article.title || article.name.replace('.html', '');
       articleList.appendChild(link);
     });
   }
