@@ -1,62 +1,46 @@
-let controller; // 声明在函数作用域外，以便可以被清除
+import { oddEven } from 'https://cdn.jsdelivr.net/gh/ddabb/mathlogic@1.1/dist/mathlogic.browser.esm.js';
 
-function checkOddEven() {
-  // 创建一个新的 AbortController 实例，用于控制 fetch 请求
-  controller = new AbortController();
-  const signal = controller.signal;
+let controller; // 控制器实例
 
-  // 清除之前的控制器，防止内存泄漏
-  if (controller && controller !== controller) { // 检查是否已经存在旧控制器
-    controller.abort(); // 取消旧请求
-  }
+document.addEventListener("DOMContentLoaded", function () {
+  const yearInput = document.getElementById('numberInput');
+  const resultElement = document.getElementById('result');
 
-  const numberInput = document.getElementById("numberInput").value;
+  // 监听输入框的值改变事件
+  yearInput.addEventListener('input', () => checkOddEven(yearInput.value));
 
-  // 使用正则表达式验证输入是否为正整数
-  if (!/^\d+$/.test(numberInput)) {
-    updateUI({ message: "请输入一个正整数" }, numberInput);
-    return;
-  }
+  function checkOddEven(numberInput) {
+    console.log(`Checking if ${numberInput} 是奇数还是偶数...`);
 
-  // 如果输入是正整数，继续执行
-  fetch("/api/mathlogic", {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify({ number: numberInput, callType: "oddEven" }), // 假设 numberInput 是一个字符串
-    signal: signal,
-  })
-    .then(response => {
-      if (!response.ok) {
-        throw new Error(`HTTP error! status: ${response.status}`);
-      }
-      return response.json();
-    })
-    .then(data => {
-      updateUI(data, numberInput); // 传递 numberInput 给 updateUI
-    })
-    .catch(error => {
-      if (error.name === "AbortError") {
-        console.log("Fetch aborted");
+    // 如果之前有控制器实例，则先取消旧请求
+    if (controller) {
+      controller.abort(); // 取消旧请求
+    }
+
+    // 创建一个新的 AbortController 实例
+    controller = new AbortController();
+    const signal = controller.signal;
+
+    oddEven(numberInput, { signal }).then(result => {
+      console.log(`Result for ${numberInput}: ${result}`);
+
+      if (result) {
+        resultElement.textContent = `你输入的 ${numberInput} 是一个 偶数`;
+        resultElement.style.color = "green";
       } else {
-        console.error("Error:", error);
-        updateUI({ message: "发生错误，请重试" }, numberInput); // 传递 numberInput 给 updateUI
+        resultElement.textContent = `你输入的 ${numberInput} 是一个 奇数`;
+        resultElement.style.color = "blue";
+      }
+    }).catch(error => {
+      if (error.name === 'AbortError') {
+        console.log('Fetch operation aborted');
+      } else {
+        resultElement.textContent = ` ${error.message}`;
+        resultElement.style.color = "red";
       }
     });
-}
-
-function updateUI(data, numberInput) {
-  const resultElement = document.getElementById("result");
-  if (data.message === "奇数" || data.message === "偶数") {
-    resultElement.textContent = `你输入的 ${numberInput} 是一个 ${data.message}`;
-    resultElement.style.color = data.message === "奇数" ? "blue" : "green";
-
   }
-  else {
-    resultElement.textContent = data.message;
-    resultElement.style.color = "red";
-  }
+});
 
 
-}
+

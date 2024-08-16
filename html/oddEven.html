@@ -10,7 +10,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>数学工具：判断输入的数字是奇数还是偶数</title>
   <meta name="description" content="通过我们的奇偶数判断工具，轻松确定任何数字是奇数还是偶数。快速、准确，为您的数学问题提供答案。">
-  <script src="../js/checkOddEven.js"></script>
+  <script type="module" src="../js/checkOddEven.js"></script>
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9093386396178901"
     crossorigin="anonymous"></script>
   <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
@@ -50,10 +50,10 @@
       <div class="row mb-3">
         <div class="col-sm-6">
           <label for="numberInput" class="form-label">请输入一个数字：</label>
-          <input type="number" class="form-control" id="numberInput" placeholder="输入数字" oninput="checkOddEven()">
+          <input type="number" class="form-control" id="numberInput" placeholder="输入数字">
         </div>
       </div>
-      <div class="row mb-3">
+      <div class=" row mb-3">
         <div class="col">
           <p id="result" class="lead"></p>
         </div>

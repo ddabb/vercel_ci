@@ -1,5 +1,6 @@
 import { leapyear } from 'https://cdn.jsdelivr.net/gh/ddabb/mathlogic@1.1/dist/mathlogic.browser.esm.js';
-let controller; // 声明在函数作用域外，以便可以被清除
+
+let controller; // 控制器实例
 
 document.addEventListener("DOMContentLoaded", function () {
   const yearInput = document.getElementById('yearInput');
@@ -11,14 +12,14 @@ document.addEventListener("DOMContentLoaded", function () {
   function checkLeapYear(numberInput) {
     console.log(`Checking if ${numberInput} is a leap year...`);
 
-    // 创建一个新的 AbortController 实见，用于控制 fetch 请求
-    controller = new AbortController();
-    const signal = controller.signal;
-
-    // 清除之前的控制器，防止内存泄漏
-    if (controller.signal) {
+    // 如果之前有控制器实例，则先取消旧请求
+    if (controller) {
       controller.abort(); // 取消旧请求
     }
+
+    // 创建一个新的 AbortController 实例
+    controller = new AbortController();
+    const signal = controller.signal;
 
     leapyear(numberInput, { signal }).then(result => {
       console.log(`Result for ${numberInput}: ${result}`);
