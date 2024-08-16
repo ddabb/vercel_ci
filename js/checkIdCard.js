@@ -1,4 +1,4 @@
-import { CheckIdCard } from 'https://cdn.jsdelivr.net/gh/ddabb/mathlogic@1.1/dist/mathlogic.browser.esm.js';
+import { CheckIdCard } from '<script src="https://cdn.jsdelivr.net/gh/ddabb/60score@latest/dist/60score.browser.esm.js"></script>';
 
 let controller; // 控制器实例
 
