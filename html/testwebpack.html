@@ -11,34 +11,12 @@
     <h1>MathLogic Test</h1>
 
     <script type="module">
-        import mathlogic from 'https://cdn.jsdelivr.net/gh/ddabb/mathlogic/dist/mathlogic.browser.esm.js';
-
-        document.addEventListener("DOMContentLoaded", function () {
-            // 测试 leapyear 方法
-            const year = 2024;
-            mathlogic.leapyear(year).then(result => {
-                console.log(`${year} is a leap year: ${result}`);
-            }).catch(error => {
-                console.error(`Error checking leap year: ${error.message}`);
-            });
-
-            // 测试 oddEven 方法
-            const number = 13;
-            mathlogic.oddEven(number).then(result => {
-                console.log(`${number} is even: ${result}`);
-            }).catch(error => {
-                console.error(`Error checking odd/even: ${error.message}`);
-            });
-
-            // 测试 IdCard 方法
-            const idCardNumber = "11010519491231002X";
-            mathlogic.IdCard(idCardNumber).then(result => {
-                console.log(`ID Card Validation: ${result}`);
-            }).catch(error => {
-                console.error(`Error validating ID Card: ${error.message}`);
-            });
-        });
+        // 这里可以留空或者用来导入其他必要的模块
+        // 如果需要在文档加载完成前执行某些操作，也可以在这里写代码
     </script>
+
+    <!-- 引用外部的 testpack.js 文件 -->
+    <script type="module" src="../js/testwebpack.js"></script>
 </body>
 
 </html>
