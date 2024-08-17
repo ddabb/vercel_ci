@@ -1,4 +1,4 @@
-import { leapyear, oddEven, CheckIdCard } from 'https://cdn.jsdelivr.net/gh/ddabb/60score@V4.0.1/dist/60score.browser.esm.js';
+import { leapyear, oddEven, CheckIdCard } from 'https://cdn.jsdelivr.net/gh/ddabb/60score@main/dist/60score.browser.esm.js';
 
 document.addEventListener("DOMContentLoaded", function () {
     const leapYearResultElement = document.getElementById('leap-year-result');

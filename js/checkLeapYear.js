@@ -1,4 +1,4 @@
-import { leapyear } from 'https://cdn.jsdelivr.net/gh/ddabb/60score@V4.0.1/dist/60score.browser.esm.js';
+import { leapyear } from 'https://cdn.jsdelivr.net/gh/ddabb/60score@main/dist/60score.browser.esm.js';
 
 let controller; // 控制器实例
 
