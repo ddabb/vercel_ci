@@ -252,6 +252,7 @@ function compress(arr) {
     while (result.length < 4) {
         result.push(0);
     }
+    
     return result;
 }
 
@@ -271,6 +272,10 @@ function merge(arr) {
             merged = true;
         }
     }
+
+    if (merged) {
+        score += tempRow[0];
+      }
     return [merged, arr];
 }
 
