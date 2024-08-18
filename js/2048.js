@@ -109,8 +109,13 @@ function updateGrid() {
       cell.textContent = board[i];
       const powerOfTwo = Math.log2(board[i]);
       const className = `cell-${2 ** powerOfTwo}`;
-      cell.classList.add(className); // 添加额外的类
+      cell.className.add(className); // 添加额外的类
     }
+    else {
+      cell.className.add('cell-default') //设置默认背景色
+
+    }
+
   }
 
   // 更新分数显示

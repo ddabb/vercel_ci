@@ -613,6 +613,11 @@ main {
   justify-content: center;
 }
 
+.cell-default {
+
+  background-color: #eee4da;
+}
+
 .cell-2 {
   background-color: #eee4da;
   color: #776e65;
@@ -742,6 +747,7 @@ main {
   font-size: 32px;
   cursor: pointer;
   user-select: none;
+
 }
 
 button {
