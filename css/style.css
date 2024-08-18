@@ -591,3 +591,71 @@ main {
     /* 给链接添加左右间距 */
   }
 }
+
+/* 在 style.css 文件的末尾添加以下样式 */
+.game-container {
+  margin: 10px auto;
+  padding: 10px;
+  max-width: 400px;
+  text-align: center;
+}
+
+.game-score {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(4, 100px);
+  gap: 2px;
+  /* 默认设置 */
+  justify-content: center;
+}
+
+.grid-cell {
+  width: 100px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 32px;
+  cursor: pointer;
+}
+
+button {
+  margin-top: 10px;
+  padding: 10px 20px;
+  font-size: 16px;
+}
+
+/* 确保在小屏幕上也能良好显示 */
+@media (max-width: 480px) {
+  .game-score {
+    font-size: 20px;
+  }
+
+  .grid-container {
+    gap: 2px;
+    grid-template-columns: repeat(4, 80px);
+    /* 调整网格单元格之间的间距 */
+  }
+
+  .grid-cell {
+    width: 80px;
+    height: 80px;
+    font-size: 24px;
+  }
+
+  button {
+    padding: 8px 16px;
+    font-size: 14px;
+  }
+
+  .game-container {
+    margin: 10px auto;
+    padding: 10px;
+    max-width: 320px;
+    text-align: center;
+  }
+}
