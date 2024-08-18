@@ -4,41 +4,57 @@ const gridCells = document.querySelectorAll('.grid-cell');
 const scoreElement = document.getElementById('score');
 
 const backgroundColors = {
-  2: '#eee4da',
-  4: '#ede0c8',
-  8: '#f2b179',
-  16: '#f59563',
-  32: '#f67c5f',
-  64: '#f65e3b',
-  128: '#edcf72',
-  256: '#edcc61',
-  512: '#edc850',
-  1024: '#edc53f',
-  2048: '#edc22e',
-  4096: '#edc22e',
-  8192: '#edc22e',
-  16384: '#edc22e',
-  32768: '#edc22e',
-  65536: '#edc22e',
+  2: '#eee4da', // A
+  4: '#ede0c8', // B
+  8: '#f2b179', // C
+  16: '#f59563', // D
+  32: '#f67c5f', // E
+  64: '#f65e3b', // F
+  128: '#edcf72', // G
+  256: '#edcc61', // H
+  512: '#edc850', // I
+  1024: '#edc53f', // J
+  2048: '#edc22e', // K
+  4096: '#298034', // L
+  8192: '#1f4e75', // M
+  16384: '#e20623', // N
+  32768: '#02f30e', // O
+  65536: '#04f769', // R
+  131072: '#298034', // S (65536 * 2)
+  262144: '#1f4e75', // T (65536 * 3)
+  524288: '#e20623', // U (65536 * 4)
+  1048576: '#02f30e', // V (65536 * 5)
+  2097152: '#04f769', // W (65536 * 6)
+  4194304: '#04f769', // X (65536 * 7)
+  8388608: '#04f769', // Y (65536 * 8)
+  16777216: '#04f769', // Z (65536 * 9)
 };
 
 const textColors = {
-  2: '#776e65',
-  4: '#776e65',
-  8: '#f9f6f2',
-  16: '#f9f6f2',
-  32: '#f9f6f2',
-  64: '#f9f6f2',
-  128: '#f9f6f2',
-  256: '#f9f6f2',
-  512: '#f9f6f2',
-  1024: '#f9f6f2',
-  2048: '#f9f6f2',
-  4096: '#f9f6f2',
-  8192: '#f9f6f2',
-  16384: '#f9f6f2',
-  32768: '#f9f6f2',
-  65536: '#f9f6f2',
+  2: '#776e65', // A
+  4: '#776e65', // B
+  8: '#f9f6f2', // C
+  16: '#f9f6f2', // D
+  32: '#f9f6f2', // E
+  64: '#f9f6f2', // F
+  128: '#f9f6f2', // G
+  256: '#f9f6f2', // H
+  512: '#f9f6f2', // I
+  1024: '#f9f6f2', // J
+  2048: '#f9f6f2', // K
+  4096: '#f9f6f2', // L
+  8192: '#f9f6f2', // M
+  16384: '#f9f6f2', // N
+  32768: '#f9f6f2', // O
+  65536: '#f9f6f2', // R
+  131072: '#f9f6f2', // S (65536 * 2)
+  262144: '#f9f6f2', // T (65536 * 3)
+  524288: '#f9f6f2', // U (65536 * 4)
+  1048576: '#f9f6f2', // V (65536 * 5)
+  2097152: '#f9f6f2', // W (65536 * 6)
+  4194304: '#f9f6f2', // X (65536 * 7)
+  8388608: '#f9f6f2', // Y (65536 * 8)
+  16777216: '#f9f6f2', // Z (65536 * 9)
 };
 
 // 游戏状态的二维数组
@@ -48,15 +64,19 @@ let score = 0;
 
 // 初始化棋盘并添加两个初始方块
 function initBoard() {
-
   document.addEventListener('touchmove', (event) => {
     event.preventDefault();
   }, { passive: false });
+
   for (let i = 0; i < 16; i++) {
     board[i] = 0;
   }
+
   addNewTile();
   addNewTile();
+
+  // 更新分数为所有格子数字之和
+  score = getScore();
   updateGrid();
 }
 
@@ -92,6 +112,7 @@ function updateGrid() {
     }
   }
 
+  // 更新分数显示
   scoreElement.textContent = score;
 }
 
@@ -122,6 +143,10 @@ function handleMove(direction) {
     addNewTile();
     checkGameOver();
   }
+
+  // 更新分数为所有格子数字之和
+  score = getScore();
+  updateGrid();
 }
 
 // 实现向左移动的逻辑
@@ -260,7 +285,7 @@ function merge(arr) {
   for (let i = 0; i < arr.length - 1; i++) {
     if (arr[i] === arr[i + 1] && arr[i] !== 0) {
       arr[i] *= 2;
-      score += arr[i];
+
       arr.splice(i + 1, 1);
       arr.push(0);
       merged = true;
@@ -268,6 +293,15 @@ function merge(arr) {
     }
   }
   return [merged, arr];
+}
+
+// 计算当前棋盘上的分数
+function getScore() {
+  let totalScore = 0;
+  for (let i = 0; i < board.length; i++) {
+    totalScore += board[i];
+  }
+  return totalScore;
 }
 
 // 检查游戏是否结束
@@ -384,4 +418,5 @@ document.addEventListener('mousemove', (event) => {
   }
 }, { passive: false });
 
+// 初始化游戏
 initBoard();
