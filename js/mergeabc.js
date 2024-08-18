@@ -18,7 +18,7 @@ function initBoard() {
   }, { passive: false });
 
   for (let i = 0; i < 16; i++) {
-    board[i] = 0;
+    board[i] = ''; // 初始化为空
   }
 
   addNewTile();
@@ -33,7 +33,7 @@ function initBoard() {
 function addNewTile() {
   let emptyCells = [];
   board.forEach((cell, index) => {
-    if (cell === 0) emptyCells.push(index);
+    if (cell === '') emptyCells.push(index); // 收集空单元格的索引
   });
 
   console.log("当前空白方格数量 :", emptyCells.length);
@@ -69,7 +69,7 @@ function updateGrid() {
     // 移除所有额外的类
     cell.className = 'grid-cell'; // 保留原有的grid-cell类
 
-    if (board[i] !== null) {
+    if (board[i] !== '') {
       cell.textContent = board[i];
       const tileClass = `cell-con-${board[i]}`;
       cell.classList.add(tileClass); // 添加额外的类
@@ -148,19 +148,19 @@ function moveLeft() {
   for (let row = 0; row < 4; row++) {
     let tempRow = [];
     for (let col = 0; col < 4; col++) {
-      if (board[row * 4 + col] !== 0) {
-        tempRow.push(board[row * 4 + col]);
+      if (board[row * 4 + col] !== '') { // 如果不是空字符串
+        tempRow.push(board[row * 4 + col]); // 将字母添加到临时行
       }
     }
 
-    tempRow = compress(tempRow);
-    let [merged, mergedRow] = merge(tempRow);
-    tempRow = mergedRow;
+    tempRow = compress(tempRow); // 压缩行
+    let [merged, mergedRow] = merge(tempRow); // 合并行
+    tempRow = mergedRow; // 更新压缩后的行
 
     for (let col = 0; col < 4; col++) {
       let newIndex = row * 4 + col;
-      if (mergedRow[col] !== board[newIndex]) {
-        board[newIndex] = mergedRow[col] || 0;
+      if (mergedRow[col] !== board[newIndex]) { // 如果新旧值不同
+        board[newIndex] = mergedRow[col] || ''; // 更新游戏板
         moved = true;
       }
     }
@@ -177,7 +177,7 @@ function moveUp() {
   for (let col = 0; col < 4; col++) {
     let tempCol = [];
     for (let row = 0; row < 4; row++) {
-      if (board[row * 4 + col] !== 0) {
+      if (board[row * 4 + col] !== '') {
         tempCol.push(board[row * 4 + col]);
       }
     }
@@ -189,7 +189,7 @@ function moveUp() {
     for (let row = 0; row < 4; row++) {
       let newIndex = row * 4 + col;
       if (mergedCol[row] !== board[newIndex]) {
-        board[newIndex] = mergedCol[row] || 0;
+        board[newIndex] = mergedCol[row] || '';
         moved = true;
       }
     }
@@ -206,7 +206,7 @@ function moveRight() {
   for (let row = 0; row < 4; row++) {
     let tempRow = [];
     for (let col = 3; col >= 0; col--) {
-      if (board[row * 4 + col] !== 0) {
+      if (board[row * 4 + col] !== '') {
         tempRow.push(board[row * 4 + col]);
       }
     }
@@ -218,7 +218,7 @@ function moveRight() {
     for (let col = 3; col >= 0; col--) {
       let newIndex = row * 4 + col;
       if (mergedRow[3 - col] !== board[newIndex]) {
-        board[newIndex] = mergedRow[3 - col] || 0;
+        board[newIndex] = mergedRow[3 - col] || '';
         moved = true;
       }
     }
@@ -229,13 +229,14 @@ function moveRight() {
   return moved;
 }
 
+
 // 实现向下移动的逻辑
 function moveDown() {
   let moved = false;
   for (let col = 0; col < 4; col++) {
     let tempCol = [];
     for (let row = 3; row >= 0; row--) {
-      if (board[row * 4 + col] !== 0) {
+      if (board[row * 4 + col] !== '') {
         tempCol.push(board[row * 4 + col]);
       }
     }
@@ -247,7 +248,7 @@ function moveDown() {
     for (let row = 3; row >= 0; row--) {
       let newIndex = row * 4 + col;
       if (mergedCol[3 - row] !== board[newIndex]) {
-        board[newIndex] = mergedCol[3 - row] || 0;
+        board[newIndex] = mergedCol[3 - row] || '';
         moved = true;
       }
     }
@@ -262,12 +263,12 @@ function moveDown() {
 function compress(arr) {
   let result = [];
   arr.forEach(num => {
-    if (num !== 0) {
+    if (num !== '') {
       result.push(num);
     }
   });
   while (result.length < 4) {
-    result.push(0);
+    result.push('');
   }
   return result;
 }
@@ -276,10 +277,10 @@ function compress(arr) {
 function merge(arr) {
   let merged = false;
   for (let i = 0; i < arr.length - 1; i++) {
-    if (arr[i] === arr[i + 1] && arr[i] !== null) {
+    if (arr[i] === arr[i + 1] && arr[i] !== '') {
       arr[i] = getNextTile(arr[i]);
       arr.splice(i + 1, 1);
-      arr.push(null);
+      arr.push('');
       merged = true;
       i--; // 重新检查当前位置，因为数组长度已经改变
     }
@@ -290,7 +291,7 @@ function merge(arr) {
 function getNextTile(tile) {
   const tiles = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'];
   const currentIndex = tiles.indexOf(tile);
-  return currentIndex < tiles.length - 1 ? tiles[currentIndex + 1] : null;
+  return currentIndex < tiles.length - 1 ? tiles[currentIndex + 1] : '';
 }
 
 
