@@ -594,10 +594,16 @@ main {
 
 /* 在 style.css 文件的末尾添加以下样式 */
 .game-container {
-  margin: 10px auto;
+  margin: 0 auto 10px;
   padding: 10px;
   max-width: 400px;
   text-align: center;
+  display: flex;
+  /* 使用 Flexbox 布局 */
+  flex-direction: column;
+  /* 垂直排列 */
+  align-items: center;
+  /* 居中对齐 */
 }
 
 .game-score {
@@ -751,6 +757,55 @@ main {
 
 }
 
+
+.game-button-container {
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+  /* 调整宽度为80% */
+  margin-top: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  /* 居中对齐 */
+}
+
+.game-button-container button {
+  flex: 1;
+  /* 让两个按钮平分空间 */
+  margin: 0;
+  /* 移除按钮的默认外边距 */
+  max-width: 100px;
+  /* 限制按钮的最大宽度 */
+  overflow: hidden;
+  /* 隐藏超出的内容 */
+  text-overflow: ellipsis;
+  /* 显示省略号 */
+  white-space: nowrap;
+  /* 不换行 */
+}
+
+.custom-button {
+  /* 这里可以设置一些通用的按钮样式 */
+  padding: 10px 20px;
+  margin: 5px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.restart-btn {
+  /* 这里设置重玩按钮的特定样式 */
+  background-color: #4CAF50;
+  color: white;
+}
+
+.undo-btn {
+  /* 这里设置撤销按钮的特定样式 */
+  background-color: #f44336;
+  color: white;
+}
+
 button {
   margin-top: 10px;
   padding: 10px 20px;
@@ -781,7 +836,7 @@ button {
   }
 
   .game-container {
-    margin: 10px auto;
+    margin: 0 auto 10px;
     padding: 10px;
     max-width: 320px;
     text-align: center;

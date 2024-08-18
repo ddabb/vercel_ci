@@ -7,6 +7,7 @@
     <meta http-equiv="Content-Language" content="zh-CN">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>2048 小游戏</title>
+    <link rel="icon" href="../logo.svg" type="image/svg+xml">
     <link rel="stylesheet" href="../css/style.css">
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9093386396178901"
         crossorigin="anonymous"></script>
@@ -37,7 +38,7 @@
             </div>
         </nav>
     </header>
-    <main class="container mt-5">
+    <main class="container">
         <div class="game-container">
             <div class="game-score">总分数: <span id="score">0</span></div>
             <div class="grid-container">
@@ -58,15 +59,16 @@
                 <div class="grid-cell" id="cell-14"></div>
                 <div class="grid-cell" id="cell-15"></div>
             </div>
-
+            <div class="game-button-container">
+                <button class="custom-button restart-btn" onclick="restart()">重玩</button>
+                <button class="custom-button undo-btn" onclick="undo()">撤销</button>
+            </div>
         </div>
-        <button onclick="restart()">重新开始</button>
     </main>
     <div class="sticky-footer-container">
         <footer class="sticky-footer text-center text-lg-start bg-light text-muted">
             <div class="container text-center py-1">
                 <section>
-
                     <p>
                         <span id="busuanzi_container_page_pv">本页面访问量<span id="busuanzi_value_page_pv"></span>次</span>
                         <a href="../mdhtml/关于我们.html">关于我们</a> |

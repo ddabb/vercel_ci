@@ -3,59 +3,8 @@ const gridCells = document.querySelectorAll('.grid-cell');
 // 查询显示分数的元素
 const scoreElement = document.getElementById('score');
 
-const backgroundColors = {
-  2: '#eee4da', // A
-  4: '#ede0c8', // B
-  8: '#f2b179', // C
-  16: '#f59563', // D
-  32: '#f67c5f', // E
-  64: '#f65e3b', // F
-  128: '#edcf72', // G
-  256: '#edcc61', // H
-  512: '#edc850', // I
-  1024: '#edc53f', // J
-  2048: '#edc22e', // K
-  4096: '#298034', // L
-  8192: '#1f4e75', // M
-  16384: '#e20623', // N
-  32768: '#02f30e', // O
-  65536: '#04f769', // R
-  131072: '#298034', // S (65536 * 2)
-  262144: '#1f4e75', // T (65536 * 3)
-  524288: '#e20623', // U (65536 * 4)
-  1048576: '#02f30e', // V (65536 * 5)
-  2097152: '#04f769', // W (65536 * 6)
-  4194304: '#04f769', // X (65536 * 7)
-  8388608: '#04f769', // Y (65536 * 8)
-  16777216: '#04f769', // Z (65536 * 9)
-};
-
-const textColors = {
-  2: '#776e65', // A
-  4: '#776e65', // B
-  8: '#f9f6f2', // C
-  16: '#f9f6f2', // D
-  32: '#f9f6f2', // E
-  64: '#f9f6f2', // F
-  128: '#f9f6f2', // G
-  256: '#f9f6f2', // H
-  512: '#f9f6f2', // I
-  1024: '#f9f6f2', // J
-  2048: '#f9f6f2', // K
-  4096: '#f9f6f2', // L
-  8192: '#f9f6f2', // M
-  16384: '#f9f6f2', // N
-  32768: '#f9f6f2', // O
-  65536: '#f9f6f2', // R
-  131072: '#f9f6f2', // S (65536 * 2)
-  262144: '#f9f6f2', // T (65536 * 3)
-  524288: '#f9f6f2', // U (65536 * 4)
-  1048576: '#f9f6f2', // V (65536 * 5)
-  2097152: '#f9f6f2', // W (65536 * 6)
-  4194304: '#f9f6f2', // X (65536 * 7)
-  8388608: '#f9f6f2', // Y (65536 * 8)
-  16777216: '#f9f6f2', // Z (65536 * 9)
-};
+let history = [];
+let maxHistoryLength = 5; // 最大历史记录数
 
 // 游戏状态的二维数组
 let board = [];
@@ -148,11 +97,36 @@ function handleMove(direction) {
     console.log("移动成功，+1 块");
     addNewTile();
     checkGameOver();
+    // 保存当前状态到历史记录
+    saveState();
   }
 
   // 更新分数为所有格子数字之和
   score = getScore();
   updateGrid();
+}
+
+// 撤销函数
+function undo() {
+  if (history.length > 0) {
+    const previousState = history.pop();
+    board = previousState;
+    updateGrid();
+    score = getScore();
+    scoreElement.textContent = score;
+  } else {
+    console.log("没有更多的历史记录可以撤销");
+  }
+}
+
+// 保存当前游戏状态到历史记录
+function saveState() {
+  const currentState = board.slice();
+  history.push(currentState);
+
+  if (history.length > maxHistoryLength) {
+    history.shift();
+  }
 }
 
 // 实现向左移动的逻辑
@@ -349,6 +323,11 @@ document.addEventListener('keydown', (event) => {
       break;
     case 'ArrowDown':
       handleMove('down');
+      break;
+    case 'z':
+      if (event.ctrlKey || event.metaKey) {
+        undo();
+      }
       break;
   }
 });
