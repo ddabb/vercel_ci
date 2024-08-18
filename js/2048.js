@@ -3,6 +3,44 @@ const gridCells = document.querySelectorAll('.grid-cell');
 // 查询显示分数的元素
 const scoreElement = document.getElementById('score');
 
+const backgroundColors = {
+  2: '#eee4da',
+  4: '#ede0c8',
+  8: '#f2b179',
+  16: '#f59563',
+  32: '#f67c5f',
+  64: '#f65e3b',
+  128: '#edcf72',
+  256: '#edcc61',
+  512: '#edc850',
+  1024: '#edc53f',
+  2048: '#edc22e',
+  4096: '#edc22e',
+  8192: '#edc22e',
+  16384: '#edc22e',
+  32768: '#edc22e',
+  65536: '#edc22e',
+};
+
+const textColors = {
+  2: '#776e65',
+  4: '#776e65',
+  8: '#f9f6f2',
+  16: '#f9f6f2',
+  32: '#f9f6f2',
+  64: '#f9f6f2',
+  128: '#f9f6f2',
+  256: '#f9f6f2',
+  512: '#f9f6f2',
+  1024: '#f9f6f2',
+  2048: '#f9f6f2',
+  4096: '#f9f6f2',
+  8192: '#f9f6f2',
+  16384: '#f9f6f2',
+  32768: '#f9f6f2',
+  65536: '#f9f6f2',
+};
+
 // 游戏状态的二维数组
 let board = [];
 // 游戏分数
@@ -35,27 +73,20 @@ function addNewTile() {
   }
 }
 
-// 更新游戏界面以显示当前棋盘状态和分数
 function updateGrid() {
-  gridCells.forEach((cell, index) => {
+  for (let i = 0; i < gridCells.length; i++) {
+    const cell = gridCells[i];
     cell.textContent = '';
     cell.style.backgroundColor = '#eee';
     cell.style.color = '#333';
 
-    if (board[index] !== 0) {
-      cell.textContent = board[index];
-      if (board[index] === 2) {
-        cell.style.backgroundColor = '#eee4da';
-        cell.style.color = '#776e65';
-      } else if (board[index] === 4) {
-        cell.style.backgroundColor = '#ede0c8';
-        cell.style.color = '#776e65';
-      } else if (board[index] >= 8) {
-        cell.style.backgroundColor = '#f2b179';
-        cell.style.color = '#f9f6f2';
-      }
+    if (board[i] !== 0) {
+      cell.textContent = board[i];
+      const powerOfTwo = Math.log2(board[i]);
+      cell.style.backgroundColor = backgroundColors[powerOfTwo] || '#eee4da';
+      cell.style.color = textColors[powerOfTwo] || '#776e65';
     }
-  });
+  }
 
   scoreElement.textContent = score;
 }
