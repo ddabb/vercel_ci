@@ -342,4 +342,46 @@ document.addEventListener('touchend', (event) => {
   }
 }, { passive: true });
 
+// 添加用于跟踪鼠标事件的变量
+let startMouseX, startMouseY, endMouseX, endMouseY;
+let isMouseDown = false;
+
+// 监听鼠标事件
+document.addEventListener('mousedown', (event) => {
+  isMouseDown = true;
+  startMouseX = event.clientX;
+  startMouseY = event.clientY;
+}, { passive: true });
+
+document.addEventListener('mouseup', (event) => {
+  if (isMouseDown) {
+    isMouseDown = false;
+    endMouseX = event.clientX;
+    endMouseY = event.clientY;
+
+    if (Math.abs(endMouseX - startMouseX) > Math.abs(endMouseY - startMouseY)) {
+      // 水平拖动
+      if (endMouseX < startMouseX) {
+        handleMove('left');
+      } else if (endMouseX > startMouseX) {
+        handleMove('right');
+      }
+    } else {
+      // 垂直拖动
+      if (endMouseY < startMouseY) {
+        handleMove('up');
+      } else if (endMouseY > startMouseY) {
+        handleMove('down');
+      }
+    }
+  }
+}, { passive: true });
+
+document.addEventListener('mousemove', (event) => {
+  if (isMouseDown) {
+    // 阻止默认行为，例如页面滚动等
+    event.preventDefault();
+  }
+}, { passive: false });
+
 initBoard();

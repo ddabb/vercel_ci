@@ -623,6 +623,7 @@ main {
   align-items: center;
   font-size: 32px;
   cursor: pointer;
+  user-select: none;
 }
 
 button {
