@@ -101,14 +101,15 @@ function updateGrid() {
   for (let i = 0; i < gridCells.length; i++) {
     const cell = gridCells[i];
     cell.textContent = '';
-    cell.style.backgroundColor = '#eee';
-    cell.style.color = '#333';
+
+    // 移除所有额外的类
+    cell.className = 'grid-cell'; // 保留原有的grid-cell类
 
     if (board[i] !== 0) {
       cell.textContent = board[i];
       const powerOfTwo = Math.log2(board[i]);
-      cell.style.backgroundColor = backgroundColors[powerOfTwo] || '#eee4da';
-      cell.style.color = textColors[powerOfTwo] || '#776e65';
+      const className = `cell-${2 ** powerOfTwo}`;
+      cell.classList.add(className); // 添加额外的类
     }
   }
 
