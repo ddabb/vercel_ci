@@ -68,12 +68,12 @@ function addNewTile() {
   if (emptyCells.length > 0) {
     let randomIndex = Math.floor(Math.random() * emptyCells.length);
     board[emptyCells[randomIndex]] = Math.random() < 0.9 ? 2 : 4;
-    console.log("本轮在方格", emptyCells[randomIndex], "添加了", board[emptyCells[randomIndex]], "分值的方块");
     updateGrid();
   }
 }
 
 function updateGrid() {
+  console.log("更新棋盘");
   for (let i = 0; i < gridCells.length; i++) {
     const cell = gridCells[i];
     cell.textContent = '';
@@ -132,13 +132,13 @@ function moveLeft() {
     }
 
     tempRow = compress(tempRow);
-    tempRow = merge(tempRow);
-    tempRow = compress(tempRow);
+    let [merged, mergedRow] = merge(tempRow);
+    tempRow = mergedRow;
 
     for (let col = 0; col < 4; col++) {
       let newIndex = row * 4 + col;
-      if (tempRow[col] !== board[newIndex]) {
-        board[newIndex] = tempRow[col] || 0;
+      if (mergedRow[col] !== board[newIndex]) {
+        board[newIndex] = mergedRow[col] || 0;
         moved = true;
       }
     }
@@ -161,13 +161,13 @@ function moveUp() {
     }
 
     tempCol = compress(tempCol);
-    tempCol = merge(tempCol);
-    tempCol = compress(tempCol);
+    let [merged, mergedCol] = merge(tempCol);
+    tempCol = mergedCol;
 
     for (let row = 0; row < 4; row++) {
       let newIndex = row * 4 + col;
-      if (tempCol[row] !== board[newIndex]) {
-        board[newIndex] = tempCol[row] || 0;
+      if (mergedCol[row] !== board[newIndex]) {
+        board[newIndex] = mergedCol[row] || 0;
         moved = true;
       }
     }
@@ -190,13 +190,13 @@ function moveRight() {
     }
 
     tempRow = compress(tempRow);
-    tempRow = merge(tempRow);
-    tempRow = compress(tempRow);
+    let [merged, mergedRow] = merge(tempRow);
+    tempRow = mergedRow;
 
     for (let col = 3; col >= 0; col--) {
       let newIndex = row * 4 + col;
-      if (tempRow[3 - col] !== board[newIndex]) {
-        board[newIndex] = tempRow[3 - col] || 0;
+      if (mergedRow[3 - col] !== board[newIndex]) {
+        board[newIndex] = mergedRow[3 - col] || 0;
         moved = true;
       }
     }
@@ -219,13 +219,13 @@ function moveDown() {
     }
 
     tempCol = compress(tempCol);
-    tempCol = merge(tempCol);
-    tempCol = compress(tempCol);
+    let [merged, mergedCol] = merge(tempCol);
+    tempCol = mergedCol;
 
     for (let row = 3; row >= 0; row--) {
       let newIndex = row * 4 + col;
-      if (tempCol[3 - row] !== board[newIndex]) {
-        board[newIndex] = tempCol[3 - row] || 0;
+      if (mergedCol[3 - row] !== board[newIndex]) {
+        board[newIndex] = mergedCol[3 - row] || 0;
         moved = true;
       }
     }
@@ -273,7 +273,7 @@ function checkGameOver() {
 
   // 检查是否还有空单元格或者是否还有能做出有效动作的单元格
   for (let i = 0; i < 16; i++) {
-    if (i % 4 === 0 && board[i] === board[i + 1] || (i + 4 < 16) && board[i] === board[i + 4]) {
+    if ((i % 4 === 0 && board[i] === board[i + 1]) || (i + 4 < 16 && board[i] === board[i + 4])) {
       canMove = true;
       break;
     }
