@@ -48,6 +48,10 @@ let score = 0;
 
 // 初始化棋盘并添加两个初始方块
 function initBoard() {
+
+  document.addEventListener('touchmove', (event) => {
+    event.preventDefault();
+  }, { passive: false });
   for (let i = 0; i < 16; i++) {
     board[i] = 0;
   }
