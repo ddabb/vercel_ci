@@ -1,6 +1,8 @@
-const fs = require('fs');
-const path = require('path');
-const showdown = require('showdown'); // 引入 showdown 模块
+
+import fs from 'fs';
+import path from 'path';
+import showdown from 'showdown';
+
 const converter = new showdown.Converter(); // 创建 showdown 转换器实例
 
 module.exports = async function handler(request, response) {

@@ -1,9 +1,8 @@
-const http = require('http');
-const crypto = require('crypto');
-const url = require('url');
-const querystring = require('querystring');
-const xml2js = require('xml2js');
-
+import http from 'http';
+import crypto from 'crypto';
+import url from 'url';
+import querystring from 'querystring';
+import xml2js from 'xml2js';
 // 你的微信公众号 Token
 const token = 'testtoken';
 

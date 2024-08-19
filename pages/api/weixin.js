@@ -1,4 +1,5 @@
-const xml2js = require('xml2js');
+
+import xml2js from 'xml2js';
 export default function handler(request, response) {
     if (request.method === 'POST') {
         let body = '';
@@ -17,7 +18,7 @@ export default function handler(request, response) {
         });
 
 
-    } else if(request.method === 'POST'){
+    } else if (request.method === 'POST') {
         response.status(200).send(` ${request.method} Hello World!`);
     }
 }
