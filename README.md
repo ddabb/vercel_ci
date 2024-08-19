@@ -2,6 +2,10 @@
 
 欢迎来到龙井、方大川自助台球管家的官方网站源码仓库。本项目包含了网站的完整HTML、CSS和JavaScript代码，以及一些在线工具和小游戏的实现。
 
+## 网站地址
+
+- 网站地址：[https://www.60score.com](https://www.60score.com)
+
 ## 目录结构
 
 - `css/` - 包含所有的CSS样式文件。
@@ -40,13 +44,14 @@
 ### 小游戏 (`games.html`)
 
 - 提供一些小游戏，如猜数字、2048等。
-- 游戏1：[2048](https://www.60points.com/html/2048.html)
-- 游戏2：[合成ABC](https://www.60points.com/html/mergeabc.html)
+- 游戏1：[2048](https://www.60score.com/html/2048.html)
+- 游戏2：[合成ABC](https://www.60score.com/html/mergeabc.html)
 
 ## 自助台球店小程序
 
-![深圳南山方大城店](https://www.60score.com/minifdc.jpg "深圳南山方大城店")
-![深圳南山龙井店](https://www.60score.com/minilj "深圳南山龙井店")
+<img src="https://www.60score.com/minifdc.jpg" alt="深圳南山方大城店" width="200" height="200">
+<img src="https://www.60score.com/minilj.jpg" alt="深圳南山龙井店" width="200" height="200">
+
 
 ### 关于我们 (`mdhtml/关于我们.html`)
 
