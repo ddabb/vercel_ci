@@ -18,8 +18,11 @@ export default async function handler(request, response) {
 
     let articles;
     if (callType === 'md') {
+      debugger
       const data = await new Promise((resolve, reject) => {
-        fs.readFile(path.join(process.cwd(), 'jsons', 'mdfiles.json'), 'utf8', (err, data) => {
+        let path1 = path.join(process.cwd(), 'jsons', 'mdfiles.json');
+        console.info("path1", path1)
+        fs.readFile(path1, 'utf8', (err, data) => {
           if (err) {
             reject(err);
           } else {
@@ -37,6 +40,7 @@ export default async function handler(request, response) {
         });
       }
     } else if (callType === 'weixin') {
+      debugger
       const data = await new Promise((resolve, reject) => {
         fs.readFile(path.join(process.cwd(), 'jsons', 'wechat.json'), 'utf8', (err, data) => {
           if (err) {
