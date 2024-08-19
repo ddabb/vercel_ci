@@ -1,6 +1,5 @@
-const xml2js = require('xml2js');
-const fetch = require('node-fetch');
-
+import xml2js from 'xml2js';
+import fetch from 'node-fetch';
 export default async function handler(request, response) {
   try {
     if (request.method === 'POST') {
