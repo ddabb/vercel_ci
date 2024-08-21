@@ -335,7 +335,7 @@ function getScore() {
 
 // 检查游戏是否结束
 function checkGameOver() {
-  let hasEmptyCell = board.some(cell => cell === 0);
+  let hasEmptyCell = board.some(cell => cell === '');
   let canMove = false;
 
   // 检查是否还有空单元格或者是否还有能做出有效动作的单元格
