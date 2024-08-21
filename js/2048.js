@@ -291,17 +291,24 @@ function checkGameOver() {
 
   // 检查是否还有空单元格或者是否还有能做出有效动作的单元格
   for (let i = 0; i < 16; i++) {
-    if ((i % 4 === 0 && board[i] === board[i + 1]) || (i + 4 < 16 && board[i] === board[i + 4])) {
+    // 检查水平方向
+    if (i % 4 !== 3 && board[i] === board[i + 1]) {
+      canMove = true;
+      break;
+    }
+    // 检查垂直方向
+    if (i + 4 < 16 && board[i] === board[i + 4]) {
       canMove = true;
       break;
     }
   }
 
   if (!hasEmptyCell && !canMove) {
-    alert("Game Over!");
-    restart();
+    alert("游戏结束!");
+    restart(); // 确保restart函数已经定义
   }
 }
+
 
 // 重新开始游戏
 function restart() {
