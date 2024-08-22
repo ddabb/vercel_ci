@@ -13,6 +13,7 @@ async function resetGame() {
         console.log(data.message);
         isGameActive = data.active;
         updateUI(isGameActive);
+        clearInput();
     } catch (error) {
         console.error('重置游戏失败:', error);
     }
@@ -50,6 +51,10 @@ function updateUI(isActive) {
     } else {
         resetButton.style.display = 'none';
     }
+}
+
+function clearInput() {
+    document.getElementById('guess').value = '';
 }
 
 // 初始化游戏
