@@ -1,31 +1,45 @@
-let secretNumber;
 let isGameActive = false;
 
-function resetGame() {
-    secretNumber = Math.floor(Math.random() * 100) + 1;
-    document.getElementById('guess').value = '';
-    document.getElementById('result').textContent = '';
-    document.getElementById('resetButton').style.display = 'none';
-    isGameActive = true;
+async function resetGame() {
+    try {
+        const response = await fetch('guessnum/reset-game', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            }
+        });
+        const data = await response.json();
+        console.log(data.message);
+        isGameActive = true;
+    } catch (error) {
+        console.error('重置游戏失败:', error);
+    }
 }
 
-function checkGuess() {
+async function checkGuess() {
     if (!isGameActive) return;
 
-    const guess = parseInt(document.getElementById('guess').value, 10);
-    const resultDiv = document.getElementById('result');
+    const guess = document.getElementById('guess').value;
 
-    if (guess == secretNumber) {
-        resultDiv.textContent = '恭喜你，猜对了！';
-        resultDiv.style.color = 'green';
-        document.getElementById('resetButton').style.display = 'inline-block';
-        isGameActive = false;
-    } else if (guess < secretNumber) {
-        resultDiv.textContent = '太低了，再试一次！';
-        resultDiv.style.color = 'red';
-    } else {
-        resultDiv.textContent = '太高了，再试一次！';
-        resultDiv.style.color = 'red';
+    try {
+        const response = await fetch('guessnum/check-greak', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({ guess })
+        });
+        const data = await response.json();
+        const resultDiv = document.getElementById('result');
+        resultDiv.textContent = data.message;
+        resultDiv.style.color = data.message.includes('猜对了') ? 'green' : 'red';
+
+        if (data.message.includes('猜对了')) {
+            document.getElementById('resetButton').style.display = 'inline-block';
+            isGameActive = false;
+        }
+    } catch (error) {
+        console.error('检查猜测失败:', error);
     }
 }
 
