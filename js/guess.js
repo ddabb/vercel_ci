@@ -1,3 +1,5 @@
+let isGameActive = false;
+
 async function resetGame() {
     try {
         const response = await fetch('/api/guessnum', {
@@ -9,13 +11,16 @@ async function resetGame() {
         });
         const data = await response.json();
         console.log(data.message);
-        updateUI(data.active);
+        isGameActive = data.active;
+        updateUI(isGameActive);
     } catch (error) {
         console.error('重置游戏失败:', error);
     }
 }
 
 async function checkGuess() {
+    if (!isGameActive) return;
+
     const guess = document.getElementById('guess').value;
 
     try {
@@ -31,17 +36,19 @@ async function checkGuess() {
         resultDiv.textContent = data.message;
         resultDiv.style.color = data.message.includes('猜对了') ? 'green' : 'red';
 
-        updateUI(data.active);
+        isGameActive = data.active;
+        updateUI(isGameActive);
     } catch (error) {
         console.error('检查猜测失败:', error);
     }
 }
 
 function updateUI(isActive) {
+    const resetButton = document.getElementById('resetButton');
     if (!isActive) {
-        document.getElementById('resetButton').style.display = 'inline-block';
+        resetButton.style.display = 'inline-block';
     } else {
-        document.getElementById('resetButton').style.display = 'none';
+        resetButton.style.display = 'none';
     }
 }
 
