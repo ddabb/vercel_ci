@@ -2,7 +2,7 @@ let isGameActive = false;
 
 async function resetGame() {
     try {
-        const response = await fetch('guessnum/reset-game', {
+        const response = await fetch('/api/guessnum/reset-game', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -22,7 +22,7 @@ async function checkGuess() {
     const guess = document.getElementById('guess').value;
 
     try {
-        const response = await fetch('guessnum/check-greak', {
+        const response = await fetch('/api/guessnum/check-greak', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
