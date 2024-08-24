@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>扫雷游戏</title>
+    <style>
+        #game-board {
+            width: 300px;
+            height: 300px;
+            margin: 20px auto;
+            display: grid;
+            grid-template-columns: repeat(var(--grid-cols), 1fr);
+            grid-gap: 2px;
+        }
+
+       .cell {
+            width: calc(100% / var(--grid-cols));
+            height: calc(100% / var(--grid-cols));
+            background-color: #f0f0f0;
+            text-align: center;
+            line-height: calc(100% / var(--grid-cols));
+            font-size: calc(100% / var(--grid-cols) * 0.66);
+            cursor: pointer;
+        }
+
+       .cell.flagged {
+            background-color: #FFD700;
+            cursor: not-allowed;
+        }
+
+       .cell.mine {
+            background-color: red;
+            color: white;
+        }
+
+       .cell:hover {
+            background-color: #d9d9d9;
+        }
+
+        #timer {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+       .difficulty-selector {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+
+       .difficulty-selector input[type="number"] {
+            margin: 0 5px;
+            width: 50px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="difficulty-selector">
+        <label for="board-width">宽度:</label>
+        <input type="number" id="board-width" value="10" min="8" max="30">
+        <label for="board-height">高度:</label>
+        <input type="number" id="board-height" value="10" min="8" max="30">
+        <label for="mine-count">地雷数:</label>
+        <input type="number" id="mine-count" value="10" min="1" max="250">
+        <button onclick="setDifficulty()">开始游戏</button>
+    </div>
+    <div id="timer">00:00</div>
+    <div id="game-board"></div>
+
+    <script>
+        let boardWidth = 10;
+        let boardHeight = 10;
+        let mineCount = 10;
+        let gameBoard = document.getElementById('game-board');
+        let mines = [];
+        let openedCells = [];
+        let flaggedCells = [];
+        let timer;
+        let startTime;
+
+        function startTimer() {
+            debugger;
+            startTime = new Date();
+            timer = setInterval(updateTimer, 1000);
+        }
+
+        function updateTimer() {
+            let elapsed = (new Date() - startTime) / 1000;
+            let minutes = Math.floor(elapsed / 60);
+            let seconds = Math.floor(elapsed % 60);
+            document.getElementById('timer').textContent = `${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+        }
+
+        function stopTimer() {
+            clearInterval(timer);
+        }
+
+        function setDifficulty() {
+            console.log("Set difficulty called.");
+            boardWidth = parseInt(document.getElementById('board-width').value);
+            boardHeight = parseInt(document.getElementById('board-height').value);
+            mineCount = parseInt(document.getElementById('mine-count').value);
+            restartGame();
+        }
+
+        function generateMines() {
+            debugger;
+            mines = [];
+            while (mines.length < mineCount) {
+                let row = Math.floor(Math.random() * boardHeight);
+                let col = Math.floor(Math.random() * boardWidth);
+                if (!mines.some(mine => mine.row === row && mine.col === col)) {
+                    mines.push({ row, col });
+                }
+            }
+        }
+
+        function getNeighbors(row, col) {
+            let neighbors = [];
+            for (let i = -1; i <= 1; i++) {
+                for (let j = -1; j <= 1; j++) {
+                    if (i === 0 && j === 0) continue;
+                    let newRow = row + i;
+                    let newCol = col + j;
+                    if (newRow >= 0 && newRow < boardHeight && newCol >= 0 && newCol < boardWidth) {
+                        neighbors.push({ row: newRow, col: newCol });
+                    }
+                }
+            }
+            return neighbors;
+        }
+
+        function isMine(cell) {
+            return mines.some(mine => mine.row === cell.row && mine.col === cell.col);
+        }
+
+        function getAdjacentMines(cell) {
+            let adjacentMines = 0;
+            let neighbors = getNeighbors(cell.row, cell.col);
+            neighbors.forEach(neighbor => {
+                if (isMine(neighbor)) {
+                    adjacentMines++;
+                }
+            });
+            return adjacentMines;
+        }
+
+        function createCell(row, col) {
+            let cell = document.createElement('div');
+            cell.classList.add('cell');
+            // 添加数据属性
+            cell.dataset.row = row;
+            cell.dataset.col = col;
+            cell.style.cursor = 'default';
+            cell.addEventListener('mousedown', (event) => {
+                if (event.button === 0) {
+                    leftClick(cell);
+                } else if (event.button === 2) {
+                    rightClick(cell);
+                }
+            });
+            cell.addEventListener('contextmenu', event => event.preventDefault());
+            return cell;
+        }
+
+        function leftClick(cell) {
+            if (flaggedCells.includes(cell)) return;
+            if (isMine(cell)) {
+                stopTimer();
+                alert('游戏结束！');
+                mines.forEach(mine => {
+                    let mineCell = document.querySelector(`[data-row="${mine.row}"][data-col="${mine.col}"]`);
+                    mineCell.classList.add('mine');
+                });
+            } else {
+                openedCells.push(cell);
+                let adjacentMines = getAdjacentMines(cell);
+                cell.textContent = adjacentMines === 0? '' : adjacentMines;
+                if (adjacentMines === 0) {
+                    let neighbors = getNeighbors(cell.row, cell.col);
+                    neighbors.forEach(neighbor => {
+                        let neighborCell = document.querySelector(`[data-row="${neighbor.row}"][data-col="${neighbor.col}"]`);
+                        if (!openedCells.includes(neighborCell) &&!flaggedCells.includes(neighborCell)) {
+                            leftClick(neighborCell);
+                        }
+                    });
+                }
+                checkWin();
+            }
+        }
+
+        function rightClick(cell) {
+            if (openedCells.includes(cell)) return;
+            if (flaggedCells.includes(cell)) {
+                cell.classList.remove('flagged');
+                flaggedCells = flaggedCells.filter(f => f!== cell);
+            } else {
+                cell.classList.add('flagged');
+                flaggedCells.push(cell);
+            }
+        }
+
+        function createBoard() {
+            console.log("Create board called.");
+            mines = [];
+            openedCells = [];
+            flaggedCells = [];
+            gameBoard.innerHTML = ''; // 清空现有的游戏板
+            for (let row = 0; row < boardHeight; row++) {
+                for (let col = 0; col < boardWidth; col++) {
+                    let cell = createCell(row, col);
+                    gameBoard.appendChild(cell);
+                }
+            }
+            document.documentElement.style.setProperty('--grid-cols', boardWidth);
+            document.getElementById('game-board').style.width = `${boardWidth * 30}px`;
+            document.getElementById('game-board').style.height = `${boardHeight * 30}px`;
+            generateMines();
+            startTimer();
+        }
+
+        function restartGame() {
+            debugger;
+            console.log("restart Game  called.");
+            // mines = [];
+            // openedCells = [];
+            // flaggedCells = [];
+            stopTimer();
+            createBoard();
+        }
+
+        function checkWin() {
+            if (openedCells.length + mineCount === boardWidth * boardHeight) {
+                stopTimer();
+                alert('你赢了！');
+                restartGame();
+            }
+        }
+
+        // restartGame();
+    </script>
+</body>
+
+</html>
