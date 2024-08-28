@@ -17,17 +17,17 @@ fi
 # 使用 cygpath 将 Windows 风格的路径转换为 Unix 风格的路径
 # 对于非 Windows 系统，cygpath 可能不可用，因此我们使用 realpath
 if [ "$(uname)" = "Darwin" ] || [ "$(uname)" = "Linux" ]; then
-  NODE_SCRIPT_UPDATE_MDFILES_JSON=$(realpath "../NodeAgent/update-mdfiles-json.js")
-  JSON_OUTPUT_PATH_MDFILES_JSON=$(realpath "../NodeAgent/jsons/mdfiles.json")
-  NODE_SCRIPT_GEN_SITEMAP=$(realpath "../NodeAgent/gen-sitemap.js")
-  XML_OUTPUT_PATH_SITEMAP=$(realpath "../NodeAgent/sitemap.xml")
-  NODE_SCRIPT_MD2HTML=$(realpath "../NodeAgent/md2html.js") # 添加 md2html 脚本的绝对路径
+  NODE_SCRIPT_UPDATE_MDFILES_JSON=$(realpath "../vercel_ci/update-mdfiles-json.js")
+  JSON_OUTPUT_PATH_MDFILES_JSON=$(realpath "../vercel_ci/jsons/mdfiles.json")
+  NODE_SCRIPT_GEN_SITEMAP=$(realpath "../vercel_ci/gen-sitemap.js")
+  XML_OUTPUT_PATH_SITEMAP=$(realpath "../vercel_ci/sitemap.xml")
+  NODE_SCRIPT_MD2HTML=$(realpath "../vercel_ci/md2html.js") # 添加 md2html 脚本的绝对路径
 else
-  NODE_SCRIPT_UPDATE_MDFILES_JSON=$(cygpath -u "../NodeAgent/update-mdfiles-json.js")
-  JSON_OUTPUT_PATH_MDFILES_JSON=$(cygpath -u "../NodeAgent/jsons/mdfiles.json")
-  NODE_SCRIPT_GEN_SITEMAP=$(cygpath -u "../NodeAgent/gen-sitemap.js")
-  XML_OUTPUT_PATH_SITEMAP=$(cygpath -u "../NodeAgent/sitemap.xml")
-  NODE_SCRIPT_MD2HTML=$(cygpath -u "../NodeAgent/md2html.js") # 添加 md2html 脚本的绝对路径
+  NODE_SCRIPT_UPDATE_MDFILES_JSON=$(cygpath -u "../vercel_ci/update-mdfiles-json.js")
+  JSON_OUTPUT_PATH_MDFILES_JSON=$(cygpath -u "../vercel_ci/jsons/mdfiles.json")
+  NODE_SCRIPT_GEN_SITEMAP=$(cygpath -u "../vercel_ci/gen-sitemap.js")
+  XML_OUTPUT_PATH_SITEMAP=$(cygpath -u "../vercel_ci/sitemap.xml")
+  NODE_SCRIPT_MD2HTML=$(cygpath -u "../vercel_ci/md2html.js") # 添加 md2html 脚本的绝对路径
 fi
 
 # 输出绝对路径
