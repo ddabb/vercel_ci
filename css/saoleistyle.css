@@ -46,12 +46,12 @@ body {
 }
 
 .show {
-    background-image: url(./imgs/mine.jpg);
+    background-image: url(../imgs/mine.jpg);
     background-size: 100%, 100%;
 }
 
 .flag {
-    background-image: url(./imgs/flag.jpg);
+    background-image: url(../imgs/flag.jpg);
     background-size: 100%, 100%;
 }
 
