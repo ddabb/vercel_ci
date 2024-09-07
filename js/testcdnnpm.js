@@ -1,40 +1,39 @@
-import { leapyear, oddEven, CheckIdCard } from 'https://cdn.jsdelivr.net/gh/ddabb/60score@main/dist/60score.browser.esm.js';
+import { leapyear, oddEven, CheckIdCard } from '60score-npm';
 
-document.addEventListener("DOMContentLoaded", function () {
-    const leapYearResultElement = document.getElementById('leap-year-result');
-    const oddEvenResultElement = document.getElementById('odd-even-result');
-    const idCardResultElement = document.getElementById('id-card-result');
-
+document.addEventListener('DOMContentLoaded', () => {
     const yearInput = document.getElementById('year-input');
+    const leapYearResult = document.getElementById('leap-year-result');
     const numberInput = document.getElementById('number-input');
+    const oddEvenResult = document.getElementById('odd-even-result');
     const idCardInput = document.getElementById('id-card-input');
+    const idCardResult = document.getElementById('id-card-result');
 
-    // 监听输入框的值改变事件
-    yearInput.addEventListener('input', () => checkLeapYear(yearInput.value));
-    numberInput.addEventListener('input', () => checkOddEven(numberInput.value));
-    idCardInput.addEventListener('input', () => checkIdCard(idCardInput.value));
+    yearInput.addEventListener('input', () => {
+        debugger
+        const year = parseInt(yearInput.value, 10);
+        if (!isNaN(year)) {
+            leapYearResult.textContent = leapyear(year) ? 'Leap Year' : 'Not a Leap Year';
+        } else {
+            leapYearResult.textContent = '';
+        }
+    });
 
-    function checkLeapYear(year) {
-        leapyear(year).then(result => {
-            leapYearResultElement.textContent = `${year} is a leap year: ${result}`;
-        }).catch(error => {
-            leapYearResultElement.textContent = `Error checking leap year: ${error.message}`;
-        });
-    }
+    numberInput.addEventListener('input', () => {
+        debugger
+        const number = parseInt(numberInput.value, 10);
+        if (!isNaN(number)) {
+            oddEvenResult.textContent = oddEven(number) ? 'Even' : 'Odd';
+        } else {
+            oddEvenResult.textContent = '';
+        }
+    });
 
-    function checkOddEven(number) {
-        oddEven(number).then(result => {
-            oddEvenResultElement.textContent = `${number} is even: ${result}`;
-        }).catch(error => {
-            oddEvenResultElement.textContent = `Error checking odd/even: ${error.message}`;
-        });
-    }
-
-    function checkIdCard(idNumber) {
-        CheckIdCard(idNumber).then(result => {
-            idCardResultElement.textContent = `ID Card Info: ${JSON.stringify(result)}`;
-        }).catch(error => {
-            idCardResultElement.textContent = `Error checking ID Card: ${error.message}`;
-        });
-    }
+    idCardInput.addEventListener('input', () => {
+        const idCardNumber = idCardInput.value;
+        if (idCardNumber.length === 18) {
+            idCardResult.textContent = CheckIdCard(idCardNumber) ? 'Valid ID Card' : 'Invalid ID Card';
+        } else {
+            idCardResult.textContent = '';
+        }
+    });
 });
