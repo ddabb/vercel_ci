@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MathLogic Test</title>
+</head>
+
+<body>
+    <h1>MathLogic Test</h1>
+    <!-- 添加输入框和输出结果的 HTML 元素 -->
+    <label for="year-input">Year:</label>
+    <input type="number" id="year-input" placeholder="Enter a year">
+    <p id="leap-year-result"></p>
+    <label for="number-input">Number:</label>
+    <input type="number" id="number-input" placeholder="Enter a number">
+    <p id="odd-even-result"></p>
+    <label for="id-card-input">ID Card Number:</label>
+    <input type="text" id="id-card-label" placeholder="Enter an ID card number">
+    <p id="id-card-result"></p>
+
+    <!-- 引入 60score-npm 库 -->
+    <script type="module">
+        import { leapyear, oddEven, CheckIdCard } from 'https://cdn.jsdelivr.net/npm/60score-npm@1.0.0/index.js';
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const yearInput = document.getElementById('year-input');
+            const leapYearResult = document.getElementById('leap-year-result');
+            const numberInput = document.getElementById('number-input');
+            const oddEvenResult = document.getElementById('odd-even-result');
+            const idCardInput = document.getElementById('id-card-input');
+            const idCardResult = document.getElementById('id-card-result');
+
+            yearInput.addEventListener('input', () => {
+                const year = parseInt(yearInput.value, 10);
+                if (!isNaN(year)) {
+                    leapYearResult.textContent = leapyear(year) ? 'Leap Year' : 'Not a Leap Year';
+                } else {
+                    leapYearResult.textContent = '';
+                }
+            });
+
+            numberInput.addEventListener('input', () => {
+                const number = parseInt(numberInput.value, 10);
+                if (!isNaN(number)) {
+                    oddEvenResult.textContent = oddEven(number) ? 'Even' : 'Odd';
+                } else {
+                    oddEvenResult.textContent = '';
+                }
+            });
+
+            idCardInput.addEventListener('input', () => {
+                const idCardNumber = idCardInput.value;
+                if (idCardNumber.length === 18) {
+                    idCardResult.textContent = CheckIdCard(idCardNumber) ? 'Valid ID Card' : 'Invalid ID Card';
+                } else {
+                    idCardResult.textContent = '';
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>
