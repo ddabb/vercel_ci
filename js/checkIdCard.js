@@ -1,4 +1,4 @@
-import { CheckIdCard } from 'https://cdn.jsdelivr.net/gh/ddabb/60score@main/dist/60score.browser.esm.js';
+import { CheckIdCard } from 'https://cdn.jsdelivr.net/npm/fishbb@1.0.1/+esm';
 
 let controller; // 控制器实例
 
