@@ -10,6 +10,12 @@ document.addEventListener("DOMContentLoaded", function () {
   yearInput.addEventListener('input', () => checkOddEven(yearInput.value));
 
   function checkOddEven(numberInput) {
+    // 如果输入为空字符串或空内容，则不执行验证
+    if (!numberInput || numberInput.trim() === '') {
+      resultElement.textContent = '';
+      resultElement.style.color = '';
+      return;
+    }
     console.log(`Checking if ${numberInput} 是奇数还是偶数...`);
 
     // 如果之前有控制器实例，则先取消旧请求

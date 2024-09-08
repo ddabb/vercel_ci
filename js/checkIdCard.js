@@ -10,6 +10,13 @@ document.addEventListener("DOMContentLoaded", function () {
     idCardInput.addEventListener('input', () => CheckShenfen(idCardInput.value));
 
     function CheckShenfen(numberInput) {
+        // 如果输入为空字符串或空内容，则不执行验证
+        if (!numberInput || numberInput.trim() === '') {
+            resultElement.textContent = '';
+            resultElement.style.color = '';
+            return;
+        }
+
         console.log(`Checking if ${numberInput} is a leap year...`);
 
         // 如果之前有控制器实例，则先取消旧请求
