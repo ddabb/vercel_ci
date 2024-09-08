@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "app/tianqi.js",
   "dependencies": {
-    "60score-npm": "^1.0.0",
+    "fishbb": "^1.0.0",
     "axios": "^1.7.2",
     "body-parser": "^1.20.2",
     "crypto": "^1.0.1",

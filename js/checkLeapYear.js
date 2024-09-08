@@ -1,8 +1,9 @@
-import { leapyear } from 'https://cdn.jsdelivr.net/gh/ddabb/60score@main/dist/60score.browser.esm.js';
-
+import { leapyear } from 'fishbb';
 let controller; // 控制器实例
 
 document.addEventListener("DOMContentLoaded", function () {
+  debugger; // 启用调试
+
   const yearInput = document.getElementById('yearInput');
   const resultElement = document.getElementById('result');
 
