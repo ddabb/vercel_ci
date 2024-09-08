@@ -4,24 +4,118 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MathLogic Test</title>
+    <title>Sudoku Solver</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            margin: 20px auto;
+        }
+
+        td {
+            width: 30px;
+            height: 30px;
+            text-align: center;
+            vertical-align: middle;
+            border: 1px solid #ccc;
+        }
+
+        .highlight {
+            background-color: #f0f0f0;
+        }
+
+        input[type=number] {
+            width: 25px;
+            height: 25px;
+            text-align: center;
+        }
+
+        button {
+            display: block;
+            margin: 20px auto;
+        }
+
+        #output {
+            text-align: center;
+        }
+    </style>
 </head>
 
 <body>
-    <h1>MathLogic Test</h1>
-    <!-- 添加输入框和输出结果的 HTML 元素 -->
-    <label for="year-input">Year:</label>
-    <input type="number" id="year-input" placeholder="Enter a year">
-    <p id="leap-year-result"></p>
-    <label for="number-input">Number:</label>
-    <input type="number" id="number-input" placeholder="Enter a number">
-    <p id="odd-even-result"></p>
-    <label for="id-card-input">ID Card Number:</label>
-    <input type="text" id="id-card-input" placeholder="Enter an ID card number">
-    <p id="id-card-result"></p>
+    <h1>Sudoku Solver</h1>
+    <table id="sudoku-table">
+        <!-- 生成数独输入表格 -->
+    </table>
+    <button id="solve-button">Solve</button>
+    <div id="output"></div>
 
-    <!-- 引入 testcdnnpm.js 文件 -->
-    <script type="module" src="../js/testcdnnpm.js"></script>
+    <script type="module">
+        import { SudokuSolver } from '../js/sudokuSolver.js';
+
+        function createTable() {
+            const table = document.getElementById('sudoku-table');
+            for (let i = 0; i < 9; i++) {
+                const row = table.insertRow();
+                for (let j = 0; j < 9; j++) {
+                    const cell = row.insertCell();
+                    const input = document.createElement('input');
+                    input.type = 'number';
+                    input.min = 1;
+                    input.max = 9;
+                    input.style.width = '25px';
+                    input.style.height = '25px';
+                    input.onchange = function () {
+                        this.value = this.value === '' ? 0 : parseInt(this.value, 10);
+                    };
+                    cell.appendChild(input);
+                }
+            }
+        }
+
+        function getInputValues() {
+            const table = document.getElementById('sudoku-table');
+            const board = [];
+            for (let i = 0; i < 9; i++) {
+                const row = [];
+                for (let j = 0; j < 9; j++) {
+                    const cell = table.rows[i].cells[j].getElementsByTagName('input')[0];
+                    row.push(cell.valueAsNumber);
+                }
+                board.push(row);
+            }
+            return board;
+        }
+
+        function displayResult(result) {
+            const output = document.getElementById('output');
+            output.innerHTML = '';
+            if (result === null) {
+                output.textContent = 'No unique solution.';
+            } else {
+                const solvedBoard = result;
+                const table = document.createElement('table');
+                for (let i = 0; i < 9; i++) {
+                    const row = table.insertRow();
+                    for (let j = 0; j < 9; j++) {
+                        const cell = row.insertCell();
+                        cell.textContent = solvedBoard[i][j];
+                        if (solvedBoard[i][j] === 0) {
+                            cell.classList.add('highlight');
+                        }
+                    }
+                }
+                output.appendChild(table);
+            }
+        }
+        document.getElementById('solve-button').addEventListener('click', solve1);
+        function solve1() {
+            debugger;
+            const board = getInputValues();
+            const result = SudokuSolver.solve(board);
+            displayResult(result);
+        }
+
+        createTable();
+    </script>
 </body>
 
 </html>
