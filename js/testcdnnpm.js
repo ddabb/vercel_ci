@@ -1,5 +1,5 @@
 // script.js
-import { chat } from 'https://cdn.jsdelivr.net/npm/fishbb@1.0.7/+esm';
+import { chat } from 'https://cdn.jsdelivr.net/npm/fishbb@latest/+esm';
 document.addEventListener('DOMContentLoaded', () => {
     const form = document.getElementById('query-form');
     form.addEventListener('submit', async (event) => {

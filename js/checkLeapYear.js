@@ -1,4 +1,4 @@
-import { leapyear } from 'https://cdn.jsdelivr.net/npm/fishbb@1.0.1/+esm';
+import { leapyear } from 'https://cdn.jsdelivr.net/npm/fishbb@latest/+esm';
 
 let controller; // 控制器实例
 
