@@ -1,4 +1,5 @@
-document.getElementById('sendButton').addEventListener('click', function () {
+import { chat } from 'https://cdn.jsdelivr.net/npm/fishbb@1.0.7/+esm';
+document.getElementById('sendButton').addEventListener('click', async function () {
     const messageInput = document.getElementById('messageInput');
     const message = messageInput.value.trim();
 
@@ -32,33 +33,20 @@ document.getElementById('sendButton').addEventListener('click', function () {
         `;
         chatOutput.appendChild(thinkingMessage);
         adjustChatContainerHeight();
-        // 发送请求到API
-        fetch('/api/aichat', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify({ message: message })
-        })
-            .then(response => response.text())
-            .then(data => {
-                // 移除思考提示
-                chatOutput.removeChild(thinkingMessage);
-
-                const botMessageElement = document.createElement('div');
-                botMessageElement.className = 'message bot-message';
-                botMessageElement.innerHTML = `
+        const result = await chat('hfr0hjaEDPYL', 'rodneyxiong', message);
+        // 移除思考提示
+        chatOutput.removeChild(thinkingMessage);
+        const botMessageElement = document.createElement('div');
+        botMessageElement.className = 'message bot-message';
+        botMessageElement.innerHTML = `
                 <div class="avatar bg-primary rounded-circle"></div>
                 <div class="message-text">
-                    <p>${data}</p>
+                    <p>${result}</p>
                 </div>
             `;
-                chatOutput.appendChild(botMessageElement);
-                adjustChatContainerHeight();
-            })
-            .catch(error => {
-                console.error('Error:', error);
-            });
+        chatOutput.appendChild(botMessageElement);
+        adjustChatContainerHeight();
+
     }
 
 });
