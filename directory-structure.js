@@ -1,7 +1,7 @@
 const fs = require('fs').promises;
 const path = require('path');
 
-async function printDirectoryStructure(dirPath, indent = '', ignoredDirs = ['node_modules', ".git", "unpackage"]) {
+async function printDirectoryStructure(dirPath, indent = '', ignoredDirs = ['node_modules', ".git", "unpackage", ".next", ".vscode", ".vscode", "out"]) {
     try {
         const files = await fs.readdir(dirPath, { withFileTypes: true });
         for (const file of files) {
