@@ -3,7 +3,7 @@ body {
   font-family: Arial, sans-serif;
   line-height: 1.6;
   color: #333;
-  background-color: #FEDE06;
+  background-color: #F5F5F5;
   margin: 0;
   padding: 0;
 }
@@ -406,7 +406,7 @@ h1 {
 /* 自定义导航栏位置样式 */
 .navbar-container {
   display: flex;
-  background-color: #FEDE06;
+  background-color: #F5F5F5;
 }
 
 .navbar-nav .nav-link:hover {
