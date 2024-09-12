@@ -68,7 +68,7 @@ if (toggleButton) {
 
 
 function adjustChatContainerHeight() {
-    debugger
+
     const chatContainer = document.querySelector('.chat-container');
     if (chatContainer) {
         chatContainer.style.height = 'auto'; // 重置高度为自动
@@ -82,7 +82,7 @@ function adjustChatContainerHeight() {
 }
 
 function toggleChatArea() {
-    debugger
+
     const chatAreaContainer = document.getElementById('chatAreaContainer');
     if (chatAreaContainer) {
         if (chatAreaContainer.style.display === 'none') {

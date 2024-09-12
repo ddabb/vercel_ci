@@ -3,7 +3,7 @@ import { leapyear } from 'https://cdn.jsdelivr.net/npm/fishbb@latest/+esm';
 let controller; // 控制器实例
 
 document.addEventListener("DOMContentLoaded", function () {
-  debugger; // 启用调试
+   // 启用调试
 
   const yearInput = document.getElementById('yearInput');
   const resultElement = document.getElementById('result');
