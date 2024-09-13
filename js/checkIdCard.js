@@ -1,4 +1,4 @@
-import { CheckIdCard } from 'https://cdn.jsdelivr.net/npm/fishbb@latest/+esm';
+import { CheckIdCard } from 'fishbb';
 
 let controller; // 控制器实例
 
