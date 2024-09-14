@@ -1,4 +1,4 @@
-import { calculateRetirement } from 'https://cdn.jsdelivr.net/npm/fishbb@1.0.14/+esm';
+import { calculateRetirement } from 'https://cdn.jsdelivr.net/npm/fishbb@1.0.15/+esm';
 
 document.getElementById('submit').addEventListener('click', function () {
     var year = document.getElementById('year').value;
