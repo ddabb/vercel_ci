@@ -3,18 +3,27 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Query Chat Assistant</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Poetry ESM Example</title>
 </head>
 
 <body>
-    <form id="query-form">
-        <label for="query-input">Ask a question:</label><br>
-        <input type="text" id="query-input" name="query-input"><br>
-        <button type="submit">Submit</button>
-    </form>
-    <div id="response"></div>
+    <script type="module">
+        import { getPoets, getPoems, getPoemsByPoet } from 'https://cdn.jsdelivr.net/npm/poetryesm@latest/dist/index.esm.js';
 
-    <script src="../js/testcdnnpm.js" type="module"></script>
+        // 使用这些函数
+        getPoets().then(poets => {
+            console.log(poets);
+        });
+
+        getPoems().then(poems => {
+            console.log(poems);
+        });
+
+        getPoemsByPoet('李白').then(poems => {
+            console.log(poems);
+        });
+    </script>
 </body>
 
 </html>
