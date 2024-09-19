@@ -1,18 +1,19 @@
-// script.js
-import { chat } from 'https://cdn.jsdelivr.net/npm/fishbb@latest/+esm';
-document.addEventListener('DOMContentLoaded', () => {
-    const form = document.getElementById('query-form');
-    form.addEventListener('submit', async (event) => {
-        event.preventDefault();
-        const input = document.getElementById('query-input');
-        const responseDiv = document.getElementById('response');
+import { getPoets, getPoems, getPoemsByPoet } from 'poetryesm';
 
-        try {
-            const result = await chat('hfr0hjaEDPYL', 'rodneyxiong', input.value);
-            responseDiv.innerHTML = `<p>${result}</p>`; // 假设结果有一个 text 属性
-        } catch (error) {
-            console.error('Failed to fetch chat completion:', error);
-            responseDiv.innerHTML = '<p>There was an error processing your request.</p>';
-        }
-    });
+getPoets().then(poets => {
+    document.getElementById('poets').textContent = JSON.stringify(poets, null, 2);
+}).catch(error => {
+    console.error('Error fetching poets:', error);
+});
+
+getPoems().then(poems => {
+    document.getElementById('poems').textContent = JSON.stringify(poems, null, 2);
+}).catch(error => {
+    console.error('Error fetching poems:', error);
+});
+
+getPoemsByPoet('李白').then(poems => {
+    document.getElementById('poems-by-poet').textContent = JSON.stringify(poems, null, 2);
+}).catch(error => {
+    console.error('Error fetching poems by poet:', error);
 });

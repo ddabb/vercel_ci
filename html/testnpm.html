@@ -8,22 +8,11 @@
 </head>
 
 <body>
-    <script type="module">
-        import { getPoets, getPoems, getPoemsByPoet } from 'https://cdn.jsdelivr.net/npm/poetryesm@latest/dist/index.esm.js';
-
-        // 使用这些函数
-        getPoets().then(poets => {
-            console.log(poets);
-        });
-
-        getPoems().then(poems => {
-            console.log(poems);
-        });
-
-        getPoemsByPoet('李白').then(poems => {
-            console.log(poems);
-        });
-    </script>
+    <h1>诗词集合</h1>
+    <pre id="poets"></pre>
+    <pre id="poems"></pre>
+    <pre id="poems-by-poet"></pre>
+    <script type="module" src="../js/testcdnnpm.js"></script>
 </body>
 
 </html>
