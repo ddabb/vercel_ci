@@ -1,7 +1,6 @@
-import fs from 'fs';
-import path from 'path';
-import ejs from 'ejs';
-import { getPoets, getPoems, getPoemsByPoet } from 'poetryesm'; // 导入正确的函数
+const fs = require('fs').promises; // 使用 fs.promises 以非阻塞方式处理文件系统
+const path = require('path');
+const ejs = require('ejs');
 
 async function escapeHtml(unsafe) {
     return unsafe
@@ -14,13 +13,14 @@ async function escapeHtml(unsafe) {
 
 async function generateStaticFiles() {
     try {
+        // 动态导入 poetryesm 模块
+        const { getPoets, getPoems, getPoemsByPoet } = await import('poetryesm');
+
         const poets = await getPoets(); // 使用导入的 getPoets 函数
-        const poems = await getPoems(); // 使用导入的 getPoets 函数
+        const poems = await getPoems(); // 使用导入的 getPoems 函数
 
         // 创建静态文件目录
-        if (!fs.existsSync('sghtml')) {
-            fs.mkdirSync('sghtml');
-        }
+        await fs.mkdir('sghtml', { recursive: true }); // 使用 fs.promises.mkdir 并设置 recursive 为 true
 
         // 渲染诗人列表
         for (const poet of poets) {
@@ -30,7 +30,7 @@ async function generateStaticFiles() {
                 description: escapeHtml(poet.description || ''),
             };
             const poetHtml = await ejs.renderFile(path.join(__dirname, 'components', 'poet.ejs'), { poet: safePoet });
-            fs.writeFileSync(`sghtml/${safePoet.name}.html`, poetHtml);
+            await fs.writeFile(`sghtml/${safePoet.name}.html`, poetHtml); // 使用 fs.promises.writeFile
         }
 
         // 渲染诗作列表
@@ -44,7 +44,7 @@ async function generateStaticFiles() {
                 authors: poem.authors ? poem.authors.map(author => escapeHtml(author)) : undefined,
             };
             const poemHtml = await ejs.renderFile(path.join(__dirname, 'components', 'poem.ejs'), { poem: safePoem });
-            fs.writeFileSync(`sghtml/${safePoem.name}.html`, poemHtml);
+            await fs.writeFile(`sghtml/${safePoem.name}.html`, poemHtml); // 使用 fs.promises.writeFile
         }
     } catch (error) {
         console.error('Error generating static files:', error);
