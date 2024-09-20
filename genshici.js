@@ -1,7 +1,7 @@
 import fs from 'fs';
 import path from 'path';
 import ejs from 'ejs';
-import { getPoets, getPoems, getPoemsByPoet } from './index.node.js'; // 导入正确的函数
+import { getPoets, getPoems, getPoemsByPoet } from 'poetryesm'; // 导入正确的函数
 
 async function escapeHtml(unsafe) {
     return unsafe
