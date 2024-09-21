@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="UTF-8">
+    <title>
+        <%= poem.name %> - 诗歌详情
+    </title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            color: #333;
+            font-size: 2em;
+            margin-bottom: 20px;
+        }
+
+        .meta {
+            color: #666;
+            font-size: 0.9em;
+            margin-bottom: 20px;
+        }
+
+        pre {
+            background: #f9f9f9;
+            padding: 10px;
+            border-radius: 5px;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+            font-size: 1.2em;
+            line-height: 1.4;
+            margin-bottom: 20px;
+        }
+
+        .author {
+            color: #666;
+            font-size: 0.9em;
+            margin-bottom: 20px;
+        }
+
+        .tags {
+            color: #666;
+            font-size: 0.9em;
+            margin-bottom: 20px;
+        }
+
+        .tag {
+            display: inline-block;
+            background: #e0e0e0;
+            padding: 5px 10px;
+            margin-right: 5px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>
+            <%= poem.name %>
+        </h1>
+        <div class="meta">
+            诗人: <%= poem.poetName %> | 形式: <%= poem.form %>
+        </div>
+        <pre><%= poem.contents.join('\n') %></pre>
+        <% if (poem.authors && poem.authors.length> 0) { %>
+            <p class="author">作者: <%= poem.authors.join(', ') %></p>
+        <% } %>
+        <% if (poem.tags && poem.tags.length > 0) { %>
+            <div class="tags">
+                标签:
+                <% poem.tags.forEach(tag => { %>
+                    <span class="tag"><%= tag %></span>
+                <% }) %>
+            </div>
+        <% } %>
+    </div>
+</body>
+</html>
