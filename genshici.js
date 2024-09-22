@@ -16,29 +16,33 @@ function escapeHtml(unsafe) {
 async function generateStaticFiles(outputPath, dynastyTemplatePath, poetTemplatePath) {
     try {
         console.log('Importing poetryesm...');
-        const { getPoetPaths, getPoetByPath } = await import('poetryesm').then(module => module.default || module);
+        const { getPoetPaths, getPoetByPath } = await import('poetryesm'); // 动态导入
 
         console.log('Fetching poet paths...');
         const poetPaths = await getPoetPaths();
         console.log(`Found ${poetPaths.length} poet paths.`);
 
-        const poetHtmlPath = path.resolve(outputPath, 'poethtml');
+        const poetHtmlPath = path.resolve(outputPath, 'sghtml');
         console.log(`Creating output directory: ${poetHtmlPath}`);
         await fs.mkdir(poetHtmlPath, { recursive: true });
 
         async function processPoet(poetpath) {
             console.log(`Processing poet: ${poetpath}`);
             const poet = await getPoetByPath(poetpath);
+            if (!poet) {
+                console.error(`Poet not found at path: ${poetpath}`);
+                return;
+            }
             const safePoet = {
                 ...poet,
-                Name: escapeHtml(poet.Name),
+                Name: escapeHtml(poet.Name || ''),
                 Description: escapeHtml(poet.Description || ''),
                 Dynasty: escapeHtml(poet.Dynasty || ''),
                 Birth: escapeHtml(poet.Birth || ''),
                 Death: escapeHtml(poet.Death || ''),
                 Poems: (poet.Poems || []).map(poem => ({
-                    ...poem,
-                    Name: escapeHtml(poem.Name),
+                    ...poet,
+                    Name: escapeHtml(poem.Name || ''),
                     Form: escapeHtml(poem.Form || ''),
                     Tags: (poem.Tags || []).map(tag => escapeHtml(tag)),
                     Contents: (poem.Contents || []).map(line => escapeHtml(line))
@@ -89,7 +93,7 @@ async function generateStaticFiles(outputPath, dynastyTemplatePath, poetTemplate
             dynasty,
             poets: poetList.map(poet => ({
                 ...poet,
-                Name: escapeHtml(poet.Name)
+                Name: escapeHtml(poet.Name || '')
             }))
         }));
 
@@ -109,7 +113,8 @@ const argv = yargs(hideBin(process.argv))
         alias: 'o',
         describe: 'Output path for generated files',
         type: 'string',
-        demandOption: true
+        demandOption: false, // 设置为 false 允许用户不指定输出目录
+        default: './' // 默认值为当前工作目录（根目录）
     })
     .option('dynastyTemplatePath', {
         alias: 'd',
