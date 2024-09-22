@@ -2,7 +2,7 @@ const fs = require('fs').promises;
 const path = require('path');
 
 // 定义目录数组
-const dirs = ['html', 'mdhtml'];
+const dirs = ['html', 'mdhtml', 'sghtml'];
 const domain = 'https://www.60score.com/';
 
 let sitemapXml = '<?xml version="1.0" encoding="UTF-8"?>\n';
