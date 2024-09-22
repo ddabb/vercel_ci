@@ -3,8 +3,11 @@
   "version": "1.0.0",
   "main": "app/tianqi.js",
   "dependencies": {
+    "@popperjs/core": "^2.11.8",
     "axios": "^1.7.2",
     "body-parser": "^1.20.2",
+    "bootstrap": "^5.3.3",
+    "bootstrap-icons": "^1.11.3",
     "crypto": "^1.0.1",
     "ejs": "^3.1.10",
     "express": "^4.19.2",
