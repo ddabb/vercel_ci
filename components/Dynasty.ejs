@@ -14,6 +14,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
     <script src="../js/clarity.js"></script>
+
 </head>
 
 <body>
@@ -31,13 +32,15 @@
                                         <h5 class="card-title">
                                             <%= dynasty.dynasty %>
                                         </h5>
-                                        <ul class="list-unstyled">
+                                        <div class="poet-list">
                                             <% dynasty.poets.forEach(poet=> { %>
-                                                <li><a href="/sghtml/<%= poet.Name %>.html" class="card-link">
+                                                <div class="poet-item">
+                                                    <a href="/sghtml/<%= poet.Name %>.html" class="card-link">
                                                         <%= poet.Name %>
-                                                    </a></li>
+                                                    </a>
+                                                </div>
                                                 <% }) %>
-                                        </ul>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -48,8 +51,6 @@
         </main>
 
         <%- include('../components/footer.ejs') %>
-
-
 </body>
 
 </html>
