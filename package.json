@@ -15,7 +15,7 @@
     "marked": "^13.0.3",
     "node-fetch": "^3.3.2",
     "p-map": "^7.0.2",
-    "poetryesm": "^1.0.12",
+    "poetryesm": "^1.0.14",
     "showdown": "^2.1.0",
     "xml2js": "^0.6.2"
   }

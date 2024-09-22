@@ -1,89 +1,46 @@
 <!DOCTYPE html>
-<html lang="zh">
+<html lang="zh-CN">
 
 <head>
     <meta charset="UTF-8">
     <title>
-        <%= poet.name %> - 诗人介绍
+        <%= poet.Name %>
     </title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            margin: 0;
-            padding: 20px;
-            background-color: #f4f4f4;
-        }
-
-        .container {
-            max-width: 800px;
-            margin: auto;
-            background: white;
-            padding: 20px;
-            border-radius: 5px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-
-        h1 {
-            color: #333;
-            font-size: 2em;
-            margin-bottom: 20px;
-        }
-
-        .meta {
-            color: #666;
-            font-size: 0.9em;
-            margin-bottom: 20px;
-        }
-
-        p {
-            color: #666;
-            margin-bottom: 20px;
-        }
-
-        .poems {
-            margin-top: 20px;
-        }
-
-        .poem {
-            color: #333;
-            font-size: 1em;
-            margin-bottom: 10px;
-        }
-
-        .poem a {
-            text-decoration: none;
-            color: #007BFF;
-        }
-
-        .poem a:hover {
-            text-decoration: underline;
-        }
-    </style>
 </head>
 
 <body>
-    <div class="container">
-        <h1>
-            <%= poet.name %>
-        </h1>
-        <div class="meta">
-            朝代: <%= poet.dynasty %>
-        </div>
-        <p>
-            <%= poet.description %>
-        </p>
-        <% if (poet.poemIds && poet.poemIds.length> 0) { %>
-            <div class="poems">
-                <h2>代表作品</h2>
-                <% poet.poemIds.forEach((poemId, index)=> { %>
-                    <div class="poem">
-                        <a href="sghtml/<%= poemId %>.html" target="_blank">诗歌<%= index + 1 %></a>
-                    </div>
-                    <% }) %>
-            </div>
-            <% } %>
-    </div>
+    <h1>
+        <%= poet.Name %>
+    </h1>
+    <p><strong>朝代:</strong>
+        <%= poet.Dynasty %>
+    </p>
+    <p><strong>生平:</strong>
+        <%= poet.Description %>
+    </p>
+    <p><strong>出生:</strong>
+        <%= poet.Birth %>
+    </p>
+    <p><strong>逝世:</strong>
+        <%= poet.Death %>
+    </p>
+    <h2>诗歌</h2>
+    <ul>
+        <% poet.Poems.forEach(poem=> { %>
+            <li>
+                <h3>
+                    <%= poem.Name %>
+                </h3>
+                <p><strong>形式:</strong>
+                    <%= poem.Form %>
+                </p>
+                <p><strong>标签:</strong>
+                    <%= poem.Tags.join(', ') %></p>
+                <pre><%= poem.Contents.join(' \n') %>
+                        </pre>
+            </li>
+            <% }) %>
+    </ul>
 </body>
 
 </html>

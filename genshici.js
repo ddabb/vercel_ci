@@ -1,6 +1,8 @@
 const fs = require('fs').promises;
 const path = require('path');
 const ejs = require('ejs');
+const yargs = require('yargs/yargs');
+const { hideBin } = require('yargs/helpers');
 
 function escapeHtml(unsafe) {
     return unsafe
@@ -11,40 +13,41 @@ function escapeHtml(unsafe) {
         .replace(/'/g, "&#039;");
 }
 
-async function generateStaticFiles() {
+async function generateStaticFiles(outputPath, dynastyTemplatePath, poetTemplatePath) {
     try {
-        const { getPoetPaths, getPoemPaths, getPoetByPath, getPoemByPath } = await import('poetryesm');
+        console.log('Importing poetryesm...');
+        const { getPoetPaths, getPoetByPath } = await import('poetryesm').then(module => module.default || module);
 
+        console.log('Fetching poet paths...');
         const poetPaths = await getPoetPaths();
-        const poemPaths = await getPoemPaths();
+        console.log(`Found ${poetPaths.length} poet paths.`);
 
-        await fs.mkdir('poethtml', { recursive: true });
-        await fs.mkdir('poemhtml', { recursive: true });
+        const poetHtmlPath = path.resolve(outputPath, 'poethtml');
+        console.log(`Creating output directory: ${poetHtmlPath}`);
+        await fs.mkdir(poetHtmlPath, { recursive: true });
 
         async function processPoet(poetpath) {
             console.log(`Processing poet: ${poetpath}`);
             const poet = await getPoetByPath(poetpath);
             const safePoet = {
                 ...poet,
-                name: escapeHtml(poet.name),
-                description: escapeHtml(poet.description || ''),
+                Name: escapeHtml(poet.Name),
+                Description: escapeHtml(poet.Description || ''),
+                Dynasty: escapeHtml(poet.Dynasty || ''),
+                Birth: escapeHtml(poet.Birth || ''),
+                Death: escapeHtml(poet.Death || ''),
+                Poems: (poet.Poems || []).map(poem => ({
+                    ...poem,
+                    Name: escapeHtml(poem.Name),
+                    Form: escapeHtml(poem.Form || ''),
+                    Tags: (poem.Tags || []).map(tag => escapeHtml(tag)),
+                    Contents: (poem.Contents || []).map(line => escapeHtml(line))
+                }))
             };
-            const poetHtml = await ejs.renderFile(path.join(__dirname, 'components', 'poet.ejs'), { poet: safePoet });
-            await fs.writeFile(`poethtml/${safePoet.name}.html`, poetHtml);
-        }
-
-        async function processPoem(poempath) {
-            console.log(`Processing poem: ${poempath}`);
-            const poem = await getPoemByPath(poempath);
-            const safePoem = {
-                ...poem,
-                name: escapeHtml(poem.name),
-                contents: poem.contents.map(line => escapeHtml(line)),
-                poetName: escapeHtml(poem.poetName),
-                authors: poem.authors ? poem.authors.map(author => escapeHtml(author)) : undefined,
-            };
-            const poemHtml = await ejs.renderFile(path.join(__dirname, 'components', 'poem.ejs'), { poem: safePoem });
-            await fs.writeFile(`poemhtml/${safePoem.name}.html`, poemHtml);
+            const poetHtml = await ejs.renderFile(poetTemplatePath, { poet: safePoet });
+            const poetFilePath = path.join(poetHtmlPath, `${safePoet.Name}.html`);
+            console.log(`Writing poet file: ${poetFilePath}`);
+            await fs.writeFile(poetFilePath, poetHtml);
         }
 
         const limit = 10;
@@ -58,17 +61,42 @@ async function generateStaticFiles() {
                 queue.push(promise);
 
                 if (queue.length >= limit) {
+                    console.log(`Queue length reached limit (${limit}), waiting for one to complete...`);
                     await Promise.race(queue);
                 }
             }
+            console.log('Waiting for all tasks to complete...');
             await Promise.all(queue);
         }
 
         // 处理诗人
+        console.log('Processing poets...');
         await processWithConcurrency(poetPaths, processPoet);
 
-        // 处理诗歌
-        await processWithConcurrency(poemPaths, processPoem);
+        // 生成朝代诗人清单
+        const outputFilePath = path.join(poetHtmlPath, 'dynasties.html');
+        const dynastyPoetMap = new Map();
+
+        for (const poetPath of poetPaths) {
+            const poet = await getPoetByPath(poetPath);
+            if (!dynastyPoetMap.has(poet.Dynasty)) {
+                dynastyPoetMap.set(poet.Dynasty, []);
+            }
+            dynastyPoetMap.get(poet.Dynasty).push(poet);
+        }
+
+        const dynastyPoetList = Array.from(dynastyPoetMap.entries()).map(([dynasty, poetList]) => ({
+            dynasty,
+            poets: poetList.map(poet => ({
+                ...poet,
+                Name: escapeHtml(poet.Name)
+            }))
+        }));
+
+        console.log(`Rendering dynasty template from: ${dynastyTemplatePath}`);
+        const renderedContent = await ejs.renderFile(dynastyTemplatePath, { dynastyPoetList });
+        console.log(`Writing dynasties file: ${outputFilePath}`);
+        await fs.writeFile(outputFilePath, renderedContent);
 
         console.log('Static files generation completed successfully.');
     } catch (error) {
@@ -76,4 +104,31 @@ async function generateStaticFiles() {
     }
 }
 
-generateStaticFiles();
+const argv = yargs(hideBin(process.argv))
+    .option('outputPath', {
+        alias: 'o',
+        describe: 'Output path for generated files',
+        type: 'string',
+        demandOption: true
+    })
+    .option('dynastyTemplatePath', {
+        alias: 'd',
+        describe: 'Path to the dynasty template file',
+        type: 'string',
+        default: path.join(__dirname, 'components', 'dynasty.ejs')
+    })
+    .option('poetTemplatePath', {
+        alias: 'p',
+        describe: 'Path to the poet template file',
+        type: 'string',
+        default: path.join(__dirname, 'components', 'poet.ejs')
+    })
+    .help()
+    .alias('help', 'h')
+    .argv;
+
+console.log(`Output Path: ${argv.outputPath}`);
+console.log(`Dynasty Template Path: ${argv.dynastyTemplatePath}`);
+console.log(`Poet Template Path: ${argv.poetTemplatePath}`);
+
+generateStaticFiles(argv.outputPath, argv.dynastyTemplatePath, argv.poetTemplatePath);

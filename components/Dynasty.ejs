@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <title>朝代诗人清单</title>
+</head>
+
+<body>
+    <h1>朝代诗人清单</h1>
+    <ul>
+        <% dynastyPoetList.forEach(dynasty=> { %>
+            <li>
+                <h2>
+                    <%= dynasty.dynasty %>
+                </h2>
+                <ul>
+                    <% dynasty.poets.forEach(poet=> { %>
+                        <li><a href="/poets/<%= poet.Name %>.html">
+                                <%= poet.Name %>
+                            </a></li>
+                        <% }) %>
+                </ul>
+            </li>
+            <% }) %>
+    </ul>
+</body>
+
+</html>
