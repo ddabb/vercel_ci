@@ -50,13 +50,18 @@ document.addEventListener('DOMContentLoaded', function () {
         result.className = 'lead bmi-result ' + categoryMap[category];
     }
 
+    // 初始化输出值
+    heightOutput.textContent = (parseFloat(heightSlider.value)).toFixed(2) + ' m';
+    weightOutput.textContent = (parseFloat(weightSlider.value)).toFixed(1) + ' kg';
+    calculateBMI();
+
     heightSlider.addEventListener('input', function () {
-        heightOutput.textContent = heightSlider.value + ' cm';
+        heightOutput.textContent = (parseFloat(heightSlider.value)).toFixed(2) + ' m';
         calculateBMI();
     });
 
     weightSlider.addEventListener('input', function () {
-        weightOutput.textContent = weightSlider.value + ' kg';
+        weightOutput.textContent = (parseFloat(weightSlider.value)).toFixed(1) + ' kg';
         calculateBMI();
     });
 });

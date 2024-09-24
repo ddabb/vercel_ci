@@ -446,19 +446,23 @@ body .bmi-result {
 }
 
 body .underweight {
-  color: green;
+  color: orange;
+  /* 体重过轻显示为橙色 */
 }
 
 body .normal {
-  color: black;
+  color: green;
+  /* 正常范围显示为绿色 */
 }
 
 body .overweight {
   color: orange;
+  /* 超重显示为橙色 */
 }
 
 body .obese {
   color: red;
+  /* 肥胖显示为红色 */
 }
 
 main {
