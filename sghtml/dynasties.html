@@ -28,20 +28,29 @@
             display: flex;
             flex-wrap: wrap;
             gap: 0.5rem;
-            /* 控制项目之间的间距 */
+            /* 减小项目之间的间距 */
         }
 
         .poet-item {
-            flex-basis: 30%;
-            /* 每个诗人链接所占的宽度 */
-            max-width: 30%;
+            flex-basis: 15%;
+            /* 减小每个诗人链接所占的宽度 */
+            max-width: 15%;
             /* 防止在小屏幕上过度扩展 */
         }
 
         @media (max-width: 768px) {
             .poet-item {
-                flex-basis: 100%;
-                max-width: 100%;
+                flex-basis: 33.333333%;
+                /* 在小屏幕上每行最多显示3个诗人名字 */
+                max-width: 33.333333%;
+            }
+
+            @media (max-width: 576px) {
+                .poet-item {
+                    flex-basis: 50%;
+                    /* 在更小的屏幕上每行最多显示2个诗人名字 */
+                    max-width: 50%;
+                }
             }
         }
     </style>
