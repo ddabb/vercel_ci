@@ -4,15 +4,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Poetry ESM Example</title>
+    <title>Game Main Test</title>
 </head>
 
 <body>
-    <h1>诗词集合</h1>
-    <pre id="poets"></pre>
-    <pre id="poems"></pre>
-    <pre id="poems-by-poet"></pre>
-    <script type="module" src="../js/testcdnnpm.js"></script>
+    <button id="startButton">Start Game</button>
+    <div id="result"></div>
+    <script type="module">
+        import { GridPathFinder } from 'https://cdn.jsdelivr.net/npm/fishbb@1.0.16/+esm';
+
+        const notExistPotList = [18, 25, 23];
+        const game = new GridPathFinder(6, 6, notExistPotList);
+
+        document.getElementById('startButton').addEventListener('click', () => {
+            game.setPassedPotAndPath(4);
+            game.run(0);
+            const resultDiv = document.getElementById('result');
+            resultDiv.textContent = 'Path: ' + game.getPath().join(', ');
+            if (!game.noFullPath) {
+                resultDiv.textContent += ' Full path found!';
+            } else {
+                resultDiv.textContent += ' No full path found.';
+            }
+        });
+    </script>
 </body>
 
 </html>

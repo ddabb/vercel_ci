@@ -11,7 +11,7 @@
     "crypto": "^1.0.1",
     "ejs": "^3.1.10",
     "express": "^4.19.2",
-    "fishbb": "^1.0.12",
+    "fishbb": "^1.0.16",
     "http": "^0.0.1-security",
     "https": "^1.0.0",
     "idcard-tool": "^1.0.1",
