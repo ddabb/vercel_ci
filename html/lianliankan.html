@@ -66,12 +66,19 @@
                     <div class="card-body">
                         <div class="container">
                             <div class="level-selector">
-                                <label for="levelSelect">选择关卡:</label>
                                 <select id="levelSelect"></select>
                                 <button id="startButton">开始游戏</button>
                             </div>
+
                             <div id="gameContainer" class="grid-container"></div>
+
                             <div id="result" class="result"></div>
+
+                            <div id="nextLevelConfirmation" class="confirmation" style="display: none;">
+                                <p>恭喜，你成功完成了一笔画！</p>
+                                <button id="nextLevelButton">下一关</button>
+                                <button id="stayButton">继续本关</button>
+                            </div>
                         </div>
                     </div>
                 </div>
