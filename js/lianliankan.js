@@ -5,34 +5,74 @@ const resultDiv = document.getElementById('result');
 const levelSelect = document.getElementById('levelSelect');
 const startButton = document.getElementById('startButton');
 
-let levels = [];
+let levels = [
+    {
+        "id": 1,
+        "rows": 5,
+        "columns": 5,
+        "notExistPotList": [4, 11, 3, 12, 0, 18, 5, 13, 17, 16]
+    },
+    {
+        "id": 2,
+        "rows": 5,
+        "columns": 6,
+        "notExistPotList": [20, 21, 8, 19, 10, 6, 22, 0, 9]
+    },
+    {
+        "id": 3,
+        "rows": 5,
+        "columns": 5,
+        "notExistPotList": [18, 12, 15, 19, 20, 2, 10, 17]
+    },
+    {
+        "id": 4,
+        "rows": 5,
+        "columns": 5,
+        "notExistPotList": [7, 12, 21, 4, 6, 20, 5, 15, 13, 18]
+    },
+    {
+        "id": 5,
+        "rows": 5,
+        "columns": 5,
+        "notExistPotList": [16, 11, 7, 8, 0, 23, 24, 12, 9, 4]
+    },
+    {
+        "id": 6,
+        "rows": 5,
+        "columns": 5,
+        "notExistPotList": [19, 8, 6, 11, 14, 20, 24, 17]
+    },
+    {
+        "id": 7,
+        "rows": 5,
+        "columns": 5,
+        "notExistPotList": [17, 13, 12, 15, 20, 3, 14, 6]
+    },
+    {
+        "id": 8,
+        "rows": 5,
+        "columns": 5,
+        "notExistPotList": [4, 12, 8, 16, 0, 9, 3, 24, 17]
+    },
+    {
+        "id": 9,
+        "rows": 5,
+        "columns": 5,
+        "notExistPotList": [20, 6, 12, 4, 9, 18, 15, 17]
+    },
+    {
+        "id": 10,
+        "rows": 5,
+        "columns": 5,
+        "notExistPotList": [3, 7, 17, 20, 12, 6, 18, 4, 11, 9]
+    }
+];
+
 let currentLevel = null;
 let game;
 let cells = [];
 let path = [];
 let isDrawing = false;
-
-async function loadLevels() {
-    try {
-        debugger;
-        const response = await fetch('/jsons/levels.json');
-        const data = await response.json();
-        levels = data.levels.filter(level => {
-            const game = new GridPathFinder(level.rows, level.columns, level.notExistPotList);
-            return game.isOneStroke();
-        });
-        levels.forEach(level => {
-            const option = document.createElement('option');
-            option.value = level.id;
-            option.textContent = `关卡 ${level.id}`;
-            levelSelect.appendChild(option);
-        });
-        currentLevel = levels[0];
-        createGrid(currentLevel.rows, currentLevel.columns, currentLevel.notExistPotList);
-    } catch (error) {
-        console.error('Failed to load levels:', error);
-    }
-}
 
 function createGrid(rows, columns, notExistPotList) {
     game = new GridPathFinder(rows, columns, notExistPotList);
@@ -106,7 +146,14 @@ function startGame() {
     path = [];
 }
 
+levels.forEach(level => {
+    const option = document.createElement('option');
+    option.value = level.id;
+    option.textContent = `关卡 ${level.id}`;
+    levelSelect.appendChild(option);
+});
+
 startButton.addEventListener('click', startGame);
 
 // 初始化游戏
-loadLevels();
+createGrid(5, 5, levels[0].notExistPotList); // 使用默认关卡初始化游戏
