@@ -14,6 +14,7 @@ let isDrawing = false;
 
 async function loadLevels() {
     try {
+        debugger;
         const response = await fetch('/jsons/levels.json');
         const data = await response.json();
         levels = data.levels.filter(level => {
