@@ -75,6 +75,7 @@ let path = [];
 let isDrawing = false;
 
 function createGrid(rows, columns, notExistPotList) {
+    console.log('Creating grid with:', { rows, columns, notExistPotList });
     game = new GridPathFinder(rows, columns, notExistPotList);
     gameContainer.innerHTML = '';
     cells = [];
@@ -104,16 +105,20 @@ function createGrid(rows, columns, notExistPotList) {
         cell.addEventListener('touchend', stopDrawing);
         cell.addEventListener('touchmove', draw);
     });
+
+    console.log('Grid created with', cells.length, 'cells');
 }
 
 function startDrawing(e) {
     e.preventDefault();
     isDrawing = true;
+    console.log('Start drawing at', e.target.dataset.index);
     draw(e);
 }
 
 function stopDrawing() {
     isDrawing = false;
+    console.log('Stop drawing');
 }
 
 function draw(e) {
@@ -123,27 +128,42 @@ function draw(e) {
     if (cells[index].classList.contains('active') || cells[index].classList.contains('inactive')) return;
     cells[index].classList.add('active');
     path.push(index);
+    console.log('Draw at', index, 'path:', path);
     checkPath();
 }
 
 function checkPath() {
-    if (path.length === cells.length - game.notExistPotList.length) {
+    const activeCells = cells.filter(cell => cell.classList.contains('active')).length;
+    const totalActiveCells = cells.length - game.notExistPotList.length;
+    console.log('Active cells:', activeCells, 'Total active cells:', totalActiveCells);
+    if (activeCells === totalActiveCells) {
         resultDiv.textContent = '恭喜，你成功完成了一笔画！';
+        console.log('Game completed!');
     } else {
         resultDiv.textContent = '';
+        console.log('Game in progress...');
     }
 }
 
 function startGame() {
+    console.log('startGame called');
     const selectedLevelId = parseInt(levelSelect.value);
+    console.log('Selected level ID:', selectedLevelId);
     const selectedLevel = levels.find(level => level.id === selectedLevelId);
+    console.log('Selected level:', selectedLevel);
+
     if (selectedLevel !== currentLevel) {
+        console.log('New level detected, creating new grid');
         currentLevel = selectedLevel;
         createGrid(selectedLevel.rows, selectedLevel.columns, selectedLevel.notExistPotList);
+    } else {
+        console.log('Same level, resetting game');
     }
+
     resultDiv.textContent = '';
     cells.forEach((cell) => cell.classList.remove('active'));
     path = [];
+    console.log('Game reset and ready to play');
 }
 
 levels.forEach(level => {
@@ -157,3 +177,4 @@ startButton.addEventListener('click', startGame);
 
 // 初始化游戏
 createGrid(5, 5, levels[0].notExistPotList); // 使用默认关卡初始化游戏
+console.log('Game initialized with default level');
