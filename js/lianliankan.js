@@ -1,4 +1,4 @@
-import { GridPathFinder } from 'https://cdn.jsdelivr.net/npm/fishbb@1.0.22/+esm';
+import { GridPathFinder } from 'https://cdn.jsdelivr.net/npm/fishbb@1.0.23/+esm';
 
 const gameContainer = document.getElementById('gameContainer');
 const resultDiv = document.getElementById('result');
