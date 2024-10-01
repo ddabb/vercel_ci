@@ -216,76 +216,6 @@ body {
   /* 可选：添加底部边框以区分链接 */
 }
 
-/* 用户资料相关样式 */
-img {
-  width: 150px;
-  height: 150px;
-}
-
-.profile {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  margin-bottom: 20px;
-}
-
-.profile .name {
-  font-size: 2rem;
-  font-weight: bold;
-  margin-top: 1rem;
-}
-
-.profile .bio {
-  font-size: 1.2rem;
-  margin-top: 1rem;
-}
-
-.profile img[src="../wechat.jpg"] {
-  width: 150px;
-  /* 设置为合适的宽度 */
-  height: 150px;
-  /* 设置为合适的 高度*/
-  object-fit: contain;
-  /* 保持图片比例，让图片完全显示在设定的宽高内 */
-}
-
-.profile img[src="../wexin.jpg"] {
-  width: 210px;
-  /* 设置为合适的宽度 */
-  height: 280px;
-  /* 设置为合适的高度 */
-  object-fit: contain;
-  /* 保持图片比例，让图片完全显示在设定的宽高内 */
-}
-
-.name {
-  font-size: 3rem;
-  font-weight: bold;
-  margin-top: 1rem;
-}
-
-.bio {
-  font-size: 1.5rem;
-  margin-top: 2rem;
-}
-
-.follow-btn {
-  width: 150px;
-  height: 50px;
-  border: none;
-  border-radius: 25px;
-  background-color: #007bff;
-  color: #fff;
-  font-size: 1.2rem;
-  cursor: pointer;
-  margin: 2rem auto 0;
-  transition: background-color 0.3s ease;
-}
-
-.follow-btn:hover {
-  background-color: #0069d9;
-}
 
 /* 表单相关样式 */
 h1 {
@@ -421,59 +351,7 @@ main {
   /* 给链接添加左右间距 */
 }
 
-/* 公众号文章搜索表单相关样式 */
-#search-form-weixin {
-  margin-bottom: 20px;
-}
 
-#search-input-weixin {
-  flex-grow: 1;
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 5px 0 0 5px;
-  outline: none;
-}
-
-#search-button-weixin {
-  padding: 10px 20px;
-  background: #007bff;
-  color: #fff;
-  border: none;
-  border-radius: 0 5px 5px 0;
-  cursor: pointer;
-  transition: background 0.3s ease;
-  margin-left: -1px;
-}
-
-/* 公众号文章列表相关样式 */
-#article-list-weixin {
-  list-style: none;
-  padding: 0;
-}
-
-#article-list-weixin a {
-  display: block;
-  margin-bottom: 3px;
-  padding: 10px;
-  text-decoration: underline;
-  color: #007bff;
-  transition: all 0.3s ease;
-}
-
-/* 公众号文章分页相关样式 */
-#pagination-weixin {
-  margin-top: 5px;
-}
-
-#pagination-weixin button {
-  background: #fff;
-  border: 1px solid #ccc;
-  padding: 5px 10px;
-  margin-right: 5px;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  border-radius: 5px;
-}
 
 /* 媒体查询，仅在屏幕宽度小于或等于991px时生效 */
 @media (max-width: 991px) {

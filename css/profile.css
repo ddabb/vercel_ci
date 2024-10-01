@@ -1,0 +1,71 @@
+/* 用户资料相关样式 */
+img {
+    width: 150px;
+    height: 150px;
+  }
+  
+  .profile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .profile .name {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-top: 1rem;
+  }
+  
+  .profile .bio {
+    font-size: 1.2rem;
+    margin-top: 1rem;
+  }
+  
+  .profile img[src="../wechat.jpg"] {
+    width: 150px;
+    /* 设置为合适的宽度 */
+    height: 150px;
+    /* 设置为合适的 高度*/
+    object-fit: contain;
+    /* 保持图片比例，让图片完全显示在设定的宽高内 */
+  }
+  
+  .profile img[src="../wexin.jpg"] {
+    width: 210px;
+    /* 设置为合适的宽度 */
+    height: 280px;
+    /* 设置为合适的高度 */
+    object-fit: contain;
+    /* 保持图片比例，让图片完全显示在设定的宽高内 */
+  }
+  
+  .name {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-top: 1rem;
+  }
+  
+  .bio {
+    font-size: 1.5rem;
+    margin-top: 2rem;
+  }
+  
+  .follow-btn {
+    width: 150px;
+    height: 50px;
+    border: none;
+    border-radius: 25px;
+    background-color: #007bff;
+    color: #fff;
+    font-size: 1.2rem;
+    cursor: pointer;
+    margin: 2rem auto 0;
+    transition: background-color 0.3s ease;
+  }
+  
+  .follow-btn:hover {
+    background-color: #0069d9;
+  }
+  
