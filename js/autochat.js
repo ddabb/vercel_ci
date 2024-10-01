@@ -63,7 +63,7 @@ const toggleButton = document.getElementById('toggleChatArea');
 if (toggleButton) {
     toggleButton.addEventListener('click', toggleChatArea);
 } else {
-    console.error('Element with ID "toggleChatArea" not found.');
+    console.log('Element with ID "toggleChatArea" not found.');
 }
 
 
