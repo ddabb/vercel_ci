@@ -1,0 +1,77 @@
+/* 通用样式保持不变... */
+
+.sticky-footer {
+    position: fixed;
+    /* 将页脚固定在底部 */
+    bottom: 0;
+    /* 紧贴底部 */
+    left: 0;
+    /* 左侧紧贴 */
+    right: 0;
+    /* 右侧紧贴 */
+    z-index: 1000;
+    /* 确保页脚在其他内容之上 */
+    background-color: #f8f9fa;
+    padding: 0;
+}
+
+.sticky-footer p {
+    line-height: 1;
+    /* 减少line-height以让文本更紧凑 */
+    margin: 0;
+    /* 移除默认的margin */
+}
+
+
+.sticky-footer .container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* 水平居中 */
+    height: 42px;
+    /* 设置footer的高度 */
+}
+
+
+.sticky-footer a {
+    margin: 0 5px;
+    /* 给链接添加左右间距 */
+}
+
+/* 新增媒体查询 */
+@media (max-width: 767px) {
+
+    /* 或者使用适合您的断点 */
+    .sticky-footer {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-color: #f8f9fa;
+        padding: 10px 0;
+        /* 调整padding以适应内容 */
+        display: flex;
+        justify-content: center;
+        /* 水平居中 */
+        align-items: center;
+        /* 垂直居中 */
+    }
+
+    .sticky-footer .container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: auto;
+        /* 允许内容决定高度 */
+    }
+
+    .sticky-footer p {
+        margin: 0;
+        /* 移除默认的margin */
+    }
+
+    .sticky-footer a {
+        margin: 0 5px;
+        /* 给链接添加左右间距 */
+    }
+}
