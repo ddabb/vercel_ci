@@ -191,7 +191,9 @@ body {
   text-decoration: none;
   color: #007bff;
   transition: all 0.3s ease;
+  border-bottom: 1px solid #eee;
 }
+
 
 /* 分页相关样式 */
 #pagination-md {
@@ -208,13 +210,6 @@ body {
   border-radius: 5px;
 }
 
-#article-list-md a {
-  display: block;
-  padding-bottom: 3px;
-  /* 更紧凑的间距 */
-  border-bottom: 1px solid #eee;
-  /* 可选：添加底部边框以区分链接 */
-}
 
 
 /* 表单相关样式 */
