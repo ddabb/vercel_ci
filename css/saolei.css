@@ -137,7 +137,7 @@ body {
     top: 270px;
 }
 
-li,
+/* li,
 span {
     width: 150px;
     height: 40px;
@@ -151,7 +151,7 @@ span {
     background-color: #2f2;
     user-select: none;
     cursor: pointer;
-}
+} */
 
 .active {
     background-color: #f40;
