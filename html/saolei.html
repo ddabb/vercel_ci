@@ -67,18 +67,20 @@
                     </div>
                     <div class="card-body">
                         <div class="container">
+                            <div class="controls mb-3">
+                                <button class="btn btn-primary" id="start-btn">开始游戏</button>
+                                <button class="btn btn-secondary" id="reset-btn">重置游戏</button>
+                                <div class="level-select">
+                                    <button class="btn btn-outline-primary active" data-level="easy">简单</button>
+                                    <button class="btn btn-outline-primary" data-level="normal">普通</button>
+                                    <button class="btn btn-outline-primary" data-level="hard">困难</button>
+                                </div>
+                            </div>
                             <div class="mines">剩余雷数：<span class="remain"></span></div>
                             <div class="wrapper">
                                 <div class="tab-grid"></div>
                             </div>
-                            <div class="start-btn">开始游戏</div>
-                            <div class="reset">复位</div>
-                            <ul class="level">
-                                <li class="easy active">easy</li>
-                                <li class="normal">normal</li>
-                                <li class="hard">hard</li>
-                                <span class="time">00:00</span>
-                            </ul>
+                            <div class="time">00:00</div>
                         </div>
                     </div>
                 </div>

@@ -1,8 +1,8 @@
 const wrapper = document.querySelector('.wrapper');
 const mines = document.querySelector('.mines .remain');
-const startBtn = document.querySelector('.start-btn');
-const resetBtn = document.querySelector('.reset');
-const levelList = document.querySelectorAll('.level li');
+const startBtn = document.querySelector('#start-btn');
+const resetBtn = document.querySelector('#reset-btn');
+const levelSelect = document.querySelectorAll('.level-select button');
 const timeDisplay = document.querySelector('.time');
 
 let tabRowN = 10; // 行数
@@ -70,12 +70,16 @@ function createMap(tabRowN, tabColN) {
     wrapper.style.height = `${tabRowN * 35}px`;
 
     tabGrid.oncontextmenu = (e) => e.preventDefault();
+
+    // 添加鼠标按下事件监听器
     tabGrid.addEventListener('mousedown', (e) => {
         const target = e.target;
         if (e.button === 0) {
             leftClick(target);
         } else if (e.button === 2) {
             rightClick(target);
+        } else if (target.classList.contains('opened') && e.buttons === 3) {
+            autoOpenSurroundingTabs(target);
         }
     });
 }
@@ -94,31 +98,97 @@ function startTimer() {
 // 左键点击
 function leftClick(tab) {
     console.log('左键点击');
-    if (isGameOver || tab.classList.contains('opened') || tab.classList.contains('flag')) return;
+    if (isGameOver || tab.classList.contains('flag')) return;
 
-    if (tab.classList.contains('bomb')) {
-        tab.classList.add('show');
-        clearInterval(timer);
-        isGameOver = true;
-        console.log('游戏结束，你输了');
+    if (tab.classList.contains('opened')) {
+        autoOpenSurroundingTabs(tab);
     } else {
-        openTab(tab);
+        if (tab.classList.contains('bomb')) {
+            tab.classList.add('show');
+            clearInterval(timer);
+            isGameOver = true;
+            showGameResult('游戏结束，你输了');
+        } else {
+            openTab(tab);
+        }
     }
+}
+
+// 自动打开周围的格子
+function autoOpenSurroundingTabs(tab) {
+    const [row, col] = tab.id.split('-').map(Number);
+    const mineCount = parseInt(tab.innerText, 10);
+    let flagCount = 0;
+    let incorrectFlag = false;
+
+    for (let i = -1; i <= 1; i++) {
+        for (let j = -1; j <= 1; j++) {
+            if (i === 0 && j === 0) continue;
+            const newRow = row + i;
+            const newCol = col + j;
+            if (newRow >= 0 && newRow < tabRowN && newCol >= 0 && newCol < tabColN) {
+                const neighborTab = document.getElementById(`${newRow}-${newCol}`);
+                if (neighborTab && neighborTab.classList.contains('flag')) {
+                    flagCount++;
+                    if (!neighborTab.classList.contains('bomb')) {
+                        incorrectFlag = true;
+                    }
+                }
+            }
+        }
+    }
+
+    if (flagCount === mineCount) {
+        if (incorrectFlag) {
+            clearInterval(timer);
+            isGameOver = true;
+            showGameResult('游戏结束，你输了');
+            revealAllBombs();
+        } else {
+            for (let i = -1; i <= 1; i++) {
+                for (let j = -1; j <= 1; j++) {
+                    if (i === 0 && j === 0) continue;
+                    const newRow = row + i;
+                    const newCol = col + j;
+                    if (newRow >= 0 && newRow < tabRowN && newCol >= 0 && newCol < tabColN) {
+                        const neighborTab = document.getElementById(`${newRow}-${newCol}`);
+                        if (neighborTab && !neighborTab.classList.contains('flag')) {
+                            openTab(neighborTab);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+// 显示所有雷
+function revealAllBombs() {
+    const allTabs = document.querySelectorAll('.tab');
+    allTabs.forEach(tab => {
+        if (tab.classList.contains('bomb')) {
+            tab.classList.add('show');
+        }
+    });
 }
 
 // 右键点击
 function rightClick(tab) {
-    console.log('右键点击');
+    console.log('右键点击', tab);
     if (isGameOver || tab.classList.contains('opened')) return;
 
     if (tab.classList.contains('flag')) {
         tab.classList.remove('flag');
         remainMineN++;
+        console.log('移除旗子');
     } else {
         tab.classList.add('flag');
         remainMineN--;
+        console.log('添加旗子');
     }
     mines.innerText = remainMineN;
+
+    checkWinCondition();
 }
 
 // 打开单元格
@@ -163,10 +233,27 @@ function openTab(tab) {
         }
     }
 
-    if (openedTabN === (tabRowN * tabColN - mineN)) {
+    checkWinCondition();
+}
+
+// 检查胜利条件
+function checkWinCondition() {
+    const allTabs = document.querySelectorAll('.tab');
+    const nonBombTabs = Array.from(allTabs).filter(tab => !tab.classList.contains('bomb'));
+    const openedNonBombTabs = nonBombTabs.filter(tab => tab.classList.contains('opened'));
+
+    if (openedNonBombTabs.length === nonBombTabs.length) {
         clearInterval(timer);
         isGameOver = true;
-        console.log('游戏结束，你赢了');
+        showGameResult('游戏结束，你赢了');
+    }
+}
+
+// 显示游戏结果
+function showGameResult(message) {
+    alert(message);
+    if (message.includes('输了')) {
+        revealAllBombs();
     }
 }
 
@@ -196,15 +283,15 @@ function selectLevel(level) {
             mineN = 99;
             break;
     }
-    levelList.forEach(li => li.classList.remove('active'));
-    document.querySelector(`.${level}`).classList.add('active');
+    levelSelect.forEach(button => button.classList.remove('active'));
+    document.querySelector(`[data-level="${level}"]`).classList.add('active');
     initGame();
 }
 
 // 事件监听
 startBtn.addEventListener('click', () => initGame());
 resetBtn.addEventListener('click', () => resetGame());
-levelList.forEach(li => li.addEventListener('click', () => selectLevel(li.classList[0])));
+levelSelect.forEach(button => button.addEventListener('click', () => selectLevel(button.dataset.level)));
 
 // 初始化默认难度
 selectLevel('easy');

@@ -1,6 +1,31 @@
-.wrapper {
-    position: relative;
-    margin-top: 20px;
+.controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.controls .level-select {
+    display: flex;
+    gap: 5px;
+}
+
+.controls .level-select button {
+    flex: 1;
+}
+
+.controls .level-select button.active {
+    background-color: #007bff;
+    color: white;
+}
+
+.mines {
+    margin-top: 10px;
+    font-size: 1.2em;
+}
+
+.time {
+    margin-top: 10px;
+    font-size: 1.2em;
 }
 
 .tab-grid {
@@ -32,35 +57,7 @@
 }
 
 .tab.flag {
-    background-image: url('../imgs/flag.png');
+    background-image: url('../imgs/flag.jpg');
     background-size: cover;
     background-repeat: no-repeat;
-}
-
-.start-btn,
-.reset {
-    margin-top: 10px;
-    padding: 10px 20px;
-    background-color: #007bff;
-    color: white;
-    border: none;
-    cursor: pointer;
-}
-
-.start-btn:hover,
-.reset:hover {
-    background-color: #0056b3;
-}
-
-.level li {
-    display: inline-block;
-    margin-right: 10px;
-    padding: 5px 10px;
-    background-color: #007bff;
-    color: white;
-    cursor: pointer;
-}
-
-.level li.active {
-    background-color: #0056b3;
 }
