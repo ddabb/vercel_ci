@@ -19,12 +19,36 @@
 }
 
 .mines {
-    margin-top: 10px;
+
+    margin-right: 10px;
     font-size: 1.2em;
 }
 
+.mines-container {
+    display: flex;
+    align-items: center;
+    /* 垂直居中对齐 */
+    justify-content: flex-start;
+    /* 水平靠左对齐 */
+}
+
+.game-result {
+    font-weight: bold;
+    color: red;
+    /* 默认颜色为红色，表示失败 */
+    display: none;
+    /* 默认隐藏 */
+    margin-left: 10px;
+    /* 根据需要调整左边距 */
+}
+
+.game-result.win {
+    color: green;
+    /* 胜利时的颜色 */
+}
+
 .time {
-    margin-top: 10px;
+
     font-size: 1.2em;
 }
 

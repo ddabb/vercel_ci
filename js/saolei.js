@@ -4,6 +4,7 @@ const startBtn = document.querySelector('#start-btn');
 const resetBtn = document.querySelector('#reset-btn');
 const levelSelect = document.querySelectorAll('.level-select button');
 const timeDisplay = document.querySelector('.time');
+const flagSwitch = document.querySelector('#flag-switch'); // 新增插旗开关
 
 let tabRowN = 10; // 行数
 let tabColN = 10; // 列数
@@ -13,6 +14,7 @@ let openedTabN = 0; // 已打开的单元格数量
 let isGameOver = false;
 let timer = null;
 let seconds = 0;
+let isFlagMode = false; // 插旗模式开关
 
 // 初始化游戏
 function initGame() {
@@ -26,6 +28,9 @@ function initGame() {
     mines.innerText = remainMineN;
     createMap(tabRowN, tabColN);
     startTimer();
+    // 隐藏游戏结果提示
+    const gameResultDiv = document.querySelector('.game-result');
+    gameResultDiv.style.display = 'none';
 }
 
 // 创建地图
@@ -71,17 +76,53 @@ function createMap(tabRowN, tabColN) {
 
     tabGrid.oncontextmenu = (e) => e.preventDefault();
 
-    // 添加鼠标按下事件监听器
-    tabGrid.addEventListener('mousedown', (e) => {
+    // 添加鼠标和触摸事件监听器
+    tabGrid.addEventListener('mousedown', (e) => handleMouseEvent(e));
+    tabGrid.addEventListener('touchstart', (e) => handleTouchEvent(e));
+
+    // 双击模拟同时按下左右键
+    tabGrid.addEventListener('dblclick', (e) => {
         const target = e.target;
-        if (e.button === 0) {
-            leftClick(target);
-        } else if (e.button === 2) {
-            rightClick(target);
-        } else if (target.classList.contains('opened') && e.buttons === 3) {
+        if (target.classList.contains('opened')) {
             autoOpenSurroundingTabs(target);
         }
     });
+
+    tabGrid.addEventListener('touchend', (e) => {
+        const target = e.target;
+        if (target.classList.contains('tab') && e.touches.length === 0) {
+            handleClick(target);
+        }
+    });
+}
+
+// 处理鼠标事件
+function handleMouseEvent(e) {
+    const target = e.target;
+    if (e.button === 0) {
+        handleClick(target);
+    } else if (e.button === 2) {
+        rightClick(target);
+    } else if (target.classList.contains('opened') && e.buttons === 3) {
+        autoOpenSurroundingTabs(target);
+    }
+}
+
+// 处理触摸事件
+function handleTouchEvent(e) {
+    const target = e.target;
+    if (e.touches.length === 1) {
+        handleClick(target);
+    }
+}
+
+// 处理点击事件
+function handleClick(target) {
+    if (isFlagMode) {
+        rightClick(target);
+    } else {
+        leftClick(target);
+    }
 }
 
 // 开始计时
@@ -188,6 +229,7 @@ function rightClick(tab) {
     }
     mines.innerText = remainMineN;
 
+    // 检查胜利条件
     checkWinCondition();
 }
 
@@ -233,6 +275,7 @@ function openTab(tab) {
         }
     }
 
+    // 检查胜利条件
     checkWinCondition();
 }
 
@@ -241,8 +284,10 @@ function checkWinCondition() {
     const allTabs = document.querySelectorAll('.tab');
     const nonBombTabs = Array.from(allTabs).filter(tab => !tab.classList.contains('bomb'));
     const openedNonBombTabs = nonBombTabs.filter(tab => tab.classList.contains('opened'));
+    const flaggedBombTabs = Array.from(allTabs).filter(tab => tab.classList.contains('bomb') && tab.classList.contains('flag'));
 
-    if (openedNonBombTabs.length === nonBombTabs.length) {
+    // 胜利条件：所有非雷的格子都已打开，且所有雷都被正确标记
+    if (openedNonBombTabs.length === nonBombTabs.length && flaggedBombTabs.length === mineN) {
         clearInterval(timer);
         isGameOver = true;
         showGameResult('游戏结束，你赢了');
@@ -251,8 +296,14 @@ function checkWinCondition() {
 
 // 显示游戏结果
 function showGameResult(message) {
-    alert(message);
-    if (message.includes('输了')) {
+    const gameResultDiv = document.querySelector('.game-result');
+    gameResultDiv.innerText = message;
+    gameResultDiv.classList.remove('win');
+    gameResultDiv.style.display = 'block';
+
+    if (message.includes('赢了')) {
+        gameResultDiv.classList.add('win');
+    } else {
         revealAllBombs();
     }
 }
@@ -261,6 +312,8 @@ function showGameResult(message) {
 function resetGame() {
     console.log('重置游戏');
     initGame();
+    const gameResultDiv = document.querySelector('.game-result');
+    gameResultDiv.style.display = 'none';
 }
 
 // 选择难度
@@ -287,6 +340,11 @@ function selectLevel(level) {
     document.querySelector(`[data-level="${level}"]`).classList.add('active');
     initGame();
 }
+
+// 插旗开关事件监听
+flagSwitch.addEventListener('change', (e) => {
+    isFlagMode = e.target.checked;
+});
 
 // 事件监听
 startBtn.addEventListener('click', () => initGame());
