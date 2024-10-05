@@ -1,5 +1,64 @@
+/* game.css */
+
+.content-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.content-list li {
+  background-color: #fff; /* 更改为白色背景 */
+  border: 1px solid #ddd; /* 添加边框 */
+  border-radius: 8px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* 添加轻微阴影 */
+}
+
+.content-list li:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
 .app-icon {
-    width: 48px;
-    height: 48px;
-    margin-right: 8px;
+  width: 48px;
+  height: 48px;
+  margin-right: 16px;
+  border-radius: 8px;
+}
+
+.content-list a {
+  color: inherit;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  flex: 1;
+}
+
+.content-list a:hover {
+  text-decoration: underline;
+}
+
+.card-title {
+  font-size: 1rem;
+  margin: 0.5rem 0 0;
+  color: #333; /* 深灰色文字 */
+}
+
+@media (min-width: 768px) {
+  .app-icon {
+    width: 64px;
+    height: 64px;
+    margin-right: 24px;
+  }
+
+  .card-title {
+    font-size: 1.25rem;
+  }
 }
