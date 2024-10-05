@@ -218,17 +218,9 @@ document.addEventListener('DOMContentLoaded', () => {
         const selectedLevel = levels.find(level => level.id === selectedLevelId);
         console.log('Selected level:', selectedLevel);
 
-        if (selectedLevel !== currentLevel) {
-            console.log('New level detected, creating new grid');
-
-            // 在创建新网格前重置游戏状态
-            resetPath();
-            currentLevel = selectedLevel;
-            createGrid(selectedLevel.rows, selectedLevel.columns, selectedLevel.notExistPotList);
-        } else {
-            console.log('Same level, resetting game');
-            resetPath();
-        }
+        resetPath();
+        currentLevel = selectedLevel;
+        createGrid(selectedLevel.rows, selectedLevel.columns, selectedLevel.notExistPotList);
         resultDiv.textContent = '';
         console.log('Game reset and ready to play');
     }
