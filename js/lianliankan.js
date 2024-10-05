@@ -109,53 +109,58 @@ document.addEventListener('DOMContentLoaded', () => {
             cell.addEventListener('mousedown', startDrawing);
             cell.addEventListener('mouseup', stopDrawing);
             cell.addEventListener('mousemove', draw);
-            cell.addEventListener('touchstart', (e) => startDrawing(e, true));
-            cell.addEventListener('touchend', (e) => stopDrawing(e, true));
-            cell.addEventListener('touchmove', (e) => draw(e, true));
+            cell.addEventListener('touchstart', startTouch);
+            cell.addEventListener('touchend', endTouch);
+            cell.addEventListener('touchmove', touchDraw);
         });
         console.log('Grid created with', cells.length, 'cells');
     }
 
-    function startDrawing(e, isTouch) {
+    function startDrawing(e) {
         e.preventDefault();
         isDrawing = true;
         console.log('Start drawing at', e.target.dataset.index);
-        draw(e, isTouch);
+        draw(e);
     }
 
-    function stopDrawing(e, isTouch) {
+    function stopDrawing(e) {
         isDrawing = false;
         console.log('Stop drawing');
     }
 
-    function draw(e, isTouch) {
+    function draw(e) {
         if (!isDrawing) return;
-        const target = isTouch ? e.touches[0].target : e.target;
-        const index = parseInt(target.dataset.index);
-        if (cells[index].classList.contains('inactive')) {
-            return;
-        }
+        requestAnimationFrame(() => {
+            const target = e.target;
+            const index = parseInt(target.dataset.index);
+            if (cells[index].classList.contains('inactive')) {
+                return;
+            }
 
-        if (lastValidIndex !== -1) {
-            if (lastValidIndex === index) {
-                isDrawingSameCell = true;
-            } else {
-                isDrawingSameCell = false;
-                if (!game.areAdjacent(lastValidIndex, index) || game.getPath().includes(index)) {
-                    console.log('Path reset due to non-adjacent cell or revisiting cell:', lastValidIndex, index);
-                    resetPath();
-                    return;
+            if (lastValidIndex !== -1) {
+                if (lastValidIndex === index) {
+                    isDrawingSameCell = true;
+                } else {
+                    isDrawingSameCell = false;
+                    if (!game.areAdjacent(lastValidIndex, index) || game.getPath().includes(index)) {
+                        console.log('Path reset due to non-adjacent cell or revisiting cell:', lastValidIndex, index);
+                        resetPath();
+                        return;
+                    }
                 }
             }
-        }
 
-        cells[index].classList.add('active');
-        game.setPassedPotAndPath(game.getPath().indexOf(null), index, true);
-        previousIndex = lastValidIndex;
-        lastValidIndex = index;
-        isDrawingSameCell = false;
-        console.log('Draw at', index, 'path:', game.getPath());
-        checkPath();
+            if (lastValidIndex !== index) { // 避免连续的重复值
+                cells[index].classList.add('active');
+                game.setPassedPotAndPath(game.getPath().indexOf(null), index, true);
+                previousIndex = lastValidIndex;
+                lastValidIndex = index;
+                console.log('Draw at', index, 'path:', game.getPath());
+            }
+
+            // 检查路径是否完成
+            checkPath();
+        });
     }
 
     function resetPath() {
@@ -206,6 +211,7 @@ document.addEventListener('DOMContentLoaded', () => {
         startGame();
         console.log('Next level started');
     }
+
     function startGame() {
         console.log('startGame called');
         const selectedLevelId = parseInt(currentLevel.id);
@@ -220,12 +226,41 @@ document.addEventListener('DOMContentLoaded', () => {
         // 检查当前关卡是否可以一笔画完成
         if (!game.isOneStroke()) {
             resultDiv.textContent = '此关卡无法一笔画完成，请联系管理员。';
-            console.error('Level cannot be completed in one stroke');
+            // console.error('Level cannot be completed in one stroke');
             return;
         }
 
         resultDiv.textContent = '';
         console.log('Game reset and ready to play');
+    }
+
+    function startTouch(e) {
+        e.preventDefault();
+        isDrawing = true;
+        const touch = e.touches[0]; // 获取触摸点
+        const target = document.elementFromPoint(touch.clientX, touch.clientY);
+        if (target) {
+            startDrawing({ target, preventDefault: () => { } }); // 传递带有 preventDefault 方法的对象
+        }
+    }
+
+    function endTouch(e) {
+        e.preventDefault();
+        stopDrawing(e);
+    }
+
+    function touchDraw(e) {
+        e.preventDefault();
+        if (!isDrawing) return;
+
+        const touch = e.touches[0]; // 获取触摸点
+        const target = document.elementFromPoint(touch.clientX, touch.clientY);
+        if (target && target.dataset.index !== undefined) {
+            const newIndex = parseInt(target.dataset.index);
+            if (newIndex !== lastValidIndex) { // 只有当手指移动到新的单元格时才绘制
+                draw({ target, preventDefault: () => { } }); // 传递带有 preventDefault 方法的对象
+            }
+        }
     }
 
     document.querySelectorAll('.level-button').forEach(button => {
