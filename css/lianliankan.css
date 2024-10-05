@@ -2,6 +2,23 @@
     margin-bottom: 20px;
 }
 
+.level-button {
+    margin: 5px;
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.level-button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
 .grid-container {
     display: grid;
     gap: 2px;
