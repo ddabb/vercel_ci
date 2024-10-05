@@ -76,9 +76,8 @@ document.addEventListener('DOMContentLoaded', () => {
     let cells = [];
     let isDrawing = false;
     let isDrawingSameCell = false;
-
     let lastValidIndex = -1;
-    let previousIndex = -1; // 新增变量，用于记录上一个有效单元格的索引
+    let previousIndex = -1;
 
     function createGrid(rows, columns, notExistPotList) {
         console.log('Creating grid with:', { rows, columns, notExistPotList });
@@ -110,28 +109,28 @@ document.addEventListener('DOMContentLoaded', () => {
             cell.addEventListener('mousedown', startDrawing);
             cell.addEventListener('mouseup', stopDrawing);
             cell.addEventListener('mousemove', draw);
-            cell.addEventListener('touchstart', (e) => startDrawing(e));
-            cell.addEventListener('touchend', (e) => stopDrawing(e));
-            cell.addEventListener('touchmove', (e) => draw(e));
+            cell.addEventListener('touchstart', (e) => startDrawing(e, true));
+            cell.addEventListener('touchend', (e) => stopDrawing(e, true));
+            cell.addEventListener('touchmove', (e) => draw(e, true));
         });
         console.log('Grid created with', cells.length, 'cells');
     }
 
-    function startDrawing(e) {
+    function startDrawing(e, isTouch) {
         e.preventDefault();
         isDrawing = true;
         console.log('Start drawing at', e.target.dataset.index);
-        draw(e);
+        draw(e, isTouch);
     }
 
-    function stopDrawing() {
+    function stopDrawing(e, isTouch) {
         isDrawing = false;
         console.log('Stop drawing');
     }
 
-    function draw(e) {
+    function draw(e, isTouch) {
         if (!isDrawing) return;
-        const target = e.target || e.touches[0].target;
+        const target = isTouch ? e.touches[0].target : e.target;
         const index = parseInt(target.dataset.index);
         if (cells[index].classList.contains('inactive')) {
             return;
@@ -152,7 +151,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         cells[index].classList.add('active');
         game.setPassedPotAndPath(game.getPath().indexOf(null), index, true);
-        previousIndex = lastValidIndex; // 更新上一个有效单元格的索引
+        previousIndex = lastValidIndex;
         lastValidIndex = index;
         isDrawingSameCell = false;
         console.log('Draw at', index, 'path:', game.getPath());
@@ -166,7 +165,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         lastValidIndex = -1;
-        previousIndex = -1; // 重置上一个有效单元格的索引
+        previousIndex = -1;
         console.log('Path reset');
     }
 
@@ -192,7 +191,6 @@ document.addEventListener('DOMContentLoaded', () => {
     function nextLevel() {
         nextLevelConfirmation.style.display = 'none';
 
-        // 重置与游戏状态相关的变量
         lastValidIndex = -1;
         previousIndex = -1;
         isDrawing = false;
@@ -203,10 +201,8 @@ document.addEventListener('DOMContentLoaded', () => {
         const nextLevel = levels[nextLevelIndex];
         currentLevel = nextLevel;
 
-        // 更新关卡选择器的选中值
         document.getElementById(`level${currentLevel.id}`).disabled = false;
 
-        // 重新初始化游戏
         startGame();
         console.log('Next level started');
     }
@@ -225,7 +221,6 @@ document.addEventListener('DOMContentLoaded', () => {
         console.log('Game reset and ready to play');
     }
 
-    // 添加关卡按钮点击事件
     document.querySelectorAll('.level-button').forEach(button => {
         button.addEventListener('click', () => {
             const levelId = parseInt(button.id.replace('level', ''));
@@ -237,7 +232,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // 添加开始游戏按钮点击事件
     startButton.addEventListener('click', () => {
         if (currentLevel) {
             startGame();
@@ -246,14 +240,12 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    // 绑定下一关和继续本关按钮的点击事件
     nextLevelButton.addEventListener('click', nextLevel);
     stayButton.addEventListener('click', () => {
         nextLevelConfirmation.style.display = 'none';
         console.log('Stay on current level');
     });
 
-    // 初始化第一个关卡
     currentLevel = levels[0];
     startGame();
 });
