@@ -3,7 +3,6 @@ import { GridPathFinder } from 'https://cdn.jsdelivr.net/npm/fishbb@1.0.24/+esm'
 document.addEventListener('DOMContentLoaded', () => {
     const gameContainer = document.getElementById('gameContainer');
     const resultDiv = document.getElementById('result');
-    const levelSelect = document.getElementById('levelSelect');
     const startButton = document.getElementById('startButton');
     const nextLevelConfirmation = document.getElementById('nextLevelConfirmation');
     const nextLevelButton = document.getElementById('nextLevelButton');
@@ -78,7 +77,6 @@ document.addEventListener('DOMContentLoaded', () => {
     let isDrawing = false;
     let isDrawingSameCell = false;
 
-    let autoNextLevelTimer = null;
     let lastValidIndex = -1;
     let previousIndex = -1; // 新增变量，用于记录上一个有效单元格的索引
 
@@ -185,9 +183,6 @@ document.addEventListener('DOMContentLoaded', () => {
             resultDiv.textContent = '恭喜，你成功完成了一笔画！';
             console.log('Game completed!');
             nextLevelConfirmation.style.display = 'block';
-            autoNextLevelTimer = setTimeout(() => {
-                nextLevel();
-            }, 5000);
         } else {
             resultDiv.textContent = '';
             console.log('Game in progress...');
@@ -195,7 +190,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function nextLevel() {
-        clearTimeout(autoNextLevelTimer);
         nextLevelConfirmation.style.display = 'none';
 
         // 重置与游戏状态相关的变量
@@ -210,7 +204,7 @@ document.addEventListener('DOMContentLoaded', () => {
         currentLevel = nextLevel;
 
         // 更新关卡选择器的选中值
-        levelSelect.value = nextLevel.id;
+        document.getElementById(`level${currentLevel.id}`).disabled = false;
 
         // 重新初始化游戏
         startGame();
@@ -219,7 +213,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function startGame() {
         console.log('startGame called');
-        const selectedLevelId = parseInt(levelSelect.value);
+        const selectedLevelId = parseInt(currentLevel.id);
         console.log('Selected level ID:', selectedLevelId);
         const selectedLevel = levels.find(level => level.id === selectedLevelId);
         console.log('Selected level:', selectedLevel);
@@ -239,21 +233,35 @@ document.addEventListener('DOMContentLoaded', () => {
         console.log('Game reset and ready to play');
     }
 
-    levels.forEach(level => {
-        const option = document.createElement('option');
-        option.value = level.id;
-        option.textContent = `关卡 ${level.id}`;
-        levelSelect.appendChild(option);
+    // 添加关卡按钮点击事件
+    document.querySelectorAll('.level-button').forEach(button => {
+        button.addEventListener('click', () => {
+            const levelId = parseInt(button.id.replace('level', ''));
+            const selectedLevel = levels.find(level => level.id === levelId);
+            if (selectedLevel) {
+                currentLevel = selectedLevel;
+                startGame();
+            }
+        });
     });
 
-    startButton.addEventListener('click', startGame);
+    // 添加开始游戏按钮点击事件
+    startButton.addEventListener('click', () => {
+        if (currentLevel) {
+            startGame();
+        } else {
+            console.error('No level selected');
+        }
+    });
+
+    // 绑定下一关和继续本关按钮的点击事件
     nextLevelButton.addEventListener('click', nextLevel);
     stayButton.addEventListener('click', () => {
-        clearTimeout(autoNextLevelTimer);
         nextLevelConfirmation.style.display = 'none';
         console.log('Stay on current level');
     });
 
     // 初始化第一个关卡
+    currentLevel = levels[0];
     startGame();
 });
