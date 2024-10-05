@@ -1,4 +1,4 @@
-import { GridPathFinder } from 'https://cdn.jsdelivr.net/npm/fishbb@1.0.24/+esm';
+import { GridPathFinder } from 'https://cdn.jsdelivr.net/npm/fishbb@1.0.25/+esm';
 
 document.addEventListener('DOMContentLoaded', () => {
     const gameContainer = document.getElementById('gameContainer');
@@ -206,7 +206,6 @@ document.addEventListener('DOMContentLoaded', () => {
         startGame();
         console.log('Next level started');
     }
-
     function startGame() {
         console.log('startGame called');
         const selectedLevelId = parseInt(currentLevel.id);
@@ -217,6 +216,14 @@ document.addEventListener('DOMContentLoaded', () => {
         resetPath();
         currentLevel = selectedLevel;
         createGrid(selectedLevel.rows, selectedLevel.columns, selectedLevel.notExistPotList);
+
+        // 检查当前关卡是否可以一笔画完成
+        if (!game.isOneStroke()) {
+            resultDiv.textContent = '此关卡无法一笔画完成，请联系管理员。';
+            console.error('Level cannot be completed in one stroke');
+            return;
+        }
+
         resultDiv.textContent = '';
         console.log('Game reset and ready to play');
     }
