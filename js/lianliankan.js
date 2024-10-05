@@ -110,9 +110,9 @@ document.addEventListener('DOMContentLoaded', () => {
             cell.addEventListener('mousedown', startDrawing);
             cell.addEventListener('mouseup', stopDrawing);
             cell.addEventListener('mousemove', draw);
-            cell.addEventListener('touchstart', startDrawing);
-            cell.addEventListener('touchend', stopDrawing);
-            cell.addEventListener('touchmove', draw);
+            cell.addEventListener('touchstart', (e) => startDrawing(e));
+            cell.addEventListener('touchend', (e) => stopDrawing(e));
+            cell.addEventListener('touchmove', (e) => draw(e));
         });
         console.log('Grid created with', cells.length, 'cells');
     }
