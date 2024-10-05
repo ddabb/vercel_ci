@@ -1,4 +1,4 @@
-import { GridPathFinder } from 'https://cdn.jsdelivr.net/npm/fishbb@1.0.23/+esm';
+import { GridPathFinder } from 'https://cdn.jsdelivr.net/npm/fishbb@1.0.24/+esm';
 
 document.addEventListener('DOMContentLoaded', () => {
     const gameContainer = document.getElementById('gameContainer');
@@ -75,7 +75,6 @@ document.addEventListener('DOMContentLoaded', () => {
     let currentLevel = null;
     let game;
     let cells = [];
-    let path = [];
     let isDrawing = false;
     let isDrawingSameCell = false;
 
@@ -145,7 +144,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 isDrawingSameCell = true;
             } else {
                 isDrawingSameCell = false;
-                if (!areAdjacent(lastValidIndex, index) || path.includes(index)) {
+                if (!game.areAdjacent(lastValidIndex, index) || game.getPath().includes(index)) {
                     console.log('Path reset due to non-adjacent cell or revisiting cell:', lastValidIndex, index);
                     resetPath();
                     return;
@@ -154,38 +153,20 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         cells[index].classList.add('active');
-        path.push(index);
+        game.setPassedPotAndPath(game.getPath().indexOf(null), index, true);
         previousIndex = lastValidIndex; // 更新上一个有效单元格的索引
         lastValidIndex = index;
         isDrawingSameCell = false;
-        console.log('Draw at', index, 'path:', path);
+        console.log('Draw at', index, 'path:', game.getPath());
         checkPath();
     }
 
-    function areAdjacent(cell1, cell2) {
-        const columns = currentLevel.columns; // 使用当前等级的列数
-        const row1 = Math.floor(cell1 / columns);
-        const col1 = cell1 % columns;
-        const row2 = Math.floor(cell2 / columns);
-        const col2 = cell2 % columns;
-
-        console.log(`Checking adjacency between cell ${cell1} (${row1}, ${col1}) and cell ${cell2} (${row2}, ${col2})`);
-
-        const isAdjacent = (
-            (row1 === row2 && Math.abs(col1 - col2) === 1) || // 检查水平相邻
-            (col1 === col2 && Math.abs(row1 - row2) === 1)    // 检查垂直相邻
-        );
-
-        console.log(`Cells ${cell1} and ${cell2} are adjacent: ${isAdjacent}`);
-
-        return isAdjacent;
-    }
-
     function resetPath() {
-        path.forEach(index => {
-            cells[index].classList.remove('active');
-        });
-        path = [];
+        cells.forEach(cell => cell.classList.remove('active'));
+        if (game) {
+            game.resetPath();
+        }
+
         lastValidIndex = -1;
         previousIndex = -1; // 重置上一个有效单元格的索引
         console.log('Path reset');
@@ -200,7 +181,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const activeCells = cells.filter(cell => cell.classList.contains('active')).length;
         const totalActiveCells = cells.length - currentLevel.notExistPotList.length;
         console.log('Active cells:', activeCells, 'Total active cells:', totalActiveCells);
-        if (activeCells === totalActiveCells) {
+        if (game && game.checkPathCompleteness()) {
             resultDiv.textContent = '恭喜，你成功完成了一笔画！';
             console.log('Game completed!');
             nextLevelConfirmation.style.display = 'block';
@@ -218,7 +199,6 @@ document.addEventListener('DOMContentLoaded', () => {
         nextLevelConfirmation.style.display = 'none';
 
         // 重置与游戏状态相关的变量
-        path = [];
         lastValidIndex = -1;
         previousIndex = -1;
         isDrawing = false;
