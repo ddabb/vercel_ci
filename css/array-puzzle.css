@@ -1,0 +1,58 @@
+/* array-puzzle.css */
+
+/* Game Container Styles */
+.game-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+}
+
+/* Grid Container Styles */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(4, 50px);
+    /* Adjust based on your grid size */
+    grid-gap: 5px;
+    margin-bottom: 20px;
+}
+
+.grid-cell {
+    width: 50px;
+    height: 50px;
+    border: 1px solid #ccc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.grid-cell.painted {
+    background-color: blue;
+}
+
+.grid-cell.x-marked {
+    background-color: red;
+}
+
+/* Game Button Container Styles */
+.game-button-container {
+    margin-bottom: 50px;
+}
+
+.custom-button {
+    margin: 0 10px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.restart-btn {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.undo-btn {
+    background-color: #f44336;
+    color: white;
+}
