@@ -116,16 +116,6 @@ function handleTouchEvent(e) {
     }
 }
 
-// 处理点击事件
-function handleClick(target) {
-    if (isFlagMode) {
-        rightClick(target);
-    } else {
-        leftClick(target);
-    }
-}
-
-// 开始计时
 function startTimer() {
     console.log('开始计时');
     timer = setInterval(() => {
@@ -136,27 +126,63 @@ function startTimer() {
     }, 1000);
 }
 
+
+// 处理点击事件
+// 处理点击事件
+function handleClick(target) {
+    if (isGameOver) return;
+
+    if (target.classList.contains('opened')) {
+        autoOpenSurroundingTabs(target);
+    } else if (isFlagMode) {
+        rightClick(target);
+    } else {
+        leftClick(target);
+    }
+}
+
+
+// 开始计时
+
 // 左键点击
 function leftClick(tab) {
     console.log('左键点击');
-    if (isGameOver || tab.classList.contains('flag')) return;
+    if (tab.classList.contains('flag')) return;
 
-    if (tab.classList.contains('opened')) {
-        autoOpenSurroundingTabs(tab);
+    if (tab.classList.contains('bomb')) {
+        tab.classList.add('show');
+        clearInterval(timer);
+        isGameOver = true;
+        showGameResult('游戏结束，你输了');
     } else {
-        if (tab.classList.contains('bomb')) {
-            tab.classList.add('show');
-            clearInterval(timer);
-            isGameOver = true;
-            showGameResult('游戏结束，你输了');
-        } else {
-            openTab(tab);
-        }
+        openTab(tab);
     }
+}
+
+
+// 右键点击
+function rightClick(tab) {
+    console.log('右键点击', tab);
+
+    if (tab.classList.contains('flag')) {
+        tab.classList.remove('flag');
+        remainMineN++;
+        console.log('移除旗子');
+    } else {
+        tab.classList.add('flag');
+        remainMineN--;
+        console.log('添加旗子');
+    }
+    mines.innerText = remainMineN;
+
+    // 检查胜利条件
+    checkWinCondition();
 }
 
 // 自动打开周围的格子
 function autoOpenSurroundingTabs(tab) {
+    if (isGameOver) return;
+
     const [row, col] = tab.id.split('-').map(Number);
     const mineCount = parseInt(tab.innerText, 10);
     let flagCount = 0;
@@ -211,26 +237,6 @@ function revealAllBombs() {
             tab.classList.add('show');
         }
     });
-}
-
-// 右键点击
-function rightClick(tab) {
-    console.log('右键点击', tab);
-    if (isGameOver || tab.classList.contains('opened')) return;
-
-    if (tab.classList.contains('flag')) {
-        tab.classList.remove('flag');
-        remainMineN++;
-        console.log('移除旗子');
-    } else {
-        tab.classList.add('flag');
-        remainMineN--;
-        console.log('添加旗子');
-    }
-    mines.innerText = remainMineN;
-
-    // 检查胜利条件
-    checkWinCondition();
 }
 
 // 打开单元格
