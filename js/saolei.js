@@ -15,12 +15,14 @@ let isGameOver = false;
 let timer = null;
 let seconds = 0;
 let isFlagMode = false; // 插旗模式开关
+let firstClick = true//是否首次点击
 
 // 初始化游戏
 function initGame() {
     console.log('初始化游戏');
     clearInterval(timer);
     seconds = 0;
+
     timeDisplay.innerText = '00:00';
     remainMineN = mineN;
     openedTabN = 0;
@@ -31,6 +33,7 @@ function initGame() {
     // 隐藏游戏结果提示
     const gameResultDiv = document.querySelector('.game-result');
     gameResultDiv.style.display = 'none';
+    firstClick = true; // 复原 firstClick 标记
 }
 
 // 创建地图
@@ -128,11 +131,16 @@ function startTimer() {
 
 
 // 处理点击事件
-// 处理点击事件
+
+
 function handleClick(target) {
     if (isGameOver) return;
 
-    if (target.classList.contains('opened')) {
+    if (firstClick && isFlagMode) {
+        // 如果是第一次点击且处于插旗模式，视为左键点击
+        firstClick = false; // 更新标志位，表示已经点击过一次
+        leftClick(target);
+    } else if (target.classList.contains('opened')) {
         autoOpenSurroundingTabs(target);
     } else if (isFlagMode) {
         rightClick(target);
