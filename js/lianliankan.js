@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded', () => {
             "id": 3,
             "rows": 5,
             "columns": 5,
-            "notExistPotList": [18, 12, 15, 19, 20, 2, 10, 17]
+            "notExistPotList": [18, 12, 15, 19, 20, 10, 17]
         },
         {
             "id": 4,
