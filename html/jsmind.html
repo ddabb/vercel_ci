@@ -119,21 +119,25 @@
             const input = document.getElementById('input_area').value;
             try {
                 const parsedData = JSON.parse(input);
+                console.log("Parsed Data:", parsedData); // 打印解析后的JSON对象
 
+                // 重新初始化jsMind实例
+                const options = {
+                    container: 'jsmind_container',
+                    editable: true,
+                    theme: 'primary'
+                };
                 if (jm) {
-                    jm.update(parsedData);
-                } else {
-                    const options = {
-                        container: 'jsmind_container',
-                        editable: true,
-                        theme: 'primary'
-                    };
-                    jm = jsMind.show(options, parsedData);
+                    jm.clear();
                 }
+                jm = jsMind.show(options, parsedData);
             } catch (e) {
-                alert('无效的JSON格式，请检查您的输入。');
+                // 如果发生错误，打印错误信息
+                console.error("Invalid JSON:", e.message);
+                alert(`无效的JSON格式，请检查您的输入。错误详情：${e.message}`);
             }
         }
+
 
         function exportAsImage() {
             html2canvas(document.querySelector("#jsmind_container")).then(canvas => {
