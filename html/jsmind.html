@@ -5,10 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>在线思维导图生成器</title>
-    <meta name="description" content="在线编辑JSON格式的思维导图，并支持导出为图片和PDF。">
-    <meta name="keywords" content="思维导图, 在线编辑, JSON, 导出图片, 导出PDF, jsMind">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/jsmind/style/jsmind.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/styles/default.min.css">
     <style>
         body,
         html {
@@ -24,6 +21,7 @@
             display: flex;
             flex: 1;
             height: calc(100% - 50px);
+            position: relative;
         }
 
         #input_area {
@@ -33,11 +31,12 @@
             box-sizing: border-box;
             padding: 10px;
             border: 1px solid #ccc;
-            border-radius: 4px;
+            border-radius: 4px 0 0 4px;
             white-space: pre-wrap;
             /* 支持换行 */
             word-wrap: break-word;
             /* 长单词和URL地址换行到下一行 */
+            overflow: auto;
         }
 
         #jsmind_container {
@@ -45,7 +44,18 @@
             height: 100%;
             border: 1px solid #ccc;
             box-sizing: border-box;
+            border-radius: 0 4px 4px 0;
             overflow: auto;
+        }
+
+        #resizer {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            right: 50%;
+            width: 5px;
+            cursor: ew-resize;
+            z-index: 1;
         }
 
         #controls {
@@ -64,58 +74,15 @@
             text-align: center;
             margin: 20px 0;
         }
-
-        .example-json {
-            margin: 10px 0;
-            padding: 10px;
-            background-color: #f9f9f9;
-            border: 1px solid #ddd;
-            border-radius: 4px;
-            font-size: 14px;
-        }
     </style>
 </head>
 
 <body onload="initializeMindMap()">
     <h1>在线思维导图生成器</h1>
-    <div class="example-json">
-        示例JSON:
-        <pre><code>{
-    "meta": {},
-    "format": "node_tree",
-    "data": {
-        "id": "root",
-        "topic": "根节点",
-        "children": [
-            {
-                "id": "child1",
-                "topic": "子节点1"
-            },
-            {
-                "id": "child2",
-                "topic": "子节点2",
-                "children": [
-                    {
-                        "id": "grandchild1",
-                        "topic": "孙节点1"
-                    },
-                    {
-                        "id": "grandchild2",
-                        "topic": "孙节点2"
-                    }
-                ]
-            },
-            {
-                "id": "child3",
-                "topic": "子节点3"
-            }
-        ]
-    }
-}</code></pre>
-    </div>
-    <div class="container">
+    <div class="container" id="container">
         <textarea id="input_area" placeholder="请输入JSON格式的思维导图数据..."></textarea>
         <div id="jsmind_container"></div>
+        <div id="resizer"></div>
     </div>
     <div id="controls">
         <button onclick="updateMindMap()">更新思维导图</button>
@@ -125,7 +92,6 @@
     <script src="https://cdn.jsdelivr.net/npm/jsmind/js/jsmind.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.3.2/html2canvas.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.3.1/jspdf.umd.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/highlight.min.js"></script>
     <script>
         document.addEventListener('DOMContentLoaded', (event) => {
             const inputArea = document.getElementById('input_area');
@@ -138,41 +104,14 @@
         "id": "root",
         "topic": "根节点",
         "children": [
-            {
-                "id": "child1",
-                "topic": "子节点1"
-            },
-            {
-                "id": "child2",
-                "topic": "子节点2",
-                "children": [
-                    {
-                        "id": "grandchild1",
-                        "topic": "孙节点1"
-                    },
-                    {
-                        "id": "grandchild2",
-                        "topic": "孙节点2"
-                    }
-                ]
-            },
-            {
-                "id": "child3",
-                "topic": "子节点3"
-            }
+            {"id": "child1", "topic": "子节点1"},
+            {"id": "child2", "topic": "子节点2"},
+            {"id": "child3", "topic": "子节点3"}
         ]
     }
 }`;
             }
-            // 初始化时进行一次高亮
-            highlightTextarea(inputArea);
-            // 监听输入变化，实时更新高亮
-            inputArea.addEventListener('input', () => highlightTextarea(inputArea));
         });
-
-        function highlightTextarea(textarea) {
-            hljs.highlightAll();
-        }
 
         let jm = null;
 
@@ -237,9 +176,33 @@
         }
 
         function initializeMindMap() {
-            // 页面加载完成后立即调用updateMindMap
             updateMindMap();
         }
+
+        const resizer = document.getElementById('resizer');
+        const container = document.getElementById('container');
+        const inputArea = document.getElementById('input_area');
+
+        let isResizing = false;
+
+        resizer.addEventListener('mousedown', () => {
+            isResizing = true;
+        });
+
+        document.addEventListener('mousemove', (e) => {
+            if (isResizing) {
+                const newWidth = e.clientX;
+                const minSize = 100; // 最小尺寸限制
+                if (newWidth > minSize && (container.clientWidth - newWidth) > minSize) {
+                    inputArea.style.width = `${newWidth}px`;
+                    document.getElementById('jsmind_container').style.width = `calc(100% - ${newWidth}px)`;
+                }
+            }
+        });
+
+        document.addEventListener('mouseup', () => {
+            isResizing = false;
+        });
     </script>
 </body>
 
