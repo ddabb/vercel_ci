@@ -116,10 +116,15 @@
         let jm = null;
 
         function updateMindMap() {
+            debugger
             const input = document.getElementById('input_area').value;
             try {
                 const parsedData = JSON.parse(input);
                 console.log("Parsed Data:", parsedData); // 打印解析后的JSON对象
+
+                // 清空容器内容
+                const container = document.getElementById('jsmind_container');
+                container.innerHTML = '';
 
                 // 重新初始化jsMind实例
                 const options = {
@@ -127,9 +132,7 @@
                     editable: true,
                     theme: 'primary'
                 };
-                if (jm) {
-                    jm.clear();
-                }
+
                 jm = jsMind.show(options, parsedData);
             } catch (e) {
                 // 如果发生错误，打印错误信息
@@ -137,7 +140,6 @@
                 alert(`无效的JSON格式，请检查您的输入。错误详情：${e.message}`);
             }
         }
-
 
         function exportAsImage() {
             html2canvas(document.querySelector("#jsmind_container")).then(canvas => {
