@@ -207,7 +207,7 @@ function exportAsImage() {
 
   // 设置新样式以移除滚动条并隐藏<textarea>
   container.style.overflow = 'visible'; // 移除滚动条
-  container.style.width = `${rect.scrollWidth+20}px`; //消除显示滚动条的问题
+  container.style.width = `${rect.scrollWidth + 20}px`; //消除显示滚动条的问题
   container.style.height = `${rect.scrollHeight + 20}px`;//消除显示滚动条的问题
 
   // 隐藏<textarea>
@@ -244,21 +244,87 @@ function exportAsImage() {
 }
 
 function exportAsPDF() {
-  html2canvas(document.querySelector("#jsmind_container"), { scale: 2 }).then(canvas => {
+  const rect = document.querySelector(".jsmind");
+  // 显示加载指示器（可选）
+  console.log("开始生成PDF...");
+  const loadingIndicator = document.createElement('div');
+  loadingIndicator.style.position = 'fixed';
+  loadingIndicator.style.top = '50%';
+  loadingIndicator.style.left = '50%';
+  loadingIndicator.style.transform = 'translate(-50%, -50%)';
+  loadingIndicator.style.zIndex = '1000';
+  loadingIndicator.innerHTML = '<p>正在生成PDF，请稍候...</p>';
+  document.body.appendChild(loadingIndicator);
+  console.log("加载指示器已显示");
+
+  // 记录原始样式
+  const container = document.querySelector("#jsmind_container");
+  const originalContainerStyles = {
+    width: container.style.width,
+    height: container.style.height,
+    overflow: container.style.overflow
+  };
+  const inputArea = document.querySelector("#input_area");
+  const originalInputAreaDisplay = inputArea.style.display;
+  console.log("记录了原始样式");
+
+  // 设置新样式以移除滚动条并隐藏<textarea>
+  container.style.overflow = 'visible'; // 移除滚动条
+  container.style.width = `${rect.scrollWidth + 20}px`; //消除显示滚动条的问题
+  container.style.height = `${rect.scrollHeight + 20}px`;//消除显示滚动条的问题
+  console.log("调整了容器的样式");
+
+  // 隐藏<textarea>
+  inputArea.style.display = 'none';
+  console.log("<textarea> 已隐藏");
+
+  // 强制重绘以确保样式生效
+  container.offsetHeight; // 这行代码会强制浏览器重绘容器
+  console.log("强制重绘完成");
+  debugger
+
+
+  const { jsPDF } = window.jspdf;
+
+  html2canvas(container).then(canvas => {
+    debugger
     const imgData = canvas.toDataURL('image/jpeg', 1.0);
+    // 在设置新样式后，获取容器的实际像素宽度和高度
+    const containerWidth = parseInt(container.style.width, 10);
+    const containerHeight = parseInt(container.style.height, 10);
+    console.log("containerWidth" + containerWidth + "containerHeight" + containerHeight);
+
     const pdf = new jsPDF({
       orientation: 'p',
-      unit: 'mm',
-      format: [canvas.width * 0.264583, canvas.height * 0.264583] // 将像素转换为毫米
+      unit: 'px',
+      format: [containerWidth, containerHeight]
     });
 
-    // 添加图片到PDF中
-    pdf.addImage(imgData, 'JPEG', 0, 0, pdf.internal.pageSize.getWidth(), pdf.internal.pageSize.getHeight());
-
-    // 保存PDF文件
+    pdf.addImage(imgData, 'JPEG', 0, 0, containerWidth, containerHeight);
     pdf.save("思维导图.pdf");
+    console.log("PDF 文件已保存");
+
+    // 移除加载指示器
+    document.body.removeChild(loadingIndicator);
+    console.log("移除了加载指示器");
+
+    // 恢复原始样式
+    Object.assign(container.style, originalContainerStyles);
+    inputArea.style.display = originalInputAreaDisplay;
+    console.log("恢复了原始样式");
+  }).catch(function (error) {
+    console.error("生成PDF时发生错误:", error);
+    alert("生成PDF时发生错误，请检查控制台获取更多信息。");
+    // 即使有错误也要确保恢复原状
+    Object.assign(container.style, originalContainerStyles);
+    inputArea.style.display = originalInputAreaDisplay;
+    document.body.removeChild(loadingIndicator);
+    console.log("即使出错也恢复了原始样式");
   });
+
+  ;
 }
+
 
 function initializeMindMap() {
   updateMindMap();
