@@ -1,10 +1,10 @@
 
 
 document.addEventListener('DOMContentLoaded', (event) => {
-    const inputArea = document.getElementById('input_area');
-    // 设置默认值
-    if (inputArea.value === '') {
-        inputArea.value = `{
+  const inputArea = document.getElementById('input_area');
+  // 设置默认值
+  if (inputArea.value === '') {
+    inputArea.value = `{
   "meta": {},
   "format": "node_tree",
   "data": {
@@ -151,78 +151,88 @@ document.addEventListener('DOMContentLoaded', (event) => {
     ]
   }
 }`;
-    }
+  }
 });
 
 let jm = null;
 
 function updateMindMap() {
-    const input = document.getElementById('input_area').value;
-    try {
-        const parsedData = JSON.parse(input);
-        console.log("Parsed Data:", parsedData); // 打印解析后的JSON对象
+  const input = document.getElementById('input_area').value;
+  try {
+    const parsedData = JSON.parse(input);
+    console.log("Parsed Data:", parsedData); // 打印解析后的JSON对象
 
-        // 清空容器内容
-        const container = document.getElementById('jsmind_container');
-        container.innerHTML = '';
+    // 清空容器内容
+    const container = document.getElementById('jsmind_container');
+    container.innerHTML = '';
 
-        // 重新初始化jsMind实例
-        const options = {
-            container: 'jsmind_container',
-            editable: true,
-            theme: 'primary'
-        };
+    // 重新初始化jsMind实例
+    const options = {
+      container: 'jsmind_container',
+      editable: true,
+      theme: 'primary'
+    };
 
-        jm = jsMind.show(options, parsedData);
-    } catch (e) {
-        // 如果发生错误，打印错误信息
-        console.error("Invalid JSON:", e.message);
-        alert(`无效的JSON格式，请检查您的输入。错误详情：${e.message}`);
-    }
+    jm = jsMind.show(options, parsedData);
+  } catch (e) {
+    // 如果发生错误，打印错误信息
+    console.error("Invalid JSON:", e.message);
+    alert(`无效的JSON格式，请检查您的输入。错误详情：${e.message}`);
+  }
 }
 
 function exportAsImage() {
-    html2canvas(document.querySelector("#jsmind_container")).then(canvas => {
-        const imgData = canvas.toDataURL('image/png');
-        const link = document.createElement('a');
-        link.href = imgData;
-        link.download = '思维导图.png';
-        link.click();
-    });
+  const container = document.querySelector(".jsmind");
+  debugger;
+  // 显示加载指示器
+  const loadingIndicator = document.createElement('div');
+  loadingIndicator.style.position = 'fixed';
+  loadingIndicator.style.top = '50%';
+  loadingIndicator.style.left = '50%';
+  loadingIndicator.style.transform = 'translate(-50%, -50%)';
+  loadingIndicator.style.zIndex = '1000';
+  loadingIndicator.innerHTML = '<p>正在生成图片，请稍候...</p>';
+  document.body.appendChild(loadingIndicator);
+
+  // 使用 dom-to-image 生成图片，并设置宽度和高度为实际最大尺寸
+  domtoimage.toPng(container, {
+    width: container.scrollWidth,
+    height: container.scrollHeight,
+    quality: 0.95, // 图片质量，范围是0到1
+    bgcolor: '#fff' // 背景颜色，可以是十六进制颜色值或颜色名称
+  }).then(function (dataUrl) {
+    // 移除加载指示器
+    document.body.removeChild(loadingIndicator);
+
+    // 创建下载链接并触发下载
+    const link = document.createElement('a');
+    link.href = dataUrl;
+    link.download = '思维导图.png';
+    link.click();
+  }).catch(function (error) {
+    console.error("生成图片时发生错误:", error);
+    alert("生成图片时发生错误，请检查控制台获取更多信息。");
+  });
 }
-
 function exportAsPDF() {
-    const { jsPDF } = window.jspdf;
-    const A4_WIDTH = 210; // A4宽度（mm）
-    const A4_HEIGHT = 297; // A4高度（mm）
-
-    html2canvas(document.querySelector("#jsmind_container")).then(canvas => {
-        const imgData = canvas.toDataURL('image/jpeg', 1.0);
-
-        const pdf = new jsPDF({
-            orientation: 'p',
-            unit: 'mm',
-            format: 'a4'
-        });
-
-        const imgWidth = canvas.width * 0.264583; // 转换为mm
-        const imgHeight = canvas.height * 0.264583; // 转换为mm
-
-        const ratio = Math.min(A4_WIDTH / imgWidth, A4_HEIGHT / imgHeight);
-
-        const finalWidth = imgWidth * ratio;
-        const finalHeight = imgHeight * ratio;
-
-        const marginLeft = (A4_WIDTH - finalWidth) / 2;
-        const marginTop = (A4_HEIGHT - finalHeight) / 2;
-
-        pdf.addImage(imgData, 'JPEG', marginLeft, marginTop, finalWidth, finalHeight);
-        pdf.save("思维导图.pdf");
+  html2canvas(document.querySelector("#jsmind_container"), { scale: 2 }).then(canvas => {
+    const imgData = canvas.toDataURL('image/jpeg', 1.0);
+    const pdf = new jsPDF({
+      orientation: 'p',
+      unit: 'mm',
+      format: [canvas.width * 0.264583, canvas.height * 0.264583] // 将像素转换为毫米
     });
+
+    // 添加图片到PDF中
+    pdf.addImage(imgData, 'JPEG', 0, 0, pdf.internal.pageSize.getWidth(), pdf.internal.pageSize.getHeight());
+
+    // 保存PDF文件
+    pdf.save("思维导图.pdf");
+  });
 }
 
 function initializeMindMap() {
-    updateMindMap();
+  updateMindMap();
 }
 
 const resizer = document.getElementById('resizer');
@@ -232,20 +242,20 @@ const inputArea = document.getElementById('input_area');
 let isResizing = false;
 
 resizer.addEventListener('mousedown', () => {
-    isResizing = true;
+  isResizing = true;
 });
 
 document.addEventListener('mousemove', (e) => {
-    if (isResizing) {
-        const newWidth = e.clientX;
-        const minSize = 100; // 最小尺寸限制
-        if (newWidth > minSize && (container.clientWidth - newWidth) > minSize) {
-            inputArea.style.width = `${newWidth}px`;
-            document.getElementById('jsmind_container').style.width = `calc(100% - ${newWidth}px)`;
-        }
+  if (isResizing) {
+    const newWidth = e.clientX;
+    const minSize = 100; // 最小尺寸限制
+    if (newWidth > minSize && (container.clientWidth - newWidth) > minSize) {
+      inputArea.style.width = `${newWidth}px`;
+      document.getElementById('jsmind_container').style.width = `calc(100% - ${newWidth}px)`;
     }
+  }
 });
 
 document.addEventListener('mouseup', () => {
-    isResizing = false;
+  isResizing = false;
 });
