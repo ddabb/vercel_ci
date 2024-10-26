@@ -182,9 +182,12 @@ function updateMindMap() {
 }
 
 function exportAsImage() {
-  const container = document.querySelector(".jsmind");
-  debugger;
-  // 显示加载指示器
+  debugger
+  const rect = document.querySelector(".jsmind");
+  const container = document.querySelector("#jsmind_container");
+  const inputArea = document.querySelector("#input_area");
+
+  // 显示加载指示器（可选）
   const loadingIndicator = document.createElement('div');
   loadingIndicator.style.position = 'fixed';
   loadingIndicator.style.top = '50%';
@@ -194,15 +197,36 @@ function exportAsImage() {
   loadingIndicator.innerHTML = '<p>正在生成图片，请稍候...</p>';
   document.body.appendChild(loadingIndicator);
 
-  // 使用 dom-to-image 生成图片，并设置宽度和高度为实际最大尺寸
+  // 记录原始样式
+  const originalContainerStyles = {
+    width: container.style.width,
+    height: container.style.height,
+    overflow: container.style.overflow
+  };
+  const originalInputAreaDisplay = inputArea.style.display;
+
+  // 设置新样式以移除滚动条并隐藏<textarea>
+  container.style.overflow = 'visible'; // 移除滚动条
+  container.style.width = `${rect.scrollWidth+20}px`; //消除显示滚动条的问题
+  container.style.height = `${rect.scrollHeight + 20}px`;//消除显示滚动条的问题
+
+  // 隐藏<textarea>
+  inputArea.style.display = 'none';
+  // 强制重绘以确保样式生效
+  container.offsetHeight; // 这行代码会强制浏览器重绘容器
+  // 使用 dom-to-image 生成图片
   domtoimage.toPng(container, {
-    width: container.scrollWidth,
-    height: container.scrollHeight,
-    quality: 0.95, // 图片质量，范围是0到1
-    bgcolor: '#fff' // 背景颜色，可以是十六进制颜色值或颜色名称
+    width: rect.scrollWidth,
+    height: rect.scrollHeight,
+    quality: 0.95,
+    bgcolor: '#fff'
   }).then(function (dataUrl) {
     // 移除加载指示器
     document.body.removeChild(loadingIndicator);
+
+    // 恢复原始样式
+    Object.assign(container.style, originalContainerStyles);
+    inputArea.style.display = originalInputAreaDisplay;
 
     // 创建下载链接并触发下载
     const link = document.createElement('a');
@@ -212,8 +236,13 @@ function exportAsImage() {
   }).catch(function (error) {
     console.error("生成图片时发生错误:", error);
     alert("生成图片时发生错误，请检查控制台获取更多信息。");
+
+    // 即使有错误也要确保恢复原状
+    Object.assign(container.style, originalContainerStyles);
+    inputArea.style.display = originalInputAreaDisplay;
   });
 }
+
 function exportAsPDF() {
   html2canvas(document.querySelector("#jsmind_container"), { scale: 2 }).then(canvas => {
     const imgData = canvas.toDataURL('image/jpeg', 1.0);
