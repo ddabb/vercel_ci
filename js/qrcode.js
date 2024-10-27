@@ -10,7 +10,7 @@ function generateQrcode() {
         height: 256,
         colorDark: "#000000",
         colorLight: "#ffffff",
-        correctLevel: QRCode.ErrorCorrectLevel.HIGH
+        correctLevel: QRCode.CorrectLevel.H
     });
 }
 
