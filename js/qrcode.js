@@ -4,14 +4,82 @@ function showTab(tabId) {
 }
 
 function generateQrcode() {
-    const qrcode = new QRCode(document.getElementById("qrcodeCanvas"), {
-        text: document.getElementById("inputText").value,
-        width: 256,
-        height: 256,
-        colorDark: "#000000",
-        colorLight: "#ffffff",
-        correctLevel: QRCode.CorrectLevel.H
-    });
+    try {
+        // 获取canvas和img元素
+        var qrcodeCanvasDiv = document.getElementById("qrcodeCanvas");
+        var canvas = qrcodeCanvasDiv.querySelector('canvas');
+        var imgElement = qrcodeCanvasDiv.querySelector('img');
+
+        // 如果canvas存在，则清除画布
+        if (canvas) {
+            var ctx = canvas.getContext("2d");
+            ctx.clearRect(0, 0, canvas.width, canvas.height); // 清除画布
+        }
+
+        // 如果img元素存在，则清除其src属性
+        if (imgElement) {
+            imgElement.src = ''; // 清除图片源
+        }
+
+        // 创建二维码实例
+        const qrcode = new QRCode(qrcodeCanvasDiv, {
+            text: document.getElementById("inputText").value,
+            width: 256,
+            height: 256,
+            colorDark: "#000000",
+            colorLight: "#ffffff",
+            correctLevel: QRCode.CorrectLevel.H
+        });
+
+        // 加载要嵌入的图片
+        var img = new Image();
+        img.src = "../logo.png"; // 使用实际路径
+        img.onload = function () {
+            drawLogoOnQrCode();
+        };
+
+        // 如果图片加载失败，捕获错误
+        img.onerror = function () {
+            console.error('图片加载失败，请检查图片路径是否正确');
+        };
+    } catch (error) {
+        console.error('生成二维码时发生错误：', error);
+    }
+
+    function drawLogoOnQrCode() {
+        // 在这里重新获取canvas和ctx
+        var qrcodeCanvasDiv = document.getElementById("qrcodeCanvas");
+        var canvas = qrcodeCanvasDiv.querySelector('canvas');
+        if (!canvas) {
+            console.error('无法找到canvas元素');
+            return;
+        }
+        var ctx = canvas.getContext("2d");
+        if (!ctx) {
+            console.error('无法获取canvas 2D渲染上下文');
+            return;
+        }
+
+        // 调整图片大小，通常是二维码大小的1/4到1/5
+        var logoSize = Math.min(canvas.width, canvas.height) * 0.30; // 20% 大小
+        img.width = logoSize;
+        img.height = logoSize;
+
+        // 计算图片的位置，使其位于中心
+        var x = (canvas.width - img.width) / 2;
+        var y = (canvas.height - img.height) / 2;
+
+        // 绘制图片到二维码上
+        ctx.drawImage(img, x, y, img.width, img.height);
+
+        // 更新img元素的src属性以显示带有嵌入图片的二维码
+        var imgElement = qrcodeCanvasDiv.querySelector('img');
+        if (imgElement) {
+            imgElement.src = canvas.toDataURL();
+        }
+
+        console.log('二维码生成成功，并且图片已嵌入');
+    }
 }
 
 function captureImage() {
