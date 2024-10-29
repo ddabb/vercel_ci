@@ -5,20 +5,20 @@ function showTab(tabId) {
 
 function generateQrcode() {
     try {
-        // 获取canvas和img元素
+        // 获取canvas和img元素所在的div
         var qrcodeCanvasDiv = document.getElementById("qrcodeCanvas");
-        var canvas = qrcodeCanvasDiv.querySelector('canvas');
-        var imgElement = qrcodeCanvasDiv.querySelector('img');
+
+        // 移除已存在的img标签
+        var existingImg = qrcodeCanvasDiv.querySelector('img');
+        if (existingImg) {
+            qrcodeCanvasDiv.removeChild(existingImg);
+        }
 
         // 如果canvas存在，则清除画布
+        var canvas = qrcodeCanvasDiv.querySelector('canvas');
         if (canvas) {
             var ctx = canvas.getContext("2d");
             ctx.clearRect(0, 0, canvas.width, canvas.height); // 清除画布
-        }
-
-        // 如果img元素存在，则清除其src属性
-        if (imgElement) {
-            imgElement.src = ''; // 清除图片源
         }
 
         // 创建二维码实例
@@ -45,6 +45,7 @@ function generateQrcode() {
     } catch (error) {
         console.error('生成二维码时发生错误：', error);
     }
+
 
     function drawLogoOnQrCode() {
         // 在这里重新获取canvas和ctx
