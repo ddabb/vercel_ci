@@ -30,12 +30,26 @@ function generateQrcode() {
             correctLevel: QRCode.CorrectLevel.H
         });
 
-        // 加载要嵌入的图片
+
+        // 检查用户是否上传了图片
+        var fileInput = document.getElementById("customLogoInput");
         var img = new Image();
-        img.src = "../logo.png"; // 使用实际路径
-        img.onload = function () {
-            drawLogoOnQrCode();
-        };
+        if (fileInput.files && fileInput.files[0]) {
+            var reader = new FileReader();
+            reader.onload = function (e) {
+                img.src = e.target.result;
+                img.onload = function () {
+                    drawLogoOnQrCode(img);
+                };
+            };
+            reader.readAsDataURL(fileInput.files[0]);
+        } else {
+            // 使用默认图片
+            img.src = "../logo.png";
+            img.onload = function () {
+                drawLogoOnQrCode(img);
+            };
+        }
 
         // 如果图片加载失败，捕获错误
         img.onerror = function () {

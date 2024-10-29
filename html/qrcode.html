@@ -7,6 +7,7 @@
     <title>二维码工具</title>
     <link rel="stylesheet" href="../css/qrcode.css">
     <script src="https://cdn.bootcdn.net/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jsqr@1.3.1/dist/jsQR.min.js"></script>
 </head>
 
 <body>
@@ -18,6 +19,7 @@
         </div>
         <div id="generate" class="tab-content active">
             <input type="text" id="inputText" placeholder="输入文本以生成二维码" value="http://www.60score.com" />
+            <input type="file" id="customLogoInput" accept="image/*" style="margin-top: 10px;" />
             <button onclick="generateQrcode()">生成二维码</button>
             <div id="qrcodeCanvas" width="256" height="256" style="border: 1px solid black; margin-top: 10px;"></div>
             <button onclick="captureImage()">保存二维码</button>
