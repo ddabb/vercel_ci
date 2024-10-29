@@ -17,8 +17,7 @@ function generateQrcode() {
         // 如果canvas存在，则清除画布
         var canvas = qrcodeCanvasDiv.querySelector('canvas');
         if (canvas) {
-            var ctx = canvas.getContext("2d");
-            ctx.clearRect(0, 0, canvas.width, canvas.height); // 清除画布
+            qrcodeCanvasDiv.removeChild(canvas);
         }
 
         // 创建二维码实例
@@ -84,8 +83,19 @@ function generateQrcode() {
 }
 
 function captureImage() {
-    var canvas = document.getElementById("qrcodeCanvas");
+    // 获取canvas和img元素所在的div
+    var qrcodeCanvasDiv = document.getElementById("qrcodeCanvas");
+
+    // 从div中找到canvas元素
+    var canvas = qrcodeCanvasDiv.querySelector('canvas');
+    if (!canvas) {
+        console.error('无法找到canvas元素');
+        return;
+    }
+
+    // 将canvas的内容转换为data URL
     var dataURL = canvas.toDataURL();
+    // 调用下载函数
     downloadURI(dataURL, "qrcode.png");
 }
 
