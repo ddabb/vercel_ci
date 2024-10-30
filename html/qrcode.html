@@ -68,26 +68,30 @@
                         <h1>二维码工具</h1>
                     </div>
                     <div class="card-body">
-                        <div class="tabs">
-                            <a href="#generate" onclick="showTab('generate')">生成二维码</a>
-                            <a href="#scan" onclick="showTab('scan')">识别二维码</a>
-                        </div>
-                        <div id="generate" class="tab-content active">
-                            <input type="text" id="inputText" placeholder="输入文本以生成二维码"
-                                value="http://www.60score.com" />
-                            <input type="file" id="customLogoInput" placeholder="选择图片" accept="image/*"
-                                style="margin-top: 10px;" />
-                            <button onclick="generateQrcode()">生成二维码</button>
-                            <div id="qrcodeCanvas" width="256" height="256"
-                                style="border: 1px solid black; margin-top: 10px;"></div>
-                            <button onclick="captureImage()">保存二维码</button>
-                        </div>
-                        <div id="scan" class="tab-content">
-                            <input type="file" accept="image/*" capture="camera" id="fileInput"
-                                onchange="readImage()" />
-                            <button onclick="decodeFromInputImage()">识别二维码</button>
-                            <img id="inputImage" src="" alt="输入的图片" style="max-width: 100%; margin-top: 10px;" />
-                            <p id="result">二维码识别结果！</p>
+                        <div class="qrcontainer">
+                            <div class="tabs">
+                                <a href="#generate" onclick="showTab('generate')">生成二维码</a>
+                                <a href="#scan" onclick="showTab('scan')">识别二维码</a>
+                            </div>
+                            <div id="generate" class="tab-content active">
+                                <input type="text" id="inputText" placeholder="输入文本以生成二维码"
+                                    value="http://www.60score.com" />
+                                <label for="customLogoInput" class="custom-file-label">
+                                    选择二维码中心图片
+                                    <input type="file" id="customLogoInput" accept="image/*" style="display: none;" />
+                                </label>
+                                <button onclick="generateQrcode()">生成二维码</button>
+                                <div id="qrcodeCanvas" width="256" height="256"
+                                    style="border: 1px solid black; margin-top: 10px;"></div>
+                                <button onclick="captureImage()">保存二维码</button>
+                            </div>
+                            <div id="scan" class="tab-content">
+                                <input type="file" accept="image/*" capture="camera" id="fileInput"
+                                    onchange="readImage()" />
+                                <button onclick="decodeFromInputImage()">识别二维码</button>
+                                <img id="inputImage" src="" alt="输入的图片" style="max-width: 100%; margin-top: 10px;" />
+                                <p id="result">二维码识别结果！</p>
+                            </div>
                         </div>
                     </div>
                 </div>

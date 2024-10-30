@@ -1,103 +1,106 @@
-/* 容器样式 */
+/* qrcode.css */
+
 .qrcontainer {
-    width: 90%;
-    max-width: 600px;
-    margin: 0 auto;
-    /* 居中容器 */
-    text-align: center;
-    background-color: #fff;
-    padding: 2rem;
-    /* 使用rem单位以保持响应性 */
-    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
-    /* 增加阴影柔和度 */
-    border-radius: 0.5rem;
-    /* 使用rem单位 */
+    font-family: 'Arial', sans-serif;
+    max-width: 100%;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* 标签按钮组 */
 .tabs a {
     display: inline-block;
-    /* 使链接成为块级元素 */
-    background: #007BFF;
-    color: #fff;
+    padding: 10px 20px;
+    margin-right: 10px;
+    color: #333;
     text-decoration: none;
-    /* 移除默认下划线 */
-    border: none;
-    padding: 0.625rem 1.25rem;
-    /* 转换为rem单位 */
-    margin-right: 0.625rem;
-    /* 转换为rem单位 */
-    cursor: pointer;
-    border-radius: 0.25rem;
-    /* 使用rem单位 */
-    transition: background 0.3s;
-    /* 添加过渡效果 */
+    border-bottom: 2px solid transparent;
+    transition: all 0.3s ease;
 }
 
 .tabs a:hover,
-.tabs a:focus {
-    background: #0056b3;
-    /* 统一hover和focus状态 */
-    outline: none;
-    /* 移除默认的焦点轮廓 */
+.tabs a.active {
+    color: #007bff;
+    border-bottom: 2px solid #007bff;
 }
 
-/* 标签内容区域 */
 .tab-content {
     display: none;
+    padding: 20px 0;
 }
 
 .tab-content.active {
     display: block;
 }
 
-/* 输入框样式 */
 input[type="text"],
 input[type="file"] {
-    width: 100%;
-    padding: 0.625rem;
-    /* 转换为rem单位 */
-    margin-bottom: 0.625rem;
-    /* 转换为rem单位 */
-    border: 1px solid #ccc;
-    border-radius: 0.25rem;
-    /* 使用rem单位 */
-    font-size: 1rem;
-    /* 设置字体大小 */
-}
-
-/* 按钮样式 */
-button {
-    background: #28a745;
-    color: #fff;
-    border: none;
-    padding: 0.625rem 1.25rem;
-    /* 转换为rem单位 */
-    margin: 0.625rem 0;
-    /* 转换为rem单位 */
-    cursor: pointer;
-    border-radius: 0.25rem;
-    /* 使用rem单位 */
-    transition: background 0.3s;
-    /* 添加过渡效果 */
-}
-
-button:hover,
-button:focus {
-    background: #218838;
-    /* 统一hover和focus状态 */
-    outline: none;
-    /* 移除默认的焦点轮廓 */
-}
-
-/* 二维码画布样式 */
-#qrcodeCanvas {
-    width: 256px;
-    height: 256px;
-    border: 1px solid black;
+    width: calc(100% - 22px);
+    padding: 10px;
     margin-top: 10px;
-    margin-left: auto;
-    /* 水平居中 */
-    margin-right: auto;
-    /* 水平居中 */
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+input[type="text"]:focus,
+input[type="file"]:focus {
+    border-color: #007bff;
+}
+
+button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+#qrcodeCanvas {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#result {
+    margin-top: 20px;
+    font-size: 1.2em;
+    color: #333;
+}
+
+/* 自定义文件输入样式 */
+.custom-file-label {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-top: 10px;
+    color: #333;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: 100%;
+    text-align: left;
+}
+
+.custom-file-label:hover {
+    border-color: #007bff;
+}
+
+#customLogoInput:focus+.custom-file-label,
+#customLogoInput:valid+.custom-file-label {
+    border-color: #007bff;
+    box-shadow: inset 0 1px 8px rgba(0, 0, 0, 0.1), 0 0 4px #007bff;
 }
