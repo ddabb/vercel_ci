@@ -46,7 +46,7 @@
               <a class="nav-link" href="../html/dianzhangbiji.html">笔记</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="../html/gongzhonghao.html">笔记</a>
+              <a class="nav-link" href="../html/gongzhonghao.html">公众号</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="../html/tools.html">工具</a>
@@ -104,68 +104,25 @@
         </div>
       </div>
     </div>
-
-    <!-- 网站文章 -->
+    <!-- 时间线部分 -->
     <div class="row mt-5">
       <div class="col-lg-8 col-md-12 mx-auto">
         <div class="card mb-4">
           <div class="card-header">
-            <h2>店长笔记</h2>
+            <h2 class="mb-0">更新日志</h2>
           </div>
           <div class="card-body">
-            <div id="search-form">
-              <div class="search-container">
-                <input type="text" id="search-input-md" placeholder="看看店长都记录了些啥...">
-                <button id="search-button-md">找找看</button>
-              </div>
+            <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#timeline"
+              aria-expanded="false" aria-controls="timeline">
+              展开/折叠
+            </button>
+            <div id="timeline" class="timeline collapse show">
+              <!-- 动态时间线内容将被插入此处 -->
             </div>
-            <ul id="article-list-md"></ul>
-            <div id="pagination-md"></div>
           </div>
         </div>
       </div>
     </div>
-
-    <!-- 公众号文章 -->
-    <div class="row">
-      <div class="col-lg-8 col-md-12 mx-auto">
-        <div class="card mb-4">
-          <div class="card-header">
-            <h2>公众号文章</h2>
-          </div>
-          <div class="card-body">
-            <div class="card-body">
-              <div id="search-form-weixin">
-                <div class="search-container">
-                  <input type="text" id="search-input-weixin" placeholder="搜索公众号内容...">
-                  <button id="search-button-weixin">找找看</button>
-                </div>
-              </div>
-              <ul id="article-list-weixin"></ul>
-              <div id="pagination-weixin"></div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- 时间线部分 -->
-      <div class="row mt-5">
-        <div class="col-lg-8 col-md-12 mx-auto">
-          <div class="card mb-4">
-            <div class="card-header">
-              <h2 class="mb-0">更新日志</h2>
-            </div>
-            <div class="card-body">
-              <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#timeline"
-                aria-expanded="false" aria-controls="timeline">
-                展开/折叠
-              </button>
-              <div id="timeline" class="timeline collapse show">
-                <!-- 动态时间线内容将被插入此处 -->
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
     </div>
   </main>
 
