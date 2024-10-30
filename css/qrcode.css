@@ -16,7 +16,9 @@
     margin-right: 10px;
     color: #333;
     text-decoration: none;
-    border-bottom: 2px solid transparent;
+    /* 移除默认的下划线 */
+    border-bottom: 2px solid #ccc;
+    /* 添加一个灰色的下划线 */
     transition: all 0.3s ease;
 }
 
@@ -24,6 +26,7 @@
 .tabs a.active {
     color: #007bff;
     border-bottom: 2px solid #007bff;
+    /* 悬停和激活状态下的下划线颜色 */
 }
 
 .tab-content {
@@ -72,6 +75,9 @@ button:hover {
     display: flex;
     justify-content: center;
     align-items: center;
+    width: 256px;
+    height: 256px;
+    border: 1px solid black;
 }
 
 #result {

@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>二维码工具 | 龙井、方大城自助台球管家 | 台球厅预订、游戏规则、店内活动</title>
     <meta name="keywords" content="二维码工具,台球厅,自助台球,龙井,方大城">
-    <meta name="description" content="探索智能台球屋的二维码工具，体验龙井和方大城地区自助台球厅的乐趣。预订台球厅、了解游戏规则、参与店内活动，尽享高品质台球时光。">
+    <meta name="description" content="探索自助工具站的二维码工具，体验龙井和方大城地区自助台球厅的乐趣。预订台球厅、了解游戏规则、参与店内活动，尽享高品质台球时光。">
     <link rel="icon" href="../logo.svg" type="image/svg+xml">
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/footer.css">
@@ -39,7 +39,7 @@
                             <a class="nav-link d-flex align-items-center" href="../html/index.html">
                                 <img src="../logo.svg" alt="Logo"
                                     style="max-width: 24px;max-height: 24px; margin-right:1px;">
-                                智能台球屋
+                                自助工具站
                             </a>
                         </li>
                         <li class="nav-item">
@@ -70,8 +70,8 @@
                     <div class="card-body">
                         <div class="qrcontainer">
                             <div class="tabs">
-                                <a href="#generate" onclick="showTab('generate')">生成二维码</a>
-                                <a href="#scan" onclick="showTab('scan')">识别二维码</a>
+                                <a href="#generate" onclick="showTab('generate')">生成</a>
+                                <a href="#scan" onclick="showTab('scan')">识别</a>
                             </div>
                             <div id="generate" class="tab-content active">
                                 <input type="text" id="inputText" placeholder="输入文本以生成二维码"
@@ -90,7 +90,7 @@
                                     onchange="readImage()" />
                                 <button onclick="decodeFromInputImage()">识别二维码</button>
                                 <img id="inputImage" src="" alt="输入的图片" style="max-width: 100%; margin-top: 10px;" />
-                                <p id="result">二维码识别结果！</p>
+                                <p id="result">识别结果</p>
                             </div>
                         </div>
                     </div>
