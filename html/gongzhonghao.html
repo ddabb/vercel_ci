@@ -43,12 +43,6 @@
               <a class="nav-link" href="../html/photos.html">相册</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="../html/dianzhangbiji.html">笔记</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="../html/gongzhonghao.html">笔记</a>
-            </li>
-            <li class="nav-item">
               <a class="nav-link" href="../html/tools.html">工具</a>
             </li>
             <li class="nav-item">
@@ -64,67 +58,7 @@
   </header>
 
   <main class="container-fluid">
-    <div class="row mt-5">
-      <div class="col-lg-8 col-md-12 mx-auto">
-        <div class="card">
-          <div class="card-header">
-            <h1>自助管家</h1>
-          </div>
-          <div class="card-body">
-            <button class="btn btn-primary" id="toggleButton">显示/隐藏</button>
-            <div class="chat-area-container">
-              <div class="chat-container collapse show" id="chatArea">
-                <div class="message-list" id="chatOutput">
-                  <!-- 引导语 -->
-                  <div class="message bot-message">
-                    <div class="avatar-container">
-                      <img src="/logo.svg" alt="Bot Avatar" class="avatar bg-primary rounded-circle">
-                    </div>
-                    <div class="message-text">
-                      <p>您好！我是龙井、方大城店的自助台球管家，很高兴为您服务。您可以问我关于台球桌预订、游戏规则、店内活动等任何问题。</p>
-                    </div>
-                  </div>
-                  <div class="message bot-message">
-                    <div class="avatar-container">
-                      <img src="/logo.svg" alt="Bot Avatar" class="avatar bg-primary rounded-circle">
-                    </div>
-                    <div class="message-text">
-                      <p>例如，您可以说：“我想预订今晚的台球桌”，或“告诉我台球的基本规则”。如果您有任何疑问，请随时发问。</p>
-                    </div>
-                  </div>
-                  <!-- 消息列表 -->
-                </div>
-                <div class="input-container-modified">
-                  <input type="text" id="messageInput" placeholder="跟自助小管家唠唠...">
-                  <button id="sendButton">发送</button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
 
-    <!-- 网站文章 -->
-    <div class="row mt-5">
-      <div class="col-lg-8 col-md-12 mx-auto">
-        <div class="card mb-4">
-          <div class="card-header">
-            <h2>店长笔记</h2>
-          </div>
-          <div class="card-body">
-            <div id="search-form">
-              <div class="search-container">
-                <input type="text" id="search-input-md" placeholder="看看店长都记录了些啥...">
-                <button id="search-button-md">找找看</button>
-              </div>
-            </div>
-            <ul id="article-list-md"></ul>
-            <div id="pagination-md"></div>
-          </div>
-        </div>
-      </div>
-    </div>
 
     <!-- 公众号文章 -->
     <div class="row">
@@ -147,25 +81,7 @@
           </div>
         </div>
       </div>
-      <!-- 时间线部分 -->
-      <div class="row mt-5">
-        <div class="col-lg-8 col-md-12 mx-auto">
-          <div class="card mb-4">
-            <div class="card-header">
-              <h2 class="mb-0">更新日志</h2>
-            </div>
-            <div class="card-body">
-              <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#timeline"
-                aria-expanded="false" aria-controls="timeline">
-                展开/折叠
-              </button>
-              <div id="timeline" class="timeline collapse show">
-                <!-- 动态时间线内容将被插入此处 -->
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+
     </div>
   </main>
 
