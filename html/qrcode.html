@@ -14,7 +14,6 @@
     <link rel="icon" href="../logo.svg" type="image/svg+xml">
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/footer.css">
-
     <link rel="stylesheet" href="../css/qrcode.css">
     <script src="https://cdn.bootcdn.net/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/jsqr@1.3.1/dist/jsQR.min.js"></script>
@@ -76,14 +75,15 @@
                             <div id="generate" class="tab-content active">
                                 <input type="text" id="inputText" placeholder="输入文本以生成二维码"
                                     value="http://www.60score.com" />
-                                <label for="customLogoInput" class="custom-file-label">
-                                    选择二维码中心图片
+                                <div class="action-buttons">
+                                    <label for="customLogoInput"
+                                        class="custom-file-label custom-logo-btn">选择二维码中心图片</label>
                                     <input type="file" id="customLogoInput" accept="image/*" style="display: none;" />
-                                </label>
-                                <button onclick="generateQrcode()">生成二维码</button>
+                                    <button onclick="generateQrcode()">生成二维码</button>
+                                    <button onclick="captureImage()">保存二维码</button>
+                                </div>
                                 <div id="qrcodeCanvas" width="256" height="256"
                                     style="border: 1px solid black; margin-top: 10px;"></div>
-                                <button onclick="captureImage()">保存二维码</button>
                             </div>
                             <div id="scan" class="tab-content">
                                 <input type="file" accept="image/*" capture="camera" id="fileInput"
