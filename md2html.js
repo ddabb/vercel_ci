@@ -81,7 +81,7 @@ async function mdToHtml(mdFilesDirectory = 'mdfiles', genhtmlDirectory = 'mdhtml
       await updateHtmlFile(htmlTemplatePath, htmlContent, outputFilePath);
     }
 
-    console.log('Error during mdToHtml process:');
+    console.log('Finished mdToHtml process...:');
   } catch (error) {
     console.error('Error during mdToHtml process:', error);
   }
