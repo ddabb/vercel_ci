@@ -6,7 +6,7 @@ export default async function handler(request, response) {
 
   // 从请求中获取关键词、分页的信息以及 calltype
   const keyword = request.query.keyword || '';
-  const pageSize = parseInt(request.query.pageSize) || 10;
+  const pageSize = parseInt(request.query.pageSize) || 20;
   const page = parseInt(request.query.page) || 1;
   const startIndex = (page - 1) * pageSize;
   const callType = request.query.calltype;
