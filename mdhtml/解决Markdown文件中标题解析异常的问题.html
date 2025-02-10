@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="Content-Language" content="zh-CN">
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9093386396178901"
+    crossorigin="anonymous"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>自助工具站</title>
+  <link rel="icon" href="../logo.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/footer.css">
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    
+    crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"  crossorigin="anonymous"></script>
+  <script src="../js/clarity.js"></script>
+</head>
+
+<body>
+  <header>
+  <div>
+    <nav class="navbar navbar-light bg-light">
+      <div class="container-fluid">
+        <ul class="navbar-nav d-flex flex-row flex-wrap">
+          <li class="nav-item">
+            <a class="nav-link d-flex align-items-center" href="../html/index.html">
+              <img src="../logo.svg" alt="Logo" style="max-width: 24px;max-height: 24px; margin-right:1px;">
+              自助工具站
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../html/photos.html">相册</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../html/dianzhangbiji.html">想法</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../html/gongzhonghao.html">公众号</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../html/tools.html">工具</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../html/games.html">游戏</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../sghtml/dynasties.html">诗词</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+</header>
+    <main class="container-fluid">
+      <div class="row mt-5">
+        <div class="col-lg-8 col-md-12  mx-auto">
+          <div class="card">
+            <div class="card-body">
+              <p id="article-content">
+                <h1 id="markdown">解决Markdown文件中标题解析异常的问题</h1>
+<p>在使用Markdown编写文档时，我们通常会使用井号（<code>#</code>）来定义标题。然而，有时你可能会遇到一些问题，即某些标题没有正确解析为HTML中的<code>&lt;h1&gt;</code>、<code>&lt;h2&gt;</code>等标签，而是被错误地包含在了<code>&lt;p&gt;</code>标签中，并且前面可能还带有一些不可见的字符。本文将探讨这个问题的原因，并提供相应的解决方案。</p>
+<h2 id="">原因分析</h2>
+<h3 id="1">1. 文件编码问题</h3>
+<p>如果你的Markdown文件是以UTF-8编码并包含了字节顺序标记（BOM），这可能会导致某些Markdown解析器在处理标题时出现异常。BOM对于纯文本文件（如Markdown）通常是不必要的，而且可能会导致解析错误。</p>
+<h3 id="2markdown">2. Markdown解析器差异</h3>
+<p>不同的Markdown解析器（或编辑器）可能对Markdown语法有不同的解释和处理方式。有些解析器可能更敏感于BOM或其他非标准字符的存在，从而导致标题解析异常。</p>
+<h2 id="-1">解决方案</h2>
+<h3 id="1bom">1. 移除BOM</h3>
+<p>要解决由BOM引起的问题，你可以按照以下步骤操作：</p>
+<ul>
+<li>使用文本编辑器（如Notepad++、Sublime Text、VS Code等）打开你的Markdown文件。</li>
+<li>查看文件编码，并确保它是以无BOM的UTF-8编码保存的。在大多数现代文本编辑器中，你可以在保存文件时选择编码格式。</li>
+<li>如果编辑器支持，直接选择“以UTF-8无BOM编码保存”。</li>
+</ul>
+<h3 id="2markdown-1">2. 检查Markdown语法</h3>
+<p>确保你的标题语法正确，即井号后面紧跟一个空格。同时，检查标题前是否有任何不可见的字符或空格，这些都可能导致解析错误。</p>
+<h3 id="3markdown">3. 尝试不同的Markdown解析器或编辑器</h3>
+<p>如果你发现某个特定的编辑器或平台在解析Markdown标题时存在问题，可以尝试使用其他Markdown解析工具或编辑器来查看效果。不同的解析器可能有不同的处理方式和兼容性。</p>
+<h3 id="4markdown">4. 验证Markdown内容</h3>
+<p>使用在线Markdown验证工具来检查你的Markdown文件，看是否有语法错误或解析问题。这些工具可以帮助你快速定位问题所在，并提供相应的解决方案。</p>
+<h2 id="-2">总结</h2>
+<p>Markdown作为一种轻量级的标记语言，在文档编写中得到了广泛的应用。然而，在使用Markdown时，我们也可能会遇到一些问题，如标题解析异常等。通过移除BOM、检查Markdown语法、尝试不同的解析器或编辑器以及验证Markdown内容等方法，我们可以有效地解决这些问题，确保Markdown文档的正确性和可读性。</p>
+              </p>
+            </div>
+          </div>
+
+          <div id="SOHUCS"></div>
+          <script type="text/javascript">
+            (function () {
+              var appid = 'cyxu7ueP4';
+              var conf = 'prod_ff4e62d448f38bedc4a1f89a5125ccd0';
+              var width = window.innerWidth || document.documentElement.clientWidth;
+              if (width < 1000) {
+                var head = document.getElementsByTagName('head')[0] || document.head || document.documentElement;
+                var script = document.createElement('script');
+                script.type = 'text/javascript';
+                script.charset = 'utf-8';
+                script.id = 'changyan_mobile_js';
+                script.src = 'https://cy-cdn.kuaizhan.com/upload/mobile/wap-js/changyan_mobile.js?client_id=' + appid + '&conf=' + conf;
+                head.appendChild(script);
+              } else { var loadJs = function (d, a) { var c = document.getElementsByTagName("head")[0] || document.head || document.documentElement; var b = document.createElement("script"); b.setAttribute("type", "text/javascript"); b.setAttribute("charset", "UTF-8"); b.setAttribute("src", d); if (typeof a === "function") { if (window.attachEvent) { b.onreadystatechange = function () { var e = b.readyState; if (e === "loaded" || e === "complete") { b.onreadystatechange = null; a() } } } else { b.onload = a } } c.appendChild(b) }; loadJs("https://cy-cdn.kuaizhan.com/upload/changyan.js", function () { window.changyan.api.config({ appid: appid, conf: conf }) }); }
+            })(); </script>
+        </div>
+      </div>
+    </main>
+    <footer class="sticky-footer text-center text-lg-start bg-light text-muted">
+  <div class="container text-center py-1">
+    <section>
+      <span id="busuanzi_container_page_pv">本页面访问量<span id="busuanzi_value_page_pv"></span>次</span>
+      <a href="../mdhtml/关于我们.html">关于我们</a>
+      <a href="../html/contactus.html">联系我们</a>
+    </section>
+  </div>
+</footer>
+
+
+
+</body>
+
+</html>
