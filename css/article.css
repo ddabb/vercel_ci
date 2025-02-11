@@ -1,115 +1,28 @@
-/* css/article.css */
-/* Markdown文章通用样式 */
+/* article.css */
+
 #article-content {
+    background-color: #fff;
     color: #333;
+    padding: 20px;
+    font-size: 1.1em;
     line-height: 1.6;
-    font-size: 16px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, .1);
 }
 
-/* 标题样式 */
-#article-content h1 {
-    font-size: 2em;
-    border-bottom: 2px solid #eee;
-    padding-bottom: 0.3em;
-    margin: 1.5em 0 1em;
+#article-content h1, #article-content h2, #article-content h3, #article-content h4, #article-content h5, #article-content h6 {
+    margin-top: 1.6em;
+    margin-bottom: 0.4em;
+    font-weight: bold;
+    line-height: 1.2;
 }
 
-#article-content h2 {
-    font-size: 1.75em;
-    border-bottom: 1px solid #eee;
-    padding-bottom: 0.3em;
-    margin: 1.3em 0 0.8em;
-}
-
-#article-content h3 { font-size: 1.5em; margin: 1em 0 0.6em; }
-#article-content h4 { font-size: 1.25em; margin: 0.8em 0 0.5em; }
-#article-content h5 { font-size: 1.1em; margin: 0.6em 0 0.4em; }
-#article-content h6 { font-size: 1em; color: #666; margin: 0.5em 0 0.3em; }
-
-/* 段落和文字 */
 #article-content p {
-    margin: 0 0 1em;
+    margin-bottom: 1em;
 }
 
-#article-content strong {
-    color: #2c3e50;
-}
-
-#article-content em {
-    color: #666;
-    font-style: italic;
-}
-
-/* 列表样式 */
-#article-content ul,
-#article-content ol {
-    margin: 0 0 1em 2em;
-    padding-left: 1em;
-}
-
-#article-content li {
-    margin: 0.4em 0;
-}
-
-/* 代码块 */
-#article-content pre {
-    background-color: #f8f9fa;
-    border-radius: 6px;
-    padding: 1em;
-    overflow: auto;
-    margin: 1em 0;
-    border: 1px solid #e1e4e8;
-}
-
-#article-content code {
-    font-family: Monaco, Consolas, "Courier New", monospace;
-    background-color: #f8f9fa;
-    padding: 0.2em 0.4em;
-    border-radius: 3px;
-    font-size: 0.9em;
-}
-
-/* 引用块 */
-#article-content blockquote {
-    border-left: 4px solid #dfe2e5;
-    color: #6a737d;
-    margin: 1em 0;
-    padding: 0 1em;
-    background-color: #f8f9fa;
-}
-
-/* 表格 */
-#article-content table {
-    width: 100%;
-    border-collapse: collapse;
-    margin: 1em 0;
-    background-color: white;
-}
-
-#article-content th,
-#article-content td {
-    border: 1px solid #dfe2e5;
-    padding: 0.6em 1em;
-    text-align: left;
-}
-
-#article-content th {
-    background-color: #f8f9fa;
-    font-weight: 600;
-}
-
-/* 图片 */
-#article-content img {
-    max-width: 100%;
-    height: auto;
-    margin: 1em 0;
-    border-radius: 4px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-}
-
-/* 链接 */
 #article-content a {
-    color: #0366d6;
+    color: #007bff;
     text-decoration: none;
 }
 
@@ -117,13 +30,25 @@
     text-decoration: underline;
 }
 
-/* 响应式调整 */
-@media (max-width: 768px) {
-    #article-content {
-        font-size: 15px;
-    }
-    
-    #article-content pre {
-        font-size: 0.85em;
-    }
+#article-content blockquote {
+    border-left: 4px solid #ccc;
+    padding-left: 16px;
+    margin-left: 0;
+    color: #666;
+}
+
+#article-content pre {
+    background-color: #f5f5f5;
+    padding: 10px;
+    overflow-x: auto;
+    font-size: 0.95em;
+    border-radius: 4px;
+    margin-bottom: 1em;
+}
+
+#article-content code {
+    background-color: #f0f0f0;
+    padding: 2px 4px;
+    border-radius: 4px;
+    font-size: 0.95em;
 }
