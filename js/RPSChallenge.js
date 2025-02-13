@@ -107,6 +107,9 @@ function generateValidGame(width = gameWidth, height = gameHeight) {
 }
 
 function isValidMove(x, y) {
+    // 允许点击起点以重新开始游戏
+    if (x === 0 && y === 0 && currentPath.length === 1) return true;
+
     const last = currentPath[currentPath.length - 1];
     const dx = Math.abs(x - last.x);
     const dy = Math.abs(y - last.y);
