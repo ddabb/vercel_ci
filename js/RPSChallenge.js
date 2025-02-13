@@ -39,24 +39,68 @@ function generateGame(width = gameWidth, height = gameHeight) {
 }
 
 function findPathFromStartToEnd(board, width, height) {
-    const visited = Array(height).fill().map(() => Array(width).fill(false));
-    function dfs(x, y, path) {
-        if (x < 0 || y < 0 || x >= height || y >= width || visited[x][y]) return false;
-        if (x === height - 1 && y === width - 1) return true;
-        visited[x][y] = true;
-        
-        let requiredSymbolIndex = path.length % 3;
-        if (path.length === 0 && !(x === 0 && y === 1)) { // 不是起点后第一个格子
-            const requiredSymbol = symbols[requiredSymbolIndex];
-            if (board[x][y] !== requiredSymbol) return false;
-        }
-        
-        return dfs(x + 1, y, [...path, {x, y}]) ||
-               dfs(x - 1, y, [...path, {x, y}]) ||
-               dfs(x, y + 1, [...path, {x, y}]) ||
-               dfs(x, y - 1, [...path, {x, y}]);
+    const start = {x: 0, y: 0};
+    const end = {x: height - 1, y: width - 1};
+
+    // 启发式函数：曼哈顿距离
+    function heuristic(node) {
+        return Math.abs(end.x - node.x) + Math.abs(end.y - node.y);
     }
-    return dfs(0, 0, []);
+
+    // 获取相邻节点
+    function getNeighbors(node) {
+        const directions = [{x: 1, y: 0}, {x: -1, y: 0}, {x: 0, y: 1}, {x: 0, y: -1}];
+        return directions.map(d => ({x: node.x + d.x, y: node.y + d.y}))
+            .filter(n => n.x >= 0 && n.x < height && n.y >= 0 && n.y < width)
+            .filter(n => board[n.x][n.y] === symbols[(currentPath.length) % 3]);
+    }
+
+    // 优先队列
+    class PriorityQueue {
+        constructor() {
+            this.elements = [];
+        }
+        enqueue(item, priority) {
+            this.elements.push({item, priority});
+            this.elements.sort((a, b) => a.priority - b.priority);
+        }
+        dequeue() {
+            return this.elements.shift().item;
+        }
+        isEmpty() {
+            return this.elements.length === 0;
+        }
+    }
+
+    const openSet = new PriorityQueue();
+    openSet.enqueue(start, 0);
+
+    const cameFrom = {};
+    const gScore = new Map();
+    gScore.set(JSON.stringify(start), 0);
+
+    while (!openSet.isEmpty()) {
+        const current = openSet.dequeue();
+
+        if (current.x === end.x && current.y === end.y) {
+            // 找到了路径
+            return true;
+        }
+
+        const neighbors = getNeighbors(current);
+        for (let neighbor of neighbors) {
+            const tentativeGScore = gScore.get(JSON.stringify(current)) + 1;
+
+            if (!gScore.has(JSON.stringify(neighbor)) || tentativeGScore < gScore.get(JSON.stringify(neighbor))) {
+                cameFrom[JSON.stringify(neighbor)] = current;
+                gScore.set(JSON.stringify(neighbor), tentativeGScore);
+                openSet.enqueue(neighbor, tentativeGScore + heuristic(neighbor));
+            }
+        }
+    }
+
+    // 如果没有找到路径
+    return false;
 }
 
 function generateValidGame(width = gameWidth, height = gameHeight) {
