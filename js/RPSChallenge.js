@@ -102,16 +102,26 @@ function findPathFromStartToEnd(board, width, height) {
     }
     return false;
 }
+
 function isValidMove(x, y) {
-    const isFirstMove = currentPath.length === 1; // 判断是否是首次移动
-    if (isFirstMove) {
-        // 如果是首次移动，检查是否选择了起点或者与起点相邻的位置
-        if (!(x === 0 && y === 0) && ![[-1, 0], [1, 0], [0, -1], [0, 1]].some(([dx, dy]) => x === 0 + dx && y === 0 + dy)) {
-            notify("首次移动必须选择起点或与起点相邻的位置！");
+    // 如果是第一次实际移动（即选择了起点周围的相邻位置）
+    if (currentPath.length === 1 && !(x === 0 && y === 0)) { 
+        // 检查是否选择了与起点(0,0)相邻的位置
+        const adjacentPositions = [[0, 1], [1, 0], [0, -1], [-1, 0]]; // 上下左右
+        if (!adjacentPositions.some(([dx, dy]) => x === 0 + dx && y === 0 + dy)) {
+            notify("首次移动必须选择起点或与起点直接相邻的位置！");
             return false;
         }
+        // 确保不选择特殊标记'🏁'
+        if (gameBoard[x][y] === '🏁') {
+            notify("不能直接移动到终点！");
+            return false;
+        }
+        // 允许首次移动到任意相邻位置
+        return true;
     }
 
+    // 获取当前路径中的最后一个坐标
     const last = currentPath[currentPath.length - 1];
     const dx = Math.abs(x - last.x);
     const dy = Math.abs(y - last.y);
@@ -122,14 +132,12 @@ function isValidMove(x, y) {
     // 检查是否为已走过的位置
     if (currentPath.some(p => p.x === x && p.y === y)) return false;
 
-    // 允许点击起点以重新开始游戏
-    if (x === 0 && y === 0 && currentPath.length === 1) return true;
-
-    // 检查符号规则
-    if (currentPath.length > 1) {
-        const requiredSymbolIndex = (currentPath.length - 1) % symbols.length;
+    // 从第二次移动开始应用符号顺序规则
+    if (currentPath.length >= 2) { // 注意这里改为>=2，因为首次移动后currentPath长度变为2
+        const stepIndex = currentPath.length - 1; // 当前步数索引
+        const requiredSymbolIndex = (stepIndex - 1) % symbols.length; // 首次移动不受限制，所以减1
         const requiredSymbol = symbols[requiredSymbolIndex];
-        if (gameBoard[x][y] !== requiredSymbol && !(x === gameHeight - 1 && y === gameWidth - 1)) {
+        if (gameBoard[x][y] !== requiredSymbol && !(x === gameHeight - 1 && y === gameWidth - 1)) { // 特殊处理终点
             return false;
         }
     }
