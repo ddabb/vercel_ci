@@ -168,6 +168,15 @@ function updateSteps() {
     stepsElement.textContent = steps;
 }
 
+function toggleRules() {
+    const modal = document.getElementById('rules-modal');
+    if(modal.style.display === "none") {
+        modal.style.display = "block";
+    } else {
+        modal.style.display = "none";
+    }
+}
+
 document.addEventListener('DOMContentLoaded', () => {
     initializeNotification();
     generateValidGame(gameWidth, gameHeight);
