@@ -124,25 +124,33 @@ function isValidMove(x, y) {
     const requiredSymbol = symbols[requiredSymbolIndex];
     return gameBoard[x][y] === requiredSymbol || (x === 0 && y === 0) || (x === gameHeight-1 && y === gameWidth-1);
 }
+function undoMove() {
+    if(currentPath.length <= 1) return; // 如果只剩起点，则不执行撤销操作
+
+    steps--; // 撤销会减少步数
+    currentPath.pop(); // 移除最后一步
+    updateSteps();
+    renderBoard(); // 重新渲染棋盘以更新显示
+}
 
 function handleMove(x, y) {
     if(!isValidMove(x, y)) {
         notify("无效移动：不能走已走过的路线或不符合规则！");
+        undoMove(); // 当移动无效时，撤销这一步
         return;
     }
-    
+
     steps++;
     currentPath.push({x, y});
     updateSteps();
-    
+
     if(x === gameHeight-1 && y === gameWidth-1) {
         clearInterval(timerId);
         alert(`游戏胜利！用时: ${timeElement.textContent}秒，步数: ${steps}`);
     }
-    
+
     renderBoard();
 }
-
 function renderBoard() {
     boardElement.style.gridTemplateColumns = `repeat(${gameWidth}, 1fr)`;
     boardElement.innerHTML = gameBoard.map((row, i) => 
