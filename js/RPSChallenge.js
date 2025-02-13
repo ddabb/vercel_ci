@@ -39,67 +39,60 @@ function generateGame(width = gameWidth, height = gameHeight) {
 }
 
 function findPathFromStartToEnd(board, width, height) {
-    const start = {x: 0, y: 0};
-    const end = {x: height - 1, y: width - 1};
+    const directions = [[-1, 0], [1, 0], [0, -1], [0, 1]];
+    const queue = [];
+    const visited = new Set();
 
-    // 启发式函数：曼哈顿距离
-    function heuristic(node) {
-        return Math.abs(end.x - node.x) + Math.abs(end.y - node.y);
-    }
+    // 初始状态：起点坐标、已访问集合、下一步需要的符号索引
+    queue.push({
+        x: 0,
+        y: 0,
+        step: 0,        // 当前步数（起点不计入顺序）
+        visited: 1 << 0 // 使用位图记录访问状态（5x5棋盘用25位）
+    });
 
-    // 获取相邻节点
-    function getNeighbors(node) {
-        const directions = [{x: 1, y: 0}, {x: -1, y: 0}, {x: 0, y: 1}, {x: 0, y: -1}];
-        return directions.map(d => ({x: node.x + d.x, y: node.y + d.y}))
-            .filter(n => n.x >= 0 && n.x < height && n.y >= 0 && n.y < width)
-            .filter(n => board[n.x][n.y] === symbols[(currentPath.length) % 3]);
-    }
+    while (queue.length > 0) {
+        const { x, y, step, visited: state } = queue.shift();
 
-    // 优先队列
-    class PriorityQueue {
-        constructor() {
-            this.elements = [];
-        }
-        enqueue(item, priority) {
-            this.elements.push({item, priority});
-            this.elements.sort((a, b) => a.priority - b.priority);
-        }
-        dequeue() {
-            return this.elements.shift().item;
-        }
-        isEmpty() {
-            return this.elements.length === 0;
-        }
-    }
+        // 到达终点
+        if (x === height - 1 && y === width - 1) return true;
 
-    const openSet = new PriorityQueue();
-    openSet.enqueue(start, 0);
+        // 获取下一个需要的符号索引（从第一步开始计算）
+        const nextSymbolIndex = step % 3;
 
-    const cameFrom = {};
-    const gScore = new Map();
-    gScore.set(JSON.stringify(start), 0);
+        for (const [dx, dy] of directions) {
+            const nx = x + dx;
+            const ny = y + dy;
+            if (nx < 0 || nx >= height || ny < 0 || ny >= width) continue;
 
-    while (!openSet.isEmpty()) {
-        const current = openSet.dequeue();
+            // 计算位图位置（5x5棋盘）
+            const bitPosition = nx * width + ny;
+            if ((state & (1 << bitPosition)) !== 0) continue;
 
-        if (current.x === end.x && current.y === end.y) {
-            // 找到了路径
-            return true;
-        }
+            const cell = board[nx][ny];
+            
+            // 特殊处理终点
+            if (cell === '🏁') return true;
 
-        const neighbors = getNeighbors(current);
-        for (let neighbor of neighbors) {
-            const tentativeGScore = gScore.get(JSON.stringify(current)) + 1;
+            // 起点只能出现在初始位置
+            if (cell === '🚩') continue;
 
-            if (!gScore.has(JSON.stringify(neighbor)) || tentativeGScore < gScore.get(JSON.stringify(neighbor))) {
-                cameFrom[JSON.stringify(neighbor)] = current;
-                gScore.set(JSON.stringify(neighbor), tentativeGScore);
-                openSet.enqueue(neighbor, tentativeGScore + heuristic(neighbor));
+            // 验证符号规则（第一步可以是任意符号）
+            if (step > 0) {
+                const currentIndex = symbols.indexOf(cell);
+                if (currentIndex !== nextSymbolIndex) continue;
             }
+
+            // 创建新状态（使用位运算快速更新）
+            const newState = state | (1 << bitPosition);
+            queue.push({
+                x: nx,
+                y: ny,
+                step: step + 1,
+                visited: newState
+            });
         }
     }
-
-    // 如果没有找到路径
     return false;
 }
 
