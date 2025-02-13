@@ -1,95 +1,139 @@
-const config = {
-    symbols: ['石头', '剪刀', '布'],
-    gridSize: 10,
-    start: [0, 0],
-    end: [9, 9]
-};
+const symbols = ['✊', '✌️', '🖐️'];
+let gameBoard = [];
+let currentPath = [];
+let gameSize = 5;
+let startTime = 0;
+let timerId = 0;
+let steps = 0;
 
-let playerPosition = null;
-let grid = [];
-let path = null;
+const boardElement = document.getElementById('game-board');
+const generateBtn = document.getElementById('generate');
+const restartBtn = document.getElementById('restart');
+const timeElement = document.getElementById('time');
+const stepsElement = document.getElementById('steps');
 
-function createGrid() {
-    const container = document.getElementById('gameContainer');
-    container.style.gridTemplateRows = `repeat(${config.gridSize}, 30px)`;
-
-    // Pre-generate a path from start to end
-    path = generatePath(config.start, config.end);
-
-    for (let row = 0; row < config.gridSize; row++) {
-        const rowArray = [];
-        for (let col = 0; col < config.gridSize; col++) {
-            const cell = document.createElement('div');
-            cell.classList.add('cell');
-
-            // Set the symbol based on the pre-generated path
-            if (path.includes([row, col])) {
-                const index = path.indexOf([row, col]);
-                cell.textContent = config.symbols[index % config.symbols.length];
-            } else {
-                const symbolIndex = Math.floor(Math.random() * config.symbols.length);
-                cell.textContent = config.symbols[symbolIndex];
-            }
-
-            if (row === config.start[0] && col === config.start[1]) cell.classList.add('start');
-            if (row === config.end[0] && col === config.end[1]) cell.classList.add('end');
-            cell.addEventListener('click', () => movePlayer(row, col));
-            container.appendChild(cell);
-            rowArray.push(cell);
-        }
-        grid.push(rowArray);
-    }
-    placePlayer(config.start[0], config.start[1]);
+function generateGame() {
+    gameBoard = Array(gameSize).fill().map((_, i) => 
+        Array(gameSize).fill().map((_, j) => {
+            if((i === 0 && j === 0) || (i === gameSize-1 && j === gameSize-1)) return '';
+            return symbols[Math.floor(Math.random() * 3)];
+        })
+    );
+    renderBoard();
+    resetGame();
 }
 
-function generatePath(start, end) {
-    const path = [start];
-    let current = start;
-
-    while (current[0] !== end[0] || current[1] !== end[1]) {
-        const possibleMoves = [];
-        if (current[0] < end[0]) possibleMoves.push([current[0] + 1, current[1]]);
-        if (current[0] > end[0]) possibleMoves.push([current[0] - 1, current[1]]);
-        if (current[1] < end[1]) possibleMoves.push([current[0], current[1] + 1]);
-        if (current[1] > end[1]) possibleMoves.push([current[0], current[1] - 1]);
-
-        const nextMove = possibleMoves[Math.floor(Math.random() * possibleMoves.length)];
-        path.push(nextMove);
-        current = nextMove;
-    }
-
-    return path;
+function renderBoard() {
+    boardElement.style.gridTemplateColumns = `repeat(${gameSize}, 1fr)`;
+    boardElement.innerHTML = gameBoard.map((row, i) => 
+        row.map((cell, j) => {
+            let cls = 'cell';
+            if(i === 0 && j === 0) cls += ' start';
+            if(i === gameSize-1 && j === gameSize-1) cls += ' end';
+            if(currentPath.some(p => p.x === i && p.y === j)) cls += ' path';
+            return `<div class="${cls}" data-x="${i}" data-y="${j}">${cell}</div>`;
+        }).join('')
+    ).join('');
 }
 
-function placePlayer(row, col) {
-    if (playerPosition) {
-        grid[playerPosition[0]][playerPosition[1]].classList.remove('player');
-    }
-    grid[row][col].classList.add('player');
-    playerPosition = [row, col];
+function resetGame() {
+    currentPath = [{x:0, y:0}];
+    steps = 0;
+    startTime = Date.now();
+    clearInterval(timerId);
+    timerId = setInterval(updateTime, 1000);
+    updateSteps();
+    renderBoard();
 }
 
-function movePlayer(row, col) {
-    if (canMoveTo(row, col)) {
-        placePlayer(row, col);
-        if (row === config.end[0] && col === config.end[1]) {
-            alert('Congratulations! You reached the end!');
-        }
+function isValidMove(x, y) {
+    const last = currentPath[currentPath.length - 1];
+    const dx = Math.abs(x - last.x);
+    const dy = Math.abs(y - last.y);
+    if((dx === 1 && dy !== 0) || (dy === 1 && dx !== 0)) return false;
+    
+    if(currentPath.some(p => p.x === x && p.y === y)) return false;
+    
+    if(currentPath.length === 1) return true;
+    
+    const requiredSymbol = symbols[(currentPath.length-1) % 3];
+    return gameBoard[x][y] === requiredSymbol;
+}
+
+function handleMove(x, y) {
+    if(!isValidMove(x, y)) return;
+    
+    steps++;
+    currentPath.push({x, y});
+    updateSteps();
+    
+    if(x === gameSize-1 && y === gameSize-1) {
+        clearInterval(timerId);
+        alert(`游戏胜利！用时: ${timeElement.textContent}秒，步数: ${steps}`);
+    }
+    
+    renderBoard();
+}
+
+document.addEventListener('DOMContentLoaded', generateGame);
+generateBtn.addEventListener('click', generateGame);
+restartBtn.addEventListener('click', resetGame);
+
+boardElement.addEventListener('click', (e) => {
+    const cell = e.target.closest('.cell');
+    if(!cell) return;
+    
+    const x = parseInt(cell.dataset.x);
+    const y = parseInt(cell.dataset.y);
+    handleMove(x, y);
+});
+
+// 触摸控制
+let touchStartX = 0;
+let touchStartY = 0;
+
+boardElement.addEventListener('touchstart', (e) => {
+    touchStartX = e.touches[0].clientX;
+    touchStartY = e.touches[0].clientY;
+});
+
+boardElement.addEventListener('touchend', (e) => {
+    const dx = e.changedTouches[0].clientX - touchStartX;
+    const dy = e.changedTouches[0].clientY - touchStartY;
+    
+    if(Math.abs(dx) > Math.abs(dy)) {
+        handleSwipe(dx > 0 ? 'right' : 'left');
+    } else {
+        handleSwipe(dy > 0 ? 'down' : 'up');
+    }
+});
+
+document.querySelectorAll('.control-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+        handleSwipe(btn.dataset.direction);
+    });
+});
+
+function handleSwipe(direction) {
+    const last = currentPath[currentPath.length - 1];
+    let x = last.x, y = last.y;
+    
+    switch(direction) {
+        case 'up': x--; break;
+        case 'down': x++; break;
+        case 'left': y--; break;
+        case 'right': y++; break;
+    }
+    
+    if(x >= 0 && x < gameSize && y >= 0 && y < gameSize) {
+        handleMove(x, y);
     }
 }
 
-function canMoveTo(row, col) {
-    if (row < 0 || row >= config.gridSize || col < 0 || col >= config.gridSize) return false;
-
-    const currentPlayerIndex = path.findIndex(p => p[0] === playerPosition[0] && p[1] === playerPosition[1]);
-    const targetIndex = path.findIndex(p => p[0] === row && p[1] === col);
-
-    if (currentPlayerIndex !== -1 && targetIndex !== -1 && targetIndex === currentPlayerIndex + 1) {
-        return true;
-    }
-
-    const nextSymbolIndex = (config.symbols.indexOf(grid[playerPosition[0]][playerPosition[1]].textContent) + 1) % config.symbols.length;
-    return grid[row][col].textContent === config.symbols[nextSymbolIndex];
+function updateTime() {
+    timeElement.textContent = Math.floor((Date.now() - startTime) / 1000);
 }
 
-document.addEventListener('DOMContentLoaded', createGrid);
+function updateSteps() {
+    stepsElement.textContent = steps;
+}

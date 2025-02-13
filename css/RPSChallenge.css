@@ -1,53 +1,60 @@
-body {
-    font-family: Arial, sans-serif;
-    text-align: center;
-    margin: 0;
-    padding: 0;
-}
-
-.rules {
-    margin: 20px;
-    padding: 20px;
-    background-color: #f8f8f8;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-}
-
-.rules h1 {
-    margin-top: 0;
-}
-
-.rules ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-.grid {
-    display: grid;
-    grid-template-columns: repeat(10, 30px);
-    gap: 2px;
+.game-container {
+    max-width: 600px;
     margin: 20px auto;
+    padding: 20px;
+    text-align: center;
+}
+
+.game-board {
+    display: grid;
+    gap: 2px;
+    background: #333;
+    padding: 5px;
+    border-radius: 5px;
+    margin: 20px 0;
 }
 
 .cell {
-    width: 30px;
-    height: 30px;
+    background: white;
+    aspect-ratio: 1;
     display: flex;
     align-items: center;
     justify-content: center;
+    font-size: 1.5em;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.start { background: #4CAF50 !important; }
+.end { background: #FF5722 !important; }
+.path { background: #2196F3 !important; }
+
+.game-controls button {
+    margin: 5px;
+    padding: 10px 20px;
     font-size: 16px;
-    background-color: #f0f0f0;
-    border: 1px solid #ccc;
 }
 
-.start {
-    border: 2px solid black;
+.game-info {
+    font-size: 18px;
+    margin: 10px 0;
+    display: flex;
+    justify-content: space-around;
 }
 
-.end {
-    border: 2px dashed black;
+.mobile-controls {
+    display: none;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 5px;
+    margin-top: 10px;
 }
 
-.player {
-    outline: 2px solid white;
+.control-btn {
+    padding: 15px;
+    font-size: 20px;
+}
+
+@media (max-width: 600px) {
+    .mobile-controls { display: grid; }
+    .cell { font-size: 1em; }
 }
