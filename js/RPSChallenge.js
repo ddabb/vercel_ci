@@ -103,6 +103,15 @@ function findPathFromStartToEnd(board, width, height) {
     return false;
 }
 function isValidMove(x, y) {
+    const isFirstMove = currentPath.length === 1; // 判断是否是首次移动
+    if (isFirstMove) {
+        // 如果是首次移动，检查是否选择了起点或者与起点相邻的位置
+        if (!(x === 0 && y === 0) && ![[-1, 0], [1, 0], [0, -1], [0, 1]].some(([dx, dy]) => x === 0 + dx && y === 0 + dy)) {
+            notify("首次移动必须选择起点或与起点相邻的位置！");
+            return false;
+        }
+    }
+
     const last = currentPath[currentPath.length - 1];
     const dx = Math.abs(x - last.x);
     const dy = Math.abs(y - last.y);
