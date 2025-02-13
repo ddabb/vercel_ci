@@ -62,11 +62,35 @@
 }
 
 .control-btn {
-    padding: 15px;
-    font-size: 20px;
+    padding: 20px;
+    font-size: 24px;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
 }
 
 @media (max-width: 600px) {
     .mobile-controls { display: grid; }
     .cell { font-size: 1em; }
+}
+
+@media (min-width: 1200px) {
+    .game-board {
+        min-width: 500px;
+        min-height: 500px;
+    }
+    .cell {
+        font-size: 2em;
+    }
+}
+
+#rules-modal {
+    position: fixed;
+    top: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: white;
+    box-shadow: 0 5px 15px rgba(0,0,0,.5);
+    z-index: 1000;
+    max-width: 90vw;
+    overflow-y: auto;
 }
