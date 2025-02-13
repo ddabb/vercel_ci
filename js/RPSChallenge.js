@@ -116,7 +116,10 @@ function isValidMove(x, y) {
     if(dx > 1 || dy > 1 || (dx === 1 && dy === 1)) return false; // 检查是否为相邻格子
     
     if(currentPath.some(p => p.x === x && p.y === y)) return false; // 检查是否为已走过的位置
-    
+
+    // 如果是第一步，不检查符号规则
+    if(currentPath.length === 1) return true;
+
     const requiredSymbolIndex = (currentPath.length-1) % 3;
     const requiredSymbol = symbols[requiredSymbolIndex];
     return gameBoard[x][y] === requiredSymbol || (x === 0 && y === 0) || (x === gameHeight-1 && y === gameWidth-1);
