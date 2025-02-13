@@ -62,7 +62,7 @@
     </header>
     <div class="game-container">
         <div id="notification" style="display:none; color:red;"></div>
-        <button onclick="toggleRules()">游戏规则</button>
+
         <div id="rules-modal" style="display:none;">
             <h2>游戏规则：</h2>
             <p><strong>目标：</strong>从左上角开始，按照石头 -> 剪刀 -> 布 -> 石头的顺序移动到右下角。</p>
@@ -88,8 +88,9 @@
             <button onclick="document.getElementById('rules-modal').style.display='none';">关闭</button>
         </div>
         <div class="game-controls">
-            <button id="generate">生成新游戏</button>
+            <button id="generate">开始游戏</button>
             <button id="restart">重新开始</button>
+            <button onclick="toggleRules()">游戏规则</button>
         </div>
         <div id="game-board" class="game-board"></div>
         <div class="game-info">
