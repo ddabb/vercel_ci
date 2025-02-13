@@ -6,26 +6,55 @@
 <title>石头剪刀布挑战</title>
 <link rel="stylesheet" href="../css/RPSChallenge.css">
 </head>
-
-
 <body>
-  <div class="game-container">
-      <div class="game-controls">
-          <button id="generate">生成新游戏</button>
-          <button id="restart">重新开始</button>
-      </div>
-      <div id="game-board" class="game-board"></div>
-      <div class="game-info">
-          <span>时间: <span id="time">0</span>秒</span>
-          <span>步数: <span id="steps">0</span></span>
-      </div>
-      <div class="mobile-controls">
-          <button class="control-btn" data-direction="up">↑</button>
-          <button class="control-btn" data-direction="left">←</button>
-          <button class="control-btn" data-direction="down">↓</button>
-          <button class="control-btn" data-direction="right">→</button>
-      </div>
-  </div>
-  <script src="../js/RPSChallenge.js"></script>
+<div class="game-container">
+    <!-- 通知区域 -->
+    <div id="notification" style="display:none; color:red;"></div>
+
+    <button onclick="toggleRules()">游戏规则</button>
+    
+    <!-- 游戏规则说明 -->
+    <div id="rules-modal" style="display:none;">
+        <h2>游戏规则：</h2>
+        <p><strong>目标：</strong>从左上角开始，按照石头 -> 剪刀 -> 布 -> 石头的顺序移动到右下角。</p>
+        <ul>
+            <li>每个格子上有一个符号（石头、剪刀或布）。</li>
+            <li>您只能移动到相邻的格子（上下左右），且下一个格子上的符号必须与当前格子上的符号按上述顺序相匹配。</li>
+            <li>起点为红色旗子（🚩），终点为灰色旗子（🏁）。这些特殊的旗子不遵循符号匹配规则。</li>
+            <li>不能走已经走过的路线。</li>
+            <li>尝试找到一条有效的路径到达终点以赢得游戏。</li>
+        </ul>
+        <p><strong>操作指南：</strong></p>
+        <ul>
+            <li>点击游戏板上的一个格子进行移动。</li>
+            <li>使用屏幕下方的方向按钮（在移动设备上）来导航。</li>
+            <li>“生成新游戏”按钮用于创建一个新的游戏板。</li>
+            <li>“重新开始”按钮允许您从头开始当前的游戏板。</li>
+        </ul>
+        <p><strong>提示：</strong></p>
+        <ul>
+            <li>如果您的移动不符合规则或试图走已走过的路线，将会收到错误提示。</li>
+            <li>每一步都会被计数，尽量用最少的步数完成挑战。</li>
+        </ul>
+        <button onclick="document.getElementById('rules-modal').style.display='none';">关闭</button>
+    </div>
+    
+    <div class="game-controls">
+        <button id="generate">生成新游戏</button>
+        <button id="restart">重新开始</button>
+    </div>
+    <div id="game-board" class="game-board"></div>
+    <div class="game-info">
+        <span>时间: <span id="time">0</span>秒</span>
+        <span>步数: <span id="steps">0</span></span>
+    </div>
+    <div class="mobile-controls">
+        <button class="control-btn" data-direction="up">↑</button>
+        <button class="control-btn" data-direction="left">←</button>
+        <button class="control-btn" data-direction="down">↓</button>
+        <button class="control-btn" data-direction="right">→</button>
+    </div>
+</div>
+<script src="../js/RPSChallenge.js"></script>
 </body>
 </html>

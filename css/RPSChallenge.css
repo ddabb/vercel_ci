@@ -5,6 +5,12 @@
     text-align: center;
 }
 
+#notification {
+    display: none;
+    color: red;
+    margin-bottom: 10px;
+}
+
 .game-board {
     display: grid;
     gap: 2px;
@@ -25,8 +31,14 @@
     transition: background 0.3s;
 }
 
-.start { background: #4CAF50 !important; }
-.end { background: #FF5722 !important; }
+.start { 
+    background: #4CAF50 !important; 
+    color: white;
+}
+.end { 
+    background: #FF5722 !important; 
+    color: white;
+}
 .path { background: #2196F3 !important; }
 
 .game-controls button {
