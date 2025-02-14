@@ -40,7 +40,7 @@ try {
       const stats = fs.statSync(filePath);
       const content = fs.readFileSync(filePath, 'utf8');
       const frontMatter = extractFrontMatter(content);
-      
+
       return {
         name: file.name,
         title: frontMatter.title || path.basename(file.name, '.md'),
@@ -73,9 +73,57 @@ try {
     files: mdFiles
   }, null, 2));
 
-  console.log(`✅ 已更新: ${jsonOutputPath}`);
-  console.log(`📂 分类统计: ${Object.keys(taxonomy.categories).length}个`);
-  console.log(`🏷️ 标签统计: ${Object.keys(taxonomy.tags).length}个`);
+//  // 创建输出目录
+//  const outputDir = path.resolve(__dirname, 'classify');
+//  if (!fs.existsSync(outputDir)){
+//    fs.mkdirSync(outputDir);
+//  }
+
+//  // 生成tags.html
+//  let tagsHtmlContent = '<html><head><title>Tags</title></head><body><h1>Tags</h1><ul>';
+//  Object.keys(taxonomy.tags).forEach(tag => {
+//    const encodedTag = encodeURIComponent(tag);
+//    tagsHtmlContent += `<li><a href="/tags/${encodedTag}/">${tag} (${taxonomy.tags[tag]})</a></li>`;
+//  });
+//  tagsHtmlContent += '</ul></body></html>';
+//  fs.writeFileSync(path.join(outputDir, 'tags.html'), tagsHtmlContent);
+
+//  // 为每个标签生成详细页面
+//  Object.keys(taxonomy.tags).forEach(tag => {
+//    const articlesWithTag = mdFiles.filter(file => file.tags.includes(tag));
+//    let tagPageContent = '<html><head><title>Tag: ' + tag + '</title></head><body><h1>Articles with Tag: ' + tag + '</h1><ul>';
+//    articlesWithTag.forEach(article => {
+//      tagPageContent += `<li><a href="/article/${encodeURIComponent(article.name)}/">${article.title}</a></li>`;
+//    });
+//    tagPageContent += '</ul><a href="/tags.html">Back to Tags</a></body></html>';
+//    fs.writeFileSync(path.join(outputDir, `tag-${encodeURIComponent(tag)}.html`), tagPageContent);
+//  });
+
+//  // 类似地，生成categories.html以及每个分类的具体内容页面
+//  let categoriesHtmlContent = '<html><head><title>Categories</title></head><body><h1>Categories</h1><ul>';
+//  Object.keys(taxonomy.categories).forEach(category => {
+//    const encodedCategory = encodeURIComponent(category);
+//    categoriesHtmlContent += `<li><a href="/categories/${encodedCategory}/">${category} (${taxonomy.categories[category]})</a></li>`;
+//  });
+//  categoriesHtmlContent += '</ul></body></html>';
+//  fs.writeFileSync(path.join(outputDir, 'categories.html'), categoriesHtmlContent);
+
+//  Object.keys(taxonomy.categories).forEach(category => {
+//    const articlesInCategory = mdFiles.filter(file => file.category === category);
+//    let categoryPageContent = '<html><head><title>Category: ' + category + '</title></head><body><h1>Articles in Category: ' + category + '</h1><ul>';
+//    articlesInCategory.forEach(article => {
+//      categoryPageContent += `<li><a href="/article/${encodeURIComponent(article.name)}/">${article.title}</a></li>`;
+//    });
+//    categoryPageContent += '</ul><a href="/categories.html">Back to Categories</a></body></html>';
+//    fs.writeFileSync(path.join(outputDir, `category-${encodeURIComponent(category)}.html`), categoryPageContent);
+//  });
+
+//  console.log(`✅ 已更新: ${jsonOutputPath}`);
+//  console.log(`📂 分类统计: ${Object.keys(taxonomy.categories).length}个`);
+//  console.log(`🏷️ 标签统计: ${Object.keys(taxonomy.tags).length}个`);
+//  console.log('📄 已生成: tags.html, categories.html, 及各自的详细页面');
+
+
 
 } catch (error) {
   console.error('❌ 处理失败:', error.message);
