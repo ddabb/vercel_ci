@@ -1,0 +1,19 @@
+<%- headerContent %>
+<main class="container-fluid">
+  <div class="row mt-5">
+    <div class="col-lg-8 col-md-12 mx-auto">
+      <div class="card">
+        <div class="card-body">
+          <h1>标签：<%= tag %></h1>
+          <ul>
+            <% articles.forEach(function(article){ %>
+              <li><a href="../<%= article.name.replace(/\.md$/, '.html') %>"><%= article.title %></a></li>
+            <% }); %>
+          </ul>
+          <a href="标签列表.html">返回标签列表</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+<%- footerContent %>

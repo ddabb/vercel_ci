@@ -1,0 +1,20 @@
+<%- headerContent %>
+    <main class="container-fluid">
+        <div class="row mt-5">
+            <div class="col-lg-8 col-md-12 mx-auto">
+                <div class="card">
+                    <div class="card-body">
+                        <h1>所有标签（共<%= Object.keys(taxonomy.tags).length %>个）</h1>
+                        <ul>
+                            <% Object.keys(taxonomy.tags).forEach(function(tag){ %>
+                                <li><a href="<%= sanitizeFileName(tag) %>.html">
+                                        <%= tag %> (<%= taxonomy.tags[tag] %>)
+                                    </a></li>
+                                <% }); %>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <%- footerContent %>

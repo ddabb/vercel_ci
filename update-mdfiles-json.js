@@ -1,7 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 const yaml = require('js-yaml');
-
+const ejs = require('ejs');
 const mdFilesDirectory = path.resolve(__dirname, 'mdfiles');
 const jsonOutputPath = path.resolve(__dirname, 'jsons', 'mdfiles.json');
 
@@ -73,55 +73,59 @@ try {
     files: mdFiles
   }, null, 2));
 
-//  // 创建输出目录
-//  const outputDir = path.resolve(__dirname, 'classify');
-//  if (!fs.existsSync(outputDir)){
-//    fs.mkdirSync(outputDir);
-//  }
+// 确保输出目录存在
+const outputDir = path.resolve(__dirname);
+const tagOutputDir = path.join(outputDir, 'tag');
+const categoryOutputDir = path.join(outputDir, 'category');
 
-//  // 生成tags.html
-//  let tagsHtmlContent = '<html><head><title>Tags</title></head><body><h1>Tags</h1><ul>';
-//  Object.keys(taxonomy.tags).forEach(tag => {
-//    const encodedTag = encodeURIComponent(tag);
-//    tagsHtmlContent += `<li><a href="/tags/${encodedTag}/">${tag} (${taxonomy.tags[tag]})</a></li>`;
-//  });
-//  tagsHtmlContent += '</ul></body></html>';
-//  fs.writeFileSync(path.join(outputDir, 'tags.html'), tagsHtmlContent);
+if (!fs.existsSync(tagOutputDir)){
+  fs.mkdirSync(tagOutputDir, { recursive: true });
+}
 
-//  // 为每个标签生成详细页面
-//  Object.keys(taxonomy.tags).forEach(tag => {
-//    const articlesWithTag = mdFiles.filter(file => file.tags.includes(tag));
-//    let tagPageContent = '<html><head><title>Tag: ' + tag + '</title></head><body><h1>Articles with Tag: ' + tag + '</h1><ul>';
-//    articlesWithTag.forEach(article => {
-//      tagPageContent += `<li><a href="/article/${encodeURIComponent(article.name)}/">${article.title}</a></li>`;
-//    });
-//    tagPageContent += '</ul><a href="/tags.html">Back to Tags</a></body></html>';
-//    fs.writeFileSync(path.join(outputDir, `tag-${encodeURIComponent(tag)}.html`), tagPageContent);
-//  });
+if (!fs.existsSync(categoryOutputDir)){
+  fs.mkdirSync(categoryOutputDir, { recursive: true });
+}
 
-//  // 类似地，生成categories.html以及每个分类的具体内容页面
-//  let categoriesHtmlContent = '<html><head><title>Categories</title></head><body><h1>Categories</h1><ul>';
-//  Object.keys(taxonomy.categories).forEach(category => {
-//    const encodedCategory = encodeURIComponent(category);
-//    categoriesHtmlContent += `<li><a href="/categories/${encodedCategory}/">${category} (${taxonomy.categories[category]})</a></li>`;
-//  });
-//  categoriesHtmlContent += '</ul></body></html>';
-//  fs.writeFileSync(path.join(outputDir, 'categories.html'), categoriesHtmlContent);
+function sanitizeFileName(name) {
+  return name.replace(/[\/\\?%*:|"<>]/g, '-'); // 将非法字符替换为'-'
+}
 
-//  Object.keys(taxonomy.categories).forEach(category => {
-//    const articlesInCategory = mdFiles.filter(file => file.category === category);
-//    let categoryPageContent = '<html><head><title>Category: ' + category + '</title></head><body><h1>Articles in Category: ' + category + '</h1><ul>';
-//    articlesInCategory.forEach(article => {
-//      categoryPageContent += `<li><a href="/article/${encodeURIComponent(article.name)}/">${article.title}</a></li>`;
-//    });
-//    categoryPageContent += '</ul><a href="/categories.html">Back to Categories</a></body></html>';
-//    fs.writeFileSync(path.join(outputDir, `category-${encodeURIComponent(category)}.html`), categoryPageContent);
-//  });
+// 加载EJS模板
+const tagsTemplate = fs.readFileSync(path.join(__dirname, 'components', 'tags.ejs'), 'utf8');
+const categoriesTemplate = fs.readFileSync(path.join(__dirname, 'components', 'categories.ejs'), 'utf8');
+const tagTemplate = fs.readFileSync(path.join(__dirname, 'components', 'tag.ejs'), 'utf8');
+const categoryTemplate = fs.readFileSync(path.join(__dirname, 'components', 'category.ejs'), 'utf8');
 
-//  console.log(`✅ 已更新: ${jsonOutputPath}`);
-//  console.log(`📂 分类统计: ${Object.keys(taxonomy.categories).length}个`);
-//  console.log(`🏷️ 标签统计: ${Object.keys(taxonomy.tags).length}个`);
-//  console.log('📄 已生成: tags.html, categories.html, 及各自的详细页面');
+// 获取header和footer内容
+const headerContent = fs.readFileSync(path.join(__dirname, 'components', 'header.ejs'), 'utf8');
+const footerContent = fs.readFileSync(path.join(__dirname, 'components', 'footer.ejs'), 'utf8');
+
+// 渲染并写入标签列表页面
+let renderedTagsHtml = ejs.render(tagsTemplate, { taxonomy, headerContent, footerContent, sanitizeFileName });
+fs.writeFileSync(path.join(tagOutputDir, '标签列表.html'), renderedTagsHtml);
+
+// 渲染并写入分类列表页面
+let renderedCategoriesHtml = ejs.render(categoriesTemplate, { taxonomy, headerContent, footerContent, sanitizeFileName });
+fs.writeFileSync(path.join(categoryOutputDir, '分类列表.html'), renderedCategoriesHtml);
+
+// 为每个标签生成详细页面
+Object.keys(taxonomy.tags).forEach(tag => {
+  const articlesWithTag = mdFiles.filter(file => file.tags.includes(tag));
+  let renderedTagPage = ejs.render(tagTemplate, { tag, articles: articlesWithTag, headerContent, footerContent });
+  fs.writeFileSync(path.join(tagOutputDir, `${sanitizeFileName(tag)}.html`), renderedTagPage);
+});
+
+// 为每个分类生成详细页面
+Object.keys(taxonomy.categories).forEach(category => {
+  const articlesInCategory = mdFiles.filter(file => file.category === category);
+  let renderedCategoryPage = ejs.render(categoryTemplate, { category, articles: articlesInCategory, headerContent, footerContent });
+  fs.writeFileSync(path.join(categoryOutputDir, `${sanitizeFileName(category)}.html`), renderedCategoryPage);
+});
+
+console.log(`✅ 已更新: ${jsonOutputPath}`);
+console.log(`📂 分类统计: ${Object.keys(taxonomy.categories).length}个`);
+console.log(`🏷️ 标签统计: ${Object.keys(taxonomy.tags).length}个`);
+console.log('📄 已生成: 标签列表.html, 分类列表.html 及各自的详细页面');
 
 
 
