@@ -16,6 +16,26 @@ function extractFrontMatter(content) {
   }
 }
 
+// 清空指定目录
+function emptyDirectory(dirPath) {
+  if (fs.existsSync(dirPath)) {
+    const files = fs.readdirSync(dirPath);
+    files.forEach(function(file) {
+      const filePath = path.join(dirPath, file);
+      try {
+        if (fs.statSync(filePath).isFile()) {
+          fs.unlinkSync(filePath); // 删除文件
+        } else {
+          emptyDirectory(filePath); // 递归删除子目录
+          fs.rmdirSync(filePath); // 删除空目录
+        }
+      } catch (err) {
+        console.error(`无法删除 ${filePath}:`, err.message);
+      }
+    });
+  }
+}
+
 // 生成分类/标签统计
 function generateTaxonomy(items, field) {
   return items.reduce((acc, item) => {
@@ -77,6 +97,8 @@ try {
 const outputDir = path.resolve(__dirname);
 const tagOutputDir = path.join(outputDir, 'tag');
 const categoryOutputDir = path.join(outputDir, 'category');
+emptyDirectory(tagOutputDir);
+emptyDirectory(categoryOutputDir);
 
 if (!fs.existsSync(tagOutputDir)){
   fs.mkdirSync(tagOutputDir, { recursive: true });

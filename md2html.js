@@ -24,10 +24,10 @@ const extractFrontMatter = (content) => {
 
 // 修改转换函数
 function convertMarkdownToHtml(markdownContent) {
-  const { title, description, tags } = extractFrontMatter(markdownContent);
+  const { title, description, tags,category } = extractFrontMatter(markdownContent);
   return {
     content: converter.makeHtml(markdownContent.replace(/^---\n[\s\S]*?\n---/, '')),
-    meta: { title, description, tags }
+    meta: { title, description, tags,category }
   };
 }
 
