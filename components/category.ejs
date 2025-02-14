@@ -34,7 +34,7 @@
                         </h1>
                         <ul>
                             <% articles.forEach(function(article){ %>
-                                <li><a href="../<%= article.name.replace(/\.md$/, '.html') %>">
+                                <li><a href="../mdhtml/<%= article.name.replace(/\.md$/, '.html') %>">
                                         <%= article.title %>
                                     </a></li>
                                 <% }); %>

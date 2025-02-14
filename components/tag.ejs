@@ -33,7 +33,7 @@
           <h1>标签：<%= tag %></h1>
           <ul>
             <% articles.forEach(function(article){ %>
-              <li><a href="../<%= article.name.replace(/\.md$/, '.html') %>"><%= article.title %></a></li>
+              <li><a href="../mdhtml/<%= article.name.replace(/\.md$/, '.html') %>"><%= article.title %></a></li>
             <% }); %>
           </ul>
           <a href="标签列表.html">返回标签列表</a>
