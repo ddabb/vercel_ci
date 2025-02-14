@@ -28,7 +28,7 @@ export default async function handler(request, response) {
         });
       });
 
-      articles = data;
+      articles = data.files;
 
       // 如果有人提供了关键词，我们就只给他们看包含关键词的文章
       if (keyword) {
