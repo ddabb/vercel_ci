@@ -2,6 +2,7 @@ const fs = require('fs').promises;
 const path = require('path');
 const showdown = require('showdown');
 const ejs = require('ejs');
+const yaml = require('js-yaml');
 
 const converter = new showdown.Converter();
 
@@ -15,10 +16,21 @@ async function readMarkdownFile(filePath) {
   }
 }
 
+// 新增元数据提取
+const extractFrontMatter = (content) => {
+  const match = content.match(/^---\n([\s\S]*?)\n---/);
+  return match ? yaml.load(match[1]) : {};
+};
+
+// 修改转换函数
 function convertMarkdownToHtml(markdownContent) {
-  console.log('Converting Markdown to HTML...');
-  return converter.makeHtml(markdownContent);
+  const { title, description, keywords } = extractFrontMatter(markdownContent);
+  return {
+    content: converter.makeHtml(markdownContent.replace(/^---\n[\s\S]*?\n---/, '')),
+    meta: { title, description, keywords }
+  };
 }
+
 
 async function ensureComponentsDirectory(componentsDirectory) {
   console.log(`Ensuring components directory exists: ${componentsDirectory}`);
@@ -46,7 +58,8 @@ async function updateHtmlFile(htmlFilePath, htmlContent, outputFilePath) {
     const headerContent = await readEjsFile(path.join(__dirname, 'components', 'header.ejs'));
     const footerContent = await readEjsFile(path.join(__dirname, 'components', 'footer.ejs'));
     const updatedHtml = await ejs.renderFile(htmlFilePath, {
-      articleContent: htmlContent,
+      articleContent: htmlContent.content,
+      meta: htmlContent.meta,
       headerContent: headerContent,
       footerContent: footerContent
     }, { escape: false });
