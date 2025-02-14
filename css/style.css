@@ -423,6 +423,33 @@ button {
   font-size: 16px;
 }
 
+/* 自定义标签链接样式 */
+.custom-tag-link {
+  display: inline-block;
+  margin-right: 5px;
+  margin-bottom: 5px;
+  padding: 6px 12px;
+  font-size: 0.9em;
+  color: #fff;
+  /* 文本颜色 */
+  background-color: #007bff;
+  /* 背景颜色 */
+  border-radius: 4px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+/* 当鼠标悬停在标签上时的样式 */
+.custom-tag-link:hover {
+  background-color: #0056b3;
+  /* 更深的颜色用于悬停效果 */
+}
+
+/* 可选：为已访问的链接添加不同的颜色 */
+.custom-tag-link:visited {
+  background-color: #6c757d;
+}
+
 /* 确保在小屏幕上也能良好显示 */
 @media (max-width: 480px) {
   .game-score {

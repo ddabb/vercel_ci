@@ -49,7 +49,7 @@
                     <span>标签：</span>
                     <% meta.tags.forEach(function(tag){ // 对标签进行URL编码，确保其中文字符可以在URL中正确使用 var
                       encodedTag=tag.trim(); %>
-                      <a href="/tag/<%= encodedTag %>.html" class="badge bg-secondary">
+                      <a href="/tag/<%= encodedTag %>.html" class="custom-tag-link">
                         <%= tag.trim() %>
                       </a>
                       <% }); %>
