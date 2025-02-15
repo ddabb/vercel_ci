@@ -1,3 +1,8 @@
+---
+title: DeepSeek与ChatGPT：国产AI模型的市场突围之路
+category: 人工智能
+tags: [DeepSeek, ChatGPT, 技术架构, 性能差异, 成本革命, 应用场景, 生态竞争]
+---
 ### DeepSeek与ChatGPT：国产AI模型的市场突围之路
 
 #### 一、技术架构的革新：从“大而全”到“专而精”

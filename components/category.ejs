@@ -24,28 +24,48 @@
 </head>
 
 <body>
-<%- headerContent %>
-    <main class="container-fluid">
-        <div class="row mt-5">
-            <div class="col-lg-8 col-md-12 mx-auto">
-                <div class="card">
-                    <div class="card-body">
-                        <h1>分类：<%= category %>
-                        </h1>
-                        <ul>
-                            <% articles.forEach(function(article){ %>
-                                <li><a href="../mdhtml/<%= article.name.replace(/\.md$/, '.html') %>">
-                                        <%= article.title %>
-                                    </a></li>
-                                <% }); %>
-                        </ul>
-                        <a href="分类列表.html">返回分类列表</a>
+    <%- headerContent %>
+        <main class="container-fluid mt-4">
+            <div class="row">
+                <div class="col-lg-8 col-md-12 mx-auto">
+                    <!-- 面包屑导航 -->
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a href="../index.html">首页</a></li>
+                            <li class="breadcrumb-item"><a href="分类列表.html">分类列表</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">
+                                <%= category %>
+                            </li>
+                        </ol>
+                    </nav>
+
+                    <!-- 分类内容卡片 -->
+                    <div class="card shadow-sm">
+                        <div class="card-body">
+                            <h1 class="card-title"><i class="bi bi-folder-fill"></i> 分类：<%= category %>
+                            </h1>
+                            <ul class="list-group list-group-flush">
+                                <% articles.forEach(function(article){ %>
+                                    <li class="list-group-item">
+                                        <a href="../mdhtml/<%= article.name.replace(/\.md$/, '.html') %>"
+                                            class="text-decoration-none">
+                                            <i class="bi bi-file-earmark-text"></i>
+                                            <%= article.title %>
+                                        </a>
+                                    </li>
+                                    <% }); %>
+                            </ul>
+                            <div class="mt-4">
+                                <a href="分类列表.html" class="btn btn-outline-primary">
+                                    <i class="bi bi-arrow-left"></i> 返回分类列表
+                                </a>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </main>
-    <%- footerContent %>
+        </main>
+        <%- footerContent %>
 </body>
 
 </html>

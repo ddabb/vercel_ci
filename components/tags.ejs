@@ -24,26 +24,50 @@
 </head>
 
 <body>
-<%- headerContent %>
-    <main class="container-fluid">
-        <div class="row mt-5">
-            <div class="col-lg-8 col-md-12 mx-auto">
-                <div class="card">
-                    <div class="card-body">
-                        <h1>所有标签（共<%= Object.keys(taxonomy.tags).length %>个）</h1>
-                        <ul>
-                            <% Object.keys(taxonomy.tags).forEach(function(tag){ %>
-                                <li><a href="<%= sanitizeFileName(tag) %>.html">
-                                        <%= tag %> (<%= taxonomy.tags[tag] %>)
-                                    </a></li>
+    <%- headerContent %>
+        <main class="container-fluid">
+            <div class="row mt-5">
+                <div class="col-lg-10 col-xl-8 mx-auto">
+                    <div class="card shadow-sm">
+                        <div class="card-body">
+                            <h2 class="mb-4 fw-bold text-primary">
+                                <i class="bi bi-tags me-2"></i>
+                                所有标签（共<%= Object.keys(taxonomy.tags).length %>个）
+                            </h2>
+                            
+                            <% 
+                                // 将标签转换为数组并排序
+                                const tagsArray = Object.keys(taxonomy.tags).map(tagName => ({
+                                    name: tagName,
+                                    count: taxonomy.tags[tagName]
+                                }));
+                                const sortedTags = tagsArray.sort((a, b) => a.name.localeCompare(b.name));
+                            %>
+    
+                            <div class="row row-cols-2 row-cols-md-3 row-cols-lg-4 g-3">
+                                <% sortedTags.forEach(function(tag){ %>
+                                <div class="col">
+                                    <a href="<%= sanitizeFileName(tag.name) %>.html" 
+                                       class="d-flex justify-content-between align-items-center 
+                                              btn btn-outline-primary btn-hover-scale 
+                                              p-3 rounded-3 text-decoration-none">
+                                        <span class="text-truncate">
+                                            <i class="bi bi-tag me-1"></i>
+                                            <%= tag.name %>
+                                        </span>
+                                        <span class="badge bg-primary ms-2">
+                                            <%= tag.count %>
+                                        </span>
+                                    </a>
+                                </div>
                                 <% }); %>
-                        </ul>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </main>
-    <%- footerContent %>
-</body>
-
-</html>
+        </main>
+        <%- footerContent %>
+    </body>
+    
+    </html>

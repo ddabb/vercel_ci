@@ -33,28 +33,33 @@
           <div class="card">
             <div class="card-body">
               <div id="article-content">
+                <!-- 面包屑导航 -->
                 <% if (meta && meta.category) { %>
-                  <!-- 面包屑导航 -->
-                  <nav aria-label="breadcrumb" class="mt-3">
+                  <nav aria-label="breadcrumb" class="mb-4">
                     <ol class="breadcrumb">
-                      <li class="breadcrumb-item">
-                        <a href="/category/<%= meta.category %>.html"><%= meta.category %></a>
+                      <li class="breadcrumb-item"><a href="../index.html">首页</a></li>
+                      <li class="breadcrumb-item"><a href="/category/<%= meta.category %>.html">
+                          <%= meta.category %>
+                        </a></li>
+                      <li class="breadcrumb-item active" aria-current="page">
+                        <%= meta.title %>
                       </li>
                     </ol>
                   </nav>
-                <% } %>
-                <%- articleContent %>
-                <% if (meta && meta.tags && meta.tags.length> 0) { %>
-                  <div class="tag-links mt-3">
-                    <span>标签：</span>
-                    <% meta.tags.forEach(function(tag){ // 对标签进行URL编码，确保其中文字符可以在URL中正确使用 var
-                      encodedTag=tag.trim(); %>
-                      <a href="/tag/<%= encodedTag %>.html" class="custom-tag-link">
-                        <%= tag.trim() %>
-                      </a>
-                      <% }); %>
-                  </div>
                   <% } %>
+                    <%- articleContent %>
+                      <!-- 标签部分 -->
+                      <% if (meta && meta.tags && meta.tags.length> 0) { %>
+                        <div class="tag-links mt-4">
+                          <span class="badge bg-secondary"><i class="bi bi-tags"></i> 标签：</span>
+                          <% meta.tags.forEach(function(tag){ %>
+                            <a href="/tag/<%= encodeURIComponent(tag.trim()) %>.html"
+                              class="badge bg-primary text-decoration-none me-1">
+                              <%= tag.trim() %>
+                            </a>
+                            <% }); %>
+                        </div>
+                        <% } %>
               </div>
             </div>
           </div>
