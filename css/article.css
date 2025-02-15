@@ -69,8 +69,8 @@
   }
 
   .tag-link {
-    background-color: #007bff; /* 蓝色背景 */
-    color: #fff; /* 白色文字 */
+    background-color: #f8f9fa; /* 浅灰色背景 */
+    color: #333; /* 深灰色文字 */
     font-size: 0.9rem;
     padding: 0.5rem 0.75rem;
     margin-right: 0.5rem;
@@ -79,5 +79,5 @@
   }
   
   .tag-link:hover {
-    background-color: #0056b3; /* 悬停时深蓝色背景 */
+    background-color: #e9ecef; /* 悬停时背景颜色 */
   }
