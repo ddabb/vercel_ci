@@ -10,7 +10,12 @@
     box-shadow: 0 4px 8px rgba(0, 0, 0, .1);
 }
 
-#article-content h1, #article-content h2, #article-content h3, #article-content h4, #article-content h5, #article-content h6 {
+#article-content h1,
+#article-content h2,
+#article-content h3,
+#article-content h4,
+#article-content h5,
+#article-content h6 {
     margin-top: 1.6em;
     margin-bottom: 0.4em;
     font-weight: bold;
@@ -55,29 +60,36 @@
 
 /* article.css */
 .badge.tag-label {
-    background-color: #f8f9fa; /* 浅灰色背景 */
-    color: #333; /* 深灰色文字 */
-    border: 1px solid #dee2e6; /* 边框 */
+    background-color: #f8f9fa;
+    /* 浅灰色背景 */
+    color: #333;
+    /* 深灰色文字 */
+    border: 1px solid #dee2e6;
+    /* 边框 */
     font-size: 0.9rem;
     padding: 0.5rem 0.75rem;
     margin-right: 0.5rem;
     transition: background-color 0.3s ease;
-  }
-  
-  .badge.tag-label:hover {
-    background-color: #e9ecef; /* 悬停时背景颜色 */
-  }
+}
 
-  .tag-link {
-    background-color: #f8f9fa; /* 浅灰色背景 */
-    color: #333; /* 深灰色文字 */
+.badge.tag-label:hover {
+    background-color: #e9ecef;
+    /* 悬停时背景颜色 */
+}
+
+.badge.tag-link {
+    background-color: #f8f9fa;
+    /* 浅灰色背景 */
+    color: #333;
+    /* 深灰色文字 */
     font-size: 0.9rem;
     padding: 0.5rem 0.75rem;
     margin-right: 0.5rem;
     text-decoration: none;
     transition: background-color 0.3s ease;
-  }
-  
-  .tag-link:hover {
-    background-color: #e9ecef; /* 悬停时背景颜色 */
-  }
+}
+
+.badge.tag-link:hover {
+    background-color: #e9ecef;
+    /* 悬停时背景颜色 */
+}
