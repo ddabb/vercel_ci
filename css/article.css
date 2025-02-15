@@ -67,3 +67,17 @@
   .badge.tag-label:hover {
     background-color: #e9ecef; /* 悬停时背景颜色 */
   }
+
+  .tag-link {
+    background-color: #007bff; /* 蓝色背景 */
+    color: #fff; /* 白色文字 */
+    font-size: 0.9rem;
+    padding: 0.5rem 0.75rem;
+    margin-right: 0.5rem;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+  }
+  
+  .tag-link:hover {
+    background-color: #0056b3; /* 悬停时深蓝色背景 */
+  }

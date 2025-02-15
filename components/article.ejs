@@ -51,7 +51,7 @@
                           <span class="badge tag-label"><i class="bi bi-tags"></i> 标签：</span>
                           <% meta.tags.forEach(function(tag){ %>
                             <a href="/tag/<%= encodeURIComponent(tag.trim()) %>.html"
-                              class="badge bg-primary text-decoration-none me-1">
+                              class="badge tag-link">
                               <%= tag.trim() %>
                             </a>
                             <% }); %>
