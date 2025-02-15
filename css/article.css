@@ -52,3 +52,18 @@
     border-radius: 4px;
     font-size: 0.95em;
 }
+
+/* article.css */
+.badge.tag-label {
+    background-color: #f8f9fa; /* 浅灰色背景 */
+    color: #333; /* 深灰色文字 */
+    border: 1px solid #dee2e6; /* 边框 */
+    font-size: 0.9rem;
+    padding: 0.5rem 0.75rem;
+    margin-right: 0.5rem;
+    transition: background-color 0.3s ease;
+  }
+  
+  .badge.tag-label:hover {
+    background-color: #e9ecef; /* 悬停时背景颜色 */
+  }

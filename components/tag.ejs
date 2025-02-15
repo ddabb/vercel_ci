@@ -24,42 +24,45 @@
 </head>
 
 <body>
-<%- headerContent %>
+  <%- headerContent %>
 
-<main class="container-fluid mt-4">
-  <div class="row">
-    <div class="col-lg-8 col-md-12 mx-auto">
-      <nav aria-label="breadcrumb">
-        <ol class="breadcrumb">
-          <li class="breadcrumb-item"><a href="../index.html">首页</a></li>
-          <li class="breadcrumb-item"><a href="标签列表.html">标签列表</a></li>
-          <li class="breadcrumb-item active" aria-current="page"><%= tag %></li>
-        </ol>
-      </nav>
-
-      <div class="card shadow-sm">
-        <div class="card-body">
-          <h1 class="card-title"><i class="bi bi-tag-fill"></i> 标签：<%= tag %></h1>
-          <ul class="list-group list-group-flush">
-            <% articles.forEach(function(article){ %>
-              <li class="list-group-item">
-                <a href="../mdhtml/<%= article.name.replace(/\.md$/, '.html') %>" class="text-decoration-none">
-                  <i class="bi bi-file-earmark-text"></i> <%= article.title %>
-                </a>
+    <main class="container-fluid mt-4">
+      <div class="row">
+        <div class="col-lg-8 col-md-12 mx-auto">
+          <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item"><a href="标签列表.html">标签列表</a></li>
+              <li class="breadcrumb-item active" aria-current="page">
+                <%= tag %>
               </li>
-            <% }); %>
-          </ul>
-          <div class="mt-4">
-            <a href="标签列表.html" class="btn btn-outline-primary">
-              <i class="bi bi-arrow-left"></i> 返回标签列表
-            </a>
+            </ol>
+          </nav>
+
+          <div class="card shadow-sm">
+            <div class="card-body">
+              <h1 class="card-title"><i class="bi bi-tag-fill"></i> 标签：<%= tag %>
+              </h1>
+              <ul class="list-group list-group-flush">
+                <% articles.forEach(function(article){ %>
+                  <li class="list-group-item">
+                    <a href="../mdhtml/<%= article.name.replace(/\.md$/, '.html') %>" class="text-decoration-none">
+                      <i class="bi bi-file-earmark-text"></i>
+                      <%= article.title %>
+                    </a>
+                  </li>
+                  <% }); %>
+              </ul>
+              <div class="mt-4">
+                <a href="标签列表.html" class="btn btn-outline-primary">
+                  <i class="bi bi-arrow-left"></i> 返回标签列表
+                </a>
+              </div>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-  </div>
-</main>
-<%- footerContent %>
+    </main>
+    <%- footerContent %>
 
 </body>
 
