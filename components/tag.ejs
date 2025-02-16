@@ -38,30 +38,50 @@
             </ol>
           </nav>
 
-          <div class="card shadow-sm">
-            <div class="card-body">
-              <h1 class="card-title"><i class="bi bi-tag-fill"></i> 标签：<%= tag %>
-              </h1>
-              <ul class="list-group list-group-flush">
-                <% articles.forEach(function(article){ %>
-                  <li class="list-group-item">
-                    <a href="../mdhtml/<%= article.name.replace(/\.md$/, '.html') %>" class="text-decoration-none">
+          <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+            <% articles.forEach(function(article){ %>
+              <div class="col">
+                <div class="card h-100 shadow-sm">
+                  <div class="card-body">
+                    <h5 class="card-title">
                       <i class="bi bi-file-earmark-text"></i>
-                      <%= article.title %>
-                    </a>
-                  </li>
-                  <% }); %>
-              </ul>
-              <div class="mt-4">
-                <a href="标签列表.html" class="btn btn-outline-primary">
-                  <i class="bi bi-arrow-left"></i> 返回标签列表
-                </a>
+                      <a href="../mdhtml/<%= article.name.replace(/\.md$/, '.html') %>" class="text-decoration-none">
+                        <%= article.title %>
+                      </a>
+                    </h5>
+                    <p class="card-text">
+                      <%= article.description || '暂无描述' %>
+                    </p>
+                    <% if (article.birthtime) { %>
+                      <small class="text-muted"><%= new Date(article.birthtime).toISOString().split('T')[0] %></small>
+                    <% } else { %>
+                      <small class="text-muted">未知日期</small>
+                    <% } %>
+                  </div>
+                  <div class="card-footer text-muted">
+                    <span class="badge bg-primary">
+                      <%= article.category %>
+                    </span>
+                    <% article.tags.forEach(function(tag) { %>
+                      <span class="badge bg-secondary">
+                        <%= tag %>
+                      </span>
+                      <% }); %>
+                  </div>
+                </div>
               </div>
-            </div>
+              <% }); %>
+          </div>
+
+          <div class="mt-4 text-center">
+            <a href="标签列表.html" class="btn btn-outline-primary">
+              <i class="bi bi-arrow-left"></i> 返回标签列表
+            </a>
           </div>
         </div>
       </div>
     </main>
+
     <%- footerContent %>
 
 </body>
