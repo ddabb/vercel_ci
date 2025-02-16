@@ -40,7 +40,6 @@
                       <li class="breadcrumb-item"><a href="/category/<%= meta.category %>.html">
                           <%= meta.category %>
                         </a></li>
-
                     </ol>
                   </nav>
                   <% } %>
@@ -50,8 +49,7 @@
                         <div class="tag-links mt-4">
                           <span class="badge tag-label"><i class="bi bi-tags"></i> 标签：</span>
                           <% meta.tags.forEach(function(tag){ %>
-                            <a href="/tag/<%= encodeURIComponent(tag.trim()) %>.html"
-                              class="badge tag-link">
+                            <a href="/tag/<%= encodeURIComponent(tag.trim()) %>.html" class="badge tag-link">
                               <%= tag.trim() %>
                             </a>
                             <% }); %>
