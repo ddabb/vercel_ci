@@ -53,19 +53,21 @@
                       <%= article.description || '暂无描述' %>
                     </p>
                     <% if (article.birthtime) { %>
-                      <small class="text-muted"><%= new Date(article.birthtime).toISOString().split('T')[0] %></small>
-                    <% } else { %>
-                      <small class="text-muted">未知日期</small>
-                    <% } %>
+                      <small class="text-muted">
+                        <%= new Date(article.birthtime).toISOString().split('T')[0] %>
+                      </small>
+                      <% } else { %>
+                        <small class="text-muted">未知日期</small>
+                        <% } %>
                   </div>
                   <div class="card-footer text-muted">
                     <span class="badge bg-primary">
                       <%= article.category %>
                     </span>
                     <% article.tags.forEach(function(tag) { %>
-                      <span class="badge bg-secondary">
-                        <%= tag %>
-                      </span>
+                      <a href="/tag/<%= encodeURIComponent(tag.trim()) %>.html" class="badge tag-link">
+                        <%= tag.trim() %>
+                      </a>
                       <% }); %>
                   </div>
                 </div>
