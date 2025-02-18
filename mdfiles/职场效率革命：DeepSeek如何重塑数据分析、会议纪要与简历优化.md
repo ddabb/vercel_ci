@@ -1,7 +1,7 @@
 ---
 title: 职场效率革命：DeepSeek如何重塑数据分析、会议纪要与简历优化
 category: 人工智能
-tags: [deepseek, 数据分析, 会议纪要, 简历优化]
+tags: [DeepSeek, 数据分析, 会议纪要, 简历优化]
 ---
 **职场效率革命：DeepSeek如何重塑数据分析、会议纪要与简历优化**  
 

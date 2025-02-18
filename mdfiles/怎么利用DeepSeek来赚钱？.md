@@ -1,7 +1,7 @@
 ---
 title: 怎么利用DeepSeek来赚钱？
 category: 人工智能
-tags: [deepseek, 提升效率, 知识付费, 自动化处理, 市场分析]
+tags: [DeepSeek, 提升效率, 知识付费, 自动化处理, 市场分析]
 ---
 # 如何利用DeepSeek赚钱？一文告诉你实用方法！
 
