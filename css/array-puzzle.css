@@ -9,31 +9,76 @@
 }
 
 /* Grid Container Styles */
+
 .grid-container {
-    display: grid;
-    grid-template-columns: repeat(4, 50px);
-    /* Adjust based on your grid size */
-    grid-gap: 5px;
-    margin-bottom: 20px;
+    display: inline-grid;
+    grid-template-columns: 70px repeat(6, 60px);
+    grid-template-rows: auto repeat(6, 60px);
+    /* 修改行高以匹配列宽 */
+    gap: 2px;
+    padding: 15px;
+    background: #f5f5f5;
+    border: 2px solid #333;
+    font-family: Arial;
 }
 
-.grid-cell {
-    width: 50px;
-    height: 50px;
-    border: 1px solid #ccc;
+.row-count {
+    grid-column: 1;
+    background: #B3E5FC;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-right: 8px;
+    font-weight: bold;
+    height: 100%;
+    white-space: nowrap;
+    /* 确保文本不在行内换行 */
+}
+
+.col-count-container {
+    grid-column: 2 / span 6;
+    grid-row: 1;
+    display: grid;
+    grid-template-columns: repeat(6, 60px);
+    gap: 2px;
+    background: #B3E5FC;
+    padding: 5px;
+    min-height: 60px;
+}
+
+.col-count {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    /* 修改为底部对齐 */
+    align-items: center;
+    font-weight: bold;
+    line-height: 1.4;
+    font-size: 14px;
+    word-break: break-all;
+    text-align: center;
+    /* 添加以确保数字在单元格中居中 */
+    padding-bottom: 2px;
+    /* 添加一点底部内边距以避免数字紧贴底部边框 */
+}
+
+.cell {
+    background: #fff;
+    border: 1px solid #BDBDBD;
     display: flex;
     align-items: center;
     justify-content: center;
-    cursor: pointer;
+    font-size: 18px;
+    height: 60px;
+    /* 设置固定高度以匹配宽度 */
 }
 
-.grid-cell.painted {
-    background-color: blue;
+.obstacle {
+    background: #616161;
+    color: white;
+    font-weight: bold;
 }
 
-.grid-cell.x-marked {
-    background-color: red;
-}
 
 /* Game Button Container Styles */
 .game-button-container {
