@@ -30,21 +30,25 @@
     }
 
     /* Masonry items */
-    .grid-item { 
-      width: calc(100% / 3); /* 默认每行3个卡片 */
+    .grid-item {
+      width: calc((100% - (2 * 10px)) / 3);
+      /* 减去两个gutter宽度后分成三份 */
       box-sizing: border-box;
       margin-bottom: 10px;
+      /* 可选，根据需要调整底部外边距 */
     }
 
     @media (max-width: 768px) {
       .grid-item {
-        width: calc(100% / 2); /* 平板设备上每行2个卡片 */
+        width: calc((100% - 10px) / 2);
+        /* 平板设备上每行2个卡片，减去一个gutter宽度 */
       }
     }
 
     @media (max-width: 576px) {
       .grid-item {
-        width: 100%; /* 手机设备上每行1个卡片 */
+        width: 100%;
+        /* 手机设备上每行1个卡片 */
       }
     }
   </style>
@@ -86,61 +90,80 @@
   </div>
 </header>
 
-  <main class="container-fluid mt-4">
-    <div class="row">
-      <div class="col-lg-8 col-md-12 mx-auto">
-        <nav aria-label="breadcrumb">
-          <ol class="breadcrumb">
-            <li class="breadcrumb-item"><a href="标签列表.html">标签列表</a></li>
-            <li class="breadcrumb-item active" aria-current="page">工作转型</li>
-          </ol>
-        </nav>
+    <main class="container-fluid mt-4">
+      <div class="row">
+        <div class="col-lg-8 col-md-12 mx-auto">
+          <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item"><a href="标签列表.html">标签列表</a></li>
+              <li class="breadcrumb-item active" aria-current="page">
+                工作转型
+              </li>
+            </ol>
+          </nav>
 
-        <div class="grid">
-          
-            <div class="grid-item">
-              <div class="card shadow-sm">
-                <div class="card-body">
-                  <h5 class="card-title">
-                    <i class="bi bi-file-earmark-text"></i>
-                    <a href="../mdhtml/元宇宙会改变人类的生活方式吗.html" class="text-decoration-none">
-                      元宇宙会改变人类的生活方式吗
+          <div class="grid">
+            
+              <div class="grid-item">
+                <div class="card shadow-sm">
+                  <div class="card-body">
+                    <h5 class="card-title">
+                      <i class="bi bi-file-earmark-text"></i>
+                      <a href="../mdhtml/元宇宙会改变人类的生活方式吗.html" class="text-decoration-none">
+                        元宇宙会改变人类的生活方式吗
+                      </a>
+                    </h5>
+                    
+                        
+                          <small class="text-muted">
+                            2025-02-10
+                          </small>
+                          
+                  </div>
+                  <div class="card-footer text-muted">
+                    <a href="/category/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD.html"
+                      class="badge bg-primary">
+                      人工智能
                     </a>
-                  </h5>
-                  
-                  
-                    <small class="text-muted">2025-02-10</small>
-                  
-                </div>
-                <div class="card-footer text-muted">
-                  <a href="/category/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD.html" class="badge bg-primary">人工智能</a>
-                  
-                    <a href="/tag/%E5%85%83%E5%AE%87%E5%AE%99.html" class="badge tag-link">元宇宙</a>
-                  
-                    <a href="/tag/%E8%99%9A%E5%AE%9E%E8%9E%8D%E5%90%88.html" class="badge tag-link">虚实融合</a>
-                  
-                    <a href="/tag/%E7%A4%BE%E4%BA%A4%E5%88%9B%E6%96%B0.html" class="badge tag-link">社交创新</a>
-                  
-                    <a href="/tag/%E5%B7%A5%E4%BD%9C%E8%BD%AC%E5%9E%8B.html" class="badge tag-link">工作转型</a>
-                  
-                    <a href="/tag/%E6%95%99%E8%82%B2%E9%87%8D%E6%9E%84.html" class="badge tag-link">教育重构</a>
-                  
-                    <a href="/tag/%E6%B6%88%E8%B4%B9%E7%BB%8F%E6%B5%8E.html" class="badge tag-link">消费经济</a>
-                  
+                    
+                      <a href="/tag/%E5%85%83%E5%AE%87%E5%AE%99.html" class="badge tag-link">
+                        元宇宙
+                      </a>
+                      
+                      <a href="/tag/%E8%99%9A%E5%AE%9E%E8%9E%8D%E5%90%88.html" class="badge tag-link">
+                        虚实融合
+                      </a>
+                      
+                      <a href="/tag/%E7%A4%BE%E4%BA%A4%E5%88%9B%E6%96%B0.html" class="badge tag-link">
+                        社交创新
+                      </a>
+                      
+                      <a href="/tag/%E5%B7%A5%E4%BD%9C%E8%BD%AC%E5%9E%8B.html" class="badge tag-link">
+                        工作转型
+                      </a>
+                      
+                      <a href="/tag/%E6%95%99%E8%82%B2%E9%87%8D%E6%9E%84.html" class="badge tag-link">
+                        教育重构
+                      </a>
+                      
+                      <a href="/tag/%E6%B6%88%E8%B4%B9%E7%BB%8F%E6%B5%8E.html" class="badge tag-link">
+                        消费经济
+                      </a>
+                      
+                  </div>
                 </div>
               </div>
-            </div>
-          
-        </div>
+              
+          </div>
 
-        <div class="mt-4 text-center">
-          <a href="标签列表.html" class="btn btn-outline-primary"><i class="bi bi-arrow-left"></i> 返回标签列表</a>
+          <div class="mt-4 text-center">
+            <a href="标签列表.html" class="btn btn-outline-primary"><i class="bi bi-arrow-left"></i> 返回标签列表</a>
+          </div>
         </div>
       </div>
-    </div>
-  </main>
+    </main>
 
-  <footer class="sticky-footer text-center text-lg-start bg-light text-muted">
+    <footer class="sticky-footer text-center text-lg-start bg-light text-muted">
   <div class="container text-center py-1">
     <section>
       <span id="busuanzi_container_page_pv">本页面访问量<span id="busuanzi_value_page_pv"></span>次</span>
@@ -150,18 +173,18 @@
   </div>
 </footer>
 
-  <script>
-    // 初始化Masonry
-    document.addEventListener('DOMContentLoaded', function () {
-      var elem = document.querySelector('.grid');
-      var msnry = new Masonry(elem, {
-        itemSelector: '.grid-item',
-        columnWidth: '.grid-item',
-        percentPosition: true,
-        gutter: 10 // 可选，添加卡片间的间距
-      });
-    });
-  </script>
+      <script>
+        // 初始化Masonry
+        document.addEventListener('DOMContentLoaded', function () {
+          var elem = document.querySelector('.grid');
+          var msnry = new Masonry(elem, {
+            itemSelector: '.grid-item',
+            columnWidth: '.grid-item',
+            percentPosition: true,
+            gutter: 10 // 可选，添加卡片间的间距
+          });
+        });
+      </script>
 </body>
 
 </html>

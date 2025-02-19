@@ -30,21 +30,25 @@
     }
 
     /* Masonry items */
-    .grid-item { 
-      width: calc(100% / 3); /* 默认每行3个卡片 */
+    .grid-item {
+      width: calc((100% - (2 * 10px)) / 3);
+      /* 减去两个gutter宽度后分成三份 */
       box-sizing: border-box;
       margin-bottom: 10px;
+      /* 可选，根据需要调整底部外边距 */
     }
 
     @media (max-width: 768px) {
       .grid-item {
-        width: calc(100% / 2); /* 平板设备上每行2个卡片 */
+        width: calc((100% - 10px) / 2);
+        /* 平板设备上每行2个卡片，减去一个gutter宽度 */
       }
     }
 
     @media (max-width: 576px) {
       .grid-item {
-        width: 100%; /* 手机设备上每行1个卡片 */
+        width: 100%;
+        /* 手机设备上每行1个卡片 */
       }
     }
   </style>
@@ -86,59 +90,76 @@
   </div>
 </header>
 
-  <main class="container-fluid mt-4">
-    <div class="row">
-      <div class="col-lg-8 col-md-12 mx-auto">
-        <nav aria-label="breadcrumb">
-          <ol class="breadcrumb">
-            <li class="breadcrumb-item"><a href="标签列表.html">标签列表</a></li>
-            <li class="breadcrumb-item active" aria-current="page">多语言SEO优化</li>
-          </ol>
-        </nav>
+    <main class="container-fluid mt-4">
+      <div class="row">
+        <div class="col-lg-8 col-md-12 mx-auto">
+          <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item"><a href="标签列表.html">标签列表</a></li>
+              <li class="breadcrumb-item active" aria-current="page">
+                多语言SEO优化
+              </li>
+            </ol>
+          </nav>
 
-        <div class="grid">
-          
-            <div class="grid-item">
-              <div class="card shadow-sm">
-                <div class="card-body">
-                  <h5 class="card-title">
-                    <i class="bi bi-file-earmark-text"></i>
-                    <a href="../mdhtml/跨境内容营销利器：DeepSeek多语言SEO优化与本地化实践.html" class="text-decoration-none">
-                      跨境内容营销利器：DeepSeek多语言SEO优化与本地化实践
+          <div class="grid">
+            
+              <div class="grid-item">
+                <div class="card shadow-sm">
+                  <div class="card-body">
+                    <h5 class="card-title">
+                      <i class="bi bi-file-earmark-text"></i>
+                      <a href="../mdhtml/跨境内容营销利器：DeepSeek多语言SEO优化与本地化实践.html" class="text-decoration-none">
+                        跨境内容营销利器：DeepSeek多语言SEO优化与本地化实践
+                      </a>
+                    </h5>
+                    
+                        
+                          <small class="text-muted">
+                            2025-02-11
+                          </small>
+                          
+                  </div>
+                  <div class="card-footer text-muted">
+                    <a href="/category/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD.html"
+                      class="badge bg-primary">
+                      人工智能
                     </a>
-                  </h5>
-                  
-                  
-                    <small class="text-muted">2025-02-11</small>
-                  
-                </div>
-                <div class="card-footer text-muted">
-                  <a href="/category/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD.html" class="badge bg-primary">人工智能</a>
-                  
-                    <a href="/tag/%E8%B7%A8%E5%A2%83%E5%86%85%E5%AE%B9%E8%90%A5%E9%94%80.html" class="badge tag-link">跨境内容营销</a>
-                  
-                    <a href="/tag/%E5%A4%9A%E8%AF%AD%E8%A8%80SEO%E4%BC%98%E5%8C%96.html" class="badge tag-link">多语言SEO优化</a>
-                  
-                    <a href="/tag/%E6%9C%AC%E5%9C%B0%E5%8C%96%E5%AE%9E%E8%B7%B5.html" class="badge tag-link">本地化实践</a>
-                  
-                    <a href="/tag/DeepSeek.html" class="badge tag-link">DeepSeek</a>
-                  
-                    <a href="/tag/%E6%95%B0%E6%8D%AE%E9%A9%B1%E5%8A%A8.html" class="badge tag-link">数据驱动</a>
-                  
+                    
+                      <a href="/tag/%E8%B7%A8%E5%A2%83%E5%86%85%E5%AE%B9%E8%90%A5%E9%94%80.html" class="badge tag-link">
+                        跨境内容营销
+                      </a>
+                      
+                      <a href="/tag/%E5%A4%9A%E8%AF%AD%E8%A8%80SEO%E4%BC%98%E5%8C%96.html" class="badge tag-link">
+                        多语言SEO优化
+                      </a>
+                      
+                      <a href="/tag/%E6%9C%AC%E5%9C%B0%E5%8C%96%E5%AE%9E%E8%B7%B5.html" class="badge tag-link">
+                        本地化实践
+                      </a>
+                      
+                      <a href="/tag/DeepSeek.html" class="badge tag-link">
+                        DeepSeek
+                      </a>
+                      
+                      <a href="/tag/%E6%95%B0%E6%8D%AE%E9%A9%B1%E5%8A%A8.html" class="badge tag-link">
+                        数据驱动
+                      </a>
+                      
+                  </div>
                 </div>
               </div>
-            </div>
-          
-        </div>
+              
+          </div>
 
-        <div class="mt-4 text-center">
-          <a href="标签列表.html" class="btn btn-outline-primary"><i class="bi bi-arrow-left"></i> 返回标签列表</a>
+          <div class="mt-4 text-center">
+            <a href="标签列表.html" class="btn btn-outline-primary"><i class="bi bi-arrow-left"></i> 返回标签列表</a>
+          </div>
         </div>
       </div>
-    </div>
-  </main>
+    </main>
 
-  <footer class="sticky-footer text-center text-lg-start bg-light text-muted">
+    <footer class="sticky-footer text-center text-lg-start bg-light text-muted">
   <div class="container text-center py-1">
     <section>
       <span id="busuanzi_container_page_pv">本页面访问量<span id="busuanzi_value_page_pv"></span>次</span>
@@ -148,18 +169,18 @@
   </div>
 </footer>
 
-  <script>
-    // 初始化Masonry
-    document.addEventListener('DOMContentLoaded', function () {
-      var elem = document.querySelector('.grid');
-      var msnry = new Masonry(elem, {
-        itemSelector: '.grid-item',
-        columnWidth: '.grid-item',
-        percentPosition: true,
-        gutter: 10 // 可选，添加卡片间的间距
-      });
-    });
-  </script>
+      <script>
+        // 初始化Masonry
+        document.addEventListener('DOMContentLoaded', function () {
+          var elem = document.querySelector('.grid');
+          var msnry = new Masonry(elem, {
+            itemSelector: '.grid-item',
+            columnWidth: '.grid-item',
+            percentPosition: true,
+            gutter: 10 // 可选，添加卡片间的间距
+          });
+        });
+      </script>
 </body>
 
 </html>

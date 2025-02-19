@@ -7,8 +7,7 @@
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9093386396178901"
         crossorigin="anonymous"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>分类列表
-    </title>
+    <title>分类列表</title>
     <link rel="icon" href="../logo.svg" type="image/svg+xml">
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/footer.css">
@@ -21,6 +20,29 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
         crossorigin="anonymous"></script>
     <script src="../js/clarity.js"></script>
+
+    <!-- 引入Masonry -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/masonry/4.2.2/masonry.pkgd.min.js"></script>
+    <style>
+        /* Masonry items */
+        .grid-item { 
+            width: calc((100% - (2 * 10px)) / 3); /* 减去两个gutter宽度后分成三份 */
+            box-sizing: border-box;
+            margin-bottom: 10px; /* 可选，根据需要调整底部外边距 */
+        }
+
+        @media (max-width: 768px) {
+            .grid-item {
+                width: calc((100% - 10px) / 2); /* 平板设备上每行2个卡片，减去一个gutter宽度 */
+            }
+        }
+
+        @media (max-width: 576px) {
+            .grid-item {
+                width: 100%; /* 手机设备上每行1个卡片 */
+            }
+        }
+    </style>
 </head>
 
 <body>
@@ -59,139 +81,139 @@
   </div>
 </header>
 
-        <main class="container-fluid mt-4">
-            <div class="row">
-                <div class="col-lg-8 col-md-12 mx-auto">
-                    <!-- 面包屑导航 -->
-                    <nav aria-label="breadcrumb">
-                        <ol class="breadcrumb">
-                            <li class="breadcrumb-item"><a href="分类列表.html">分类列表</a></li>
-                            <li class="breadcrumb-item active" aria-current="page">
-                                心理
-                            </li>
-                        </ol>
-                    </nav>
+    <main class="container-fluid mt-4">
+        <div class="row">
+            <div class="col-lg-8 col-md-12 mx-auto">
+                <!-- 面包屑导航 -->
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="分类列表.html">分类列表</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">
+                            心理
+                        </li>
+                    </ol>
+                </nav>
 
-                    <!-- 分类内容卡片 -->
-                    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+                <!-- 分类内容卡片 使用 Masonry 布局 -->
+                <div class="grid">
+                    
+                        <div class="grid-item">
+                            <div class="card shadow-sm">
+                                <div class="card-body">
+                                    <h5 class="card-title">
+                                        <i class="bi bi-file-earmark-text"></i>
+                                        <a href="../mdhtml/怎样克服社交恐惧症？.html"
+                                            class="text-decoration-none">
+                                            怎样克服社交恐惧症？
+                                        </a>
+                                    </h5>
+                                    
+                                            
+                                                <small class="text-muted">
+                                                    2025-02-10
+                                                </small>
+                                                
+                                </div>
+                                <div class="card-footer text-muted">
+                                    <a href="/category/%E5%BF%83%E7%90%86.html"
+                                        class="badge bg-primary">
+                                        心理
+                                    </a>
+                                    
+                                        <a href="/tag/%E7%A4%BE%E4%BA%A4%E6%81%90%E6%83%A7%E7%97%87.html"
+                                            class="badge tag-link">
+                                            社交恐惧症
+                                        </a>
+                                        
+                                        <a href="/tag/%E8%AE%A4%E7%9F%A5%E8%A1%8C%E4%B8%BA%E7%96%97%E6%B3%95.html"
+                                            class="badge tag-link">
+                                            认知行为疗法
+                                        </a>
+                                        
+                                        <a href="/tag/%E8%AE%BE%E5%AE%9A%E5%B0%8F%E7%9B%AE%E6%A0%87.html"
+                                            class="badge tag-link">
+                                            设定小目标
+                                        </a>
+                                        
+                                        <a href="/tag/%E5%AF%BB%E6%B1%82%E6%94%AF%E6%8C%81.html"
+                                            class="badge tag-link">
+                                            寻求支持
+                                        </a>
+                                        
+                                        <a href="/tag/%E4%B8%93%E4%B8%9A%E5%B8%AE%E5%8A%A9.html"
+                                            class="badge tag-link">
+                                            专业帮助
+                                        </a>
+                                        
+                                </div>
+                            </div>
+                        </div>
                         
-                            <div class="col">
-                                <div class="card shadow-sm">
-                                    <div class="card-body">
-                                        <h5 class="card-title">
-                                            <i class="bi bi-file-earmark-text"></i>
-                                            <a href="../mdhtml/怎样克服社交恐惧症？.html"
-                                                class="text-decoration-none">
-                                                怎样克服社交恐惧症？
-                                            </a>
-                                        </h5>
-                                        
+                        <div class="grid-item">
+                            <div class="card shadow-sm">
+                                <div class="card-body">
+                                    <h5 class="card-title">
+                                        <i class="bi bi-file-earmark-text"></i>
+                                        <a href="../mdhtml/在自我认知的过程中，会遇到哪些困境和挑战？.html"
+                                            class="text-decoration-none">
+                                            在追求自由的过程中，如何平衡个人自由与社会责任？
+                                        </a>
+                                    </h5>
+                                    
+                                            
+                                                <small class="text-muted">
+                                                    2025-02-10
+                                                </small>
                                                 
-                                                    <small class="text-muted">
-                                                        2025-02-10
-                                                    </small>
-                                                    
-                                    </div>
-                                    <div class="card-footer text-muted">
-                                        <a href="/category/%E5%BF%83%E7%90%86.html"
-                                            class="badge bg-primary">
-                                            心理
+                                </div>
+                                <div class="card-footer text-muted">
+                                    <a href="/category/%E5%BF%83%E7%90%86.html"
+                                        class="badge bg-primary">
+                                        心理
+                                    </a>
+                                    
+                                        <a href="/tag/%E8%87%AA%E6%88%91%E8%AE%A4%E7%9F%A5.html"
+                                            class="badge tag-link">
+                                            自我认知
                                         </a>
                                         
-                                            <a href="/tag/%E7%A4%BE%E4%BA%A4%E6%81%90%E6%83%A7%E7%97%87.html"
-                                                class="badge tag-link">
-                                                社交恐惧症
-                                            </a>
-                                            
-                                            <a href="/tag/%E8%AE%A4%E7%9F%A5%E8%A1%8C%E4%B8%BA%E7%96%97%E6%B3%95.html"
-                                                class="badge tag-link">
-                                                认知行为疗法
-                                            </a>
-                                            
-                                            <a href="/tag/%E8%AE%BE%E5%AE%9A%E5%B0%8F%E7%9B%AE%E6%A0%87.html"
-                                                class="badge tag-link">
-                                                设定小目标
-                                            </a>
-                                            
-                                            <a href="/tag/%E5%AF%BB%E6%B1%82%E6%94%AF%E6%8C%81.html"
-                                                class="badge tag-link">
-                                                寻求支持
-                                            </a>
-                                            
-                                            <a href="/tag/%E4%B8%93%E4%B8%9A%E5%B8%AE%E5%8A%A9.html"
-                                                class="badge tag-link">
-                                                专业帮助
-                                            </a>
-                                            
-                                    </div>
-                                </div>
-                            </div>
-                            
-                            <div class="col">
-                                <div class="card shadow-sm">
-                                    <div class="card-body">
-                                        <h5 class="card-title">
-                                            <i class="bi bi-file-earmark-text"></i>
-                                            <a href="../mdhtml/在自我认知的过程中，会遇到哪些困境和挑战？.html"
-                                                class="text-decoration-none">
-                                                在追求自由的过程中，如何平衡个人自由与社会责任？
-                                            </a>
-                                        </h5>
-                                        
-                                                
-                                                    <small class="text-muted">
-                                                        2025-02-10
-                                                    </small>
-                                                    
-                                    </div>
-                                    <div class="card-footer text-muted">
-                                        <a href="/category/%E5%BF%83%E7%90%86.html"
-                                            class="badge bg-primary">
-                                            心理
+                                        <a href="/tag/%E8%AE%A4%E7%9F%A5%E5%81%8F%E5%B7%AE.html"
+                                            class="badge tag-link">
+                                            认知偏差
                                         </a>
                                         
-                                            <a href="/tag/%E8%87%AA%E6%88%91%E8%AE%A4%E7%9F%A5.html"
-                                                class="badge tag-link">
-                                                自我认知
-                                            </a>
-                                            
-                                            <a href="/tag/%E8%AE%A4%E7%9F%A5%E5%81%8F%E5%B7%AE.html"
-                                                class="badge tag-link">
-                                                认知偏差
-                                            </a>
-                                            
-                                            <a href="/tag/%E8%BA%AB%E4%BB%BD%E8%AE%A4%E5%90%8C.html"
-                                                class="badge tag-link">
-                                                身份认同
-                                            </a>
-                                            
-                                            <a href="/tag/%E5%A4%96%E7%95%8C%E8%AF%84%E4%BB%B7.html"
-                                                class="badge tag-link">
-                                                外界评价
-                                            </a>
-                                            
-                                            <a href="/tag/%E6%88%90%E9%95%BF%E6%8C%91%E6%88%98.html"
-                                                class="badge tag-link">
-                                                成长挑战
-                                            </a>
-                                            
-                                    </div>
+                                        <a href="/tag/%E8%BA%AB%E4%BB%BD%E8%AE%A4%E5%90%8C.html"
+                                            class="badge tag-link">
+                                            身份认同
+                                        </a>
+                                        
+                                        <a href="/tag/%E5%A4%96%E7%95%8C%E8%AF%84%E4%BB%B7.html"
+                                            class="badge tag-link">
+                                            外界评价
+                                        </a>
+                                        
+                                        <a href="/tag/%E6%88%90%E9%95%BF%E6%8C%91%E6%88%98.html"
+                                            class="badge tag-link">
+                                            成长挑战
+                                        </a>
+                                        
                                 </div>
                             </div>
-                            
-                    </div>
+                        </div>
+                        
+                </div>
 
-                    <!-- 返回按钮 -->
-                    <div class="mt-4 text-center">
-                        <a href="分类列表.html" class="btn btn-outline-primary">
-                            <i class="bi bi-arrow-left"></i> 返回分类列表
-                        </a>
-                    </div>
+                <!-- 返回按钮 -->
+                <div class="mt-4 text-center">
+                    <a href="分类列表.html" class="btn btn-outline-primary">
+                        <i class="bi bi-arrow-left"></i> 返回分类列表
+                    </a>
                 </div>
             </div>
-        </main>
+        </div>
+    </main>
 
-        <footer class="sticky-footer text-center text-lg-start bg-light text-muted">
+    <footer class="sticky-footer text-center text-lg-start bg-light text-muted">
   <div class="container text-center py-1">
     <section>
       <span id="busuanzi_container_page_pv">本页面访问量<span id="busuanzi_value_page_pv"></span>次</span>
@@ -201,6 +223,18 @@
   </div>
 </footer>
 
+    <script>
+        // 初始化 Masonry
+        document.addEventListener('DOMContentLoaded', function () {
+            var elem = document.querySelector('.grid');
+            var msnry = new Masonry(elem, {
+                itemSelector: '.grid-item',
+                columnWidth: '.grid-item',
+                percentPosition: true,
+                gutter: 10 // 明确设置 gutter 值为 10px
+            });
+        });
+    </script>
 </body>
 
 </html>

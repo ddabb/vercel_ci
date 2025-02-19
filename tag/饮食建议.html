@@ -30,21 +30,25 @@
     }
 
     /* Masonry items */
-    .grid-item { 
-      width: calc(100% / 3); /* 默认每行3个卡片 */
+    .grid-item {
+      width: calc((100% - (2 * 10px)) / 3);
+      /* 减去两个gutter宽度后分成三份 */
       box-sizing: border-box;
       margin-bottom: 10px;
+      /* 可选，根据需要调整底部外边距 */
     }
 
     @media (max-width: 768px) {
       .grid-item {
-        width: calc(100% / 2); /* 平板设备上每行2个卡片 */
+        width: calc((100% - 10px) / 2);
+        /* 平板设备上每行2个卡片，减去一个gutter宽度 */
       }
     }
 
     @media (max-width: 576px) {
       .grid-item {
-        width: 100%; /* 手机设备上每行1个卡片 */
+        width: 100%;
+        /* 手机设备上每行1个卡片 */
       }
     }
   </style>
@@ -86,94 +90,130 @@
   </div>
 </header>
 
-  <main class="container-fluid mt-4">
-    <div class="row">
-      <div class="col-lg-8 col-md-12 mx-auto">
-        <nav aria-label="breadcrumb">
-          <ol class="breadcrumb">
-            <li class="breadcrumb-item"><a href="标签列表.html">标签列表</a></li>
-            <li class="breadcrumb-item active" aria-current="page">饮食建议</li>
-          </ol>
-        </nav>
+    <main class="container-fluid mt-4">
+      <div class="row">
+        <div class="col-lg-8 col-md-12 mx-auto">
+          <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item"><a href="标签列表.html">标签列表</a></li>
+              <li class="breadcrumb-item active" aria-current="page">
+                饮食建议
+              </li>
+            </ol>
+          </nav>
 
-        <div class="grid">
-          
-            <div class="grid-item">
-              <div class="card shadow-sm">
-                <div class="card-body">
-                  <h5 class="card-title">
-                    <i class="bi bi-file-earmark-text"></i>
-                    <a href="../mdhtml/如何保持长寿与健康？.html" class="text-decoration-none">
-                      如何保持长寿与健康？
+          <div class="grid">
+            
+              <div class="grid-item">
+                <div class="card shadow-sm">
+                  <div class="card-body">
+                    <h5 class="card-title">
+                      <i class="bi bi-file-earmark-text"></i>
+                      <a href="../mdhtml/如何保持长寿与健康？.html" class="text-decoration-none">
+                        如何保持长寿与健康？
+                      </a>
+                    </h5>
+                    
+                      <p class="card-text">
+                        关于长寿秘诀、健康生活方式的建议，包括饮食、运动习惯、心理健康等方面的内容，适用于广泛年龄段的人群。
+                      </p>
+                      
+                        
+                          <small class="text-muted">
+                            2025-02-10
+                          </small>
+                          
+                  </div>
+                  <div class="card-footer text-muted">
+                    <a href="/category/%E5%81%A5%E5%BA%B7.html"
+                      class="badge bg-primary">
+                      健康
                     </a>
-                  </h5>
-                  
-                    <p class="card-text">关于长寿秘诀、健康生活方式的建议，包括饮食、运动习惯、心理健康等方面的内容，适用于广泛年龄段的人群。</p>
-                  
-                  
-                    <small class="text-muted">2025-02-10</small>
-                  
-                </div>
-                <div class="card-footer text-muted">
-                  <a href="/category/%E5%81%A5%E5%BA%B7.html" class="badge bg-primary">健康</a>
-                  
-                    <a href="/tag/%E9%95%BF%E5%AF%BF%E7%A7%98%E8%AF%80.html" class="badge tag-link">长寿秘诀</a>
-                  
-                    <a href="/tag/%E5%81%A5%E5%BA%B7%E7%94%9F%E6%B4%BB.html" class="badge tag-link">健康生活</a>
-                  
-                    <a href="/tag/%E9%A5%AE%E9%A3%9F%E5%BB%BA%E8%AE%AE.html" class="badge tag-link">饮食建议</a>
-                  
-                    <a href="/tag/%E8%BF%90%E5%8A%A8%E4%B9%A0%E6%83%AF.html" class="badge tag-link">运动习惯</a>
-                  
-                    <a href="/tag/%E5%BF%83%E7%90%86%E5%81%A5%E5%BA%B7.html" class="badge tag-link">心理健康</a>
-                  
-                    <a href="/tag/%E7%94%9F%E6%B4%BB%E6%96%B9%E5%BC%8F.html" class="badge tag-link">生活方式</a>
-                  
+                    
+                      <a href="/tag/%E9%95%BF%E5%AF%BF%E7%A7%98%E8%AF%80.html" class="badge tag-link">
+                        长寿秘诀
+                      </a>
+                      
+                      <a href="/tag/%E5%81%A5%E5%BA%B7%E7%94%9F%E6%B4%BB.html" class="badge tag-link">
+                        健康生活
+                      </a>
+                      
+                      <a href="/tag/%E9%A5%AE%E9%A3%9F%E5%BB%BA%E8%AE%AE.html" class="badge tag-link">
+                        饮食建议
+                      </a>
+                      
+                      <a href="/tag/%E8%BF%90%E5%8A%A8%E4%B9%A0%E6%83%AF.html" class="badge tag-link">
+                        运动习惯
+                      </a>
+                      
+                      <a href="/tag/%E5%BF%83%E7%90%86%E5%81%A5%E5%BA%B7.html" class="badge tag-link">
+                        心理健康
+                      </a>
+                      
+                      <a href="/tag/%E7%94%9F%E6%B4%BB%E6%96%B9%E5%BC%8F.html" class="badge tag-link">
+                        生活方式
+                      </a>
+                      
+                  </div>
                 </div>
               </div>
-            </div>
-          
-            <div class="grid-item">
-              <div class="card shadow-sm">
-                <div class="card-body">
-                  <h5 class="card-title">
-                    <i class="bi bi-file-earmark-text"></i>
-                    <a href="../mdhtml/产后吃什么对身体恢复好.html" class="text-decoration-none">
-                      八千元月收入的生活日常
+              
+              <div class="grid-item">
+                <div class="card shadow-sm">
+                  <div class="card-body">
+                    <h5 class="card-title">
+                      <i class="bi bi-file-earmark-text"></i>
+                      <a href="../mdhtml/产后吃什么对身体恢复好.html" class="text-decoration-none">
+                        八千元月收入的生活日常
+                      </a>
+                    </h5>
+                    
+                        
+                          <small class="text-muted">
+                            2025-02-10
+                          </small>
+                          
+                  </div>
+                  <div class="card-footer text-muted">
+                    <a href="/category/%E5%81%A5%E5%BA%B7.html"
+                      class="badge bg-primary">
+                      健康
                     </a>
-                  </h5>
-                  
-                  
-                    <small class="text-muted">2025-02-10</small>
-                  
-                </div>
-                <div class="card-footer text-muted">
-                  <a href="/category/%E5%81%A5%E5%BA%B7.html" class="badge bg-primary">健康</a>
-                  
-                    <a href="/tag/%E4%BA%A7%E5%90%8E%E6%81%A2%E5%A4%8D.html" class="badge tag-link">产后恢复</a>
-                  
-                    <a href="/tag/%E9%A5%AE%E9%A3%9F%E5%BB%BA%E8%AE%AE.html" class="badge tag-link">饮食建议</a>
-                  
-                    <a href="/tag/%E9%AB%98%E8%9B%8B%E7%99%BD%E8%B4%A8%E9%A3%9F%E7%89%A9.html" class="badge tag-link">高蛋白质食物</a>
-                  
-                    <a href="/tag/%E8%A1%A5%E9%93%81%E9%A3%9F%E7%89%A9.html" class="badge tag-link">补铁食物</a>
-                  
-                    <a href="/tag/%E8%8D%AF%E8%86%B3%E6%BB%8B%E8%A1%A5.html" class="badge tag-link">药膳滋补</a>
-                  
+                    
+                      <a href="/tag/%E4%BA%A7%E5%90%8E%E6%81%A2%E5%A4%8D.html" class="badge tag-link">
+                        产后恢复
+                      </a>
+                      
+                      <a href="/tag/%E9%A5%AE%E9%A3%9F%E5%BB%BA%E8%AE%AE.html" class="badge tag-link">
+                        饮食建议
+                      </a>
+                      
+                      <a href="/tag/%E9%AB%98%E8%9B%8B%E7%99%BD%E8%B4%A8%E9%A3%9F%E7%89%A9.html" class="badge tag-link">
+                        高蛋白质食物
+                      </a>
+                      
+                      <a href="/tag/%E8%A1%A5%E9%93%81%E9%A3%9F%E7%89%A9.html" class="badge tag-link">
+                        补铁食物
+                      </a>
+                      
+                      <a href="/tag/%E8%8D%AF%E8%86%B3%E6%BB%8B%E8%A1%A5.html" class="badge tag-link">
+                        药膳滋补
+                      </a>
+                      
+                  </div>
                 </div>
               </div>
-            </div>
-          
-        </div>
+              
+          </div>
 
-        <div class="mt-4 text-center">
-          <a href="标签列表.html" class="btn btn-outline-primary"><i class="bi bi-arrow-left"></i> 返回标签列表</a>
+          <div class="mt-4 text-center">
+            <a href="标签列表.html" class="btn btn-outline-primary"><i class="bi bi-arrow-left"></i> 返回标签列表</a>
+          </div>
         </div>
       </div>
-    </div>
-  </main>
+    </main>
 
-  <footer class="sticky-footer text-center text-lg-start bg-light text-muted">
+    <footer class="sticky-footer text-center text-lg-start bg-light text-muted">
   <div class="container text-center py-1">
     <section>
       <span id="busuanzi_container_page_pv">本页面访问量<span id="busuanzi_value_page_pv"></span>次</span>
@@ -183,18 +223,18 @@
   </div>
 </footer>
 
-  <script>
-    // 初始化Masonry
-    document.addEventListener('DOMContentLoaded', function () {
-      var elem = document.querySelector('.grid');
-      var msnry = new Masonry(elem, {
-        itemSelector: '.grid-item',
-        columnWidth: '.grid-item',
-        percentPosition: true,
-        gutter: 10 // 可选，添加卡片间的间距
-      });
-    });
-  </script>
+      <script>
+        // 初始化Masonry
+        document.addEventListener('DOMContentLoaded', function () {
+          var elem = document.querySelector('.grid');
+          var msnry = new Masonry(elem, {
+            itemSelector: '.grid-item',
+            columnWidth: '.grid-item',
+            percentPosition: true,
+            gutter: 10 // 可选，添加卡片间的间距
+          });
+        });
+      </script>
 </body>
 
 </html>

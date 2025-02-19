@@ -30,21 +30,25 @@
     }
 
     /* Masonry items */
-    .grid-item { 
-      width: calc(100% / 3); /* 默认每行3个卡片 */
+    .grid-item {
+      width: calc((100% - (2 * 10px)) / 3);
+      /* 减去两个gutter宽度后分成三份 */
       box-sizing: border-box;
       margin-bottom: 10px;
+      /* 可选，根据需要调整底部外边距 */
     }
 
     @media (max-width: 768px) {
       .grid-item {
-        width: calc(100% / 2); /* 平板设备上每行2个卡片 */
+        width: calc((100% - 10px) / 2);
+        /* 平板设备上每行2个卡片，减去一个gutter宽度 */
       }
     }
 
     @media (max-width: 576px) {
       .grid-item {
-        width: 100%; /* 手机设备上每行1个卡片 */
+        width: 100%;
+        /* 手机设备上每行1个卡片 */
       }
     }
   </style>
@@ -86,61 +90,80 @@
   </div>
 </header>
 
-  <main class="container-fluid mt-4">
-    <div class="row">
-      <div class="col-lg-8 col-md-12 mx-auto">
-        <nav aria-label="breadcrumb">
-          <ol class="breadcrumb">
-            <li class="breadcrumb-item"><a href="标签列表.html">标签列表</a></li>
-            <li class="breadcrumb-item active" aria-current="page">应用权限</li>
-          </ol>
-        </nav>
+    <main class="container-fluid mt-4">
+      <div class="row">
+        <div class="col-lg-8 col-md-12 mx-auto">
+          <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item"><a href="标签列表.html">标签列表</a></li>
+              <li class="breadcrumb-item active" aria-current="page">
+                应用权限
+              </li>
+            </ol>
+          </nav>
 
-        <div class="grid">
-          
-            <div class="grid-item">
-              <div class="card shadow-sm">
-                <div class="card-body">
-                  <h5 class="card-title">
-                    <i class="bi bi-file-earmark-text"></i>
-                    <a href="../mdhtml/如何保护你的个人隐私不被泄露.html" class="text-decoration-none">
-                      如何保护你的个人隐私不被泄露
+          <div class="grid">
+            
+              <div class="grid-item">
+                <div class="card shadow-sm">
+                  <div class="card-body">
+                    <h5 class="card-title">
+                      <i class="bi bi-file-earmark-text"></i>
+                      <a href="../mdhtml/如何保护你的个人隐私不被泄露.html" class="text-decoration-none">
+                        如何保护你的个人隐私不被泄露
+                      </a>
+                    </h5>
+                    
+                        
+                          <small class="text-muted">
+                            2025-02-10
+                          </small>
+                          
+                  </div>
+                  <div class="card-footer text-muted">
+                    <a href="/category/%E4%BF%A1%E6%81%AF%E5%AE%89%E5%85%A8.html"
+                      class="badge bg-primary">
+                      信息安全
                     </a>
-                  </h5>
-                  
-                  
-                    <small class="text-muted">2025-02-10</small>
-                  
-                </div>
-                <div class="card-footer text-muted">
-                  <a href="/category/%E4%BF%A1%E6%81%AF%E5%AE%89%E5%85%A8.html" class="badge bg-primary">信息安全</a>
-                  
-                    <a href="/tag/%E9%9A%90%E7%A7%81%E4%BF%9D%E6%8A%A4.html" class="badge tag-link">隐私保护</a>
-                  
-                    <a href="/tag/%E6%95%B0%E5%AD%97%E5%AE%89%E5%85%A8.html" class="badge tag-link">数字安全</a>
-                  
-                    <a href="/tag/%E7%A4%BE%E4%BA%A4%E5%AA%92%E4%BD%93.html" class="badge tag-link">社交媒体</a>
-                  
-                    <a href="/tag/%E5%BA%94%E7%94%A8%E6%9D%83%E9%99%90.html" class="badge tag-link">应用权限</a>
-                  
-                    <a href="/tag/%E5%85%AC%E5%85%B1WiFi.html" class="badge tag-link">公共WiFi</a>
-                  
-                    <a href="/tag/%E4%B8%AA%E4%BA%BA%E4%BF%A1%E6%81%AF%E7%AE%A1%E7%90%86.html" class="badge tag-link">个人信息管理</a>
-                  
+                    
+                      <a href="/tag/%E9%9A%90%E7%A7%81%E4%BF%9D%E6%8A%A4.html" class="badge tag-link">
+                        隐私保护
+                      </a>
+                      
+                      <a href="/tag/%E6%95%B0%E5%AD%97%E5%AE%89%E5%85%A8.html" class="badge tag-link">
+                        数字安全
+                      </a>
+                      
+                      <a href="/tag/%E7%A4%BE%E4%BA%A4%E5%AA%92%E4%BD%93.html" class="badge tag-link">
+                        社交媒体
+                      </a>
+                      
+                      <a href="/tag/%E5%BA%94%E7%94%A8%E6%9D%83%E9%99%90.html" class="badge tag-link">
+                        应用权限
+                      </a>
+                      
+                      <a href="/tag/%E5%85%AC%E5%85%B1WiFi.html" class="badge tag-link">
+                        公共WiFi
+                      </a>
+                      
+                      <a href="/tag/%E4%B8%AA%E4%BA%BA%E4%BF%A1%E6%81%AF%E7%AE%A1%E7%90%86.html" class="badge tag-link">
+                        个人信息管理
+                      </a>
+                      
+                  </div>
                 </div>
               </div>
-            </div>
-          
-        </div>
+              
+          </div>
 
-        <div class="mt-4 text-center">
-          <a href="标签列表.html" class="btn btn-outline-primary"><i class="bi bi-arrow-left"></i> 返回标签列表</a>
+          <div class="mt-4 text-center">
+            <a href="标签列表.html" class="btn btn-outline-primary"><i class="bi bi-arrow-left"></i> 返回标签列表</a>
+          </div>
         </div>
       </div>
-    </div>
-  </main>
+    </main>
 
-  <footer class="sticky-footer text-center text-lg-start bg-light text-muted">
+    <footer class="sticky-footer text-center text-lg-start bg-light text-muted">
   <div class="container text-center py-1">
     <section>
       <span id="busuanzi_container_page_pv">本页面访问量<span id="busuanzi_value_page_pv"></span>次</span>
@@ -150,18 +173,18 @@
   </div>
 </footer>
 
-  <script>
-    // 初始化Masonry
-    document.addEventListener('DOMContentLoaded', function () {
-      var elem = document.querySelector('.grid');
-      var msnry = new Masonry(elem, {
-        itemSelector: '.grid-item',
-        columnWidth: '.grid-item',
-        percentPosition: true,
-        gutter: 10 // 可选，添加卡片间的间距
-      });
-    });
-  </script>
+      <script>
+        // 初始化Masonry
+        document.addEventListener('DOMContentLoaded', function () {
+          var elem = document.querySelector('.grid');
+          var msnry = new Masonry(elem, {
+            itemSelector: '.grid-item',
+            columnWidth: '.grid-item',
+            percentPosition: true,
+            gutter: 10 // 可选，添加卡片间的间距
+          });
+        });
+      </script>
 </body>
 
 </html>

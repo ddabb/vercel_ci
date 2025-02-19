@@ -30,21 +30,25 @@
     }
 
     /* Masonry items */
-    .grid-item { 
-      width: calc(100% / 3); /* 默认每行3个卡片 */
+    .grid-item {
+      width: calc((100% - (2 * 10px)) / 3);
+      /* 减去两个gutter宽度后分成三份 */
       box-sizing: border-box;
       margin-bottom: 10px;
+      /* 可选，根据需要调整底部外边距 */
     }
 
     @media (max-width: 768px) {
       .grid-item {
-        width: calc(100% / 2); /* 平板设备上每行2个卡片 */
+        width: calc((100% - 10px) / 2);
+        /* 平板设备上每行2个卡片，减去一个gutter宽度 */
       }
     }
 
     @media (max-width: 576px) {
       .grid-item {
-        width: 100%; /* 手机设备上每行1个卡片 */
+        width: 100%;
+        /* 手机设备上每行1个卡片 */
       }
     }
   </style>
@@ -86,59 +90,76 @@
   </div>
 </header>
 
-  <main class="container-fluid mt-4">
-    <div class="row">
-      <div class="col-lg-8 col-md-12 mx-auto">
-        <nav aria-label="breadcrumb">
-          <ol class="breadcrumb">
-            <li class="breadcrumb-item"><a href="标签列表.html">标签列表</a></li>
-            <li class="breadcrumb-item active" aria-current="page">贫富差距</li>
-          </ol>
-        </nav>
+    <main class="container-fluid mt-4">
+      <div class="row">
+        <div class="col-lg-8 col-md-12 mx-auto">
+          <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item"><a href="标签列表.html">标签列表</a></li>
+              <li class="breadcrumb-item active" aria-current="page">
+                贫富差距
+              </li>
+            </ol>
+          </nav>
 
-        <div class="grid">
-          
-            <div class="grid-item">
-              <div class="card shadow-sm">
-                <div class="card-body">
-                  <h5 class="card-title">
-                    <i class="bi bi-file-earmark-text"></i>
-                    <a href="../mdhtml/为什么社会贫富差距越来越大？.html" class="text-decoration-none">
-                      为什么社会贫富差距越来越大？
+          <div class="grid">
+            
+              <div class="grid-item">
+                <div class="card shadow-sm">
+                  <div class="card-body">
+                    <h5 class="card-title">
+                      <i class="bi bi-file-earmark-text"></i>
+                      <a href="../mdhtml/为什么社会贫富差距越来越大？.html" class="text-decoration-none">
+                        为什么社会贫富差距越来越大？
+                      </a>
+                    </h5>
+                    
+                        
+                          <small class="text-muted">
+                            2025-02-10
+                          </small>
+                          
+                  </div>
+                  <div class="card-footer text-muted">
+                    <a href="/category/%E7%A4%BE%E4%BC%9A.html"
+                      class="badge bg-primary">
+                      社会
                     </a>
-                  </h5>
-                  
-                  
-                    <small class="text-muted">2025-02-10</small>
-                  
-                </div>
-                <div class="card-footer text-muted">
-                  <a href="/category/%E7%A4%BE%E4%BC%9A.html" class="badge bg-primary">社会</a>
-                  
-                    <a href="/tag/%E8%B4%AB%E5%AF%8C%E5%B7%AE%E8%B7%9D.html" class="badge tag-link">贫富差距</a>
-                  
-                    <a href="/tag/%E7%BB%8F%E6%B5%8E%E5%85%A8%E7%90%83%E5%8C%96.html" class="badge tag-link">经济全球化</a>
-                  
-                    <a href="/tag/%E7%A7%91%E6%8A%80%E9%9D%A9%E5%91%BD.html" class="badge tag-link">科技革命</a>
-                  
-                    <a href="/tag/%E6%94%BF%E7%AD%96%E6%9C%BA%E5%88%B6.html" class="badge tag-link">政策机制</a>
-                  
-                    <a href="/tag/%E6%95%99%E8%82%B2%E6%9C%BA%E4%BC%9A.html" class="badge tag-link">教育机会</a>
-                  
+                    
+                      <a href="/tag/%E8%B4%AB%E5%AF%8C%E5%B7%AE%E8%B7%9D.html" class="badge tag-link">
+                        贫富差距
+                      </a>
+                      
+                      <a href="/tag/%E7%BB%8F%E6%B5%8E%E5%85%A8%E7%90%83%E5%8C%96.html" class="badge tag-link">
+                        经济全球化
+                      </a>
+                      
+                      <a href="/tag/%E7%A7%91%E6%8A%80%E9%9D%A9%E5%91%BD.html" class="badge tag-link">
+                        科技革命
+                      </a>
+                      
+                      <a href="/tag/%E6%94%BF%E7%AD%96%E6%9C%BA%E5%88%B6.html" class="badge tag-link">
+                        政策机制
+                      </a>
+                      
+                      <a href="/tag/%E6%95%99%E8%82%B2%E6%9C%BA%E4%BC%9A.html" class="badge tag-link">
+                        教育机会
+                      </a>
+                      
+                  </div>
                 </div>
               </div>
-            </div>
-          
-        </div>
+              
+          </div>
 
-        <div class="mt-4 text-center">
-          <a href="标签列表.html" class="btn btn-outline-primary"><i class="bi bi-arrow-left"></i> 返回标签列表</a>
+          <div class="mt-4 text-center">
+            <a href="标签列表.html" class="btn btn-outline-primary"><i class="bi bi-arrow-left"></i> 返回标签列表</a>
+          </div>
         </div>
       </div>
-    </div>
-  </main>
+    </main>
 
-  <footer class="sticky-footer text-center text-lg-start bg-light text-muted">
+    <footer class="sticky-footer text-center text-lg-start bg-light text-muted">
   <div class="container text-center py-1">
     <section>
       <span id="busuanzi_container_page_pv">本页面访问量<span id="busuanzi_value_page_pv"></span>次</span>
@@ -148,18 +169,18 @@
   </div>
 </footer>
 
-  <script>
-    // 初始化Masonry
-    document.addEventListener('DOMContentLoaded', function () {
-      var elem = document.querySelector('.grid');
-      var msnry = new Masonry(elem, {
-        itemSelector: '.grid-item',
-        columnWidth: '.grid-item',
-        percentPosition: true,
-        gutter: 10 // 可选，添加卡片间的间距
-      });
-    });
-  </script>
+      <script>
+        // 初始化Masonry
+        document.addEventListener('DOMContentLoaded', function () {
+          var elem = document.querySelector('.grid');
+          var msnry = new Masonry(elem, {
+            itemSelector: '.grid-item',
+            columnWidth: '.grid-item',
+            percentPosition: true,
+            gutter: 10 // 可选，添加卡片间的间距
+          });
+        });
+      </script>
 </body>
 
 </html>

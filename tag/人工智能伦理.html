@@ -30,21 +30,25 @@
     }
 
     /* Masonry items */
-    .grid-item { 
-      width: calc(100% / 3); /* 默认每行3个卡片 */
+    .grid-item {
+      width: calc((100% - (2 * 10px)) / 3);
+      /* 减去两个gutter宽度后分成三份 */
       box-sizing: border-box;
       margin-bottom: 10px;
+      /* 可选，根据需要调整底部外边距 */
     }
 
     @media (max-width: 768px) {
       .grid-item {
-        width: calc(100% / 2); /* 平板设备上每行2个卡片 */
+        width: calc((100% - 10px) / 2);
+        /* 平板设备上每行2个卡片，减去一个gutter宽度 */
       }
     }
 
     @media (max-width: 576px) {
       .grid-item {
-        width: 100%; /* 手机设备上每行1个卡片 */
+        width: 100%;
+        /* 手机设备上每行1个卡片 */
       }
     }
   </style>
@@ -86,59 +90,76 @@
   </div>
 </header>
 
-  <main class="container-fluid mt-4">
-    <div class="row">
-      <div class="col-lg-8 col-md-12 mx-auto">
-        <nav aria-label="breadcrumb">
-          <ol class="breadcrumb">
-            <li class="breadcrumb-item"><a href="标签列表.html">标签列表</a></li>
-            <li class="breadcrumb-item active" aria-current="page">人工智能伦理</li>
-          </ol>
-        </nav>
+    <main class="container-fluid mt-4">
+      <div class="row">
+        <div class="col-lg-8 col-md-12 mx-auto">
+          <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item"><a href="标签列表.html">标签列表</a></li>
+              <li class="breadcrumb-item active" aria-current="page">
+                人工智能伦理
+              </li>
+            </ol>
+          </nav>
 
-        <div class="grid">
-          
-            <div class="grid-item">
-              <div class="card shadow-sm">
-                <div class="card-body">
-                  <h5 class="card-title">
-                    <i class="bi bi-file-earmark-text"></i>
-                    <a href="../mdhtml/随着人工智能的发展，如何确保其符合人类的伦理和价值观？.html" class="text-decoration-none">
-                      随着人工智能的发展，如何确保其符合人类的伦理和价值观？
+          <div class="grid">
+            
+              <div class="grid-item">
+                <div class="card shadow-sm">
+                  <div class="card-body">
+                    <h5 class="card-title">
+                      <i class="bi bi-file-earmark-text"></i>
+                      <a href="../mdhtml/随着人工智能的发展，如何确保其符合人类的伦理和价值观？.html" class="text-decoration-none">
+                        随着人工智能的发展，如何确保其符合人类的伦理和价值观？
+                      </a>
+                    </h5>
+                    
+                        
+                          <small class="text-muted">
+                            2025-02-10
+                          </small>
+                          
+                  </div>
+                  <div class="card-footer text-muted">
+                    <a href="/category/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD.html"
+                      class="badge bg-primary">
+                      人工智能
                     </a>
-                  </h5>
-                  
-                  
-                    <small class="text-muted">2025-02-10</small>
-                  
-                </div>
-                <div class="card-footer text-muted">
-                  <a href="/category/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD.html" class="badge bg-primary">人工智能</a>
-                  
-                    <a href="/tag/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%E4%BC%A6%E7%90%86.html" class="badge tag-link">人工智能伦理</a>
-                  
-                    <a href="/tag/%E6%95%B0%E6%8D%AE%E9%9A%90%E7%A7%81.html" class="badge tag-link">数据隐私</a>
-                  
-                    <a href="/tag/%E7%AE%97%E6%B3%95%E5%81%8F%E8%A7%81.html" class="badge tag-link">算法偏见</a>
-                  
-                    <a href="/tag/%E8%B4%A3%E4%BB%BB%E5%BD%92%E5%B1%9E.html" class="badge tag-link">责任归属</a>
-                  
-                    <a href="/tag/%E4%BC%A6%E7%90%86%E6%A1%86%E6%9E%B6.html" class="badge tag-link">伦理框架</a>
-                  
+                    
+                      <a href="/tag/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%E4%BC%A6%E7%90%86.html" class="badge tag-link">
+                        人工智能伦理
+                      </a>
+                      
+                      <a href="/tag/%E6%95%B0%E6%8D%AE%E9%9A%90%E7%A7%81.html" class="badge tag-link">
+                        数据隐私
+                      </a>
+                      
+                      <a href="/tag/%E7%AE%97%E6%B3%95%E5%81%8F%E8%A7%81.html" class="badge tag-link">
+                        算法偏见
+                      </a>
+                      
+                      <a href="/tag/%E8%B4%A3%E4%BB%BB%E5%BD%92%E5%B1%9E.html" class="badge tag-link">
+                        责任归属
+                      </a>
+                      
+                      <a href="/tag/%E4%BC%A6%E7%90%86%E6%A1%86%E6%9E%B6.html" class="badge tag-link">
+                        伦理框架
+                      </a>
+                      
+                  </div>
                 </div>
               </div>
-            </div>
-          
-        </div>
+              
+          </div>
 
-        <div class="mt-4 text-center">
-          <a href="标签列表.html" class="btn btn-outline-primary"><i class="bi bi-arrow-left"></i> 返回标签列表</a>
+          <div class="mt-4 text-center">
+            <a href="标签列表.html" class="btn btn-outline-primary"><i class="bi bi-arrow-left"></i> 返回标签列表</a>
+          </div>
         </div>
       </div>
-    </div>
-  </main>
+    </main>
 
-  <footer class="sticky-footer text-center text-lg-start bg-light text-muted">
+    <footer class="sticky-footer text-center text-lg-start bg-light text-muted">
   <div class="container text-center py-1">
     <section>
       <span id="busuanzi_container_page_pv">本页面访问量<span id="busuanzi_value_page_pv"></span>次</span>
@@ -148,18 +169,18 @@
   </div>
 </footer>
 
-  <script>
-    // 初始化Masonry
-    document.addEventListener('DOMContentLoaded', function () {
-      var elem = document.querySelector('.grid');
-      var msnry = new Masonry(elem, {
-        itemSelector: '.grid-item',
-        columnWidth: '.grid-item',
-        percentPosition: true,
-        gutter: 10 // 可选，添加卡片间的间距
-      });
-    });
-  </script>
+      <script>
+        // 初始化Masonry
+        document.addEventListener('DOMContentLoaded', function () {
+          var elem = document.querySelector('.grid');
+          var msnry = new Masonry(elem, {
+            itemSelector: '.grid-item',
+            columnWidth: '.grid-item',
+            percentPosition: true,
+            gutter: 10 // 可选，添加卡片间的间距
+          });
+        });
+      </script>
 </body>
 
 </html>

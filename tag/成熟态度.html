@@ -30,21 +30,25 @@
     }
 
     /* Masonry items */
-    .grid-item { 
-      width: calc(100% / 3); /* 默认每行3个卡片 */
+    .grid-item {
+      width: calc((100% - (2 * 10px)) / 3);
+      /* 减去两个gutter宽度后分成三份 */
       box-sizing: border-box;
       margin-bottom: 10px;
+      /* 可选，根据需要调整底部外边距 */
     }
 
     @media (max-width: 768px) {
       .grid-item {
-        width: calc(100% / 2); /* 平板设备上每行2个卡片 */
+        width: calc((100% - 10px) / 2);
+        /* 平板设备上每行2个卡片，减去一个gutter宽度 */
       }
     }
 
     @media (max-width: 576px) {
       .grid-item {
-        width: 100%; /* 手机设备上每行1个卡片 */
+        width: 100%;
+        /* 手机设备上每行1个卡片 */
       }
     }
   </style>
@@ -86,61 +90,80 @@
   </div>
 </header>
 
-  <main class="container-fluid mt-4">
-    <div class="row">
-      <div class="col-lg-8 col-md-12 mx-auto">
-        <nav aria-label="breadcrumb">
-          <ol class="breadcrumb">
-            <li class="breadcrumb-item"><a href="标签列表.html">标签列表</a></li>
-            <li class="breadcrumb-item active" aria-current="page">成熟态度</li>
-          </ol>
-        </nav>
+    <main class="container-fluid mt-4">
+      <div class="row">
+        <div class="col-lg-8 col-md-12 mx-auto">
+          <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item"><a href="标签列表.html">标签列表</a></li>
+              <li class="breadcrumb-item active" aria-current="page">
+                成熟态度
+              </li>
+            </ol>
+          </nav>
 
-        <div class="grid">
-          
-            <div class="grid-item">
-              <div class="card shadow-sm">
-                <div class="card-body">
-                  <h5 class="card-title">
-                    <i class="bi bi-file-earmark-text"></i>
-                    <a href="../mdhtml/聊一下乒乓混双得主王楚钦和邓颖莎.html" class="text-decoration-none">
-                      聊一下乒乓混双得主王楚钦和邓颖莎
+          <div class="grid">
+            
+              <div class="grid-item">
+                <div class="card shadow-sm">
+                  <div class="card-body">
+                    <h5 class="card-title">
+                      <i class="bi bi-file-earmark-text"></i>
+                      <a href="../mdhtml/聊一下乒乓混双得主王楚钦和邓颖莎.html" class="text-decoration-none">
+                        聊一下乒乓混双得主王楚钦和邓颖莎
+                      </a>
+                    </h5>
+                    
+                        
+                          <small class="text-muted">
+                            2025-02-10
+                          </small>
+                          
+                  </div>
+                  <div class="card-footer text-muted">
+                    <a href="/category/%E4%BD%93%E8%82%B2.html"
+                      class="badge bg-primary">
+                      体育
                     </a>
-                  </h5>
-                  
-                  
-                    <small class="text-muted">2025-02-10</small>
-                  
-                </div>
-                <div class="card-footer text-muted">
-                  <a href="/category/%E4%BD%93%E8%82%B2.html" class="badge bg-primary">体育</a>
-                  
-                    <a href="/tag/%E8%BF%90%E5%8A%A8%E5%91%98%E7%B2%BE%E7%A5%9E.html" class="badge tag-link">运动员精神</a>
-                  
-                    <a href="/tag/%E5%AD%99%E9%A2%96%E8%8E%8E.html" class="badge tag-link">孙颖莎</a>
-                  
-                    <a href="/tag/%E7%8E%8B%E6%A5%9A%E9%92%A6.html" class="badge tag-link">王楚钦</a>
-                  
-                    <a href="/tag/%E6%88%90%E7%86%9F%E6%80%81%E5%BA%A6.html" class="badge tag-link">成熟态度</a>
-                  
-                    <a href="/tag/%E7%9C%9F%E6%80%A7%E6%83%85.html" class="badge tag-link">真性情</a>
-                  
-                    <a href="/tag/%E7%94%9F%E6%B4%BB%E5%93%B2%E7%90%86.html" class="badge tag-link">生活哲理</a>
-                  
+                    
+                      <a href="/tag/%E8%BF%90%E5%8A%A8%E5%91%98%E7%B2%BE%E7%A5%9E.html" class="badge tag-link">
+                        运动员精神
+                      </a>
+                      
+                      <a href="/tag/%E5%AD%99%E9%A2%96%E8%8E%8E.html" class="badge tag-link">
+                        孙颖莎
+                      </a>
+                      
+                      <a href="/tag/%E7%8E%8B%E6%A5%9A%E9%92%A6.html" class="badge tag-link">
+                        王楚钦
+                      </a>
+                      
+                      <a href="/tag/%E6%88%90%E7%86%9F%E6%80%81%E5%BA%A6.html" class="badge tag-link">
+                        成熟态度
+                      </a>
+                      
+                      <a href="/tag/%E7%9C%9F%E6%80%A7%E6%83%85.html" class="badge tag-link">
+                        真性情
+                      </a>
+                      
+                      <a href="/tag/%E7%94%9F%E6%B4%BB%E5%93%B2%E7%90%86.html" class="badge tag-link">
+                        生活哲理
+                      </a>
+                      
+                  </div>
                 </div>
               </div>
-            </div>
-          
-        </div>
+              
+          </div>
 
-        <div class="mt-4 text-center">
-          <a href="标签列表.html" class="btn btn-outline-primary"><i class="bi bi-arrow-left"></i> 返回标签列表</a>
+          <div class="mt-4 text-center">
+            <a href="标签列表.html" class="btn btn-outline-primary"><i class="bi bi-arrow-left"></i> 返回标签列表</a>
+          </div>
         </div>
       </div>
-    </div>
-  </main>
+    </main>
 
-  <footer class="sticky-footer text-center text-lg-start bg-light text-muted">
+    <footer class="sticky-footer text-center text-lg-start bg-light text-muted">
   <div class="container text-center py-1">
     <section>
       <span id="busuanzi_container_page_pv">本页面访问量<span id="busuanzi_value_page_pv"></span>次</span>
@@ -150,18 +173,18 @@
   </div>
 </footer>
 
-  <script>
-    // 初始化Masonry
-    document.addEventListener('DOMContentLoaded', function () {
-      var elem = document.querySelector('.grid');
-      var msnry = new Masonry(elem, {
-        itemSelector: '.grid-item',
-        columnWidth: '.grid-item',
-        percentPosition: true,
-        gutter: 10 // 可选，添加卡片间的间距
-      });
-    });
-  </script>
+      <script>
+        // 初始化Masonry
+        document.addEventListener('DOMContentLoaded', function () {
+          var elem = document.querySelector('.grid');
+          var msnry = new Masonry(elem, {
+            itemSelector: '.grid-item',
+            columnWidth: '.grid-item',
+            percentPosition: true,
+            gutter: 10 // 可选，添加卡片间的间距
+          });
+        });
+      </script>
 </body>
 
 </html>
