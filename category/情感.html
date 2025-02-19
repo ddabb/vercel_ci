@@ -25,29 +25,30 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/masonry/4.2.2/masonry.pkgd.min.js"></script>
     <style>
         /* 新增列宽基准元素 */
-        .grid-sizer,
+        .grid {
+            max-width: 100%;
+        }
+
+        /* Masonry items */
         .grid-item {
-            width: calc((100% - 20px) / 3);
-            /* 三列布局计算修正 */
+            width: calc((100% - (2 * 10px)) / 3);
+            /* 减去两个gutter宽度后分成三份 */
             box-sizing: border-box;
             margin-bottom: 10px;
+            /* 可选，根据需要调整底部外边距 */
         }
 
         @media (max-width: 768px) {
-
-            .grid-sizer,
             .grid-item {
                 width: calc((100% - 10px) / 2);
-                /* 两列布局 */
+                /* 平板设备上每行2个卡片，减去一个gutter宽度 */
             }
         }
 
         @media (max-width: 576px) {
-
-            .grid-sizer,
             .grid-item {
                 width: 100%;
-                /* 单列布局 */
+                /* 手机设备上每行1个卡片 */
             }
         }
     </style>
@@ -105,7 +106,7 @@
 
                     <!-- 分类内容卡片 使用 Masonry 布局 -->
                     <div class="grid">
-                        <div class="grid-sizer"></div>
+
                         
                             <div class="grid-item">
                                 <div class="card shadow-sm">
@@ -693,7 +694,7 @@
                         var elem = document.querySelector('.grid');
                         var msnry = new Masonry(elem, {
                             itemSelector: '.grid-item',
-                            columnWidth: '.grid-sizer', // 指向列宽基准
+                            columnWidth: '.grid-item', // 指向列宽基准
                             percentPosition: true,
                             gutter: 10
                         });
