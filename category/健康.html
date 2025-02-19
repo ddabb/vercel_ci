@@ -25,21 +25,25 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/masonry/4.2.2/masonry.pkgd.min.js"></script>
     <style>
         /* Masonry items */
-        .grid-item { 
-            width: calc((100% - (2 * 10px)) / 3); /* 减去两个gutter宽度后分成三份 */
+        .grid-item {
+            width: calc((100% - (2 * 10px)) / 3);
+            /* 减去两个gutter宽度后分成三份 */
             box-sizing: border-box;
-            margin-bottom: 10px; /* 可选，根据需要调整底部外边距 */
+            margin-bottom: 10px;
+            /* 可选，根据需要调整底部外边距 */
         }
 
         @media (max-width: 768px) {
             .grid-item {
-                width: calc((100% - 10px) / 2); /* 平板设备上每行2个卡片，减去一个gutter宽度 */
+                width: calc((100% - 10px) / 2);
+                /* 平板设备上每行2个卡片，减去一个gutter宽度 */
             }
         }
 
         @media (max-width: 576px) {
             .grid-item {
-                width: 100%; /* 手机设备上每行1个卡片 */
+                width: 100%;
+                /* 手机设备上每行1个卡片 */
             }
         }
     </style>
@@ -81,8 +85,7 @@
   </div>
 </header>
 
-    <main class="container-fluid mt-4">
-        <div class="row">
+        <main class="container-fluid mt-4">
             <div class="col-lg-10 col-md-12 mx-auto">
                 <!-- 面包屑导航 -->
                 <nav aria-label="breadcrumb">
@@ -1790,10 +1793,9 @@
                     </a>
                 </div>
             </div>
-        </div>
-    </main>
+        </main>
 
-    <footer class="sticky-footer text-center text-lg-start bg-light text-muted">
+        <footer class="sticky-footer text-center text-lg-start bg-light text-muted">
   <div class="container text-center py-1">
     <section>
       <span id="busuanzi_container_page_pv">本页面访问量<span id="busuanzi_value_page_pv"></span>次</span>
@@ -1803,18 +1805,18 @@
   </div>
 </footer>
 
-    <script>
-        // 初始化 Masonry
-        document.addEventListener('DOMContentLoaded', function () {
-            var elem = document.querySelector('.grid');
-            var msnry = new Masonry(elem, {
-                itemSelector: '.grid-item',
-                columnWidth: '.grid-item',
-                percentPosition: true,
-                gutter: 10 // 明确设置 gutter 值为 10px
-            });
-        });
-    </script>
+            <script>
+                // 初始化 Masonry
+                document.addEventListener('DOMContentLoaded', function () {
+                    var elem = document.querySelector('.grid');
+                    var msnry = new Masonry(elem, {
+                        itemSelector: '.grid-item',
+                        columnWidth: '.grid-item',
+                        percentPosition: true,
+                        gutter: 10 // 明确设置 gutter 值为 10px
+                    });
+                });
+            </script>
 </body>
 
 </html>
