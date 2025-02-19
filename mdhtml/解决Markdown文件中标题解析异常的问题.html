@@ -8,10 +8,10 @@
     crossorigin="anonymous"></script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>
-    自助工具站
+    解决Markdown文件中标题解析异常的问题
   </title>
   <meta name="description" content="这是一个自助工具站，提供了各种实用工具和信息。">
-  <meta name="keywords" content="这是一个自助工具站，提供了各种实用工具和信息。">
+  <meta name="keywords" content="markdown,标题解析,文件编码,解析器差异">
   <link rel="icon" href="../logo.svg" type="image/svg+xml">
   <link rel="stylesheet" href="../css/style.css">
   <link rel="stylesheet" href="../css/footer.css">
@@ -68,11 +68,18 @@
               <div id="article-content">
                 <!-- 面包屑导航 -->
                 
-                    <hr />
-<p>title: 解决Markdown文件中标题解析异常的问题
-category: 技术文档</p>
-<h2 id="tagsmarkdown">tags: [markdown, 标题解析, 文件编码, 解析器差异]</h2>
-<h1 id="markdown">解决Markdown文件中标题解析异常的问题</h1>
+                  <nav aria-label="breadcrumb" class="mb-4">
+                    <ol class="breadcrumb">
+                      <li class="breadcrumb-item"><a href="/category/分类列表.html">
+                         分类列表
+                      </a></li>
+                      <li class="breadcrumb-item"><a href="/category/技术文档.html">
+                          技术文档
+                        </a></li>
+                    </ol>
+                  </nav>
+                  
+                    <h1 id="markdown">解决Markdown文件中标题解析异常的问题</h1>
 <p>在使用Markdown编写文档时，我们通常会使用井号（<code>#</code>）来定义标题。然而，有时你可能会遇到一些问题，即某些标题没有正确解析为HTML中的<code>&lt;h1&gt;</code>、<code>&lt;h2&gt;</code>等标签，而是被错误地包含在了<code>&lt;p&gt;</code>标签中，并且前面可能还带有一些不可见的字符。本文将探讨这个问题的原因，并提供相应的解决方案。</p>
 <h2 id="">原因分析</h2>
 <h3 id="1">1. 文件编码问题</h3>
@@ -97,6 +104,27 @@ category: 技术文档</p>
 <p>Markdown作为一种轻量级的标记语言，在文档编写中得到了广泛的应用。然而，在使用Markdown时，我们也可能会遇到一些问题，如标题解析异常等。通过移除BOM、检查Markdown语法、尝试不同的解析器或编辑器以及验证Markdown内容等方法，我们可以有效地解决这些问题，确保Markdown文档的正确性和可读性。</p>
                       <!-- 标签部分 -->
                       
+                        <div class="tag-links mt-4">
+                          <span class="badge tag-label"><i class="bi bi-tags"></i> 标签：</span>
+                          
+                            <a href="/tag/markdown.html" class="badge tag-link">
+                              markdown
+                            </a>
+                            
+                            <a href="/tag/%E6%A0%87%E9%A2%98%E8%A7%A3%E6%9E%90.html" class="badge tag-link">
+                              标题解析
+                            </a>
+                            
+                            <a href="/tag/%E6%96%87%E4%BB%B6%E7%BC%96%E7%A0%81.html" class="badge tag-link">
+                              文件编码
+                            </a>
+                            
+                            <a href="/tag/%E8%A7%A3%E6%9E%90%E5%99%A8%E5%B7%AE%E5%BC%82.html" class="badge tag-link">
+                              解析器差异
+                            </a>
+                            
+                        </div>
+                        
               </div>
             </div>
           </div>

@@ -16,18 +16,37 @@ async function readMarkdownFile(filePath) {
   }
 }
 
-// 新增元数据提取
+// 配置增强型正则（预编译提升性能）
+const FRONT_MATTER_REGEX = /^(\uFEFF)?(?:---|\+\+\+)\r?\n([\s\S]*?)\r?\n(?:---|\+\+\+)(?:\s*$)/m;
+
+// 元数据提取优化版（单次解析完成数据提取与内容清理）
 const extractFrontMatter = (content) => {
-  const match = content.match(/^---\n([\s\S]*?)\n---/);
-  return match ? yaml.load(match[1]) : {};
+  const match = content.match(FRONT_MATTER_REGEX);
+  if (!match) return { metadata: {}, cleanedContent: content };
+
+  try {
+    return {
+      metadata: yaml.load(match[2].trimEnd()), // 处理尾部空行
+      cleanedContent: content.slice(match[0].length) // 直接切片提升性能
+    };
+  } catch (e) {
+    console.error(`YAML解析失败: ${e.message}`, match[2]);
+    return { metadata: {}, cleanedContent: content };
+  }
 };
 
-// 修改转换函数
+// 整合型转换函数（避免重复处理）
 function convertMarkdownToHtml(markdownContent) {
-  const { title, description, tags,category } = extractFrontMatter(markdownContent);
+  const { metadata, cleanedContent } = extractFrontMatter(markdownContent);
+
   return {
-    content: converter.makeHtml(markdownContent.replace(/^---\n[\s\S]*?\n---/, '')),
-    meta: { title, description, tags,category }
+    content: converter.makeHtml(cleanedContent),
+    meta: {
+      title: metadata.title || '无标题',
+      description: metadata.description || '',
+      tags: metadata.tags?.filter(Boolean) || [], // 防御性数组处理
+      category: metadata.category || '未分类'
+    }
   };
 }
 
@@ -69,14 +88,30 @@ async function updateHtmlFile(htmlFilePath, htmlContent, outputFilePath) {
     throw error;
   }
 }
-
+async function emptyDirectory(directoryPath) {
+  console.log(`Emptying directory: ${directoryPath}`);
+  try {
+    const files = await fs.readdir(directoryPath);
+    const removePromises = files.map(file => fs.unlink(path.join(directoryPath, file)));
+    await Promise.all(removePromises);
+    console.log(`Successfully emptied directory: ${directoryPath}`);
+  } catch (error) {
+    if (error.code === 'ENOENT') { // 目录不存在的情况
+      console.log(`Directory does not exist: ${directoryPath}`);
+    } else {
+      console.error(`Error emptying directory: ${directoryPath}`, error);
+      throw error;
+    }
+  }
+}
 async function mdToHtml(mdFilesDirectory = 'mdfiles', genhtmlDirectory = 'mdhtml', htmlTemplatePath = 'components/article.ejs') {
   console.log('Starting mdToHtml process...');
   const componentsDirectory = path.join(__dirname, 'components');
 
   try {
     await ensureComponentsDirectory(componentsDirectory);
-
+    // 新增：清空输出目录
+    await emptyDirectory(genhtmlDirectory);
     const mdFiles = await fs.readdir(mdFilesDirectory, { withFileTypes: true });
     const markdownFiles = mdFiles
       .filter((file) => file.isFile() && path.extname(file.name) === '.md')

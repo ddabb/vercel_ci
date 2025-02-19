@@ -7,14 +7,19 @@ const jsonOutputPath = path.resolve(__dirname, 'jsons', 'mdfiles.json');
 
 // 提取Front-matter元数据
 function extractFrontMatter(content) {
+  const fmRegex = /^(\uFEFF)?(?:---|\+\+\+)\r?\n([\s\S]*?)\r?\n(?:---|\+\+\+)(?:\s*?$)/m;
+  const match = content.match(fmRegex);
+  
+  if (!match) return {};
+  
   try {
-    const match = content.match(/^---\n([\s\S]*?)\n---/);
-    return match ? yaml.load(match[1]) : {};
+    return yaml.load(match[2]); // 捕获组索引变为2
   } catch (e) {
-    console.warn('Front-matter解析错误:', e.message);
+    console.warn('YAML解析错误:', e.message);
     return {};
   }
 }
+
 
 // 清空指定目录
 function emptyDirectory(dirPath) {
