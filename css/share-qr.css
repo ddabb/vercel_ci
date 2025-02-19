@@ -1,6 +1,0 @@
-/* 确保二维码适应不同屏幕尺寸 */
-#qrCodeContainer canvas {
-    width: 100%;
-    max-width: 200px;
-    height: auto;
-}
