@@ -7,8 +7,7 @@
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9093386396178901"
     crossorigin="anonymous"></script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>标签文章列表
-  </title>
+  <title>标签文章列表</title>
 
   <link rel="icon" href="../logo.svg" type="image/svg+xml">
   <link rel="stylesheet" href="../css/style.css">
@@ -21,6 +20,34 @@
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" crossorigin="anonymous"></script>
   <script src="../js/clarity.js"></script>
+
+  <!-- 引入Masonry -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/masonry/4.2.2/masonry.pkgd.min.js"></script>
+  <style>
+    /* 确保容器的宽度适应父元素 */
+    .grid {
+      max-width: 100%;
+    }
+
+    /* Masonry items */
+    .grid-item { 
+      width: calc(100% / 3); /* 默认每行3个卡片 */
+      box-sizing: border-box;
+      margin-bottom: 10px;
+    }
+
+    @media (max-width: 768px) {
+      .grid-item {
+        width: calc(100% / 2); /* 平板设备上每行2个卡片 */
+      }
+    }
+
+    @media (max-width: 576px) {
+      .grid-item {
+        width: 100%; /* 手机设备上每行1个卡片 */
+      }
+    }
+  </style>
 </head>
 
 <body>
@@ -59,78 +86,59 @@
   </div>
 </header>
 
-    <main class="container-fluid mt-4">
-      <div class="row">
-        <div class="col-lg-8 col-md-12 mx-auto">
-          <nav aria-label="breadcrumb">
-            <ol class="breadcrumb">
-              <li class="breadcrumb-item"><a href="标签列表.html">标签列表</a></li>
-              <li class="breadcrumb-item active" aria-current="page">
-                智能写作助手
-              </li>
-            </ol>
-          </nav>
+  <main class="container-fluid mt-4">
+    <div class="row">
+      <div class="col-lg-8 col-md-12 mx-auto">
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="标签列表.html">标签列表</a></li>
+            <li class="breadcrumb-item active" aria-current="page">智能写作助手</li>
+          </ol>
+        </nav>
 
-          <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
-            
-              <div class="col">
-                <div class="card shadow-sm">
-                  <div class="card-body">
-                    <h5 class="card-title">
-                      <i class="bi bi-file-earmark-text"></i>
-                      <a href="../mdhtml/DeepSeek智能写作助手进阶指南：批量生产与违禁词规避.html" class="text-decoration-none">
-                        DeepSeek智能写作助手进阶指南：批量生产与违禁词规避
-                      </a>
-                    </h5>
-                    
-                        
-                          <small class="text-muted">
-                            2025-02-11
-                          </small>
-                          
-                  </div>
-                  <div class="card-footer text-muted">
-                    <a href="/category/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD.html"
-                      class="badge bg-primary">
-                      人工智能
+        <div class="grid">
+          
+            <div class="grid-item">
+              <div class="card shadow-sm">
+                <div class="card-body">
+                  <h5 class="card-title">
+                    <i class="bi bi-file-earmark-text"></i>
+                    <a href="../mdhtml/DeepSeek智能写作助手进阶指南：批量生产与违禁词规避.html" class="text-decoration-none">
+                      DeepSeek智能写作助手进阶指南：批量生产与违禁词规避
                     </a>
-                    
-                      <a href="/tag/DeepSeek.html" class="badge tag-link">
-                        DeepSeek
-                      </a>
-                      
-                      <a href="/tag/%E6%99%BA%E8%83%BD%E5%86%99%E4%BD%9C%E5%8A%A9%E6%89%8B.html" class="badge tag-link">
-                        智能写作助手
-                      </a>
-                      
-                      <a href="/tag/%E6%89%B9%E9%87%8F%E7%94%9F%E4%BA%A7.html" class="badge tag-link">
-                        批量生产
-                      </a>
-                      
-                      <a href="/tag/%E8%BF%9D%E7%A6%81%E8%AF%8D%E8%A7%84%E9%81%BF.html" class="badge tag-link">
-                        违禁词规避
-                      </a>
-                      
-                      <a href="/tag/%E5%86%85%E5%AE%B9%E8%B4%A8%E9%87%8F.html" class="badge tag-link">
-                        内容质量
-                      </a>
-                      
-                  </div>
+                  </h5>
+                  
+                  
+                    <small class="text-muted">2025-02-11</small>
+                  
+                </div>
+                <div class="card-footer text-muted">
+                  <a href="/category/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD.html" class="badge bg-primary">人工智能</a>
+                  
+                    <a href="/tag/DeepSeek.html" class="badge tag-link">DeepSeek</a>
+                  
+                    <a href="/tag/%E6%99%BA%E8%83%BD%E5%86%99%E4%BD%9C%E5%8A%A9%E6%89%8B.html" class="badge tag-link">智能写作助手</a>
+                  
+                    <a href="/tag/%E6%89%B9%E9%87%8F%E7%94%9F%E4%BA%A7.html" class="badge tag-link">批量生产</a>
+                  
+                    <a href="/tag/%E8%BF%9D%E7%A6%81%E8%AF%8D%E8%A7%84%E9%81%BF.html" class="badge tag-link">违禁词规避</a>
+                  
+                    <a href="/tag/%E5%86%85%E5%AE%B9%E8%B4%A8%E9%87%8F.html" class="badge tag-link">内容质量</a>
+                  
                 </div>
               </div>
-              
-          </div>
+            </div>
+          
+        </div>
 
-          <div class="mt-4 text-center">
-            <a href="标签列表.html" class="btn btn-outline-primary">
-              <i class="bi bi-arrow-left"></i> 返回标签列表
-            </a>
-          </div>
+        <div class="mt-4 text-center">
+          <a href="标签列表.html" class="btn btn-outline-primary"><i class="bi bi-arrow-left"></i> 返回标签列表</a>
         </div>
       </div>
-    </main>
+    </div>
+  </main>
 
-    <footer class="sticky-footer text-center text-lg-start bg-light text-muted">
+  <footer class="sticky-footer text-center text-lg-start bg-light text-muted">
   <div class="container text-center py-1">
     <section>
       <span id="busuanzi_container_page_pv">本页面访问量<span id="busuanzi_value_page_pv"></span>次</span>
@@ -140,6 +148,18 @@
   </div>
 </footer>
 
+  <script>
+    // 初始化Masonry
+    document.addEventListener('DOMContentLoaded', function () {
+      var elem = document.querySelector('.grid');
+      var msnry = new Masonry(elem, {
+        itemSelector: '.grid-item',
+        columnWidth: '.grid-item',
+        percentPosition: true,
+        gutter: 10 // 可选，添加卡片间的间距
+      });
+    });
+  </script>
 </body>
 
 </html>

@@ -7,8 +7,7 @@
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9093386396178901"
     crossorigin="anonymous"></script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>标签文章列表
-  </title>
+  <title>标签文章列表</title>
 
   <link rel="icon" href="../logo.svg" type="image/svg+xml">
   <link rel="stylesheet" href="../css/style.css">
@@ -21,6 +20,34 @@
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" crossorigin="anonymous"></script>
   <script src="../js/clarity.js"></script>
+
+  <!-- 引入Masonry -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/masonry/4.2.2/masonry.pkgd.min.js"></script>
+  <style>
+    /* 确保容器的宽度适应父元素 */
+    .grid {
+      max-width: 100%;
+    }
+
+    /* Masonry items */
+    .grid-item { 
+      width: calc(100% / 3); /* 默认每行3个卡片 */
+      box-sizing: border-box;
+      margin-bottom: 10px;
+    }
+
+    @media (max-width: 768px) {
+      .grid-item {
+        width: calc(100% / 2); /* 平板设备上每行2个卡片 */
+      }
+    }
+
+    @media (max-width: 576px) {
+      .grid-item {
+        width: 100%; /* 手机设备上每行1个卡片 */
+      }
+    }
+  </style>
 </head>
 
 <body>
@@ -59,78 +86,59 @@
   </div>
 </header>
 
-    <main class="container-fluid mt-4">
-      <div class="row">
-        <div class="col-lg-8 col-md-12 mx-auto">
-          <nav aria-label="breadcrumb">
-            <ol class="breadcrumb">
-              <li class="breadcrumb-item"><a href="标签列表.html">标签列表</a></li>
-              <li class="breadcrumb-item active" aria-current="page">
-                生存技巧
-              </li>
-            </ol>
-          </nav>
+  <main class="container-fluid mt-4">
+    <div class="row">
+      <div class="col-lg-8 col-md-12 mx-auto">
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="标签列表.html">标签列表</a></li>
+            <li class="breadcrumb-item active" aria-current="page">生存技巧</li>
+          </ol>
+        </nav>
 
-          <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
-            
-              <div class="col">
-                <div class="card shadow-sm">
-                  <div class="card-body">
-                    <h5 class="card-title">
-                      <i class="bi bi-file-earmark-text"></i>
-                      <a href="../mdhtml/四万元月收入的生活日常.html" class="text-decoration-none">
-                        四万元月收入的生活日常
-                      </a>
-                    </h5>
-                    
-                        
-                          <small class="text-muted">
-                            2025-02-10
-                          </small>
-                          
-                  </div>
-                  <div class="card-footer text-muted">
-                    <a href="/category/%E7%90%86%E8%B4%A2.html"
-                      class="badge bg-primary">
-                      理财
+        <div class="grid">
+          
+            <div class="grid-item">
+              <div class="card shadow-sm">
+                <div class="card-body">
+                  <h5 class="card-title">
+                    <i class="bi bi-file-earmark-text"></i>
+                    <a href="../mdhtml/四万元月收入的生活日常.html" class="text-decoration-none">
+                      四万元月收入的生活日常
                     </a>
-                    
-                      <a href="/tag/%E5%9F%8E%E5%B8%82%E7%94%9F%E6%B4%BB.html" class="badge tag-link">
-                        城市生活
-                      </a>
-                      
-                      <a href="/tag/%E4%B8%AD%E4%BA%A7%E9%98%B6%E7%BA%A7.html" class="badge tag-link">
-                        中产阶级
-                      </a>
-                      
-                      <a href="/tag/%E6%B6%88%E8%B4%B9%E7%AD%96%E7%95%A5.html" class="badge tag-link">
-                        消费策略
-                      </a>
-                      
-                      <a href="/tag/%E6%97%B6%E9%97%B4%E7%AE%A1%E7%90%86.html" class="badge tag-link">
-                        时间管理
-                      </a>
-                      
-                      <a href="/tag/%E7%94%9F%E5%AD%98%E6%8A%80%E5%B7%A7.html" class="badge tag-link">
-                        生存技巧
-                      </a>
-                      
-                  </div>
+                  </h5>
+                  
+                  
+                    <small class="text-muted">2025-02-10</small>
+                  
+                </div>
+                <div class="card-footer text-muted">
+                  <a href="/category/%E7%90%86%E8%B4%A2.html" class="badge bg-primary">理财</a>
+                  
+                    <a href="/tag/%E5%9F%8E%E5%B8%82%E7%94%9F%E6%B4%BB.html" class="badge tag-link">城市生活</a>
+                  
+                    <a href="/tag/%E4%B8%AD%E4%BA%A7%E9%98%B6%E7%BA%A7.html" class="badge tag-link">中产阶级</a>
+                  
+                    <a href="/tag/%E6%B6%88%E8%B4%B9%E7%AD%96%E7%95%A5.html" class="badge tag-link">消费策略</a>
+                  
+                    <a href="/tag/%E6%97%B6%E9%97%B4%E7%AE%A1%E7%90%86.html" class="badge tag-link">时间管理</a>
+                  
+                    <a href="/tag/%E7%94%9F%E5%AD%98%E6%8A%80%E5%B7%A7.html" class="badge tag-link">生存技巧</a>
+                  
                 </div>
               </div>
-              
-          </div>
+            </div>
+          
+        </div>
 
-          <div class="mt-4 text-center">
-            <a href="标签列表.html" class="btn btn-outline-primary">
-              <i class="bi bi-arrow-left"></i> 返回标签列表
-            </a>
-          </div>
+        <div class="mt-4 text-center">
+          <a href="标签列表.html" class="btn btn-outline-primary"><i class="bi bi-arrow-left"></i> 返回标签列表</a>
         </div>
       </div>
-    </main>
+    </div>
+  </main>
 
-    <footer class="sticky-footer text-center text-lg-start bg-light text-muted">
+  <footer class="sticky-footer text-center text-lg-start bg-light text-muted">
   <div class="container text-center py-1">
     <section>
       <span id="busuanzi_container_page_pv">本页面访问量<span id="busuanzi_value_page_pv"></span>次</span>
@@ -140,6 +148,18 @@
   </div>
 </footer>
 
+  <script>
+    // 初始化Masonry
+    document.addEventListener('DOMContentLoaded', function () {
+      var elem = document.querySelector('.grid');
+      var msnry = new Masonry(elem, {
+        itemSelector: '.grid-item',
+        columnWidth: '.grid-item',
+        percentPosition: true,
+        gutter: 10 // 可选，添加卡片间的间距
+      });
+    });
+  </script>
 </body>
 
 </html>

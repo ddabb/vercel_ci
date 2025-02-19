@@ -7,8 +7,7 @@
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9093386396178901"
     crossorigin="anonymous"></script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>标签文章列表
-  </title>
+  <title>标签文章列表</title>
 
   <link rel="icon" href="../logo.svg" type="image/svg+xml">
   <link rel="stylesheet" href="../css/style.css">
@@ -21,6 +20,34 @@
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" crossorigin="anonymous"></script>
   <script src="../js/clarity.js"></script>
+
+  <!-- 引入Masonry -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/masonry/4.2.2/masonry.pkgd.min.js"></script>
+  <style>
+    /* 确保容器的宽度适应父元素 */
+    .grid {
+      max-width: 100%;
+    }
+
+    /* Masonry items */
+    .grid-item { 
+      width: calc(100% / 3); /* 默认每行3个卡片 */
+      box-sizing: border-box;
+      margin-bottom: 10px;
+    }
+
+    @media (max-width: 768px) {
+      .grid-item {
+        width: calc(100% / 2); /* 平板设备上每行2个卡片 */
+      }
+    }
+
+    @media (max-width: 576px) {
+      .grid-item {
+        width: 100%; /* 手机设备上每行1个卡片 */
+      }
+    }
+  </style>
 </head>
 
 <body>
@@ -59,82 +86,61 @@
   </div>
 </header>
 
-    <main class="container-fluid mt-4">
-      <div class="row">
-        <div class="col-lg-8 col-md-12 mx-auto">
-          <nav aria-label="breadcrumb">
-            <ol class="breadcrumb">
-              <li class="breadcrumb-item"><a href="标签列表.html">标签列表</a></li>
-              <li class="breadcrumb-item active" aria-current="page">
-                自媒体与内容创作
-              </li>
-            </ol>
-          </nav>
+  <main class="container-fluid mt-4">
+    <div class="row">
+      <div class="col-lg-8 col-md-12 mx-auto">
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="标签列表.html">标签列表</a></li>
+            <li class="breadcrumb-item active" aria-current="page">自媒体与内容创作</li>
+          </ol>
+        </nav>
 
-          <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
-            
-              <div class="col">
-                <div class="card shadow-sm">
-                  <div class="card-body">
-                    <h5 class="card-title">
-                      <i class="bi bi-file-earmark-text"></i>
-                      <a href="../mdhtml/2025年赚钱的主要方向.html" class="text-decoration-none">
-                        2025年赚钱的主要方向
-                      </a>
-                    </h5>
-                    
-                      <p class="card-text">
-                        本计划旨在依托宝安妇幼保健院的医疗资源与家庭医生支持，通过科学备孕与健康重建为核心目标，在妻子主导的家庭框架下，利用标准化协作与智能工具赋能，成为高效执行者与隐形支持者。
-                      </p>
-                      
-                        
-                          <small class="text-muted">
-                            2025-02-10
-                          </small>
-                          
-                  </div>
-                  <div class="card-footer text-muted">
-                    <a href="/category/%E7%90%86%E8%B4%A2.html"
-                      class="badge bg-primary">
-                      理财
+        <div class="grid">
+          
+            <div class="grid-item">
+              <div class="card shadow-sm">
+                <div class="card-body">
+                  <h5 class="card-title">
+                    <i class="bi bi-file-earmark-text"></i>
+                    <a href="../mdhtml/2025年赚钱的主要方向.html" class="text-decoration-none">
+                      2025年赚钱的主要方向
                     </a>
-                    
-                      <a href="/tag/%E6%83%85%E7%BB%AA%E4%BA%A7%E4%B8%9A.html" class="badge tag-link">
-                        情绪产业
-                      </a>
-                      
-                      <a href="/tag/%E9%99%AA%E4%BC%B4%E4%BA%A7%E4%B8%9A.html" class="badge tag-link">
-                        陪伴产业
-                      </a>
-                      
-                      <a href="/tag/%E6%83%85%E6%84%9F%E7%A7%91%E6%8A%80.html" class="badge tag-link">
-                        情感科技
-                      </a>
-                      
-                      <a href="/tag/%E5%81%A5%E5%BA%B7%E5%B9%B8%E7%A6%8F%E4%BA%A7%E4%B8%9A.html" class="badge tag-link">
-                        健康幸福产业
-                      </a>
-                      
-                      <a href="/tag/%E8%87%AA%E5%AA%92%E4%BD%93%E4%B8%8E%E5%86%85%E5%AE%B9%E5%88%9B%E4%BD%9C.html" class="badge tag-link">
-                        自媒体与内容创作
-                      </a>
-                      
-                  </div>
+                  </h5>
+                  
+                    <p class="card-text">本计划旨在依托宝安妇幼保健院的医疗资源与家庭医生支持，通过科学备孕与健康重建为核心目标，在妻子主导的家庭框架下，利用标准化协作与智能工具赋能，成为高效执行者与隐形支持者。</p>
+                  
+                  
+                    <small class="text-muted">2025-02-10</small>
+                  
+                </div>
+                <div class="card-footer text-muted">
+                  <a href="/category/%E7%90%86%E8%B4%A2.html" class="badge bg-primary">理财</a>
+                  
+                    <a href="/tag/%E6%83%85%E7%BB%AA%E4%BA%A7%E4%B8%9A.html" class="badge tag-link">情绪产业</a>
+                  
+                    <a href="/tag/%E9%99%AA%E4%BC%B4%E4%BA%A7%E4%B8%9A.html" class="badge tag-link">陪伴产业</a>
+                  
+                    <a href="/tag/%E6%83%85%E6%84%9F%E7%A7%91%E6%8A%80.html" class="badge tag-link">情感科技</a>
+                  
+                    <a href="/tag/%E5%81%A5%E5%BA%B7%E5%B9%B8%E7%A6%8F%E4%BA%A7%E4%B8%9A.html" class="badge tag-link">健康幸福产业</a>
+                  
+                    <a href="/tag/%E8%87%AA%E5%AA%92%E4%BD%93%E4%B8%8E%E5%86%85%E5%AE%B9%E5%88%9B%E4%BD%9C.html" class="badge tag-link">自媒体与内容创作</a>
+                  
                 </div>
               </div>
-              
-          </div>
+            </div>
+          
+        </div>
 
-          <div class="mt-4 text-center">
-            <a href="标签列表.html" class="btn btn-outline-primary">
-              <i class="bi bi-arrow-left"></i> 返回标签列表
-            </a>
-          </div>
+        <div class="mt-4 text-center">
+          <a href="标签列表.html" class="btn btn-outline-primary"><i class="bi bi-arrow-left"></i> 返回标签列表</a>
         </div>
       </div>
-    </main>
+    </div>
+  </main>
 
-    <footer class="sticky-footer text-center text-lg-start bg-light text-muted">
+  <footer class="sticky-footer text-center text-lg-start bg-light text-muted">
   <div class="container text-center py-1">
     <section>
       <span id="busuanzi_container_page_pv">本页面访问量<span id="busuanzi_value_page_pv"></span>次</span>
@@ -144,6 +150,18 @@
   </div>
 </footer>
 
+  <script>
+    // 初始化Masonry
+    document.addEventListener('DOMContentLoaded', function () {
+      var elem = document.querySelector('.grid');
+      var msnry = new Masonry(elem, {
+        itemSelector: '.grid-item',
+        columnWidth: '.grid-item',
+        percentPosition: true,
+        gutter: 10 // 可选，添加卡片间的间距
+      });
+    });
+  </script>
 </body>
 
 </html>
