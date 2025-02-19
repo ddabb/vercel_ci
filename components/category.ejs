@@ -52,16 +52,18 @@
                                                 <%= article.title %>
                                             </a>
                                         </h5>
-                                        <p class="card-text">
-                                            <%= article.description || '暂无描述' %>
-                                        </p>
-                                        <% if (article.birthtime) { %>
-                                            <small class="text-muted">
-                                                <%= new Date(article.birthtime).toISOString().split('T')[0] %>
-                                            </small>
-                                            <% } else { %>
-                                                <small class="text-muted">未知日期</small>
-                                                <% } %>
+                                        <% if (article.description){%>
+                                            <p class="card-text">
+                                                <%= article.description %>
+                                            </p>
+                                            <% } %>
+                                                <% if (article.birthtime) { %>
+                                                    <small class="text-muted">
+                                                        <%= new Date(article.birthtime).toISOString().split('T')[0] %>
+                                                    </small>
+                                                    <% } else { %>
+                                                        <small class="text-muted">未知日期</small>
+                                                        <% } %>
                                     </div>
                                     <div class="card-footer text-muted">
                                         <a href="/category/<%= encodeURIComponent(article.category.trim()) %>.html"

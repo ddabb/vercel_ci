@@ -1,6 +1,6 @@
 ---
 title: 解决Markdown文件中标题解析异常的问题
-category: 技术
+category: 技术文档
 tags: [markdown, 标题解析, 文件编码, 解析器差异]
 ---
 # 解决Markdown文件中标题解析异常的问题
