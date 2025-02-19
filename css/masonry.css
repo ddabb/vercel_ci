@@ -1,0 +1,26 @@
+/* Masonry items */
+.masonry-grid-item {
+    width: calc((100% - (2 * 15px)) / 3);
+    /* 减去两个gutter宽度后分成三份 */
+    box-sizing: border-box;
+
+    /* 单侧间距 */
+    margin-bottom: 10px;
+    box-sizing: border-box;
+    /* 确保内边距不影响宽度 */
+    /* 可选，根据需要调整底部外边距 */
+}
+
+@media (max-width: 768px) {
+    .masonry-grid-item {
+        width: calc((100% - 10px) / 2);
+        /* 平板设备上每行2个卡片，减去一个gutter宽度 */
+    }
+}
+
+@media (max-width: 576px) {
+    .masonry-grid-item {
+        width: 100%;
+        /* 手机设备上每行1个卡片 */
+    }
+}
