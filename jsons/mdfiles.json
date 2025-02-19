@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2025-02-19T08:19:05.185Z",
+    "generatedAt": "2025-02-19T08:24:51.817Z",
     "totalFiles": 179
   },
   "taxonomy": {
@@ -25,7 +25,7 @@
       "文化": 1
     },
     "tags": {
-      "DeepSeek": 13,
+      "DeepSeek": 14,
       "搜索引擎": 1,
       "微信": 1,
       "百度": 1,
@@ -110,7 +110,6 @@
       "AI应用": 1,
       "WordPress": 1,
       "内容自动化": 1,
-      "DeepSeek AI": 1,
       "SEO优化": 1,
       "多语言支持": 1,
       "网站建设": 1,
@@ -1116,13 +1115,13 @@
       "tags": [
         "WordPress",
         "内容自动化",
-        "DeepSeek AI",
+        "DeepSeek",
         "SEO优化",
         "多语言支持"
       ],
       "birthtime": "2025-02-11T00:22:32.491Z",
-      "updateTime": "2025-02-15T10:13:43.486Z",
-      "wordCount": 91,
+      "updateTime": "2025-02-19T08:24:46.913Z",
+      "wordCount": 90,
       "order": 20
     },
     {

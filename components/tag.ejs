@@ -58,9 +58,9 @@
                         <%= article.description %>
                       </p>
                       <% } %>
-                        <% if (article.birthtime) { %>
+                        <% if (article.updateTime) { %>
                           <small class="text-muted">
-                            <%= new Date(article.birthtime).toISOString().split('T')[0] %>
+                            <%= new Date(article.updateTime).toISOString().split('T')[0] %>
                           </small>
                           <% } else { %>
                             <small class="text-muted">未知日期</small>
