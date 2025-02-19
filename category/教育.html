@@ -24,25 +24,34 @@
     <!-- 引入Masonry -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/masonry/4.2.2/masonry.pkgd.min.js"></script>
     <style>
-        /* Masonry items */
-        .grid-item { 
-            width: calc((100% - (2 * 10px)) / 3); /* 减去两个gutter宽度后分成三份 */
+        /* 新增列宽基准元素 */
+        .grid-sizer,
+        .grid-item {
+            width: calc((100% - 20px) / 3);
+            /* 三列布局计算修正 */
             box-sizing: border-box;
-            margin-bottom: 10px; /* 可选，根据需要调整底部外边距 */
+            margin-bottom: 10px;
         }
 
         @media (max-width: 768px) {
+
+            .grid-sizer,
             .grid-item {
-                width: calc((100% - 10px) / 2); /* 平板设备上每行2个卡片，减去一个gutter宽度 */
+                width: calc((100% - 10px) / 2);
+                /* 两列布局 */
             }
         }
 
         @media (max-width: 576px) {
+
+            .grid-sizer,
             .grid-item {
-                width: 100%; /* 手机设备上每行1个卡片 */
+                width: 100%;
+                /* 单列布局 */
             }
         }
     </style>
+
 </head>
 
 <body>
@@ -81,139 +90,140 @@
   </div>
 </header>
 
-    <main class="container-fluid mt-4">
-        <div class="row">
-            <div class="col-lg-8 col-md-12 mx-auto">
-                <!-- 面包屑导航 -->
-                <nav aria-label="breadcrumb">
-                    <ol class="breadcrumb">
-                        <li class="breadcrumb-item"><a href="分类列表.html">分类列表</a></li>
-                        <li class="breadcrumb-item active" aria-current="page">
-                            教育
-                        </li>
-                    </ol>
-                </nav>
+        <main class="container-fluid mt-4">
+            <div class="row">
+                <div class="col-lg-8 col-md-12 mx-auto">
+                    <!-- 面包屑导航 -->
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a href="分类列表.html">分类列表</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">
+                                教育
+                            </li>
+                        </ol>
+                    </nav>
 
-                <!-- 分类内容卡片 使用 Masonry 布局 -->
-                <div class="grid">
-                    
-                        <div class="grid-item">
-                            <div class="card shadow-sm">
-                                <div class="card-body">
-                                    <h5 class="card-title">
-                                        <i class="bi bi-file-earmark-text"></i>
-                                        <a href="../mdhtml/人生这场马拉松，你是在种西瓜还是捡芝麻？.html"
-                                            class="text-decoration-none">
-                                            人生这场马拉松，你是在种西瓜还是捡芝麻？
-                                        </a>
-                                    </h5>
-                                    
-                                            
-                                                <small class="text-muted">
-                                                    2025-02-16
-                                                </small>
+                    <!-- 分类内容卡片 使用 Masonry 布局 -->
+                    <div class="grid">
+                        <div class="grid-sizer"></div>
+                        
+                            <div class="grid-item">
+                                <div class="card shadow-sm">
+                                    <div class="card-body">
+                                        <h5 class="card-title">
+                                            <i class="bi bi-file-earmark-text"></i>
+                                            <a href="../mdhtml/人生这场马拉松，你是在种西瓜还是捡芝麻？.html"
+                                                class="text-decoration-none">
+                                                人生这场马拉松，你是在种西瓜还是捡芝麻？
+                                            </a>
+                                        </h5>
+                                        
                                                 
-                                </div>
-                                <div class="card-footer text-muted">
-                                    <a href="/category/%E6%95%99%E8%82%B2.html"
-                                        class="badge bg-primary">
-                                        教育
-                                    </a>
-                                    
-                                        <a href="/tag/%E6%97%B6%E9%97%B4%E7%AE%A1%E7%90%86.html"
-                                            class="badge tag-link">
-                                            时间管理
+                                                    <small class="text-muted">
+                                                        2025-02-16
+                                                    </small>
+                                                    
+                                    </div>
+                                    <div class="card-footer text-muted">
+                                        <a href="/category/%E6%95%99%E8%82%B2.html"
+                                            class="badge bg-primary">
+                                            教育
                                         </a>
                                         
-                                        <a href="/tag/%E4%B8%AA%E4%BA%BA%E6%88%90%E9%95%BF.html"
-                                            class="badge tag-link">
-                                            个人成长
-                                        </a>
-                                        
-                                        <a href="/tag/%E8%81%8C%E5%9C%BA%E7%AB%9E%E4%BA%89%E5%8A%9B.html"
-                                            class="badge tag-link">
-                                            职场竞争力
-                                        </a>
-                                        
-                                        <a href="/tag/%E6%88%98%E7%95%A5%E6%80%9D%E7%BB%B4.html"
-                                            class="badge tag-link">
-                                            战略思维
-                                        </a>
-                                        
-                                        <a href="/tag/%E5%8D%B3%E6%97%B6%E6%BB%A1%E8%B6%B3.html"
-                                            class="badge tag-link">
-                                            即时满足
-                                        </a>
-                                        
+                                            <a href="/tag/%E6%97%B6%E9%97%B4%E7%AE%A1%E7%90%86.html"
+                                                class="badge tag-link">
+                                                时间管理
+                                            </a>
+                                            
+                                            <a href="/tag/%E4%B8%AA%E4%BA%BA%E6%88%90%E9%95%BF.html"
+                                                class="badge tag-link">
+                                                个人成长
+                                            </a>
+                                            
+                                            <a href="/tag/%E8%81%8C%E5%9C%BA%E7%AB%9E%E4%BA%89%E5%8A%9B.html"
+                                                class="badge tag-link">
+                                                职场竞争力
+                                            </a>
+                                            
+                                            <a href="/tag/%E6%88%98%E7%95%A5%E6%80%9D%E7%BB%B4.html"
+                                                class="badge tag-link">
+                                                战略思维
+                                            </a>
+                                            
+                                            <a href="/tag/%E5%8D%B3%E6%97%B6%E6%BB%A1%E8%B6%B3.html"
+                                                class="badge tag-link">
+                                                即时满足
+                                            </a>
+                                            
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        
-                        <div class="grid-item">
-                            <div class="card shadow-sm">
-                                <div class="card-body">
-                                    <h5 class="card-title">
-                                        <i class="bi bi-file-earmark-text"></i>
-                                        <a href="../mdhtml/为什么语文老师要求多看名著，不让看网络小说？.html"
-                                            class="text-decoration-none">
-                                            为什么语文老师要求多看名著，不让看网络小说？
-                                        </a>
-                                    </h5>
-                                    
-                                            
-                                                <small class="text-muted">
-                                                    2025-02-10
-                                                </small>
+                            
+                            <div class="grid-item">
+                                <div class="card shadow-sm">
+                                    <div class="card-body">
+                                        <h5 class="card-title">
+                                            <i class="bi bi-file-earmark-text"></i>
+                                            <a href="../mdhtml/为什么语文老师要求多看名著，不让看网络小说？.html"
+                                                class="text-decoration-none">
+                                                为什么语文老师要求多看名著，不让看网络小说？
+                                            </a>
+                                        </h5>
+                                        
                                                 
-                                </div>
-                                <div class="card-footer text-muted">
-                                    <a href="/category/%E6%95%99%E8%82%B2.html"
-                                        class="badge bg-primary">
-                                        教育
-                                    </a>
-                                    
-                                        <a href="/tag/%E6%96%87%E5%AD%A6%E4%BB%B7%E5%80%BC.html"
-                                            class="badge tag-link">
-                                            文学价值
+                                                    <small class="text-muted">
+                                                        2025-02-10
+                                                    </small>
+                                                    
+                                    </div>
+                                    <div class="card-footer text-muted">
+                                        <a href="/category/%E6%95%99%E8%82%B2.html"
+                                            class="badge bg-primary">
+                                            教育
                                         </a>
                                         
-                                        <a href="/tag/%E6%95%99%E8%82%B2%E7%9B%AE%E6%A0%87.html"
-                                            class="badge tag-link">
-                                            教育目标
-                                        </a>
-                                        
-                                        <a href="/tag/%E8%AF%AD%E8%A8%80%E8%A7%84%E8%8C%83.html"
-                                            class="badge tag-link">
-                                            语言规范
-                                        </a>
-                                        
-                                        <a href="/tag/%E4%BB%B7%E5%80%BC%E8%A7%82%E5%BC%95%E5%AF%BC.html"
-                                            class="badge tag-link">
-                                            价值观引导
-                                        </a>
-                                        
-                                        <a href="/tag/%E9%98%85%E8%AF%BB%E4%B9%A0%E6%83%AF.html"
-                                            class="badge tag-link">
-                                            阅读习惯
-                                        </a>
-                                        
+                                            <a href="/tag/%E6%96%87%E5%AD%A6%E4%BB%B7%E5%80%BC.html"
+                                                class="badge tag-link">
+                                                文学价值
+                                            </a>
+                                            
+                                            <a href="/tag/%E6%95%99%E8%82%B2%E7%9B%AE%E6%A0%87.html"
+                                                class="badge tag-link">
+                                                教育目标
+                                            </a>
+                                            
+                                            <a href="/tag/%E8%AF%AD%E8%A8%80%E8%A7%84%E8%8C%83.html"
+                                                class="badge tag-link">
+                                                语言规范
+                                            </a>
+                                            
+                                            <a href="/tag/%E4%BB%B7%E5%80%BC%E8%A7%82%E5%BC%95%E5%AF%BC.html"
+                                                class="badge tag-link">
+                                                价值观引导
+                                            </a>
+                                            
+                                            <a href="/tag/%E9%98%85%E8%AF%BB%E4%B9%A0%E6%83%AF.html"
+                                                class="badge tag-link">
+                                                阅读习惯
+                                            </a>
+                                            
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        
-                </div>
+                            
+                    </div>
 
-                <!-- 返回按钮 -->
-                <div class="mt-4 text-center">
-                    <a href="分类列表.html" class="btn btn-outline-primary">
-                        <i class="bi bi-arrow-left"></i> 返回分类列表
-                    </a>
+                    <!-- 返回按钮 -->
+                    <div class="mt-4 text-center">
+                        <a href="分类列表.html" class="btn btn-outline-primary">
+                            <i class="bi bi-arrow-left"></i> 返回分类列表
+                        </a>
+                    </div>
                 </div>
             </div>
-        </div>
-    </main>
+        </main>
 
-    <footer class="sticky-footer text-center text-lg-start bg-light text-muted">
+        <footer class="sticky-footer text-center text-lg-start bg-light text-muted">
   <div class="container text-center py-1">
     <section>
       <span id="busuanzi_container_page_pv">本页面访问量<span id="busuanzi_value_page_pv"></span>次</span>
@@ -223,18 +233,20 @@
   </div>
 </footer>
 
-    <script>
-        // 初始化 Masonry
-        document.addEventListener('DOMContentLoaded', function () {
-            var elem = document.querySelector('.grid');
-            var msnry = new Masonry(elem, {
-                itemSelector: '.grid-item',
-                columnWidth: '.grid-item',
-                percentPosition: true,
-                gutter: 10 // 明确设置 gutter 值为 10px
-            });
-        });
-    </script>
+            <script>
+                // 初始化 Masonry
+                document.addEventListener('DOMContentLoaded', function () {
+                    document.addEventListener('DOMContentLoaded', function () {
+                        var elem = document.querySelector('.grid');
+                        var msnry = new Masonry(elem, {
+                            itemSelector: '.grid-item',
+                            columnWidth: '.grid-sizer', // 指向列宽基准
+                            percentPosition: true,
+                            gutter: 10
+                        });
+                    });
+                });
+            </script>
 </body>
 
 </html>

@@ -24,25 +24,34 @@
     <!-- 引入Masonry -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/masonry/4.2.2/masonry.pkgd.min.js"></script>
     <style>
-        /* Masonry items */
-        .grid-item { 
-            width: calc((100% - (2 * 10px)) / 3); /* 减去两个gutter宽度后分成三份 */
+        /* 新增列宽基准元素 */
+        .grid-sizer,
+        .grid-item {
+            width: calc((100% - 20px) / 3);
+            /* 三列布局计算修正 */
             box-sizing: border-box;
-            margin-bottom: 10px; /* 可选，根据需要调整底部外边距 */
+            margin-bottom: 10px;
         }
 
         @media (max-width: 768px) {
+
+            .grid-sizer,
             .grid-item {
-                width: calc((100% - 10px) / 2); /* 平板设备上每行2个卡片，减去一个gutter宽度 */
+                width: calc((100% - 10px) / 2);
+                /* 两列布局 */
             }
         }
 
         @media (max-width: 576px) {
+
+            .grid-sizer,
             .grid-item {
-                width: 100%; /* 手机设备上每行1个卡片 */
+                width: 100%;
+                /* 单列布局 */
             }
         }
     </style>
+
 </head>
 
 <body>
@@ -81,116 +90,117 @@
   </div>
 </header>
 
-    <main class="container-fluid mt-4">
-        <div class="row">
-            <div class="col-lg-8 col-md-12 mx-auto">
-                <!-- 面包屑导航 -->
-                <nav aria-label="breadcrumb">
-                    <ol class="breadcrumb">
-                        <li class="breadcrumb-item"><a href="分类列表.html">分类列表</a></li>
-                        <li class="breadcrumb-item active" aria-current="page">
-                            未分类
-                        </li>
-                    </ol>
-                </nav>
+        <main class="container-fluid mt-4">
+            <div class="row">
+                <div class="col-lg-8 col-md-12 mx-auto">
+                    <!-- 面包屑导航 -->
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a href="分类列表.html">分类列表</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">
+                                未分类
+                            </li>
+                        </ol>
+                    </nav>
 
-                <!-- 分类内容卡片 使用 Masonry 布局 -->
-                <div class="grid">
-                    
-                        <div class="grid-item">
-                            <div class="card shadow-sm">
-                                <div class="card-body">
-                                    <h5 class="card-title">
-                                        <i class="bi bi-file-earmark-text"></i>
-                                        <a href="../mdhtml/解决Markdown文件中标题解析异常的问题.html"
-                                            class="text-decoration-none">
-                                            解决Markdown文件中标题解析异常的问题
-                                        </a>
-                                    </h5>
-                                    
-                                            
-                                                <small class="text-muted">
-                                                    2025-02-10
-                                                </small>
+                    <!-- 分类内容卡片 使用 Masonry 布局 -->
+                    <div class="grid">
+                        <div class="grid-sizer"></div>
+                        
+                            <div class="grid-item">
+                                <div class="card shadow-sm">
+                                    <div class="card-body">
+                                        <h5 class="card-title">
+                                            <i class="bi bi-file-earmark-text"></i>
+                                            <a href="../mdhtml/解决Markdown文件中标题解析异常的问题.html"
+                                                class="text-decoration-none">
+                                                解决Markdown文件中标题解析异常的问题
+                                            </a>
+                                        </h5>
+                                        
                                                 
-                                </div>
-                                <div class="card-footer text-muted">
-                                    <a href="/category/%E6%9C%AA%E5%88%86%E7%B1%BB.html"
-                                        class="badge bg-primary">
-                                        未分类
-                                    </a>
-                                    
+                                                    <small class="text-muted">
+                                                        2025-02-10
+                                                    </small>
+                                                    
+                                    </div>
+                                    <div class="card-footer text-muted">
+                                        <a href="/category/%E6%9C%AA%E5%88%86%E7%B1%BB.html"
+                                            class="badge bg-primary">
+                                            未分类
+                                        </a>
+                                        
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        
-                        <div class="grid-item">
-                            <div class="card shadow-sm">
-                                <div class="card-body">
-                                    <h5 class="card-title">
-                                        <i class="bi bi-file-earmark-text"></i>
-                                        <a href="../mdhtml/自慰会导致早泄吗.html"
-                                            class="text-decoration-none">
-                                            自慰会导致早泄吗
-                                        </a>
-                                    </h5>
-                                    
-                                            
-                                                <small class="text-muted">
-                                                    2025-02-10
-                                                </small>
+                            
+                            <div class="grid-item">
+                                <div class="card shadow-sm">
+                                    <div class="card-body">
+                                        <h5 class="card-title">
+                                            <i class="bi bi-file-earmark-text"></i>
+                                            <a href="../mdhtml/自慰会导致早泄吗.html"
+                                                class="text-decoration-none">
+                                                自慰会导致早泄吗
+                                            </a>
+                                        </h5>
+                                        
                                                 
-                                </div>
-                                <div class="card-footer text-muted">
-                                    <a href="/category/%E6%9C%AA%E5%88%86%E7%B1%BB.html"
-                                        class="badge bg-primary">
-                                        未分类
-                                    </a>
-                                    
+                                                    <small class="text-muted">
+                                                        2025-02-10
+                                                    </small>
+                                                    
+                                    </div>
+                                    <div class="card-footer text-muted">
+                                        <a href="/category/%E6%9C%AA%E5%88%86%E7%B1%BB.html"
+                                            class="badge bg-primary">
+                                            未分类
+                                        </a>
+                                        
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        
-                        <div class="grid-item">
-                            <div class="card shadow-sm">
-                                <div class="card-body">
-                                    <h5 class="card-title">
-                                        <i class="bi bi-file-earmark-text"></i>
-                                        <a href="../mdhtml/当个人价值遇上创业公司：何时该为自己的收入争取.html"
-                                            class="text-decoration-none">
-                                            当个人价值遇上创业公司：何时该为自己的收入争取
-                                        </a>
-                                    </h5>
-                                    
-                                            
-                                                <small class="text-muted">
-                                                    2025-02-10
-                                                </small>
+                            
+                            <div class="grid-item">
+                                <div class="card shadow-sm">
+                                    <div class="card-body">
+                                        <h5 class="card-title">
+                                            <i class="bi bi-file-earmark-text"></i>
+                                            <a href="../mdhtml/当个人价值遇上创业公司：何时该为自己的收入争取.html"
+                                                class="text-decoration-none">
+                                                当个人价值遇上创业公司：何时该为自己的收入争取
+                                            </a>
+                                        </h5>
+                                        
                                                 
-                                </div>
-                                <div class="card-footer text-muted">
-                                    <a href="/category/%E6%9C%AA%E5%88%86%E7%B1%BB.html"
-                                        class="badge bg-primary">
-                                        未分类
-                                    </a>
-                                    
+                                                    <small class="text-muted">
+                                                        2025-02-10
+                                                    </small>
+                                                    
+                                    </div>
+                                    <div class="card-footer text-muted">
+                                        <a href="/category/%E6%9C%AA%E5%88%86%E7%B1%BB.html"
+                                            class="badge bg-primary">
+                                            未分类
+                                        </a>
+                                        
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        
-                </div>
+                            
+                    </div>
 
-                <!-- 返回按钮 -->
-                <div class="mt-4 text-center">
-                    <a href="分类列表.html" class="btn btn-outline-primary">
-                        <i class="bi bi-arrow-left"></i> 返回分类列表
-                    </a>
+                    <!-- 返回按钮 -->
+                    <div class="mt-4 text-center">
+                        <a href="分类列表.html" class="btn btn-outline-primary">
+                            <i class="bi bi-arrow-left"></i> 返回分类列表
+                        </a>
+                    </div>
                 </div>
             </div>
-        </div>
-    </main>
+        </main>
 
-    <footer class="sticky-footer text-center text-lg-start bg-light text-muted">
+        <footer class="sticky-footer text-center text-lg-start bg-light text-muted">
   <div class="container text-center py-1">
     <section>
       <span id="busuanzi_container_page_pv">本页面访问量<span id="busuanzi_value_page_pv"></span>次</span>
@@ -200,18 +210,20 @@
   </div>
 </footer>
 
-    <script>
-        // 初始化 Masonry
-        document.addEventListener('DOMContentLoaded', function () {
-            var elem = document.querySelector('.grid');
-            var msnry = new Masonry(elem, {
-                itemSelector: '.grid-item',
-                columnWidth: '.grid-item',
-                percentPosition: true,
-                gutter: 10 // 明确设置 gutter 值为 10px
-            });
-        });
-    </script>
+            <script>
+                // 初始化 Masonry
+                document.addEventListener('DOMContentLoaded', function () {
+                    document.addEventListener('DOMContentLoaded', function () {
+                        var elem = document.querySelector('.grid');
+                        var msnry = new Masonry(elem, {
+                            itemSelector: '.grid-item',
+                            columnWidth: '.grid-sizer', // 指向列宽基准
+                            percentPosition: true,
+                            gutter: 10
+                        });
+                    });
+                });
+            </script>
 </body>
 
 </html>

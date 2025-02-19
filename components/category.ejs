@@ -24,110 +24,122 @@
     <!-- 引入Masonry -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/masonry/4.2.2/masonry.pkgd.min.js"></script>
     <style>
-        /* Masonry items */
-        .grid-item { 
-            width: calc((100% - (2 * 10px)) / 3); /* 减去两个gutter宽度后分成三份 */
+        /* 新增列宽基准元素 */
+        .grid-sizer,
+        .grid-item {
+            width: calc((100% - 20px) / 3);
+            /* 三列布局计算修正 */
             box-sizing: border-box;
-            margin-bottom: 10px; /* 可选，根据需要调整底部外边距 */
+            margin-bottom: 10px;
         }
 
         @media (max-width: 768px) {
+
+            .grid-sizer,
             .grid-item {
-                width: calc((100% - 10px) / 2); /* 平板设备上每行2个卡片，减去一个gutter宽度 */
+                width: calc((100% - 10px) / 2);
+                /* 两列布局 */
             }
         }
 
         @media (max-width: 576px) {
+
+            .grid-sizer,
             .grid-item {
-                width: 100%; /* 手机设备上每行1个卡片 */
+                width: 100%;
+                /* 单列布局 */
             }
         }
     </style>
+
 </head>
 
 <body>
     <%- headerContent %>
 
-    <main class="container-fluid mt-4">
-        <div class="row">
-            <div class="col-lg-8 col-md-12 mx-auto">
-                <!-- 面包屑导航 -->
-                <nav aria-label="breadcrumb">
-                    <ol class="breadcrumb">
-                        <li class="breadcrumb-item"><a href="分类列表.html">分类列表</a></li>
-                        <li class="breadcrumb-item active" aria-current="page">
-                            <%= category %>
-                        </li>
-                    </ol>
-                </nav>
+        <main class="container-fluid mt-4">
+            <div class="row">
+                <div class="col-lg-8 col-md-12 mx-auto">
+                    <!-- 面包屑导航 -->
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a href="分类列表.html">分类列表</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">
+                                <%= category %>
+                            </li>
+                        </ol>
+                    </nav>
 
-                <!-- 分类内容卡片 使用 Masonry 布局 -->
-                <div class="grid">
-                    <% articles.forEach(function(article){ %>
-                        <div class="grid-item">
-                            <div class="card shadow-sm">
-                                <div class="card-body">
-                                    <h5 class="card-title">
-                                        <i class="bi bi-file-earmark-text"></i>
-                                        <a href="../mdhtml/<%= article.name.replace(/\.md$/, '.html') %>"
-                                            class="text-decoration-none">
-                                            <%= article.title %>
+                    <!-- 分类内容卡片 使用 Masonry 布局 -->
+                    <div class="grid">
+                        <div class="grid-sizer"></div>
+                        <% articles.forEach(function(article){ %>
+                            <div class="grid-item">
+                                <div class="card shadow-sm">
+                                    <div class="card-body">
+                                        <h5 class="card-title">
+                                            <i class="bi bi-file-earmark-text"></i>
+                                            <a href="../mdhtml/<%= article.name.replace(/\.md$/, '.html') %>"
+                                                class="text-decoration-none">
+                                                <%= article.title %>
+                                            </a>
+                                        </h5>
+                                        <% if (article.description){%>
+                                            <p class="card-text">
+                                                <%= article.description %>
+                                            </p>
+                                            <% } %>
+                                                <% if (article.birthtime) { %>
+                                                    <small class="text-muted">
+                                                        <%= new Date(article.birthtime).toISOString().split('T')[0] %>
+                                                    </small>
+                                                    <% } else { %>
+                                                        <small class="text-muted">未知日期</small>
+                                                        <% } %>
+                                    </div>
+                                    <div class="card-footer text-muted">
+                                        <a href="/category/<%= encodeURIComponent(article.category.trim()) %>.html"
+                                            class="badge bg-primary">
+                                            <%= article.category %>
                                         </a>
-                                    </h5>
-                                    <% if (article.description){%>
-                                        <p class="card-text">
-                                            <%= article.description %>
-                                        </p>
-                                        <% } %>
-                                            <% if (article.birthtime) { %>
-                                                <small class="text-muted">
-                                                    <%= new Date(article.birthtime).toISOString().split('T')[0] %>
-                                                </small>
-                                                <% } else { %>
-                                                    <small class="text-muted">未知日期</small>
-                                                    <% } %>
-                                </div>
-                                <div class="card-footer text-muted">
-                                    <a href="/category/<%= encodeURIComponent(article.category.trim()) %>.html"
-                                        class="badge bg-primary">
-                                        <%= article.category %>
-                                    </a>
-                                    <% article.tags.forEach(function(tag) { %>
-                                        <a href="/tag/<%= encodeURIComponent(tag.trim()) %>.html"
-                                            class="badge tag-link">
-                                            <%= tag.trim() %>
-                                        </a>
-                                        <% }); %>
+                                        <% article.tags.forEach(function(tag) { %>
+                                            <a href="/tag/<%= encodeURIComponent(tag.trim()) %>.html"
+                                                class="badge tag-link">
+                                                <%= tag.trim() %>
+                                            </a>
+                                            <% }); %>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <% }); %>
-                </div>
+                            <% }); %>
+                    </div>
 
-                <!-- 返回按钮 -->
-                <div class="mt-4 text-center">
-                    <a href="分类列表.html" class="btn btn-outline-primary">
-                        <i class="bi bi-arrow-left"></i> 返回分类列表
-                    </a>
+                    <!-- 返回按钮 -->
+                    <div class="mt-4 text-center">
+                        <a href="分类列表.html" class="btn btn-outline-primary">
+                            <i class="bi bi-arrow-left"></i> 返回分类列表
+                        </a>
+                    </div>
                 </div>
             </div>
-        </div>
-    </main>
+        </main>
 
-    <%- footerContent %>
+        <%- footerContent %>
 
-    <script>
-        // 初始化 Masonry
-        document.addEventListener('DOMContentLoaded', function () {
-            var elem = document.querySelector('.grid');
-            var msnry = new Masonry(elem, {
-                itemSelector: '.grid-item',
-                columnWidth: '.grid-item',
-                percentPosition: true,
-                gutter: 10 // 明确设置 gutter 值为 10px
-            });
-        });
-    </script>
+            <script>
+                // 初始化 Masonry
+                document.addEventListener('DOMContentLoaded', function () {
+                    document.addEventListener('DOMContentLoaded', function () {
+                        var elem = document.querySelector('.grid');
+                        var msnry = new Masonry(elem, {
+                            itemSelector: '.grid-item',
+                            columnWidth: '.grid-sizer', // 指向列宽基准
+                            percentPosition: true,
+                            gutter: 10
+                        });
+                    });
+                });
+            </script>
 </body>
 
 </html>
