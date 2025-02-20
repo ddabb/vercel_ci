@@ -1,7 +1,7 @@
 ---
 title: 从开发到落地：DeepSeek在2025全球开发者大会的技术前瞻
-category: "人工智能"
-tags: [全球开发者大会, DeepSeek, 大模型, 算力优化, 开源生态, AI应用]
+category: 人工智能
+tags: [全球开发者大会, DeepSeek, 大模型, 算力优化, 开源生态, 人工智能]
 ---
 **从开发到落地：DeepSeek在2025全球开发者大会的技术前瞻**  
 
