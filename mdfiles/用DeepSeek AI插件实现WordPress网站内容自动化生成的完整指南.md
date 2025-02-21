@@ -1,7 +1,7 @@
 ---
 title: 用DeepSeek AI插件实现WordPress网站内容自动化生成的完整指南
 category: 人工智能
-tags: [技术应用, 内容自动化, DeepSeek, 智能SEO]
+tags: [人工智能, 内容自动化, DeepSeek, 智能SEO]
 ---
 ### 用DeepSeek AI插件实现WordPress网站内容自动化生成的完整指南  
 

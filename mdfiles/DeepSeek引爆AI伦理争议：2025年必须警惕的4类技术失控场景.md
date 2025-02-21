@@ -1,7 +1,7 @@
 ---
 title: DeepSeek引爆AI伦理争议：2025年必须警惕的4类技术失控场景
 category: 人工智能
-tags: [DeepSeek, 科技伦理, 网络安全, 算法偏见, 技术透明化]
+tags: [DeepSeek, 科技伦理, 网络安全, 技术透明化]
 ---
 **DeepSeek引爆AI伦理争议：2025年必须警惕的4类技术失控场景**  
 

@@ -20,6 +20,7 @@ function readExcelFiles(directory) {
 
       if (path.extname(file).toLowerCase() === '.xlsx') {
         const workbook = xlsx.readFile(filePath);
+        const stats = fs.statSync(filePath);
         const sheetNames = workbook.SheetNames;
 
         sheetNames.forEach(sheetName => {
@@ -36,6 +37,8 @@ function readExcelFiles(directory) {
                 unitprice: row.单价, //京东价
                 handPrice: row.到手价, //到手价      
                 showurl: row.联盟推广链接,
+                birthtime: stats.birthtime,
+                updateTime: stats.mtime,
               });
             }
           });

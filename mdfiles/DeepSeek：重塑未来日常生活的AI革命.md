@@ -1,6 +1,7 @@
 ---
 title: DeepSeek：重塑未来日常生活的AI革命
 category: 人工智能
+goodsLink: https://u.jd.com/8gXbf95
 tags: [DeepSeek, 效率革命, 行业重塑, 社会挑战, 未来图景]
 ---
 # DeepSeek：重塑未来日常生活的AI革命
