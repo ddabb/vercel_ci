@@ -443,6 +443,7 @@ button {
 .btn-hover-scale {
   transition: transform 0.2s ease;
 }
+
 .btn-hover-scale:hover {
   transform: scale(1.03);
   z-index: 1;
@@ -485,4 +486,100 @@ button {
     max-width: 320px;
     text-align: center;
   }
+}
+
+/* 动态悬停效果 */
+.product-card .card {
+  overflow: hidden;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+/* 价格脉冲动画 */
+@keyframes price-pulse {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.05);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* 移动端优先设计 */
+.product-card .card-img-top {
+  height: 220px;
+  object-fit: cover;
+  transition: transform 0.3s;
+}
+
+.product-card .card-title {
+  font-size: 1.3rem;
+  color: #d32f2f;
+  /* 强调色 */
+  position: relative;
+  padding-left: 24px;
+}
+
+.product-card .card-title::before {
+  content: "🔥";
+  position: absolute;
+  left: 0;
+  top: -2px;
+}
+
+.product-card .card-text:last-child {
+  color: #388e3c;
+  /* 绿色强调 */
+  font-weight: 700;
+  font-size: 1.2rem;
+  animation: price-pulse 2s infinite;
+}
+
+/* 悬停动态效果 */
+.product-card .card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+}
+
+.product-card .card:hover .card-img-top {
+  transform: scale(1.05);
+}
+
+/* 添加紧迫感元素 */
+.product-card::after {
+  content: "限时优惠";
+  position: absolute;
+  top: 15px;
+  right: -35px;
+  background: #ff4444;
+  color: white;
+  padding: 4px 35px;
+  transform: rotate(45deg);
+  font-size: 0.9rem;
+  z-index: 2;
+}
+
+/* 响应式优化 */
+@media (min-width: 768px) {
+  .product-card .card-img-top {
+    height: 260px;
+  }
+
+  .product-card .card-title {
+    font-size: 1.5rem;
+  }
+}
+
+.price-highlight {
+  background: linear-gradient(45deg, #ffd700, #ffb300);
+  -webkit-background-clip: text;
+  color: transparent;
+  padding: 2px 8px;
+  border-radius: 4px;
 }
