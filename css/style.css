@@ -512,7 +512,18 @@ button {
 }
 .product-card {
   position: relative; /* 新增定位基准 */
+  overflow: hidden; /* 关键属性 */
+  box-sizing: border-box; /* 确保尺寸计算正确 */
 }
+
+/* 图片尺寸控制 */
+.product-card img {
+  max-width: 100%; /* 最大宽度限制 */
+  width: 100%; /* 自适应宽度 */
+  height: auto; /* 保持比例 */
+  object-fit: cover; /* 智能裁剪 */
+}
+
 /* 移动端优先设计 */
 .product-card .card-img-top {
   height: 220px;
@@ -561,6 +572,9 @@ button {
   position: absolute;
   top: 15px;
   right: -28px; /* 原-35px调整 */
+  transform: rotate(45deg);
+  transform-origin: 100% 0; /* 新增旋转基准点 */
+  z-index: 2;
   background: #ff4444;
   color: white;
   padding: 4px 35px;
