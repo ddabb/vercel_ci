@@ -23,6 +23,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
          crossorigin="anonymous"></script>
     <script src="../js/clarity.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/masonry/4.2.2/masonry.pkgd.min.js"></script>
 </head>
 
 <body>
@@ -61,82 +62,60 @@
   </div>
 </header>
 
-        <main class="container-fluid">
-            <div class="row mt-5">
-                <div class="col-lg-8 col-md-12">
-                    <div class="card mb-4">
-                        <div class="card-body">
-                            <h1 class="card-title">
-                                韦皋
-                            </h1>
-                            <p class="card-text"><strong>朝代:</strong>
-                                唐代
-                            </p>
-                            <p class="card-text"><strong>生平:</strong>
-                                韦皋，字城武（一作武臣），京兆人。始仕为建陵挽郎。张镒节度凤翔，署营田判官。德宗狩奉天，授陇州刺史。置奉义军，拜节度使。帝自梁洋还，召为左金吾卫将军，迁大将军。贞元元年，出为剑南西川节度使，在蜀二十余年，封南康郡王。诗三首。
-                            </p>
-                            <p class="card-text"><strong>出生:</strong>
-                                
-                            </p>
-                            <p class="card-text"><strong>逝世:</strong>
-                                
-                            </p>
-                        </div>
-                    </div>
+    <main class="container-fluid">
+        
+            <div class="card mb-4 poet-info-card">
+                <div class="card-body">
+                    <h1 class="card-title">韦皋</h1>
+                    <p class="card-text"><strong>朝代:</strong> 唐代</p>
+                    <p class="card-text"><strong>生平:</strong> 韦皋，字城武（一作武臣），京兆人。始仕为建陵挽郎。张镒节度凤翔，署营田判官。德宗狩奉天，授陇州刺史。置奉义军，拜节度使。帝自梁洋还，召为左金吾卫将军，迁大将军。贞元元年，出为剑南西川节度使，在蜀二十余年，封南康郡王。诗三首。</p>
+                    
+                    
+                </div>
+            </div>
+        
 
-                    <h2>诗歌</h2>
-                    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
-                        
-                            <div class="col">
-                                <div class="card h-100">
-                                    <div class="card-body">
-                                        <h5 class="card-title">
-                                            天池晚棹
-                                        </h5>
-                                        <p class="card-text"><strong>形式:</strong>
-                                            七律
-                                        </p>
-                                        <p class="card-text"><strong>标签:</strong>
-                                            唐代, 韦皋</p>
-                  <pre class="card-text">雨霁天池生意足， 
+        <h2>诗歌</h2>
+        
+            <div class="masonry-grid">
+                
+                    <div class="masonry-grid-item">
+                        <div class="card h-100">
+                            <div class="card-body">
+                                <h5 class="card-title">天池晚棹</h5>
+                                <p class="card-text"><strong>形式:</strong> 七律</p>
+                                <p class="card-text"><strong>标签:</strong> 唐代, 韦皋</p>
+                                <pre class="card-text">雨霁天池生意足， 
 花间谁咏采莲曲。 
 舟浮十里芰荷香， 
 歌发一声山水绿。 
 春暧鱼抛水面纶， 
 晚晴鹭立波心玉。 
 扣舷归载月黄昏， 
-直至更深不假烛。
-                                                </pre>
-                                    </div>
-                                </div>
+直至更深不假烛。</pre>
                             </div>
-                            
-                            <div class="col">
-                                <div class="card h-100">
-                                    <div class="card-body">
-                                        <h5 class="card-title">
-                                            忆玉箫
-                                        </h5>
-                                        <p class="card-text"><strong>形式:</strong>
-                                            七绝
-                                        </p>
-                                        <p class="card-text"><strong>标签:</strong>
-                                            唐代, 韦皋</p>
-                  <pre class="card-text">黄雀衔来已数春， 
+                        </div>
+                    </div>
+                
+                    <div class="masonry-grid-item">
+                        <div class="card h-100">
+                            <div class="card-body">
+                                <h5 class="card-title">忆玉箫</h5>
+                                <p class="card-text"><strong>形式:</strong> 七绝</p>
+                                <p class="card-text"><strong>标签:</strong> 唐代, 韦皋</p>
+                                <pre class="card-text">黄雀衔来已数春， 
 别时留解赠佳人。 
 长江不见鱼书至， 
-为遣相思梦入秦。
-                                                </pre>
-                                    </div>
-                                </div>
+为遣相思梦入秦。</pre>
                             </div>
-                            
+                        </div>
                     </div>
-                </div>
+                
             </div>
-        </main>
+        
+    </main>
 
-        <footer class="sticky-footer text-center text-lg-start bg-light text-muted">
+    <footer class="sticky-footer text-center text-lg-start bg-light text-muted">
   <div class="container text-center py-1">
     <section>
       <span id="busuanzi_container_page_pv">本页面访问量<span id="busuanzi_value_page_pv"></span>次</span>
@@ -146,7 +125,19 @@
   </div>
 </footer>
 
-
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var elem = document.querySelector('.masonry-grid');
+            if (elem) {
+                var msnry = new Masonry(elem, {
+                    itemSelector: '.masonry-grid-item',
+                    columnWidth: '.masonry-grid-item',
+                    percentPosition: true,
+                    gutter: 10 // 明确设置 gutter 值为 10px
+                });
+            }
+        });
+    </script>
 </body>
 
 </html>

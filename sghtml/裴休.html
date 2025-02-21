@@ -23,6 +23,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
          crossorigin="anonymous"></script>
     <script src="../js/clarity.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/masonry/4.2.2/masonry.pkgd.min.js"></script>
 </head>
 
 <body>
@@ -61,86 +62,64 @@
   </div>
 </header>
 
-        <main class="container-fluid">
-            <div class="row mt-5">
-                <div class="col-lg-8 col-md-12">
-                    <div class="card mb-4">
-                        <div class="card-body">
-                            <h1 class="card-title">
-                                裴休
-                            </h1>
-                            <p class="card-text"><strong>朝代:</strong>
-                                唐代
-                            </p>
-                            <p class="card-text"><strong>生平:</strong>
-                                裴休，字公美，济源人。登进士第，举贤良方正异等，擢累监察御史、兵部侍郎。大中中，拜同中书门下平章事。诗二首。
-                            </p>
-                            <p class="card-text"><strong>出生:</strong>
-                                
-                            </p>
-                            <p class="card-text"><strong>逝世:</strong>
-                                
-                            </p>
-                        </div>
-                    </div>
+    <main class="container-fluid">
+        
+            <div class="card mb-4 poet-info-card">
+                <div class="card-body">
+                    <h1 class="card-title">裴休</h1>
+                    <p class="card-text"><strong>朝代:</strong> 唐代</p>
+                    <p class="card-text"><strong>生平:</strong> 裴休，字公美，济源人。登进士第，举贤良方正异等，擢累监察御史、兵部侍郎。大中中，拜同中书门下平章事。诗二首。</p>
+                    
+                    
+                </div>
+            </div>
+        
 
-                    <h2>诗歌</h2>
-                    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
-                        
-                            <div class="col">
-                                <div class="card h-100">
-                                    <div class="card-body">
-                                        <h5 class="card-title">
-                                            赠黄蘖山僧希运
-                                        </h5>
-                                        <p class="card-text"><strong>形式:</strong>
-                                            七律
-                                        </p>
-                                        <p class="card-text"><strong>标签:</strong>
-                                            唐代, 裴休</p>
-                  <pre class="card-text">曾传达士心中印， 
+        <h2>诗歌</h2>
+        
+            <div class="masonry-grid">
+                
+                    <div class="masonry-grid-item">
+                        <div class="card h-100">
+                            <div class="card-body">
+                                <h5 class="card-title">赠黄蘖山僧希运</h5>
+                                <p class="card-text"><strong>形式:</strong> 七律</p>
+                                <p class="card-text"><strong>标签:</strong> 唐代, 裴休</p>
+                                <pre class="card-text">曾传达士心中印， 
 额有圆珠七尺身。 
 挂锡十年栖蜀水， 
 浮杯今日渡漳滨。 
 一千龙象随高步， 
 万里香华结胜因。 
 拟欲事师为弟子， 
-不知将法付何人。
-                                                </pre>
-                                    </div>
-                                </div>
+不知将法付何人。</pre>
                             </div>
-                            
-                            <div class="col">
-                                <div class="card h-100">
-                                    <div class="card-body">
-                                        <h5 class="card-title">
-                                            题泐潭
-                                        </h5>
-                                        <p class="card-text"><strong>形式:</strong>
-                                            五律
-                                        </p>
-                                        <p class="card-text"><strong>标签:</strong>
-                                            唐代, 裴休</p>
-                  <pre class="card-text">泐潭形胜地， 
+                        </div>
+                    </div>
+                
+                    <div class="masonry-grid-item">
+                        <div class="card h-100">
+                            <div class="card-body">
+                                <h5 class="card-title">题泐潭</h5>
+                                <p class="card-text"><strong>形式:</strong> 五律</p>
+                                <p class="card-text"><strong>标签:</strong> 唐代, 裴休</p>
+                                <pre class="card-text">泐潭形胜地， 
 祖塔在云湄。 
 浩劫有穷日， 
 真风无坠时。 
 岁华空自老， 
 消息竟谁知。 
 到此轻尘虑， 
-功名自可遗。
-                                                </pre>
-                                    </div>
-                                </div>
+功名自可遗。</pre>
                             </div>
-                            
+                        </div>
                     </div>
-                </div>
+                
             </div>
-        </main>
+        
+    </main>
 
-        <footer class="sticky-footer text-center text-lg-start bg-light text-muted">
+    <footer class="sticky-footer text-center text-lg-start bg-light text-muted">
   <div class="container text-center py-1">
     <section>
       <span id="busuanzi_container_page_pv">本页面访问量<span id="busuanzi_value_page_pv"></span>次</span>
@@ -150,7 +129,19 @@
   </div>
 </footer>
 
-
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var elem = document.querySelector('.masonry-grid');
+            if (elem) {
+                var msnry = new Masonry(elem, {
+                    itemSelector: '.masonry-grid-item',
+                    columnWidth: '.masonry-grid-item',
+                    percentPosition: true,
+                    gutter: 10 // 明确设置 gutter 值为 10px
+                });
+            }
+        });
+    </script>
 </body>
 
 </html>

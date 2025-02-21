@@ -23,6 +23,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
          crossorigin="anonymous"></script>
     <script src="../js/clarity.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/masonry/4.2.2/masonry.pkgd.min.js"></script>
 </head>
 
 <body>
@@ -61,44 +62,30 @@
   </div>
 </header>
 
-        <main class="container-fluid">
-            <div class="row mt-5">
-                <div class="col-lg-8 col-md-12">
-                    <div class="card mb-4">
-                        <div class="card-body">
-                            <h1 class="card-title">
-                                封敖
-                            </h1>
-                            <p class="card-text"><strong>朝代:</strong>
-                                唐代
-                            </p>
-                            <p class="card-text"><strong>生平:</strong>
-                                封敖字硕夫，蓚人。元和中登第。会昌初，以左司员外郎召为翰林学士、知制诰，迁御史中丞。大中中，历平卢、兴元节度使，终尚书右仆射。翰藁八卷，今存诗二首。
-                            </p>
-                            <p class="card-text"><strong>出生:</strong>
-                                
-                            </p>
-                            <p class="card-text"><strong>逝世:</strong>
-                                
-                            </p>
-                        </div>
-                    </div>
+    <main class="container-fluid">
+        
+            <div class="card mb-4 poet-info-card">
+                <div class="card-body">
+                    <h1 class="card-title">封敖</h1>
+                    <p class="card-text"><strong>朝代:</strong> 唐代</p>
+                    <p class="card-text"><strong>生平:</strong> 封敖字硕夫，蓚人。元和中登第。会昌初，以左司员外郎召为翰林学士、知制诰，迁御史中丞。大中中，历平卢、兴元节度使，终尚书右仆射。翰藁八卷，今存诗二首。</p>
+                    
+                    
+                </div>
+            </div>
+        
 
-                    <h2>诗歌</h2>
-                    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
-                        
-                            <div class="col">
-                                <div class="card h-100">
-                                    <div class="card-body">
-                                        <h5 class="card-title">
-                                            春色满皇州
-                                        </h5>
-                                        <p class="card-text"><strong>形式:</strong>
-                                            词
-                                        </p>
-                                        <p class="card-text"><strong>标签:</strong>
-                                            唐代, 封敖</p>
-                  <pre class="card-text">帝里春光正， 
+        <h2>诗歌</h2>
+        
+            <div class="masonry-grid">
+                
+                    <div class="masonry-grid-item">
+                        <div class="card h-100">
+                            <div class="card-body">
+                                <h5 class="card-title">春色满皇州</h5>
+                                <p class="card-text"><strong>形式:</strong> 词</p>
+                                <p class="card-text"><strong>标签:</strong> 唐代, 封敖</p>
+                                <pre class="card-text">帝里春光正， 
 葱茏喜气浮。 
 锦铺仙禁侧， 
 镜写曲江头。 
@@ -109,42 +96,34 @@
 日近风先满， 
 仁深泽共流。 
 应非憔悴质， 
-辛苦在神州。
-                                                </pre>
-                                    </div>
-                                </div>
+辛苦在神州。</pre>
                             </div>
-                            
-                            <div class="col">
-                                <div class="card h-100">
-                                    <div class="card-body">
-                                        <h5 class="card-title">
-                                            题西隐寺
-                                        </h5>
-                                        <p class="card-text"><strong>形式:</strong>
-                                            七律
-                                        </p>
-                                        <p class="card-text"><strong>标签:</strong>
-                                            唐代, 封敖</p>
-                  <pre class="card-text">三年未到九华山， 
+                        </div>
+                    </div>
+                
+                    <div class="masonry-grid-item">
+                        <div class="card h-100">
+                            <div class="card-body">
+                                <h5 class="card-title">题西隐寺</h5>
+                                <p class="card-text"><strong>形式:</strong> 七律</p>
+                                <p class="card-text"><strong>标签:</strong> 唐代, 封敖</p>
+                                <pre class="card-text">三年未到九华山， 
 终日披图一室间。 
 秋寺喜因晴后赏， 
 灵峰看待足时还。 
 猿从有性留僧坐， 
 云霭无心伴客闲。 
 胜事倘能销岁月， 
-已弢名利不相关。
-                                                </pre>
-                                    </div>
-                                </div>
+已弢名利不相关。</pre>
                             </div>
-                            
+                        </div>
                     </div>
-                </div>
+                
             </div>
-        </main>
+        
+    </main>
 
-        <footer class="sticky-footer text-center text-lg-start bg-light text-muted">
+    <footer class="sticky-footer text-center text-lg-start bg-light text-muted">
   <div class="container text-center py-1">
     <section>
       <span id="busuanzi_container_page_pv">本页面访问量<span id="busuanzi_value_page_pv"></span>次</span>
@@ -154,7 +133,19 @@
   </div>
 </footer>
 
-
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var elem = document.querySelector('.masonry-grid');
+            if (elem) {
+                var msnry = new Masonry(elem, {
+                    itemSelector: '.masonry-grid-item',
+                    columnWidth: '.masonry-grid-item',
+                    percentPosition: true,
+                    gutter: 10 // 明确设置 gutter 值为 10px
+                });
+            }
+        });
+    </script>
 </body>
 
 </html>

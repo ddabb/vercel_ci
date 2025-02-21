@@ -23,6 +23,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
          crossorigin="anonymous"></script>
     <script src="../js/clarity.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/masonry/4.2.2/masonry.pkgd.min.js"></script>
 </head>
 
 <body>
@@ -61,86 +62,64 @@
   </div>
 </header>
 
-        <main class="container-fluid">
-            <div class="row mt-5">
-                <div class="col-lg-8 col-md-12">
-                    <div class="card mb-4">
-                        <div class="card-body">
-                            <h1 class="card-title">
-                                李赤
-                            </h1>
-                            <p class="card-text"><strong>朝代:</strong>
-                                唐代
-                            </p>
-                            <p class="card-text"><strong>生平:</strong>
-                                李赤，吴郡举子。尝自比李白，故名赤。诗十首。
-                            </p>
-                            <p class="card-text"><strong>出生:</strong>
-                                
-                            </p>
-                            <p class="card-text"><strong>逝世:</strong>
-                                
-                            </p>
-                        </div>
-                    </div>
+    <main class="container-fluid">
+        
+            <div class="card mb-4 poet-info-card">
+                <div class="card-body">
+                    <h1 class="card-title">李赤</h1>
+                    <p class="card-text"><strong>朝代:</strong> 唐代</p>
+                    <p class="card-text"><strong>生平:</strong> 李赤，吴郡举子。尝自比李白，故名赤。诗十首。</p>
+                    
+                    
+                </div>
+            </div>
+        
 
-                    <h2>诗歌</h2>
-                    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
-                        
-                            <div class="col">
-                                <div class="card h-100">
-                                    <div class="card-body">
-                                        <h5 class="card-title">
-                                            姑熟杂咏·丹阳湖
-                                        </h5>
-                                        <p class="card-text"><strong>形式:</strong>
-                                            五律
-                                        </p>
-                                        <p class="card-text"><strong>标签:</strong>
-                                            唐代, 李赤</p>
-                  <pre class="card-text">湖与元气通， 
+        <h2>诗歌</h2>
+        
+            <div class="masonry-grid">
+                
+                    <div class="masonry-grid-item">
+                        <div class="card h-100">
+                            <div class="card-body">
+                                <h5 class="card-title">姑熟杂咏·丹阳湖</h5>
+                                <p class="card-text"><strong>形式:</strong> 五律</p>
+                                <p class="card-text"><strong>标签:</strong> 唐代, 李赤</p>
+                                <pre class="card-text">湖与元气通， 
 风波浩难止。 
 天外贾客归， 
 云间片帆起。 
 龟游莲叶上， 
 鸟宿芦花里。 
 少女棹舟归， 
-歌声逐流水。
-                                                </pre>
-                                    </div>
-                                </div>
+歌声逐流水。</pre>
                             </div>
-                            
-                            <div class="col">
-                                <div class="card h-100">
-                                    <div class="card-body">
-                                        <h5 class="card-title">
-                                            姑熟杂咏·天门山
-                                        </h5>
-                                        <p class="card-text"><strong>形式:</strong>
-                                            五律
-                                        </p>
-                                        <p class="card-text"><strong>标签:</strong>
-                                            唐代, 李赤</p>
-                  <pre class="card-text">迥出江水上， 
+                        </div>
+                    </div>
+                
+                    <div class="masonry-grid-item">
+                        <div class="card h-100">
+                            <div class="card-body">
+                                <h5 class="card-title">姑熟杂咏·天门山</h5>
+                                <p class="card-text"><strong>形式:</strong> 五律</p>
+                                <p class="card-text"><strong>标签:</strong> 唐代, 李赤</p>
+                                <pre class="card-text">迥出江水上， 
 双峰自相对。 
 岸映松色寒， 
 石分浪花碎。 
 参差远天际， 
 缥缈晴霞外。 
 落日舟去遥， 
-回首沈青霭。
-                                                </pre>
-                                    </div>
-                                </div>
+回首沈青霭。</pre>
                             </div>
-                            
+                        </div>
                     </div>
-                </div>
+                
             </div>
-        </main>
+        
+    </main>
 
-        <footer class="sticky-footer text-center text-lg-start bg-light text-muted">
+    <footer class="sticky-footer text-center text-lg-start bg-light text-muted">
   <div class="container text-center py-1">
     <section>
       <span id="busuanzi_container_page_pv">本页面访问量<span id="busuanzi_value_page_pv"></span>次</span>
@@ -150,7 +129,19 @@
   </div>
 </footer>
 
-
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var elem = document.querySelector('.masonry-grid');
+            if (elem) {
+                var msnry = new Masonry(elem, {
+                    itemSelector: '.masonry-grid-item',
+                    columnWidth: '.masonry-grid-item',
+                    percentPosition: true,
+                    gutter: 10 // 明确设置 gutter 值为 10px
+                });
+            }
+        });
+    </script>
 </body>
 
 </html>

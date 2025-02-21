@@ -23,6 +23,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
          crossorigin="anonymous"></script>
     <script src="../js/clarity.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/masonry/4.2.2/masonry.pkgd.min.js"></script>
 </head>
 
 <body>
@@ -61,68 +62,48 @@
   </div>
 </header>
 
-        <main class="container-fluid">
-            <div class="row mt-5">
-                <div class="col-lg-8 col-md-12">
-                    <div class="card mb-4">
-                        <div class="card-body">
-                            <h1 class="card-title">
-                                萧祜
-                            </h1>
-                            <p class="card-text"><strong>朝代:</strong>
-                                唐代
-                            </p>
-                            <p class="card-text"><strong>生平:</strong>
-                                萧祜，字祐之，兰陵人。以处士征，拜拾遗。元和初，历御史中丞、桂管防御观察使。为人闲澹贞退，善鼓琴赋诗，精妙书画，游心林壑，名人高士多与之游。诗二首。
-                            </p>
-                            <p class="card-text"><strong>出生:</strong>
-                                
-                            </p>
-                            <p class="card-text"><strong>逝世:</strong>
-                                
-                            </p>
-                        </div>
-                    </div>
+    <main class="container-fluid">
+        
+            <div class="card mb-4 poet-info-card">
+                <div class="card-body">
+                    <h1 class="card-title">萧祜</h1>
+                    <p class="card-text"><strong>朝代:</strong> 唐代</p>
+                    <p class="card-text"><strong>生平:</strong> 萧祜，字祐之，兰陵人。以处士征，拜拾遗。元和初，历御史中丞、桂管防御观察使。为人闲澹贞退，善鼓琴赋诗，精妙书画，游心林壑，名人高士多与之游。诗二首。</p>
+                    
+                    
+                </div>
+            </div>
+        
 
-                    <h2>诗歌</h2>
-                    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
-                        
-                            <div class="col">
-                                <div class="card h-100">
-                                    <div class="card-body">
-                                        <h5 class="card-title">
-                                            奉陪武相公西亭夜宴陆郎中
-                                        </h5>
-                                        <p class="card-text"><strong>形式:</strong>
-                                            五律
-                                        </p>
-                                        <p class="card-text"><strong>标签:</strong>
-                                            唐代, 萧祜</p>
-                  <pre class="card-text">弘阁陈芳宴， 
+        <h2>诗歌</h2>
+        
+            <div class="masonry-grid">
+                
+                    <div class="masonry-grid-item">
+                        <div class="card h-100">
+                            <div class="card-body">
+                                <h5 class="card-title">奉陪武相公西亭夜宴陆郎中</h5>
+                                <p class="card-text"><strong>形式:</strong> 五律</p>
+                                <p class="card-text"><strong>标签:</strong> 唐代, 萧祜</p>
+                                <pre class="card-text">弘阁陈芳宴， 
 佳宾此会难。 
 交逢贵日重， 
 醉得少时欢。 
 舒黛凝歌思， 
 求音足笔端。 
 一闻清佩动， 
-珠玉夜珊珊。
-                                                </pre>
-                                    </div>
-                                </div>
+珠玉夜珊珊。</pre>
                             </div>
-                            
-                            <div class="col">
-                                <div class="card h-100">
-                                    <div class="card-body">
-                                        <h5 class="card-title">
-                                            游石堂观
-                                        </h5>
-                                        <p class="card-text"><strong>形式:</strong>
-                                            未知
-                                        </p>
-                                        <p class="card-text"><strong>标签:</strong>
-                                            唐代, 萧祜</p>
-                  <pre class="card-text">西山高高何所如， 
+                        </div>
+                    </div>
+                
+                    <div class="masonry-grid-item">
+                        <div class="card h-100">
+                            <div class="card-body">
+                                <h5 class="card-title">游石堂观</h5>
+                                <p class="card-text"><strong>形式:</strong> 未知</p>
+                                <p class="card-text"><strong>标签:</strong> 唐代, 萧祜</p>
+                                <pre class="card-text">西山高高何所如， 
 上有古昔真人居。 
 嵌崖巨石自成室， 
 其下磅礴含清虚。 
@@ -176,18 +157,16 @@
 直至今来意通形神开， 
 拥传又恨斜阳催。 
 一丘人境尚堪恋， 
-何况海上金银台。
-                                                </pre>
-                                    </div>
-                                </div>
+何况海上金银台。</pre>
                             </div>
-                            
+                        </div>
                     </div>
-                </div>
+                
             </div>
-        </main>
+        
+    </main>
 
-        <footer class="sticky-footer text-center text-lg-start bg-light text-muted">
+    <footer class="sticky-footer text-center text-lg-start bg-light text-muted">
   <div class="container text-center py-1">
     <section>
       <span id="busuanzi_container_page_pv">本页面访问量<span id="busuanzi_value_page_pv"></span>次</span>
@@ -197,7 +176,19 @@
   </div>
 </footer>
 
-
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var elem = document.querySelector('.masonry-grid');
+            if (elem) {
+                var msnry = new Masonry(elem, {
+                    itemSelector: '.masonry-grid-item',
+                    columnWidth: '.masonry-grid-item',
+                    percentPosition: true,
+                    gutter: 10 // 明确设置 gutter 值为 10px
+                });
+            }
+        });
+    </script>
 </body>
 
 </html>

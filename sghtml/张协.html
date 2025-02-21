@@ -23,6 +23,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
          crossorigin="anonymous"></script>
     <script src="../js/clarity.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/masonry/4.2.2/masonry.pkgd.min.js"></script>
 </head>
 
 <body>
@@ -61,44 +62,30 @@
   </div>
 </header>
 
-        <main class="container-fluid">
-            <div class="row mt-5">
-                <div class="col-lg-8 col-md-12">
-                    <div class="card mb-4">
-                        <div class="card-body">
-                            <h1 class="card-title">
-                                张协
-                            </h1>
-                            <p class="card-text"><strong>朝代:</strong>
-                                三国两晋
-                            </p>
-                            <p class="card-text"><strong>生平:</strong>
-                                张协(?-307)字景阳，安平（今河北安平）人。辟举后累迁至中书侍郎，转为河间内史。后见天下纷乱，避居草泽，以吟咏自娱。永嘉初，征拜黄门侍郎，托病不就，卒于家。今存诗十三首，《杂诗》十首是其代表作。有《张景阳集》。
-                            </p>
-                            <p class="card-text"><strong>出生:</strong>
-                                
-                            </p>
-                            <p class="card-text"><strong>逝世:</strong>
-                                
-                            </p>
-                        </div>
-                    </div>
+    <main class="container-fluid">
+        
+            <div class="card mb-4 poet-info-card">
+                <div class="card-body">
+                    <h1 class="card-title">张协</h1>
+                    <p class="card-text"><strong>朝代:</strong> 三国两晋</p>
+                    <p class="card-text"><strong>生平:</strong> 张协(?-307)字景阳，安平（今河北安平）人。辟举后累迁至中书侍郎，转为河间内史。后见天下纷乱，避居草泽，以吟咏自娱。永嘉初，征拜黄门侍郎，托病不就，卒于家。今存诗十三首，《杂诗》十首是其代表作。有《张景阳集》。</p>
+                    
+                    
+                </div>
+            </div>
+        
 
-                    <h2>诗歌</h2>
-                    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
-                        
-                            <div class="col">
-                                <div class="card h-100">
-                                    <div class="card-body">
-                                        <h5 class="card-title">
-                                            杂诗
-                                        </h5>
-                                        <p class="card-text"><strong>形式:</strong>
-                                            未知
-                                        </p>
-                                        <p class="card-text"><strong>标签:</strong>
-                                            三国两晋, 张协</p>
-                  <pre class="card-text">朝霞迎白日， 
+        <h2>诗歌</h2>
+        
+            <div class="masonry-grid">
+                
+                    <div class="masonry-grid-item">
+                        <div class="card h-100">
+                            <div class="card-body">
+                                <h5 class="card-title">杂诗</h5>
+                                <p class="card-text"><strong>形式:</strong> 未知</p>
+                                <p class="card-text"><strong>标签:</strong> 三国两晋, 张协</p>
+                                <pre class="card-text">朝霞迎白日， 
 丹气临汤谷。 
 繄繄结繁云， 
 森森散雨足。 
@@ -109,18 +96,16 @@
 畴昔叹时迟， 
 晚节悲年促。 
 岁暮怀百忧， 
-将从季主卜。
-                                                </pre>
-                                    </div>
-                                </div>
+将从季主卜。</pre>
                             </div>
-                            
+                        </div>
                     </div>
-                </div>
+                
             </div>
-        </main>
+        
+    </main>
 
-        <footer class="sticky-footer text-center text-lg-start bg-light text-muted">
+    <footer class="sticky-footer text-center text-lg-start bg-light text-muted">
   <div class="container text-center py-1">
     <section>
       <span id="busuanzi_container_page_pv">本页面访问量<span id="busuanzi_value_page_pv"></span>次</span>
@@ -130,7 +115,19 @@
   </div>
 </footer>
 
-
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var elem = document.querySelector('.masonry-grid');
+            if (elem) {
+                var msnry = new Masonry(elem, {
+                    itemSelector: '.masonry-grid-item',
+                    columnWidth: '.masonry-grid-item',
+                    percentPosition: true,
+                    gutter: 10 // 明确设置 gutter 值为 10px
+                });
+            }
+        });
+    </script>
 </body>
 
 </html>

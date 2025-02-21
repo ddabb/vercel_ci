@@ -23,6 +23,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
          crossorigin="anonymous"></script>
     <script src="../js/clarity.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/masonry/4.2.2/masonry.pkgd.min.js"></script>
 </head>
 
 <body>
@@ -61,44 +62,30 @@
   </div>
 </header>
 
-        <main class="container-fluid">
-            <div class="row mt-5">
-                <div class="col-lg-8 col-md-12">
-                    <div class="card mb-4">
-                        <div class="card-body">
-                            <h1 class="card-title">
-                                王茂孙
-                            </h1>
-                            <p class="card-text"><strong>朝代:</strong>
-                                宋代
-                            </p>
-                            <p class="card-text"><strong>生平:</strong>
-                                
-                            </p>
-                            <p class="card-text"><strong>出生:</strong>
-                                
-                            </p>
-                            <p class="card-text"><strong>逝世:</strong>
-                                
-                            </p>
-                        </div>
-                    </div>
+    <main class="container-fluid">
+        
+            <div class="card mb-4 poet-info-card">
+                <div class="card-body">
+                    <h1 class="card-title">王茂孙</h1>
+                    <p class="card-text"><strong>朝代:</strong> 宋代</p>
+                    
+                    
+                    
+                </div>
+            </div>
+        
 
-                    <h2>诗歌</h2>
-                    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
-                        
-                            <div class="col">
-                                <div class="card h-100">
-                                    <div class="card-body">
-                                        <h5 class="card-title">
-                                            点绛唇
-                                        </h5>
-                                        <p class="card-text"><strong>形式:</strong>
-                                            词
-                                        </p>
-                                        <p class="card-text"><strong>标签:</strong>
-                                            宋代, 王茂孙</p>
-                  <pre class="card-text">折断烟痕， 
+        <h2>诗歌</h2>
+        
+            <div class="masonry-grid">
+                
+                    <div class="masonry-grid-item">
+                        <div class="card h-100">
+                            <div class="card-body">
+                                <h5 class="card-title">点绛唇</h5>
+                                <p class="card-text"><strong>形式:</strong> 词</p>
+                                <p class="card-text"><strong>标签:</strong> 宋代, 王茂孙</p>
+                                <pre class="card-text">折断烟痕， 
 翠蓬初离鸳鸯浦。 
 玉纤相妒。 
 翻被专房误。 
@@ -106,24 +93,18 @@
 犹著轻罗护。 
 多情处。 
 芳心一缕。 
-都为相思苦。
-                                                </pre>
-                                    </div>
-                                </div>
+都为相思苦。</pre>
                             </div>
-                            
-                            <div class="col">
-                                <div class="card h-100">
-                                    <div class="card-body">
-                                        <h5 class="card-title">
-                                            高阳台
-                                        </h5>
-                                        <p class="card-text"><strong>形式:</strong>
-                                            词
-                                        </p>
-                                        <p class="card-text"><strong>标签:</strong>
-                                            宋代, 王茂孙</p>
-                  <pre class="card-text">迟日烘晴， 
+                        </div>
+                    </div>
+                
+                    <div class="masonry-grid-item">
+                        <div class="card h-100">
+                            <div class="card-body">
+                                <h5 class="card-title">高阳台</h5>
+                                <p class="card-text"><strong>形式:</strong> 词</p>
+                                <p class="card-text"><strong>标签:</strong> 宋代, 王茂孙</p>
+                                <pre class="card-text">迟日烘晴， 
 轻烟缕昼， 
 琐窗雕户慵开。 
 人独春闲， 
@@ -142,18 +123,16 @@
 便等闲、孤枕惊回。 
 恶情怀， 
 一院杨花， 
-一径苍苔。
-                                                </pre>
-                                    </div>
-                                </div>
+一径苍苔。</pre>
                             </div>
-                            
+                        </div>
                     </div>
-                </div>
+                
             </div>
-        </main>
+        
+    </main>
 
-        <footer class="sticky-footer text-center text-lg-start bg-light text-muted">
+    <footer class="sticky-footer text-center text-lg-start bg-light text-muted">
   <div class="container text-center py-1">
     <section>
       <span id="busuanzi_container_page_pv">本页面访问量<span id="busuanzi_value_page_pv"></span>次</span>
@@ -163,7 +142,19 @@
   </div>
 </footer>
 
-
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var elem = document.querySelector('.masonry-grid');
+            if (elem) {
+                var msnry = new Masonry(elem, {
+                    itemSelector: '.masonry-grid-item',
+                    columnWidth: '.masonry-grid-item',
+                    percentPosition: true,
+                    gutter: 10 // 明确设置 gutter 值为 10px
+                });
+            }
+        });
+    </script>
 </body>
 
 </html>

@@ -23,6 +23,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
          crossorigin="anonymous"></script>
     <script src="../js/clarity.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/masonry/4.2.2/masonry.pkgd.min.js"></script>
 </head>
 
 <body>
@@ -61,44 +62,30 @@
   </div>
 </header>
 
-        <main class="container-fluid">
-            <div class="row mt-5">
-                <div class="col-lg-8 col-md-12">
-                    <div class="card mb-4">
-                        <div class="card-body">
-                            <h1 class="card-title">
-                                苏涣
-                            </h1>
-                            <p class="card-text"><strong>朝代:</strong>
-                                唐代
-                            </p>
-                            <p class="card-text"><strong>生平:</strong>
-                                苏涣，尝访杜甫于江浦，甫请诵新作，有诗美之。涣善放白弩，巴中号为弩跖。后变节从学，乡赋擢第，累迁至侍御史，佐湖南崔中丞瓘幕府。崔遇害，遂逾岭，扇动哥舒晃跋扈交广，伏诛。诗四首。
-                            </p>
-                            <p class="card-text"><strong>出生:</strong>
-                                
-                            </p>
-                            <p class="card-text"><strong>逝世:</strong>
-                                
-                            </p>
-                        </div>
-                    </div>
+    <main class="container-fluid">
+        
+            <div class="card mb-4 poet-info-card">
+                <div class="card-body">
+                    <h1 class="card-title">苏涣</h1>
+                    <p class="card-text"><strong>朝代:</strong> 唐代</p>
+                    <p class="card-text"><strong>生平:</strong> 苏涣，尝访杜甫于江浦，甫请诵新作，有诗美之。涣善放白弩，巴中号为弩跖。后变节从学，乡赋擢第，累迁至侍御史，佐湖南崔中丞瓘幕府。崔遇害，遂逾岭，扇动哥舒晃跋扈交广，伏诛。诗四首。</p>
+                    
+                    
+                </div>
+            </div>
+        
 
-                    <h2>诗歌</h2>
-                    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
-                        
-                            <div class="col">
-                                <div class="card h-100">
-                                    <div class="card-body">
-                                        <h5 class="card-title">
-                                            变律
-                                        </h5>
-                                        <p class="card-text"><strong>形式:</strong>
-                                            未知
-                                        </p>
-                                        <p class="card-text"><strong>标签:</strong>
-                                            唐代, 苏涣</p>
-                  <pre class="card-text">日月东西行， 
+        <h2>诗歌</h2>
+        
+            <div class="masonry-grid">
+                
+                    <div class="masonry-grid-item">
+                        <div class="card h-100">
+                            <div class="card-body">
+                                <h5 class="card-title">变律</h5>
+                                <p class="card-text"><strong>形式:</strong> 未知</p>
+                                <p class="card-text"><strong>标签:</strong> 唐代, 苏涣</p>
+                                <pre class="card-text">日月东西行， 
 寒暑冬夏易。 
 阴阳无停机， 
 造化渺莫测。 
@@ -135,24 +122,18 @@
 祸亦不在大， 
 福亦不在先。 
 世路险孟门， 
-吾徒当勉旃。
-                                                </pre>
-                                    </div>
-                                </div>
+吾徒当勉旃。</pre>
                             </div>
-                            
-                            <div class="col">
-                                <div class="card h-100">
-                                    <div class="card-body">
-                                        <h5 class="card-title">
-                                            赠零陵僧
-                                        </h5>
-                                        <p class="card-text"><strong>形式:</strong>
-                                            未知
-                                        </p>
-                                        <p class="card-text"><strong>标签:</strong>
-                                            唐代, 苏涣</p>
-                  <pre class="card-text">张颠没在二十年， 
+                        </div>
+                    </div>
+                
+                    <div class="masonry-grid-item">
+                        <div class="card h-100">
+                            <div class="card-body">
+                                <h5 class="card-title">赠零陵僧</h5>
+                                <p class="card-text"><strong>形式:</strong> 未知</p>
+                                <p class="card-text"><strong>标签:</strong> 唐代, 苏涣</p>
+                                <pre class="card-text">张颠没在二十年， 
 谓言草圣无人传。 
 零陵沙门继其后， 
 新书大字大如斗。 
@@ -178,18 +159,16 @@
 见君绝意必深知。 
 南中纸价当日贵， 
 只恐贪泉成墨池。 
-第二百五十六卷
-                                                </pre>
-                                    </div>
-                                </div>
+第二百五十六卷</pre>
                             </div>
-                            
+                        </div>
                     </div>
-                </div>
+                
             </div>
-        </main>
+        
+    </main>
 
-        <footer class="sticky-footer text-center text-lg-start bg-light text-muted">
+    <footer class="sticky-footer text-center text-lg-start bg-light text-muted">
   <div class="container text-center py-1">
     <section>
       <span id="busuanzi_container_page_pv">本页面访问量<span id="busuanzi_value_page_pv"></span>次</span>
@@ -199,7 +178,19 @@
   </div>
 </footer>
 
-
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var elem = document.querySelector('.masonry-grid');
+            if (elem) {
+                var msnry = new Masonry(elem, {
+                    itemSelector: '.masonry-grid-item',
+                    columnWidth: '.masonry-grid-item',
+                    percentPosition: true,
+                    gutter: 10 // 明确设置 gutter 值为 10px
+                });
+            }
+        });
+    </script>
 </body>
 
 </html>

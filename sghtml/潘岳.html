@@ -23,6 +23,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
          crossorigin="anonymous"></script>
     <script src="../js/clarity.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/masonry/4.2.2/masonry.pkgd.min.js"></script>
 </head>
 
 <body>
@@ -61,44 +62,30 @@
   </div>
 </header>
 
-        <main class="container-fluid">
-            <div class="row mt-5">
-                <div class="col-lg-8 col-md-12">
-                    <div class="card mb-4">
-                        <div class="card-body">
-                            <h1 class="card-title">
-                                潘岳
-                            </h1>
-                            <p class="card-text"><strong>朝代:</strong>
-                                三国两晋
-                            </p>
-                            <p class="card-text"><strong>生平:</strong>
-                                潘岳(247-300)字安仁，荥阳中牟（今河南中牟）人。天资聪明，很早就有才名。但仕宦不得意，仅作过一些小官。他善于写哀伤诗文。有《潘黄门集》。
-                            </p>
-                            <p class="card-text"><strong>出生:</strong>
-                                
-                            </p>
-                            <p class="card-text"><strong>逝世:</strong>
-                                
-                            </p>
-                        </div>
-                    </div>
+    <main class="container-fluid">
+        
+            <div class="card mb-4 poet-info-card">
+                <div class="card-body">
+                    <h1 class="card-title">潘岳</h1>
+                    <p class="card-text"><strong>朝代:</strong> 三国两晋</p>
+                    <p class="card-text"><strong>生平:</strong> 潘岳(247-300)字安仁，荥阳中牟（今河南中牟）人。天资聪明，很早就有才名。但仕宦不得意，仅作过一些小官。他善于写哀伤诗文。有《潘黄门集》。</p>
+                    
+                    
+                </div>
+            </div>
+        
 
-                    <h2>诗歌</h2>
-                    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
-                        
-                            <div class="col">
-                                <div class="card h-100">
-                                    <div class="card-body">
-                                        <h5 class="card-title">
-                                            悼亡诗
-                                        </h5>
-                                        <p class="card-text"><strong>形式:</strong>
-                                            未知
-                                        </p>
-                                        <p class="card-text"><strong>标签:</strong>
-                                            三国两晋, 潘岳</p>
-                  <pre class="card-text">荏苒冬春谢， 
+        <h2>诗歌</h2>
+        
+            <div class="masonry-grid">
+                
+                    <div class="masonry-grid-item">
+                        <div class="card h-100">
+                            <div class="card-body">
+                                <h5 class="card-title">悼亡诗</h5>
+                                <p class="card-text"><strong>形式:</strong> 未知</p>
+                                <p class="card-text"><strong>标签:</strong> 三国两晋, 潘岳</p>
+                                <pre class="card-text">荏苒冬春谢， 
 寒暑忽流易。 
 之子归穷泉， 
 重壤永幽隔。 
@@ -123,18 +110,16 @@
 寝息何时忘， 
 沉忧日盈积。 
 庶几有时衰， 
-庄缶犹可击。
-                                                </pre>
-                                    </div>
-                                </div>
+庄缶犹可击。</pre>
                             </div>
-                            
+                        </div>
                     </div>
-                </div>
+                
             </div>
-        </main>
+        
+    </main>
 
-        <footer class="sticky-footer text-center text-lg-start bg-light text-muted">
+    <footer class="sticky-footer text-center text-lg-start bg-light text-muted">
   <div class="container text-center py-1">
     <section>
       <span id="busuanzi_container_page_pv">本页面访问量<span id="busuanzi_value_page_pv"></span>次</span>
@@ -144,7 +129,19 @@
   </div>
 </footer>
 
-
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var elem = document.querySelector('.masonry-grid');
+            if (elem) {
+                var msnry = new Masonry(elem, {
+                    itemSelector: '.masonry-grid-item',
+                    columnWidth: '.masonry-grid-item',
+                    percentPosition: true,
+                    gutter: 10 // 明确设置 gutter 值为 10px
+                });
+            }
+        });
+    </script>
 </body>
 
 </html>

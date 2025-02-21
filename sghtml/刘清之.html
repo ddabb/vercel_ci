@@ -23,6 +23,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
          crossorigin="anonymous"></script>
     <script src="../js/clarity.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/masonry/4.2.2/masonry.pkgd.min.js"></script>
 </head>
 
 <body>
@@ -61,44 +62,30 @@
   </div>
 </header>
 
-        <main class="container-fluid">
-            <div class="row mt-5">
-                <div class="col-lg-8 col-md-12">
-                    <div class="card mb-4">
-                        <div class="card-body">
-                            <h1 class="card-title">
-                                刘清之
-                            </h1>
-                            <p class="card-text"><strong>朝代:</strong>
-                                宋代
-                            </p>
-                            <p class="card-text"><strong>生平:</strong>
-                                
-                            </p>
-                            <p class="card-text"><strong>出生:</strong>
-                                
-                            </p>
-                            <p class="card-text"><strong>逝世:</strong>
-                                
-                            </p>
-                        </div>
-                    </div>
+    <main class="container-fluid">
+        
+            <div class="card mb-4 poet-info-card">
+                <div class="card-body">
+                    <h1 class="card-title">刘清之</h1>
+                    <p class="card-text"><strong>朝代:</strong> 宋代</p>
+                    
+                    
+                    
+                </div>
+            </div>
+        
 
-                    <h2>诗歌</h2>
-                    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
-                        
-                            <div class="col">
-                                <div class="card h-100">
-                                    <div class="card-body">
-                                        <h5 class="card-title">
-                                            青玉案
-                                        </h5>
-                                        <p class="card-text"><strong>形式:</strong>
-                                            词
-                                        </p>
-                                        <p class="card-text"><strong>标签:</strong>
-                                            宋代, 刘清之</p>
-                  <pre class="card-text">江南十月春风早。 
+        <h2>诗歌</h2>
+        
+            <div class="masonry-grid">
+                
+                    <div class="masonry-grid-item">
+                        <div class="card h-100">
+                            <div class="card-body">
+                                <h5 class="card-title">青玉案</h5>
+                                <p class="card-text"><strong>形式:</strong> 词</p>
+                                <p class="card-text"><strong>标签:</strong> 宋代, 刘清之</p>
+                                <pre class="card-text">江南十月春风早。 
 见枝上、梅英小。 
 爱日初升清雾晓。 
 绣筵中启， 
@@ -109,24 +96,18 @@
 此曲尊前何所祷。 
 十分康乐， 
 十分强健， 
-一树庄椿老。
-                                                </pre>
-                                    </div>
-                                </div>
+一树庄椿老。</pre>
                             </div>
-                            
-                            <div class="col">
-                                <div class="card h-100">
-                                    <div class="card-body">
-                                        <h5 class="card-title">
-                                            鹧鸪天
-                                        </h5>
-                                        <p class="card-text"><strong>形式:</strong>
-                                            七律
-                                        </p>
-                                        <p class="card-text"><strong>标签:</strong>
-                                            宋代, 刘清之</p>
-                  <pre class="card-text">柳色青青罩翠烟。 
+                        </div>
+                    </div>
+                
+                    <div class="masonry-grid-item">
+                        <div class="card h-100">
+                            <div class="card-body">
+                                <h5 class="card-title">鹧鸪天</h5>
+                                <p class="card-text"><strong>形式:</strong> 七律</p>
+                                <p class="card-text"><strong>标签:</strong> 宋代, 刘清之</p>
+                                <pre class="card-text">柳色青青罩翠烟。 
 花光灼灼映临川。 
 欲知窈窕呈祥日， 
 恰近清明淑景天。 
@@ -134,18 +115,16 @@
 庆真仙。 
 不须男女祝椿年。 
 异时早约西王母， 
-剩折蟠桃荐寿筵。
-                                                </pre>
-                                    </div>
-                                </div>
+剩折蟠桃荐寿筵。</pre>
                             </div>
-                            
+                        </div>
                     </div>
-                </div>
+                
             </div>
-        </main>
+        
+    </main>
 
-        <footer class="sticky-footer text-center text-lg-start bg-light text-muted">
+    <footer class="sticky-footer text-center text-lg-start bg-light text-muted">
   <div class="container text-center py-1">
     <section>
       <span id="busuanzi_container_page_pv">本页面访问量<span id="busuanzi_value_page_pv"></span>次</span>
@@ -155,7 +134,19 @@
   </div>
 </footer>
 
-
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var elem = document.querySelector('.masonry-grid');
+            if (elem) {
+                var msnry = new Masonry(elem, {
+                    itemSelector: '.masonry-grid-item',
+                    columnWidth: '.masonry-grid-item',
+                    percentPosition: true,
+                    gutter: 10 // 明确设置 gutter 值为 10px
+                });
+            }
+        });
+    </script>
 </body>
 
 </html>

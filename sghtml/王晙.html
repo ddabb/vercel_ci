@@ -23,6 +23,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
          crossorigin="anonymous"></script>
     <script src="../js/clarity.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/masonry/4.2.2/masonry.pkgd.min.js"></script>
 </head>
 
 <body>
@@ -61,62 +62,46 @@
   </div>
 </header>
 
-        <main class="container-fluid">
-            <div class="row mt-5">
-                <div class="col-lg-8 col-md-12">
-                    <div class="card mb-4">
-                        <div class="card-body">
-                            <h1 class="card-title">
-                                王晙
-                            </h1>
-                            <p class="card-text"><strong>朝代:</strong>
-                                唐代
-                            </p>
-                            <p class="card-text"><strong>生平:</strong>
-                                王晙，沧州景城人。擢明经第，调清苑尉，历殿中侍御史，出为渭南尉。景龙末，授桂州都督，累迁太仆少卿、陇右群牧使。开元二年，袭吐蕃于临洮，以功加银青光禄大夫，进并州都督长史。又以破突厥功，拜兵部尚书，朔方军大总管。后代张说为兵部尚书，同中书门下三品，充朔方军节度大使，终户部尚书、朔方节度。诗一首。
-                            </p>
-                            <p class="card-text"><strong>出生:</strong>
-                                
-                            </p>
-                            <p class="card-text"><strong>逝世:</strong>
-                                
-                            </p>
-                        </div>
-                    </div>
+    <main class="container-fluid">
+        
+            <div class="card mb-4 poet-info-card">
+                <div class="card-body">
+                    <h1 class="card-title">王晙</h1>
+                    <p class="card-text"><strong>朝代:</strong> 唐代</p>
+                    <p class="card-text"><strong>生平:</strong> 王晙，沧州景城人。擢明经第，调清苑尉，历殿中侍御史，出为渭南尉。景龙末，授桂州都督，累迁太仆少卿、陇右群牧使。开元二年，袭吐蕃于临洮，以功加银青光禄大夫，进并州都督长史。又以破突厥功，拜兵部尚书，朔方军大总管。后代张说为兵部尚书，同中书门下三品，充朔方军节度大使，终户部尚书、朔方节度。诗一首。</p>
+                    
+                    
+                </div>
+            </div>
+        
 
-                    <h2>诗歌</h2>
-                    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
-                        
-                            <div class="col">
-                                <div class="card h-100">
-                                    <div class="card-body">
-                                        <h5 class="card-title">
-                                            郊庙歌辞·祭汾阴乐章·太和
-                                        </h5>
-                                        <p class="card-text"><strong>形式:</strong>
-                                            未知
-                                        </p>
-                                        <p class="card-text"><strong>标签:</strong>
-                                            唐代, 王晙</p>
-                  <pre class="card-text">於穆圣皇， 
+        <h2>诗歌</h2>
+        
+            <div class="masonry-grid">
+                
+                    <div class="masonry-grid-item">
+                        <div class="card h-100">
+                            <div class="card-body">
+                                <h5 class="card-title">郊庙歌辞·祭汾阴乐章·太和</h5>
+                                <p class="card-text"><strong>形式:</strong> 未知</p>
+                                <p class="card-text"><strong>标签:</strong> 唐代, 王晙</p>
+                                <pre class="card-text">於穆圣皇， 
 六叶重光。 
 太原刻颂， 
 后土疏场。 
 宝鼎呈符， 
 歊云孕祥。 
 礼乐备矣， 
-降福穰穰。
-                                                </pre>
-                                    </div>
-                                </div>
+降福穰穰。</pre>
                             </div>
-                            
+                        </div>
                     </div>
-                </div>
+                
             </div>
-        </main>
+        
+    </main>
 
-        <footer class="sticky-footer text-center text-lg-start bg-light text-muted">
+    <footer class="sticky-footer text-center text-lg-start bg-light text-muted">
   <div class="container text-center py-1">
     <section>
       <span id="busuanzi_container_page_pv">本页面访问量<span id="busuanzi_value_page_pv"></span>次</span>
@@ -126,7 +111,19 @@
   </div>
 </footer>
 
-
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var elem = document.querySelector('.masonry-grid');
+            if (elem) {
+                var msnry = new Masonry(elem, {
+                    itemSelector: '.masonry-grid-item',
+                    columnWidth: '.masonry-grid-item',
+                    percentPosition: true,
+                    gutter: 10 // 明确设置 gutter 值为 10px
+                });
+            }
+        });
+    </script>
 </body>
 
 </html>

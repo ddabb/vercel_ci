@@ -23,6 +23,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
          crossorigin="anonymous"></script>
     <script src="../js/clarity.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/masonry/4.2.2/masonry.pkgd.min.js"></script>
 </head>
 
 <body>
@@ -61,44 +62,30 @@
   </div>
 </header>
 
-        <main class="container-fluid">
-            <div class="row mt-5">
-                <div class="col-lg-8 col-md-12">
-                    <div class="card mb-4">
-                        <div class="card-body">
-                            <h1 class="card-title">
-                                田游岩
-                            </h1>
-                            <p class="card-text"><strong>朝代:</strong>
-                                唐代
-                            </p>
-                            <p class="card-text"><strong>生平:</strong>
-                                田游岩，京兆三原人。初补太学生，罢归，遍游山水。后入箕山，筑室许由庙东，自号许由东邻。调露中，高宗游嵩山，亲至其门，游岩山衣田冠出拜，帝令左右扶止之。谓曰：&amp;quot;先生养道山中，比得佳否？&amp;quot;对曰：&amp;quot;臣泉石膏盲，烟霞痼疾，既逢圣代，幸得逍遥。&amp;quot;敕乘传赴都，授崇文馆学士，进太子洗马。垂拱中，坐
-                            </p>
-                            <p class="card-text"><strong>出生:</strong>
-                                
-                            </p>
-                            <p class="card-text"><strong>逝世:</strong>
-                                
-                            </p>
-                        </div>
-                    </div>
+    <main class="container-fluid">
+        
+            <div class="card mb-4 poet-info-card">
+                <div class="card-body">
+                    <h1 class="card-title">田游岩</h1>
+                    <p class="card-text"><strong>朝代:</strong> 唐代</p>
+                    <p class="card-text"><strong>生平:</strong> 田游岩，京兆三原人。初补太学生，罢归，遍游山水。后入箕山，筑室许由庙东，自号许由东邻。调露中，高宗游嵩山，亲至其门，游岩山衣田冠出拜，帝令左右扶止之。谓曰：&amp;quot;先生养道山中，比得佳否？&amp;quot;对曰：&amp;quot;臣泉石膏盲，烟霞痼疾，既逢圣代，幸得逍遥。&amp;quot;敕乘传赴都，授崇文馆学士，进太子洗马。垂拱中，坐</p>
+                    
+                    
+                </div>
+            </div>
+        
 
-                    <h2>诗歌</h2>
-                    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
-                        
-                            <div class="col">
-                                <div class="card h-100">
-                                    <div class="card-body">
-                                        <h5 class="card-title">
-                                            弘农清岩曲有磐石可坐，宋十一每拂……
-                                        </h5>
-                                        <p class="card-text"><strong>形式:</strong>
-                                            未知
-                                        </p>
-                                        <p class="card-text"><strong>标签:</strong>
-                                            唐代, 田游岩</p>
-                  <pre class="card-text">信彼称灵石， 
+        <h2>诗歌</h2>
+        
+            <div class="masonry-grid">
+                
+                    <div class="masonry-grid-item">
+                        <div class="card h-100">
+                            <div class="card-body">
+                                <h5 class="card-title">弘农清岩曲有磐石可坐，宋十一每拂……</h5>
+                                <p class="card-text"><strong>形式:</strong> 未知</p>
+                                <p class="card-text"><strong>标签:</strong> 唐代, 田游岩</p>
+                                <pre class="card-text">信彼称灵石， 
 居然狎遁栖。 
 裴回承翠巘， 
 斌驳带深溪。 
@@ -109,18 +96,16 @@
 仆也颍阳客， 
 望彼空思齐。 
 傥见山人至， 
-簪蒿且杖藜。
-                                                </pre>
-                                    </div>
-                                </div>
+簪蒿且杖藜。</pre>
                             </div>
-                            
+                        </div>
                     </div>
-                </div>
+                
             </div>
-        </main>
+        
+    </main>
 
-        <footer class="sticky-footer text-center text-lg-start bg-light text-muted">
+    <footer class="sticky-footer text-center text-lg-start bg-light text-muted">
   <div class="container text-center py-1">
     <section>
       <span id="busuanzi_container_page_pv">本页面访问量<span id="busuanzi_value_page_pv"></span>次</span>
@@ -130,7 +115,19 @@
   </div>
 </footer>
 
-
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var elem = document.querySelector('.masonry-grid');
+            if (elem) {
+                var msnry = new Masonry(elem, {
+                    itemSelector: '.masonry-grid-item',
+                    columnWidth: '.masonry-grid-item',
+                    percentPosition: true,
+                    gutter: 10 // 明确设置 gutter 值为 10px
+                });
+            }
+        });
+    </script>
 </body>
 
 </html>

@@ -23,6 +23,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
          crossorigin="anonymous"></script>
     <script src="../js/clarity.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/masonry/4.2.2/masonry.pkgd.min.js"></script>
 </head>
 
 <body>
@@ -61,118 +62,84 @@
   </div>
 </header>
 
-        <main class="container-fluid">
-            <div class="row mt-5">
-                <div class="col-lg-8 col-md-12">
-                    <div class="card mb-4">
-                        <div class="card-body">
-                            <h1 class="card-title">
-                                袁郊
-                            </h1>
-                            <p class="card-text"><strong>朝代:</strong>
-                                唐代
-                            </p>
-                            <p class="card-text"><strong>生平:</strong>
-                                袁郊，字之仪，朗山人，滋之子也。咸通时，为祠部郎中。昭宗朝，为翰林学士。诗四首。
-                            </p>
-                            <p class="card-text"><strong>出生:</strong>
-                                
-                            </p>
-                            <p class="card-text"><strong>逝世:</strong>
-                                
-                            </p>
-                        </div>
-                    </div>
-
-                    <h2>诗歌</h2>
-                    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
-                        
-                            <div class="col">
-                                <div class="card h-100">
-                                    <div class="card-body">
-                                        <h5 class="card-title">
-                                            云
-                                        </h5>
-                                        <p class="card-text"><strong>形式:</strong>
-                                            七绝
-                                        </p>
-                                        <p class="card-text"><strong>标签:</strong>
-                                            唐代, 袁郊</p>
-                  <pre class="card-text">楚甸尝闻旱魃侵， 
-从龙应合解为霖。 
-荒淫却入阳台梦， 
-惑乱怀襄父子心。
-                                                </pre>
-                                    </div>
-                                </div>
-                            </div>
-                            
-                            <div class="col">
-                                <div class="card h-100">
-                                    <div class="card-body">
-                                        <h5 class="card-title">
-                                            月
-                                        </h5>
-                                        <p class="card-text"><strong>形式:</strong>
-                                            七绝
-                                        </p>
-                                        <p class="card-text"><strong>标签:</strong>
-                                            唐代, 袁郊</p>
-                  <pre class="card-text">嫦娥窃药出人间， 
-藏在蟾宫不放还。 
-后羿遍寻无觅处， 
-谁知天上却容奸。
-                                                </pre>
-                                    </div>
-                                </div>
-                            </div>
-                            
-                            <div class="col">
-                                <div class="card h-100">
-                                    <div class="card-body">
-                                        <h5 class="card-title">
-                                            霜
-                                        </h5>
-                                        <p class="card-text"><strong>形式:</strong>
-                                            七绝
-                                        </p>
-                                        <p class="card-text"><strong>标签:</strong>
-                                            唐代, 袁郊</p>
-                  <pre class="card-text">古今何事不思量， 
-尽信邹生感彼苍。 
-但想燕山吹暖律， 
-炎天岂不解飞霜。
-                                                </pre>
-                                    </div>
-                                </div>
-                            </div>
-                            
-                            <div class="col">
-                                <div class="card h-100">
-                                    <div class="card-body">
-                                        <h5 class="card-title">
-                                            露
-                                        </h5>
-                                        <p class="card-text"><strong>形式:</strong>
-                                            七绝
-                                        </p>
-                                        <p class="card-text"><strong>标签:</strong>
-                                            唐代, 袁郊</p>
-                  <pre class="card-text">湛湛腾空下碧霄， 
-地卑湿处更偏饶。 
-菅茅丰草皆沾润， 
-不道良田有旱苗。
-                                                </pre>
-                                    </div>
-                                </div>
-                            </div>
-                            
-                    </div>
+    <main class="container-fluid">
+        
+            <div class="card mb-4 poet-info-card">
+                <div class="card-body">
+                    <h1 class="card-title">袁郊</h1>
+                    <p class="card-text"><strong>朝代:</strong> 唐代</p>
+                    <p class="card-text"><strong>生平:</strong> 袁郊，字之仪，朗山人，滋之子也。咸通时，为祠部郎中。昭宗朝，为翰林学士。诗四首。</p>
+                    
+                    
                 </div>
             </div>
-        </main>
+        
 
-        <footer class="sticky-footer text-center text-lg-start bg-light text-muted">
+        <h2>诗歌</h2>
+        
+            <div class="masonry-grid">
+                
+                    <div class="masonry-grid-item">
+                        <div class="card h-100">
+                            <div class="card-body">
+                                <h5 class="card-title">云</h5>
+                                <p class="card-text"><strong>形式:</strong> 七绝</p>
+                                <p class="card-text"><strong>标签:</strong> 唐代, 袁郊</p>
+                                <pre class="card-text">楚甸尝闻旱魃侵， 
+从龙应合解为霖。 
+荒淫却入阳台梦， 
+惑乱怀襄父子心。</pre>
+                            </div>
+                        </div>
+                    </div>
+                
+                    <div class="masonry-grid-item">
+                        <div class="card h-100">
+                            <div class="card-body">
+                                <h5 class="card-title">月</h5>
+                                <p class="card-text"><strong>形式:</strong> 七绝</p>
+                                <p class="card-text"><strong>标签:</strong> 唐代, 袁郊</p>
+                                <pre class="card-text">嫦娥窃药出人间， 
+藏在蟾宫不放还。 
+后羿遍寻无觅处， 
+谁知天上却容奸。</pre>
+                            </div>
+                        </div>
+                    </div>
+                
+                    <div class="masonry-grid-item">
+                        <div class="card h-100">
+                            <div class="card-body">
+                                <h5 class="card-title">霜</h5>
+                                <p class="card-text"><strong>形式:</strong> 七绝</p>
+                                <p class="card-text"><strong>标签:</strong> 唐代, 袁郊</p>
+                                <pre class="card-text">古今何事不思量， 
+尽信邹生感彼苍。 
+但想燕山吹暖律， 
+炎天岂不解飞霜。</pre>
+                            </div>
+                        </div>
+                    </div>
+                
+                    <div class="masonry-grid-item">
+                        <div class="card h-100">
+                            <div class="card-body">
+                                <h5 class="card-title">露</h5>
+                                <p class="card-text"><strong>形式:</strong> 七绝</p>
+                                <p class="card-text"><strong>标签:</strong> 唐代, 袁郊</p>
+                                <pre class="card-text">湛湛腾空下碧霄， 
+地卑湿处更偏饶。 
+菅茅丰草皆沾润， 
+不道良田有旱苗。</pre>
+                            </div>
+                        </div>
+                    </div>
+                
+            </div>
+        
+    </main>
+
+    <footer class="sticky-footer text-center text-lg-start bg-light text-muted">
   <div class="container text-center py-1">
     <section>
       <span id="busuanzi_container_page_pv">本页面访问量<span id="busuanzi_value_page_pv"></span>次</span>
@@ -182,7 +149,19 @@
   </div>
 </footer>
 
-
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var elem = document.querySelector('.masonry-grid');
+            if (elem) {
+                var msnry = new Masonry(elem, {
+                    itemSelector: '.masonry-grid-item',
+                    columnWidth: '.masonry-grid-item',
+                    percentPosition: true,
+                    gutter: 10 // 明确设置 gutter 值为 10px
+                });
+            }
+        });
+    </script>
 </body>
 
 </html>

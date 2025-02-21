@@ -23,6 +23,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
          crossorigin="anonymous"></script>
     <script src="../js/clarity.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/masonry/4.2.2/masonry.pkgd.min.js"></script>
 </head>
 
 <body>
@@ -61,86 +62,64 @@
   </div>
 </header>
 
-        <main class="container-fluid">
-            <div class="row mt-5">
-                <div class="col-lg-8 col-md-12">
-                    <div class="card mb-4">
-                        <div class="card-body">
-                            <h1 class="card-title">
-                                赵彦伯
-                            </h1>
-                            <p class="card-text"><strong>朝代:</strong>
-                                唐代
-                            </p>
-                            <p class="card-text"><strong>生平:</strong>
-                                赵彦伯，中宗时弘文馆学士。诗三首。
-                            </p>
-                            <p class="card-text"><strong>出生:</strong>
-                                
-                            </p>
-                            <p class="card-text"><strong>逝世:</strong>
-                                
-                            </p>
-                        </div>
-                    </div>
+    <main class="container-fluid">
+        
+            <div class="card mb-4 poet-info-card">
+                <div class="card-body">
+                    <h1 class="card-title">赵彦伯</h1>
+                    <p class="card-text"><strong>朝代:</strong> 唐代</p>
+                    <p class="card-text"><strong>生平:</strong> 赵彦伯，中宗时弘文馆学士。诗三首。</p>
+                    
+                    
+                </div>
+            </div>
+        
 
-                    <h2>诗歌</h2>
-                    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
-                        
-                            <div class="col">
-                                <div class="card h-100">
-                                    <div class="card-body">
-                                        <h5 class="card-title">
-                                            和九月九日登慈恩寺浮图应制
-                                        </h5>
-                                        <p class="card-text"><strong>形式:</strong>
-                                            五律
-                                        </p>
-                                        <p class="card-text"><strong>标签:</strong>
-                                            唐代, 赵彦伯</p>
-                  <pre class="card-text">出豫垂佳节， 
+        <h2>诗歌</h2>
+        
+            <div class="masonry-grid">
+                
+                    <div class="masonry-grid-item">
+                        <div class="card h-100">
+                            <div class="card-body">
+                                <h5 class="card-title">和九月九日登慈恩寺浮图应制</h5>
+                                <p class="card-text"><strong>形式:</strong> 五律</p>
+                                <p class="card-text"><strong>标签:</strong> 唐代, 赵彦伯</p>
+                                <pre class="card-text">出豫垂佳节， 
 凭高陟梵宫。 
 皇心满尘界， 
 佛迹现虚空。 
 日月宜长寿， 
 天人得大通。 
 喜闻题宝偈， 
-受记莫由同。
-                                                </pre>
-                                    </div>
-                                </div>
+受记莫由同。</pre>
                             </div>
-                            
-                            <div class="col">
-                                <div class="card h-100">
-                                    <div class="card-body">
-                                        <h5 class="card-title">
-                                            奉和九日幸临渭亭登高应制得花字
-                                        </h5>
-                                        <p class="card-text"><strong>形式:</strong>
-                                            五律
-                                        </p>
-                                        <p class="card-text"><strong>标签:</strong>
-                                            唐代, 赵彦伯</p>
-                  <pre class="card-text">九日报仙家， 
+                        </div>
+                    </div>
+                
+                    <div class="masonry-grid-item">
+                        <div class="card h-100">
+                            <div class="card-body">
+                                <h5 class="card-title">奉和九日幸临渭亭登高应制得花字</h5>
+                                <p class="card-text"><strong>形式:</strong> 五律</p>
+                                <p class="card-text"><strong>标签:</strong> 唐代, 赵彦伯</p>
+                                <pre class="card-text">九日报仙家， 
 三秋转岁华。 
 呼鹰下鸟路， 
 戏马出龙沙。 
 簪挂丹萸蕊， 
 杯浮紫菊花。 
 所愿同微物， 
-年年共辟邪。
-                                                </pre>
-                                    </div>
-                                </div>
+年年共辟邪。</pre>
                             </div>
-                            
+                        </div>
                     </div>
-                </div>
+                
             </div>
-        </main>
+        
+    </main>
 
-        <footer class="sticky-footer text-center text-lg-start bg-light text-muted">
+    <footer class="sticky-footer text-center text-lg-start bg-light text-muted">
   <div class="container text-center py-1">
     <section>
       <span id="busuanzi_container_page_pv">本页面访问量<span id="busuanzi_value_page_pv"></span>次</span>
@@ -150,7 +129,19 @@
   </div>
 </footer>
 
-
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var elem = document.querySelector('.masonry-grid');
+            if (elem) {
+                var msnry = new Masonry(elem, {
+                    itemSelector: '.masonry-grid-item',
+                    columnWidth: '.masonry-grid-item',
+                    percentPosition: true,
+                    gutter: 10 // 明确设置 gutter 值为 10px
+                });
+            }
+        });
+    </script>
 </body>
 
 </html>

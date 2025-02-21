@@ -23,62 +23,61 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
          crossorigin="anonymous"></script>
     <script src="../js/clarity.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/masonry/4.2.2/masonry.pkgd.min.js"></script>
 </head>
 
 <body>
     <%- include('../components/header.ejs') %>
 
-        <main class="container-fluid">
-            <div class="row mt-5">
-                <div class="col-lg-8 col-md-12">
-                    <div class="card mb-4">
-                        <div class="card-body">
-                            <h1 class="card-title">
-                                <%= poet.Name %>
-                            </h1>
-                            <p class="card-text"><strong>朝代:</strong>
-                                <%= poet.Dynasty %>
-                            </p>
-                            <p class="card-text"><strong>生平:</strong>
-                                <%= poet.Description %>
-                            </p>
-                            <p class="card-text"><strong>出生:</strong>
-                                <%= poet.Birth %>
-                            </p>
-                            <p class="card-text"><strong>逝世:</strong>
-                                <%= poet.Death %>
-                            </p>
-                        </div>
-                    </div>
-
-                    <h2>诗歌</h2>
-                    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
-                        <% poet.Poems.forEach(poem=> { %>
-                            <div class="col">
-                                <div class="card h-100">
-                                    <div class="card-body">
-                                        <h5 class="card-title">
-                                            <%= poem.Name %>
-                                        </h5>
-                                        <p class="card-text"><strong>形式:</strong>
-                                            <%= poem.Form %>
-                                        </p>
-                                        <p class="card-text"><strong>标签:</strong>
-                                            <%= poem.Tags.join(', ') %></p>
-                  <pre class="card-text"><%= poem.Contents.join(' \n') %>
-                                                </pre>
-                                    </div>
-                                </div>
-                            </div>
-                            <% }) %>
-                    </div>
+    <main class="container-fluid">
+        <% if (poet.Birth || poet.Death || poet.Dynasty || poet.Description) { %>
+            <div class="card mb-4 poet-info-card">
+                <div class="card-body">
+                    <h1 class="card-title"><%= poet.Name %></h1>
+                    <% if(poet.Dynasty) { %><p class="card-text"><strong>朝代:</strong> <%= poet.Dynasty %></p><% } %>
+                    <% if(poet.Description) { %><p class="card-text"><strong>生平:</strong> <%= poet.Description %></p><% } %>
+                    <% if(poet.Birth) { %><p class="card-text"><strong>出生:</strong> <%= poet.Birth %></p><% } %>
+                    <% if(poet.Death) { %><p class="card-text"><strong>逝世:</strong> <%= poet.Death %></p><% } %>
                 </div>
             </div>
-        </main>
+        <% } %>
 
-        <%- include('../components/footer.ejs') %>
+        <h2>诗歌</h2>
+        <% if (poet.Poems && poet.Poems.length > 0) { %>
+            <div class="masonry-grid">
+                <% poet.Poems.forEach(poem => { %>
+                    <div class="masonry-grid-item">
+                        <div class="card h-100">
+                            <div class="card-body">
+                                <h5 class="card-title"><%= poem.Name %></h5>
+                                <p class="card-text"><strong>形式:</strong> <%= poem.Form %></p>
+                                <p class="card-text"><strong>标签:</strong> <%= poem.Tags.join(', ') %></p>
+                                <pre class="card-text"><%= poem.Contents.join(' \n') %></pre>
+                            </div>
+                        </div>
+                    </div>
+                <% }) %>
+            </div>
+        <% } else { %>
+            <p>没有找到该诗人的诗歌。</p>
+        <% } %>
+    </main>
 
+    <%- include('../components/footer.ejs') %>
 
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var elem = document.querySelector('.masonry-grid');
+            if (elem) {
+                var msnry = new Masonry(elem, {
+                    itemSelector: '.masonry-grid-item',
+                    columnWidth: '.masonry-grid-item',
+                    percentPosition: true,
+                    gutter: 10 // 明确设置 gutter 值为 10px
+                });
+            }
+        });
+    </script>
 </body>
 
 </html>

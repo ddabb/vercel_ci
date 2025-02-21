@@ -23,6 +23,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
          crossorigin="anonymous"></script>
     <script src="../js/clarity.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/masonry/4.2.2/masonry.pkgd.min.js"></script>
 </head>
 
 <body>
@@ -61,68 +62,48 @@
   </div>
 </header>
 
-        <main class="container-fluid">
-            <div class="row mt-5">
-                <div class="col-lg-8 col-md-12">
-                    <div class="card mb-4">
-                        <div class="card-body">
-                            <h1 class="card-title">
-                                杜易简
-                            </h1>
-                            <p class="card-text"><strong>朝代:</strong>
-                                唐代
-                            </p>
-                            <p class="card-text"><strong>生平:</strong>
-                                杜易简，襄州襄阳人。九岁能属文，及长，博学有高名，姨兄岑文本推重之。登进士第，累转殿中侍御史。咸亨中，为考功员外郎，坐党裴行俭，左迁开州司马。集二十卷。存诗二首。
-                            </p>
-                            <p class="card-text"><strong>出生:</strong>
-                                
-                            </p>
-                            <p class="card-text"><strong>逝世:</strong>
-                                
-                            </p>
-                        </div>
-                    </div>
+    <main class="container-fluid">
+        
+            <div class="card mb-4 poet-info-card">
+                <div class="card-body">
+                    <h1 class="card-title">杜易简</h1>
+                    <p class="card-text"><strong>朝代:</strong> 唐代</p>
+                    <p class="card-text"><strong>生平:</strong> 杜易简，襄州襄阳人。九岁能属文，及长，博学有高名，姨兄岑文本推重之。登进士第，累转殿中侍御史。咸亨中，为考功员外郎，坐党裴行俭，左迁开州司马。集二十卷。存诗二首。</p>
+                    
+                    
+                </div>
+            </div>
+        
 
-                    <h2>诗歌</h2>
-                    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
-                        
-                            <div class="col">
-                                <div class="card h-100">
-                                    <div class="card-body">
-                                        <h5 class="card-title">
-                                            嘲格辅元
-                                        </h5>
-                                        <p class="card-text"><strong>形式:</strong>
-                                            五律
-                                        </p>
-                                        <p class="card-text"><strong>标签:</strong>
-                                            唐代, 杜易简</p>
-                  <pre class="card-text">有耻宿龙门， 
+        <h2>诗歌</h2>
+        
+            <div class="masonry-grid">
+                
+                    <div class="masonry-grid-item">
+                        <div class="card h-100">
+                            <div class="card-body">
+                                <h5 class="card-title">嘲格辅元</h5>
+                                <p class="card-text"><strong>形式:</strong> 五律</p>
+                                <p class="card-text"><strong>标签:</strong> 唐代, 杜易简</p>
+                                <pre class="card-text">有耻宿龙门， 
 精彩先瞰浑。 
 眼瘦呈近店， 
 睡响彻遥林。 
 埒囊将旧识， 
 制被异新婚。 
 谁言骢马使， 
-翻作蛰熊蹲。
-                                                </pre>
-                                    </div>
-                                </div>
+翻作蛰熊蹲。</pre>
                             </div>
-                            
-                            <div class="col">
-                                <div class="card h-100">
-                                    <div class="card-body">
-                                        <h5 class="card-title">
-                                            湘川新曲二首
-                                        </h5>
-                                        <p class="card-text"><strong>形式:</strong>
-                                            未知
-                                        </p>
-                                        <p class="card-text"><strong>标签:</strong>
-                                            唐代, 杜易简</p>
-                  <pre class="card-text">昭潭深无底， 
+                        </div>
+                    </div>
+                
+                    <div class="masonry-grid-item">
+                        <div class="card h-100">
+                            <div class="card-body">
+                                <h5 class="card-title">湘川新曲二首</h5>
+                                <p class="card-text"><strong>形式:</strong> 未知</p>
+                                <p class="card-text"><strong>标签:</strong> 唐代, 杜易简</p>
+                                <pre class="card-text">昭潭深无底， 
 橘洲浅而浮。 
 本欲凌波去， 
 翻为目成留。 
@@ -133,18 +114,16 @@
 弱腕随桡起， 
 纤腰向舸低。 
 自解看花笑， 
-憎闻染竹啼。
-                                                </pre>
-                                    </div>
-                                </div>
+憎闻染竹啼。</pre>
                             </div>
-                            
+                        </div>
                     </div>
-                </div>
+                
             </div>
-        </main>
+        
+    </main>
 
-        <footer class="sticky-footer text-center text-lg-start bg-light text-muted">
+    <footer class="sticky-footer text-center text-lg-start bg-light text-muted">
   <div class="container text-center py-1">
     <section>
       <span id="busuanzi_container_page_pv">本页面访问量<span id="busuanzi_value_page_pv"></span>次</span>
@@ -154,7 +133,19 @@
   </div>
 </footer>
 
-
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var elem = document.querySelector('.masonry-grid');
+            if (elem) {
+                var msnry = new Masonry(elem, {
+                    itemSelector: '.masonry-grid-item',
+                    columnWidth: '.masonry-grid-item',
+                    percentPosition: true,
+                    gutter: 10 // 明确设置 gutter 值为 10px
+                });
+            }
+        });
+    </script>
 </body>
 
 </html>

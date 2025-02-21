@@ -23,6 +23,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
          crossorigin="anonymous"></script>
     <script src="../js/clarity.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/masonry/4.2.2/masonry.pkgd.min.js"></script>
 </head>
 
 <body>
@@ -61,58 +62,42 @@
   </div>
 </header>
 
-        <main class="container-fluid">
-            <div class="row mt-5">
-                <div class="col-lg-8 col-md-12">
-                    <div class="card mb-4">
-                        <div class="card-body">
-                            <h1 class="card-title">
-                                曹景宗
-                            </h1>
-                            <p class="card-text"><strong>朝代:</strong>
-                                南北朝
-                            </p>
-                            <p class="card-text"><strong>生平:</strong>
-                                景宗。字子震。新野人。仕齊。累官竟陵太守。及武帝起兵。景宗率衆來從。除郢州刺史。天監六年。大敗魏於鍾離。進爵爲公。拜侍中、領軍將軍。天監七年。遷江州刺史。赴任卒於道。年五十二。
-                            </p>
-                            <p class="card-text"><strong>出生:</strong>
-                                
-                            </p>
-                            <p class="card-text"><strong>逝世:</strong>
-                                
-                            </p>
-                        </div>
-                    </div>
-
-                    <h2>诗歌</h2>
-                    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
-                        
-                            <div class="col">
-                                <div class="card h-100">
-                                    <div class="card-body">
-                                        <h5 class="card-title">
-                                            光华殿侍宴赋竞病韵诗
-                                        </h5>
-                                        <p class="card-text"><strong>形式:</strong>
-                                            五绝
-                                        </p>
-                                        <p class="card-text"><strong>标签:</strong>
-                                            南北朝, 曹景宗</p>
-                  <pre class="card-text">去时儿女悲， 
-归来笳鼓竞。 
-借问行路人， 
-何如霍去病？
-                                                </pre>
-                                    </div>
-                                </div>
-                            </div>
-                            
-                    </div>
+    <main class="container-fluid">
+        
+            <div class="card mb-4 poet-info-card">
+                <div class="card-body">
+                    <h1 class="card-title">曹景宗</h1>
+                    <p class="card-text"><strong>朝代:</strong> 南北朝</p>
+                    <p class="card-text"><strong>生平:</strong> 景宗。字子震。新野人。仕齊。累官竟陵太守。及武帝起兵。景宗率衆來從。除郢州刺史。天監六年。大敗魏於鍾離。進爵爲公。拜侍中、領軍將軍。天監七年。遷江州刺史。赴任卒於道。年五十二。</p>
+                    
+                    
                 </div>
             </div>
-        </main>
+        
 
-        <footer class="sticky-footer text-center text-lg-start bg-light text-muted">
+        <h2>诗歌</h2>
+        
+            <div class="masonry-grid">
+                
+                    <div class="masonry-grid-item">
+                        <div class="card h-100">
+                            <div class="card-body">
+                                <h5 class="card-title">光华殿侍宴赋竞病韵诗</h5>
+                                <p class="card-text"><strong>形式:</strong> 五绝</p>
+                                <p class="card-text"><strong>标签:</strong> 南北朝, 曹景宗</p>
+                                <pre class="card-text">去时儿女悲， 
+归来笳鼓竞。 
+借问行路人， 
+何如霍去病？</pre>
+                            </div>
+                        </div>
+                    </div>
+                
+            </div>
+        
+    </main>
+
+    <footer class="sticky-footer text-center text-lg-start bg-light text-muted">
   <div class="container text-center py-1">
     <section>
       <span id="busuanzi_container_page_pv">本页面访问量<span id="busuanzi_value_page_pv"></span>次</span>
@@ -122,7 +107,19 @@
   </div>
 </footer>
 
-
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var elem = document.querySelector('.masonry-grid');
+            if (elem) {
+                var msnry = new Masonry(elem, {
+                    itemSelector: '.masonry-grid-item',
+                    columnWidth: '.masonry-grid-item',
+                    percentPosition: true,
+                    gutter: 10 // 明确设置 gutter 值为 10px
+                });
+            }
+        });
+    </script>
 </body>
 
 </html>

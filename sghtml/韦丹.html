@@ -23,6 +23,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
          crossorigin="anonymous"></script>
     <script src="../js/clarity.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/masonry/4.2.2/masonry.pkgd.min.js"></script>
 </head>
 
 <body>
@@ -61,78 +62,56 @@
   </div>
 </header>
 
-        <main class="container-fluid">
-            <div class="row mt-5">
-                <div class="col-lg-8 col-md-12">
-                    <div class="card mb-4">
-                        <div class="card-body">
-                            <h1 class="card-title">
-                                韦丹
-                            </h1>
-                            <p class="card-text"><strong>朝代:</strong>
-                                唐代
-                            </p>
-                            <p class="card-text"><strong>生平:</strong>
-                                韦丹，字文明，京兆万年人。早孤，从外祖颜真卿学。擢明经，调安远令，以让庶兄。入紫阁山。复举五经高第。顺宗为太子时，以殿中侍御史为舍人。寻拜司封郎中，使新罗。故事鬻州县官十人，以便其私，号私觌官。丹曰：&amp;quot;使外国不足于赀，宜上请，安有卖官受钱？&amp;quot;奏闻，帝命有司与之。还为容州刺史，迁河南
-                            </p>
-                            <p class="card-text"><strong>出生:</strong>
-                                
-                            </p>
-                            <p class="card-text"><strong>逝世:</strong>
-                                
-                            </p>
-                        </div>
-                    </div>
-
-                    <h2>诗歌</h2>
-                    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
-                        
-                            <div class="col">
-                                <div class="card h-100">
-                                    <div class="card-body">
-                                        <h5 class="card-title">
-                                            思归寄东林澈上人
-                                        </h5>
-                                        <p class="card-text"><strong>形式:</strong>
-                                            七绝
-                                        </p>
-                                        <p class="card-text"><strong>标签:</strong>
-                                            唐代, 韦丹</p>
-                  <pre class="card-text">王事纷纷无暇日， 
-浮生冉冉只如云。 
-已为平子归休计， 
-五老岩前必共闻。
-                                                </pre>
-                                    </div>
-                                </div>
-                            </div>
-                            
-                            <div class="col">
-                                <div class="card h-100">
-                                    <div class="card-body">
-                                        <h5 class="card-title">
-                                            答澈公
-                                        </h5>
-                                        <p class="card-text"><strong>形式:</strong>
-                                            七绝
-                                        </p>
-                                        <p class="card-text"><strong>标签:</strong>
-                                            唐代, 韦丹</p>
-                  <pre class="card-text">空山泉落松窗静， 
-闲地草生春日迟。 
-白发渐多身未退， 
-依依常在永禅师。
-                                                </pre>
-                                    </div>
-                                </div>
-                            </div>
-                            
-                    </div>
+    <main class="container-fluid">
+        
+            <div class="card mb-4 poet-info-card">
+                <div class="card-body">
+                    <h1 class="card-title">韦丹</h1>
+                    <p class="card-text"><strong>朝代:</strong> 唐代</p>
+                    <p class="card-text"><strong>生平:</strong> 韦丹，字文明，京兆万年人。早孤，从外祖颜真卿学。擢明经，调安远令，以让庶兄。入紫阁山。复举五经高第。顺宗为太子时，以殿中侍御史为舍人。寻拜司封郎中，使新罗。故事鬻州县官十人，以便其私，号私觌官。丹曰：&amp;quot;使外国不足于赀，宜上请，安有卖官受钱？&amp;quot;奏闻，帝命有司与之。还为容州刺史，迁河南</p>
+                    
+                    
                 </div>
             </div>
-        </main>
+        
 
-        <footer class="sticky-footer text-center text-lg-start bg-light text-muted">
+        <h2>诗歌</h2>
+        
+            <div class="masonry-grid">
+                
+                    <div class="masonry-grid-item">
+                        <div class="card h-100">
+                            <div class="card-body">
+                                <h5 class="card-title">思归寄东林澈上人</h5>
+                                <p class="card-text"><strong>形式:</strong> 七绝</p>
+                                <p class="card-text"><strong>标签:</strong> 唐代, 韦丹</p>
+                                <pre class="card-text">王事纷纷无暇日， 
+浮生冉冉只如云。 
+已为平子归休计， 
+五老岩前必共闻。</pre>
+                            </div>
+                        </div>
+                    </div>
+                
+                    <div class="masonry-grid-item">
+                        <div class="card h-100">
+                            <div class="card-body">
+                                <h5 class="card-title">答澈公</h5>
+                                <p class="card-text"><strong>形式:</strong> 七绝</p>
+                                <p class="card-text"><strong>标签:</strong> 唐代, 韦丹</p>
+                                <pre class="card-text">空山泉落松窗静， 
+闲地草生春日迟。 
+白发渐多身未退， 
+依依常在永禅师。</pre>
+                            </div>
+                        </div>
+                    </div>
+                
+            </div>
+        
+    </main>
+
+    <footer class="sticky-footer text-center text-lg-start bg-light text-muted">
   <div class="container text-center py-1">
     <section>
       <span id="busuanzi_container_page_pv">本页面访问量<span id="busuanzi_value_page_pv"></span>次</span>
@@ -142,7 +121,19 @@
   </div>
 </footer>
 
-
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var elem = document.querySelector('.masonry-grid');
+            if (elem) {
+                var msnry = new Masonry(elem, {
+                    itemSelector: '.masonry-grid-item',
+                    columnWidth: '.masonry-grid-item',
+                    percentPosition: true,
+                    gutter: 10 // 明确设置 gutter 值为 10px
+                });
+            }
+        });
+    </script>
 </body>
 
 </html>

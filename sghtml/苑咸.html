@@ -23,6 +23,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
          crossorigin="anonymous"></script>
     <script src="../js/clarity.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/masonry/4.2.2/masonry.pkgd.min.js"></script>
 </head>
 
 <body>
@@ -61,86 +62,64 @@
   </div>
 </header>
 
-        <main class="container-fluid">
-            <div class="row mt-5">
-                <div class="col-lg-8 col-md-12">
-                    <div class="card mb-4">
-                        <div class="card-body">
-                            <h1 class="card-title">
-                                苑咸
-                            </h1>
-                            <p class="card-text"><strong>朝代:</strong>
-                                唐代
-                            </p>
-                            <p class="card-text"><strong>生平:</strong>
-                                苑咸，成都人。举进士登第，为李林甫书记。开元末上书，拜司经校书、中书舍人。尝为孙逖草除庶子诏，议者以为知言。王维尝谓舍人能书梵字，兼达梵音，曲尽其妙。诗二首。
-                            </p>
-                            <p class="card-text"><strong>出生:</strong>
-                                
-                            </p>
-                            <p class="card-text"><strong>逝世:</strong>
-                                
-                            </p>
-                        </div>
-                    </div>
+    <main class="container-fluid">
+        
+            <div class="card mb-4 poet-info-card">
+                <div class="card-body">
+                    <h1 class="card-title">苑咸</h1>
+                    <p class="card-text"><strong>朝代:</strong> 唐代</p>
+                    <p class="card-text"><strong>生平:</strong> 苑咸，成都人。举进士登第，为李林甫书记。开元末上书，拜司经校书、中书舍人。尝为孙逖草除庶子诏，议者以为知言。王维尝谓舍人能书梵字，兼达梵音，曲尽其妙。诗二首。</p>
+                    
+                    
+                </div>
+            </div>
+        
 
-                    <h2>诗歌</h2>
-                    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
-                        
-                            <div class="col">
-                                <div class="card h-100">
-                                    <div class="card-body">
-                                        <h5 class="card-title">
-                                            送大理正摄御史判凉州别驾
-                                        </h5>
-                                        <p class="card-text"><strong>形式:</strong>
-                                            五律
-                                        </p>
-                                        <p class="card-text"><strong>标签:</strong>
-                                            唐代, 苑咸</p>
-                  <pre class="card-text">天子念西疆， 
+        <h2>诗歌</h2>
+        
+            <div class="masonry-grid">
+                
+                    <div class="masonry-grid-item">
+                        <div class="card h-100">
+                            <div class="card-body">
+                                <h5 class="card-title">送大理正摄御史判凉州别驾</h5>
+                                <p class="card-text"><strong>形式:</strong> 五律</p>
+                                <p class="card-text"><strong>标签:</strong> 唐代, 苑咸</p>
+                                <pre class="card-text">天子念西疆， 
 咨君去不遑。 
 垂银棘庭印， 
 持斧柏台纲。 
 雪下天山白， 
 泉枯塞草黄。 
 伫闻河陇外， 
-还继海沂康。
-                                                </pre>
-                                    </div>
-                                </div>
+还继海沂康。</pre>
                             </div>
-                            
-                            <div class="col">
-                                <div class="card h-100">
-                                    <div class="card-body">
-                                        <h5 class="card-title">
-                                            酬王维
-                                        </h5>
-                                        <p class="card-text"><strong>形式:</strong>
-                                            七律
-                                        </p>
-                                        <p class="card-text"><strong>标签:</strong>
-                                            唐代, 苑咸</p>
-                  <pre class="card-text">莲花梵字本从天， 
+                        </div>
+                    </div>
+                
+                    <div class="masonry-grid-item">
+                        <div class="card h-100">
+                            <div class="card-body">
+                                <h5 class="card-title">酬王维</h5>
+                                <p class="card-text"><strong>形式:</strong> 七律</p>
+                                <p class="card-text"><strong>标签:</strong> 唐代, 苑咸</p>
+                                <pre class="card-text">莲花梵字本从天， 
 华省仙郎早悟禅。 
 三点成伊犹有想， 
 一观如幻自忘筌。 
 为文已变当时体， 
 入用还推间气贤。 
 应同罗汉无名欲， 
-故作冯唐老岁年。
-                                                </pre>
-                                    </div>
-                                </div>
+故作冯唐老岁年。</pre>
                             </div>
-                            
+                        </div>
                     </div>
-                </div>
+                
             </div>
-        </main>
+        
+    </main>
 
-        <footer class="sticky-footer text-center text-lg-start bg-light text-muted">
+    <footer class="sticky-footer text-center text-lg-start bg-light text-muted">
   <div class="container text-center py-1">
     <section>
       <span id="busuanzi_container_page_pv">本页面访问量<span id="busuanzi_value_page_pv"></span>次</span>
@@ -150,7 +129,19 @@
   </div>
 </footer>
 
-
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var elem = document.querySelector('.masonry-grid');
+            if (elem) {
+                var msnry = new Masonry(elem, {
+                    itemSelector: '.masonry-grid-item',
+                    columnWidth: '.masonry-grid-item',
+                    percentPosition: true,
+                    gutter: 10 // 明确设置 gutter 值为 10px
+                });
+            }
+        });
+    </script>
 </body>
 
 </html>

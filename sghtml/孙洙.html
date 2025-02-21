@@ -23,6 +23,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
          crossorigin="anonymous"></script>
     <script src="../js/clarity.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/masonry/4.2.2/masonry.pkgd.min.js"></script>
 </head>
 
 <body>
@@ -61,44 +62,30 @@
   </div>
 </header>
 
-        <main class="container-fluid">
-            <div class="row mt-5">
-                <div class="col-lg-8 col-md-12">
-                    <div class="card mb-4">
-                        <div class="card-body">
-                            <h1 class="card-title">
-                                孙洙
-                            </h1>
-                            <p class="card-text"><strong>朝代:</strong>
-                                宋代
-                            </p>
-                            <p class="card-text"><strong>生平:</strong>
-                                孙洙（1031-1079） 字巨源，广陵（今江苏扬州）人。年十九第进士，补秀州法曹。迁集贤校理，知太常礼院。英宗治平中，兼史馆校讨，同知谏院。因反对王安石立新法，出知海州。神宗元丰初，兼直学士院，官至翰林学士。著有《孙贤良集》，今不传。《全宋词》存其词二首。
-                            </p>
-                            <p class="card-text"><strong>出生:</strong>
-                                
-                            </p>
-                            <p class="card-text"><strong>逝世:</strong>
-                                
-                            </p>
-                        </div>
-                    </div>
+    <main class="container-fluid">
+        
+            <div class="card mb-4 poet-info-card">
+                <div class="card-body">
+                    <h1 class="card-title">孙洙</h1>
+                    <p class="card-text"><strong>朝代:</strong> 宋代</p>
+                    <p class="card-text"><strong>生平:</strong> 孙洙（1031-1079） 字巨源，广陵（今江苏扬州）人。年十九第进士，补秀州法曹。迁集贤校理，知太常礼院。英宗治平中，兼史馆校讨，同知谏院。因反对王安石立新法，出知海州。神宗元丰初，兼直学士院，官至翰林学士。著有《孙贤良集》，今不传。《全宋词》存其词二首。</p>
+                    
+                    
+                </div>
+            </div>
+        
 
-                    <h2>诗歌</h2>
-                    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
-                        
-                            <div class="col">
-                                <div class="card h-100">
-                                    <div class="card-body">
-                                        <h5 class="card-title">
-                                            河满子
-                                        </h5>
-                                        <p class="card-text"><strong>形式:</strong>
-                                            词
-                                        </p>
-                                        <p class="card-text"><strong>标签:</strong>
-                                            宋代, 孙洙</p>
-                  <pre class="card-text">怅望浮生急景， 
+        <h2>诗歌</h2>
+        
+            <div class="masonry-grid">
+                
+                    <div class="masonry-grid-item">
+                        <div class="card h-100">
+                            <div class="card-body">
+                                <h5 class="card-title">河满子</h5>
+                                <p class="card-text"><strong>形式:</strong> 词</p>
+                                <p class="card-text"><strong>标签:</strong> 宋代, 孙洙</p>
+                                <pre class="card-text">怅望浮生急景， 
 凄凉宝瑟馀音。 
 楚客多情偏怨别， 
 碧山远水登临。 
@@ -109,42 +96,34 @@
 天若有情天亦老， 
 摇摇幽恨难禁。 
 惆怅旧欢如梦， 
-觉来无处追寻。
-                                                </pre>
-                                    </div>
-                                </div>
+觉来无处追寻。</pre>
                             </div>
-                            
-                            <div class="col">
-                                <div class="card h-100">
-                                    <div class="card-body">
-                                        <h5 class="card-title">
-                                            菩萨蛮
-                                        </h5>
-                                        <p class="card-text"><strong>形式:</strong>
-                                            词
-                                        </p>
-                                        <p class="card-text"><strong>标签:</strong>
-                                            宋代, 孙洙</p>
-                  <pre class="card-text">楼头上有三冬鼓。 
+                        </div>
+                    </div>
+                
+                    <div class="masonry-grid-item">
+                        <div class="card h-100">
+                            <div class="card-body">
+                                <h5 class="card-title">菩萨蛮</h5>
+                                <p class="card-text"><strong>形式:</strong> 词</p>
+                                <p class="card-text"><strong>标签:</strong> 宋代, 孙洙</p>
+                                <pre class="card-text">楼头上有三冬鼓。 
 何须抵死催人去。 
 上马苦匆匆。 
 琵琶曲未终。 
 回头肠断处。 
 却更廉纤雨。 
 漫道玉为堂。 
-玉堂今夜长。
-                                                </pre>
-                                    </div>
-                                </div>
+玉堂今夜长。</pre>
                             </div>
-                            
+                        </div>
                     </div>
-                </div>
+                
             </div>
-        </main>
+        
+    </main>
 
-        <footer class="sticky-footer text-center text-lg-start bg-light text-muted">
+    <footer class="sticky-footer text-center text-lg-start bg-light text-muted">
   <div class="container text-center py-1">
     <section>
       <span id="busuanzi_container_page_pv">本页面访问量<span id="busuanzi_value_page_pv"></span>次</span>
@@ -154,7 +133,19 @@
   </div>
 </footer>
 
-
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var elem = document.querySelector('.masonry-grid');
+            if (elem) {
+                var msnry = new Masonry(elem, {
+                    itemSelector: '.masonry-grid-item',
+                    columnWidth: '.masonry-grid-item',
+                    percentPosition: true,
+                    gutter: 10 // 明确设置 gutter 值为 10px
+                });
+            }
+        });
+    </script>
 </body>
 
 </html>

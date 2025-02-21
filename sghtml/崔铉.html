@@ -23,6 +23,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
          crossorigin="anonymous"></script>
     <script src="../js/clarity.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/masonry/4.2.2/masonry.pkgd.min.js"></script>
 </head>
 
 <body>
@@ -61,82 +62,60 @@
   </div>
 </header>
 
-        <main class="container-fluid">
-            <div class="row mt-5">
-                <div class="col-lg-8 col-md-12">
-                    <div class="card mb-4">
-                        <div class="card-body">
-                            <h1 class="card-title">
-                                崔铉
-                            </h1>
-                            <p class="card-text"><strong>朝代:</strong>
-                                唐代
-                            </p>
-                            <p class="card-text"><strong>生平:</strong>
-                                崔铉，字台硕，博陵人。擢进士第，累迁翰林学士、中书舍人。会昌二年，拜中书侍郎同中书门下平章事，与李德裕不叶，罢为陕虢观察使。宣宗初，以御史大夫召，进尚书左仆射，兼门下侍郎，寻出为淮南节度使。帝饯于太液亭，赐诗宠之。咸通初，徙山南东道、荆南二镇，封魏国公。诗二首。
-                            </p>
-                            <p class="card-text"><strong>出生:</strong>
-                                
-                            </p>
-                            <p class="card-text"><strong>逝世:</strong>
-                                
-                            </p>
-                        </div>
-                    </div>
+    <main class="container-fluid">
+        
+            <div class="card mb-4 poet-info-card">
+                <div class="card-body">
+                    <h1 class="card-title">崔铉</h1>
+                    <p class="card-text"><strong>朝代:</strong> 唐代</p>
+                    <p class="card-text"><strong>生平:</strong> 崔铉，字台硕，博陵人。擢进士第，累迁翰林学士、中书舍人。会昌二年，拜中书侍郎同中书门下平章事，与李德裕不叶，罢为陕虢观察使。宣宗初，以御史大夫召，进尚书左仆射，兼门下侍郎，寻出为淮南节度使。帝饯于太液亭，赐诗宠之。咸通初，徙山南东道、荆南二镇，封魏国公。诗二首。</p>
+                    
+                    
+                </div>
+            </div>
+        
 
-                    <h2>诗歌</h2>
-                    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
-                        
-                            <div class="col">
-                                <div class="card h-100">
-                                    <div class="card-body">
-                                        <h5 class="card-title">
-                                            咏架上鹰
-                                        </h5>
-                                        <p class="card-text"><strong>形式:</strong>
-                                            七绝
-                                        </p>
-                                        <p class="card-text"><strong>标签:</strong>
-                                            唐代, 崔铉</p>
-                  <pre class="card-text">天边心胆架头身， 
+        <h2>诗歌</h2>
+        
+            <div class="masonry-grid">
+                
+                    <div class="masonry-grid-item">
+                        <div class="card h-100">
+                            <div class="card-body">
+                                <h5 class="card-title">咏架上鹰</h5>
+                                <p class="card-text"><strong>形式:</strong> 七绝</p>
+                                <p class="card-text"><strong>标签:</strong> 唐代, 崔铉</p>
+                                <pre class="card-text">天边心胆架头身， 
 欲拟飞腾未有因。 
 万里碧霄终一去， 
-不知谁是解绦人。
-                                                </pre>
-                                    </div>
-                                </div>
+不知谁是解绦人。</pre>
                             </div>
-                            
-                            <div class="col">
-                                <div class="card h-100">
-                                    <div class="card-body">
-                                        <h5 class="card-title">
-                                            进宣宗收复河湟诗
-                                        </h5>
-                                        <p class="card-text"><strong>形式:</strong>
-                                            七律
-                                        </p>
-                                        <p class="card-text"><strong>标签:</strong>
-                                            唐代, 崔铉</p>
-                  <pre class="card-text">边陲万里注恩波， 
+                        </div>
+                    </div>
+                
+                    <div class="masonry-grid-item">
+                        <div class="card h-100">
+                            <div class="card-body">
+                                <h5 class="card-title">进宣宗收复河湟诗</h5>
+                                <p class="card-text"><strong>形式:</strong> 七律</p>
+                                <p class="card-text"><strong>标签:</strong> 唐代, 崔铉</p>
+                                <pre class="card-text">边陲万里注恩波， 
 宇宙群芳洽凯歌。 
 右地名王争解辫， 
 远方戎垒尽投戈。 
 烟尘永息三秋戍， 
 瑞气遥清九折河。 
 共遇圣明千载运， 
-更观俗阜与时和。
-                                                </pre>
-                                    </div>
-                                </div>
+更观俗阜与时和。</pre>
                             </div>
-                            
+                        </div>
                     </div>
-                </div>
+                
             </div>
-        </main>
+        
+    </main>
 
-        <footer class="sticky-footer text-center text-lg-start bg-light text-muted">
+    <footer class="sticky-footer text-center text-lg-start bg-light text-muted">
   <div class="container text-center py-1">
     <section>
       <span id="busuanzi_container_page_pv">本页面访问量<span id="busuanzi_value_page_pv"></span>次</span>
@@ -146,7 +125,19 @@
   </div>
 </footer>
 
-
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var elem = document.querySelector('.masonry-grid');
+            if (elem) {
+                var msnry = new Masonry(elem, {
+                    itemSelector: '.masonry-grid-item',
+                    columnWidth: '.masonry-grid-item',
+                    percentPosition: true,
+                    gutter: 10 // 明确设置 gutter 值为 10px
+                });
+            }
+        });
+    </script>
 </body>
 
 </html>

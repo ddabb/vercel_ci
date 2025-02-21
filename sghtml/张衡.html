@@ -23,6 +23,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
          crossorigin="anonymous"></script>
     <script src="../js/clarity.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/masonry/4.2.2/masonry.pkgd.min.js"></script>
 </head>
 
 <body>
@@ -61,44 +62,30 @@
   </div>
 </header>
 
-        <main class="container-fluid">
-            <div class="row mt-5">
-                <div class="col-lg-8 col-md-12">
-                    <div class="card mb-4">
-                        <div class="card-body">
-                            <h1 class="card-title">
-                                张衡
-                            </h1>
-                            <p class="card-text"><strong>朝代:</strong>
-                                汉代
-                            </p>
-                            <p class="card-text"><strong>生平:</strong>
-                                张衡（前76-前39），字平子，南阳西鄂人（今河南省南阳县北）人。东汉安帝时为太史令，顺帝朝迁侍中，出为河间王相，后征拜尚书。卒年六十二。他是当时著名的文学家和科学家，既是《二京赋》的作者又是浑天仪和候风地动仪的发明人。诗歌传四言的《怨篇》、五言的《同声歌》和七言的《四愁诗》各一首。
-                            </p>
-                            <p class="card-text"><strong>出生:</strong>
-                                
-                            </p>
-                            <p class="card-text"><strong>逝世:</strong>
-                                
-                            </p>
-                        </div>
-                    </div>
+    <main class="container-fluid">
+        
+            <div class="card mb-4 poet-info-card">
+                <div class="card-body">
+                    <h1 class="card-title">张衡</h1>
+                    <p class="card-text"><strong>朝代:</strong> 汉代</p>
+                    <p class="card-text"><strong>生平:</strong> 张衡（前76-前39），字平子，南阳西鄂人（今河南省南阳县北）人。东汉安帝时为太史令，顺帝朝迁侍中，出为河间王相，后征拜尚书。卒年六十二。他是当时著名的文学家和科学家，既是《二京赋》的作者又是浑天仪和候风地动仪的发明人。诗歌传四言的《怨篇》、五言的《同声歌》和七言的《四愁诗》各一首。</p>
+                    
+                    
+                </div>
+            </div>
+        
 
-                    <h2>诗歌</h2>
-                    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
-                        
-                            <div class="col">
-                                <div class="card h-100">
-                                    <div class="card-body">
-                                        <h5 class="card-title">
-                                            四愁诗
-                                        </h5>
-                                        <p class="card-text"><strong>形式:</strong>
-                                            未知
-                                        </p>
-                                        <p class="card-text"><strong>标签:</strong>
-                                            汉代, 张衡</p>
-                  <pre class="card-text">我所思兮在太山， 
+        <h2>诗歌</h2>
+        
+            <div class="masonry-grid">
+                
+                    <div class="masonry-grid-item">
+                        <div class="card h-100">
+                            <div class="card-body">
+                                <h5 class="card-title">四愁诗</h5>
+                                <p class="card-text"><strong>形式:</strong> 未知</p>
+                                <p class="card-text"><strong>标签:</strong> 汉代, 张衡</p>
+                                <pre class="card-text">我所思兮在太山， 
 欲往从之梁父艰。 
 侧身东望涕沾翰。 
 美人赠我金错刀， 
@@ -125,18 +112,16 @@
 美人赠我锦绣段， 
 何以报之青玉案。 
 路远莫致倚增叹， 
-何为怀忧心烦惋。
-                                                </pre>
-                                    </div>
-                                </div>
+何为怀忧心烦惋。</pre>
                             </div>
-                            
+                        </div>
                     </div>
-                </div>
+                
             </div>
-        </main>
+        
+    </main>
 
-        <footer class="sticky-footer text-center text-lg-start bg-light text-muted">
+    <footer class="sticky-footer text-center text-lg-start bg-light text-muted">
   <div class="container text-center py-1">
     <section>
       <span id="busuanzi_container_page_pv">本页面访问量<span id="busuanzi_value_page_pv"></span>次</span>
@@ -146,7 +131,19 @@
   </div>
 </footer>
 
-
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var elem = document.querySelector('.masonry-grid');
+            if (elem) {
+                var msnry = new Masonry(elem, {
+                    itemSelector: '.masonry-grid-item',
+                    columnWidth: '.masonry-grid-item',
+                    percentPosition: true,
+                    gutter: 10 // 明确设置 gutter 值为 10px
+                });
+            }
+        });
+    </script>
 </body>
 
 </html>

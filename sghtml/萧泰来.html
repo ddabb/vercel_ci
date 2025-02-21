@@ -23,6 +23,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
          crossorigin="anonymous"></script>
     <script src="../js/clarity.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/masonry/4.2.2/masonry.pkgd.min.js"></script>
 </head>
 
 <body>
@@ -61,44 +62,30 @@
   </div>
 </header>
 
-        <main class="container-fluid">
-            <div class="row mt-5">
-                <div class="col-lg-8 col-md-12">
-                    <div class="card mb-4">
-                        <div class="card-body">
-                            <h1 class="card-title">
-                                萧泰来
-                            </h1>
-                            <p class="card-text"><strong>朝代:</strong>
-                                宋代
-                            </p>
-                            <p class="card-text"><strong>生平:</strong>
-                                （生卒不详）字则阳，号小山，临江(四川忠县）人。理宗绍定二年进士，以起居郎出守隆兴府，后曾任御史。著有《小山词》。《全宋词》中存词二首。
-                            </p>
-                            <p class="card-text"><strong>出生:</strong>
-                                
-                            </p>
-                            <p class="card-text"><strong>逝世:</strong>
-                                
-                            </p>
-                        </div>
-                    </div>
+    <main class="container-fluid">
+        
+            <div class="card mb-4 poet-info-card">
+                <div class="card-body">
+                    <h1 class="card-title">萧泰来</h1>
+                    <p class="card-text"><strong>朝代:</strong> 宋代</p>
+                    <p class="card-text"><strong>生平:</strong> （生卒不详）字则阳，号小山，临江(四川忠县）人。理宗绍定二年进士，以起居郎出守隆兴府，后曾任御史。著有《小山词》。《全宋词》中存词二首。</p>
+                    
+                    
+                </div>
+            </div>
+        
 
-                    <h2>诗歌</h2>
-                    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
-                        
-                            <div class="col">
-                                <div class="card h-100">
-                                    <div class="card-body">
-                                        <h5 class="card-title">
-                                            满江红
-                                        </h5>
-                                        <p class="card-text"><strong>形式:</strong>
-                                            词
-                                        </p>
-                                        <p class="card-text"><strong>标签:</strong>
-                                            宋代, 萧泰来</p>
-                  <pre class="card-text">七十人稀， 
+        <h2>诗歌</h2>
+        
+            <div class="masonry-grid">
+                
+                    <div class="masonry-grid-item">
+                        <div class="card h-100">
+                            <div class="card-body">
+                                <h5 class="card-title">满江红</h5>
+                                <p class="card-text"><strong>形式:</strong> 词</p>
+                                <p class="card-text"><strong>标签:</strong> 宋代, 萧泰来</p>
+                                <pre class="card-text">七十人稀， 
 尝记得、少陵旧语。 
 谁知道、五园庵主， 
 寿今如许。 
@@ -115,24 +102,18 @@
 晔晔紫芝商隐皓， 
 猗猗绿竹淇瞻武。 
 问先生、何处更高歌， 
-凭椿树。
-                                                </pre>
-                                    </div>
-                                </div>
+凭椿树。</pre>
                             </div>
-                            
-                            <div class="col">
-                                <div class="card h-100">
-                                    <div class="card-body">
-                                        <h5 class="card-title">
-                                            霜天晓角
-                                        </h5>
-                                        <p class="card-text"><strong>形式:</strong>
-                                            词
-                                        </p>
-                                        <p class="card-text"><strong>标签:</strong>
-                                            宋代, 萧泰来</p>
-                  <pre class="card-text">千霜万雪。 
+                        </div>
+                    </div>
+                
+                    <div class="masonry-grid-item">
+                        <div class="card h-100">
+                            <div class="card-body">
+                                <h5 class="card-title">霜天晓角</h5>
+                                <p class="card-text"><strong>形式:</strong> 词</p>
+                                <p class="card-text"><strong>标签:</strong> 宋代, 萧泰来</p>
+                                <pre class="card-text">千霜万雪。 
 受尽寒磨折。 
 赖是生来瘦硬， 
 浑不怕、角吹彻。 
@@ -140,18 +121,16 @@
 影也别。 
 知心惟有月。 
 原没春风情性， 
-如何共、海棠说。
-                                                </pre>
-                                    </div>
-                                </div>
+如何共、海棠说。</pre>
                             </div>
-                            
+                        </div>
                     </div>
-                </div>
+                
             </div>
-        </main>
+        
+    </main>
 
-        <footer class="sticky-footer text-center text-lg-start bg-light text-muted">
+    <footer class="sticky-footer text-center text-lg-start bg-light text-muted">
   <div class="container text-center py-1">
     <section>
       <span id="busuanzi_container_page_pv">本页面访问量<span id="busuanzi_value_page_pv"></span>次</span>
@@ -161,7 +140,19 @@
   </div>
 </footer>
 
-
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var elem = document.querySelector('.masonry-grid');
+            if (elem) {
+                var msnry = new Masonry(elem, {
+                    itemSelector: '.masonry-grid-item',
+                    columnWidth: '.masonry-grid-item',
+                    percentPosition: true,
+                    gutter: 10 // 明确设置 gutter 值为 10px
+                });
+            }
+        });
+    </script>
 </body>
 
 </html>

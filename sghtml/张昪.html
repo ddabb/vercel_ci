@@ -23,6 +23,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
          crossorigin="anonymous"></script>
     <script src="../js/clarity.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/masonry/4.2.2/masonry.pkgd.min.js"></script>
 </head>
 
 <body>
@@ -61,44 +62,30 @@
   </div>
 </header>
 
-        <main class="container-fluid">
-            <div class="row mt-5">
-                <div class="col-lg-8 col-md-12">
-                    <div class="card mb-4">
-                        <div class="card-body">
-                            <h1 class="card-title">
-                                张昪
-                            </h1>
-                            <p class="card-text"><strong>朝代:</strong>
-                                宋代
-                            </p>
-                            <p class="card-text"><strong>生平:</strong>
-                                张昪（992-1077） 字杲卿，韩城（今属陕西）人。大中祥符八年（1015）进士。累官参知政事、枢密使，以彰信军节度使、同中书门下平章事判许州，改镇河阳。以太子太师致仕。赠司徒兼侍中，谥康节。其词仅存两首，笔法冷峻，格调悲凉。
-                            </p>
-                            <p class="card-text"><strong>出生:</strong>
-                                
-                            </p>
-                            <p class="card-text"><strong>逝世:</strong>
-                                
-                            </p>
-                        </div>
-                    </div>
+    <main class="container-fluid">
+        
+            <div class="card mb-4 poet-info-card">
+                <div class="card-body">
+                    <h1 class="card-title">张昪</h1>
+                    <p class="card-text"><strong>朝代:</strong> 宋代</p>
+                    <p class="card-text"><strong>生平:</strong> 张昪（992-1077） 字杲卿，韩城（今属陕西）人。大中祥符八年（1015）进士。累官参知政事、枢密使，以彰信军节度使、同中书门下平章事判许州，改镇河阳。以太子太师致仕。赠司徒兼侍中，谥康节。其词仅存两首，笔法冷峻，格调悲凉。</p>
+                    
+                    
+                </div>
+            </div>
+        
 
-                    <h2>诗歌</h2>
-                    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
-                        
-                            <div class="col">
-                                <div class="card h-100">
-                                    <div class="card-body">
-                                        <h5 class="card-title">
-                                            满江红
-                                        </h5>
-                                        <p class="card-text"><strong>形式:</strong>
-                                            词
-                                        </p>
-                                        <p class="card-text"><strong>标签:</strong>
-                                            宋代, 张昪</p>
-                  <pre class="card-text">无利无名， 
+        <h2>诗歌</h2>
+        
+            <div class="masonry-grid">
+                
+                    <div class="masonry-grid-item">
+                        <div class="card h-100">
+                            <div class="card-body">
+                                <h5 class="card-title">满江红</h5>
+                                <p class="card-text"><strong>形式:</strong> 词</p>
+                                <p class="card-text"><strong>标签:</strong> 宋代, 张昪</p>
+                                <pre class="card-text">无利无名， 
 无荣无辱， 
 无烦无恼。 
 夜灯前、独歌独酌， 
@@ -116,24 +103,18 @@
 一瞬光阴何足道， 
 但思行乐常不早。 
 待春来携酒殢东风， 
-眠芳草。
-                                                </pre>
-                                    </div>
-                                </div>
+眠芳草。</pre>
                             </div>
-                            
-                            <div class="col">
-                                <div class="card h-100">
-                                    <div class="card-body">
-                                        <h5 class="card-title">
-                                            离亭燕·一带江山如画
-                                        </h5>
-                                        <p class="card-text"><strong>形式:</strong>
-                                            词
-                                        </p>
-                                        <p class="card-text"><strong>标签:</strong>
-                                            宋代, 张昪</p>
-                  <pre class="card-text">一带江山如画， 
+                        </div>
+                    </div>
+                
+                    <div class="masonry-grid-item">
+                        <div class="card h-100">
+                            <div class="card-body">
+                                <h5 class="card-title">离亭燕·一带江山如画</h5>
+                                <p class="card-text"><strong>形式:</strong> 词</p>
+                                <p class="card-text"><strong>标签:</strong> 宋代, 张昪</p>
+                                <pre class="card-text">一带江山如画， 
 风物向秋潇洒。 
 水浸碧天何处断？ 
 霁色冷光相射。 
@@ -144,18 +125,16 @@
 多少六朝兴废事， 
 尽入渔樵闲话。 
 怅望倚危栏， 
-寒日无言西下。
-                                                </pre>
-                                    </div>
-                                </div>
+寒日无言西下。</pre>
                             </div>
-                            
+                        </div>
                     </div>
-                </div>
+                
             </div>
-        </main>
+        
+    </main>
 
-        <footer class="sticky-footer text-center text-lg-start bg-light text-muted">
+    <footer class="sticky-footer text-center text-lg-start bg-light text-muted">
   <div class="container text-center py-1">
     <section>
       <span id="busuanzi_container_page_pv">本页面访问量<span id="busuanzi_value_page_pv"></span>次</span>
@@ -165,7 +144,19 @@
   </div>
 </footer>
 
-
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var elem = document.querySelector('.masonry-grid');
+            if (elem) {
+                var msnry = new Masonry(elem, {
+                    itemSelector: '.masonry-grid-item',
+                    columnWidth: '.masonry-grid-item',
+                    percentPosition: true,
+                    gutter: 10 // 明确设置 gutter 值为 10px
+                });
+            }
+        });
+    </script>
 </body>
 
 </html>

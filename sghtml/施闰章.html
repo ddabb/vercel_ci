@@ -23,6 +23,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
          crossorigin="anonymous"></script>
     <script src="../js/clarity.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/masonry/4.2.2/masonry.pkgd.min.js"></script>
 </head>
 
 <body>
@@ -61,62 +62,46 @@
   </div>
 </header>
 
-        <main class="container-fluid">
-            <div class="row mt-5">
-                <div class="col-lg-8 col-md-12">
-                    <div class="card mb-4">
-                        <div class="card-body">
-                            <h1 class="card-title">
-                                施闰章
-                            </h1>
-                            <p class="card-text"><strong>朝代:</strong>
-                                清代
-                            </p>
-                            <p class="card-text"><strong>生平:</strong>
-                                （1618-1683），字尚白，号愚山、蠖斋，晚号矩斋，安徽宣城人。有《施愚山先生学余诗集》等。与宋琬齐名，号&amp;quot;南施北宋&amp;quot;。其诗远承其乡人宋梅尧臣的传统而又有变化，风格高雅淡素。论诗主张言之有物，反对虚华空泛，作诗须有学力，注重修养。他的不少作品，对清初社会的黑暗，人民的苦难，有真实的反映。
-                            </p>
-                            <p class="card-text"><strong>出生:</strong>
-                                
-                            </p>
-                            <p class="card-text"><strong>逝世:</strong>
-                                
-                            </p>
-                        </div>
-                    </div>
+    <main class="container-fluid">
+        
+            <div class="card mb-4 poet-info-card">
+                <div class="card-body">
+                    <h1 class="card-title">施闰章</h1>
+                    <p class="card-text"><strong>朝代:</strong> 清代</p>
+                    <p class="card-text"><strong>生平:</strong> （1618-1683），字尚白，号愚山、蠖斋，晚号矩斋，安徽宣城人。有《施愚山先生学余诗集》等。与宋琬齐名，号&amp;quot;南施北宋&amp;quot;。其诗远承其乡人宋梅尧臣的传统而又有变化，风格高雅淡素。论诗主张言之有物，反对虚华空泛，作诗须有学力，注重修养。他的不少作品，对清初社会的黑暗，人民的苦难，有真实的反映。</p>
+                    
+                    
+                </div>
+            </div>
+        
 
-                    <h2>诗歌</h2>
-                    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
-                        
-                            <div class="col">
-                                <div class="card h-100">
-                                    <div class="card-body">
-                                        <h5 class="card-title">
-                                            泊樵舍
-                                        </h5>
-                                        <p class="card-text"><strong>形式:</strong>
-                                            五律
-                                        </p>
-                                        <p class="card-text"><strong>标签:</strong>
-                                            清代, 施闰章</p>
-                  <pre class="card-text">涨减水逾急， 
+        <h2>诗歌</h2>
+        
+            <div class="masonry-grid">
+                
+                    <div class="masonry-grid-item">
+                        <div class="card h-100">
+                            <div class="card-body">
+                                <h5 class="card-title">泊樵舍</h5>
+                                <p class="card-text"><strong>形式:</strong> 五律</p>
+                                <p class="card-text"><strong>标签:</strong> 清代, 施闰章</p>
+                                <pre class="card-text">涨减水逾急， 
 秋阴未夕昏。 
 乱山成野戍， 
 黄叶自江村。 
 带雨疏星见， 
 回风绝岸喧。 
 经过多战舰， 
-茅屋几家存？
-                                                </pre>
-                                    </div>
-                                </div>
+茅屋几家存？</pre>
                             </div>
-                            
+                        </div>
                     </div>
-                </div>
+                
             </div>
-        </main>
+        
+    </main>
 
-        <footer class="sticky-footer text-center text-lg-start bg-light text-muted">
+    <footer class="sticky-footer text-center text-lg-start bg-light text-muted">
   <div class="container text-center py-1">
     <section>
       <span id="busuanzi_container_page_pv">本页面访问量<span id="busuanzi_value_page_pv"></span>次</span>
@@ -126,7 +111,19 @@
   </div>
 </footer>
 
-
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var elem = document.querySelector('.masonry-grid');
+            if (elem) {
+                var msnry = new Masonry(elem, {
+                    itemSelector: '.masonry-grid-item',
+                    columnWidth: '.masonry-grid-item',
+                    percentPosition: true,
+                    gutter: 10 // 明确设置 gutter 值为 10px
+                });
+            }
+        });
+    </script>
 </body>
 
 </html>

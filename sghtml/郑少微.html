@@ -23,6 +23,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
          crossorigin="anonymous"></script>
     <script src="../js/clarity.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/masonry/4.2.2/masonry.pkgd.min.js"></script>
 </head>
 
 <body>
@@ -61,44 +62,30 @@
   </div>
 </header>
 
-        <main class="container-fluid">
-            <div class="row mt-5">
-                <div class="col-lg-8 col-md-12">
-                    <div class="card mb-4">
-                        <div class="card-body">
-                            <h1 class="card-title">
-                                郑少微
-                            </h1>
-                            <p class="card-text"><strong>朝代:</strong>
-                                宋代
-                            </p>
-                            <p class="card-text"><strong>生平:</strong>
-                                郑少微（？-？） 字明举，成都（今属四川）人。元佑三年（1088）进士。以文知名。政和中，曾知德阳。晚号木雁居士。《全宋词》存其词二首。
-                            </p>
-                            <p class="card-text"><strong>出生:</strong>
-                                
-                            </p>
-                            <p class="card-text"><strong>逝世:</strong>
-                                
-                            </p>
-                        </div>
-                    </div>
+    <main class="container-fluid">
+        
+            <div class="card mb-4 poet-info-card">
+                <div class="card-body">
+                    <h1 class="card-title">郑少微</h1>
+                    <p class="card-text"><strong>朝代:</strong> 宋代</p>
+                    <p class="card-text"><strong>生平:</strong> 郑少微（？-？） 字明举，成都（今属四川）人。元佑三年（1088）进士。以文知名。政和中，曾知德阳。晚号木雁居士。《全宋词》存其词二首。</p>
+                    
+                    
+                </div>
+            </div>
+        
 
-                    <h2>诗歌</h2>
-                    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
-                        
-                            <div class="col">
-                                <div class="card h-100">
-                                    <div class="card-body">
-                                        <h5 class="card-title">
-                                            思越人·朝天子
-                                        </h5>
-                                        <p class="card-text"><strong>形式:</strong>
-                                            七律
-                                        </p>
-                                        <p class="card-text"><strong>标签:</strong>
-                                            宋代, 郑少微</p>
-                  <pre class="card-text">欲把长绳系日难。 
+        <h2>诗歌</h2>
+        
+            <div class="masonry-grid">
+                
+                    <div class="masonry-grid-item">
+                        <div class="card h-100">
+                            <div class="card-body">
+                                <h5 class="card-title">思越人·朝天子</h5>
+                                <p class="card-text"><strong>形式:</strong> 七律</p>
+                                <p class="card-text"><strong>标签:</strong> 宋代, 郑少微</p>
+                                <pre class="card-text">欲把长绳系日难。 
 纷纷从此见花残。 
 休将世事兼身事， 
 须看人间比梦间。 
@@ -106,24 +93,18 @@
 艳歌阑。 
 等闲留客却成欢。 
 劝君更尽一杯酒， 
-赢得浮生半日闲。
-                                                </pre>
-                                    </div>
-                                </div>
+赢得浮生半日闲。</pre>
                             </div>
-                            
-                            <div class="col">
-                                <div class="card h-100">
-                                    <div class="card-body">
-                                        <h5 class="card-title">
-                                            鹧鸪天
-                                        </h5>
-                                        <p class="card-text"><strong>形式:</strong>
-                                            七律
-                                        </p>
-                                        <p class="card-text"><strong>标签:</strong>
-                                            宋代, 郑少微</p>
-                  <pre class="card-text">谁折南枝傍小丛。 
+                        </div>
+                    </div>
+                
+                    <div class="masonry-grid-item">
+                        <div class="card h-100">
+                            <div class="card-body">
+                                <h5 class="card-title">鹧鸪天</h5>
+                                <p class="card-text"><strong>形式:</strong> 七律</p>
+                                <p class="card-text"><strong>标签:</strong> 宋代, 郑少微</p>
+                                <pre class="card-text">谁折南枝傍小丛。 
 佳人丰色与梅同。 
 有花无叶真潇洒， 
 不问胭脂借淡红。 
@@ -131,18 +112,16 @@
 嫁春风。 
 天教雪月伴玲珑。 
 池塘疏影伤幽独， 
-何似横斜酒盏中。
-                                                </pre>
-                                    </div>
-                                </div>
+何似横斜酒盏中。</pre>
                             </div>
-                            
+                        </div>
                     </div>
-                </div>
+                
             </div>
-        </main>
+        
+    </main>
 
-        <footer class="sticky-footer text-center text-lg-start bg-light text-muted">
+    <footer class="sticky-footer text-center text-lg-start bg-light text-muted">
   <div class="container text-center py-1">
     <section>
       <span id="busuanzi_container_page_pv">本页面访问量<span id="busuanzi_value_page_pv"></span>次</span>
@@ -152,7 +131,19 @@
   </div>
 </footer>
 
-
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var elem = document.querySelector('.masonry-grid');
+            if (elem) {
+                var msnry = new Masonry(elem, {
+                    itemSelector: '.masonry-grid-item',
+                    columnWidth: '.masonry-grid-item',
+                    percentPosition: true,
+                    gutter: 10 // 明确设置 gutter 值为 10px
+                });
+            }
+        });
+    </script>
 </body>
 
 </html>

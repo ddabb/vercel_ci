@@ -23,6 +23,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
          crossorigin="anonymous"></script>
     <script src="../js/clarity.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/masonry/4.2.2/masonry.pkgd.min.js"></script>
 </head>
 
 <body>
@@ -61,98 +62,70 @@
   </div>
 </header>
 
-        <main class="container-fluid">
-            <div class="row mt-5">
-                <div class="col-lg-8 col-md-12">
-                    <div class="card mb-4">
-                        <div class="card-body">
-                            <h1 class="card-title">
-                                刘皂
-                            </h1>
-                            <p class="card-text"><strong>朝代:</strong>
-                                唐代
-                            </p>
-                            <p class="card-text"><strong>生平:</strong>
-                                刘皂，贞元间人，诗五首。
-                            </p>
-                            <p class="card-text"><strong>出生:</strong>
-                                
-                            </p>
-                            <p class="card-text"><strong>逝世:</strong>
-                                
-                            </p>
-                        </div>
-                    </div>
-
-                    <h2>诗歌</h2>
-                    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
-                        
-                            <div class="col">
-                                <div class="card h-100">
-                                    <div class="card-body">
-                                        <h5 class="card-title">
-                                            旅次朔方
-                                        </h5>
-                                        <p class="card-text"><strong>形式:</strong>
-                                            七绝
-                                        </p>
-                                        <p class="card-text"><strong>标签:</strong>
-                                            唐代, 刘皂</p>
-                  <pre class="card-text">客舍并州数十霜， 
-归心日夜忆咸阳。 
-无端又渡桑干水， 
-却望并州似故乡。
-                                                </pre>
-                                    </div>
-                                </div>
-                            </div>
-                            
-                            <div class="col">
-                                <div class="card h-100">
-                                    <div class="card-body">
-                                        <h5 class="card-title">
-                                            边城柳
-                                        </h5>
-                                        <p class="card-text"><strong>形式:</strong>
-                                            五绝
-                                        </p>
-                                        <p class="card-text"><strong>标签:</strong>
-                                            唐代, 刘皂</p>
-                  <pre class="card-text">一株新柳色， 
-十里断孤城。 
-为近东西路， 
-长悬离别情。
-                                                </pre>
-                                    </div>
-                                </div>
-                            </div>
-                            
-                            <div class="col">
-                                <div class="card h-100">
-                                    <div class="card-body">
-                                        <h5 class="card-title">
-                                            长门怨
-                                        </h5>
-                                        <p class="card-text"><strong>形式:</strong>
-                                            七绝
-                                        </p>
-                                        <p class="card-text"><strong>标签:</strong>
-                                            唐代, 刘皂</p>
-                  <pre class="card-text">雨滴长门秋夜长， 
-愁心和雨到昭阳。 
-泪痕不学君恩断， 
-拭却千行更万行。
-                                                </pre>
-                                    </div>
-                                </div>
-                            </div>
-                            
-                    </div>
+    <main class="container-fluid">
+        
+            <div class="card mb-4 poet-info-card">
+                <div class="card-body">
+                    <h1 class="card-title">刘皂</h1>
+                    <p class="card-text"><strong>朝代:</strong> 唐代</p>
+                    <p class="card-text"><strong>生平:</strong> 刘皂，贞元间人，诗五首。</p>
+                    
+                    
                 </div>
             </div>
-        </main>
+        
 
-        <footer class="sticky-footer text-center text-lg-start bg-light text-muted">
+        <h2>诗歌</h2>
+        
+            <div class="masonry-grid">
+                
+                    <div class="masonry-grid-item">
+                        <div class="card h-100">
+                            <div class="card-body">
+                                <h5 class="card-title">旅次朔方</h5>
+                                <p class="card-text"><strong>形式:</strong> 七绝</p>
+                                <p class="card-text"><strong>标签:</strong> 唐代, 刘皂</p>
+                                <pre class="card-text">客舍并州数十霜， 
+归心日夜忆咸阳。 
+无端又渡桑干水， 
+却望并州似故乡。</pre>
+                            </div>
+                        </div>
+                    </div>
+                
+                    <div class="masonry-grid-item">
+                        <div class="card h-100">
+                            <div class="card-body">
+                                <h5 class="card-title">边城柳</h5>
+                                <p class="card-text"><strong>形式:</strong> 五绝</p>
+                                <p class="card-text"><strong>标签:</strong> 唐代, 刘皂</p>
+                                <pre class="card-text">一株新柳色， 
+十里断孤城。 
+为近东西路， 
+长悬离别情。</pre>
+                            </div>
+                        </div>
+                    </div>
+                
+                    <div class="masonry-grid-item">
+                        <div class="card h-100">
+                            <div class="card-body">
+                                <h5 class="card-title">长门怨</h5>
+                                <p class="card-text"><strong>形式:</strong> 七绝</p>
+                                <p class="card-text"><strong>标签:</strong> 唐代, 刘皂</p>
+                                <pre class="card-text">雨滴长门秋夜长， 
+愁心和雨到昭阳。 
+泪痕不学君恩断， 
+拭却千行更万行。</pre>
+                            </div>
+                        </div>
+                    </div>
+                
+            </div>
+        
+    </main>
+
+    <footer class="sticky-footer text-center text-lg-start bg-light text-muted">
   <div class="container text-center py-1">
     <section>
       <span id="busuanzi_container_page_pv">本页面访问量<span id="busuanzi_value_page_pv"></span>次</span>
@@ -162,7 +135,19 @@
   </div>
 </footer>
 
-
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var elem = document.querySelector('.masonry-grid');
+            if (elem) {
+                var msnry = new Masonry(elem, {
+                    itemSelector: '.masonry-grid-item',
+                    columnWidth: '.masonry-grid-item',
+                    percentPosition: true,
+                    gutter: 10 // 明确设置 gutter 值为 10px
+                });
+            }
+        });
+    </script>
 </body>
 
 </html>

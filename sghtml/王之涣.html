@@ -23,6 +23,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
          crossorigin="anonymous"></script>
     <script src="../js/clarity.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/masonry/4.2.2/masonry.pkgd.min.js"></script>
 </head>
 
 <body>
@@ -61,158 +62,112 @@
   </div>
 </header>
 
-        <main class="container-fluid">
-            <div class="row mt-5">
-                <div class="col-lg-8 col-md-12">
-                    <div class="card mb-4">
-                        <div class="card-body">
-                            <h1 class="card-title">
-                                王之涣
-                            </h1>
-                            <p class="card-text"><strong>朝代:</strong>
-                                唐代
-                            </p>
-                            <p class="card-text"><strong>生平:</strong>
-                                王之涣（688－742）字季陵，晋阳（今太原）人。他是唐代著名的边塞诗人，他的诗在当时“传乎乐章，布在人口”，传世仅六首。
-                            </p>
-                            <p class="card-text"><strong>出生:</strong>
-                                
-                            </p>
-                            <p class="card-text"><strong>逝世:</strong>
-                                
-                            </p>
-                        </div>
-                    </div>
-
-                    <h2>诗歌</h2>
-                    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
-                        
-                            <div class="col">
-                                <div class="card h-100">
-                                    <div class="card-body">
-                                        <h5 class="card-title">
-                                            九日送别
-                                        </h5>
-                                        <p class="card-text"><strong>形式:</strong>
-                                            七绝
-                                        </p>
-                                        <p class="card-text"><strong>标签:</strong>
-                                            唐代, 王之涣</p>
-                  <pre class="card-text">蓟庭萧瑟故人稀， 
-何处登高且送归。 
-今日暂同芳菊酒， 
-明朝应作断蓬飞。
-                                                </pre>
-                                    </div>
-                                </div>
-                            </div>
-                            
-                            <div class="col">
-                                <div class="card h-100">
-                                    <div class="card-body">
-                                        <h5 class="card-title">
-                                            凉州词
-                                        </h5>
-                                        <p class="card-text"><strong>形式:</strong>
-                                            七绝
-                                        </p>
-                                        <p class="card-text"><strong>标签:</strong>
-                                            唐代, 王之涣</p>
-                  <pre class="card-text">黄河远上白云间， 
-一片孤城万仞山。 
-羌笛何须怨杨柳， 
-春风不度玉门关。
-                                                </pre>
-                                    </div>
-                                </div>
-                            </div>
-                            
-                            <div class="col">
-                                <div class="card h-100">
-                                    <div class="card-body">
-                                        <h5 class="card-title">
-                                            宴词
-                                        </h5>
-                                        <p class="card-text"><strong>形式:</strong>
-                                            七绝
-                                        </p>
-                                        <p class="card-text"><strong>标签:</strong>
-                                            唐代, 王之涣</p>
-                  <pre class="card-text">长堤春水绿悠悠， 
-畎入漳河一道流。 
-莫听声声催去棹， 
-桃溪浅处不胜舟。
-                                                </pre>
-                                    </div>
-                                </div>
-                            </div>
-                            
-                            <div class="col">
-                                <div class="card h-100">
-                                    <div class="card-body">
-                                        <h5 class="card-title">
-                                            横吹曲辞·出塞
-                                        </h5>
-                                        <p class="card-text"><strong>形式:</strong>
-                                            七绝
-                                        </p>
-                                        <p class="card-text"><strong>标签:</strong>
-                                            唐代, 王之涣</p>
-                  <pre class="card-text">黄砂直上白云间， 
-一片孤城万仞山。 
-羌笛何须怨杨柳， 
-春光不度玉门关。
-                                                </pre>
-                                    </div>
-                                </div>
-                            </div>
-                            
-                            <div class="col">
-                                <div class="card h-100">
-                                    <div class="card-body">
-                                        <h5 class="card-title">
-                                            登鹳雀楼
-                                        </h5>
-                                        <p class="card-text"><strong>形式:</strong>
-                                            五绝
-                                        </p>
-                                        <p class="card-text"><strong>标签:</strong>
-                                            唐代, 王之涣</p>
-                  <pre class="card-text">白日依山尽， 
-黄河入海流。 
-欲穷千里目， 
-更上一层楼。
-                                                </pre>
-                                    </div>
-                                </div>
-                            </div>
-                            
-                            <div class="col">
-                                <div class="card h-100">
-                                    <div class="card-body">
-                                        <h5 class="card-title">
-                                            送别
-                                        </h5>
-                                        <p class="card-text"><strong>形式:</strong>
-                                            五绝
-                                        </p>
-                                        <p class="card-text"><strong>标签:</strong>
-                                            唐代, 王之涣</p>
-                  <pre class="card-text">杨柳东风树， 
-青青夹御河。 
-近来攀折苦， 
-应为别离多。
-                                                </pre>
-                                    </div>
-                                </div>
-                            </div>
-                            
-                    </div>
+    <main class="container-fluid">
+        
+            <div class="card mb-4 poet-info-card">
+                <div class="card-body">
+                    <h1 class="card-title">王之涣</h1>
+                    <p class="card-text"><strong>朝代:</strong> 唐代</p>
+                    <p class="card-text"><strong>生平:</strong> 王之涣（688－742）字季陵，晋阳（今太原）人。他是唐代著名的边塞诗人，他的诗在当时“传乎乐章，布在人口”，传世仅六首。</p>
+                    
+                    
                 </div>
             </div>
-        </main>
+        
 
-        <footer class="sticky-footer text-center text-lg-start bg-light text-muted">
+        <h2>诗歌</h2>
+        
+            <div class="masonry-grid">
+                
+                    <div class="masonry-grid-item">
+                        <div class="card h-100">
+                            <div class="card-body">
+                                <h5 class="card-title">九日送别</h5>
+                                <p class="card-text"><strong>形式:</strong> 七绝</p>
+                                <p class="card-text"><strong>标签:</strong> 唐代, 王之涣</p>
+                                <pre class="card-text">蓟庭萧瑟故人稀， 
+何处登高且送归。 
+今日暂同芳菊酒， 
+明朝应作断蓬飞。</pre>
+                            </div>
+                        </div>
+                    </div>
+                
+                    <div class="masonry-grid-item">
+                        <div class="card h-100">
+                            <div class="card-body">
+                                <h5 class="card-title">凉州词</h5>
+                                <p class="card-text"><strong>形式:</strong> 七绝</p>
+                                <p class="card-text"><strong>标签:</strong> 唐代, 王之涣</p>
+                                <pre class="card-text">黄河远上白云间， 
+一片孤城万仞山。 
+羌笛何须怨杨柳， 
+春风不度玉门关。</pre>
+                            </div>
+                        </div>
+                    </div>
+                
+                    <div class="masonry-grid-item">
+                        <div class="card h-100">
+                            <div class="card-body">
+                                <h5 class="card-title">宴词</h5>
+                                <p class="card-text"><strong>形式:</strong> 七绝</p>
+                                <p class="card-text"><strong>标签:</strong> 唐代, 王之涣</p>
+                                <pre class="card-text">长堤春水绿悠悠， 
+畎入漳河一道流。 
+莫听声声催去棹， 
+桃溪浅处不胜舟。</pre>
+                            </div>
+                        </div>
+                    </div>
+                
+                    <div class="masonry-grid-item">
+                        <div class="card h-100">
+                            <div class="card-body">
+                                <h5 class="card-title">横吹曲辞·出塞</h5>
+                                <p class="card-text"><strong>形式:</strong> 七绝</p>
+                                <p class="card-text"><strong>标签:</strong> 唐代, 王之涣</p>
+                                <pre class="card-text">黄砂直上白云间， 
+一片孤城万仞山。 
+羌笛何须怨杨柳， 
+春光不度玉门关。</pre>
+                            </div>
+                        </div>
+                    </div>
+                
+                    <div class="masonry-grid-item">
+                        <div class="card h-100">
+                            <div class="card-body">
+                                <h5 class="card-title">登鹳雀楼</h5>
+                                <p class="card-text"><strong>形式:</strong> 五绝</p>
+                                <p class="card-text"><strong>标签:</strong> 唐代, 王之涣</p>
+                                <pre class="card-text">白日依山尽， 
+黄河入海流。 
+欲穷千里目， 
+更上一层楼。</pre>
+                            </div>
+                        </div>
+                    </div>
+                
+                    <div class="masonry-grid-item">
+                        <div class="card h-100">
+                            <div class="card-body">
+                                <h5 class="card-title">送别</h5>
+                                <p class="card-text"><strong>形式:</strong> 五绝</p>
+                                <p class="card-text"><strong>标签:</strong> 唐代, 王之涣</p>
+                                <pre class="card-text">杨柳东风树， 
+青青夹御河。 
+近来攀折苦， 
+应为别离多。</pre>
+                            </div>
+                        </div>
+                    </div>
+                
+            </div>
+        
+    </main>
+
+    <footer class="sticky-footer text-center text-lg-start bg-light text-muted">
   <div class="container text-center py-1">
     <section>
       <span id="busuanzi_container_page_pv">本页面访问量<span id="busuanzi_value_page_pv"></span>次</span>
@@ -222,7 +177,19 @@
   </div>
 </footer>
 
-
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var elem = document.querySelector('.masonry-grid');
+            if (elem) {
+                var msnry = new Masonry(elem, {
+                    itemSelector: '.masonry-grid-item',
+                    columnWidth: '.masonry-grid-item',
+                    percentPosition: true,
+                    gutter: 10 // 明确设置 gutter 值为 10px
+                });
+            }
+        });
+    </script>
 </body>
 
 </html>

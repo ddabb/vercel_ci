@@ -120,7 +120,7 @@ const argv = yargs(hideBin(process.argv))
         alias: 'd',
         describe: 'Path to the dynasty template file',
         type: 'string',
-        default: path.join(__dirname, 'components', 'dynasty.ejs')
+        default: path.join(__dirname, 'components', 'Dynasty.ejs')
     })
     .option('poetTemplatePath', {
         alias: 'p',

@@ -23,6 +23,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
          crossorigin="anonymous"></script>
     <script src="../js/clarity.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/masonry/4.2.2/masonry.pkgd.min.js"></script>
 </head>
 
 <body>
@@ -61,62 +62,46 @@
   </div>
 </header>
 
-        <main class="container-fluid">
-            <div class="row mt-5">
-                <div class="col-lg-8 col-md-12">
-                    <div class="card mb-4">
-                        <div class="card-body">
-                            <h1 class="card-title">
-                                高適
-                            </h1>
-                            <p class="card-text"><strong>朝代:</strong>
-                                唐代
-                            </p>
-                            <p class="card-text"><strong>生平:</strong>
-                                高適，字达夫，渤海蓚人。举有道科，释褐封丘尉。不得志，去游河右，哥舒翰表为左骁卫兵曹、掌书记。进左拾遗，转监察御史。潼关失守，適奔赴行在，擢谏议大夫，节度淮南。李辅国谮之，左授太子少詹事，出为蜀、彭二州刺史。进成都尹、剑南西川节度使。召为刑部侍郎，转散骑常侍，封渤海县侯。永泰二年卒，赠礼部尚书，谥曰忠。適喜功名，尚节义。年过五十，始学为诗，以气质自高。每吟一篇，已为好事者传诵。开、宝以来，诗人之达者，惟適而已。集二卷。今编四卷。
-                            </p>
-                            <p class="card-text"><strong>出生:</strong>
-                                
-                            </p>
-                            <p class="card-text"><strong>逝世:</strong>
-                                
-                            </p>
-                        </div>
-                    </div>
+    <main class="container-fluid">
+        
+            <div class="card mb-4 poet-info-card">
+                <div class="card-body">
+                    <h1 class="card-title">高適</h1>
+                    <p class="card-text"><strong>朝代:</strong> 唐代</p>
+                    <p class="card-text"><strong>生平:</strong> 高適，字达夫，渤海蓚人。举有道科，释褐封丘尉。不得志，去游河右，哥舒翰表为左骁卫兵曹、掌书记。进左拾遗，转监察御史。潼关失守，適奔赴行在，擢谏议大夫，节度淮南。李辅国谮之，左授太子少詹事，出为蜀、彭二州刺史。进成都尹、剑南西川节度使。召为刑部侍郎，转散骑常侍，封渤海县侯。永泰二年卒，赠礼部尚书，谥曰忠。適喜功名，尚节义。年过五十，始学为诗，以气质自高。每吟一篇，已为好事者传诵。开、宝以来，诗人之达者，惟適而已。集二卷。今编四卷。</p>
+                    
+                    
+                </div>
+            </div>
+        
 
-                    <h2>诗歌</h2>
-                    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
-                        
-                            <div class="col">
-                                <div class="card h-100">
-                                    <div class="card-body">
-                                        <h5 class="card-title">
-                                            酬裴秀才
-                                        </h5>
-                                        <p class="card-text"><strong>形式:</strong>
-                                            五律
-                                        </p>
-                                        <p class="card-text"><strong>标签:</strong>
-                                            唐代, 高適</p>
-                  <pre class="card-text">男儿贵得意， 
+        <h2>诗歌</h2>
+        
+            <div class="masonry-grid">
+                
+                    <div class="masonry-grid-item">
+                        <div class="card h-100">
+                            <div class="card-body">
+                                <h5 class="card-title">酬裴秀才</h5>
+                                <p class="card-text"><strong>形式:</strong> 五律</p>
+                                <p class="card-text"><strong>标签:</strong> 唐代, 高適</p>
+                                <pre class="card-text">男儿贵得意， 
 何必相知早。 
 飘荡与物永， 
 蹉跎觉年老。 
 长卿无产业， 
 季子惭妻嫂。 
 此事难重陈， 
-未于众人道。
-                                                </pre>
-                                    </div>
-                                </div>
+未于众人道。</pre>
                             </div>
-                            
+                        </div>
                     </div>
-                </div>
+                
             </div>
-        </main>
+        
+    </main>
 
-        <footer class="sticky-footer text-center text-lg-start bg-light text-muted">
+    <footer class="sticky-footer text-center text-lg-start bg-light text-muted">
   <div class="container text-center py-1">
     <section>
       <span id="busuanzi_container_page_pv">本页面访问量<span id="busuanzi_value_page_pv"></span>次</span>
@@ -126,7 +111,19 @@
   </div>
 </footer>
 
-
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var elem = document.querySelector('.masonry-grid');
+            if (elem) {
+                var msnry = new Masonry(elem, {
+                    itemSelector: '.masonry-grid-item',
+                    columnWidth: '.masonry-grid-item',
+                    percentPosition: true,
+                    gutter: 10 // 明确设置 gutter 值为 10px
+                });
+            }
+        });
+    </script>
 </body>
 
 </html>
