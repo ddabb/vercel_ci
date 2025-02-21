@@ -1,4 +1,5 @@
 const fs = require('fs').promises;
+const fs1 = require('fs');
 const path = require('path');
 const showdown = require('showdown');
 const ejs = require('ejs');
@@ -39,7 +40,7 @@ const extractFrontMatter = (content) => {
 };
 
 // 整合型转换函数（避免重复处理）
-async function convertMarkdownToHtml(markdownContent) {
+async function convertMarkdownToHtml(markdownContent,stats) {
   const { metadata, cleanedContent } = extractFrontMatter(markdownContent);
   let goodLinksData = {};
   try {
@@ -76,6 +77,7 @@ async function convertMarkdownToHtml(markdownContent) {
     meta: {
       title: metadata.title || '无标题',
       description: metadata.description || '',
+      updateTime: stats.mtime,
       goodsInfo: goodsInfo, // 替换原有的 goodsLink
       tags: metadata.tags?.filter(Boolean) || [],
       category: metadata.category || '未分类'
@@ -156,7 +158,8 @@ async function mdToHtml(mdFilesDirectory = 'mdfiles', genhtmlDirectory = 'mdhtml
       const mdFilePath = path.join(mdFilesDirectory, fileName);
       let htmlContent;
       const markdownContent = await readDirFile(mdFilePath);
-      htmlContent = await convertMarkdownToHtml(markdownContent);
+      const stats = fs1.statSync(mdFilePath);
+      htmlContent = await convertMarkdownToHtml(markdownContent,stats);
       // 生成单独的 .html 文件
       const outputFilePath = path.join(genhtmlDirectory, `${path.basename(fileName, '.md')}.html`);
       await updateHtmlFile(htmlTemplatePath, htmlContent, outputFilePath);
