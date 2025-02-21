@@ -47,18 +47,31 @@
                   </nav>
                   <% } %>
                     <%- articleContent %>
-                      <!-- 标签部分 -->
-                      <% if (meta && meta.tags && meta.tags.length> 0) { %>
-                        <div class="tag-links mt-4">
-                          <span class="badge tag-label"><i class="bi bi-tags"></i> 标签：</span>
-                          <% meta.tags.forEach(function(tag){ %>
-                            <a href="/tag/<%= encodeURIComponent(tag.trim()) %>.html" class="badge tag-link">
-                              <%= tag.trim() %>
-                            </a>
-                            <% }); %>
+                      <% if (meta.goodsInfo && Object.keys(meta.goodsInfo).length> 0) { %>
+                        <!-- 商品推广卡片 -->
+                        <div class="product-card mt-4">
+                          <a href="<%= meta.goodsInfo.showurl %>" target="_blank">
+                            <img src="<%= meta.goodsInfo.picLink %>" alt="<%= meta.goodsInfo.name %>">
+                            <p>
+                              <%= meta.goodsInfo.name %>
+                            </p>
+                            <p>月销量：<%= meta.goodsInfo.monthSale %>
+                            </p>
+                            <p>单价：<%= meta.goodsInfo.unitprice %> 元</p>
+                          </a>
                         </div>
-                        <% } %>
-            
+                        <% } %><!-- 标签部分 -->
+                          <% if (meta && meta.tags && meta.tags.length> 0) { %>
+                            <div class="tag-links mt-4">
+                              <span class="badge tag-label"><i class="bi bi-tags"></i> 标签：</span>
+                              <% meta.tags.forEach(function(tag){ %>
+                                <a href="/tag/<%= encodeURIComponent(tag.trim()) %>.html" class="badge tag-link">
+                                  <%= tag.trim() %>
+                                </a>
+                                <% }); %>
+                            </div>
+                            <% } %>
+
               </div>
             </div>
           </div>

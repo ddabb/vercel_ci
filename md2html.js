@@ -3,10 +3,13 @@ const path = require('path');
 const showdown = require('showdown');
 const ejs = require('ejs');
 const yaml = require('js-yaml');
+// 新增：引入用于读取JSON文件的fs模块
+const jsonFilePath = path.join(__dirname, 'jsons', 'goodlinks.json');
+
 
 const converter = new showdown.Converter();
 
-async function readMarkdownFile(filePath) {
+async function readDirFile(filePath) {
   console.log(`Reading Markdown file: ${filePath}`);
   try {
     return await fs.readFile(filePath, 'utf8');
@@ -36,16 +39,45 @@ const extractFrontMatter = (content) => {
 };
 
 // 整合型转换函数（避免重复处理）
-function convertMarkdownToHtml(markdownContent) {
+async function convertMarkdownToHtml(markdownContent) {
   const { metadata, cleanedContent } = extractFrontMatter(markdownContent);
+  let goodLinksData = {};
+  try {
+    const jsonData = await readDirFile(jsonFilePath);
+    goodLinksData = JSON.parse(jsonData);
+  } catch (error) {
+    console.error(`Error reading or parsing goodlinks.json: ${error.message}`);
+  }
+
+
+  // 构建 goodsinfo 对象
+  let goodsInfo = {};
+  if (metadata.goodsLink) {
+    const targetGood = goodLinksData.find(good => good.showurl === metadata.goodsLink);
+    if (targetGood) {
+      goodsInfo = {
+        name: targetGood.name,
+        link: targetGood.link,
+        picLink: `https://${targetGood.picLink}`, // 追加 https:// 前缀
+        monthSale: targetGood.monthSale,
+        unitprice: targetGood.unitprice,
+        handPrice: targetGood.handPrice,
+        showurl: targetGood.showurl
+      };
+    }
+    else {
+      console.error(` ${metadata.goodsLink} 没有找到该商品信息`);
+    }
+  }
+
 
   return {
     content: converter.makeHtml(cleanedContent),
     meta: {
       title: metadata.title || '无标题',
       description: metadata.description || '',
-      goodsLink: metadata.goodsLink || '',
-      tags: metadata.tags?.filter(Boolean) || [], // 防御性数组处理
+      goodsInfo: goodsInfo, // 替换原有的 goodsLink
+      tags: metadata.tags?.filter(Boolean) || [],
       category: metadata.category || '未分类'
     }
   };
@@ -123,8 +155,8 @@ async function mdToHtml(mdFilesDirectory = 'mdfiles', genhtmlDirectory = 'mdhtml
     for (const fileName of markdownFiles) {
       const mdFilePath = path.join(mdFilesDirectory, fileName);
       let htmlContent;
-      const markdownContent = await readMarkdownFile(mdFilePath);
-      htmlContent = convertMarkdownToHtml(markdownContent);
+      const markdownContent = await readDirFile(mdFilePath);
+      htmlContent = await convertMarkdownToHtml(markdownContent);
       // 生成单独的 .html 文件
       const outputFilePath = path.join(genhtmlDirectory, `${path.basename(fileName, '.md')}.html`);
       await updateHtmlFile(htmlTemplatePath, htmlContent, outputFilePath);
