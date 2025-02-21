@@ -44,6 +44,7 @@ function convertMarkdownToHtml(markdownContent) {
     meta: {
       title: metadata.title || '无标题',
       description: metadata.description || '',
+      goodsLink: metadata.goodsLink || '',
       tags: metadata.tags?.filter(Boolean) || [], // 防御性数组处理
       category: metadata.category || '未分类'
     }

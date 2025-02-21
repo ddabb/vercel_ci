@@ -1,6 +1,7 @@
 ---
 title: "2025年DeepSeek技术解析：从自然语言处理到多模态模型的跨越"
 category: "人工智能"
+goodsLink: https://u.jd.com/8gXbf95
 tags: [DeepSeek, 人工智能, 网站建设]
 ---
 
