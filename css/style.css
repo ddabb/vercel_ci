@@ -510,10 +510,14 @@ button {
     transform: scale(1);
   }
 }
-
+.product-card {
+  position: relative; /* 新增定位基准 */
+}
 /* 移动端优先设计 */
 .product-card .card-img-top {
   height: 220px;
+  width: 100%; /* 新增 */
+  max-width: 100%; /* 新增 */
   object-fit: cover;
   transition: transform 0.3s;
 }
@@ -556,7 +560,7 @@ button {
   content: "限时优惠";
   position: absolute;
   top: 15px;
-  right: -35px;
+  right: -28px; /* 原-35px调整 */
   background: #ff4444;
   color: white;
   padding: 4px 35px;
@@ -570,7 +574,9 @@ button {
   .product-card .card-img-top {
     height: 260px;
   }
-
+  .product-card::after {
+    right: -32px; /* 大屏幕微调 */
+  }
   .product-card .card-title {
     font-size: 1.5rem;
   }
