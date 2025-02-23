@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2025-02-23T13:12:29.275Z",
+    "generatedAt": "2025-02-23T13:51:01.695Z",
     "totalFiles": 234
   },
   "taxonomy": {
@@ -28,7 +28,7 @@
       "人工智能": 20,
       "教育": 3,
       "商业洞察": 2,
-      "社会洞察": 15,
+      "社会洞察": 14,
       "哲学思辨": 2,
       "生理健康": 9,
       "体育": 18,
@@ -40,7 +40,8 @@
       "历史": 2,
       "健康生活": 1,
       "数字科技": 2,
-      "生活": 1
+      "生活": 1,
+      "社会现象": 1
     },
     "tags": {
       "男女情感": 1,
@@ -53,7 +54,7 @@
       "性观念": 1,
       "恋爱时长": 1,
       "情感表达": 4,
-      "婚姻关系": 2,
+      "婚姻关系": 3,
       "性生活缺失": 1,
       "离婚决策": 1,
       "夫妻沟通": 1,
@@ -153,7 +154,7 @@
       "角色定位": 1,
       "性格思维": 1,
       "政治环境": 1,
-      "心理健康": 13,
+      "心理健康": 12,
       "社交支持": 1,
       "健康生活方式": 1,
       "专业帮助": 2,
@@ -475,7 +476,7 @@
       "教育差异": 1,
       "社会变革": 1,
       "政策影响": 1,
-      "性别健康": 5,
+      "性别健康": 4,
       "性生活频率": 1,
       "生理适应": 1,
       "生殖系统健康": 1,
@@ -491,9 +492,11 @@
       "舒适度": 1,
       "误解与信息不足": 1,
       "文化和社会观念": 1,
-      "性生活时间": 1,
-      "性满意度": 1,
-      "沟通理解": 1,
+      "男性性能力": 1,
+      "性时长": 1,
+      "影响性能力因素": 1,
+      "早泄界定": 1,
+      "性生活健康": 1,
       "甲流": 1,
       "发烧": 1,
       "洗澡风险": 1,
@@ -912,8 +915,8 @@
       "政策机制": 1,
       "教育机会": 1,
       "家庭暴力": 1,
-      "个人因素": 1,
-      "法律支持": 1,
+      "男性心理": 1,
+      "法律监管": 1,
       "现代生活压力": 1,
       "社交媒体焦虑": 1,
       "身体健康警示": 1,
@@ -1011,6 +1014,7 @@
       "name": "情侣之间婚前性行为的全面剖析.md",
       "title": "情侣之间婚前性行为的全面剖析",
       "description": "深入探讨情侣之间婚前性行为这一备受关注的话题，分析其在新时代的认知变化，阐述恋爱时长与亲密行为的关系，以及性生活并非情侣关系的唯一表达方式，为情侣们提供关于此问题的思考方向和决策依据。",
+      "goodsLink": "https://u.jd.com/8Oh5ZHB",
       "category": "情感关系",
       "tags": [
         "情侣关系",
@@ -1020,14 +1024,15 @@
         "情感表达"
       ],
       "birthtime": "2025-02-23T13:11:33.644Z",
-      "updateTime": "2025-02-23T13:11:52.027Z",
-      "wordCount": 34,
+      "updateTime": "2025-02-23T13:43:22.330Z",
+      "wordCount": 36,
       "order": 2
     },
     {
       "name": "老公对我不错但性生活缺失是否该离婚.md",
       "title": "老公对我不错但性生活缺失是否该离婚",
       "description": "探讨老公对女方不错但存在性生活缺失的情况下是否应该离婚，分析性生活缺失的原因，提出解决问题的方法，并权衡离婚的利弊，帮助读者做出适合自己的决定。",
+      "goodsLink": "https://u.jd.com/8Oh5ZHB",
       "category": "婚姻情感",
       "tags": [
         "婚姻关系",
@@ -1037,8 +1042,8 @@
         "感情处理"
       ],
       "birthtime": "2025-02-23T13:10:37.619Z",
-      "updateTime": "2025-02-23T13:10:47.459Z",
-      "wordCount": 54,
+      "updateTime": "2025-02-23T13:41:58.495Z",
+      "wordCount": 56,
       "order": 3
     },
     {
@@ -1523,7 +1528,7 @@
       "name": "南辕北辙：一场跨越千年的认知突围.md",
       "title": "南辕北辙：一场跨越千年的认知突围",
       "description": "本文深入探讨了“南辕北辙”这一古老成语在现代社会中的新含义，指出错误方向上的资源投入会带来隐性成本的累积，并强调了多维度思维和动态纠偏机制的重要性。通过分析职场、创业等领域的实例，文章揭示了单一维度方向判断的局限性，提倡利用反共识训练、元认知监控及弹性目标管理等策略来突破传统思维模式，实现个人与组织的认知升级与战略转向。最终，本文鼓励读者在面对不确定性时，应积极探索多元方向，将挑战转化为提升认知能力的机会。",
-      "goodsLink": "https://u.jd.com/81X1rvm",
+      "goodsLink": "https://u.jd.com/8aUc8NV",
       "category": "人文社科",
       "tags": [
         "认知科学",
@@ -1533,7 +1538,7 @@
         "反共识训练"
       ],
       "birthtime": "2025-02-20T03:42:04.866Z",
-      "updateTime": "2025-02-23T08:51:09.192Z",
+      "updateTime": "2025-02-23T13:23:10.375Z",
       "wordCount": 74,
       "order": 32
     },
@@ -2794,20 +2799,21 @@
       "order": 106
     },
     {
-      "name": "男人一般多长时间算是正常的.md",
-      "title": "男人一般多长时间算是正常的",
-      "description": "",
+      "name": "男人性时长：正常范围的深度剖析.md",
+      "title": "男人性时长：正常范围的深度剖析",
+      "description": "深入探讨男性性能力的正常范围，分析影响性能力的多元因素，包括生理、心理和生活习惯等方面，同时介绍早泄的界定及延长性行为时间的策略，帮助男性了解自身性健康，以积极态度面对性生活。",
+      "goodsLink": "https://u.jd.com/8Oh5ZHB",
       "category": "性别与健康",
       "tags": [
-        "性别健康",
-        "性生活时间",
-        "心理健康",
-        "性满意度",
-        "沟通理解"
+        "男性性能力",
+        "性时长",
+        "影响性能力因素",
+        "早泄界定",
+        "性生活健康"
       ],
       "birthtime": "2025-02-10T05:42:21.149Z",
-      "updateTime": "2025-02-21T00:19:03.040Z",
-      "wordCount": 19,
+      "updateTime": "2025-02-23T13:46:07.547Z",
+      "wordCount": 82,
       "order": 107
     },
     {
@@ -3091,7 +3097,7 @@
       "name": "探索未知的宇宙奥秘.md",
       "title": "探索未知的宇宙奥秘",
       "description": "本文探讨了从古至今对死亡的不同理解。古代文明如埃及和中国通过葬礼仪式表达对死后世界的信仰；哲学家们则在灵魂不朽与虚无之间辩论。现代科学尝试解释濒死体验，探索生死界限；而现代社会中，数字纪念和虚拟存在正重新定义死亡的意义。无论是期待轮回还是相信意识上传，人类持续探索将死亡的终点转化为新起点的可能性。",
-      "goodsLink": "https://u.jd.com/81X1rvm",
+      "goodsLink": "https://u.jd.com/8aUc8NV",
       "category": "自然科学",
       "tags": [
         "宇宙探索",
@@ -3100,7 +3106,7 @@
         "天文技术"
       ],
       "birthtime": "2025-02-10T05:42:21.131Z",
-      "updateTime": "2025-02-23T08:50:48.982Z",
+      "updateTime": "2025-02-23T13:23:10.374Z",
       "wordCount": 52,
       "order": 124
     },
@@ -3282,6 +3288,7 @@
       "name": "怎么提高怀孕几率.md",
       "title": "怎么提高怀孕几率",
       "description": "提高怀孕几率的方法包括了解身体周期，如通过基础体温法或排卵试纸监测排卵并在排卵日前后同房。调整生活习惯，均衡饮食补充叶酸，选择适量运动如散步瑜伽，保持愉快心情。进行孕前生育检查，必要时考虑辅助生殖技术。避免过度频繁同房，保持规律作息，长时间尝试未果应及时就医。关键是找到适合自己的方法并保持积极心态。",
+      "goodsLink": "https://u.jd.com/GatIAgz",
       "category": "性别与健康",
       "tags": [
         "排卵监测",
@@ -3291,8 +3298,8 @@
         "辅助生殖技术"
       ],
       "birthtime": "2025-02-10T05:42:21.119Z",
-      "updateTime": "2025-02-21T00:19:03.040Z",
-      "wordCount": 80,
+      "updateTime": "2025-02-23T13:48:38.531Z",
+      "wordCount": 82,
       "order": 135
     },
     {
@@ -4022,6 +4029,7 @@
       "name": "台球高级技巧分享.md",
       "title": "台球高级技巧分享",
       "description": "",
+      "goodsLink": "https://u.jd.com/GOtuN8s",
       "category": "体育",
       "tags": [
         "台球高级技巧",
@@ -4029,8 +4037,8 @@
         "技巧实践"
       ],
       "birthtime": "2025-02-10T05:42:21.078Z",
-      "updateTime": "2025-02-20T08:55:42.270Z",
-      "wordCount": 151,
+      "updateTime": "2025-02-23T13:48:11.920Z",
+      "wordCount": 153,
       "order": 178
     },
     {
@@ -4127,6 +4135,7 @@
       "name": "台球初学者指南.md",
       "title": "台球初学者指南",
       "description": "",
+      "goodsLink": "https://u.jd.com/Ggtw1Gi",
       "category": "体育",
       "tags": [
         "台球技巧",
@@ -4138,8 +4147,8 @@
         "注意事项"
       ],
       "birthtime": "2025-02-10T05:42:21.073Z",
-      "updateTime": "2025-02-20T08:55:42.270Z",
-      "wordCount": 74,
+      "updateTime": "2025-02-23T13:47:24.526Z",
+      "wordCount": 76,
       "order": 184
     },
     {
@@ -4570,18 +4579,19 @@
     },
     {
       "name": "为什么男人会对女人家暴.md",
-      "title": "为什么男人会对女人家暴",
-      "description": "",
-      "category": "社会洞察",
+      "title": "为何男人会对女人家暴",
+      "description": "深入剖析男人对女人家暴的原因，涵盖社会文化根源、个人心理因素、婚姻关系矛盾以及法律意识与监管缺失等多方面，探讨如何解决这一复杂的社会问题。",
+      "category": "社会现象",
       "tags": [
         "家庭暴力",
+        "男性心理",
         "社会文化",
-        "个人因素",
-        "法律支持"
+        "婚姻关系",
+        "法律监管"
       ],
       "birthtime": "2025-02-10T05:42:21.047Z",
-      "updateTime": "2025-02-21T00:20:18.491Z",
-      "wordCount": 72,
+      "updateTime": "2025-02-23T13:50:28.921Z",
+      "wordCount": 25,
       "order": 210
     },
     {
@@ -4857,6 +4867,7 @@
       "name": "一直没性生活的婚姻会怎么样.md",
       "title": "一直没性生活的婚姻会怎么样",
       "description": "",
+      "goodsLink": "https://u.jd.com/8Oh5ZHB",
       "category": "财富管理",
       "tags": [
         "婚姻关系",
@@ -4869,8 +4880,8 @@
         "积极应对"
       ],
       "birthtime": "2025-02-10T05:42:21.029Z",
-      "updateTime": "2025-02-20T09:21:40.243Z",
-      "wordCount": 37,
+      "updateTime": "2025-02-23T13:41:37.012Z",
+      "wordCount": 39,
       "order": 227
     },
     {
@@ -4996,70 +5007,15 @@
   ],
   "goodsLinks": [
     {
-      "name": "动手学深度学习 PyTorch版 李沐和阿斯顿·张等强强联合之作！机器学习、深度学习、AI领域重磅教程！ deepseek机器学习（异步图书出品）",
-      "link": "https://jingfen.jd.com/detail/SYuWnohDt85D3jKC8ZVN53lB_3QWdiz1QctyySYQ7B0.html",
-      "picLink": "img14.360buyimg.com/n0/jfs/t1/57568/3/23228/192432/63db2ffbF904616b1/e47033e148934da9.jpg",
-      "monthSale": "1000",
-      "unitprice": "59.90",
-      "handPrice": "59.90",
-      "showurl": "https://u.jd.com/8gXbf95",
-      "birthtime": "2025-02-21T05:50:25.252Z",
-      "updateTime": "2025-02-21T05:50:25.252Z"
-    },
-    {
-      "name": "中国哲学简史（彩图精装本）哲学家冯友兰畅销七十年的经典 中国哲学入门读物 涂又光翻译",
-      "link": "https://jingfen.jd.com/detail/82IB57cr2YKbEgBmSmqm1DcZ_3klNtUvm52DD82SdtC.html",
-      "picLink": "img14.360buyimg.com/n0/jfs/t1/58943/21/22180/127249/64803ae8F6d0e0316/5ef28ac997a06b2e.jpg",
-      "monthSale": "100",
-      "unitprice": "71.50",
-      "handPrice": "71.50",
-      "showurl": "https://u.jd.com/81XBu2H",
-      "birthtime": "2025-02-21T05:50:25.252Z",
-      "updateTime": "2025-02-21T05:50:25.252Z"
-    },
-    {
-      "name": "枪炮 病菌与钢铁 2022版本 贾雷德戴蒙德著 赠解读本 崩溃 剧变 昨日之前的世界 第三种黑猩猩 中信出版社",
-      "link": "https://jingfen.jd.com/detail/etWalBtBlk3SsqlqxG1d9Ytt_3paYfDqqIlTTet1gQr.html",
-      "picLink": "img14.360buyimg.com/n0/jfs/t1/85104/3/28435/196787/62b91bcdE306c51a6/cc51a0f83bf63d72.jpg",
-      "monthSale": "500",
-      "unitprice": "53.40",
-      "handPrice": "53.40",
-      "showurl": "https://u.jd.com/81X0cCf",
-      "birthtime": "2025-02-21T05:50:25.252Z",
-      "updateTime": "2025-02-21T05:50:25.252Z"
-    },
-    {
-      "name": "全套4册 人类简史+时间简史+相对论+物种起源自然科学启蒙天文学宇宙百科书籍 生物学遗传学自然科学",
-      "link": "https://jingfen.jd.com/detail/uq5161miAPakFCSWqEXaUJKd_3fgGndXpsAOOyFQmm2.html",
-      "picLink": "img14.360buyimg.com/n0/jfs/t1/40021/21/29922/58439/65445044Fff0d9539/9c6b503dc969e613.jpg",
-      "monthSale": "0",
-      "unitprice": "28.80",
-      "handPrice": "28.80",
-      "showurl": "https://u.jd.com/81X1rvm",
-      "birthtime": "2025-02-21T05:50:25.252Z",
-      "updateTime": "2025-02-21T05:50:25.252Z"
-    },
-    {
-      "name": "金钱心理学 全球狂销超300万册，美国亚马逊理财类No.1，你和金钱的关系，决定了财富和你的距离！财务自由指南",
-      "link": "https://jingfen.jd.com/detail/goTyV1rMdbIR56KpMi5nw3wC_3yuxuQosCdQQgospEs.html",
-      "picLink": "img14.360buyimg.com/n0/jfs/t1/98128/26/35155/148724/6479b9a6F28f0eac0/e99e32d25cf5b977.jpg",
+      "name": "【包邮】被讨厌的勇气 自我启发之父阿德勒的哲学课 心理学入门畅销书籍",
+      "link": "https://jingfen.jd.com/detail/JSbI1EiyJnXrmPB4ZZmlRBXV_cIOf4YE6o1Y4JSQ8Hr.html",
+      "picLink": "img14.360buyimg.com/n0/jfs/t1/211627/9/43196/116689/6730b83aF0f649b6d/35e719e16d430a81.jpg",
       "monthSale": "4000",
-      "unitprice": "28.00",
-      "handPrice": "28.00",
-      "showurl": "https://u.jd.com/8OXTVWg",
-      "birthtime": "2025-02-21T05:50:25.252Z",
-      "updateTime": "2025-02-21T05:50:25.252Z"
-    },
-    {
-      "name": "纳瓦尔宝典 财富与幸福指南 纳瓦尔智慧箴言录 巴拉吉预言 埃里克乔根森 著 樊登作序推荐",
-      "link": "https://jingfen.jd.com/detail/qvhHTMNVPepLEz6Xl31Ld8bY_6qw81ZBzwpXwqvC0WJ.html",
-      "picLink": "img14.360buyimg.com/n0/jfs/t1/47246/22/17816/151164/62898f0bEc4dec9c1/8b811c3129fd3eef.jpg",
-      "monthSale": "2000",
-      "unitprice": "43.20",
-      "handPrice": "43.20",
-      "showurl": "https://u.jd.com/86X0pUL",
-      "birthtime": "2025-02-21T05:50:25.252Z",
-      "updateTime": "2025-02-21T05:50:25.252Z"
+      "unitprice": "29.80",
+      "handPrice": "29.80",
+      "showurl": "https://u.jd.com/8gXDFDE",
+      "birthtime": "2025-02-23T13:39:17.701Z",
+      "updateTime": "2025-02-23T13:39:17.701Z"
     },
     {
       "name": "百万畅销书 穷查理宝典 全新口袋本 查理芒格智慧精要 价值投资 人生哲学 人生智慧 巴菲特 芒格之道 伯克希尔公司",
@@ -5069,41 +5025,30 @@
       "unitprice": "47.40",
       "handPrice": "47.40",
       "showurl": "https://u.jd.com/8gXY594",
-      "birthtime": "2025-02-21T05:50:25.252Z",
-      "updateTime": "2025-02-21T05:50:25.252Z"
+      "birthtime": "2025-02-23T13:39:17.701Z",
+      "updateTime": "2025-02-23T13:39:17.701Z"
     },
     {
-      "name": "原则 如何创造出完美独特的自己 百万级畅销书 桥水创始人瑞 达利欧 白手起家的全成功方案 半个金融圈都在读 ",
-      "link": "https://jingfen.jd.com/detail/Q9Z2ZCH4vavAXP8VFVtmiMj5_3SD7M73mavggQ9D0SH.html",
-      "picLink": "img14.360buyimg.com/n0/jfs/t1/103816/34/29119/84199/6284d9ddE55566bc2/5ce0dca008517992.jpg",
+      "name": "动手学深度学习 PyTorch版 李沐和阿斯顿·张等强强联合之作！机器学习、深度学习、AI领域重磅教程！ deepseek机器学习（异步图书出品）",
+      "link": "https://jingfen.jd.com/detail/SYuWnohDt85D3jKC8ZVN53lB_3QWdiz1QctyySYQ7B0.html",
+      "picLink": "img14.360buyimg.com/n0/jfs/t1/57568/3/23228/192432/63db2ffbF904616b1/e47033e148934da9.jpg",
       "monthSale": "1000",
-      "unitprice": "65.30",
-      "handPrice": "65.30",
-      "showurl": "https://u.jd.com/8GXA1KC",
-      "birthtime": "2025-02-21T05:50:25.252Z",
-      "updateTime": "2025-02-21T05:50:25.252Z"
+      "unitprice": "59.90",
+      "handPrice": "59.90",
+      "showurl": "https://u.jd.com/8gXbf95",
+      "birthtime": "2025-02-23T13:39:17.701Z",
+      "updateTime": "2025-02-23T13:39:17.701Z"
     },
     {
-      "name": "【包邮】被讨厌的勇气 自我启发之父阿德勒的哲学课 心理学入门畅销书籍",
-      "link": "https://jingfen.jd.com/detail/JSbI1EiyJnXrmPB4ZZmlRBXV_cIOf4YE6o1Y4JSQ8Hr.html",
-      "picLink": "img14.360buyimg.com/n0/jfs/t1/211627/9/43196/116689/6730b83aF0f649b6d/35e719e16d430a81.jpg",
+      "name": "金钱心理学 全球狂销超300万册，美国亚马逊理财类No.1，你和金钱的关系，决定了财富和你的距离！财务自由指南",
+      "link": "https://jingfen.jd.com/detail/goTyV1rMdbIR56KpMi5nw3wC_3yuxuQosCdQQgospEs.html",
+      "picLink": "img14.360buyimg.com/n0/jfs/t1/98128/26/35155/148724/6479b9a6F28f0eac0/e99e32d25cf5b977.jpg",
       "monthSale": "4000",
-      "unitprice": "29.80",
-      "handPrice": "29.80",
-      "showurl": "https://u.jd.com/8gXDFDE",
-      "birthtime": "2025-02-21T05:50:25.252Z",
-      "updateTime": "2025-02-21T05:50:25.252Z"
-    },
-    {
-      "name": "唐诗三百300首正版全集 注释 译文 中国诗词大全古代古典诗词书籍 中国人财保险承保【假一赔十】 无障碍阅读国学经典：唐诗三百首",
-      "link": "https://jingfen.jd.com/detail/xlfJ15R9UoTIbV5Ekt98roNs_364tk8oMXUYZqjtSkj.html",
-      "picLink": "img14.360buyimg.com/n0/jfs/t1/151375/35/18798/97811/665f127bF65b05381/21fff6c36bf9caac.jpg",
-      "monthSale": "0",
-      "unitprice": "68.90",
-      "handPrice": "38.90",
-      "showurl": "https://u.jd.com/8gXYhrJ",
-      "birthtime": "2025-02-21T05:50:25.252Z",
-      "updateTime": "2025-02-21T05:50:25.252Z"
+      "unitprice": "28.00",
+      "handPrice": "28.00",
+      "showurl": "https://u.jd.com/8OXTVWg",
+      "birthtime": "2025-02-23T13:39:17.701Z",
+      "updateTime": "2025-02-23T13:39:17.701Z"
     },
     {
       "name": "进化心理学：心理的新科学第4版 心理学与认知科学领域经典",
@@ -5113,30 +5058,8 @@
       "unitprice": "69.36",
       "handPrice": "69.36",
       "showurl": "https://u.jd.com/8rUUndF",
-      "birthtime": "2025-02-21T12:24:01.210Z",
-      "updateTime": "2025-02-21T12:24:01.210Z"
-    },
-    {
-      "name": "正念冥想：遇见更好的自己 第3版",
-      "link": "https://jingfen.jd.com/detail/VN26PBTU1qnx6SJZwJu4B65C_3FGg4Cjtl1jjVNtVXb.html",
-      "picLink": "img14.360buyimg.com/n0/jfs/t1/89942/3/43952/38725/65d7068aF2af46eb9/2b3eab352d2e0903.jpg",
-      "monthSale": "100",
-      "unitprice": "69.80",
-      "handPrice": "69.80",
-      "showurl": "https://u.jd.com/8aURIIm",
-      "birthtime": "2025-02-21T12:24:01.210Z",
-      "updateTime": "2025-02-21T12:24:01.210Z"
-    },
-    {
-      "name": "奴诗漫跳杆单跳台球杆跳球杆枫木冲杆分体水晶皮头专业中式台球杆桶套装 利台单跳杆1支",
-      "link": "https://jingfen.jd.com/detail/etWalBtBlk3Q0FLNxGTEzfXt_3paYfDqqIlxyECHbWr.html",
-      "picLink": "img14.360buyimg.com/n0/jfs/t1/157332/22/49053/69221/672b2bceFd5ce1bb7/3855b20a65b7e8b8.jpg",
-      "monthSale": "0",
-      "unitprice": "225.00",
-      "handPrice": "198.00",
-      "showurl": "https://u.jd.com/8rUH9fE",
-      "birthtime": "2025-02-21T12:24:01.210Z",
-      "updateTime": "2025-02-21T12:24:01.210Z"
+      "birthtime": "2025-02-23T13:39:17.701Z",
+      "updateTime": "2025-02-23T13:39:17.701Z"
     },
     {
       "name": "科大讯飞智能办公本Air 2 电纸书阅读器8.2英寸墨水屏 电子书 电子笔记本 语音转文字 搭载讯飞星火大模型 【热卖爆款】智能办公本Air 2",
@@ -5146,52 +5069,41 @@
       "unitprice": "2899.00",
       "handPrice": "2799.00",
       "showurl": "https://u.jd.com/8gUFRVd",
-      "birthtime": "2025-02-21T12:24:01.210Z",
-      "updateTime": "2025-02-21T12:24:01.210Z"
+      "birthtime": "2025-02-23T13:39:17.701Z",
+      "updateTime": "2025-02-23T13:39:17.701Z"
     },
     {
-      "name": "效率红利+认知红利 谢春霖 套装全2册 提升工作效率 职场案头工具书",
-      "link": "https://jingfen.jd.com/detail/3nW3qPGq9U2tUfLkWDdRZrpF_3cvPzVnUx9JJ3ngW8p.html",
-      "picLink": "img14.360buyimg.com/n0/jfs/t1/191316/34/44426/36885/662f40d2F1e4e3054/bbfe2bc3eab4a38b.jpg",
+      "name": "纳瓦尔宝典 财富与幸福指南 纳瓦尔智慧箴言录 巴拉吉预言 埃里克乔根森 著 樊登作序推荐",
+      "link": "https://jingfen.jd.com/detail/qvhHTMNVPepLEz6Xl31Ld8bY_6qw81ZBzwpXwqvC0WJ.html",
+      "picLink": "img14.360buyimg.com/n0/jfs/t1/47246/22/17816/151164/62898f0bEc4dec9c1/8b811c3129fd3eef.jpg",
+      "monthSale": "2000",
+      "unitprice": "43.20",
+      "handPrice": "43.20",
+      "showurl": "https://u.jd.com/86X0pUL",
+      "birthtime": "2025-02-23T13:39:17.701Z",
+      "updateTime": "2025-02-23T13:39:17.701Z"
+    },
+    {
+      "name": "奴诗漫跳杆单跳台球杆跳球杆枫木冲杆分体水晶皮头专业中式台球杆桶套装 利台单跳杆1支",
+      "link": "https://jingfen.jd.com/detail/etWalBtBlk3Q0FLNxGTEzfXt_3paYfDqqIlxyECHbWr.html",
+      "picLink": "img14.360buyimg.com/n0/jfs/t1/157332/22/49053/69221/672b2bceFd5ce1bb7/3855b20a65b7e8b8.jpg",
       "monthSale": "0",
-      "unitprice": "93.20",
-      "handPrice": "93.20",
-      "showurl": "https://u.jd.com/8aURRXN",
-      "birthtime": "2025-02-21T12:24:01.210Z",
-      "updateTime": "2025-02-21T12:24:01.210Z"
-    },
-    {
-      "name": "动手学深度学习 PyTorch版 李沐和阿斯顿·张等强强联合之作！机器学习、深度学习、AI领域重磅教程！ deepseek机器学习（异步图书出品）",
-      "link": "https://jingfen.jd.com/detail/SYuWnohDt85MsayAXZZYwAy7_3QWdiz1QctyySYQ7B0.html",
-      "picLink": "img14.360buyimg.com/n0/jfs/t1/57568/3/23228/192432/63db2ffbF904616b1/e47033e148934da9.jpg",
-      "monthSale": "1000",
-      "unitprice": "59.90",
-      "handPrice": "59.90",
-      "showurl": "https://u.jd.com/81UNiro",
-      "birthtime": "2025-02-21T12:24:01.210Z",
-      "updateTime": "2025-02-21T12:24:01.210Z"
-    },
-    {
-      "name": "中国哲学简史（彩图精装本）哲学家冯友兰畅销七十年的经典 中国哲学入门读物 涂又光翻译",
-      "link": "https://jingfen.jd.com/detail/82IB57cr2YKJwceJrm1HQpX5_3klNtUvm52DD82SdtC.html",
-      "picLink": "img14.360buyimg.com/n0/jfs/t1/58943/21/22180/127249/64803ae8F6d0e0316/5ef28ac997a06b2e.jpg",
-      "monthSale": "100",
-      "unitprice": "71.50",
-      "handPrice": "71.50",
-      "showurl": "https://u.jd.com/81kLekG",
-      "birthtime": "2025-02-21T12:24:01.210Z",
-      "updateTime": "2025-02-21T12:24:01.210Z"
+      "unitprice": "225.00",
+      "handPrice": "198.00",
+      "showurl": "https://u.jd.com/8rUH9fE",
+      "birthtime": "2025-02-23T13:39:17.701Z",
+      "updateTime": "2025-02-23T13:39:17.701Z"
     },
     {
       "name": "枪炮 病菌与钢铁 2022版本 贾雷德戴蒙德著 赠解读本 崩溃 剧变 昨日之前的世界 第三种黑猩猩 中信出版社",
-      "link": "https://jingfen.jd.com/detail/etWalBtBlk3QqXXOlGTi8rTe_3paYfDqqIlTTet1gQr.html",
+      "link": "https://jingfen.jd.com/detail/etWalBtBlk3SsqlqxG1d9Ytt_3paYfDqqIlTTet1gQr.html",
       "picLink": "img14.360buyimg.com/n0/jfs/t1/85104/3/28435/196787/62b91bcdE306c51a6/cc51a0f83bf63d72.jpg",
       "monthSale": "500",
       "unitprice": "53.40",
       "handPrice": "53.40",
-      "showurl": "https://u.jd.com/8aU9H5c",
-      "birthtime": "2025-02-21T12:24:01.210Z",
-      "updateTime": "2025-02-21T12:24:01.210Z"
+      "showurl": "https://u.jd.com/81X0cCf",
+      "birthtime": "2025-02-23T13:39:17.701Z",
+      "updateTime": "2025-02-23T13:39:17.701Z"
     },
     {
       "name": "全套4册 人类简史+时间简史+相对论+物种起源自然科学启蒙天文学宇宙百科书籍 生物学遗传学自然科学",
@@ -5201,74 +5113,129 @@
       "unitprice": "28.80",
       "handPrice": "28.80",
       "showurl": "https://u.jd.com/8aUc8NV",
-      "birthtime": "2025-02-21T12:24:01.210Z",
-      "updateTime": "2025-02-21T12:24:01.210Z"
-    },
-    {
-      "name": "金钱心理学 全球狂销超300万册，美国亚马逊理财类No.1，你和金钱的关系，决定了财富和你的距离！财务自由指南",
-      "link": "https://jingfen.jd.com/detail/goTyV1rMdbIgEK1BoiGWIoHd_3yuxuQosCdQQgospEs.html",
-      "picLink": "img14.360buyimg.com/n0/jfs/t1/98128/26/35155/148724/6479b9a6F28f0eac0/e99e32d25cf5b977.jpg",
-      "monthSale": "4000",
-      "unitprice": "36.40",
-      "handPrice": "36.40",
-      "showurl": "https://u.jd.com/8OUVV2W",
-      "birthtime": "2025-02-21T12:24:01.210Z",
-      "updateTime": "2025-02-21T12:24:01.210Z"
-    },
-    {
-      "name": "纳瓦尔宝典 财富与幸福指南 纳瓦尔智慧箴言录 巴拉吉预言 埃里克乔根森 著 樊登作序推荐",
-      "link": "https://jingfen.jd.com/detail/qvhHTMNVPepuJKZbJ3zQ4GXh_6qw81ZBzwpXwqvC0WJ.html",
-      "picLink": "img14.360buyimg.com/n0/jfs/t1/47246/22/17816/151164/62898f0bEc4dec9c1/8b811c3129fd3eef.jpg",
-      "monthSale": "2000",
-      "unitprice": "42.10",
-      "handPrice": "42.10",
-      "showurl": "https://u.jd.com/8DUVR7v",
-      "birthtime": "2025-02-21T12:24:01.210Z",
-      "updateTime": "2025-02-21T12:24:01.210Z"
-    },
-    {
-      "name": "百万畅销书 穷查理宝典 全新口袋本 查理芒格智慧精要 价值投资 人生哲学 人生智慧 巴菲特 芒格之道 伯克希尔公司",
-      "link": "https://jingfen.jd.com/detail/hpoEHV9LF2bjEcFtdBYQR8hp_3tyFQIkYHFWWhQLIOI.html",
-      "picLink": "img14.360buyimg.com/n0/jfs/t1/259229/4/5984/112839/6773a9f5Fa5fbe96b/ccf3b92415201bed.jpg",
-      "monthSale": "1000",
-      "unitprice": "47.40",
-      "handPrice": "47.40",
-      "showurl": "https://u.jd.com/86UHFfi",
-      "birthtime": "2025-02-21T12:24:01.210Z",
-      "updateTime": "2025-02-21T12:24:01.210Z"
-    },
-    {
-      "name": "原则 如何创造出完美独特的自己 百万级畅销书 桥水创始人瑞 达利欧 白手起家的全成功方案 半个金融圈都在读 ",
-      "link": "https://jingfen.jd.com/detail/Q9Z2ZCH4vav9LQXN9Vobg6vo_3SD7M73mavggQ9D0SH.html",
-      "picLink": "img14.360buyimg.com/n0/jfs/t1/103816/34/29119/84199/6284d9ddE55566bc2/5ce0dca008517992.jpg",
-      "monthSale": "1000",
-      "unitprice": "65.30",
-      "handPrice": "65.30",
-      "showurl": "https://u.jd.com/81UhhSO",
-      "birthtime": "2025-02-21T12:24:01.210Z",
-      "updateTime": "2025-02-21T12:24:01.210Z"
-    },
-    {
-      "name": "【包邮】被讨厌的勇气 自我启发之父阿德勒的哲学课 心理学入门畅销书籍",
-      "link": "https://jingfen.jd.com/detail/JSbI1EiyJnXJUz0ReZA0m0Dh_cIOf4YE6o1Y4JSQ8Hr.html",
-      "picLink": "img14.360buyimg.com/n0/jfs/t1/211627/9/43196/116689/6730b83aF0f649b6d/35e719e16d430a81.jpg",
-      "monthSale": "4000",
-      "unitprice": "29.80",
-      "handPrice": "29.80",
-      "showurl": "https://u.jd.com/81kd9PF",
-      "birthtime": "2025-02-21T12:24:01.210Z",
-      "updateTime": "2025-02-21T12:24:01.210Z"
+      "birthtime": "2025-02-23T13:39:17.701Z",
+      "updateTime": "2025-02-23T13:39:17.701Z"
     },
     {
       "name": "唐诗三百300首正版全集 注释 译文 中国诗词大全古代古典诗词书籍 中国人财保险承保【假一赔十】 无障碍阅读国学经典：唐诗三百首",
-      "link": "https://jingfen.jd.com/detail/xlfJ15R9UoTLZZ27WtJlghit_364tk8oMXUYZqjtSkj.html",
+      "link": "https://jingfen.jd.com/detail/xlfJ15R9UoTIbV5Ekt98roNs_364tk8oMXUYZqjtSkj.html",
       "picLink": "img14.360buyimg.com/n0/jfs/t1/151375/35/18798/97811/665f127bF65b05381/21fff6c36bf9caac.jpg",
       "monthSale": "0",
       "unitprice": "68.90",
       "handPrice": "38.90",
-      "showurl": "https://u.jd.com/8rUj1kK",
-      "birthtime": "2025-02-21T12:24:01.210Z",
-      "updateTime": "2025-02-21T12:24:01.210Z"
+      "showurl": "https://u.jd.com/8gXYhrJ",
+      "birthtime": "2025-02-23T13:39:17.701Z",
+      "updateTime": "2025-02-23T13:39:17.701Z"
+    },
+    {
+      "name": "效率红利+认知红利 谢春霖 套装全2册 提升工作效率 职场案头工具书",
+      "link": "https://jingfen.jd.com/detail/3nW3qPGq9U2tUfLkWDdRZrpF_3cvPzVnUx9JJ3ngW8p.html",
+      "picLink": "img14.360buyimg.com/n0/jfs/t1/191316/34/44426/36885/662f40d2F1e4e3054/bbfe2bc3eab4a38b.jpg",
+      "monthSale": "0",
+      "unitprice": "93.20",
+      "handPrice": "93.20",
+      "showurl": "https://u.jd.com/8aURRXN",
+      "birthtime": "2025-02-23T13:39:17.701Z",
+      "updateTime": "2025-02-23T13:39:17.701Z"
+    },
+    {
+      "name": "原则 如何创造出完美独特的自己 百万级畅销书 桥水创始人瑞 达利欧 白手起家的全成功方案 半个金融圈都在读 ",
+      "link": "https://jingfen.jd.com/detail/Q9Z2ZCH4vavAXP8VFVtmiMj5_3SD7M73mavggQ9D0SH.html",
+      "picLink": "img14.360buyimg.com/n0/jfs/t1/103816/34/29119/84199/6284d9ddE55566bc2/5ce0dca008517992.jpg",
+      "monthSale": "1000",
+      "unitprice": "65.30",
+      "handPrice": "65.30",
+      "showurl": "https://u.jd.com/8GXA1KC",
+      "birthtime": "2025-02-23T13:39:17.701Z",
+      "updateTime": "2025-02-23T13:39:17.701Z"
+    },
+    {
+      "name": "正念冥想：遇见更好的自己 第3版",
+      "link": "https://jingfen.jd.com/detail/VN26PBTU1qnx6SJZwJu4B65C_3FGg4Cjtl1jjVNtVXb.html",
+      "picLink": "img14.360buyimg.com/n0/jfs/t1/89942/3/43952/38725/65d7068aF2af46eb9/2b3eab352d2e0903.jpg",
+      "monthSale": "100",
+      "unitprice": "69.80",
+      "handPrice": "69.80",
+      "showurl": "https://u.jd.com/8aURIIm",
+      "birthtime": "2025-02-23T13:39:17.701Z",
+      "updateTime": "2025-02-23T13:39:17.701Z"
+    },
+    {
+      "name": "中国哲学简史（彩图精装本）哲学家冯友兰畅销七十年的经典 中国哲学入门读物 涂又光翻译",
+      "link": "https://jingfen.jd.com/detail/82IB57cr2YKbEgBmSmqm1DcZ_3klNtUvm52DD82SdtC.html",
+      "picLink": "img14.360buyimg.com/n0/jfs/t1/58943/21/22180/127249/64803ae8F6d0e0316/5ef28ac997a06b2e.jpg",
+      "monthSale": "100",
+      "unitprice": "71.50",
+      "handPrice": "71.50",
+      "showurl": "https://u.jd.com/81XBu2H",
+      "birthtime": "2025-02-23T13:39:17.701Z",
+      "updateTime": "2025-02-23T13:39:17.701Z"
+    },
+    {
+      "name": "PICOOC有品智能体脂秤体重秤充电家用电子秤测人体数据脂肪秤减肥体脂称Mini-C生日礼物礼品送男女友",
+      "link": "https://jingfen.jd.com/detail/VN26PBTU1qnXIREieJUxHxIV_3FGg4Cjtl1jddA54fb.html",
+      "picLink": "img14.360buyimg.com/n0/jfs/t1/153639/16/39744/143127/67a43582Fc8b81d64/62774447a3e048f1.jpg",
+      "monthSale": "1000",
+      "unitprice": "99.00",
+      "handPrice": "74.00",
+      "showurl": "https://u.jd.com/G1tQmGv",
+      "birthtime": "2025-02-23T13:39:17.701Z",
+      "updateTime": "2025-02-23T13:39:17.701Z"
+    },
+    {
+      "name": "星牌（XING PAI）台球杆英式手工杆斯诺克黑八美式桌球杆分体套装小头杆包邮 星牌入门级杆袋套装",
+      "link": "https://jingfen.jd.com/detail/YSr8XbIj0VcjK9frXC37SAU6_391fbKJeZ01Eun9RAV.html",
+      "picLink": "img14.360buyimg.com/n0/jfs/t1/262341/37/22235/76481/67b6ebc9F224b5396/9b648782e15b23b2.jpg",
+      "monthSale": "0",
+      "unitprice": "386.28",
+      "handPrice": "381.28",
+      "showurl": "https://u.jd.com/Ggtw1Gi",
+      "birthtime": "2025-02-23T13:39:17.701Z",
+      "updateTime": "2025-02-23T13:39:17.701Z"
+    },
+    {
+      "name": "奥秘奥秘OMIN康迪精选蓝孔雀会员杆球杆3/4分体斯诺克黑八九球小头杆 一体杆（不可拆卸） 带杆盒套装/小头10mm",
+      "link": "https://jingfen.jd.com/detail/etWalBtBlk3oitRjVGtqE2xU_3paYfDqqIlxa2BixEr.html",
+      "picLink": "img14.360buyimg.com/n0/jfs/t1/112696/25/43050/188647/661ea463Fe0fa95e9/0e29712a1c9a654d.jpg",
+      "monthSale": "0",
+      "unitprice": "560.00",
+      "handPrice": "360.00",
+      "showurl": "https://u.jd.com/GOtuN8s",
+      "birthtime": "2025-02-23T13:39:17.701Z",
+      "updateTime": "2025-02-23T13:39:17.701Z"
+    },
+    {
+      "name": "爱乐维（Elevit）德国版活性叶酸复合维生素90片 备孕-孕早期女士适用",
+      "link": "https://jingfen.jd.com/detail/57A7UrYPuiX8KvaCXxvsXwL0_3jk91roEJuFF578Bxj.html",
+      "picLink": "img14.360buyimg.com/n0/jfs/t1/227323/39/37963/133885/67b71d1cF95561f0f/e2f3be6204ca242d.jpg",
+      "monthSale": "6000",
+      "unitprice": "489.00",
+      "handPrice": "433.00",
+      "showurl": "https://u.jd.com/GatIAgz",
+      "birthtime": "2025-02-23T13:39:17.701Z",
+      "updateTime": "2025-02-23T13:39:17.701Z"
+    },
+    {
+      "name": "杜蕾斯（durex）持久延时避孕套 男专用安全套套12只含赠 苯佐卡因中号情趣用品 【延时NO.1】经典延时10+玻尿酸2",
+      "link": "https://jingfen.jd.com/detail/82IB57cr2YKtOwIHKmzzD4lP_3klNtUvm52DDeBvgrC.html",
+      "picLink": "img14.360buyimg.com/n0/jfs/t1/108152/29/58248/130169/67346891Fe9623bba/f3fd02994ffb4c64.jpg",
+      "monthSale": "8000",
+      "unitprice": "109.90",
+      "handPrice": "60.90",
+      "showurl": "https://u.jd.com/8Oh5ZHB",
+      "birthtime": "2025-02-23T13:39:17.701Z",
+      "updateTime": "2025-02-23T13:39:17.701Z"
+    },
+    {
+      "name": "进化心理学：心理的新科学第4版 心理学与认知科学领域经典",
+      "link": "https://jingfen.jd.com/detail/CGVm8VLgEQyNVuZ9lYjnCg5W_3GHvBWrhCEzzCGDwes.html",
+      "picLink": "img14.360buyimg.com/n0/jfs/t1/160487/34/31186/79037/650124c8F7960e750/e65a2c4b2177f242.jpg",
+      "monthSale": "100",
+      "unitprice": "69.36",
+      "handPrice": "69.36",
+      "showurl": "https://u.jd.com/G6tLEHc",
+      "birthtime": "2025-02-23T13:39:17.701Z",
+      "updateTime": "2025-02-23T13:39:17.701Z"
     }
   ]
 }
