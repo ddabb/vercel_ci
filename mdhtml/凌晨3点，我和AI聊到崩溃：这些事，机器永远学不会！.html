@@ -23,6 +23,7 @@
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" crossorigin="anonymous"></script>
   <script src="../js/clarity.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/widget-qrcode@1.0.4/dist/widget-qrcode.min.js"></script>
 
   <!-- 添加的Schema Markup -->
   <script type="application/ld+json">
@@ -149,6 +150,11 @@
 那上面褪色的字迹、折痕里的眼泪、<br />
 还有永远对不齐的座位号，<br />
 才是爱情最真实的模样。  </p>
+                      <div class="qr-code mt-4">
+                        <h5>扫描二维码查看</h5>
+                        <widget-qrcode id="pageQrCode" template="heart" width="180" height="180"
+                          logo="../logo.png"></widget-qr-code>
+                      </div>
                       <!-- 标签部分 -->
                           
                             <div class="tag-links mt-4">

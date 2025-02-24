@@ -23,6 +23,7 @@
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" crossorigin="anonymous"></script>
   <script src="../js/clarity.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/widget-qrcode@1.0.4/dist/widget-qrcode.min.js"></script>
 
   <!-- 添加的Schema Markup -->
   <script type="application/ld+json">
@@ -168,6 +169,11 @@ $$总成本=固定成本×（1+波动率）^{时间}$$<br />
 <li>每季度评估现有技术栈替代方案  </li>
 <li>年度研发预算中预留15%用于前沿技术实验  </li>
 </ol>
+                      <div class="qr-code mt-4">
+                        <h5>扫描二维码查看</h5>
+                        <widget-qrcode id="pageQrCode" template="heart" width="180" height="180"
+                          logo="../logo.png"></widget-qr-code>
+                      </div>
                       
                         <!-- 商品推广卡片 -->
                         <div class="product-card mt-4">
@@ -178,7 +184,9 @@ $$总成本=固定成本×（1+波动率）^{时间}$$<br />
                             </p>
                             <p>月销量：1000
                             </p>
-                            <p class="card-text">单价：<span class="price-highlight">65.30</span> 元</p>
+                            <p class="card-text">单价：<span class="price-highlight">
+                                65.30
+                              </span> 元</p>
                           </a>
                         </div>
                         <!-- 标签部分 -->

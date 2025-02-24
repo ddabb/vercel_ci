@@ -1,4 +1,10 @@
 function initCommonScripts() {
+
+    var qrCodeWidget = document.getElementById('pageQrCode');
+    if (qrCodeWidget) {
+      // 使用window.location.href获取当前页面的完整URL
+      qrCodeWidget.setAttribute('value', window.location.href);
+    }
     const appid = 'cyxu7ueP4';
     const conf = 'prod_ff4e62d448f38bedc4a1f89a5125ccd0';
     const loadScript = (url, callback) => {

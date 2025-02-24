@@ -23,6 +23,7 @@
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" crossorigin="anonymous"></script>
   <script src="../js/clarity.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/widget-qrcode@1.0.4/dist/widget-qrcode.min.js"></script>
 
   <!-- 添加的Schema Markup -->
   <script type="application/ld+json">
@@ -180,6 +181,11 @@
 <p>提升台球技能是一个持续的过程，需要持之以恒的努力。希望通过上述小贴士，能够帮助你在台球道路上越走越远，享受这项运动带来的乐趣。</p>
 <hr />
 <p>本指南旨在提供一些通用且有效的技巧，帮助你改善台球技巧。记得，实践才是检验真理的唯一标准，所以不要忘了经常练习哦！</p>
+                      <div class="qr-code mt-4">
+                        <h5>扫描二维码查看</h5>
+                        <widget-qrcode id="pageQrCode" template="heart" width="180" height="180"
+                          logo="../logo.png"></widget-qr-code>
+                      </div>
                       
                         <!-- 商品推广卡片 -->
                         <div class="product-card mt-4">
@@ -190,7 +196,9 @@
                             </p>
                             <p>月销量：0
                             </p>
-                            <p class="card-text">单价：<span class="price-highlight">386.28</span> 元</p>
+                            <p class="card-text">单价：<span class="price-highlight">
+                                386.28
+                              </span> 元</p>
                           </a>
                         </div>
                         <!-- 标签部分 -->
