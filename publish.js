@@ -6,8 +6,40 @@ const xlsx = require('xlsx');
 const mdFilesDirectory = path.resolve(__dirname, 'mdfiles');
 const jsonOutputPath = path.resolve(__dirname, 'jsons', 'mdfiles.json');
 const goodsOutputPath = path.resolve(__dirname, 'jsons', 'goodlinks.json');
+
+const NoDescriptionListPath = path.resolve(__dirname, 'jsons', 'NoDescriptionLists.json');
+const TitleAndDescPath = path.resolve(__dirname, 'jsons', 'TitleAndDescPaths.json');
+const GoodUrlsPath = path.resolve(__dirname, 'jsons', 'GoodUrls.json');
 // 假设Excel文件存放在与mdfiles同级的excelFiles目录下
 const excelFilesDirectory = path.resolve(__dirname, 'excelFiles');
+
+
+function prepareCheckData(mdFiles) {
+  // 创建一个映射来存储按类别组织的文章
+  const categoryMap = {};
+
+  mdFiles.forEach(file => {
+    if (!categoryMap[file.category]) {
+      categoryMap[file.category] = [];
+    }
+    
+    categoryMap[file.category].push({
+      title: file.title,
+      description: file.description || "", // 如果没有描述，则提供一个空字符串
+      tags: file.tags ? [...file.tags].sort() : [] // 确保标签存在并是排序后的
+    });
+  });
+
+  // 将分类映射转换为有序数组，并对每类内的文章按标题排序
+  const checkData = Object.keys(categoryMap)
+    .sort() // 先对分类名进行排序
+    .map(category => ({
+      category: category,
+      articles: categoryMap[category].sort((a, b) => a.title.localeCompare(b.title)) // 根据文章标题排序
+    }));
+
+  return checkData;
+}
 
 function readExcelFiles(directory) {
   const goodsLinks = [];
@@ -137,20 +169,25 @@ try {
   const goodsLinks = readExcelFiles(excelFilesDirectory);
 
   // 获取没有描述的文章标题列表和销售映射关系
-const NoDescriptionList = mdFiles.filter(file => !file.description).map(file => file.title);
-const SaleMaps = mdFiles.reduce((acc, file) => {
-  if (file.goodsLink) {
-    const matchedGoods = goodsLinks.find(good => good.showurl === file.goodsLink);
-    if (matchedGoods) {
-      acc.push({
-        title: file.title,
-        goodsLink: file.goodsLink,
-        goodsName: matchedGoods.name
-      });
-    }
-  }
-  return acc;
-}, []);
+  const NoDescriptionList = mdFiles.filter(file => !file.description).map(file => file.title);
+
+
+  // 在处理完mdFiles之后，找到有描述但无商品链接的文章，并保存到TitleAndDescPath
+  const articlesWithTitleAndDesc = mdFiles.filter(file => file.description && !file.goodsLink).map(file => ({
+    title: file.title,
+    description: file.description
+  }));
+
+  fs.writeFileSync(TitleAndDescPath, JSON.stringify(articlesWithTitleAndDesc, null, 2));
+
+  // 提取goodsLinks中的name和showurl字段
+  const goodUrls = goodsLinks.map(good => ({
+    name: good.name,
+    showurl: good.showurl
+  }));
+
+  fs.writeFileSync(GoodUrlsPath, JSON.stringify(goodUrls, null, 2));
+
   // 写入JSON文件
   fs.writeFileSync(jsonOutputPath, JSON.stringify({
     meta: {
@@ -159,13 +196,20 @@ const SaleMaps = mdFiles.reduce((acc, file) => {
     },
     taxonomy,
     files: mdFiles,
-    goodsLinks,
-    NoDescriptionList, // 新增的NoDescriptionList节点
-    SaleMaps // 新增的SaleMaps节点
+    goodsLinks
+
   }, null, 2));
 
-  fs.writeFileSync(goodsOutputPath, JSON.stringify(goodsLinks, null, 2));
+  // 写入JSON文件
+  fs.writeFileSync(NoDescriptionListPath, JSON.stringify(NoDescriptionList, null, 2));
 
+  fs.writeFileSync(goodsOutputPath, JSON.stringify(goodsLinks, null, 2));
+  // 使用准备好的函数生成check.json所需的数据
+  const checkJsonData = prepareCheckData(mdFiles);
+
+  // 写入check.json文件
+  const checkOutputPath = path.resolve(__dirname, 'jsons', 'check.json');
+  fs.writeFileSync(checkOutputPath, JSON.stringify(checkJsonData, null, 2));
   // 确保输出目录存在
   const outputDir = path.resolve(__dirname);
   const tagOutputDir = path.join(outputDir, 'tag');
@@ -217,6 +261,8 @@ const SaleMaps = mdFiles.reduce((acc, file) => {
     fs.writeFileSync(path.join(categoryOutputDir, `${sanitizeFileName(category)}.html`), renderedCategoryPage);
   });
 
+
+  console.log(`✅ 已更新: ${checkOutputPath}`);
   console.log(`✅ 已更新: ${jsonOutputPath}`);
   console.log(`📂 分类统计: ${Object.keys(taxonomy.categories).length}个`);
   console.log(`🏷️ 标签统计: ${Object.keys(taxonomy.tags).length}个`);
