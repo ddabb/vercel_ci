@@ -135,6 +135,22 @@ try {
   };
   // 在写入JSON文件之前调用readExcelFiles函数获取goodsLinks
   const goodsLinks = readExcelFiles(excelFilesDirectory);
+
+  // 获取没有描述的文章标题列表和销售映射关系
+const NoDescriptionList = mdFiles.filter(file => !file.description).map(file => file.title);
+const SaleMaps = mdFiles.reduce((acc, file) => {
+  if (file.goodsLink) {
+    const matchedGoods = goodsLinks.find(good => good.showurl === file.goodsLink);
+    if (matchedGoods) {
+      acc.push({
+        title: file.title,
+        goodsLink: file.goodsLink,
+        goodsName: matchedGoods.name
+      });
+    }
+  }
+  return acc;
+}, []);
   // 写入JSON文件
   fs.writeFileSync(jsonOutputPath, JSON.stringify({
     meta: {
@@ -143,7 +159,9 @@ try {
     },
     taxonomy,
     files: mdFiles,
-    goodsLinks
+    goodsLinks,
+    NoDescriptionList, // 新增的NoDescriptionList节点
+    SaleMaps // 新增的SaleMaps节点
   }, null, 2));
 
   fs.writeFileSync(goodsOutputPath, JSON.stringify(goodsLinks, null, 2));
