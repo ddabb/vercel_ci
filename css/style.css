@@ -61,23 +61,9 @@ body {
   /* 与输入框紧密相连 */
 }
 
-#article-list-md div {
-  display: flex;
-  align-items: center; /* 垂直居中 */
-}
 
-#article-list-md span {
-  background-color: #007bff;
-  color: white;
-  padding: 5px 10px;
-  border-radius: 5px;
-  margin-right: 5px;
-}
 
-#article-list-md a {
-  text-decoration: none;
-  color: black;
-}
+
 
 /* 对话相关样式 */
 .chat-container {
@@ -200,7 +186,7 @@ body {
   padding: 0;
 }
 
-#article-list-md a {
+/* #article-list-md a {
   display: block;
   margin-bottom: 3px;
   padding: 10px;
@@ -210,8 +196,39 @@ body {
   color: #007bff;
   transition: all 0.3s ease;
   border-bottom: 1px solid #eee;
+
+} */
+
+
+#article-list-md div {
+  display: flex;
+  align-items: center; /* 垂直居中 */
+  border: 1px solid #ddd;
+  margin-bottom: 5px; /* 分隔各个文章项 */
+  padding: 5px; /* 容器内的填充 */
+  background: #fff;
+  transition: all 0.3s ease;
 }
 
+#article-list-md span {
+  background-color: #007bff;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+  margin-right: 10px; /* 在分类和文章链接之间增加一些空间 */
+  cursor: pointer;
+}
+
+#article-list-md a {
+  flex-grow: 1; /* 让链接占据剩余的空间 */
+  text-decoration: none;
+  color: #007bff;
+}
+
+/* 当鼠标悬停在容器上时改变背景颜色 */
+#article-list-md div:hover {
+  background-color: #f5f5f5;
+}
 
 /* 分页相关样式 */
 #pagination-md {
