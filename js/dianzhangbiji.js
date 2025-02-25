@@ -18,31 +18,45 @@ document.addEventListener('DOMContentLoaded', function () {
     createPaginationMD(data.currentPage, data.totalPages, data.pageSize);
   }
 
-
   function displayArticlesMD(articles) {
     const articleList = document.getElementById('article-list-md');
     articleList.innerHTML = ''; // 清空旧的文章列表
 
     articles.forEach(article => {
+      // 使用encodeURIComponent对文章名称进行编码
       const encodedArticleName = encodeURIComponent(article.name.replace('.md', '.html'));
-      const categoryText = document.createElement('span'); // 类别文本元素
-      categoryText.textContent = article.category;
-      categoryText.style.cursor = 'pointer'; // 改变鼠标指针形状，暗示可点击性
-      categoryText.onclick = () => {
-        window.location.href = `../category/${encodeURIComponent(article.category)}.html`;
-      };
-
       const link = document.createElement('a');
+      // 构建直接指向mdhtml文件夹中HTML文件的链接
       link.href = `/mdhtml/${encodedArticleName}`;
       link.textContent = article.title || article.name.replace('.md', '');
-
-      const container = document.createElement('div'); // 创建一个容器
-      container.appendChild(categoryText);
-      container.appendChild(link);
-
-      articleList.appendChild(container);
+      articleList.appendChild(link);
     });
   }
+
+  // function displayArticlesMD(articles) {
+  //   const articleList = document.getElementById('article-list-md');
+  //   articleList.innerHTML = ''; // 清空旧的文章列表
+
+  //   articles.forEach(article => {
+  //     const encodedArticleName = encodeURIComponent(article.name.replace('.md', '.html'));
+  //     const categoryText = document.createElement('span'); // 类别文本元素
+  //     categoryText.textContent = article.category;
+  //     categoryText.style.cursor = 'pointer'; // 改变鼠标指针形状，暗示可点击性
+  //     categoryText.onclick = () => {
+  //       window.location.href = `../category/${encodeURIComponent(article.category)}.html`;
+  //     };
+
+  //     const link = document.createElement('a');
+  //     link.href = `/mdhtml/${encodedArticleName}`;
+  //     link.textContent = article.title || article.name.replace('.md', '');
+
+  //     const container = document.createElement('div'); // 创建一个容器
+  //     container.appendChild(categoryText);
+  //     container.appendChild(link);
+
+  //     articleList.appendChild(container);
+  //   });
+  // }
   // 创建分页的函数
   function createPaginationMD(currentPage, totalPages, pageSize) {
     const pagination = document.getElementById('pagination-md');
