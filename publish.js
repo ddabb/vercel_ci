@@ -26,17 +26,26 @@ function prepareCheckData(mdFiles) {
     categoryMap[file.category].push({
       title: file.title,
       description: file.description || "", // 如果没有描述，则提供一个空字符串
-      tags: file.tags ? [...file.tags].sort() : [] // 确保标签存在并是排序后的
+      tags: file.tags ? [...file.tags].sort() : [], // 确保标签存在并是排序后的
+      category: file.category // 添加类别信息
     });
   });
 
-  // 将分类映射转换为有序数组，并对每类内的文章按标题排序
-  const checkData = Object.keys(categoryMap)
-    .sort() // 先对分类名进行排序
-    .map(category => ({
-      category: category,
-      articles: categoryMap[category].sort((a, b) => a.title.localeCompare(b.title)) // 根据文章标题排序
-    }));
+  // 将映射转换为有序数组，并对每类内的文章按标题排序
+  let checkData = Object.keys(categoryMap)
+    .sort() // 对分类名进行排序
+    .reduce((acc, category) => {
+      // 对当前分类中的文章按标题排序后加入结果数组
+      acc.push(...categoryMap[category]
+        .sort((a, b) => a.title.localeCompare(b.title))
+        .map(article => ({
+          title: article.title,
+          description: article.description,
+          category: article.category,
+          tags: article.tags
+        })));
+      return acc;
+    }, []);
 
   return checkData;
 }
