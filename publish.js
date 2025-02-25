@@ -82,20 +82,27 @@ function readExcelFiles(directory) {
   return goodsLinks;
 }
 
-// 提取Front-matter元数据
-function extractFrontMatter(content) {
+// 提取Front-matter元数据并计算字数
+function extractFrontMatterAndCountWords(content) {
   const fmRegex = /^(\uFEFF)?(?:---|\+\+\+)\r?\n([\s\S]*?)\r?\n(?:---|\+\+\+)(?:\s*?$)/m;
   const match = content.match(fmRegex);
-
-  if (!match) return {};
-
-  try {
-    return yaml.load(match[2]); // 捕获组索引变为2
-  } catch (e) {
-    console.warn('YAML解析错误:', e.message);
-    return {};
+  
+  let frontMatter = {};
+  if (match) {
+    try {
+      frontMatter = yaml.load(match[2]); // 捕获组索引变为2
+    } catch (e) {
+      console.warn('YAML解析错误:', e.message);
+    }
   }
+
+  // 计算正文部分的实际字数，忽略所有类型的空白字符
+  const bodyText = content.substring(match ? match[0].length : 0); // 如果没有front matter，则从头开始
+  const wordCount = bodyText.replace(/\s+/g, '').length; // 移除所有空白字符后计算长度
+
+  return { frontMatter, wordCount };
 }
+
 
 
 // 清空指定目录
@@ -141,7 +148,7 @@ try {
       const filePath = path.join(mdFilesDirectory, file.name);
       const stats = fs.statSync(filePath);
       const content = fs.readFileSync(filePath, 'utf8');
-      const frontMatter = extractFrontMatter(content);
+      const { frontMatter, wordCount } = extractFrontMatterAndCountWords(content);
 
       return {
         name: file.name,
@@ -152,7 +159,7 @@ try {
         tags: frontMatter.tags || [],
         birthtime: stats.birthtime,
         updateTime: stats.mtime,
-        wordCount: content.split(/\s+/).length
+        wordCount: wordCount 
       };
     });
 
@@ -167,7 +174,8 @@ try {
   };
   // 在写入JSON文件之前调用readExcelFiles函数获取goodsLinks
   const goodsLinks = readExcelFiles(excelFilesDirectory);
-
+  // 获取没有描述的文章标题列表和销售映射关系
+  const NoDescriptionList = mdFiles.filter(file => !file.description).map(file => file.title);
 
   // 在处理完mdFiles之后，找到有描述但无商品链接的文章，并保存到TitleAndDescPath
   const articlesWithTitleAndDesc = mdFiles.filter(file => file.description && !file.goodsLink).map(file => ({
@@ -196,8 +204,7 @@ try {
     goodsLinks
 
   }, null, 2));
-  // 获取没有描述的文章标题列表和销售映射关系
-  const NoDescriptionList = mdFiles.filter(file => !file.description).map(file => file.title);
+
 
 
   // 写入JSON文件
