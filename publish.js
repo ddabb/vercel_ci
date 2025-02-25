@@ -168,9 +168,6 @@ try {
   // 在写入JSON文件之前调用readExcelFiles函数获取goodsLinks
   const goodsLinks = readExcelFiles(excelFilesDirectory);
 
-  // 获取没有描述的文章标题列表和销售映射关系
-  const NoDescriptionList = mdFiles.filter(file => !file.description).map(file => file.title);
-
 
   // 在处理完mdFiles之后，找到有描述但无商品链接的文章，并保存到TitleAndDescPath
   const articlesWithTitleAndDesc = mdFiles.filter(file => file.description && !file.goodsLink).map(file => ({
@@ -199,6 +196,9 @@ try {
     goodsLinks
 
   }, null, 2));
+  // 获取没有描述的文章标题列表和销售映射关系
+  const NoDescriptionList = mdFiles.filter(file => !file.description).map(file => file.title);
+
 
   // 写入JSON文件
   fs.writeFileSync(NoDescriptionListPath, JSON.stringify(NoDescriptionList, null, 2));
