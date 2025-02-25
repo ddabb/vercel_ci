@@ -24,13 +24,23 @@ document.addEventListener('DOMContentLoaded', function () {
     articleList.innerHTML = ''; // 清空旧的文章列表
 
     articles.forEach(article => {
-      // 使用encodeURIComponent对文章名称进行编码
       const encodedArticleName = encodeURIComponent(article.name.replace('.md', '.html'));
+      const categoryText = document.createElement('span'); // 类别文本元素
+      categoryText.textContent = article.category + ' - ';
+      categoryText.style.cursor = 'pointer'; // 改变鼠标指针形状，暗示可点击性
+      categoryText.onclick = () => {
+        window.location.href = `../category/${encodeURIComponent(article.category)}.html`;
+      };
+
       const link = document.createElement('a');
-      // 构建直接指向mdhtml文件夹中HTML文件的链接
       link.href = `/mdhtml/${encodedArticleName}`;
       link.textContent = article.title || article.name.replace('.md', '');
-      articleList.appendChild(link);
+
+      const container = document.createElement('div'); // 创建一个容器
+      container.appendChild(categoryText);
+      container.appendChild(link);
+
+      articleList.appendChild(container);
     });
   }
   // 创建分页的函数

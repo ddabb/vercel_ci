@@ -61,6 +61,19 @@ body {
   /* 与输入框紧密相连 */
 }
 
+#article-list-md span {
+  background-color: #007bff;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+  margin-right: 5px;
+}
+
+#article-list-md a {
+  text-decoration: none;
+  color: black;
+}
+
 /* 对话相关样式 */
 .chat-container {
   max-width: 800px;
