@@ -211,7 +211,7 @@ body {
 }
 
 #article-list-md span {
-  background-color: #007bff;
+  background-color: #666; /* 灰色 */
   color: white;
   padding: 5px 10px;
   border-radius: 5px;
