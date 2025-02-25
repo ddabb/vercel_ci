@@ -26,7 +26,7 @@ document.addEventListener('DOMContentLoaded', function () {
     articles.forEach(article => {
       const encodedArticleName = encodeURIComponent(article.name.replace('.md', '.html'));
       const categoryText = document.createElement('span'); // 类别文本元素
-      categoryText.textContent = article.category + ' - ';
+      categoryText.textContent = article.category;
       categoryText.style.cursor = 'pointer'; // 改变鼠标指针形状，暗示可点击性
       categoryText.onclick = () => {
         window.location.href = `../category/${encodeURIComponent(article.category)}.html`;
