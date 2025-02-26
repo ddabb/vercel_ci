@@ -9,7 +9,7 @@ const goodsOutputPath = path.resolve(__dirname, 'jsons', 'goodlinks.json');
 
 const NoDescriptionListPath = path.resolve(__dirname, 'jsons', 'NoDescriptionLists.json');
 const TitleAndDescPath = path.resolve(__dirname, 'jsons', 'TitleAndDescPaths.json');
-const GoodUrlsPath = path.resolve(__dirname, 'jsons', 'GoodUrls.json');
+const GoodsPath = path.resolve(__dirname, 'jsons', 'Goods.json');
 // 假设Excel文件存放在与mdfiles同级的excelFiles目录下
 const excelFilesDirectory = path.resolve(__dirname, 'excelFiles');
 
@@ -163,7 +163,7 @@ try {
         name: file.name,
         title: frontMatter.title || path.basename(file.name, '.md'),
         description: frontMatter.description || '',
-        goodsLink: frontMatter.goodsLink,
+        goodsName: frontMatter.goodsName,
         category: frontMatter.category || '未分类',
         tags: frontMatter.tags || [],
         birthtime: stats.birthtime,
@@ -187,7 +187,7 @@ try {
   const NoDescriptionList = mdFiles.filter(file => !file.description).map(file => file.title);
 
   // 在处理完mdFiles之后，找到有描述但无商品链接的文章，并保存到TitleAndDescPath
-  const articlesWithTitleAndDesc = mdFiles.filter(file => file.description && !file.goodsLink).map(file => ({
+  const articlesWithTitleAndDesc = mdFiles.filter(file => file.description && !file.goodsName).map(file => ({
     title: file.title,
     description: file.description
   }));
@@ -195,12 +195,12 @@ try {
   fs.writeFileSync(TitleAndDescPath, JSON.stringify(articlesWithTitleAndDesc, null, 2));
 
   // 提取goodsLinks中的name和showurl字段
-  const goodUrls = goodsLinks.map(good => ({
-    name: good.name,
-    showurl: good.showurl
-  }));
+  const goodUrls = goodsLinks.map(good => (
+  good.name
 
-  fs.writeFileSync(GoodUrlsPath, JSON.stringify(goodUrls, null, 2));
+ ));
+
+  fs.writeFileSync(GoodsPath, JSON.stringify(goodUrls, null, 2));
 
   // 写入JSON文件
   fs.writeFileSync(jsonOutputPath, JSON.stringify({

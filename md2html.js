@@ -6,7 +6,7 @@ const ejs = require('ejs');
 const yaml = require('js-yaml');
 // 新增：引入用于读取JSON文件的fs模块
 const jsonFilePath = path.join(__dirname, 'jsons', 'goodlinks.json');
-
+let notFoundGoodsArticles = [];
 
 const converter = new showdown.Converter();
 
@@ -53,8 +53,8 @@ async function convertMarkdownToHtml(markdownContent,stats) {
 
   // 构建 goodsinfo 对象
   let goodsInfo = {};
-  if (metadata.goodsLink) {
-    const targetGood = goodLinksData.find(good => good.showurl === metadata.goodsLink);
+  if (metadata.goodsName) {
+    const targetGood = goodLinksData.find(good => good.name.trimEnd() === metadata.goodsName.trimEnd());
     if (targetGood) {
       goodsInfo = {
         name: targetGood.name,
@@ -65,9 +65,14 @@ async function convertMarkdownToHtml(markdownContent,stats) {
         handPrice: targetGood.handPrice,
         showurl: targetGood.showurl
       };
-    }
-    else {
-      console.error(` ${metadata.goodsLink} 没有找到该商品信息`);
+    } else {
+      console.error(`没有找到商品信息：${metadata.goodsName}`);
+      // 将找不到商品链接的文章信息添加到notFoundGoodsArticles数组中
+      notFoundGoodsArticles.push({
+        title: metadata.title || '无标题',
+        description: metadata.description || '',
+        goodsName: metadata.goodsName
+      });
     }
   }
 
@@ -164,7 +169,9 @@ async function mdToHtml(mdFilesDirectory = 'mdfiles', genhtmlDirectory = 'mdhtml
       const outputFilePath = path.join(genhtmlDirectory, `${path.basename(fileName, '.md')}.html`);
       await updateHtmlFile(htmlTemplatePath, htmlContent, outputFilePath);
     }
-
+  // 在所有Markdown文件处理完毕后，将找不到商品的文章信息写入NotFindGoods.json
+  const notFindGoodsJsonPath = path.join(__dirname, 'jsons', 'NotFindGoods.json');
+  await fs.writeFile(notFindGoodsJsonPath, JSON.stringify(notFoundGoodsArticles, null, 2));
     console.log('Finished mdToHtml process...:');
   } catch (error) {
     console.error('Error during mdToHtml process:', error);

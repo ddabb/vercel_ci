@@ -1,7 +1,7 @@
 ---
 title: "2025年DeepSeek技术解析：从自然语言处理到多模态模型的跨越"
 category: "人工智能"
-goodsLink: https://u.jd.com/8gXbf95
+goodsName: 动手学深度学习 PyTorch版 李沐和阿斯顿·张等强强联合之作！机器学习、深度学习、AI领域重磅教程！ deepseek机器学习（异步图书出品）
 tags: [DeepSeek, 人工智能, 网站建设]
 description: 介绍2025年DeepSeek技术的最新进展，包括从Transformer架构到混合专家系统的革新、训练优化策略、多模态能力的发展以及在不同领域的应用。DeepSeek通过引入如混合专家系统（MoE）、多头隐式注意力（MLA）等技术显著提升了处理效率和性能，同时在金融、医疗、教育等多个垂直领域实现了高效的应用。此外，DeepSeek正探索具身智能和绿色AI技术，旨在降低算力依赖并提高模型与物理世界的交互能力，预示着AI将向更高效、精准的方向发展。
 ---
