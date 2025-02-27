@@ -19,7 +19,7 @@ document.addEventListener('DOMContentLoaded', function () {
   // 初始化Masonry
   var msnry = new Masonry(grid, {
       itemSelector: '.masonry-grid-item',
-      columnWidth: '.masonry-grid-item',
+      columnWidth: 200,
       gutter: 10
   });
 });
