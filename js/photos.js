@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', function () {
   // 创建图片元素
   var images = [
       {src: 'https://cdn.jsdelivr.net/gh/ddabb/goodpic/img/炉石.jpg', alt: '炉石'},
-      {src: 'https://cdn.jsdelivr.net/gh/ddabb/goodpic/img/台球厅照片.jpg', alt: '台球厅照片'}
+      {src: 'https://cdn.jsdelivr.net/gh/ddabb/goodpic/img/台球厅图片.jpg', alt: '台球厅图片'}
   ];
 
   // 动态添加图片到页面
