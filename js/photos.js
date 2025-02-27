@@ -1,35 +1,27 @@
-document.addEventListener('DOMContentLoaded', () => {
-  const imageModal = document.getElementById('imageModal');
-  const modal = new bootstrap.Modal(imageModal);
+document.addEventListener('DOMContentLoaded', function () {
+  var grid = document.querySelector('#masonry-grid');
+  
+  // 创建图片元素
+  var images = [
+      {src: 'https://cdn.jsdelivr.net/gh/ddabb/goodpic/img/炉石.jpg', alt: '炉石'},
+      {src: 'https://cdn.jsdelivr.net/gh/ddabb/goodpic/img/台球厅照片.jpg', alt: '台球厅照片'}
+  ];
 
-  fetch('/api/images')
-    .then(response => response.json())
-    .then(imagesData => {
-      const photoGrid = document.getElementById('photo-grid');
-      imagesData.forEach(imageData => {
-        const imgElement = document.createElement('img');
-        imgElement.src = imageData.src;
-        imgElement.alt = imageData.alt;
-        imgElement.classList.add('grid-item');
-        imgElement.style.cursor = 'pointer';
+  // 动态添加图片到页面
+  images.forEach(function(image) {
+      var imgElement = document.createElement('img');
+      imgElement.src = image.src;
+      imgElement.alt = image.alt;
+      imgElement.classList.add('masonry-grid-item'); // 添加必要的类名用于Masonry布局
+      grid.appendChild(imgElement);
+  });
 
-        imgElement.addEventListener('click', function () {
-          const modalImage = document.getElementById('modalImage');
-          const modalImageAlt = document.getElementById('modalImageAlt');
-          modalImage.src = imgElement.src;
-          modalImage.alt = imgElement.alt;
-
-          // Remove file extension from alt text
-          const altTextWithoutExtension = removeFileExtension(modalImage.alt);
-          modalImageAlt.textContent = altTextWithoutExtension;
-
-          modal.show();
-        });
-
-        photoGrid.appendChild(imgElement);
-      });
-    })
-    .catch(error => console.error('Error fetching images:', error));
+  // 初始化Masonry
+  var msnry = new Masonry(grid, {
+      itemSelector: '.masonry-grid-item',
+      columnWidth: '.masonry-grid-item',
+      gutter: 10
+  });
 });
 
 function removeFileExtension(text) {
