@@ -1,3 +1,4 @@
+const { execSync } = require('child_process')
 const fs = require('fs');
 const path = require('path');
 const yaml = require('js-yaml');
@@ -283,6 +284,17 @@ try {
   console.log(`📂 分类统计: ${Object.keys(taxonomy.categories).length}个`);
   console.log(`🏷️ 标签统计: ${Object.keys(taxonomy.tags).length}个`);
   console.log('📄 已生成: 标签列表.html, 分类列表.html 及各自的详细页面');
+
+  console.log('\n📄 转换 Markdown 到 HTML...')
+  execSync('node md2html.js', { stdio: 'inherit' })
+
+  console.log('\n📻 生成 RSS 订阅...')
+  execSync('node rss.js', { stdio: 'inherit' })
+
+  console.log('\n🗺️ 生成网站地图...')
+  execSync('node sitemap.js', { stdio: 'inherit' })
+
+  console.log('\n✅ 所有任务已完成！')
 
 
 
