@@ -12,7 +12,8 @@
 
   <!-- PhotoSwipe 图片查看器 -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/5.3.3/photoswipe.min.css">
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/5.3.3/photoswipe.esm.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/5.3.3/umd/photoswipe.umd.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/5.3.3/umd/photoswipe-lightbox.umd.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/5.3.3/photoswipe-lightbox.esm.min.js"></script>
 
   <style>
@@ -135,7 +136,6 @@
                            data-pswp-width="1200" 
                            data-pswp-height="800" 
                            data-cropped="true"
-                           target="_blank"
                            rel="noopener"
                            data-index="${index}">
                             <img src="${img.src}" 
