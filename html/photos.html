@@ -1,116 +1,58 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
-
 <head>
-  <meta name="baidu-site-verification" content="codeva-dM9hHRE36M" />
-  <meta charset="UTF-8">
-  <meta http-equiv="Content-Language" content="zh-CN">
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9093386396178901"
-    crossorigin="anonymous"></script>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>图片集锦 - 龙井、方大城自助台球管家</title>
-  <meta name="keywords" content="无人自助，休闲娱乐">
-  <meta name="description" content="探索自助工具站的相册页面——龙井和方大城地区的自助台球管家。浏览精彩的照片集锦，感受高品质台球设施和优质服务带来的愉悦体验。">
-  <link rel="icon" href="../logo.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="../css/style.css">
-  <link rel="stylesheet" href="../css/footer.css">
-  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
-    crossorigin="anonymous">
-  <script>
-    var _hmt = _hmt || [];
-    (function () {
-      var hm = document.createElement("script");
-      hm.src = "https://hm.baidu.com/hm.js?9375ffd48c244c211aeaa2bd8c047a43";
-      var s = document.getElementsByTagName("script")[0];
-      s.parentNode.insertBefore(hm, s);
-    })();
-  </script>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
-    crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" crossorigin="anonymous"></script>
-  <link rel="stylesheet" href="https://unpkg.com/masonry-layout@4/dist/masonry.min.css">
-  <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
-  <script src="../js/photos.js" defer></script>
-  <script src="../js/clarity.js"></script>
+    <meta charset="UTF-8">
+    <title>我的图集</title>
+    <meta name="description" content="探索我们独特的鼠年艺术作品集合，包括飞天鼠、兵马俑鼠和剪纸鼠等精彩内容。">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/masonry/4.2.2/masonry.pkgd.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-Popup.js/1.1.0/magnific-popup.min.css">
+    <style>
+        .grid-item { width: 200px; margin-bottom: 10px; }
+        .grid-item img { max-width: 100%; height: auto; cursor: pointer; display: block; }
+    </style>
 </head>
-
 <body>
-  <header>
-    <div>
-      <nav class="navbar navbar-light bg-light">
-        <div class="container-fluid">
-          <ul class="navbar-nav d-flex flex-row flex-wrap">
-            <li class="nav-item">
-              <a class="nav-link d-flex align-items-center" href="../html/index.html">
-                <img src="../logo.svg" alt="Logo" style="max-width: 24px;max-height: 24px; margin-right:1px;">
-                自助工具站
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="../html/photos.html">相册</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="../html/dianzhangbiji.html">想法</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="../html/gongzhonghao.html">公众号</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="../html/tools.html">工具</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="../html/games.html">游戏</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="../sghtml/dynasties.html">诗词</a>
-            </li>
-          </ul>
-        </div>
-      </nav>
-    </div>
-  </header>
-  <main class="container-fluid">
-    <!-- Tools Section -->
-    <div class="row mt-5">
-      <div class="col-lg-8 col-md-12 mx-auto">
-        <div class="card mb-4">
-          <div class="card-body">
-            <h1>相册</h1>
-            <div id="masonry-grid"></div> <!-- 图片容器 -->
-          </div>
-        </div>
-      </div>
-    </div>
-  </main>
-  <div class="sticky-footer-container">
-    <footer class="sticky-footer text-center text-lg-start bg-light text-muted">
-      <div class="container text-center py-1">
-        <section>
 
-          <p>
-            <span id="busuanzi_container_page_pv">本页面访问量<span id="busuanzi_value_page_pv"></span>次</span>
-            <a href="../mdhtml/关于我们.html">关于我们</a> |
-            <a href="contactus.html">联系我们</a>
-          </p>
-        </section>
-      </div>
-    </footer>
-  </div>
-  <!-- Modal -->
-  <!-- Modal -->
-  <!-- Image Modal -->
-  <div class="modal fade" id="imageModal" tabindex="-1" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered">
-      <div class="modal-content">
-        <div class="modal-body d-flex flex-column align-items-center">
-          <img id="modalImage" src="" alt="" class="img-fluid">
-          <p id="modalImageAlt" class="image-alt"></p> <!-- 显示alt文本 -->
-        </div>
-      </div>
-    </div>
-  </div>
+<div class="grid">
+    <!-- 动态插入图片 -->
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/masonry/4.2.2/masonry.pkgd.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-Popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
+<script>
+    $(document).ready(function() {
+        var images = [
+            {"src": "https://cdn.jsdelivr.net/gh/ddabb/goodpic/img/飞天鼠.png", "alt": "一只穿着传统服饰的老鼠正在弹奏一把琵琶，背景是色彩斑斓的壁画风格，充满了浓厚的艺术氛围"},
+            {"src": "https://cdn.jsdelivr.net/gh/ddabb/goodpic/img/兵马俑鼠.png", "alt": "兵马俑风格的老鼠雕像，手里拿着竹简，背景是类似兵马俑坑的考古现场，雕像表面有明显的裂纹和风化痕迹"},
+            {"src": "https://cdn.jsdelivr.net/gh/ddabb/goodpic/img/剪纸鼠.png", "alt": "红色剪纸艺术作品，图案中有老鼠和鲤鱼，周围环绕着花卉和吉祥符号，背景为金色，阳光透过剪纸形成美丽光影"}
+        ];
+
+        var grid = $('.grid').masonry({
+            itemSelector: '.grid-item',
+            columnWidth: 200,
+            gutter: 10
+        });
+
+        $.each(images, function(index, image) {
+            var $img = $('<div class="grid-item"><a href="' + image.src + '" title="' + image.alt + '"><img loading="lazy" src="' + image.src + '" alt="' + image.alt + '"></a></div>');
+            grid.append($img).masonry('appended', $img);
+        }).masonry('layout');
+
+        $('.grid').magnificPopup({
+            delegate: 'a',
+            type: 'image',
+            gallery: {
+                enabled: true
+            },
+            image: {
+                titleSrc: function(item) {
+                    return item.el.attr('title') + '<small><a href="' + item.src + '" download>下载图片</a></small>';
+                }
+            }
+        });
+    });
+</script>
+
 </body>
-
 </html>
