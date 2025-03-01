@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="中国传统艺术风格老鼠主题艺术作品展示">
-  <title>传统艺术鼠主题作品集 - 数字艺术展览</title>
+  <title>相册</title>
 
   <!-- Masonry 瀑布流布局 -->
   <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
@@ -26,12 +26,12 @@
     }
 
     /* 瀑布流容器 */
-    .grid {
+    .photogrid {
       column-gap: 20px;
     }
 
     /* 图片项 */
-    .grid-item {
+    .photogrid-item {
       margin-bottom: 20px;
       break-inside: avoid;
       background: white;
@@ -41,7 +41,7 @@
     }
 
     /* 响应式图片 */
-    .grid-item img {
+    .photogrid-item img {
       width: 100%;
       height: auto;
       display: block;
@@ -49,49 +49,19 @@
     }
 
     /* 图片描述 */
-    .caption {
+    .photocaption {
       padding: 12px;
       font-size: 0.9em;
       color: #666;
       line-height: 1.4;
     }
   </style>
-
-  <!-- 结构化数据 -->
-  <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "ImageGallery",
-        "name": "传统艺术鼠主题数字作品集",
-        "description": "展示以中国传统艺术形式创作的老鼠主题数字艺术作品",
-        "image": [
-            {
-                "@type": "ImageObject",
-                "name": "飞天鼠",
-                "description": "敦煌壁画风格老鼠弹奏琵琶数字艺术作品",
-                "contentUrl": "https://cdn.jsdelivr.net/gh/ddabb/goodpic/img/飞天鼠.png"
-            },
-            {
-                "@type": "ImageObject",
-                "name": "兵马俑鼠",
-                "description": "兵马俑考古风格老鼠雕像数字艺术作品",
-                "contentUrl": "https://cdn.jsdelivr.net/gh/ddabb/goodpic/img/兵马俑鼠.png"
-            },
-            {
-                "@type": "ImageObject",
-                "name": "剪纸鼠",
-                "description": "中国传统剪纸风格老鼠与鲤鱼主题数字艺术作品",
-                "contentUrl": "https://cdn.jsdelivr.net/gh/ddabb/goodpic/img/剪纸鼠.png"
-            }
-        ]
-    }
-    </script>
 </head>
 
 <body>
   <h1>传统艺术鼠主题数字作品集</h1>
 
-  <div class="grid" data-masonry='{ "itemSelector": ".grid-item", "columnWidth": 300 }'>
+  <div class="photogrid" data-masonry='{ "itemSelector": ".grid-item", "columnWidth": 300 }'>
     <!-- 图片通过JavaScript动态加载 -->
   </div>
 
@@ -121,7 +91,7 @@
   </div>
 
   <script>
-    const grid = document.querySelector('.grid');
+    const grid = document.querySelector('.photogrid');
     var images = [
       {
         "src": "https://cdn.jsdelivr.net/gh/ddabb/goodpic/img/飞天鼠.png",
@@ -223,7 +193,7 @@
 
     images.forEach((img, index) => {
       const item = document.createElement('div');
-      item.className = 'grid-item';
+      item.className = 'photogrid-item';
       item.innerHTML = `
                         <a href="${img.src}" 
                            data-pswp-width="1200" 
@@ -235,14 +205,14 @@
                                  alt="${img.alt}" 
                                  loading="lazy">
                         </a>
-                        <div class="caption">${img.alt}</div>
+                        <div class="photocaption">${img.alt}</div>
                     `;
       grid.appendChild(item);
     });
 
     // 初始化Masonry
     new Masonry(grid, {
-      itemSelector: '.grid-item',
+      itemSelector: '.photogrid-item',
       columnWidth: 300,
       gutter: 20,
       fitWidth: true
@@ -250,7 +220,7 @@
 
     // 初始化PhotoSwipe
     const lightbox = new PhotoSwipeLightbox({
-      gallery: '.grid',
+      gallery: '.photogrid',
       children: 'a',
       pswpModule: PhotoSwipe,
       arrowPrev: true,
@@ -279,7 +249,7 @@
       });
     });
 
-    lightbox.init();
+
   </script>
 </body>
 
