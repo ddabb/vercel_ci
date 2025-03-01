@@ -120,7 +120,7 @@ images.forEach((img, index) => {
 // 初始化Masonry
 new Masonry(grid, {
   itemSelector: '.photogrid-item',
-  columnWidth: 300,
+  columnWidth: 100,
   gutter: 20,
   fitWidth: true
 });
