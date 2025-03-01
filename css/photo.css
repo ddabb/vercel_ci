@@ -1,0 +1,30 @@
+/* 瀑布流容器 */
+.photogrid {
+    column-gap: 20px;
+}
+
+/* 图片项 */
+.photogrid-item {
+    margin-bottom: 20px;
+    break-inside: avoid;
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* 响应式图片 */
+.photogrid-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+    cursor: zoom-in;
+}
+
+/* 图片描述 */
+.photocaption {
+    padding: 12px;
+    font-size: 0.9em;
+    color: #666;
+    line-height: 1.4;
+}
