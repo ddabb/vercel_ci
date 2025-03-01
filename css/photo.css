@@ -1,30 +1,44 @@
-/* 瀑布流容器 */
 .photogrid {
-    column-gap: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* 每列最小宽度200px，最大占用可用空间 */
+    gap: 20px; /* 图片之间的间距 */
 }
 
-/* 图片项 */
 .photogrid-item {
-    margin-bottom: 20px;
-    break-inside: avoid;
+    margin-bottom: 0; /* 移除底部边距，因为我们使用了gap */
     background: white;
     border-radius: 8px;
     overflow: hidden;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* 响应式图片 */
 .photogrid-item img {
-    width: 100%;
-    height: auto;
+    width: 100%; /* 宽度100%以填充其父元素 */
+    height: auto; /* 高度自适应，保持图片比例 */
     display: block;
     cursor: zoom-in;
 }
 
-/* 图片描述 */
 .photocaption {
     padding: 12px;
     font-size: 0.9em;
     color: #666;
     line-height: 1.4;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    .photogrid {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); /* 调整移动端每列最小宽度 */
+    }
+}
+
+@media (max-width: 480px) {
+    .photogrid {
+        grid-template-columns: repeat(auto-fill, minmax(100px, 1fr)); /* 进一步调整小屏幕设备上的每列最小宽度 */
+    }
+
+    .photocaption {
+        font-size: 0.8em; /* 减少字体大小以适应小屏幕 */
+    }
 }

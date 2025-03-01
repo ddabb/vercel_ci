@@ -116,13 +116,15 @@ images.forEach((img, index) => {
                 `;
   grid.appendChild(item);
 });
+imagesLoaded(grid, function () {
+  // 初始化Masonry
+  new Masonry(grid, {
+    itemSelector: '.photogrid-item',
+    columnWidth: 100,
+    gutter: 20,
+    fitWidth: true
+  });
 
-// 初始化Masonry
-new Masonry(grid, {
-  itemSelector: '.photogrid-item',
-  columnWidth: 100,
-  gutter: 20,
-  fitWidth: true
 });
 
 // 初始化PhotoSwipe
