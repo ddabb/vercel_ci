@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", function () {
       const data = await response.json();
       
       // 假设返回的数据结构为 { items: [{src: "path/to/photo.jpg", alt: "description"}, ...]}
-      const images = data;
+      const images = data.articles;
 
       // 动态创建图片项并添加到grid中
       images.forEach((img, index) => {
