@@ -42,6 +42,7 @@
   <script src="../js/photos.js" defer></script>
   <script src="../js/clarity.js"></script>
 </head>
+
 <body>
   <header>
     <div>
@@ -79,15 +80,12 @@
   </header>
 
   <main class="container-fluid">
-    <div class="row mt-5">
-      <div class="col-lg-8 col-md-12 mx-auto">
-        <div class="card">
-          <div class="card-header">
-            <h1>相册</h1>
-          </div>
+    <div class="row mt-3">
+      <div class="col-lg-10 col-xl-8 mx-auto">
+        <div class="card shadow-sm">
           <div class="card-body">
 
-            <div class="photogrid" data-masonry='{ "itemSelector": ".grid-item", "columnWidth": 300 }'>
+            <div class="photogrid" data-masonry='{ "itemSelector": ".photogrid-item", "columnWidth": 300 }'>
               <!-- 图片通过JavaScript动态加载 -->
             </div>
 
@@ -135,6 +133,6 @@
     </footer>
   </div>
 
-  <script src="../js/qrcode.js"></script>
 </body>
+
 </html>
