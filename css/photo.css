@@ -1,11 +1,10 @@
 .photogrid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* 每列最小宽度200px，最大占用可用空间 */
-    gap: 20px; /* 图片之间的间距 */
+    margin: 0 auto; /* 居中 */
 }
 
 .photogrid-item {
-    margin-bottom: 0; /* 移除底部边距，因为我们使用了gap */
+    width: 200px; /* 设置固定宽度 */
+    margin-bottom: 20px; /* 底部边距，与Masonry的gutter配合 */
     background: white;
     border-radius: 8px;
     overflow: hidden;
@@ -28,14 +27,14 @@
 
 /* 响应式设计 */
 @media (max-width: 768px) {
-    .photogrid {
-        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); /* 调整移动端每列最小宽度 */
+    .photogrid-item {
+        width: 150px; /* 调整移动端每项的宽度 */
     }
 }
 
 @media (max-width: 480px) {
-    .photogrid {
-        grid-template-columns: repeat(auto-fill, minmax(100px, 1fr)); /* 进一步调整小屏幕设备上的每列最小宽度 */
+    .photogrid-item {
+        width: 100px; /* 进一步调整小屏幕设备上的每项宽度 */
     }
 
     .photocaption {
