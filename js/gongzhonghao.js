@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', function () {
   fetchArticlesWeixin(); // 初始化时加载所有文章
 
   async function fetchArticlesWeixin(keyword = '') {
-    const response = await fetch(`/api/articles?calltype=weixin&keyword=${encodeURIComponent(keyword)}`);
+    const response = await fetch(`/api/getjson?calltype=weixin&keyword=${encodeURIComponent(keyword)}`);
     const data = await response.json();
     displayArticlesWeixin(data.articles);
     createPaginationWeixin(data.currentPage, data.totalPages, data.pageSize);
@@ -38,7 +38,7 @@ document.addEventListener('DOMContentLoaded', function () {
       const button = document.createElement('button');
       button.textContent = i;
       button.onclick = () => {
-        fetch(`/api/articles?calltype=weixin&page=${i}&pageSize=${pageSize}`)
+        fetch(`/api/getjson?calltype=weixin&page=${i}&pageSize=${pageSize}`)
           .then(response => response.json())
           .then(data => {
             displayArticlesWeixin(data.articles);

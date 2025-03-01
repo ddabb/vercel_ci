@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', function () {
   fetchArticlesMD(); // 初始化时加载所有文章
 
   async function fetchArticlesMD(keyword = '') {
-    const response = await fetch(`/api/articles?calltype=md&keyword=${encodeURIComponent(keyword)}`);
+    const response = await fetch(`/api/getjson?calltype=md&keyword=${encodeURIComponent(keyword)}`);
     const data = await response.json();
     displayArticlesMD(data.articles);
     createPaginationMD(data.currentPage, data.totalPages, data.pageSize);
@@ -69,7 +69,7 @@ document.addEventListener('DOMContentLoaded', function () {
       const button = document.createElement('button');
       button.textContent = i;
       button.onclick = () => {
-        fetch(`/api/articles?calltype=md&page=${i}&pageSize=${pageSize}`)
+        fetch(`/api/getjson?calltype=md&page=${i}&pageSize=${pageSize}`)
           .then(response => response.json())
           .then(data => {
             displayArticlesMD(data.articles);

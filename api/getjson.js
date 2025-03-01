@@ -55,7 +55,26 @@ export default async function handler(request, response) {
           return article.title.toLowerCase().includes(keyword.toLowerCase());
         });
       }
-    } else {
+    }
+    else if (callType === 'photo') {
+      const data = await new Promise((resolve, reject) => {
+        fs.readFile(path.join(process.cwd(), 'jsons', 'photos.json'), 'utf8', (err, data) => {
+          if (err) {
+            reject(err);
+          } else {
+            resolve(JSON.parse(data));
+          }
+        });
+      });
+
+      articles = data; // 假设您的 JSON 文件中的键名为 "photos"
+
+      // 如果有人提供了关键词，我们就只给他们看包含关键词的照片描述
+      if (keyword) {
+        articles = articles.filter(articles => articles.alt.toLowerCase().includes(keyword.toLowerCase()));
+      }
+    }
+    else {
       return response.status(400).json({ message: 'Invalid calltype provided. Valid values are "md" and "weixin".' });
     }
 
