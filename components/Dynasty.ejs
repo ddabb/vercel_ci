@@ -30,31 +30,31 @@
             s.parentNode.insertBefore(hm, s);
         })();
     </script>
-
-    <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
 </head>
 
 <body>
     <%- include('../components/header.ejs') %>
-
-    <main class="container mt-5">
-        <h1 class="text-center mb-4">朝代诗人清单</h1>
-        <% dynastyPoetList.forEach(dynasty => { %>
-            <div class="dynasty-card card mb-3">
-                <div class="card-header">
-                    <h2 class="mb-0"><%= dynasty.dynasty %></h2>
+        <main class="container mt-5">
+            <h1 class="text-center mb-4">朝代诗人清单</h1>
+            <% dynastyPoetList.forEach(dynasty=> { %>
+                <div class="dynasty-card card mb-3">
+                    <div class="card-header">
+                        <h2 class="mb-0">
+                            <%= dynasty.dynasty %>
+                        </h2>
+                    </div>
+                    <div class="card-body poet-list">
+                        <% dynasty.poets.forEach(poet=> { %>
+                            <div class="poet-item d-inline-block">
+                                <a href="/sghtml/<%= poet.Name %>.html" class="card-link text-dark">
+                                    <%= poet.Name %>
+                                </a>
+                            </div>
+                            <% }) %>
+                    </div>
                 </div>
-                <div class="card-body poet-list" data-masonry='{"percentPosition": true}'>
-                    <% dynasty.poets.forEach(poet => { %>
-                        <div class="poet-item">
-                            <a href="/sghtml/<%= poet.Name %>.html" class="card-link text-dark"><%= poet.Name %></a>
-                        </div>
-                    <% }) %>
-                </div>
-            </div>
-        <% }) %>
-    </main>
-
+                <% }) %>
+        </main>
         <%- include('../components/footer.ejs') %>
 </body>
 
