@@ -4,8 +4,7 @@ document.addEventListener('DOMContentLoaded', function () {
         new Masonry(elem, {
             itemSelector: '.poet-item',
             gutter: 10,
-            fitWidth: true,
-            percentPosition: true // 使用百分比位置计算
+            fitWidth: true
         });
     });
 });
