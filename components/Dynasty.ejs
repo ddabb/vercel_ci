@@ -37,25 +37,28 @@
         <main class="container mt-5">
             <h1 class="text-center mb-4">朝代诗人清单</h1>
             <% dynastyPoetList.forEach(dynasty=> { %>
-                <div class="dynasty-card card mb-3">
-                    <div class="card-header">
-                        <h2 class="mb-0">
+                <div class="col-lg-8 col-md-12 mx-auto">
+                    <div class="card mb-4">
+                        <div class="card-header">
                             <%= dynasty.dynasty %>
-                        </h2>
-                    </div>
-                    <div class="card-body poet-list">
-                        <% dynasty.poets.forEach(poet=> { %>
-                            <div class="poet-item d-inline-block">
-                                <a href="/sghtml/<%= poet.Name %>.html" class="card-link text-dark">
-                                    <%= poet.Name %>
-                                </a>
-                            </div>
-                            <% }) %>
+                        </div>
+                        <div class="card-body poet-list">
+                            <% dynasty.poets.forEach(poet=> { %>
+                                <div class="poet-item d-inline-block">
+                                    <a href="/sghtml/<%= poet.Name %>.html" class="card-link text-dark">
+                                        <%= poet.Name %>
+                                    </a>
+                                </div>
+                                <% }) %>
+                        </div>
                     </div>
                 </div>
                 <% }) %>
         </main>
         <%- include('../components/footer.ejs') %>
+
+
+
 </body>
 
 </html>
