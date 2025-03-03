@@ -1,0 +1,67 @@
+.dynasty-item {
+    margin-bottom: 1.5rem;
+}
+
+.poet-list {
+    margin: -5px;
+    /* 减少项目之间的间距 */
+}
+
+.poet-item {
+    width: 100%;
+    padding: 5px;
+    box-sizing: border-box;
+    background-color: #fff;
+    border-radius: 3px;
+    transition: transform 0.2s ease;
+}
+
+.poet-item a {
+    display: block;
+    padding: 8px;
+    text-align: center;
+    background-color: #e9ecef;
+    border-radius: 3px;
+    color: #343a40;
+    text-decoration: none;
+    white-space: nowrap;
+    /* 防止换行 */
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.poet-item a:hover {
+    background-color: #dee2e6;
+}
+
+@media (min-width: 576px) {
+    .poet-item {
+        width: calc(33.333% - 10px);
+    }
+
+    /* 每行3个 */
+}
+
+@media (min-width: 768px) {
+    .poet-item {
+        width: calc(25% - 10px);
+    }
+
+    /* 每行4个 */
+}
+
+@media (min-width: 992px) {
+    .poet-item {
+        width: calc(20% - 10px);
+    }
+
+    /* 每行5个 */
+}
+
+@media (min-width: 1200px) {
+    .poet-item {
+        width: calc(16.666% - 10px);
+    }
+
+    /* 每行6个 */
+}
