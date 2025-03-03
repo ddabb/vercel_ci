@@ -37,25 +37,23 @@
 <body>
     <%- include('../components/header.ejs') %>
 
-        <main class="container mt-5">
-            <h1 class="text-center mb-4">朝代诗人清单</h1>
-            <% dynastyPoetList.forEach(dynasty=> { %>
-                <div class="dynasty-item">
-                    <h2 class="text-secondary">
-                        <%= dynasty.dynasty %>
-                    </h2>
-                    <div class="poet-list row">
-                        <% dynasty.poets.forEach(poet=> { %>
-                            <div class="poet-item col">
-                                <a href="/sghtml/<%= poet.Name %>.html" class="card-link text-dark">
-                                    <%= poet.Name %>
-                                </a>
-                            </div>
-                            <% }) %>
-                    </div>
+    <main class="container mt-5">
+        <h1 class="text-center mb-4">朝代诗人清单</h1>
+        <% dynastyPoetList.forEach(dynasty => { %>
+            <div class="dynasty-card card mb-3">
+                <div class="card-header">
+                    <h2 class="mb-0"><%= dynasty.dynasty %></h2>
                 </div>
-                <% }) %>
-        </main>
+                <div class="card-body poet-list" data-masonry='{"percentPosition": true}'>
+                    <% dynasty.poets.forEach(poet => { %>
+                        <div class="poet-item">
+                            <a href="/sghtml/<%= poet.Name %>.html" class="card-link text-dark"><%= poet.Name %></a>
+                        </div>
+                    <% }) %>
+                </div>
+            </div>
+        <% }) %>
+    </main>
 
         <%- include('../components/footer.ejs') %>
 </body>
