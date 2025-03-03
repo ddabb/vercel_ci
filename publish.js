@@ -294,6 +294,8 @@ try {
   console.log('\n🗺️ 生成网站地图...')
   execSync('node sitemap.js', { stdio: 'inherit' })
 
+  console.log('\n🗺️ 进行SEO检查...')
+  execSync('node seocheck.js', { stdio: 'inherit' })
   console.log('\n✅ 所有任务已完成！')
 
 
