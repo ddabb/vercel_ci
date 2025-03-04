@@ -296,6 +296,9 @@ try {
 
   console.log('\n🗺️ 进行SEO检查...')
   execSync('node seocheck.js', { stdio: 'inherit' })
+
+  console.log('\n🗺️ 正在生产网站Url...')
+  execSync('node biying.js', { stdio: 'inherit' })
   console.log('\n✅ 所有任务已完成！')
 
 
