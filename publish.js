@@ -241,7 +241,7 @@ try {
 
   // 将工作表添加到工作簿并保存为 XLSX 文件
   xlsx.utils.book_append_sheet(workbook, worksheet, 'Check');
-  const checkOutputXlsxPath = path.resolve(__dirname, 'check.xlsx');
+  const checkOutputXlsxPath = path.resolve(__dirname, '文章信息.xlsx');
 
   try {
     xlsx.writeFile(workbook, checkOutputXlsxPath);
