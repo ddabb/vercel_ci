@@ -414,7 +414,6 @@ https://www.60score.com/tag/专注力.html
 https://www.60score.com/tag/专注力提升.html
 https://www.60score.com/tag/世界台球锦标赛.html
 https://www.60score.com/tag/世界和平.html
-https://www.60score.com/tag/世界怪史.html
 https://www.60score.com/tag/个人价值.html
 https://www.60score.com/tag/个人价值观.html
 https://www.60score.com/tag/个人信息管理.html
@@ -645,6 +644,7 @@ https://www.60score.com/tag/台球历史.html
 https://www.60score.com/tag/台球店经营.html
 https://www.60score.com/tag/台球技巧.html
 https://www.60score.com/tag/台球技能提升.html
+https://www.60score.com/tag/台球政策.html
 https://www.60score.com/tag/台球文化.html
 https://www.60score.com/tag/台球物理学.html
 https://www.60score.com/tag/台球种类.html
@@ -707,6 +707,7 @@ https://www.60score.com/tag/多元宇宙.html
 https://www.60score.com/tag/多元布局.html
 https://www.60score.com/tag/多元美学.html
 https://www.60score.com/tag/多态性.html
+https://www.60score.com/tag/多模态技术.html
 https://www.60score.com/tag/多维思维.html
 https://www.60score.com/tag/多语言SEO优化.html
 https://www.60score.com/tag/多领域融合.html
@@ -1230,7 +1231,6 @@ https://www.60score.com/tag/生态竞争.html
 https://www.60score.com/tag/生态系统崩溃.html
 https://www.60score.com/tag/生死认知.html
 https://www.60score.com/tag/生殖系统健康.html
-https://www.60score.com/tag/生活中的经济学.html
 https://www.60score.com/tag/生活便利.html
 https://www.60score.com/tag/生活变化.html
 https://www.60score.com/tag/生活品质.html
@@ -1394,7 +1394,6 @@ https://www.60score.com/tag/系统升级.html
 https://www.60score.com/tag/组织凝聚力.html
 https://www.60score.com/tag/细胞治疗.html
 https://www.60score.com/tag/终身学习.html
-https://www.60score.com/tag/经典名著.html
 https://www.60score.com/tag/经济全球化.html
 https://www.60score.com/tag/经济公平.html
 https://www.60score.com/tag/经济变革.html
@@ -1404,6 +1403,7 @@ https://www.60score.com/tag/经济学应用.html
 https://www.60score.com/tag/经济学思维.html
 https://www.60score.com/tag/经济差距.html
 https://www.60score.com/tag/经济独立.html
+https://www.60score.com/tag/经济读物.html
 https://www.60score.com/tag/经济趋势.html
 https://www.60score.com/tag/经验依赖症.html
 https://www.60score.com/tag/经验教训.html
@@ -1414,7 +1414,6 @@ https://www.60score.com/tag/续集困境.html
 https://www.60score.com/tag/维生素.html
 https://www.60score.com/tag/绿色金融.html
 https://www.60score.com/tag/编程基础.html
-https://www.60score.com/tag/网站建设.html
 https://www.60score.com/tag/网络安全.html
 https://www.60score.com/tag/美国9球公开赛.html
 https://www.60score.com/tag/群体智能.html
