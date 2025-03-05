@@ -1,20 +1,13 @@
 const { execSync } = require('child_process')
 const fs = require('fs');
+const xlsx = require('xlsx');
 const path = require('path');
 const yaml = require('js-yaml');
 const ejs = require('ejs');
-const xlsx = require('xlsx');
 const mdFilesDirectory = path.resolve(__dirname, 'mdfiles');
 const jsonOutputPath = path.resolve(__dirname, 'jsons', 'mdfiles.json');
-const goodsOutputPath = path.resolve(__dirname, 'jsons', 'goodlinks.json');
-
 const NoDescriptionListPath = path.resolve(__dirname, 'jsons', 'NoDescriptionLists.json');
 const TitleAndDescPath = path.resolve(__dirname, 'jsons', 'TitleAndDescPaths.json');
-const GoodsPath = path.resolve(__dirname, 'jsons', 'Goods.json');
-// 假设Excel文件存放在与mdfiles同级的excelFiles目录下
-const excelFilesDirectory = path.resolve(__dirname, 'excelFiles');
-
-
 function prepareCheckData(mdFiles) {
   // 创建一个映射来存储按类别组织的文章
   const categoryMap = {};
@@ -23,7 +16,7 @@ function prepareCheckData(mdFiles) {
     if (!categoryMap[file.category]) {
       categoryMap[file.category] = [];
     }
-    
+
     categoryMap[file.category].push({
       title: file.title,
       description: file.description || "", // 如果没有描述，则提供一个空字符串
@@ -51,52 +44,11 @@ function prepareCheckData(mdFiles) {
   return checkData;
 }
 
-function readExcelFiles(directory) {
-  const goodsLinks = [];
-
-  if (fs.existsSync(directory)) {
-    const files = fs.readdirSync(directory);
-
-    files.forEach(file => {
-      const filePath = path.join(directory, file);
-
-      if (path.extname(file).toLowerCase() === '.xlsx') {
-        const workbook = xlsx.readFile(filePath);
-        const stats = fs.statSync(filePath);
-        const sheetNames = workbook.SheetNames;
-
-        sheetNames.forEach(sheetName => {
-          const data = xlsx.utils.sheet_to_json(workbook.Sheets[sheetName]);
-
-          // 假设Excel中的链接在'Link'列，如果有不同的结构，请根据实际情况调整
-          data.forEach(row => {
-            if (row.商品名称) { // 确保行中有链接
-              goodsLinks.push({
-                name: row.商品名称 || '未知名称', // 如果有商品名称字段则使用，否则默认值
-                link: row.商品详情页URL,
-                picLink: row.商品主图链接,
-                monthSale: row.月销,
-                unitprice: row.单价, //京东价
-                handPrice: row.到手价, //到手价      
-                showurl: row.联盟推广链接,
-                birthtime: stats.birthtime,
-                updateTime: stats.mtime,
-              });
-            }
-          });
-        });
-      }
-    });
-  }
-
-  return goodsLinks;
-}
-
 // 提取Front-matter元数据并计算字数
 function extractFrontMatterAndCountWords(content) {
   const fmRegex = /^(\uFEFF)?(?:---|\+\+\+)\r?\n([\s\S]*?)\r?\n(?:---|\+\+\+)(?:\s*?$)/m;
   const match = content.match(fmRegex);
-  
+
   let frontMatter = {};
   if (match) {
     try {
@@ -109,7 +61,6 @@ function extractFrontMatterAndCountWords(content) {
   // 计算正文部分的实际字数，忽略所有类型的空白字符
   const bodyText = content.substring(match ? match[0].length : 0); // 如果没有front matter，则从头开始
   const wordCount = bodyText.replace(/\s+/g, '').length; // 移除所有空白字符后计算长度
-
   return { frontMatter, wordCount };
 }
 
@@ -169,21 +120,18 @@ try {
         tags: frontMatter.tags || [],
         birthtime: stats.birthtime,
         updateTime: stats.mtime,
-        wordCount: wordCount 
+        wordCount: wordCount
       };
     });
 
   // 按创建时间排序
   mdFiles.sort((a, b) => b.birthtime - a.birthtime);
   mdFiles.forEach((file, index) => file.order = index + 1);
-
   // 生成统计数据
   const taxonomy = {
     categories: generateTaxonomy(mdFiles, 'category'),
     tags: generateTaxonomy(mdFiles, 'tags')
   };
-  // 在写入JSON文件之前调用readExcelFiles函数获取goodsLinks
-  const goodsLinks = readExcelFiles(excelFilesDirectory);
   // 获取没有描述的文章标题列表和销售映射关系
   const NoDescriptionList = mdFiles.filter(file => !file.description).map(file => file.title);
 
@@ -195,14 +143,6 @@ try {
 
   fs.writeFileSync(TitleAndDescPath, JSON.stringify(articlesWithTitleAndDesc, null, 2));
 
-  // 提取goodsLinks中的name和showurl字段
-  const goodUrls = goodsLinks.map(good => (
-  good.name
-
- ));
-
-  fs.writeFileSync(GoodsPath, JSON.stringify(goodUrls, null, 2));
-
   // 写入JSON文件
   fs.writeFileSync(jsonOutputPath, JSON.stringify({
     meta: {
@@ -210,17 +150,12 @@ try {
       totalFiles: mdFiles.length
     },
     taxonomy,
-    files: mdFiles,
-    goodsLinks
-
+    files: mdFiles
   }, null, 2));
-
-
 
   // 写入JSON文件
   fs.writeFileSync(NoDescriptionListPath, JSON.stringify(NoDescriptionList, null, 2));
 
-  fs.writeFileSync(goodsOutputPath, JSON.stringify(goodsLinks, null, 2));
   // 使用准备好的函数生成check.json所需的数据
   const checkJsonData = prepareCheckData(mdFiles);
 
@@ -277,7 +212,43 @@ try {
     let renderedCategoryPage = ejs.render(categoryTemplate, { category, articles: articlesInCategory, headerContent, footerContent });
     fs.writeFileSync(path.join(categoryOutputDir, `${sanitizeFileName(category)}.html`), renderedCategoryPage);
   });
+  // 创建一个新的工作簿和工作表
+  const workbook = xlsx.utils.book_new();
+  const worksheetData = checkJsonData.map(item => {
+    // 空值处理：确保每个属性都有一个默认值（例如空字符串）
+    const title = item.title ? item.title : '';
+    const category = item.category ? item.category : '未分类';
+    const description = item.description !== undefined ? item.description : '';
+    const tags = item.tags && Array.isArray(item.tags) ? item.tags.join(', ') : ''; // 如果tags不存在或不是数组，则返回空字符串
 
+    return {
+      '文章名': title,
+      '分类': category,
+      '描述': description,
+      '标签': tags
+    };
+  });
+
+  const worksheet = xlsx.utils.json_to_sheet(worksheetData);
+
+  // 设置列宽
+  worksheet['!cols'] = [
+    { wch: 40 }, // 文章名宽度
+    { wch: 20 }, // 分类宽度
+    { wch: 50 }, // 描述宽度
+    { wch: 30 }  // 标签宽度
+  ];
+
+  // 将工作表添加到工作簿并保存为 XLSX 文件
+  xlsx.utils.book_append_sheet(workbook, worksheet, 'Check');
+  const checkOutputXlsxPath = path.resolve(__dirname, 'check.xlsx');
+
+  try {
+    xlsx.writeFile(workbook, checkOutputXlsxPath);
+    console.log(`✅ 已更新: ${checkOutputXlsxPath}`);
+  } catch (error) {
+    console.error('❌ 生成 Excel 文件失败:', error.message);
+  }
 
   console.log(`✅ 已更新: ${checkOutputPath}`);
   console.log(`✅ 已更新: ${jsonOutputPath}`);
@@ -293,6 +264,8 @@ try {
 
   console.log('\n🗺️ 生成网站地图...')
   execSync('node sitemap.js', { stdio: 'inherit' })
+  console.log('\n🗺️ 生产商品信息的json文件')
+  execSync('node readExcel.js', { stdio: 'inherit' })
 
   console.log('\n🗺️ 进行SEO检查...')
   execSync('node seocheck.js', { stdio: 'inherit' })
