@@ -435,7 +435,6 @@ https://www.60score.com/tag/个体觉醒.html
 https://www.60score.com/tag/个性化学习.html
 https://www.60score.com/tag/个性化治疗.html
 https://www.60score.com/tag/中产阶级.html
-https://www.60score.com/tag/中国公开赛.html
 https://www.60score.com/tag/中小企业.html
 https://www.60score.com/tag/中年出差.html
 https://www.60score.com/tag/中年男人.html
@@ -651,6 +650,7 @@ https://www.60score.com/tag/台球物理学.html
 https://www.60score.com/tag/台球种类.html
 https://www.60score.com/tag/台球设备.html
 https://www.60score.com/tag/台球设备评测.html
+https://www.60score.com/tag/台球赛事.html
 https://www.60score.com/tag/台球馆信息.html
 https://www.60score.com/tag/台球高级技巧.html
 https://www.60score.com/tag/司法人性化.html
@@ -1053,7 +1053,6 @@ https://www.60score.com/tag/文明进化.html
 https://www.60score.com/tag/文明重构.html
 https://www.60score.com/tag/斗地主.html
 https://www.60score.com/tag/斯诺克.html
-https://www.60score.com/tag/斯诺克大师赛.html
 https://www.60score.com/tag/新offer.html
 https://www.60score.com/tag/新兴技术.html
 https://www.60score.com/tag/新思维.html
@@ -1489,7 +1488,6 @@ https://www.60score.com/tag/舒适区.html
 https://www.60score.com/tag/舒适度.html
 https://www.60score.com/tag/艺术创作.html
 https://www.60score.com/tag/节后收心.html
-https://www.60score.com/tag/英国锦标赛.html
 https://www.60score.com/tag/英式台球.html
 https://www.60score.com/tag/药膳滋补.html
 https://www.60score.com/tag/营业时间.html
@@ -1578,7 +1576,6 @@ https://www.60score.com/tag/距离把控.html
 https://www.60score.com/tag/跨国恋情.html
 https://www.60score.com/tag/跨境内容营销.html
 https://www.60score.com/tag/跨界能力.html
-https://www.60score.com/tag/跨界融合.html
 https://www.60score.com/tag/路径依赖.html
 https://www.60score.com/tag/路径锁定.html
 https://www.60score.com/tag/踢猫效应.html
@@ -1649,6 +1646,7 @@ https://www.60score.com/tag/非对称竞争.html
 https://www.60score.com/tag/非撞击假说.html
 https://www.60score.com/tag/非暴力沟通.html
 https://www.60score.com/tag/非洲文化.html
+https://www.60score.com/tag/非遗保护.html
 https://www.60score.com/tag/面向对象编程.html
 https://www.60score.com/tag/顺手牵羊.html
 https://www.60score.com/tag/顾客管理.html
