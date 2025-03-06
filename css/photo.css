@@ -32,6 +32,13 @@
 
 /* 响应式设计 */
 @media (max-width: 768px) {
+    .photogrid {
+        width: 100% !important;
+        /* 确保它占据整个可用宽度 */
+        margin: 0 auto;
+        /* 居中 */
+    }
+
     .photogrid-item {
         width: 150px;
         /* 调整移动端每项的宽度 */
@@ -39,6 +46,13 @@
 }
 
 @media (max-width: 480px) {
+    .photogrid {
+        width: 100% !important;
+        /* 确保它占据整个可用宽度 */
+        margin: 0 auto;
+        /* 居中 */
+    }
+
     .photogrid-item {
         width: 100px;
         /* 进一步调整小屏幕设备上的每项宽度 */
