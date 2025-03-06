@@ -32,12 +32,12 @@ document.addEventListener("DOMContentLoaded", function () {
         `;
         grid.appendChild(item);
       });
-
+      const columnWidth = window.innerWidth > 768 ? 200 : 'auto'; // 或者选择一个适合移动设备的固定值
       // 确保所有图片加载完毕后再初始化Masonry
       imagesLoaded(grid, function () {
         new Masonry(grid, {
           itemSelector: '.photogrid-item',
-          columnWidth: 200,
+          columnWidth: columnWidth,
           gutter: 20,
           fitWidth: true
         });
