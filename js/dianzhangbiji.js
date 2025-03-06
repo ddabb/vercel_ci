@@ -86,12 +86,12 @@ document.addEventListener('DOMContentLoaded', function () {
   
     // 首页按钮
     if (currentPage > 1) {
-      addButton(pagination, 1, '首页', () => fetchAndDisplayArticles(1));
+      addButton(pagination, 1, '首页', () => fetchAndDisplayArticles(1, pageSize));
     }
   
     // 上一页按钮
     if (currentPage > 1) {
-      addButton(pagination, currentPage - 1, '上一页', () => fetchAndDisplayArticles(currentPage - 1));
+      addButton(pagination, currentPage - 1, '上一页', () => fetchAndDisplayArticles(currentPage - 1, pageSize));
     }
   
     // 如果startPage不是1，则添加...
@@ -100,7 +100,7 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   
     for (let i = startPage; i <= endPage; i++) {
-      addButton(pagination, i, i.toString(), () => fetchAndDisplayArticles(i), i === currentPage);
+      addButton(pagination, i, i.toString(), () => fetchAndDisplayArticles(i, pageSize), i === currentPage);
     }
   
     // 如果endPage不是totalPages，则添加...
@@ -110,12 +110,12 @@ document.addEventListener('DOMContentLoaded', function () {
   
     // 下一页按钮
     if (currentPage < totalPages) {
-      addButton(pagination, currentPage + 1, '下一页', () => fetchAndDisplayArticles(currentPage + 1));
+      addButton(pagination, currentPage + 1, '下一页', () => fetchAndDisplayArticles(currentPage + 1, pageSize));
     }
   
     // 末页按钮
     if (currentPage < totalPages) {
-      addButton(pagination, totalPages, '末页', () => fetchAndDisplayArticles(totalPages));
+      addButton(pagination, totalPages, '末页', () => fetchAndDisplayArticles(totalPages, pageSize));
     }
   }
   
@@ -133,7 +133,7 @@ document.addEventListener('DOMContentLoaded', function () {
   }
   
   // 确保在点击分页按钮时正确获取并展示文章
-  function fetchAndDisplayArticles(page) {
+  function fetchAndDisplayArticles(page, pageSize) {
     fetch(`/api/getjson?calltype=md&page=${page}&pageSize=${encodeURIComponent(pageSize)}`)
       .then(response => response.json())
       .then(data => {
