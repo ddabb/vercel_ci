@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', function () {
     // 检查是否按下了回车键
     if (event.key === 'Enter' || event.keyCode === 13) {
       // 执行与点击 "找找看" 按钮相同的操作
-      searchButton.click();
+      searchButtonMD.click();
     }
   });
 
