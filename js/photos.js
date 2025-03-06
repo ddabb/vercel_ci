@@ -17,6 +17,18 @@ document.addEventListener("DOMContentLoaded", function () {
       images.forEach((img, index) => {
         const item = document.createElement('div');
         item.className = 'photogrid-item';
+        
+        // 创建图片元素
+        const imgElement = document.createElement('img');
+        imgElement.src = img.src;
+        imgElement.alt = img.alt;
+        imgElement.loading = "lazy";
+        
+        // 当图片加载失败时，移除该项
+        imgElement.onerror = () => {
+          grid.removeChild(item); // 或者使用 item.style.display = 'none'; 来隐藏它
+        };
+
         item.innerHTML = `
           <a href="${img.src}" 
              data-pswp-width="1200" 
@@ -24,14 +36,13 @@ document.addEventListener("DOMContentLoaded", function () {
              data-cropped="true"
              rel="noopener"
              data-index="${index}">
-              <img src="${img.src}" 
-                   alt="${img.alt}" 
-                   loading="lazy">
+              ${imgElement.outerHTML}
           </a>
           <div class="photocaption">${img.alt}</div>
         `;
         grid.appendChild(item);
       });
+
       const columnWidth = window.innerWidth > 768 ? 200 : 'auto'; // 或者选择一个适合移动设备的固定值
       // 确保所有图片加载完毕后再初始化Masonry
       imagesLoaded(grid, function () {
