@@ -32,9 +32,11 @@ https://www.60score.com/category/人际关系.html
 https://www.60score.com/category/人际相处.html
 https://www.60score.com/category/传统文化.html
 https://www.60score.com/category/体育运动.html
+https://www.60score.com/category/军事历史.html
 https://www.60score.com/category/分类列表.html
 https://www.60score.com/category/动物文化.html
 https://www.60score.com/category/历史探究.html
+https://www.60score.com/category/历史文化.html
 https://www.60score.com/category/台球天地.html
 https://www.60score.com/category/台球经营.html
 https://www.60score.com/category/台球运动.html
@@ -47,6 +49,7 @@ https://www.60score.com/category/影视评论.html
 https://www.60score.com/category/心理调适.html
 https://www.60score.com/category/性别健康.html
 https://www.60score.com/category/情感关系.html
+https://www.60score.com/category/情感故事.html
 https://www.60score.com/category/教育学习.html
 https://www.60score.com/category/数字科技.html
 https://www.60score.com/category/时尚生活.html
@@ -71,6 +74,7 @@ https://www.60score.com/category/软件开发.html
 https://www.60score.com/category/运营指南.html
 https://www.60score.com/category/食品安全.html
 https://www.60score.com/mdhtml/ 如果地球上所有人同时跳起，地球轨道会偏移吗？.html
+https://www.60score.com/mdhtml/19世纪人类是否全部灭绝过？.html
 https://www.60score.com/mdhtml/2025年DeepSeek技术解析：从自然语言处理到多模态模型的跨越.html
 https://www.60score.com/mdhtml/2025年行动目标计划：健康重塑与精准协同.html
 https://www.60score.com/mdhtml/2025年赚钱的主要方向.html
@@ -296,6 +300,7 @@ https://www.60score.com/mdhtml/掘金男性消费市场：从策略到落地的�
 https://www.60score.com/mdhtml/探寻人生意义：在好好活中做有意义的事.html
 https://www.60score.com/mdhtml/探寻自我认知：开启人生智慧之门.html
 https://www.60score.com/mdhtml/探秘世界的奇葩历史：《世界怪史》推荐.html
+https://www.60score.com/mdhtml/探秘：第一个喝牛奶的人对牛做了什么？.html
 https://www.60score.com/mdhtml/探索存在的意义：我们在这个宇宙中的角色与价值.html
 https://www.60score.com/mdhtml/探索月亮的奥秘：从远看的圆缺到近看的坑洼.html
 https://www.60score.com/mdhtml/探索未知的宇宙奥秘.html
@@ -329,6 +334,7 @@ https://www.60score.com/mdhtml/没钱也要理财：开启财务独立之旅.htm
 https://www.60score.com/mdhtml/洄游的鱼，南飞的鸟：探寻背后的人生智慧.html
 https://www.60score.com/mdhtml/深度剖析“冰冻三尺非一日之寒”：事物发展的渐进性.html
 https://www.60score.com/mdhtml/深度解析“兔子不吃窝边草”背后的多重智慧.html
+https://www.60score.com/mdhtml/煎蛋追求荷包蛋：情歌里的浪漫与勇气.html
 https://www.60score.com/mdhtml/爱一个人需要理由吗？.html
 https://www.60score.com/mdhtml/狐假虎威新解说：传统寓言的现代启示.html
 https://www.60score.com/mdhtml/狡兔三窟新解说：深度剖析与现代应用.html
@@ -401,6 +407,7 @@ https://www.60score.com/mdhtml/草船借箭：一场跨越千年的资源博弈�
 https://www.60score.com/mdhtml/莫让舒适成为成长的羁绊：在舒适与挑战间寻求平衡.html
 https://www.60score.com/mdhtml/虚假信息和舆论引导对社会和个人会产生哪些深远影响？.html
 https://www.60score.com/mdhtml/虚拟现实技术的未来趋势：开启无限可能的数字新纪元.html
+https://www.60score.com/mdhtml/被袋鼠暴打时躺成球状真能保命吗？.html
 https://www.60score.com/mdhtml/被门夹过的核桃还能补脑吗？.html
 https://www.60score.com/mdhtml/见一面是“少一面”还是“多一面”.html
 https://www.60score.com/mdhtml/解决Markdown文件中标题解析异常的问题.html
@@ -434,6 +441,8 @@ https://www.60score.com/mdhtml/靠人不如靠自己：现代视角下的自我�
 https://www.60score.com/mdhtml/顺手牵羊新解：多视角下的行为探秘.html
 https://www.60score.com/mdhtml/风浪越大鱼越贵：于挑战处寻机遇与价值.html
 https://www.60score.com/mdhtml/风速多大能让雨滴击穿汽车挡风玻璃.html
+https://www.60score.com/mdhtml/马镫未发明时，骑兵如何作战？.html
+https://www.60score.com/tag/19世纪.html
 https://www.60score.com/tag/35岁危机.html
 https://www.60score.com/tag/ChatGPT.html
 https://www.60score.com/tag/DeepSeek.html
@@ -597,6 +606,7 @@ https://www.60score.com/tag/冰柜.html
 https://www.60score.com/tag/冰箱.html
 https://www.60score.com/tag/冲击力.html
 https://www.60score.com/tag/冲突管理.html
+https://www.60score.com/tag/冲锋战术.html
 https://www.60score.com/tag/决定论.html
 https://www.60score.com/tag/决策困境.html
 https://www.60score.com/tag/准确性.html
@@ -633,8 +643,10 @@ https://www.60score.com/tag/动态平衡.html
 https://www.60score.com/tag/动态思维.html
 https://www.60score.com/tag/动态知识.html
 https://www.60score.com/tag/动物传说.html
+https://www.60score.com/tag/动物行为学.html
 https://www.60score.com/tag/动量守恒定律.html
 https://www.60score.com/tag/勃起状态.html
+https://www.60score.com/tag/勇气启示.html
 https://www.60score.com/tag/勇气追求.html
 https://www.60score.com/tag/化学稳定性.html
 https://www.60score.com/tag/区块链技术.html
@@ -653,6 +665,7 @@ https://www.60score.com/tag/历史故事.html
 https://www.60score.com/tag/历史暴力.html
 https://www.60score.com/tag/历史称谓.html
 https://www.60score.com/tag/历史视角.html
+https://www.60score.com/tag/历史谜团.html
 https://www.60score.com/tag/压力应对.html
 https://www.60score.com/tag/压力管理.html
 https://www.60score.com/tag/原生家庭.html
@@ -962,6 +975,7 @@ https://www.60score.com/tag/情感维系.html
 https://www.60score.com/tag/情感缺失.html
 https://www.60score.com/tag/情感表达.html
 https://www.60score.com/tag/情感连接.html
+https://www.60score.com/tag/情歌寓意.html
 https://www.60score.com/tag/情绪GPS导航.html
 https://www.60score.com/tag/情绪产业.html
 https://www.60score.com/tag/情绪因素.html
@@ -1223,6 +1237,7 @@ https://www.60score.com/tag/注意力分配.html
 https://www.60score.com/tag/注意力管理.html
 https://www.60score.com/tag/泻药.html
 https://www.60score.com/tag/洗澡风险.html
+https://www.60score.com/tag/浪漫爱情.html
 https://www.60score.com/tag/海洋香型.html
 https://www.60score.com/tag/消费偏好.html
 https://www.60score.com/tag/消费心理.html
@@ -1255,6 +1270,7 @@ https://www.60score.com/tag/热量缺口.html
 https://www.60score.com/tag/热量调节.html
 https://www.60score.com/tag/热门专业.html
 https://www.60score.com/tag/焦虑抑郁.html
+https://www.60score.com/tag/煎蛋荷包蛋.html
 https://www.60score.com/tag/熵增博弈.html
 https://www.60score.com/tag/燃烧条件.html
 https://www.60score.com/tag/爆款内容.html
@@ -1263,7 +1279,13 @@ https://www.60score.com/tag/爱与离别.html
 https://www.60score.com/tag/爱情与婚姻.html
 https://www.60score.com/tag/爱情保鲜.html
 https://www.60score.com/tag/爱情哲学.html
+https://www.60score.com/tag/爱情故事.html
 https://www.60score.com/tag/爱情选择.html
+https://www.60score.com/tag/牛奶产业.html
+https://www.60score.com/tag/牛奶利用.html
+https://www.60score.com/tag/牛奶文化.html
+https://www.60score.com/tag/牛奶起源.html
+https://www.60score.com/tag/牛的驯化.html
 https://www.60score.com/tag/牛顿第三定律.html
 https://www.60score.com/tag/物流管理.html
 https://www.60score.com/tag/物理因素.html
@@ -1454,6 +1476,7 @@ https://www.60score.com/tag/科学消费.html
 https://www.60score.com/tag/科学研究.html
 https://www.60score.com/tag/科学解释.html
 https://www.60score.com/tag/科学评估.html
+https://www.60score.com/tag/科学进步.html
 https://www.60score.com/tag/科幻设想.html
 https://www.60score.com/tag/科技与人文价值.html
 https://www.60score.com/tag/科技伦理.html
@@ -1622,6 +1645,7 @@ https://www.60score.com/tag/行动计划.html
 https://www.60score.com/tag/行车注意.html
 https://www.60score.com/tag/补脑.html
 https://www.60score.com/tag/补铁食物.html
+https://www.60score.com/tag/袋鼠攻击.html
 https://www.60score.com/tag/被选择.html
 https://www.60score.com/tag/观众礼仪.html
 https://www.60score.com/tag/规则标准化.html
@@ -1702,6 +1726,7 @@ https://www.60score.com/tag/身体健康.html
 https://www.60score.com/tag/身体健康警示.html
 https://www.60score.com/tag/身心健康.html
 https://www.60score.com/tag/身高差异.html
+https://www.60score.com/tag/躺成球状.html
 https://www.60score.com/tag/车厘子保鲜.html
 https://www.60score.com/tag/轮流击球.html
 https://www.60score.com/tag/轻功水上漂.html
@@ -1716,6 +1741,7 @@ https://www.60score.com/tag/运动物理.html
 https://www.60score.com/tag/运动科学.html
 https://www.60score.com/tag/运动科技.html
 https://www.60score.com/tag/近水楼台先得月.html
+https://www.60score.com/tag/近身搏斗.html
 https://www.60score.com/tag/进化瓶颈.html
 https://www.60score.com/tag/进化突破.html
 https://www.60score.com/tag/进阶技巧.html
@@ -1762,6 +1788,7 @@ https://www.60score.com/tag/长期发展.html
 https://www.60score.com/tag/长期规划.html
 https://www.60score.com/tag/问题解决.html
 https://www.60score.com/tag/阅读指南.html
+https://www.60score.com/tag/防御策略.html
 https://www.60score.com/tag/陪伴产业.html
 https://www.60score.com/tag/随机分配.html
 https://www.60score.com/tag/隐性成本.html
@@ -1796,7 +1823,10 @@ https://www.60score.com/tag/食量计算.html
 https://www.60score.com/tag/饮食建议.html
 https://www.60score.com/tag/饮食营养.html
 https://www.60score.com/tag/香水品牌.html
+https://www.60score.com/tag/马镫.html
 https://www.60score.com/tag/驾驶习惯.html
+https://www.60score.com/tag/骑兵.html
+https://www.60score.com/tag/骑射战术.html
 https://www.60score.com/tag/骗局识别.html
 https://www.60score.com/tag/高强度间歇训练.html
 https://www.60score.com/tag/高成本城市.html
