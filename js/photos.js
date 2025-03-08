@@ -58,8 +58,8 @@ document.addEventListener("DOMContentLoaded", function () {
           itemSelector: '.photogrid-item',
           columnWidth: columnWidth,
           gutter: 20,
-          fitWidth: true,
-          percentPosition: true // 添加此配置项
+          fitWidth: true
+         // percentPosition: true // 添加此配置项
 
         });
 
