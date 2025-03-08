@@ -50,7 +50,7 @@ document.addEventListener("DOMContentLoaded", function () {
         `;
         grid.appendChild(item);
       });
-      const columnWidth = window.innerWidth > 768 ? 200 : 'auto'; // 或者选择一个适合移动设备的固定值
+      const columnWidth = window.innerWidth > 768 ? 200 : 150; // 移动端使用固定宽度
       // 确保所有图片加载完毕后再初始化 Masonry
       imagesLoaded(grid, function () {
         masonryInstance = new Masonry(grid, {
@@ -58,7 +58,8 @@ document.addEventListener("DOMContentLoaded", function () {
           itemSelector: '.photogrid-item',
           columnWidth: columnWidth,
           gutter: 20,
-          fitWidth: true
+          fitWidth: true,
+          percentPosition: true // 添加此配置项
 
         });
 
@@ -70,7 +71,9 @@ document.addEventListener("DOMContentLoaded", function () {
         // 监听窗口大小变化，重新布局 Masonry
         window.addEventListener('resize', () => {
           if (masonryInstance) {
-            masonryInstance.layout();
+            const newColumnWidth = window.innerWidth > 768 ? 200 : 150;
+            masonryInstance.options.columnWidth = newColumnWidth; // 更新列宽
+            masonryInstance.layout(); // 重新布局
           }
         });
       });
