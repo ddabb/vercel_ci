@@ -1,26 +1,13 @@
 .photogrid {
     margin: 0 auto;
     /* 居中 */
-    width: 100%;
-}
-
-.photogrid::before {
-    content: '';
-    display: block;
-    width: 200px;
-    /* 默认列宽 */
-    margin-left: -10px;
-    /* gutter的一半 */
-    /* 这只是一个占位符，确保Masonry能正确计算 */
 }
 
 .photogrid-item {
     width: 200px;
-    /* 默认宽度 */
-    margin-left: auto;
-    margin-right: auto;
-    /* 居中对齐 */
+    /* 设置固定宽度 */
     margin-bottom: 20px;
+    /* 底部边距，与Masonry的gutter配合 */
     background: white;
     border-radius: 8px;
     overflow: hidden;
@@ -41,24 +28,21 @@
     font-size: 0.9em;
     color: #666;
     line-height: 1.4;
-    text-align: center;
-    /* 居中对齐文字 */
-    opacity: 0;
-    /* 初始隐藏 */
-    transition: opacity 0.5s ease;
-    /* 添加淡入效果 */
+    text-align: center; /* 居中对齐文字 */
+    opacity: 0; /* 初始隐藏 */
+    transition: opacity 0.5s ease; /* 添加淡入效果 */
 }
 
 .photogrid-item.loaded .photocaption {
-    opacity: 1;
-    /* 图片加载完成后显示 */
+    opacity: 1; /* 图片加载完成后显示 */
 }
-
 /* 响应式设计 */
 @media (max-width: 768px) {
-    .photogrid::before {
-        width: 150px;
-        /* 调整移动端每项的宽度 */
+    .photogrid {
+        width: 100% !important;
+        /* 确保它占据整个可用宽度 */
+        margin: 0 auto;
+        /* 居中 */
     }
 
     .photogrid-item {
@@ -68,13 +52,15 @@
 }
 
 @media (max-width: 480px) {
-    .photogrid::before {
-        display: none;
-        /* 不需要sizer */
+    .photogrid {
+        width: 100% !important;
+        /* 确保它占据整个可用宽度 */
+        margin: 0 auto;
+        /* 居中 */
     }
 
     .photogrid-item {
-        width: 100%;
+        width: 100px;
         /* 进一步调整小屏幕设备上的每项宽度 */
     }
 
