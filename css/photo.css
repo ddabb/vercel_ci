@@ -45,10 +45,6 @@
         /* 居中 */
     }
 
-    .photogrid-item {
-        width: 150px;
-        /* 调整移动端每项的宽度 */
-    }
 }
 
 @media (max-width: 480px) {
@@ -59,13 +55,5 @@
         /* 居中 */
     }
 
-    .photogrid-item {
-        width: 100px;
-        /* 进一步调整小屏幕设备上的每项宽度 */
-    }
 
-    .photocaption {
-        font-size: 0.8em;
-        /* 减少字体大小以适应小屏幕 */
-    }
 }
