@@ -70,26 +70,6 @@
     transform: scale(1.03);
 }
 
-/* 限时优惠标签优化 */
-.product-card::after {
-    content: "限时优惠";
-    position: absolute;
-    top: 10px;
-    /* 调整到右上角 */
-    right: 10px;
-    /* 改为right: 10px; */
-    background: linear-gradient(45deg, #ff4444, #ff6b6b);
-    color: white;
-    padding: 6px 20px;
-    /* 根据实际情况调整padding */
-    font-size: 0.85rem;
-    font-weight: 500;
-    transform: none;
-    /* 移除旋转效果 */
-    z-index: 2;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
-}
-
 /* 价格高亮样式 */
 .price-highlight {
     background: linear-gradient(45deg, #ffd700, #ffb300);
