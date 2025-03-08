@@ -665,6 +665,7 @@ https://www.60score.com/tag/内向者策略.html
 https://www.60score.com/tag/内容创作.html
 https://www.60score.com/tag/内容形式.html
 https://www.60score.com/tag/内容自动化.html
+https://www.60score.com/tag/内心平静.html
 https://www.60score.com/tag/内心探索.html
 https://www.60score.com/tag/写作风格.html
 https://www.60score.com/tag/冥想.html
@@ -676,6 +677,7 @@ https://www.60score.com/tag/冲锋战术.html
 https://www.60score.com/tag/决定论.html
 https://www.60score.com/tag/决策.html
 https://www.60score.com/tag/决策困境.html
+https://www.60score.com/tag/决策智慧.html
 https://www.60score.com/tag/准确性.html
 https://www.60score.com/tag/出发准备.html
 https://www.60score.com/tag/击球顺序.html
@@ -706,6 +708,7 @@ https://www.60score.com/tag/副作用.html
 https://www.60score.com/tag/办公设备.html
 https://www.60score.com/tag/功利主义.html
 https://www.60score.com/tag/功能差异.html
+https://www.60score.com/tag/动力源泉.html
 https://www.60score.com/tag/动态平衡.html
 https://www.60score.com/tag/动态思维.html
 https://www.60score.com/tag/动态知识.html
@@ -1002,7 +1005,6 @@ https://www.60score.com/tag/御剑飞行.html
 https://www.60score.com/tag/微信.html
 https://www.60score.com/tag/微信公众号.html
 https://www.60score.com/tag/微生物活动.html
-https://www.60score.com/tag/心态管理.html
 https://www.60score.com/tag/心态调整.html
 https://www.60score.com/tag/心流体验.html
 https://www.60score.com/tag/心灵交融.html
@@ -1098,9 +1100,9 @@ https://www.60score.com/tag/感情.html
 https://www.60score.com/tag/感情处理.html
 https://www.60score.com/tag/感情纠葛.html
 https://www.60score.com/tag/感染风险.html
+https://www.60score.com/tag/成功之道.html
 https://www.60score.com/tag/成功人生.html
 https://www.60score.com/tag/成功因素.html
-https://www.60score.com/tag/成功学.html
 https://www.60score.com/tag/成功定义.html
 https://www.60score.com/tag/成功心理学.html
 https://www.60score.com/tag/成功案例.html
@@ -1773,6 +1775,7 @@ https://www.60score.com/tag/自我控制.html
 https://www.60score.com/tag/自我提升.html
 https://www.60score.com/tag/自我救赎.html
 https://www.60score.com/tag/自我满足.html
+https://www.60score.com/tag/自我激励.html
 https://www.60score.com/tag/自我疗愈.html
 https://www.60score.com/tag/自我管理.html
 https://www.60score.com/tag/自我约束.html
