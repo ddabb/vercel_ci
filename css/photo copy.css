@@ -1,0 +1,65 @@
+.photogrid {
+    margin: 0 auto;
+    /* 居中 */
+}
+
+.photogrid-item {
+    width: 200px;
+    /* 设置固定宽度 */
+    margin-bottom: 20px;
+    /* 底部边距，与Masonry的gutter配合 */
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.photogrid-item img {
+    width: 100%;
+    /* 宽度100%以填充其父元素 */
+    height: auto;
+    /* 高度自适应，保持图片比例 */
+    display: block;
+    cursor: zoom-in;
+}
+
+.photocaption {
+    padding: 12px;
+    font-size: 0.9em;
+    color: #666;
+    line-height: 1.4;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    .photogrid {
+        width: 100% !important;
+        /* 确保它占据整个可用宽度 */
+        margin: 0 auto;
+        /* 居中 */
+    }
+
+    .photogrid-item {
+        width: 150px;
+        /* 调整移动端每项的宽度 */
+    }
+}
+
+@media (max-width: 480px) {
+    .photogrid {
+        width: 100% !important;
+        /* 确保它占据整个可用宽度 */
+        margin: 0 auto;
+        /* 居中 */
+    }
+
+    .photogrid-item {
+        width: 100px;
+        /* 进一步调整小屏幕设备上的每项宽度 */
+    }
+
+    .photocaption {
+        font-size: 0.8em;
+        /* 减少字体大小以适应小屏幕 */
+    }
+}
