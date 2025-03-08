@@ -28,18 +28,24 @@
     font-size: 0.9em;
     color: #666;
     line-height: 1.4;
-    text-align: center; /* 居中对齐文字 */
-    opacity: 0; /* 初始隐藏 */
-    transition: opacity 0.5s ease; /* 添加淡入效果 */
+    text-align: center;
+    /* 居中对齐文字 */
+    opacity: 0;
+    /* 初始隐藏 */
+    transition: opacity 0.5s ease;
+    /* 添加淡入效果 */
 }
 
 .photogrid-item.loaded .photocaption {
-    opacity: 1; /* 图片加载完成后显示 */
+    opacity: 1;
+    /* 图片加载完成后显示 */
 }
 
 @media (max-width: 768px) {
     .photogrid-item {
-      width: 150px; /* 固定宽度 */
-      margin-bottom: 15px; /* 减小底部边距 */
+        width: calc(50% - 20px); /* 每行显示 2 列，减去 gutter */
+        /* 固定宽度 */
+        margin-bottom: 15px;
+        /* 减小底部边距 */
     }
-  }
+}
