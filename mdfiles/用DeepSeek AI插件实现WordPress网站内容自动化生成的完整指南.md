@@ -2,7 +2,7 @@
 title: 用DeepSeek AI插件实现WordPress网站内容自动化生成的完整指南
 category: 人工智能
 tags: [人工智能, 内容自动化, DeepSeek, 搜索引擎优化]
-goodsName: 【自营正版】deepseek实用操作指南 李尚龙清华大学 2025 入门、搜索、答疑、写作 deepseek使用教程 ai时代生存手册 零基础掌握deepseek 从入门到精通deepseek教程自营
+goodsName: 【自营正版】deepseek实用操作指南 李尚龙清华大学 2025 deep seek实用操作指南 deepseek使用教程 ai时代生存手册 零基础掌握deepseek 从入门到精通 deepsee
 description: 探讨科技飞速发展对人类情感和人性的影响，包括情感表达从面对面交流到数字化转变带来的影响、人际关系由真实转向虚拟的挑战，以及自我认知过程中“量化自我”趋势和人工智能对人类独特性的挑战。文章强调了在享受科技带来便利的同时，保持人性温度的重要性，提倡通过真实的面对面交流来维护和滋养内心的情感纽带，确保科技成为促进而非阻碍人类幸福的力量。
 ---
 # 用DeepSeek AI插件实现WordPress网站内容自动化生成的完整指南  

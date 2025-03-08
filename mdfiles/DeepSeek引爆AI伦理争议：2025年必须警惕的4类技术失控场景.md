@@ -1,7 +1,7 @@
 ---
 title: DeepSeek引爆AI伦理争议：2025年必须警惕的4类技术失控场景
 category: 人工智能
-goodsName: 【自营正版】deepseek实用操作指南 李尚龙清华大学 2025 入门、搜索、答疑、写作 deepseek使用教程 ai时代生存手册 零基础掌握deepseek 从入门到精通deepseek教程自营
+goodsName: 【自营正版】deepseek实用操作指南 李尚龙清华大学 2025 deep seek实用操作指南 deepseek使用教程 ai时代生存手册 零基础掌握deepseek 从入门到精通 deepsee
 tags: [DeepSeek, 科技伦理, 伦理讨论, AI治理]
 description: 探讨DeepSeek引发的AI伦理争议，包括数据隐私、算法偏见及真实与虚构内容模糊等失控场景。文章指出技术快速发展与伦理滞后之间的矛盾，并提出通过技术透明化、提升全民数字素养和全球化治理协作来寻找创新与约束之间的平衡。面对AI推理成本低于人类思考耗电量的新时代，探讨如何准备好与机器共治，以及AI伦理在其中应扮演的角色。
 ---
