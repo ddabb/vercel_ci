@@ -30,8 +30,7 @@
     color: #333;
 }
 
-/* 针对桌面端的媒体查询，当屏幕宽度大于某个值时应用以下样式 */
-@media (min-width: 1200px) {
+@media (min-width: 800px) {
 
     /* 您可以根据实际情况调整这个值 */
     .photogrid {
