@@ -2,7 +2,7 @@
 title: "2025年DeepSeek技术解析：从自然语言处理到多模态模型的跨越"
 category: 人工智能
 goodsName: 【自营正版】deepseek实用操作指南 李尚龙清华大学 2025 入门、搜索、答疑、写作 deepseek使用教程 ai时代生存手册 零基础掌握deepseek 从入门到精通deepseek教程自营
-tags: [DeepSeek, 多模态技术]
+tags: [DeepSeek, 技术革新,AI应用]
 description: 介绍2025年DeepSeek技术的最新进展，包括从Transformer架构到混合专家系统的革新、训练优化策略、多模态能力的发展以及在不同领域的应用。DeepSeek通过引入如混合专家系统（MoE）、多头隐式注意力（MLA）等技术显著提升了处理效率和性能，同时在金融、医疗、教育等多个垂直领域实现了高效的应用。此外，DeepSeek正探索具身智能和绿色AI技术，旨在降低算力依赖并提高模型与物理世界的交互能力，预示着AI将向更高效、精准的方向发展。
 ---
 

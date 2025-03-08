@@ -2,7 +2,7 @@
 title: DeepSeek：重塑未来日常生活的AI革命
 category: 人工智能
 goodsName: 【自营正版】deepseek实用操作指南 李尚龙清华大学 2025 入门、搜索、答疑、写作 deepseek使用教程 ai时代生存手册 零基础掌握deepseek 从入门到精通deepseek教程自营
-tags: [DeepSeek, 效率革命, 行业重塑, 社会挑战]
+tags: [DeepSeek, 智能生活, 行业重塑, 社会挑战]
 description: DeepSeek作为新一代生成式AI，通过其多模态交互、知识推理与场景化应用能力，正在引领效率革命，重塑教育、医疗、工作等行业，并带来社会挑战。文章探讨了DeepSeek对生产力的提升、行业变革的影响以及未来人机共生的可能性，强调需同步进化社会制度、教育体系及伦理框架以适应AI技术带来的深刻变化。
 ---
 # DeepSeek：重塑未来日常生活的AI革命
