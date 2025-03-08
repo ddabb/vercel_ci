@@ -501,11 +501,9 @@ https://www.60score.com/tag/LED灯.html
 https://www.60score.com/tag/markdown.html
 https://www.60score.com/tag/《西游记》.html
 https://www.60score.com/tag/一把手.html
-https://www.60score.com/tag/三十多岁男人.html
 https://www.60score.com/tag/三头六臂.html
 https://www.60score.com/tag/三维视角.html
 https://www.60score.com/tag/上古文明.html
-https://www.60score.com/tag/上帝全能.html
 https://www.60score.com/tag/不同人生阶段.html
 https://www.60score.com/tag/不孕不育.html
 https://www.60score.com/tag/不确定性.html
@@ -606,6 +604,7 @@ https://www.60score.com/tag/企业战略.html
 https://www.60score.com/tag/休闲娱乐.html
 https://www.60score.com/tag/休闲时尚.html
 https://www.60score.com/tag/传播.html
+https://www.60score.com/tag/传统寓言.html
 https://www.60score.com/tag/传统观念.html
 https://www.60score.com/tag/传统银行业.html
 https://www.60score.com/tag/伦理争议.html
@@ -735,6 +734,7 @@ https://www.60score.com/tag/历史事件.html
 https://www.60score.com/tag/历史反思.html
 https://www.60score.com/tag/历史学习.html
 https://www.60score.com/tag/历史故事.html
+https://www.60score.com/tag/历史智慧.html
 https://www.60score.com/tag/历史暴力.html
 https://www.60score.com/tag/历史称谓.html
 https://www.60score.com/tag/历史视角.html
@@ -788,7 +788,6 @@ https://www.60score.com/tag/同类相残.html
 https://www.60score.com/tag/名称由来.html
 https://www.60score.com/tag/名著推荐.html
 https://www.60score.com/tag/向下射击机枪.html
-https://www.60score.com/tag/听觉感知.html
 https://www.60score.com/tag/命名艺术.html
 https://www.60score.com/tag/命运探讨.html
 https://www.60score.com/tag/和尚分粥.html
@@ -862,6 +861,7 @@ https://www.60score.com/tag/天平.html
 https://www.60score.com/tag/天庭.html
 https://www.60score.com/tag/天文学.html
 https://www.60score.com/tag/天文技术.html
+https://www.60score.com/tag/天文探索.html
 https://www.60score.com/tag/太空探索.html
 https://www.60score.com/tag/夫妻关系.html
 https://www.60score.com/tag/夫妻沟通.html
@@ -882,6 +882,7 @@ https://www.60score.com/tag/好评陷阱.html
 https://www.60score.com/tag/妲己.html
 https://www.60score.com/tag/婚前同居.html
 https://www.60score.com/tag/婚外情.html
+https://www.60score.com/tag/婚姻与财富.html
 https://www.60score.com/tag/婚姻修复.html
 https://www.60score.com/tag/婚姻关系.html
 https://www.60score.com/tag/婚姻出轨.html
@@ -908,6 +909,7 @@ https://www.60score.com/tag/学术研究.html
 https://www.60score.com/tag/学术造假.html
 https://www.60score.com/tag/学费价值.html
 https://www.60score.com/tag/孩子与家庭.html
+https://www.60score.com/tag/宇宙哲学.html
 https://www.60score.com/tag/宇宙幻想.html
 https://www.60score.com/tag/宇宙探索.html
 https://www.60score.com/tag/宇宙观.html
@@ -943,7 +945,6 @@ https://www.60score.com/tag/家庭支持.html
 https://www.60score.com/tag/家庭教育.html
 https://www.60score.com/tag/家庭暴力.html
 https://www.60score.com/tag/家庭沟通.html
-https://www.60score.com/tag/家庭理财.html
 https://www.60score.com/tag/家庭理财规划.html
 https://www.60score.com/tag/家庭管理.html
 https://www.60score.com/tag/家庭责任.html
@@ -1022,7 +1023,6 @@ https://www.60score.com/tag/心理学原理.html
 https://www.60score.com/tag/心理建设.html
 https://www.60score.com/tag/心理成熟.html
 https://www.60score.com/tag/心理支持.html
-https://www.60score.com/tag/心理效应.html
 https://www.60score.com/tag/心理机制.html
 https://www.60score.com/tag/心理策略.html
 https://www.60score.com/tag/心理素质.html
@@ -1094,6 +1094,7 @@ https://www.60score.com/tag/情绪调节.html
 https://www.60score.com/tag/情节推动.html
 https://www.60score.com/tag/情节构建.html
 https://www.60score.com/tag/情节设计.html
+https://www.60score.com/tag/感官交互.html
 https://www.60score.com/tag/感官进化.html
 https://www.60score.com/tag/感官障碍.html
 https://www.60score.com/tag/感情.html
@@ -1138,6 +1139,7 @@ https://www.60score.com/tag/技术挑战.html
 https://www.60score.com/tag/技术瓶颈.html
 https://www.60score.com/tag/技术管理.html
 https://www.60score.com/tag/技术能力.html
+https://www.60score.com/tag/技术趋势.html
 https://www.60score.com/tag/技术进步.html
 https://www.60score.com/tag/技术透明化.html
 https://www.60score.com/tag/技术革命.html
@@ -1191,6 +1193,7 @@ https://www.60score.com/tag/教学管理优化.html
 https://www.60score.com/tag/教练服务.html
 https://www.60score.com/tag/教育公平.html
 https://www.60score.com/tag/教育内卷.html
+https://www.60score.com/tag/教育创新.html
 https://www.60score.com/tag/教育回报.html
 https://www.60score.com/tag/教育学习.html
 https://www.60score.com/tag/教育差异.html
@@ -1201,7 +1204,6 @@ https://www.60score.com/tag/教育普惠.html
 https://www.60score.com/tag/教育机会.html
 https://www.60score.com/tag/教育理念.html
 https://www.60score.com/tag/教育目标.html
-https://www.60score.com/tag/教育科技.html
 https://www.60score.com/tag/教育资源分配.html
 https://www.60score.com/tag/教育路径.html
 https://www.60score.com/tag/教育重构.html
@@ -1268,6 +1270,7 @@ https://www.60score.com/tag/早泄.html
 https://www.60score.com/tag/早泄界定.html
 https://www.60score.com/tag/时代背景.html
 https://www.60score.com/tag/时尚潮流.html
+https://www.60score.com/tag/时尚配饰.html
 https://www.60score.com/tag/时间折叠.html
 https://www.60score.com/tag/时间疗伤.html
 https://www.60score.com/tag/时间管理.html
@@ -1283,7 +1286,6 @@ https://www.60score.com/tag/智能设备.html
 https://www.60score.com/tag/暴雨橙色预警.html
 https://www.60score.com/tag/月亮.html
 https://www.60score.com/tag/月亮坍缩.html
-https://www.60score.com/tag/月亮影响.html
 https://www.60score.com/tag/月光特性.html
 https://www.60score.com/tag/月球.html
 https://www.60score.com/tag/月球表面.html
@@ -1344,6 +1346,7 @@ https://www.60score.com/tag/比赛礼仪.html
 https://www.60score.com/tag/气候变化.html
 https://www.60score.com/tag/气候影响.html
 https://www.60score.com/tag/气象影响.html
+https://www.60score.com/tag/气象物理.html
 https://www.60score.com/tag/气象预警.html
 https://www.60score.com/tag/水生植物.html
 https://www.60score.com/tag/水质变化.html
@@ -1502,7 +1505,6 @@ https://www.60score.com/tag/生活成本.html
 https://www.60score.com/tag/生活文化.html
 https://www.60score.com/tag/生活方式.html
 https://www.60score.com/tag/生活方式调整.html
-https://www.60score.com/tag/生活智慧.html
 https://www.60score.com/tag/生活竞争.html
 https://www.60score.com/tag/生物技术.html
 https://www.60score.com/tag/生物进化.html
@@ -1538,6 +1540,7 @@ https://www.60score.com/tag/百家号.html
 https://www.60score.com/tag/百度.html
 https://www.60score.com/tag/监狱管理.html
 https://www.60score.com/tag/目标受众.html
+https://www.60score.com/tag/目标管理.html
 https://www.60score.com/tag/目标计划.html
 https://www.60score.com/tag/目标设定.html
 https://www.60score.com/tag/盲人权益.html
@@ -1613,6 +1616,7 @@ https://www.60score.com/tag/社会资源.html
 https://www.60score.com/tag/社会进步.html
 https://www.60score.com/tag/社区支持.html
 https://www.60score.com/tag/社群认同.html
+https://www.60score.com/tag/神学逻辑.html
 https://www.60score.com/tag/神经科学.html
 https://www.60score.com/tag/神话医学.html
 https://www.60score.com/tag/神话科学融合.html
@@ -1625,9 +1629,7 @@ https://www.60score.com/tag/科学与哲学.html
 https://www.60score.com/tag/科学与艺术.html
 https://www.60score.com/tag/科学假设.html
 https://www.60score.com/tag/科学减肥.html
-https://www.60score.com/tag/科学前沿.html
 https://www.60score.com/tag/科学原理.html
-https://www.60score.com/tag/科学发展.html
 https://www.60score.com/tag/科学发现.html
 https://www.60score.com/tag/科学哲学.html
 https://www.60score.com/tag/科学实验.html
@@ -1674,6 +1676,7 @@ https://www.60score.com/tag/算法优化.html
 https://www.60score.com/tag/算法机制.html
 https://www.60score.com/tag/管理创新.html
 https://www.60score.com/tag/管理学.html
+https://www.60score.com/tag/管理智慧.html
 https://www.60score.com/tag/精准医疗.html
 https://www.60score.com/tag/精准管理.html
 https://www.60score.com/tag/精打细算.html
@@ -1841,7 +1844,6 @@ https://www.60score.com/tag/规则适应.html
 https://www.60score.com/tag/视线盲区.html
 https://www.60score.com/tag/视线遮挡.html
 https://www.60score.com/tag/视觉对比效应.html
-https://www.60score.com/tag/视觉感知.html
 https://www.60score.com/tag/视觉错觉.html
 https://www.60score.com/tag/视野拓展.html
 https://www.60score.com/tag/角色定位.html
@@ -1870,7 +1872,6 @@ https://www.60score.com/tag/诗歌创作.html
 https://www.60score.com/tag/话语分析.html
 https://www.60score.com/tag/话语权博弈.html
 https://www.60score.com/tag/语义匹配.html
-https://www.60score.com/tag/语言艺术.html
 https://www.60score.com/tag/语言规范.html
 https://www.60score.com/tag/误解与信息不足.html
 https://www.60score.com/tag/谋士.html
@@ -1883,6 +1884,7 @@ https://www.60score.com/tag/财务自由.html
 https://www.60score.com/tag/财富创造.html
 https://www.60score.com/tag/财富增长.html
 https://www.60score.com/tag/财富积累.html
+https://www.60score.com/tag/财富观念.html
 https://www.60score.com/tag/财富追求.html
 https://www.60score.com/tag/责任归属.html
 https://www.60score.com/tag/责任担当.html
@@ -1912,7 +1914,6 @@ https://www.60score.com/tag/路径依赖.html
 https://www.60score.com/tag/路径锁定.html
 https://www.60score.com/tag/踢猫效应.html
 https://www.60score.com/tag/身份焦虑.html
-https://www.60score.com/tag/身份突破.html
 https://www.60score.com/tag/身份认同.html
 https://www.60score.com/tag/身体健康.html
 https://www.60score.com/tag/身体健康警示.html
@@ -1997,7 +1998,6 @@ https://www.60score.com/tag/隐私教育.html
 https://www.60score.com/tag/集体智慧.html
 https://www.60score.com/tag/雨滴.html
 https://www.60score.com/tag/雷电.html
-https://www.60score.com/tag/雷电形成.html
 https://www.60score.com/tag/雷电防护.html
 https://www.60score.com/tag/霸王龙.html
 https://www.60score.com/tag/青少年体育.html
