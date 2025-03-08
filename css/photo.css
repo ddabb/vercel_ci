@@ -1,30 +1,41 @@
 .photogrid {
     display: grid;
     gap: 20px;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    /* 默认设置为适合移动端 */
+    grid-template-columns: repeat(auto-fill, minmax(90vw, 1fr));
     padding: 20px;
-  }
-  
-  .photogrid-item {
+}
+
+.photogrid-item {
     background-color: white;
     border-radius: 8px;
     overflow: hidden;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  }
-  
-  .photogrid-item a {
+}
+
+.photogrid-item a {
     display: block;
     text-decoration: none;
-  }
-  
-  .photogrid-item img {
+}
+
+.photogrid-item img {
     width: 100%;
     height: auto;
     display: block;
-  }
-  
-  .photocaption {
+}
+
+.photocaption {
     padding: 10px;
     font-size: 16px;
     color: #333;
-  }
+}
+
+/* 针对桌面端的媒体查询，当屏幕宽度大于某个值时应用以下样式 */
+@media (min-width: 1200px) {
+
+    /* 您可以根据实际情况调整这个值 */
+    .photogrid {
+        grid-template-columns: repeat(5, minmax(200px, 1fr));
+        /* 确保每行展示5张图片 */
+    }
+}
