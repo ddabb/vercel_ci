@@ -43,6 +43,15 @@
     line-height: 1.4;
     text-align: center;
     /* 居中对齐文字 */
+    opacity: 0;
+    /* 初始隐藏 */
+    transition: opacity 0.5s ease;
+    /* 添加淡入效果 */
+}
+
+.photogrid-item.loaded .photocaption {
+    opacity: 1;
+    /* 图片加载完成后显示 */
 }
 
 /* 响应式设计 */

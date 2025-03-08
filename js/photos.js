@@ -32,6 +32,11 @@ document.addEventListener("DOMContentLoaded", function () {
           item.remove(); // 使用 item.remove() 更简洁
         };
 
+        // 监听图片加载完成事件
+        imgElement.onload = () => {
+          item.classList.add('loaded'); // 图片加载完成后添加 'loaded' 类
+        };
+
         item.innerHTML = `
           <a href="${img.src}" 
              data-pswp-width="1200" 
