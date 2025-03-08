@@ -36,3 +36,10 @@
 .photogrid-item.loaded .photocaption {
     opacity: 1; /* 图片加载完成后显示 */
 }
+
+@media (max-width: 768px) {
+    .photogrid-item {
+      width: 150px; /* 固定宽度 */
+      margin-bottom: 15px; /* 减小底部边距 */
+    }
+  }
