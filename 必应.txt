@@ -43,6 +43,7 @@ https://www.60score.com/category/家电知识.html
 https://www.60score.com/category/差旅办公.html
 https://www.60score.com/category/建筑探索.html
 https://www.60score.com/category/影视评论.html
+https://www.60score.com/category/心理调试.html
 https://www.60score.com/category/心理调适.html
 https://www.60score.com/category/性别健康.html
 https://www.60score.com/category/情感关系.html
@@ -70,6 +71,7 @@ https://www.60score.com/category/财富管理.html
 https://www.60score.com/category/身体健康.html
 https://www.60score.com/category/软件开发.html
 https://www.60score.com/category/运营指南.html
+https://www.60score.com/category/金融科技.html
 https://www.60score.com/category/食品安全.html
 https://www.60score.com/category/饮食健康.html
 https://www.60score.com/mdhtml/ 如果地球上所有人同时跳起，地球轨道会偏移吗？.html
@@ -234,6 +236,8 @@ https://www.60score.com/mdhtml/如何确定自己的人生方向和目标？.htm
 https://www.60score.com/mdhtml/如何规划职业生涯以实现月薪5万.html
 https://www.60score.com/mdhtml/如何调整失去和失败带来的情绪？.html
 https://www.60score.com/mdhtml/如何走出失恋的痛苦？.html
+https://www.60score.com/mdhtml/如何通过在线课程提升职业技能.html
+https://www.60score.com/mdhtml/如何通过投资组合实现财务自由.html
 https://www.60score.com/mdhtml/如果不孕不育是遗传的，如何传递基因？.html
 https://www.60score.com/mdhtml/如果两个人最终一定会分离，那相遇的意义是什么 ？.html
 https://www.60score.com/mdhtml/如果小孩不停止生长，20岁时会有多高？.html
@@ -281,6 +285,7 @@ https://www.60score.com/mdhtml/微信公众号爆款文章打造全攻略.html
 https://www.60score.com/mdhtml/微信深夜放大招：搜索框变AI管家，百度连夜跟牌为哪般？.html
 https://www.60score.com/mdhtml/心理健康与社会支持系统：构筑心灵的防护壁垒.html
 https://www.60score.com/mdhtml/心理健康与饮食：饮食对心理状态的深度影响.html
+https://www.60score.com/mdhtml/心理健康：现代生活的隐形护盾.html
 https://www.60score.com/mdhtml/心理咨询入门：如何选择合适的心理咨询师.html
 https://www.60score.com/mdhtml/心理咨询：个人成长的隐形翅膀.html
 https://www.60score.com/mdhtml/心理治疗在修复过程中起到怎样的作用？.html
@@ -336,6 +341,7 @@ https://www.60score.com/mdhtml/斑马是黑底白纹还是白底黑纹？揭开�
 https://www.60score.com/mdhtml/斑马纹路是否影响捕食者视觉？.html
 https://www.60score.com/mdhtml/斗地主发牌方式分析：如何在速度与准确性之间寻找最优解.html
 https://www.60score.com/mdhtml/新兴投资领域探索：虚拟货币投资的风险与机遇.html
+https://www.60score.com/mdhtml/新兴金融科技对传统理财方式的影响.html
 https://www.60score.com/mdhtml/新手司机上路有什么值得注意的吗？.html
 https://www.60score.com/mdhtml/日复一日做好五件事轻松搞钱攻略.html
 https://www.60score.com/mdhtml/早起的鸟儿有虫吃，早起的虫儿被鸟吃：生活中的竞争与智慧.html
@@ -353,6 +359,7 @@ https://www.60score.com/mdhtml/未成年人玩手机有各种限制，要不要�
 https://www.60score.com/mdhtml/未来AI工具的突破方向：下一代智能将如何重塑世界.html
 https://www.60score.com/mdhtml/未来十年的发展机遇：开拓无限潜能.html
 https://www.60score.com/mdhtml/未来十年科技会有哪些突破？.html
+https://www.60score.com/mdhtml/未来教育技术的创新趋势.html
 https://www.60score.com/mdhtml/李白写完诗后会记得自己写的每一首吗？.html
 https://www.60score.com/mdhtml/树叶日落日扫背后的人生深意.html
 https://www.60score.com/mdhtml/树挪死人挪活：人生智慧的新解.html
@@ -478,6 +485,7 @@ https://www.60score.com/mdhtml/靠人不如靠自己：现代视角下的自我�
 https://www.60score.com/mdhtml/顺手牵羊新解：多视角下的行为探秘.html
 https://www.60score.com/mdhtml/风浪越大鱼越贵：于挑战处寻机遇与价值.html
 https://www.60score.com/mdhtml/风速多大能让雨滴击穿汽车挡风玻璃.html
+https://www.60score.com/mdhtml/饮食与运动：预防慢性疾病的两大法宝.html
 https://www.60score.com/mdhtml/香菇掉厕所了还能叫香菇吗？.html
 https://www.60score.com/mdhtml/马镫未发明时，骑兵如何作战？.html
 https://www.60score.com/mdhtml/高考满分750，冲击985的秘籍大揭秘.html
@@ -490,6 +498,7 @@ https://www.60score.com/tag/AI治理.html
 https://www.60score.com/tag/ChatGPT.html
 https://www.60score.com/tag/DeepSeek.html
 https://www.60score.com/tag/LED灯.html
+https://www.60score.com/tag/VR-AR.html
 https://www.60score.com/tag/markdown.html
 https://www.60score.com/tag/《西游记》.html
 https://www.60score.com/tag/一把手.html
@@ -598,6 +607,7 @@ https://www.60score.com/tag/休闲娱乐.html
 https://www.60score.com/tag/休闲时尚.html
 https://www.60score.com/tag/传播.html
 https://www.60score.com/tag/传统寓言.html
+https://www.60score.com/tag/传统理财方式.html
 https://www.60score.com/tag/传统观念.html
 https://www.60score.com/tag/传统银行业.html
 https://www.60score.com/tag/伦理争议.html
@@ -613,6 +623,7 @@ https://www.60score.com/tag/保险配置.html
 https://www.60score.com/tag/信任危机.html
 https://www.60score.com/tag/信息力量.html
 https://www.60score.com/tag/信息时代.html
+https://www.60score.com/tag/信息爆炸.html
 https://www.60score.com/tag/信息筛选.html
 https://www.60score.com/tag/信息管理.html
 https://www.60score.com/tag/倒立.html
@@ -815,6 +826,8 @@ https://www.60score.com/tag/团队合作.html
 https://www.60score.com/tag/团队组建.html
 https://www.60score.com/tag/国际赛事.html
 https://www.60score.com/tag/在线平台.html
+https://www.60score.com/tag/在线教育.html
+https://www.60score.com/tag/在线课程.html
 https://www.60score.com/tag/地外智慧生命.html
 https://www.60score.com/tag/地球.html
 https://www.60score.com/tag/地球引力.html
@@ -849,6 +862,7 @@ https://www.60score.com/tag/多元宇宙.html
 https://www.60score.com/tag/多态性.html
 https://www.60score.com/tag/多维思维.html
 https://www.60score.com/tag/多领域融合.html
+https://www.60score.com/tag/大数据.html
 https://www.60score.com/tag/大模型.html
 https://www.60score.com/tag/大气折射.html
 https://www.60score.com/tag/天平.html
@@ -1097,6 +1111,7 @@ https://www.60score.com/tag/感情.html
 https://www.60score.com/tag/感情处理.html
 https://www.60score.com/tag/感情纠葛.html
 https://www.60score.com/tag/感染风险.html
+https://www.60score.com/tag/慢性疾病.html
 https://www.60score.com/tag/成功之道.html
 https://www.60score.com/tag/成功人生.html
 https://www.60score.com/tag/成功因素.html
@@ -1143,9 +1158,11 @@ https://www.60score.com/tag/技能重塑.html
 https://www.60score.com/tag/投资.html
 https://www.60score.com/tag/投资决策.html
 https://www.60score.com/tag/投资心态.html
+https://www.60score.com/tag/投资收益.html
 https://www.60score.com/tag/投资方向.html
 https://www.60score.com/tag/投资机遇.html
 https://www.60score.com/tag/投资策略.html
+https://www.60score.com/tag/投资组合.html
 https://www.60score.com/tag/投资风险.html
 https://www.60score.com/tag/抖音爆款.html
 https://www.60score.com/tag/抗脆弱性.html
@@ -1189,6 +1206,7 @@ https://www.60score.com/tag/教育回报.html
 https://www.60score.com/tag/教育学习.html
 https://www.60score.com/tag/教育差异.html
 https://www.60score.com/tag/教育引导.html
+https://www.60score.com/tag/教育技术.html
 https://www.60score.com/tag/教育投资.html
 https://www.60score.com/tag/教育提升.html
 https://www.60score.com/tag/教育机会.html
@@ -1244,6 +1262,7 @@ https://www.60score.com/tag/斗地主.html
 https://www.60score.com/tag/斯诺克.html
 https://www.60score.com/tag/新offer.html
 https://www.60score.com/tag/新兴技术.html
+https://www.60score.com/tag/新兴金融科技.html
 https://www.60score.com/tag/新思维.html
 https://www.60score.com/tag/新手司机.html
 https://www.60score.com/tag/新欢作用.html
@@ -1271,6 +1290,7 @@ https://www.60score.com/tag/晚餐搭配.html
 https://www.60score.com/tag/智能写作助手.html
 https://www.60score.com/tag/智能化金融服务.html
 https://www.60score.com/tag/智能升级.html
+https://www.60score.com/tag/智能投顾.html
 https://www.60score.com/tag/智能教育.html
 https://www.60score.com/tag/智能生活.html
 https://www.60score.com/tag/智能设备.html
@@ -1566,6 +1586,7 @@ https://www.60score.com/tag/社交健康.html
 https://www.60score.com/tag/社交创新.html
 https://www.60score.com/tag/社交圈子.html
 https://www.60score.com/tag/社交媒体.html
+https://www.60score.com/tag/社交媒体影响.html
 https://www.60score.com/tag/社交媒体推广.html
 https://www.60score.com/tag/社交媒体焦虑.html
 https://www.60score.com/tag/社交心理.html
@@ -1652,6 +1673,7 @@ https://www.60score.com/tag/积极沟通.html
 https://www.60score.com/tag/积极生活态度.html
 https://www.60score.com/tag/积累沉淀.html
 https://www.60score.com/tag/称水.html
+https://www.60score.com/tag/移动支付.html
 https://www.60score.com/tag/程序员.html
 https://www.60score.com/tag/稳定性.html
 https://www.60score.com/tag/穷人富人理财差异.html
@@ -1714,6 +1736,7 @@ https://www.60score.com/tag/耐心毅力.html
 https://www.60score.com/tag/耳机保养.html
 https://www.60score.com/tag/职业压力.html
 https://www.60score.com/tag/职业发展.html
+https://www.60score.com/tag/职业技能.html
 https://www.60score.com/tag/职业规划.html
 https://www.60score.com/tag/职场与社会责任.html
 https://www.60score.com/tag/职场人际关系.html
@@ -1805,6 +1828,7 @@ https://www.60score.com/tag/药膳滋补.html
 https://www.60score.com/tag/营养与身高.html
 https://www.60score.com/tag/营养价值.html
 https://www.60score.com/tag/营养吸收.html
+https://www.60score.com/tag/营养均衡.html
 https://www.60score.com/tag/营养搭配.html
 https://www.60score.com/tag/蓝牙耳机.html
 https://www.60score.com/tag/薪资福利.html
@@ -1885,6 +1909,7 @@ https://www.60score.com/tag/贫困理解.html
 https://www.60score.com/tag/贫富差距.html
 https://www.60score.com/tag/费用安排.html
 https://www.60score.com/tag/贾宝玉.html
+https://www.60score.com/tag/资产配置.html
 https://www.60score.com/tag/资本运作.html
 https://www.60score.com/tag/资源分配.html
 https://www.60score.com/tag/资源利用.html
@@ -1923,6 +1948,7 @@ https://www.60score.com/tag/边界感.html
 https://www.60score.com/tag/过期.html
 https://www.60score.com/tag/运动与身高.html
 https://www.60score.com/tag/运动习惯.html
+https://www.60score.com/tag/运动保健.html
 https://www.60score.com/tag/运动员精神.html
 https://www.60score.com/tag/运动物理.html
 https://www.60score.com/tag/运动科学.html
@@ -2023,6 +2049,7 @@ https://www.60score.com/tag/食量计算.html
 https://www.60score.com/tag/饮食健康.html
 https://www.60score.com/tag/饮食建议.html
 https://www.60score.com/tag/饮食营养.html
+https://www.60score.com/tag/饮食预防.html
 https://www.60score.com/tag/香水品牌.html
 https://www.60score.com/tag/香菇.html
 https://www.60score.com/tag/香菇烹饪.html
