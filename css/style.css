@@ -519,8 +519,16 @@ button {
 
 /* 移动端隐藏日期 */
 @media (max-width: 768px) {
-  .article-category { display: none; }
+  .article-category {
+    display: none;
+  }
+
+  #article-list-md span {
+    display: none;
+
+  }
 }
+
 /* 确保在小屏幕上也能良好显示 */
 @media (max-width: 480px) {
   .game-score {
