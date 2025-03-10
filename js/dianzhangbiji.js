@@ -51,6 +51,7 @@ document.addEventListener('DOMContentLoaded', function () {
       const container = document.createElement('div'); // 创建一个容器
 
       const categoryText = document.createElement('span'); // 类别文本元素
+      categoryText.className = 'article-category';
       categoryText.textContent = article.category;
       categoryText.style.cursor = 'pointer'; // 改变鼠标指针形状，暗示可点击性
       categoryText.onclick = () => {

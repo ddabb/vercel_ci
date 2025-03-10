@@ -506,6 +506,8 @@ button {
   z-index: 1;
 }
 
+
+
 /* 标签文字截断保护 */
 .text-truncate {
   max-width: 80%;
@@ -514,6 +516,11 @@ button {
   text-overflow: ellipsis;
 }
 
+
+/* 移动端隐藏日期 */
+@media (max-width: 768px) {
+  .article-category { display: none; }
+}
 /* 确保在小屏幕上也能良好显示 */
 @media (max-width: 480px) {
   .game-score {
