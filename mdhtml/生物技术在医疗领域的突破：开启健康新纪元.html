@@ -24,8 +24,10 @@
   <script src="../js/clarity.js"></script>
 
   <!-- KaTeX CSS 和 JS 文件 -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.css" crossorigin="anonymous">
-  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.21/dist/katex.min.css" integrity="sha384-zh0CIslj+VczCZtlzBcjt5ppRcsAmDnRem7ESsYwWwg3m/OaJ2l4x7YBZl9Kxxib" crossorigin="anonymous">
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.21/dist/katex.min.js" integrity="sha384-Rma6DA2IPUwhNxmrB/7S3Tno0YY7sFu9WSYMCuulLhIqYSGZ2gKCJWIqhBWqMQfh" crossorigin="anonymous"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.21/dist/contrib/auto-render.min.js" integrity="sha384-hCXGrW6PitJEwbkoStFjeJxv+fSOOQKOPbJxSfM6G5sWZjAyWhXiTIIAmQqnlLlh" crossorigin="anonymous"
+  onload="renderMathInElement(document.body);"></script>
   
   <script>
     var _hmt = _hmt || [];
@@ -192,31 +194,7 @@ CAR - T细胞疗法是一种极具创新性的细胞免疫治疗方法。它的�
     </section>
   </div>
 </footer>
-  <!-- 手动初始化 KaTeX 渲染 -->
-  <script>
-    window.addEventListener('load', function () {
-      if (typeof katex !== 'undefined') {
-        document.querySelectorAll('p, div').forEach(function(el) {
-          try {
-            let text = el.innerHTML;
-            // 替换行内公式标记
-            text = text.replace(/\$(.*?)\$/g, function(match, group) {
-              return katex.renderToString(group, { displayMode: false });
-            });
-            // 替换展示公式标记
-            text = text.replace(/\$\$(.*?)\$\$/gs, function(match, group) {
-              return katex.renderToString(group, { displayMode: true });
-            });
-            el.innerHTML = text;
-          } catch (err) {
-            console.error('KaTeX render error:', err);
-          }
-        });
-      } else {
-        console.error('KaTeX is not properly initialized!');
-      }
-    });
-  </script>
+
 </body>
 
 </html>
