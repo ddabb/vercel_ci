@@ -9,8 +9,20 @@ const jsonFilePath = path.join(__dirname, 'jsons', 'goodlinks.json');
 let notFoundGoodsArticles = [];
 
 const converter = new showdown.Converter({
-  // 移除了针对公式的自定义扩展，允许MathJax直接处理$...$和$$...$$
+  extensions: [
+    {
+      type: 'lang',
+      regex: /(\$\$(.*?)\$\$)/g, // 匹配块级公式
+      replace: '<span class="math display">$2</span>'
+    },
+    {
+      type: 'lang',
+      regex: /(\$(.*?)\$)/g, // 匹配行内公式
+      replace: '<span class="math inline">$2</span>'
+    }
+  ]
 });
+
 
 async function readDirFile(filePath) {
   console.log(`Reading Markdown file: ${filePath}`);
