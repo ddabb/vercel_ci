@@ -38,14 +38,28 @@
   <script>
     window.MathJax = {
       tex: {
-        inlineMath: [['$', '$'], ['\$', '\$']],
-        displayMath: [['$$', '$$'], ['\$$', '\$$']],
+        inlineMath: [['$', '$'], ['\$', '\$']], // 默认内联数学分隔符
+        displayMath: [['$$', '$$'], ['\$', '\$']], // 默认显示风格数学分隔符
         processEscapes: true,
         processEnvironments: true
       },
       options: {
         renderActions: {
-          addMenu: []
+          find: [10, function (doc) {
+            for (const math of document.querySelectorAll('span.math')) {
+              if (math.classList.contains('display')) {
+                MathJax.texReset();
+                const text = math.textContent;
+                const html = MathJax.tex2chtml(text, { display: true });
+                math.replaceWith(html);
+              } else if (math.classList.contains('inline')) {
+                MathJax.texReset();
+                const text = math.textContent;
+                const html = MathJax.tex2chtml(text, { display: false });
+                math.replaceWith(html);
+              }
+            }
+          }, '']
         }
       }
     };
