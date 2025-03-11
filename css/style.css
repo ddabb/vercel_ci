@@ -1,3 +1,14 @@
+.scrolling-menu {
+  overflow-x: auto; /* 当内容超出容器宽度时显示滚动条 */
+  white-space: nowrap; /* 防止项目换行 */
+  -ms-overflow-style: none; /* 隐藏IE和Edge的滚动条 */
+  scrollbar-width: none; /* 隐藏Firefox的滚动条 */
+}
+
+.scrolling-menu::-webkit-scrollbar { /* 隐藏Chrome、Safari等WebKit浏览器的滚动条 */
+  display: none;
+}
+
 /* 通用样式 */
 body {
   font-family: Arial, sans-serif;
