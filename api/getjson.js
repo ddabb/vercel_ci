@@ -27,14 +27,17 @@ export default async function handler(request, response) {
           }
         });
       });
-
+    
       articles = data.files;
-
-      // 如果有人提供了关键词，我们就只给他们看包含关键词的文章
+    
+      // 如果有人提供了关键词，我们就只给他们看包含关键词的文章、类别或标签
       if (keyword) {
-        articles = articles.filter(article => {
-          return article.name.toLowerCase().includes(keyword.toLowerCase());
-        });
+        const lowerCaseKeyword = keyword.toLowerCase();
+        articles = articles.filter(article => 
+          article.name.toLowerCase().includes(lowerCaseKeyword) ||
+          article.category.toLowerCase().includes(lowerCaseKeyword) ||
+          (article.tags && article.tags.some(tag => tag.toLowerCase().includes(lowerCaseKeyword)))
+        );
       }
     } else if (callType === 'weixin') {
       const data = await new Promise((resolve, reject) => {
