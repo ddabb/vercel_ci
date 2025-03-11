@@ -1,17 +1,17 @@
 MathJax = {
   tex: {
-    inlineMath: [['$', '$'], ['\$', '\$']],
-    displayMath: [['$$', '$$'], ['\$$', '\$$']],
-    processEscapes: true,  // 启用转义符解析（如\_代替_）[3](@ref)
+    inlineMath: [['$', '$'], ['\\(', '\\)']],
+    displayMath: [['$$', '$$'], ['\\[', '\\]']],
+    processEscapes: true,  // 启用转义符解析（如\_代替_）
     macros: {
-      "\\text": "\\text{#1}"  // 支持中文文本标签[3,8](@ref)
+      "\\text": "\\text{#1}"  // 支持中文文本标签
     }
   },
   options: {
-    skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre'] // 避免干扰非公式内容[3](@ref)
+    skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre'] // 避免干扰非公式内容
   },
   svg: {
-    fontCache: 'global'  // 使用SVG渲染器提升兼容性[3,9](@ref)
+    fontCache: 'global'  // 使用SVG渲染器提升兼容性
   }
 };
 (function() {
