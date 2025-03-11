@@ -185,7 +185,7 @@
 就让它看看你藏在枕头下的电影票根——<br />
 那上面褪色的字迹、折痕里的眼泪、<br />
 还有永远对不齐的座位号，<br />
-才是爱情最真实的模样。</p>
+才是爱情最真实的模样。  </p>
                       <div class="qr-code mt-4">
                         <h5>扫描二维码查看</h5>
                         <widget-qrcode id="pageQrCode" template="heart" width="180" height="180"
@@ -234,9 +234,11 @@
 </footer>
       <!-- 确保 MathJax 在页面内容加载后渲染 -->
       <script>
-        document.addEventListener('DOMContentLoaded', function () {
-          if (MathJax && MathJax.typeset) {
-            MathJax.typeset(); // 确保 MathJax 已加载
+        window.addEventListener('load', function () {
+          if (MathJax && MathJax.typesetPromise) { // 确认MathJax和typesetPromise存在
+            MathJax.typesetPromise().catch(function (err) {
+              console.error('MathJax 渲染失败: ' + err.message);
+            });
           } else {
             console.error('MathJax 未正确初始化！');
           }

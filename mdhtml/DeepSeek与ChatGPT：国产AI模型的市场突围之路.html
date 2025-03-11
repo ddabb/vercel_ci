@@ -236,9 +236,11 @@ ChatGPT则依赖成熟的订阅制生态，拥有超百万开发者资源，但�
 </footer>
       <!-- 确保 MathJax 在页面内容加载后渲染 -->
       <script>
-        document.addEventListener('DOMContentLoaded', function () {
-          if (MathJax && MathJax.typeset) {
-            MathJax.typeset(); // 确保 MathJax 已加载
+        window.addEventListener('load', function () {
+          if (MathJax && MathJax.typesetPromise) { // 确认MathJax和typesetPromise存在
+            MathJax.typesetPromise().catch(function (err) {
+              console.error('MathJax 渲染失败: ' + err.message);
+            });
           } else {
             console.error('MathJax 未正确初始化！');
           }

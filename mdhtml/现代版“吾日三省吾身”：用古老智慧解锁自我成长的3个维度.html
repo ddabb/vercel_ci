@@ -272,9 +272,11 @@ Observe（观察决策场景）→ Orient（定位情绪坐标）→ Decide（�
 </footer>
       <!-- 确保 MathJax 在页面内容加载后渲染 -->
       <script>
-        document.addEventListener('DOMContentLoaded', function () {
-          if (MathJax && MathJax.typeset) {
-            MathJax.typeset(); // 确保 MathJax 已加载
+        window.addEventListener('load', function () {
+          if (MathJax && MathJax.typesetPromise) { // 确认MathJax和typesetPromise存在
+            MathJax.typesetPromise().catch(function (err) {
+              console.error('MathJax 渲染失败: ' + err.message);
+            });
           } else {
             console.error('MathJax 未正确初始化！');
           }

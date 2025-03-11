@@ -181,7 +181,7 @@
 <li><strong>避免生冷辛辣</strong>：产后应避免食用过于生冷、辛辣、刺激性的食物，以免刺激出血或影响身体恢复。</li>
 <li><strong>适量饮水</strong>：产后应适量饮水，保持体内水分平衡，有助于乳汁分泌和身体恢复。</li>
 </ul>
-<p>通过以上合理的饮食安排，新妈妈们可以更好地促进身体恢复，提高乳汁质量，为宝宝的健康成长打下坚实的基础。</p>
+<p>通过以上合理的饮食安排，新妈妈们可以更好地促进身体恢复，提高乳汁质量，为宝宝的健康成长打下坚实的基础。  </p>
                       <div class="qr-code mt-4">
                         <h5>扫描二维码查看</h5>
                         <widget-qrcode id="pageQrCode" template="heart" width="180" height="180"
@@ -238,9 +238,11 @@
 </footer>
       <!-- 确保 MathJax 在页面内容加载后渲染 -->
       <script>
-        document.addEventListener('DOMContentLoaded', function () {
-          if (MathJax && MathJax.typeset) {
-            MathJax.typeset(); // 确保 MathJax 已加载
+        window.addEventListener('load', function () {
+          if (MathJax && MathJax.typesetPromise) { // 确认MathJax和typesetPromise存在
+            MathJax.typesetPromise().catch(function (err) {
+              console.error('MathJax 渲染失败: ' + err.message);
+            });
           } else {
             console.error('MathJax 未正确初始化！');
           }

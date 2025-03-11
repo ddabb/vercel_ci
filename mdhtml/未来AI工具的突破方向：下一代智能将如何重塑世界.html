@@ -199,7 +199,7 @@
 <p>谷歌DeepMind的蛋白质折叠预测AI，现已与材料科学团队合作，3个月内发现了17种潜在超导材料结构。  </p>
 <hr />
 <p><strong>结语：智能新大陆的探险</strong><br />
-当AI开始理解物理定律、感知多维信息并参与复杂决策，人类文明的进化将进入新纪元。这场变革不仅是技术的迭代，更是认知框架的重构——从医疗教育到艺术创作，每个领域都将诞生新的协作范式。未来的AI工具不会替代人类，而是成为扩展认知边疆的“数字伙伴”，帮助我们探索那些曾被视作不可能的问题解决方案。</p>
+当AI开始理解物理定律、感知多维信息并参与复杂决策，人类文明的进化将进入新纪元。这场变革不仅是技术的迭代，更是认知框架的重构——从医疗教育到艺术创作，每个领域都将诞生新的协作范式。未来的AI工具不会替代人类，而是成为扩展认知边疆的“数字伙伴”，帮助我们探索那些曾被视作不可能的问题解决方案。  </p>
                       <div class="qr-code mt-4">
                         <h5>扫描二维码查看</h5>
                         <widget-qrcode id="pageQrCode" template="heart" width="180" height="180"
@@ -267,9 +267,11 @@
 </footer>
       <!-- 确保 MathJax 在页面内容加载后渲染 -->
       <script>
-        document.addEventListener('DOMContentLoaded', function () {
-          if (MathJax && MathJax.typeset) {
-            MathJax.typeset(); // 确保 MathJax 已加载
+        window.addEventListener('load', function () {
+          if (MathJax && MathJax.typesetPromise) { // 确认MathJax和typesetPromise存在
+            MathJax.typesetPromise().catch(function (err) {
+              console.error('MathJax 渲染失败: ' + err.message);
+            });
           } else {
             console.error('MathJax 未正确初始化！');
           }

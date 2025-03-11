@@ -203,7 +203,7 @@ $$总成本=固定成本×（1+波动率）^{时间}$$<br />
 <ol>
 <li>每月参加1次行业技术峰会  </li>
 <li>每季度评估现有技术栈替代方案  </li>
-<li>年度研发预算中预留15%用于前沿技术实验</li>
+<li>年度研发预算中预留15%用于前沿技术实验  </li>
 </ol>
                       <div class="qr-code mt-4">
                         <h5>扫描二维码查看</h5>
@@ -276,9 +276,11 @@ $$总成本=固定成本×（1+波动率）^{时间}$$<br />
 </footer>
       <!-- 确保 MathJax 在页面内容加载后渲染 -->
       <script>
-        document.addEventListener('DOMContentLoaded', function () {
-          if (MathJax && MathJax.typeset) {
-            MathJax.typeset(); // 确保 MathJax 已加载
+        window.addEventListener('load', function () {
+          if (MathJax && MathJax.typesetPromise) { // 确认MathJax和typesetPromise存在
+            MathJax.typesetPromise().catch(function (err) {
+              console.error('MathJax 渲染失败: ' + err.message);
+            });
           } else {
             console.error('MathJax 未正确初始化！');
           }

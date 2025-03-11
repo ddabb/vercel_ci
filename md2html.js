@@ -14,18 +14,16 @@ const converter = new showdown.Converter({
       type: 'lang',
       name: 'math-display',
       regex: /\$\$(.*?)\$\$/g, // 块级公式（独立成行）
-      replace: '$$\\n$1\\n$$', // 直接返回原始公式标记，不添加任何容器
-      filter: function (text) {
-        return text.replace(/^\s+|\s+$/g, ''); // 去除首尾空格
+      replace: function (match, text) {
+        return `<p>$$${text.trim()}$$</p>\n`; // 使用<p>标签包裹，并去除首尾空格
       }
     },
     {
       type: 'lang',
       name: 'math-inline',
       regex: /\$(.*?)\$/g, // 行内公式
-      replace: '$1', // 直接返回公式内容，不添加容器
-      filter: function (text) {
-        return text.replace(/^\s+|\s+$/g, '');
+      replace: function (match, text) {
+        return `\$${text.trim()}\$`; // 使用$和$包裹，更适合MathJax
       }
     }
   ],

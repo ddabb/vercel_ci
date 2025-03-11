@@ -189,7 +189,7 @@
 <li><strong>社会层面</strong>：建立“认知素养”教育体系，在中小学阶段开设逻辑谬误识别、证据评估等课程，从根源减少自欺行为。</li>
 </ol>
 <p><strong>结语</strong><br />
-破解“掩耳盗铃”困局，本质是一场认知革命。当我们学会用显微镜审视自身局限，用望远镜观察行为后果，那些自欺的迷雾自会消散。正如《吕氏春秋》所言：“恶己自闻之，悖矣”——真正的进步，始于对每个铃声的坦然倾听。</p>
+破解“掩耳盗铃”困局，本质是一场认知革命。当我们学会用显微镜审视自身局限，用望远镜观察行为后果，那些自欺的迷雾自会消散。正如《吕氏春秋》所言：“恶己自闻之，悖矣”——真正的进步，始于对每个铃声的坦然倾听。  </p>
                       <div class="qr-code mt-4">
                         <h5>扫描二维码查看</h5>
                         <widget-qrcode id="pageQrCode" template="heart" width="180" height="180"
@@ -246,9 +246,11 @@
 </footer>
       <!-- 确保 MathJax 在页面内容加载后渲染 -->
       <script>
-        document.addEventListener('DOMContentLoaded', function () {
-          if (MathJax && MathJax.typeset) {
-            MathJax.typeset(); // 确保 MathJax 已加载
+        window.addEventListener('load', function () {
+          if (MathJax && MathJax.typesetPromise) { // 确认MathJax和typesetPromise存在
+            MathJax.typesetPromise().catch(function (err) {
+              console.error('MathJax 渲染失败: ' + err.message);
+            });
           } else {
             console.error('MathJax 未正确初始化！');
           }

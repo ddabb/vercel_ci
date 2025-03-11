@@ -167,7 +167,7 @@ DeepSeek近年来凭借其AI大模型技术在全球范围内引发关注。此�
 <hr />
 <h2 id="-2"><strong>未来展望：技术普惠与全球话语权</strong></h2>
 <p>上海作为中国人工智能产业的高地，正通过“模速空间”等生态社区加速大模型产业化。DeepSeek的参与，不仅强化了上海在全球AI领域的竞争力，也为中国技术走向世界提供了新路径。  </p>
-<p>正如行业观察者所言，AI的未来不仅是实验室的突破，更是技术与场景的“双向奔赴”。2025全球开发者先锋大会上，DeepSeek的技术前瞻或将揭示一个更开放、更协同的智能时代——从代码开发到商业落地，每一步都指向无限可能。</p>
+<p>正如行业观察者所言，AI的未来不仅是实验室的突破，更是技术与场景的“双向奔赴”。2025全球开发者先锋大会上，DeepSeek的技术前瞻或将揭示一个更开放、更协同的智能时代——从代码开发到商业落地，每一步都指向无限可能。  </p>
                       <div class="qr-code mt-4">
                         <h5>扫描二维码查看</h5>
                         <widget-qrcode id="pageQrCode" template="heart" width="180" height="180"
@@ -243,9 +243,11 @@ DeepSeek近年来凭借其AI大模型技术在全球范围内引发关注。此�
 </footer>
       <!-- 确保 MathJax 在页面内容加载后渲染 -->
       <script>
-        document.addEventListener('DOMContentLoaded', function () {
-          if (MathJax && MathJax.typeset) {
-            MathJax.typeset(); // 确保 MathJax 已加载
+        window.addEventListener('load', function () {
+          if (MathJax && MathJax.typesetPromise) { // 确认MathJax和typesetPromise存在
+            MathJax.typesetPromise().catch(function (err) {
+              console.error('MathJax 渲染失败: ' + err.message);
+            });
           } else {
             console.error('MathJax 未正确初始化！');
           }

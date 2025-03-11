@@ -157,7 +157,7 @@
 杭州某医疗AI公司给出参考答案：他们的问诊系统既调用DeepSeek生成初诊方案，又强制医生人工复核，误诊率下降37%（《柳叶刀》2024临床数据）。这种“AI+专家”的协同模式，正在成为行业新范式。  </p>
 <p>监管的达摩克利斯之剑已然悬空。欧盟新规要求AI生成内容必须标注数据来源，这或许能解开“开源模型与数据垄断”的死结。但对普通人而言，更紧迫的是建立新生存技能：永远对AI答案保持怀疑，像验证谣言一样交叉核对信源。  </p>
 <p><strong>结语：你站在哪一边？</strong><br />
-当百度搜索广告收入同比下滑4%时，微信正把搜索框变成连接智能硬件的超级入口。这场没有硝烟的战争里，没有中立者——要么驾驭AI重构工作流，要么被算法驯化成“搜索难民”。</p>
+当百度搜索广告收入同比下滑4%时，微信正把搜索框变成连接智能硬件的超级入口。这场没有硝烟的战争里，没有中立者——要么驾驭AI重构工作流，要么被算法驯化成“搜索难民”。  </p>
                       <div class="qr-code mt-4">
                         <h5>扫描二维码查看</h5>
                         <widget-qrcode id="pageQrCode" template="heart" width="180" height="180"
@@ -210,9 +210,11 @@
 </footer>
       <!-- 确保 MathJax 在页面内容加载后渲染 -->
       <script>
-        document.addEventListener('DOMContentLoaded', function () {
-          if (MathJax && MathJax.typeset) {
-            MathJax.typeset(); // 确保 MathJax 已加载
+        window.addEventListener('load', function () {
+          if (MathJax && MathJax.typesetPromise) { // 确认MathJax和typesetPromise存在
+            MathJax.typesetPromise().catch(function (err) {
+              console.error('MathJax 渲染失败: ' + err.message);
+            });
           } else {
             console.error('MathJax 未正确初始化！');
           }

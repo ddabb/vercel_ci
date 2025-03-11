@@ -154,7 +154,7 @@
 生活中，不可能没有矛盾冲突的。经过某次吵架，以后就再也不会吵架了，这只存在幻想的生活中。但是男人应该谨记一点：永远不要在女人情绪上头的时候去讲道理。永远不要在女人情绪上头的时候去讲道理。永远不要在女人情绪上头的时候去讲道理。  </p>
 <h2 id="-2">健康上</h2>
 <p>尽管没有抽烟，喝酒等习惯；作息不规律，缺乏运动，吃东西也没有特别的忌口和控制，一年下来，体重涨了2~3斤左右。也实打实的感受到了身体素质的下降。尽管早已不再是年轻小伙子，还是可以通过一些运动来实现“逆熵”。健康作息，刻不容缓。完全没必要等到确诊一些不可逆的疾病的时候，再悔不当初。  </p>
-<p>家业家业，成家立业。2024年实现了成家，2025年想做的就会更多的围绕孕育生命和事业方面去发展。限于篇幅和隐私等原因，具体措施不表。等2025年年尾的时候，再做一下回首2025，希望能够诸事顺遂吧。</p>
+<p>家业家业，成家立业。2024年实现了成家，2025年想做的就会更多的围绕孕育生命和事业方面去发展。限于篇幅和隐私等原因，具体措施不表。等2025年年尾的时候，再做一下回首2025，希望能够诸事顺遂吧。  </p>
                       <div class="qr-code mt-4">
                         <h5>扫描二维码查看</h5>
                         <widget-qrcode id="pageQrCode" template="heart" width="180" height="180"
@@ -211,9 +211,11 @@
 </footer>
       <!-- 确保 MathJax 在页面内容加载后渲染 -->
       <script>
-        document.addEventListener('DOMContentLoaded', function () {
-          if (MathJax && MathJax.typeset) {
-            MathJax.typeset(); // 确保 MathJax 已加载
+        window.addEventListener('load', function () {
+          if (MathJax && MathJax.typesetPromise) { // 确认MathJax和typesetPromise存在
+            MathJax.typesetPromise().catch(function (err) {
+              console.error('MathJax 渲染失败: ' + err.message);
+            });
           } else {
             console.error('MathJax 未正确初始化！');
           }
