@@ -37,8 +37,12 @@
   </script>
   <script>
     MathJax = {
+      // v3 标准配置格式
       loader: { load: ['input/tex', 'output/chtml'] },
-      tex: { inlineMath: [['$', '$'], ['\\$', '\\$']] }
+      tex: {
+        inlineMath: [['$', '$'], ['\\$', '\\$']], // 行内公式
+        displayMath: [['$$', '$$'], ['\\$', '\\$']] // 块级公式
+      }
     };
   </script>
 
@@ -219,9 +223,11 @@ CAR - T细胞疗法是一种极具创新性的细胞免疫治疗方法。它的�
 </footer>
       <!-- 确保 MathJax 在页面内容加载后渲染 -->
       <script>
-        document.addEventListener("DOMContentLoaded", function () {
-          if (MathJax) {
-            MathJax.typeset();
+        document.addEventListener('DOMContentLoaded', function () {
+          if (MathJax && MathJax.typeset) {
+            MathJax.typeset(); // 确保 MathJax 已加载
+          } else {
+            console.error('MathJax 未正确初始化！');
           }
         });
       </script>
