@@ -8,7 +8,20 @@ const yaml = require('js-yaml');
 const jsonFilePath = path.join(__dirname, 'jsons', 'goodlinks.json');
 let notFoundGoodsArticles = [];
 
-const converter = new showdown.Converter();
+const converter = new showdown.Converter({
+  extensions: [
+    {
+      type: 'lang',
+      regex: /(\$\$(.*?)\$\$)/g, // 匹配块级公式
+      replace: '<span class="math display">$2</span>'
+    },
+    {
+      type: 'lang',
+      regex: /(\$(.*?)\$)/g, // 匹配行内公式
+      replace: '<span class="math inline">$2</span>'
+    }
+  ]
+});
 
 async function readDirFile(filePath) {
   console.log(`Reading Markdown file: ${filePath}`);
