@@ -1,13 +1,22 @@
+/* 为滚动菜单设置样式 */
 .scrolling-menu {
-  overflow-x: auto; /* 当内容超出容器宽度时显示滚动条 */
-  white-space: nowrap; /* 防止项目换行 */
-  -ms-overflow-style: none; /* 隐藏IE和Edge的滚动条 */
-  scrollbar-width: none; /* 隐藏Firefox的滚动条 */
+  /* 强制水平滚动条在内容超出时显示 */
+  overflow-x: auto !important;
+  /* 防止内容换行 */
+  white-space: nowrap !important;
+  /* 设置最小宽度，确保有足够的空间展示所有内容 */
+  min-width: 100%;
+  /* 隐藏IE和Edge的滚动条 */
+  -ms-overflow-style: none !important;
+  /* 隐藏Firefox的滚动条 */
+  scrollbar-width: none !important;
 }
 
-.scrolling-menu::-webkit-scrollbar { /* 隐藏Chrome、Safari等WebKit浏览器的滚动条 */
-  display: none;
+/* 特定于WebKit浏览器（如Chrome, Safari）隐藏滚动条但允许滚动 */
+.scrolling-menu::-webkit-scrollbar {
+  display: none !important; /* 隐藏滚动条 */
 }
+
 
 /* 通用样式 */
 body {
