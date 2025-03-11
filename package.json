@@ -20,6 +20,7 @@
     "idcard-tool": "^1.0.1",
     "js-yaml": "^4.1.0",
     "marked": "^13.0.3",
+    "mathjax": "^3.2.2",
     "node-fetch": "^3.3.2",
     "p-limit": "^6.2.0",
     "p-map": "^7.0.2",
