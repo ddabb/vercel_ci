@@ -124,8 +124,8 @@ try {
       };
     });
 
-  // 按创建时间排序
-  mdFiles.sort((a, b) => b.birthtime - a.birthtime);
+  // 按修改时间排序
+  mdFiles.sort((a, b) => b.updateTime - a.updateTime);
   mdFiles.forEach((file, index) => file.order = index + 1);
   // 生成统计数据
   const taxonomy = {
