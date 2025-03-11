@@ -8,34 +8,59 @@ const yaml = require('js-yaml');
 const jsonFilePath = path.join(__dirname, 'jsons', 'goodlinks.json');
 let notFoundGoodsArticles = [];
 
-// 常量定义
-const TEMP_UNDERSCORE = '\uFFF0'; // 显式命名占位符
-const BLOCK_FORMULA_REGEX = /(?<!\\)\$\$((?:\\.|[^$\n])+?)(?<!\\)\$\$/g;
-const INLINE_FORMULA_REGEX = /(?<!\\)\$((?:\\.|[^$\n])+?)(?<!\\)\$/g;
 
-// 公式保护函数
+// 使用双重占位符策略
+const PLACEHOLDERS = {
+  BACKSLASH: '\uE001',  // Unicode私有区字符
+  UNDERSCORE: '\uE002'
+};
+
+// 强化版公式匹配正则
+const FORMULA_REGEX = {
+  block: /(?<!\\)\$\$([\s\S]*?)\$\$(?!\\)/g,
+  inline: /(?<!\\)\$((?:\\\$|\\[^$]|[^$])+?)\$(?!\\)/g
+};
+
+// 预处理：保护公式内的特殊符号
 function protectFormulas(text) {
   // 处理块公式
-  let protected = text.replace(BLOCK_FORMULA_REGEX, (match, content) => {
-    return `$$${content.replace(/_/g, TEMP_UNDERSCORE)}$$`;
+  let processed = text.replace(FORMULA_REGEX.block, (m, content) => {
+    return '$$' + content
+      .replace(/\\/g, PLACEHOLDERS.BACKSLASH)  // 先保护反斜杠
+      .replace(/_/g, PLACEHOLDERS.UNDERSCORE) + '$$';
   });
+
   // 处理行内公式
-  protected = protected.replace(INLINE_FORMULA_REGEX, (match, content) => {
-    return `$${content.replace(/_/g, TEMP_UNDERSCORE)}$`;
+  processed = processed.replace(FORMULA_REGEX.inline, (m, content) => {
+    return '$' + content
+      .replace(/\\/g, PLACEHOLDERS.BACKSLASH)
+      .replace(/_/g, PLACEHOLDERS.UNDERSCORE) + '$';
   });
-  return protected;
+
+  return processed;
 }
 
-// 公式恢复函数
+// 后处理：恢复特殊符号
 function restoreFormulas(html) {
-  return html.replace(/(\$\$?)(.*?)\1/g, (match, delim, content) => {
-    return `${delim}${content.replace(new RegExp(TEMP_UNDERSCORE, 'g'), '_')}${delim}`;
-  });
+  return html
+    // 恢复块公式
+    .replace(/<p>\$\$([\s\S]*?)\$\$<\/p>/g, (m, content) => {
+      return `<p>$$${content
+        .replace(new RegExp(PLACEHOLDERS.UNDERSCORE, 'g'), '_')
+        .replace(new RegExp(PLACEHOLDERS.BACKSLASH, 'g'), '\\')}$$</p>`;
+    })
+    // 恢复行内公式
+    .replace(/\$([\s\S]*?)\$/g, (m, content) => {
+      return `$${content
+        .replace(new RegExp(PLACEHOLDERS.UNDERSCORE, 'g'), '_')
+        .replace(new RegExp(PLACEHOLDERS.BACKSLASH, 'g'), '\\')}$`;
+    });
 }
 
 // 配置转换器
 const converter = new showdown.Converter({
   literalMidWordUnderscores: true,
+  backslashEscapesHTMLTags: false,
   extensions: [{
     type: 'lang',
     filter: protectFormulas
