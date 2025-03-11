@@ -14,7 +14,7 @@ const converter = new showdown.Converter({
       type: 'lang',
       name: 'math-display',
       regex: /\$\$(.*?)\$\$/g, // 块级公式（独立成行）
-      replace: '<span class="math display">\n$$\n$1\n$$\n</span>', // 添加换行符提升可读性
+      replace: '$$\\n$1\\n$$', // 直接返回原始公式标记，不添加任何容器
       filter: function (text) {
         return text.replace(/^\s+|\s+$/g, ''); // 去除首尾空格
       }
@@ -23,7 +23,7 @@ const converter = new showdown.Converter({
       type: 'lang',
       name: 'math-inline',
       regex: /\$(.*?)\$/g, // 行内公式
-      replace: '<span class="math inline">$1</span>',
+      replace: '$1', // 直接返回公式内容，不添加容器
       filter: function (text) {
         return text.replace(/^\s+|\s+$/g, '');
       }
@@ -35,7 +35,6 @@ const converter = new showdown.Converter({
     });
   }
 });
-
 
 async function readDirFile(filePath) {
   console.log(`Reading Markdown file: ${filePath}`);

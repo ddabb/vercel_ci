@@ -24,7 +24,7 @@
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" crossorigin="anonymous"></script>
   <script src="../js/clarity.js"></script>
-  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <script id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/widget-qrcode@1.0.4/dist/widget-qrcode.min.js"></script>
   <script>
     var _hmt = _hmt || [];
@@ -36,33 +36,9 @@
     })();
   </script>
   <script>
-    window.MathJax = {
-      tex: {
-        inlineMath: [['$', '$'], ['\\$', '\\$']], // 保留原始行内公式标识
-        displayMath: [['$$', '$$'], ['\\$', '\\$']], // 保留原始块级公式标识
-        processEscapes: true,
-        processEnvironments: true
-      },
-      options: {
-        renderActions: {
-          find: [10, function (doc) {
-            // 优先处理显式标注的公式
-            for (const math of document.querySelectorAll('.math')) {
-              const isDisplay = math.classList.contains('display');
-              const isInline = math.classList.contains('inline');
-
-              if (isDisplay || isInline) {
-                const text = math.textContent;
-                const html = isDisplay
-                  ? MathJax.tex2chtml(text, { display: true })
-                  : MathJax.tex2chtml(text, { display: false });
-
-                math.replaceWith(html);
-              }
-            }
-          }, '']
-        }
-      }
+    MathJax = {
+      loader: { load: ['input/tex', 'output/chtml'] },
+      tex: { inlineMath: [['$', '$'], ['\\$', '\\$']] }
     };
   </script>
 
@@ -167,17 +143,25 @@
 <p>想象一下这样一个震撼的场景：地球上所有的枪支在同一时刻同时开火，那会是怎样一番景象？地球是否会因此而移动？这个问题充满了奇思妙想，同时也牵扯到物理学、天文学和地球科学等诸多领域的知识。今天，咱们就来好好探讨一下这个假设情景可能带来的后果。</p>
 <h2 id="-2">物理学视角：动量守恒定律</h2>
 <p>在物理学里，有一个非常重要的定律——动量守恒定律。简单来说，在一个封闭系统当中，总动量始终保持不变。地球以及所有的枪支就可以看作是一个封闭系统。</p>
-<p>咱们来具体分析一下。假设地球上存在数量为 $N$ 的枪支，每支枪的质量是 $m$，子弹质量为 $m<em>b$，子弹射出的速度为 $v</em>b$，而地球的质量则是 $M$。</p>
+<p>咱们来具体分析一下。假设地球上存在数量为 $N$ 的枪支，每支枪的质量是 $m<em>{\text{bullet}}$，子弹质量为 $m</em>{\text{bullet}}$，子弹射出的速度为 $v<em>b$，而地球的质量则是 $M</em>{\text{Earth}}$。</p>
 <p>当所有枪支同时开火的瞬间，子弹会获得一个向前的动量，这个总动量可以表示为：</p>
-<p>$$P<em>{\text{子弹}} = N \cdot m</em>b \cdot v_b$$</p>
+<p>$$
+P<em>{\text{子弹}} = N \cdot m</em>{\text{bullet}} \cdot v_b
+$$</p>
 <p>根据动量守恒定律，地球和子弹组成的这个系统总动量在开火前后是不会改变的。所以，地球必然会获得一个与子弹总动量大小相等、方向相反的动量，即：</p>
-<p>$$P<em>{\text{地球}} = -P</em>{\text{子弹}}$$</p>
+<p>$$
+P<em>{\text{地球}} = -P</em>{\text{子弹}}
+$$</p>
 <p>再根据牛顿第二定律，地球就会产生一个加速度 $a$，计算公式为：</p>
-<p>$$a = \frac{P<em>{\text{地球}}}{M} = -\frac{N \cdot m</em>b \cdot v_b}{M}$$</p>
+<p>$$
+a = -\frac{N \cdot m<em>{\text{bullet}} \cdot v</em>b}{M_{\text{Earth}}}
+$$</p>
 <h2 id="-3">实际影响：地球的微小移动</h2>
-<p>地球的质量 $M$ 那可是极其巨大的，大约为 $5.972 \times 10^{24}$ 公斤。不过呢，如果全球枪支的数量 $N$ 足够多，子弹的速度 $v_b$ 也足够快，地球确实会得到一个极其微小的加速度。</p>
+<p>地球的质量 $M<em>{\text{Earth}}$ 那可是极其巨大的，大约为 $5.972 \times 10^{24}$ 公斤。不过呢，如果全球枪支的数量 $N$ 足够多，子弹的速度 $v</em>b$ 也足够快，地球确实会得到一个极其微小的加速度。</p>
 <p>咱们不妨假设一下具体的数据，假如全球有 10 亿支枪，每支枪的子弹质量是 0.01 公斤，子弹速度达到 800 米/秒，那么地球所获得的加速度为：</p>
-<p>$$a = -\frac{10^9 \cdot 0.01 \cdot 800}{5.972 \times 10^{24}} \approx -1.34 \times 10^{-14} \, \text{m/s}^2$$</p>
+<p>$$
+a = -\frac{10^9 \times 0.01 \times 800}{5.972 \times 10^{24}} = -\frac{8 \times 10^{10}}{5.972 \times 10^{24}} \approx -1.34 \times 10^{-14} \, \text{m/s}^2
+$$</p>
 <p>可以看到，这个加速度实在是太小了，小到几乎可以忽略不计的程度。就算经过很长很长的时间，地球因为这个加速度而产生的移动距离也会非常非常有限。</p>
 <h2 id="-4">天文学视角：地球轨道的变化</h2>
 <p>从天文学的角度去看，地球围绕太阳公转的轨道是由太阳的引力所决定的。地球轨道的变化主要是受到太阳引力以及行星之间相互作用的影响。</p>
@@ -245,8 +229,8 @@
       <!-- 确保 MathJax 在页面内容加载后渲染 -->
       <script>
         document.addEventListener("DOMContentLoaded", function () {
-          if (window.MathJax) {
-            window.MathJax.typeset();
+          if (MathJax) {
+            MathJax.typeset();
           }
         });
       </script>

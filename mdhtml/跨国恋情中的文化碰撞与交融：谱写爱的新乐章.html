@@ -24,7 +24,7 @@
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" crossorigin="anonymous"></script>
   <script src="../js/clarity.js"></script>
-  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <script id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/widget-qrcode@1.0.4/dist/widget-qrcode.min.js"></script>
   <script>
     var _hmt = _hmt || [];
@@ -36,33 +36,9 @@
     })();
   </script>
   <script>
-    window.MathJax = {
-      tex: {
-        inlineMath: [['$', '$'], ['\\$', '\\$']], // 保留原始行内公式标识
-        displayMath: [['$$', '$$'], ['\\$', '\\$']], // 保留原始块级公式标识
-        processEscapes: true,
-        processEnvironments: true
-      },
-      options: {
-        renderActions: {
-          find: [10, function (doc) {
-            // 优先处理显式标注的公式
-            for (const math of document.querySelectorAll('.math')) {
-              const isDisplay = math.classList.contains('display');
-              const isInline = math.classList.contains('inline');
-
-              if (isDisplay || isInline) {
-                const text = math.textContent;
-                const html = isDisplay
-                  ? MathJax.tex2chtml(text, { display: true })
-                  : MathJax.tex2chtml(text, { display: false });
-
-                math.replaceWith(html);
-              }
-            }
-          }, '']
-        }
-      }
+    MathJax = {
+      loader: { load: ['input/tex', 'output/chtml'] },
+      tex: { inlineMath: [['$', '$'], ['\\$', '\\$']] }
     };
   </script>
 
@@ -247,8 +223,8 @@
       <!-- 确保 MathJax 在页面内容加载后渲染 -->
       <script>
         document.addEventListener("DOMContentLoaded", function () {
-          if (window.MathJax) {
-            window.MathJax.typeset();
+          if (MathJax) {
+            MathJax.typeset();
           }
         });
       </script>
