@@ -4,12 +4,6 @@ const path = require('path');
 const showdown = require('showdown');
 const ejs = require('ejs');
 const yaml = require('js-yaml');
-const MarkdownIt = require('markdown-it');
-const mkdt = new MarkdownIt({
-    html: true,
-    linkify: true,
-    typographer: true
-}).use(require('markdown-it-katex')).use(require('markdown-it-multimd-table'));
 // 新增：引入用于读取JSON文件的fs模块
 const jsonFilePath = path.join(__dirname, 'jsons', 'goodlinks.json');
 let notFoundGoodsArticles = [];
@@ -60,54 +54,53 @@ const extractFrontMatter = (content) => {
 };
 
 // 整合型转换函数（避免重复处理）
-async function convertMarkdownToHtml(markdownContent, stats) {
+async function convertMarkdownToHtml(markdownContent,stats) {
   const { metadata, cleanedContent } = extractFrontMatter(markdownContent);
   let goodLinksData = {};
-  
   try {
-      // 读取 goodlinks.json 文件
-      const jsonData = await fs.readFile(jsonFilePath, 'utf8');
-      goodLinksData = JSON.parse(jsonData);
+    const jsonData = await readDirFile(jsonFilePath);
+    goodLinksData = JSON.parse(jsonData);
   } catch (error) {
-      console.error(`Error reading or parsing goodlinks.json: ${error.message}`);
+    console.error(`Error reading or parsing goodlinks.json: ${error.message}`);
   }
+
 
   // 构建 goodsinfo 对象
   let goodsInfo = {};
   if (metadata.goodsName) {
-      const targetGood = goodLinksData.find(good => good.name.trimEnd() === metadata.goodsName.trimEnd());
-      if (targetGood) {
-          goodsInfo = {
-              name: targetGood.name,
-              link: targetGood.link,
-              picLink: `https://${targetGood.picLink}`, // 追加 https:// 前缀
-              monthSale: targetGood.monthSale,
-              unitprice: targetGood.unitprice,
-              handPrice: targetGood.handPrice,
-              showurl: targetGood.showurl
-          };
-      } else {
-          console.error(`没有找到商品信息：${metadata.goodsName}`);
-          // 将找不到商品链接的文章信息添加到notFoundGoodsArticles数组中
-          notFoundGoodsArticles.push({
-              title: metadata.title || '无标题',
-              description: metadata.description || '',
-              goodsName: metadata.goodsName
-          });
-      }
+    const targetGood = goodLinksData.find(good => good.name.trimEnd() === metadata.goodsName.trimEnd());
+    if (targetGood) {
+      goodsInfo = {
+        name: targetGood.name,
+        link: targetGood.link,
+        picLink: `https://${targetGood.picLink}`, // 追加 https:// 前缀
+        monthSale: targetGood.monthSale,
+        unitprice: targetGood.unitprice,
+        handPrice: targetGood.handPrice,
+        showurl: targetGood.showurl
+      };
+    } else {
+      console.error(`没有找到商品信息：${metadata.goodsName}`);
+      // 将找不到商品链接的文章信息添加到notFoundGoodsArticles数组中
+      notFoundGoodsArticles.push({
+        title: metadata.title || '无标题',
+        description: metadata.description || '',
+        goodsName: metadata.goodsName
+      });
+    }
   }
 
-  // 使用 markdown-it 处理 Markdown 内容并转换为 HTML
+
   return {
-      content: mkdt.render(cleanedContent),
-      meta: {
-          title: metadata.title || '无标题',
-          description: metadata.description || '',
-          updateTime: stats.mtime,
-          goodsInfo: goodsInfo, // 替换原有的 goodsLink
-          tags: metadata.tags?.filter(Boolean) || [],
-          category: metadata.category || '未分类'
-      }
+    content: converter.makeHtml(cleanedContent),
+    meta: {
+      title: metadata.title || '无标题',
+      description: metadata.description || '',
+      updateTime: stats.mtime,
+      goodsInfo: goodsInfo, // 替换原有的 goodsLink
+      tags: metadata.tags?.filter(Boolean) || [],
+      category: metadata.category || '未分类'
+    }
   };
 }
 
