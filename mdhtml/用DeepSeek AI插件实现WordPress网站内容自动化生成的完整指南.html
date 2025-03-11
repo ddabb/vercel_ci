@@ -24,7 +24,8 @@
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" crossorigin="anonymous"></script>
   <script src="../js/clarity.js"></script>
-  <script src="../js/MathJax.js"></script>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/widget-qrcode@1.0.4/dist/widget-qrcode.min.js"></script>
   <script>
     var _hmt = _hmt || [];
@@ -132,88 +133,87 @@
                     </ol>
                   </nav>
                   
-                    <h1 id="deepseekaiwordpress">用DeepSeek AI插件实现WordPress网站内容自动化生成的完整指南</h1>
-<h2 id="deepseekai">一、安装与配置：快速接入DeepSeek AI</h2>
-<p>要启用自动化内容生成，首先需在WordPress后台安装支持DeepSeek的AI插件（如<strong>WordPressAI工具</strong>或<strong>WP AiPost</strong>）。最新版本插件已全面接入DeepSeek V3和R1模型，用户只需在插件后台输入DeepSeek API密钥即可调用满血版功能。  </p>
+                    <h1>用DeepSeek AI插件实现WordPress网站内容自动化生成的完整指南</h1>
+<h2>一、安装与配置：快速接入DeepSeek AI</h2>
+<p>要启用自动化内容生成，首先需在WordPress后台安装支持DeepSeek的AI插件（如<strong>WordPressAI工具</strong>或<strong>WP AiPost</strong>）。最新版本插件已全面接入DeepSeek V3和R1模型，用户只需在插件后台输入DeepSeek API密钥即可调用满血版功能。</p>
 <ol>
-<li><strong>获取API密钥</strong>：访问DeepSeek官网注册开发者账号，创建API密钥并复制保存。  </li>
-<li><strong>模型选择</strong>：根据需求选择DeepSeek V3（通用内容生成）或R1（复杂逻辑推理），前者适合常规文章，后者更擅长技术类或结构化内容。  </li>
-<li><strong>角色与风格设置</strong>：在插件中定义写作角色（如“行业专家”“资深编辑”），并添加提示词（如“用口语化表达，避免术语堆砌”），以降低AI生成痕迹。  </li>
+<li><strong>获取API密钥</strong>：访问DeepSeek官网注册开发者账号，创建API密钥并复制保存。</li>
+<li><strong>模型选择</strong>：根据需求选择DeepSeek V3（通用内容生成）或R1（复杂逻辑推理），前者适合常规文章，后者更擅长技术类或结构化内容。</li>
+<li><strong>角色与风格设置</strong>：在插件中定义写作角色（如“行业专家”“资深编辑”），并添加提示词（如“用口语化表达，避免术语堆砌”），以降低AI生成痕迹。</li>
 </ol>
-<hr />
-<h2 id="seo">二、内容生成策略：自然语言与SEO的平衡</h2>
-<p>通过插件生成内容时，需结合关键词优化与自然表达，确保文章既符合搜索引擎规则，又具备可读性。  </p>
+<hr>
+<h2>二、内容生成策略：自然语言与SEO的平衡</h2>
+<p>通过插件生成内容时，需结合关键词优化与自然表达，确保文章既符合搜索引擎规则，又具备可读性。</p>
 <ol>
-<li><strong>标题与提纲生成</strong>：  </li>
-</ol>
+<li><strong>标题与提纲生成</strong>：
 <ul>
-<li>输入核心关键词（如“WordPress优化技巧”），插件会自动生成10个标题建议，优先选择包含疑问句或数据驱动的标题（如“5个提升WordPress性能的隐藏技巧”）。  </li>
-<li>使用“智能提纲”功能，生成包含引言、分点论述、案例和总结的结构，避免内容散乱。  </li>
+<li>输入核心关键词（如“WordPress优化技巧”），插件会自动生成10个标题建议，优先选择包含疑问句或数据驱动的标题（如“5个提升WordPress性能的隐藏技巧”）。</li>
+<li>使用“智能提纲”功能，生成包含引言、分点论述、案例和总结的结构，避免内容散乱。</li>
 </ul>
-<ol>
-<li><strong>段落生成技巧</strong>：  </li>
-</ol>
+</li>
+<li><strong>段落生成技巧</strong>：
 <ul>
-<li>在提示词中强调“段落过渡自然”“加入实际案例”，例如输入：“以博客作者身份，用生活化比喻解释技术概念”。  </li>
-<li>启用“伪原创”功能，对已有内容进行语义重组，保留核心信息但调整表达方式。  </li>
+<li>在提示词中强调“段落过渡自然”“加入实际案例”，例如输入：“以博客作者身份，用生活化比喻解释技术概念”。</li>
+<li>启用“伪原创”功能，对已有内容进行语义重组，保留核心信息但调整表达方式。</li>
 </ul>
-<hr />
-<h2 id="">三、批量处理与自动化发布</h2>
-<p>对于多篇文章需求，可通过插件实现全流程自动化：  </p>
-<ol>
-<li><strong>批量导入关键词</strong>：  </li>
+</li>
 </ol>
-<ul>
-<li>上传CSV文件（包含标题、分类、预设角色），插件按队列自动生成文章。例如，上传“智能家居趋势,科技资讯,editor_pro”可触发高质量技术分析内容。  </li>
-</ul>
+<hr>
+<h2>三、批量处理与自动化发布</h2>
+<p>对于多篇文章需求，可通过插件实现全流程自动化：</p>
 <ol>
-<li><strong>定时任务与队列管理</strong>：  </li>
-</ol>
+<li><strong>批量导入关键词</strong>：
 <ul>
-<li>设置每日/每周发布计划，避免内容集中上线。插件支持异步生成，后台任务不阻塞前台操作，适合长期运营。  </li>
+<li>上传CSV文件（包含标题、分类、预设角色），插件按队列自动生成文章。例如，上传“智能家居趋势,科技资讯,editor_pro”可触发高质量技术分析内容。</li>
 </ul>
+</li>
+<li><strong>定时任务与队列管理</strong>：
+<ul>
+<li>设置每日/每周发布计划，避免内容集中上线。插件支持异步生成，后台任务不阻塞前台操作，适合长期运营。</li>
+</ul>
+</li>
+<li><strong>内容采集与整合</strong>：
+<ul>
+<li>采集目标网站内容后，通过“内容优化”功能调整语言风格，并补充原创观点，形成差异化内容。</li>
+</ul>
+</li>
+</ol>
+<hr>
+<h2>四、优化内容质量的实用技巧</h2>
 <ol>
-<li><strong>内容采集与整合</strong>：  </li>
-</ol>
+<li><strong>人工润色介入</strong>：
 <ul>
-<li>采集目标网站内容后，通过“内容优化”功能调整语言风格，并补充原创观点，形成差异化内容。  </li>
+<li>生成后检查逻辑连贯性，手动调整过于生硬的过渡句，或添加个人经验（如“笔者测试发现……”）增强真实感。</li>
 </ul>
-<hr />
-<h2 id="-1">四、优化内容质量的实用技巧</h2>
+</li>
+<li><strong>多模态内容增强</strong>：
+<ul>
+<li>调用插件内置的“图片生成”功能，基于段落描述自动配图（如流程图、场景插图），提升阅读体验。</li>
+</ul>
+</li>
+<li><strong>数据驱动修正</strong>：
+<ul>
+<li>结合SEO分析报告（如关键词密度、跳出率），迭代生成策略。例如，若某类文章跳出率高，可调整提纲结构或增加互动提问。</li>
+</ul>
+</li>
+</ol>
+<hr>
+<h2>五、模型选择与进阶玩法</h2>
 <ol>
-<li><strong>人工润色介入</strong>：  </li>
-</ol>
+<li><strong>V3与R1的灵活切换</strong>：
 <ul>
-<li>生成后检查逻辑连贯性，手动调整过于生硬的过渡句，或添加个人经验（如“笔者测试发现……”）增强真实感。  </li>
+<li>常规资讯类内容使用V3模型，速度快且成本低；技术教程或数据分析类内容切换至R1，提升逻辑严谨性。</li>
 </ul>
-<ol>
-<li><strong>多模态内容增强</strong>：  </li>
-</ol>
+</li>
+<li><strong>本地化与多语言支持</strong>：
 <ul>
-<li>调用插件内置的“图片生成”功能，基于段落描述自动配图（如流程图、场景插图），提升阅读体验。  </li>
+<li>针对多语言站点，启用插件的“本地化表达”功能，生成符合地域习惯的表述（如中文简体/繁体差异）。</li>
 </ul>
-<ol>
-<li><strong>数据驱动修正</strong>：  </li>
+</li>
 </ol>
-<ul>
-<li>结合SEO分析报告（如关键词密度、跳出率），迭代生成策略。例如，若某类文章跳出率高，可调整提纲结构或增加互动提问。  </li>
-</ul>
-<hr />
-<h2 id="-2">五、模型选择与进阶玩法</h2>
-<ol>
-<li><strong>V3与R1的灵活切换</strong>：  </li>
-</ol>
-<ul>
-<li>常规资讯类内容使用V3模型，速度快且成本低；技术教程或数据分析类内容切换至R1，提升逻辑严谨性。  </li>
-</ul>
-<ol>
-<li><strong>本地化与多语言支持</strong>：  </li>
-</ol>
-<ul>
-<li>针对多语言站点，启用插件的“本地化表达”功能，生成符合地域习惯的表述（如中文简体/繁体差异）。  </li>
-</ul>
-<hr />
+<hr>
 <p>通过以上步骤，WordPress站长可高效实现内容自动化生成，同时确保文章自然流畅、适配搜索引擎规则。重点在于合理配置提示词、结合人工微调，并利用插件提供的SEO优化工具（如长尾关键词库、元描述生成）隐形提升内容质量，无需显式添加SEO标注即可满足收录需求。s</p>
+
                       <div class="qr-code mt-4">
                         <h5>扫描二维码查看</h5>
                         <widget-qrcode id="pageQrCode" template="heart" width="180" height="180"
