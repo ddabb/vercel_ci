@@ -8,30 +8,41 @@ const yaml = require('js-yaml');
 const jsonFilePath = path.join(__dirname, 'jsons', 'goodlinks.json');
 let notFoundGoodsArticles = [];
 
+// 常量定义
+const TEMP_UNDERSCORE = '\uFFF0'; // 显式命名占位符
+const BLOCK_FORMULA_REGEX = /(?<!\\)\$\$((?:\\.|[^$\n])+?)(?<!\\)\$\$/g;
+const INLINE_FORMULA_REGEX = /(?<!\\)\$((?:\\.|[^$\n])+?)(?<!\\)\$/g;
+
+// 公式保护函数
+function protectFormulas(text) {
+  // 处理块公式
+  let protected = text.replace(BLOCK_FORMULA_REGEX, (match, content) => {
+    return `$$${content.replace(/_/g, TEMP_UNDERSCORE)}$$`;
+  });
+  // 处理行内公式
+  protected = protected.replace(INLINE_FORMULA_REGEX, (match, content) => {
+    return `$${content.replace(/_/g, TEMP_UNDERSCORE)}$`;
+  });
+  return protected;
+}
+
+// 公式恢复函数
+function restoreFormulas(html) {
+  return html.replace(/(\$\$?)(.*?)\1/g, (match, delim, content) => {
+    return `${delim}${content.replace(new RegExp(TEMP_UNDERSCORE, 'g'), '_')}${delim}`;
+  });
+}
+
+// 配置转换器
 const converter = new showdown.Converter({
-  extensions: [
-    {
-      type: 'lang',
-      name: 'math-display',
-      regex: /\$\$(.*?)\$\$/g, // 块级公式（独立成行）
-      replace: function (match, text) {
-        return `<p>$$${text.trim()}$$</p>\n`; // 使用<p>标签包裹，并去除首尾空格
-      }
-    },
-    {
-      type: 'lang',
-      name: 'math-inline',
-      regex: /\$(.*?)\$/g, // 行内公式
-      replace: function (match, text) {
-        return `\$${text.trim()}\$`; // 使用$和$包裹，更适合MathJax
-      }
-    }
-  ],
-  escape: function (text) {
-    return text.replace(/[&<>"']/g, function (m) {
-      return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#039;' }[m];
-    });
-  }
+  literalMidWordUnderscores: true,
+  extensions: [{
+    type: 'lang',
+    filter: protectFormulas
+  }, {
+    type: 'output',
+    filter: restoreFormulas
+  }]
 });
 
 async function readDirFile(filePath) {
