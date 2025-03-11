@@ -38,24 +38,25 @@
   <script>
     window.MathJax = {
       tex: {
-        inlineMath: [['$', '$'], ['\$', '\$']], // 默认内联数学分隔符
-        displayMath: [['$$', '$$'], ['\$', '\$']], // 默认显示风格数学分隔符
+        inlineMath: [['$', '$'], ['\\$', '\\$']], // 保留原始行内公式标识
+        displayMath: [['$$', '$$'], ['\\$', '\\$']], // 保留原始块级公式标识
         processEscapes: true,
         processEnvironments: true
       },
       options: {
         renderActions: {
           find: [10, function (doc) {
-            for (const math of document.querySelectorAll('span.math')) {
-              if (math.classList.contains('display')) {
-                MathJax.texReset();
+            // 优先处理显式标注的公式
+            for (const math of document.querySelectorAll('.math')) {
+              const isDisplay = math.classList.contains('display');
+              const isInline = math.classList.contains('inline');
+
+              if (isDisplay || isInline) {
                 const text = math.textContent;
-                const html = MathJax.tex2chtml(text, { display: true });
-                math.replaceWith(html);
-              } else if (math.classList.contains('inline')) {
-                MathJax.texReset();
-                const text = math.textContent;
-                const html = MathJax.tex2chtml(text, { display: false });
+                const html = isDisplay
+                  ? MathJax.tex2chtml(text, { display: true })
+                  : MathJax.tex2chtml(text, { display: false });
+
                 math.replaceWith(html);
               }
             }
@@ -189,7 +190,7 @@ DeepSeek能根据招聘信息自动调整简历内容。例如，用户上传目
 针对不同企业，DeepSeek可生成定制化简历版本。例如，用户输入“生成科技公司与传统制造业两个版本的简历”，系统会分别强调“敏捷开发经验”与“供应链优化能力”，帮助求职者精准投递。  </p>
 <hr />
 <h2 id="-3"><strong>结语：效率革命的底层逻辑</strong></h2>
-<p>DeepSeek的价值不仅在于工具本身，更在于其重新定义了“人机协作”的边界。通过将重复性工作交给AI，职场人得以聚焦于创意、策略与决策——这才是效率革命的终极目标。无论是数据分析师、会议组织者，还是求职者，拥抱智能工具的本质，是让自己成为不可替代的“核心变量”。  </p>
+<p>DeepSeek的价值不仅在于工具本身，更在于其重新定义了“人机协作”的边界。通过将重复性工作交给AI，职场人得以聚焦于创意、策略与决策——这才是效率革命的终极目标。无论是数据分析师、会议组织者，还是求职者，拥抱智能工具的本质，是让自己成为不可替代的“核心变量”。</p>
                       <div class="qr-code mt-4">
                         <h5>扫描二维码查看</h5>
                         <widget-qrcode id="pageQrCode" template="heart" width="180" height="180"

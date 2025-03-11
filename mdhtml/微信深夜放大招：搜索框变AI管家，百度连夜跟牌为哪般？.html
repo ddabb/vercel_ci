@@ -38,24 +38,25 @@
   <script>
     window.MathJax = {
       tex: {
-        inlineMath: [['$', '$'], ['\$', '\$']], // 默认内联数学分隔符
-        displayMath: [['$$', '$$'], ['\$', '\$']], // 默认显示风格数学分隔符
+        inlineMath: [['$', '$'], ['\\$', '\\$']], // 保留原始行内公式标识
+        displayMath: [['$$', '$$'], ['\\$', '\\$']], // 保留原始块级公式标识
         processEscapes: true,
         processEnvironments: true
       },
       options: {
         renderActions: {
           find: [10, function (doc) {
-            for (const math of document.querySelectorAll('span.math')) {
-              if (math.classList.contains('display')) {
-                MathJax.texReset();
+            // 优先处理显式标注的公式
+            for (const math of document.querySelectorAll('.math')) {
+              const isDisplay = math.classList.contains('display');
+              const isInline = math.classList.contains('inline');
+
+              if (isDisplay || isInline) {
                 const text = math.textContent;
-                const html = MathJax.tex2chtml(text, { display: true });
-                math.replaceWith(html);
-              } else if (math.classList.contains('inline')) {
-                MathJax.texReset();
-                const text = math.textContent;
-                const html = MathJax.tex2chtml(text, { display: false });
+                const html = isDisplay
+                  ? MathJax.tex2chtml(text, { display: true })
+                  : MathJax.tex2chtml(text, { display: false });
+
                 math.replaceWith(html);
               }
             }
@@ -176,7 +177,7 @@
 杭州某医疗AI公司给出参考答案：他们的问诊系统既调用DeepSeek生成初诊方案，又强制医生人工复核，误诊率下降37%（《柳叶刀》2024临床数据）。这种“AI+专家”的协同模式，正在成为行业新范式。  </p>
 <p>监管的达摩克利斯之剑已然悬空。欧盟新规要求AI生成内容必须标注数据来源，这或许能解开“开源模型与数据垄断”的死结。但对普通人而言，更紧迫的是建立新生存技能：永远对AI答案保持怀疑，像验证谣言一样交叉核对信源。  </p>
 <p><strong>结语：你站在哪一边？</strong><br />
-当百度搜索广告收入同比下滑4%时，微信正把搜索框变成连接智能硬件的超级入口。这场没有硝烟的战争里，没有中立者——要么驾驭AI重构工作流，要么被算法驯化成“搜索难民”。  </p>
+当百度搜索广告收入同比下滑4%时，微信正把搜索框变成连接智能硬件的超级入口。这场没有硝烟的战争里，没有中立者——要么驾驭AI重构工作流，要么被算法驯化成“搜索难民”。</p>
                       <div class="qr-code mt-4">
                         <h5>扫描二维码查看</h5>
                         <widget-qrcode id="pageQrCode" template="heart" width="180" height="180"

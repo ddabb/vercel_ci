@@ -38,24 +38,25 @@
   <script>
     window.MathJax = {
       tex: {
-        inlineMath: [['$', '$'], ['\$', '\$']], // 默认内联数学分隔符
-        displayMath: [['$$', '$$'], ['\$', '\$']], // 默认显示风格数学分隔符
+        inlineMath: [['$', '$'], ['\\$', '\\$']], // 保留原始行内公式标识
+        displayMath: [['$$', '$$'], ['\\$', '\\$']], // 保留原始块级公式标识
         processEscapes: true,
         processEnvironments: true
       },
       options: {
         renderActions: {
           find: [10, function (doc) {
-            for (const math of document.querySelectorAll('span.math')) {
-              if (math.classList.contains('display')) {
-                MathJax.texReset();
+            // 优先处理显式标注的公式
+            for (const math of document.querySelectorAll('.math')) {
+              const isDisplay = math.classList.contains('display');
+              const isInline = math.classList.contains('inline');
+
+              if (isDisplay || isInline) {
                 const text = math.textContent;
-                const html = MathJax.tex2chtml(text, { display: true });
-                math.replaceWith(html);
-              } else if (math.classList.contains('inline')) {
-                MathJax.texReset();
-                const text = math.textContent;
-                const html = MathJax.tex2chtml(text, { display: false });
+                const html = isDisplay
+                  ? MathJax.tex2chtml(text, { display: true })
+                  : MathJax.tex2chtml(text, { display: false });
+
                 math.replaceWith(html);
               }
             }
@@ -208,7 +209,7 @@
 <li><strong>社会层面</strong>：建立“认知素养”教育体系，在中小学阶段开设逻辑谬误识别、证据评估等课程，从根源减少自欺行为。</li>
 </ol>
 <p><strong>结语</strong><br />
-破解“掩耳盗铃”困局，本质是一场认知革命。当我们学会用显微镜审视自身局限，用望远镜观察行为后果，那些自欺的迷雾自会消散。正如《吕氏春秋》所言：“恶己自闻之，悖矣”——真正的进步，始于对每个铃声的坦然倾听。  </p>
+破解“掩耳盗铃”困局，本质是一场认知革命。当我们学会用显微镜审视自身局限，用望远镜观察行为后果，那些自欺的迷雾自会消散。正如《吕氏春秋》所言：“恶己自闻之，悖矣”——真正的进步，始于对每个铃声的坦然倾听。</p>
                       <div class="qr-code mt-4">
                         <h5>扫描二维码查看</h5>
                         <widget-qrcode id="pageQrCode" template="heart" width="180" height="180"

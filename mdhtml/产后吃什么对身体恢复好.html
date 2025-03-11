@@ -38,24 +38,25 @@
   <script>
     window.MathJax = {
       tex: {
-        inlineMath: [['$', '$'], ['\$', '\$']], // 默认内联数学分隔符
-        displayMath: [['$$', '$$'], ['\$', '\$']], // 默认显示风格数学分隔符
+        inlineMath: [['$', '$'], ['\\$', '\\$']], // 保留原始行内公式标识
+        displayMath: [['$$', '$$'], ['\\$', '\\$']], // 保留原始块级公式标识
         processEscapes: true,
         processEnvironments: true
       },
       options: {
         renderActions: {
           find: [10, function (doc) {
-            for (const math of document.querySelectorAll('span.math')) {
-              if (math.classList.contains('display')) {
-                MathJax.texReset();
+            // 优先处理显式标注的公式
+            for (const math of document.querySelectorAll('.math')) {
+              const isDisplay = math.classList.contains('display');
+              const isInline = math.classList.contains('inline');
+
+              if (isDisplay || isInline) {
                 const text = math.textContent;
-                const html = MathJax.tex2chtml(text, { display: true });
-                math.replaceWith(html);
-              } else if (math.classList.contains('inline')) {
-                MathJax.texReset();
-                const text = math.textContent;
-                const html = MathJax.tex2chtml(text, { display: false });
+                const html = isDisplay
+                  ? MathJax.tex2chtml(text, { display: true })
+                  : MathJax.tex2chtml(text, { display: false });
+
                 math.replaceWith(html);
               }
             }
@@ -200,7 +201,7 @@
 <li><strong>避免生冷辛辣</strong>：产后应避免食用过于生冷、辛辣、刺激性的食物，以免刺激出血或影响身体恢复。</li>
 <li><strong>适量饮水</strong>：产后应适量饮水，保持体内水分平衡，有助于乳汁分泌和身体恢复。</li>
 </ul>
-<p>通过以上合理的饮食安排，新妈妈们可以更好地促进身体恢复，提高乳汁质量，为宝宝的健康成长打下坚实的基础。  </p>
+<p>通过以上合理的饮食安排，新妈妈们可以更好地促进身体恢复，提高乳汁质量，为宝宝的健康成长打下坚实的基础。</p>
                       <div class="qr-code mt-4">
                         <h5>扫描二维码查看</h5>
                         <widget-qrcode id="pageQrCode" template="heart" width="180" height="180"

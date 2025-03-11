@@ -12,15 +12,28 @@ const converter = new showdown.Converter({
   extensions: [
     {
       type: 'lang',
-      regex: /(\$\$(.*?)\$\$)/g, // 匹配块级公式
-      replace: '<span class="math display">$2</span>'
+      name: 'math-display',
+      regex: /\$\$(.*?)\$\$/g, // 块级公式（独立成行）
+      replace: '<span class="math display">\n$$\n$1\n$$\n</span>', // 添加换行符提升可读性
+      filter: function (text) {
+        return text.replace(/^\s+|\s+$/g, ''); // 去除首尾空格
+      }
     },
     {
       type: 'lang',
-      regex: /(\$(.*?)\$)/g, // 匹配行内公式
-      replace: '<span class="math inline">$2</span>'
+      name: 'math-inline',
+      regex: /\$(.*?)\$/g, // 行内公式
+      replace: '<span class="math inline">$1</span>',
+      filter: function (text) {
+        return text.replace(/^\s+|\s+$/g, '');
+      }
     }
-  ]
+  ],
+  escape: function (text) {
+    return text.replace(/[&<>"']/g, function (m) {
+      return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#039;' }[m];
+    });
+  }
 });
 
 
@@ -54,7 +67,7 @@ const extractFrontMatter = (content) => {
 };
 
 // 整合型转换函数（避免重复处理）
-async function convertMarkdownToHtml(markdownContent,stats) {
+async function convertMarkdownToHtml(markdownContent, stats) {
   const { metadata, cleanedContent } = extractFrontMatter(markdownContent);
   let goodLinksData = {};
   try {
@@ -178,14 +191,14 @@ async function mdToHtml(mdFilesDirectory = 'mdfiles', genhtmlDirectory = 'mdhtml
       let htmlContent;
       const markdownContent = await readDirFile(mdFilePath);
       const stats = fs1.statSync(mdFilePath);
-      htmlContent = await convertMarkdownToHtml(markdownContent,stats);
+      htmlContent = await convertMarkdownToHtml(markdownContent, stats);
       // 生成单独的 .html 文件
       const outputFilePath = path.join(genhtmlDirectory, `${path.basename(fileName, '.md')}.html`);
       await updateHtmlFile(htmlTemplatePath, htmlContent, outputFilePath);
     }
-  // 在所有Markdown文件处理完毕后，将找不到商品的文章信息写入NotFindGoods.json
-  const notFindGoodsJsonPath = path.join(__dirname, 'jsons', 'NotFindGoods.json');
-  await fs.writeFile(notFindGoodsJsonPath, JSON.stringify(notFoundGoodsArticles, null, 2));
+    // 在所有Markdown文件处理完毕后，将找不到商品的文章信息写入NotFindGoods.json
+    const notFindGoodsJsonPath = path.join(__dirname, 'jsons', 'NotFindGoods.json');
+    await fs.writeFile(notFindGoodsJsonPath, JSON.stringify(notFoundGoodsArticles, null, 2));
     console.log('Finished mdToHtml process...:');
   } catch (error) {
     console.error('Error during mdToHtml process:', error);

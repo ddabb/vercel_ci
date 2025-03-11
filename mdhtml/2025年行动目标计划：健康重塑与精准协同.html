@@ -38,24 +38,25 @@
   <script>
     window.MathJax = {
       tex: {
-        inlineMath: [['$', '$'], ['\$', '\$']], // 默认内联数学分隔符
-        displayMath: [['$$', '$$'], ['\$', '\$']], // 默认显示风格数学分隔符
+        inlineMath: [['$', '$'], ['\\$', '\\$']], // 保留原始行内公式标识
+        displayMath: [['$$', '$$'], ['\\$', '\\$']], // 保留原始块级公式标识
         processEscapes: true,
         processEnvironments: true
       },
       options: {
         renderActions: {
           find: [10, function (doc) {
-            for (const math of document.querySelectorAll('span.math')) {
-              if (math.classList.contains('display')) {
-                MathJax.texReset();
+            // 优先处理显式标注的公式
+            for (const math of document.querySelectorAll('.math')) {
+              const isDisplay = math.classList.contains('display');
+              const isInline = math.classList.contains('inline');
+
+              if (isDisplay || isInline) {
                 const text = math.textContent;
-                const html = MathJax.tex2chtml(text, { display: true });
-                math.replaceWith(html);
-              } else if (math.classList.contains('inline')) {
-                MathJax.texReset();
-                const text = math.textContent;
-                const html = MathJax.tex2chtml(text, { display: false });
+                const html = isDisplay
+                  ? MathJax.tex2chtml(text, { display: true })
+                  : MathJax.tex2chtml(text, { display: false });
+
                 math.replaceWith(html);
               }
             }
@@ -284,7 +285,7 @@
 </ul>
 <hr />
 <p><strong>结语</strong><br />
-2025年的底层逻辑是 <strong>“专业支持者的精准定位”</strong> ——通过宝安妇幼的医疗资源与华为生态的技术赋能，将健康管理与备孕执行转化为标准化流程，在妻子主导的家庭系统中成为高可靠性模块。真正的价值不在于创造新规则，而在于用技术思维优化现有系统的每一个触点。  </p>
+2025年的底层逻辑是 <strong>“专业支持者的精准定位”</strong> ——通过宝安妇幼的医疗资源与华为生态的技术赋能，将健康管理与备孕执行转化为标准化流程，在妻子主导的家庭系统中成为高可靠性模块。真正的价值不在于创造新规则，而在于用技术思维优化现有系统的每一个触点。</p>
                       <div class="qr-code mt-4">
                         <h5>扫描二维码查看</h5>
                         <widget-qrcode id="pageQrCode" template="heart" width="180" height="180"

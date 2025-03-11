@@ -38,24 +38,25 @@
   <script>
     window.MathJax = {
       tex: {
-        inlineMath: [['$', '$'], ['\$', '\$']], // 默认内联数学分隔符
-        displayMath: [['$$', '$$'], ['\$', '\$']], // 默认显示风格数学分隔符
+        inlineMath: [['$', '$'], ['\\$', '\\$']], // 保留原始行内公式标识
+        displayMath: [['$$', '$$'], ['\\$', '\\$']], // 保留原始块级公式标识
         processEscapes: true,
         processEnvironments: true
       },
       options: {
         renderActions: {
           find: [10, function (doc) {
-            for (const math of document.querySelectorAll('span.math')) {
-              if (math.classList.contains('display')) {
-                MathJax.texReset();
+            // 优先处理显式标注的公式
+            for (const math of document.querySelectorAll('.math')) {
+              const isDisplay = math.classList.contains('display');
+              const isInline = math.classList.contains('inline');
+
+              if (isDisplay || isInline) {
                 const text = math.textContent;
-                const html = MathJax.tex2chtml(text, { display: true });
-                math.replaceWith(html);
-              } else if (math.classList.contains('inline')) {
-                MathJax.texReset();
-                const text = math.textContent;
-                const html = MathJax.tex2chtml(text, { display: false });
+                const html = isDisplay
+                  ? MathJax.tex2chtml(text, { display: true })
+                  : MathJax.tex2chtml(text, { display: false });
+
                 math.replaceWith(html);
               }
             }
@@ -169,7 +170,7 @@
 <h2 id="-3">补天行动的隐喻：个体创伤与集体疗愈</h2>
 <p>故事中"被删减的共工触山"恰似集体记忆中被压抑的创伤。教材编纂者认为战争起因无关紧要，却导致灾难叙事失去因果链条。这暗示着：任何文明危机的修复，都必须直面创伤源头。女娲的补天工程本质上是一场心理重建——炼石过程象征将破碎记忆熔铸为集体认同，斩杀黑龙隐喻克服恐惧本能，而倾斜的西北天空则暗示着创伤修复后不可避免的文明转向。这种将物理修复与精神疗愈并行的策略，为当代灾后重建提供了古老而鲜活的参照。  </p>
 <h2 id="dna">神话DNA的现世显影</h2>
-<p>从亚马逊部落用植物灰烬改良土壤，到现代城市用垂直森林调节气候，女娲补天的基因始终流淌在人类文明的血脉中。当我们重述这个神话时，不仅是在追忆一位女神救世的壮举，更是在解码潜藏于文化基因中的生存智慧。在气候危机频发的今天，这个看似荒诞的远古故事，正以惊人的预见性提醒我们：真正的补天者，永远是那些敢于直面破碎、用创新思维缝合天地的人。  </p>
+<p>从亚马逊部落用植物灰烬改良土壤，到现代城市用垂直森林调节气候，女娲补天的基因始终流淌在人类文明的血脉中。当我们重述这个神话时，不仅是在追忆一位女神救世的壮举，更是在解码潜藏于文化基因中的生存智慧。在气候危机频发的今天，这个看似荒诞的远古故事，正以惊人的预见性提醒我们：真正的补天者，永远是那些敢于直面破碎、用创新思维缝合天地的人。</p>
                       <div class="qr-code mt-4">
                         <h5>扫描二维码查看</h5>
                         <widget-qrcode id="pageQrCode" template="heart" width="180" height="180"

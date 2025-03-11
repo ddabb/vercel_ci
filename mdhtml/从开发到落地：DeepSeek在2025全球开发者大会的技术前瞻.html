@@ -38,24 +38,25 @@
   <script>
     window.MathJax = {
       tex: {
-        inlineMath: [['$', '$'], ['\$', '\$']], // 默认内联数学分隔符
-        displayMath: [['$$', '$$'], ['\$', '\$']], // 默认显示风格数学分隔符
+        inlineMath: [['$', '$'], ['\\$', '\\$']], // 保留原始行内公式标识
+        displayMath: [['$$', '$$'], ['\\$', '\\$']], // 保留原始块级公式标识
         processEscapes: true,
         processEnvironments: true
       },
       options: {
         renderActions: {
           find: [10, function (doc) {
-            for (const math of document.querySelectorAll('span.math')) {
-              if (math.classList.contains('display')) {
-                MathJax.texReset();
+            // 优先处理显式标注的公式
+            for (const math of document.querySelectorAll('.math')) {
+              const isDisplay = math.classList.contains('display');
+              const isInline = math.classList.contains('inline');
+
+              if (isDisplay || isInline) {
                 const text = math.textContent;
-                const html = MathJax.tex2chtml(text, { display: true });
-                math.replaceWith(html);
-              } else if (math.classList.contains('inline')) {
-                MathJax.texReset();
-                const text = math.textContent;
-                const html = MathJax.tex2chtml(text, { display: false });
+                const html = isDisplay
+                  ? MathJax.tex2chtml(text, { display: true })
+                  : MathJax.tex2chtml(text, { display: false });
+
                 math.replaceWith(html);
               }
             }
@@ -186,7 +187,7 @@ DeepSeek近年来凭借其AI大模型技术在全球范围内引发关注。此�
 <hr />
 <h2 id="-2"><strong>未来展望：技术普惠与全球话语权</strong></h2>
 <p>上海作为中国人工智能产业的高地，正通过“模速空间”等生态社区加速大模型产业化。DeepSeek的参与，不仅强化了上海在全球AI领域的竞争力，也为中国技术走向世界提供了新路径。  </p>
-<p>正如行业观察者所言，AI的未来不仅是实验室的突破，更是技术与场景的“双向奔赴”。2025全球开发者先锋大会上，DeepSeek的技术前瞻或将揭示一个更开放、更协同的智能时代——从代码开发到商业落地，每一步都指向无限可能。  </p>
+<p>正如行业观察者所言，AI的未来不仅是实验室的突破，更是技术与场景的“双向奔赴”。2025全球开发者先锋大会上，DeepSeek的技术前瞻或将揭示一个更开放、更协同的智能时代——从代码开发到商业落地，每一步都指向无限可能。</p>
                       <div class="qr-code mt-4">
                         <h5>扫描二维码查看</h5>
                         <widget-qrcode id="pageQrCode" template="heart" width="180" height="180"

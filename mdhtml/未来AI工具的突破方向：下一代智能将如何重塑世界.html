@@ -38,24 +38,25 @@
   <script>
     window.MathJax = {
       tex: {
-        inlineMath: [['$', '$'], ['\$', '\$']], // 默认内联数学分隔符
-        displayMath: [['$$', '$$'], ['\$', '\$']], // 默认显示风格数学分隔符
+        inlineMath: [['$', '$'], ['\\$', '\\$']], // 保留原始行内公式标识
+        displayMath: [['$$', '$$'], ['\\$', '\\$']], // 保留原始块级公式标识
         processEscapes: true,
         processEnvironments: true
       },
       options: {
         renderActions: {
           find: [10, function (doc) {
-            for (const math of document.querySelectorAll('span.math')) {
-              if (math.classList.contains('display')) {
-                MathJax.texReset();
+            // 优先处理显式标注的公式
+            for (const math of document.querySelectorAll('.math')) {
+              const isDisplay = math.classList.contains('display');
+              const isInline = math.classList.contains('inline');
+
+              if (isDisplay || isInline) {
                 const text = math.textContent;
-                const html = MathJax.tex2chtml(text, { display: true });
-                math.replaceWith(html);
-              } else if (math.classList.contains('inline')) {
-                MathJax.texReset();
-                const text = math.textContent;
-                const html = MathJax.tex2chtml(text, { display: false });
+                const html = isDisplay
+                  ? MathJax.tex2chtml(text, { display: true })
+                  : MathJax.tex2chtml(text, { display: false });
+
                 math.replaceWith(html);
               }
             }
@@ -218,7 +219,7 @@
 <p>谷歌DeepMind的蛋白质折叠预测AI，现已与材料科学团队合作，3个月内发现了17种潜在超导材料结构。  </p>
 <hr />
 <p><strong>结语：智能新大陆的探险</strong><br />
-当AI开始理解物理定律、感知多维信息并参与复杂决策，人类文明的进化将进入新纪元。这场变革不仅是技术的迭代，更是认知框架的重构——从医疗教育到艺术创作，每个领域都将诞生新的协作范式。未来的AI工具不会替代人类，而是成为扩展认知边疆的“数字伙伴”，帮助我们探索那些曾被视作不可能的问题解决方案。  </p>
+当AI开始理解物理定律、感知多维信息并参与复杂决策，人类文明的进化将进入新纪元。这场变革不仅是技术的迭代，更是认知框架的重构——从医疗教育到艺术创作，每个领域都将诞生新的协作范式。未来的AI工具不会替代人类，而是成为扩展认知边疆的“数字伙伴”，帮助我们探索那些曾被视作不可能的问题解决方案。</p>
                       <div class="qr-code mt-4">
                         <h5>扫描二维码查看</h5>
                         <widget-qrcode id="pageQrCode" template="heart" width="180" height="180"
