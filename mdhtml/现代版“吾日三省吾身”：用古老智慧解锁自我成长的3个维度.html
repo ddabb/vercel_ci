@@ -28,7 +28,8 @@
   <!-- KaTeX CSS 和 JS 文件 -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.css" crossorigin="anonymous">
   <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.js" crossorigin="anonymous"></script>
-  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/auto-render.min.js" onload="renderMathInElement(document.body);" crossorigin="anonymous"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/auto-render.min.js"
+    onload="renderMathInElement(document.body);" crossorigin="anonymous"></script>
 
   <script>
     var _hmt = _hmt || [];
@@ -268,17 +269,19 @@ Observe（观察决策场景）→ Orient（定位情绪坐标）→ Decide（�
       <script>
         window.addEventListener('load', function () {
           if (typeof renderMathInElement === 'function') { // 确认renderMathInElement存在
-            renderMathInElement(document.body, {
-              strict: false,
-              delimiters: [
-                { left: '$$', right: '$$', display: true },
-                { left: '$', right: '$', display: false },
-                { left: '\$', right: '\$', display: false },
-                { left: '\$', right: '\$', display: true }
-              ]
-            }).catch(function (err) {
+            try {
+              renderMathInElement(document.body, {
+                strict: false,
+                delimiters: [
+                  { left: '$$', right: '$$', display: true },
+                  { left: '$', right: '$', display: false },
+                  { left: '\\$', right: '\\$', display: false }, // 注意这里的转义字符
+                  { left: '\\$', right: '\\$', display: true }   // 注意这里的转义字符
+                ]
+              });
+            } catch (err) {
               console.error('KaTeX 渲染失败: ' + err.message);
-            });
+            }
           } else {
             console.error('KaTeX 自动渲染未正确初始化！');
           }
