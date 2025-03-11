@@ -14,9 +14,26 @@
 
 /* 特定于WebKit浏览器（如Chrome, Safari）隐藏滚动条但允许滚动 */
 .scrolling-menu::-webkit-scrollbar {
-  display: none !important; /* 隐藏滚动条 */
+  display: none !important;
+  /* 隐藏滚动条 */
 }
 
+
+.article-container {
+  display: flex;
+  /* 启用Flex布局 */
+  align-items: center;
+  /* 垂直居中 */
+  justify-content: space-between;
+  /* 两端对齐 */
+  width: 100%;
+  /* 确保容器宽度占满 */
+}
+
+.article-date {
+  margin-left: auto;
+  /* 自动左外边距推至右侧[3,6](@ref) */
+}
 
 /* 通用样式 */
 body {
@@ -545,7 +562,6 @@ button {
 
   #article-list-md span {
     display: none;
-
   }
 }
 

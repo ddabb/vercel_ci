@@ -49,7 +49,7 @@ document.addEventListener('DOMContentLoaded', function () {
       const encodedArticleName = encodeURIComponent(article.name.replace('.md', '.html'));
 
       const container = document.createElement('div'); // 创建一个容器
-
+      container.className='article-container'
       const categoryText = document.createElement('span'); // 类别文本元素
       categoryText.className = 'article-category';
       categoryText.textContent = article.category;
@@ -61,65 +61,72 @@ document.addEventListener('DOMContentLoaded', function () {
       const link = document.createElement('a');
       link.href = `/mdhtml/${encodedArticleName}`;
       link.textContent = article.title || article.name.replace('.md', '');
-
+      // 新增日期元素
+      const dateElement = document.createElement('span');
+      dateElement.className = 'article-date';
+      dateElement.textContent = formatDate(article.updateTime);
       container.appendChild(categoryText);
       container.appendChild(link);
-
+      container.appendChild(dateElement);
       articleList.appendChild(container);
     });
   }
-
+  // 日期格式化函数
+  function formatDate(timestamp) {
+    const options = { year: 'numeric', month: '2-digit', day: '2-digit' };
+    return new Date(timestamp).toLocaleDateString('zh-CN', options);
+  }
   // 创建分页的函数
   function createPaginationMD(currentPage, totalPages, pageSize) {
     const pagination = document.getElementById('pagination-md');
     pagination.innerHTML = ''; // 清空旧的分页
-  
+
     // 显示的最大页码数
     const maxDisplayedPages = 7; // 建议为奇数以便于中心对齐
-  
+
     let startPage = Math.max(1, currentPage - Math.floor(maxDisplayedPages / 2));
     let endPage = Math.min(totalPages, startPage + maxDisplayedPages - 1);
-  
+
     // 调整startPage以确保我们总是显示maxDisplayedPages个按钮（除非接近总页数）
     if (endPage - startPage < maxDisplayedPages - 1) {
       startPage = Math.max(1, endPage - maxDisplayedPages + 1);
     }
-  
+
     // 首页按钮
     if (currentPage > 1) {
       addButton(pagination, 1, '首页', () => fetchAndDisplayArticles(1, pageSize));
     }
-  
+
     // 上一页按钮
     if (currentPage > 1) {
       addButton(pagination, currentPage - 1, '上一页', () => fetchAndDisplayArticles(currentPage - 1, pageSize));
     }
-  
+
     // 如果startPage不是1，则添加...
     if (startPage > 1) {
       addButton(pagination, null, '...');
     }
-  
+
     for (let i = startPage; i <= endPage; i++) {
       addButton(pagination, i, i.toString(), () => fetchAndDisplayArticles(i, pageSize), i === currentPage);
     }
-  
+
     // 如果endPage不是totalPages，则添加...
     if (endPage < totalPages) {
       addButton(pagination, null, '...');
     }
-  
+
     // 下一页按钮
     if (currentPage < totalPages) {
       addButton(pagination, currentPage + 1, '下一页', () => fetchAndDisplayArticles(currentPage + 1, pageSize));
     }
-  
+
     // 末页按钮
     if (currentPage < totalPages) {
       addButton(pagination, totalPages, '末页', () => fetchAndDisplayArticles(totalPages, pageSize));
     }
   }
-  
+
   function addButton(container, pageNumber, textContent, clickHandler, isActive = false) {
     const button = document.createElement('button');
     button.textContent = textContent;
@@ -132,7 +139,7 @@ document.addEventListener('DOMContentLoaded', function () {
     container.appendChild(button);
     container.appendChild(document.createTextNode(' ')); // 添加空格间隔
   }
-  
+
   // 确保在点击分页按钮时正确获取并展示文章
   function fetchAndDisplayArticles(page, pageSize) {
     fetch(`/api/getjson?calltype=md&page=${page}&pageSize=${encodeURIComponent(pageSize)}`)
