@@ -36,6 +36,7 @@ export default async function handler(request, response) {
         articles = articles.filter(article => 
           article.name.toLowerCase().includes(lowerCaseKeyword) ||
           article.category.toLowerCase().includes(lowerCaseKeyword) ||
+          (article.description && article.description.toLowerCase().includes(lowerCaseKeyword)) ||
           (article.tags && article.tags.some(tag => tag.toLowerCase().includes(lowerCaseKeyword)))
         );
       }
