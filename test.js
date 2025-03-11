@@ -1,77 +1,87 @@
+// 引入 showdown 库
 const showdown = require('showdown');
 
-// Unicode 私有区安全替换字符
+// 安全替换字符（Unicode 私有区）
 const SAFE = {
-    BACKSLASH: '\uE001',
-    UNDERSCORE: '\uE002',
-    DOLLAR: '\uE003'
+  BACKSLASH: '\\uE001',
+  UNDERSCORE: '\\uE002',
+  DOLLAR: '\\uE003'
 };
 
-// 公式检测正则（精准匹配）
+
+// 精准公式检测正则
 const FORMULA_REGEX = {
-    block: /(?<!\\)\$\$([\s\S]+?)\$\$(?!\\)/g,
-    inline: /(?<!\\)\$(?!\s)((?:\\.|[^$])+?)(?<!\s)\$(?!\\)/g
+  block: /(?<!\\)\$\$([\s\S]+?)\$\$(?!\\)/g,
+  inline: /(?<!\\)\$(?!\s)((?:\\.|[^$])+?)(?<!\s)\$(?!\\)/g
 };
 
-// 预处理：保护公式内容
+// 预处理：全面保护公式内容
 function formulaShield(text) {
-    // 阶段1：处理块级公式（用 $$$$ 包裹）
-    let protected = text.replace(FORMULA_REGEX.block, (_, content) => {
-        return `$$$$${content
-            .replace(/\\/g, SAFE.BACKSLASH)
-            .replace(/_/g, SAFE.UNDERSCORE)
-            .replace(/\$/g, SAFE.DOLLAR)}$$$$`;
-    });
+  // 使用SAFE常量来保护特殊字符
+  const protectSpecialChars = (content) => content
+    .replace(/\\/g, SAFE.BACKSLASH)
+    .replace(/_/g, SAFE.UNDERSCORE)
+    .replace(/\$/g, SAFE.DOLLAR);
 
-    // 阶段2：处理行内公式（用 $$ 包裹）
-    protected = protected.replace(FORMULA_REGEX.inline, (_, content) => {
-        return `$$${content
-            .replace(/\\/g, SAFE.BACKSLASH)
-            .replace(/_/g, SAFE.UNDERSCORE)
-            .replace(/\$/g, SAFE.DOLLAR)}$$`;
-    });
+  // 阶段 1：保护块公式
+  let protectedText = text.replace(FORMULA_REGEX.block, (_, content) => `$$${protectSpecialChars(content)}$$`);
 
-    return protected;
+  // 阶段 2：保护行内公式
+  protectedText = protectedText.replace(FORMULA_REGEX.inline, (_, content) => `$${protectSpecialChars(content)}$`);
+
+  return protectedText;
 }
 
-// 后处理：还原公式内容
+// 后处理：精确还原公式内容
 function formulaRestore(html) {
-    // 处理块级公式（精准匹配 Showdown 生成的 HTML 结构）
-    let restored = html.replace(/(?:<p>)?\$\$\$\$([\s\S]+?)\$\$\$\$(?:<\/p>)?/g, (_, content) => {
-        const final = content
-            .replace(new RegExp(SAFE.BACKSLASH, 'g'), '\\\\')
-            .replace(new RegExp(SAFE.UNDERSCORE, 'g'), '_')
-            .replace(new RegExp(SAFE.DOLLAR, 'g'), '$');
-        return `$$${final}$$`; // 直接输出公式，跳过段落标签
-    });
+  // 还原块公式
+  let restoredHtml = html.replace(/\$\$([\s\S]+?)\$\$/g, (_, content) => {
+    const finalContent = content
+      .replace(new RegExp(SAFE.BACKSLASH, 'g'), '\\')
+      .replace(new RegExp(SAFE.UNDERSCORE, 'g'), '_')
+      .replace(new RegExp(SAFE.DOLLAR, 'g'), '$');
+    return `$$${finalContent}$$`;
+  });
 
-    // 处理行内公式
-    restored = restored.replace(/\$\$([\s\S]+?)\$\$/g, (_, content) => {
-        return `$${content
-            .replace(new RegExp(SAFE.BACKSLASH, 'g'), '\\\\')
-            .replace(new RegExp(SAFE.UNDERSCORE, 'g'), '_')
-            .replace(new RegExp(SAFE.DOLLAR, 'g'), '$')}$`;
-    });
+  // 还原行内公式
+  restoredHtml = restoredHtml.replace(/\$([\s\S]+?)\$/g, (_, content) => {
+    const finalContent = content
+      .replace(new RegExp(SAFE.BACKSLASH, 'g'), '\\')
+      .replace(new RegExp(SAFE.UNDERSCORE, 'g'), '_')
+      .replace(new RegExp(SAFE.DOLLAR, 'g'), '$');
+    return `$${finalContent}$`;
+  });
 
-    return restored;
+  return restoredHtml;
 }
 
-// 配置 Showdown 转换器（关键配置）
+// 配置终极转换器
+
+// 配置Showdown扩展
 const converter = new showdown.Converter({
-    literalMidWordUnderscores: true,    // 保护下划线不被转换[1](@ref)
-    backslashEscapesHTMLTags: false,    // 禁用反斜杠转义 HTML
-    disableForced4SpacesIndentedSublists: true, // 避免列表干扰公式
-    simpleLineBreaks: true,             // 简化换行符处理
-    extensions: [{
-        type: 'lang',
-        filter: formulaShield  // 预处理扩展
-    }, {
-        type: 'output',
-        filter: formulaRestore // 后处理扩展
-    }]
+  extensions: [
+    { type: 'lang', filter: formulaShield },
+    { type: 'output', filter: formulaRestore }
+  ]
 });
 
-// 测试用例
-const markdown = `咱们来具体分析一下。假设地球上存在数量为 $N$ 的枪支，每支枪的质量是 $m_{\\text{bullet}}$，子弹质量为 $m_{\\text{bullet}}$，子弹射出的速度为 $v_b$，而地球的质量则是 $M_{\\text{Earth}}$`;
 
-console.log(converter.makeHtml(markdown));
+// 测试用例
+const testCases = [
+  `咱们来具体分析一下。假设地球上存在数量为 $N$ 的枪支，每支枪的质量是 $m_{\\text{bullet}}$，子弹质量为 $m_{\\text{bullet}}$，子弹射出的速度为 $v_b$，而地球的质量则是 $M_{\\text{Earth}}$。`,
+  `$$E=mc^2$$ 这是著名的质能方程。`,
+  `行内公式 $x + y = z$ 和块公式 $$\\sum_{i=1}^{n} i = \\frac{n(n + 1)}{2}$$ 同时存在。`,
+  `这里有一个带反斜杠的公式 $\\frac{1}{2}$ 和下划线的公式 $m_{\\text{test}}$。`,
+  `咱们来具体分析一下。假设地球上存在数量为 $N$ 的枪支，每支枪的质量是 $m_{\\text{bullet}}$，子弹质量为 $m_{\\text{bullet}}$，子弹射出的速度为 $v_b$，而地球的质量则是 $M_{\\text{Earth}}$`
+];
+
+// 执行测试用例
+testCases.forEach((markdown, index) => {
+  console.log(`测试用例 ${index + 1}:`);
+  console.log('输入的 Markdown:');
+  console.log(markdown);
+  const html = converter.makeHtml(markdown);
+  console.log('转换后的 HTML:');
+  console.log(html);
+  console.log('----------------------');
+});

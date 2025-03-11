@@ -128,13 +128,13 @@
                   </ol>
                 </nav>
               
-              <h1 id="">字典数排序</h1>
-<h2 id="-1">题目内容</h2>
+              <h1>字典数排序</h1>
+<h2>题目内容</h2>
 <p>给定一个整数 n, 返回从 1 到 n 的字典顺序。</p>
 <p>例如，</p>
 <p>给定 n =13，返回 [1,10,11,12,13,2,3,4,5,6,7,8,9] 。</p>
 <p>请尽可能的优化算法的时间复杂度和空间复杂度。 输入的数据 n 小于等于 5,000,000。</p>
-<h2 id="-2">解题过程</h2>
+<h2>解题过程</h2>
 <p>初次接触这题,我试图用快速排序,堆排序等排序方式去解决该问题，但是程序运行之后，要么内存不足,要么复杂度达不到时间要求。
 经过两天的瞎折腾，我突然茅塞顿开，找到了以下规律。</p>
 <p>如果 n&lt;10,则 1 后面的数字为 2，否则 1 后面的数组为 10。</p>
@@ -148,7 +148,7 @@
 否则
    结束。
 </code></pre>
-<h2 id="-3">代码示例</h2>
+<h2>代码示例</h2>
 <p>创建二叉树的类</p>
 <pre><code>/// &lt;summary&gt;
 /// 二叉树
@@ -164,7 +164,7 @@ public class TreeNode
     /// &lt;summary&gt;
     /// 构造函数
     /// &lt;/summary&gt;
-    /// &lt;param name="x"&gt;&lt;/param&gt;
+    /// &lt;param name=&quot;x&quot;&gt;&lt;/param&gt;
     public TreeNode(int x)
     {
         value = x;
@@ -186,8 +186,8 @@ public class TreeNode
 <pre><code>/// &lt;summary&gt;
 /// 前序遍历
 /// &lt;/summary&gt;
-/// &lt;param name="tn"&gt;&lt;/param&gt;
-/// &lt;param name="result"&gt;&lt;/param&gt;
+/// &lt;param name=&quot;tn&quot;&gt;&lt;/param&gt;
+/// &lt;param name=&quot;result&quot;&gt;&lt;/param&gt;
 public void preOrder(TreeNode tn, List&lt;int&gt; result)
 {
     result.Add(tn.value);
@@ -206,7 +206,7 @@ public void preOrder(TreeNode tn, List&lt;int&gt; result)
 <pre><code>/// &lt;summary&gt;
 /// 执行排序
 /// &lt;/summary&gt;
-/// &lt;param name="n"&gt;&lt;/param&gt;
+/// &lt;param name=&quot;n&quot;&gt;&lt;/param&gt;
 /// &lt;returns&gt;&lt;/returns&gt;
 public IList&lt;int&gt; LexicalOrder(int n)
 {
@@ -217,13 +217,14 @@ public IList&lt;int&gt; LexicalOrder(int n)
     return result;
 }
 </code></pre>
-<h2 id="-4">总结</h2>
+<h2>总结</h2>
 <p>该方案并不是通过测试用例耗时最短的方法，毕竟不构造 TreeNode 类速度会更快，但是恰好复习了一下大学时候所学的二叉树遍历的相关知识,也是挺好的。</p>
-<h2 id="-5">参考资料</h2>
+<h2>参考资料</h2>
 <ul>
 <li><a href="https://leetcode-cn.com/submissions/detail/1564059/">字典序排数解题过程</a></li>
 <li><a href="https://leetcode-cn.com/problems/lexicographical-numbers/description/">386. 字典序排数</a></li>
 </ul>
+
               <div class="qr-code mt-4">
                 <h5>扫描二维码查看</h5>
                 <widget-qrcode id="pageQrCode" template="heart" width="180" height="180"

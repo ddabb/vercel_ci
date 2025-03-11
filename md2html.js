@@ -3,79 +3,10 @@ const fs1 = require('fs');
 const path = require('path');
 const ejs = require('ejs');
 const yaml = require('js-yaml');
-// 新增：引入用于读取JSON文件的fs模块
+const MarkdownIt = require('markdown-it');
+const mathjax = require('markdown-it-mathjax3'); // 用于支持数学公式
 const jsonFilePath = path.join(__dirname, 'jsons', 'goodlinks.json');
 let notFoundGoodsArticles = [];
-const showdown = require('showdown');
-
-// 安全替换字符（Unicode私有区）
-const SAFE = {
-  BACKSLASH: '\uE001',
-  UNDERSCORE: '\uE002',
-  DOLLAR: '\uE003'
-};
-
-// 精准公式检测正则
-const FORMULA_REGEX = {
-  block: /(?<!\\)\$\$([\s\S]+?)\$\$(?!\\)/g,
-  inline: /(?<!\\)\$(?!\s)((?:\\.|[^$])+?)(?<!\s)\$(?!\\)/g
-};
-
-// 预处理：全面保护公式内容
-function formulaShield(text) {
-  // 阶段1：保护块公式
-  let protected = text.replace(FORMULA_REGEX.block, (_, content) => {
-    return `$$$${content
-      .replace(/\\/g, SAFE.BACKSLASH)
-      .replace(/_/g, SAFE.UNDERSCORE)
-      .replace(/\$/g, SAFE.DOLLAR)}$$$$`;
-  });
-
-  // 阶段2：保护行内公式
-  protected = protected.replace(FORMULA_REGEX.inline, (_, content) => {
-    return `$$${content
-      .replace(/\\/g, SAFE.BACKSLASH)
-      .replace(/_/g, SAFE.UNDERSCORE)
-      .replace(/\$/g, SAFE.DOLLAR)}$$`;
-  });
-
-  return protected;
-}
-
-// 后处理：精确还原公式内容
-function formulaRestore(html) {
-  // 处理块公式（含<p>包裹的情况）
-  let restored = html.replace(/(<p>)?\$\$\$([\s\S]+?)\$\$\$(<\/p>)?/g, (match, pOpen, content, pClose) => {
-    const final = content
-      .replace(new RegExp(SAFE.BACKSLASH, 'g'), '\\\\')
-      .replace(new RegExp(SAFE.UNDERSCORE, 'g'), '_')
-      .replace(new RegExp(SAFE.DOLLAR, 'g'), '$');
-    return `${pOpen || ''}<p>$$${final}$$</p>${pClose || ''}`;
-  });
-
-  // 处理行内公式
-  restored = restored.replace(/\$\$([\s\S]+?)\$\$/g, (_, content) => {
-    return `$${content
-      .replace(new RegExp(SAFE.BACKSLASH, 'g'), '\\\\')
-      .replace(new RegExp(SAFE.UNDERSCORE, 'g'), '_')
-      .replace(new RegExp(SAFE.DOLLAR, 'g'), '$')}$`;
-  });
-
-  return restored;
-}
-
-// 配置终极转换器
-const converter = new showdown.Converter({
-  literalMidWordUnderscores: true,
-  backslashEscapesHTMLTags: false,
-  extensions: [{
-    type: 'lang',
-    filter: formulaShield
-  }, {
-    type: 'output',
-    filter: formulaRestore
-  }]
-});
 
 async function readDirFile(filePath) {
   console.log(`Reading Markdown file: ${filePath}`);
@@ -87,10 +18,9 @@ async function readDirFile(filePath) {
   }
 }
 
-// 配置增强型正则（预编译提升性能）
+// 提取 Markdown 文件的 Front Matter
 const FRONT_MATTER_REGEX = /^(\uFEFF)?(?:---|\+\+\+)\r?\n([\s\S]*?)\r?\n(?:---|\+\+\+)(?:\s*$)/m;
 
-// 元数据提取优化版（单次解析完成数据提取与内容清理）
 const extractFrontMatter = (content) => {
   const match = content.match(FRONT_MATTER_REGEX);
   if (!match) return { metadata: {}, cleanedContent: content };
@@ -106,7 +36,16 @@ const extractFrontMatter = (content) => {
   }
 };
 
-// 整合型转换函数（避免重复处理）
+// 配置 markdown-it
+const md = new MarkdownIt({
+  html: true, // 允许 HTML 标签
+  linkify: true, // 自动将 URL 转换为链接
+  typographer: false // 禁用智能排版（避免 `_` 被解析为斜体）
+});
+
+// 使用 markdown-it-mathjax3 插件支持数学公式
+md.use(mathjax);
+
 async function convertMarkdownToHtml(markdownContent, stats) {
   const { metadata, cleanedContent } = extractFrontMatter(markdownContent);
   let goodLinksData = {};
@@ -117,7 +56,6 @@ async function convertMarkdownToHtml(markdownContent, stats) {
     console.error(`Error reading or parsing goodlinks.json: ${error.message}`);
   }
 
-
   // 构建 goodsinfo 对象
   let goodsInfo = {};
   if (metadata.goodsName) {
@@ -126,7 +64,7 @@ async function convertMarkdownToHtml(markdownContent, stats) {
       goodsInfo = {
         name: targetGood.name,
         link: targetGood.link,
-        picLink: `https://${targetGood.picLink}`, // 追加 https:// 前缀
+        picLink: `https://${targetGood.picLink}`,
         monthSale: targetGood.monthSale,
         unitprice: targetGood.unitprice,
         handPrice: targetGood.handPrice,
@@ -134,7 +72,6 @@ async function convertMarkdownToHtml(markdownContent, stats) {
       };
     } else {
       console.error(`没有找到商品信息：${metadata.goodsName}`);
-      // 将找不到商品链接的文章信息添加到notFoundGoodsArticles数组中
       notFoundGoodsArticles.push({
         title: metadata.title || '无标题',
         description: metadata.description || '',
@@ -143,20 +80,21 @@ async function convertMarkdownToHtml(markdownContent, stats) {
     }
   }
 
+  // 使用 markdown-it 转换 Markdown 内容
+  const contentHtml = md.render(cleanedContent);
 
   return {
-    content: converter.makeHtml(cleanedContent),
+    content: contentHtml,
     meta: {
       title: metadata.title || '无标题',
       description: metadata.description || '',
       updateTime: stats.mtime,
-      goodsInfo: goodsInfo, // 替换原有的 goodsLink
+      goodsInfo: goodsInfo,
       tags: metadata.tags?.filter(Boolean) || [],
       category: metadata.category || '未分类'
     }
   };
 }
-
 
 async function ensureComponentsDirectory(componentsDirectory) {
   console.log(`Ensuring components directory exists: ${componentsDirectory}`);
@@ -165,7 +103,6 @@ async function ensureComponentsDirectory(componentsDirectory) {
   } catch (error) {
     await fs.mkdir(componentsDirectory);
     console.log(`Created ${componentsDirectory}`);
-    console.log('Please copy header.ejs and footer.ejs from the package to this directory.');
   }
 }
 
@@ -195,6 +132,7 @@ async function updateHtmlFile(htmlFilePath, htmlContent, outputFilePath) {
     throw error;
   }
 }
+
 async function emptyDirectory(directoryPath) {
   console.log(`Emptying directory: ${directoryPath}`);
   try {
@@ -203,7 +141,7 @@ async function emptyDirectory(directoryPath) {
     await Promise.all(removePromises);
     console.log(`Successfully emptied directory: ${directoryPath}`);
   } catch (error) {
-    if (error.code === 'ENOENT') { // 目录不存在的情况
+    if (error.code === 'ENOENT') {
       console.log(`Directory does not exist: ${directoryPath}`);
     } else {
       console.error(`Error emptying directory: ${directoryPath}`, error);
@@ -211,13 +149,13 @@ async function emptyDirectory(directoryPath) {
     }
   }
 }
+
 async function mdToHtml(mdFilesDirectory = 'mdfiles', genhtmlDirectory = 'mdhtml', htmlTemplatePath = 'components/article.ejs') {
   console.log('Starting mdToHtml process...');
   const componentsDirectory = path.join(__dirname, 'components');
 
   try {
     await ensureComponentsDirectory(componentsDirectory);
-    // 新增：清空输出目录
     await emptyDirectory(genhtmlDirectory);
     const mdFiles = await fs.readdir(mdFilesDirectory, { withFileTypes: true });
     const markdownFiles = mdFiles
@@ -228,18 +166,16 @@ async function mdToHtml(mdFilesDirectory = 'mdfiles', genhtmlDirectory = 'mdhtml
 
     for (const fileName of markdownFiles) {
       const mdFilePath = path.join(mdFilesDirectory, fileName);
-      let htmlContent;
       const markdownContent = await readDirFile(mdFilePath);
       const stats = fs1.statSync(mdFilePath);
-      htmlContent = await convertMarkdownToHtml(markdownContent, stats);
-      // 生成单独的 .html 文件
+      const htmlContent = await convertMarkdownToHtml(markdownContent, stats);
       const outputFilePath = path.join(genhtmlDirectory, `${path.basename(fileName, '.md')}.html`);
-      await updateHtmlFile(htmlTemplatePath, htmlContent, outputFilePath);
+      await updateHtmlFile(htmlTemplatePath, htmlContent, outputFilePath); // 修正了这里
     }
-    // 在所有Markdown文件处理完毕后，将找不到商品的文章信息写入NotFindGoods.json
+
     const notFindGoodsJsonPath = path.join(__dirname, 'jsons', 'NotFindGoods.json');
     await fs.writeFile(notFindGoodsJsonPath, JSON.stringify(notFoundGoodsArticles, null, 2));
-    console.log('Finished mdToHtml process...:');
+    console.log('Finished mdToHtml process...');
   } catch (error) {
     console.error('Error during mdToHtml process:', error);
   }
