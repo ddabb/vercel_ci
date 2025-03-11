@@ -233,6 +233,7 @@ DeepSeek代表的AI进化，既是蒸汽机级别的效率革命，也是柏拉�
         window.addEventListener('load', function () {
           if (typeof renderMathInElement === 'function') { // 确认renderMathInElement存在
             renderMathInElement(document.body, {
+              strict: false,
               delimiters: [
                 { left: '$$', right: '$$', display: true },
                 { left: '$', right: '$', display: false },

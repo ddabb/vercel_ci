@@ -238,6 +238,7 @@ DeepSeek的崛起，标志着教育从“工业化流水线”向“个性化生
         window.addEventListener('load', function () {
           if (typeof renderMathInElement === 'function') { // 确认renderMathInElement存在
             renderMathInElement(document.body, {
+              strict: false,
               delimiters: [
                 { left: '$$', right: '$$', display: true },
                 { left: '$', right: '$', display: false },

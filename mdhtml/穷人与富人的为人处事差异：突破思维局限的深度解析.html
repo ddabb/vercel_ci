@@ -278,6 +278,7 @@ $$ \text{时间价值比} = \frac{\text{单位时间创造收益}}{\text{单位�
         window.addEventListener('load', function () {
           if (typeof renderMathInElement === 'function') { // 确认renderMathInElement存在
             renderMathInElement(document.body, {
+              strict: false,
               delimiters: [
                 { left: '$$', right: '$$', display: true },
                 { left: '$', right: '$', display: false },

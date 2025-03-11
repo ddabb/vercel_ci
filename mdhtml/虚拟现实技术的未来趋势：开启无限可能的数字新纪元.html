@@ -225,6 +225,7 @@ VR技术与物联网的结合会带来全新的交互体验。在智能家居场
         window.addEventListener('load', function () {
           if (typeof renderMathInElement === 'function') { // 确认renderMathInElement存在
             renderMathInElement(document.body, {
+              strict: false,
               delimiters: [
                 { left: '$$', right: '$$', display: true },
                 { left: '$', right: '$', display: false },

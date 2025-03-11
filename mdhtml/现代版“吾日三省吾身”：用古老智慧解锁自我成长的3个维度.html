@@ -269,6 +269,7 @@ Observe（观察决策场景）→ Orient（定位情绪坐标）→ Decide（�
         window.addEventListener('load', function () {
           if (typeof renderMathInElement === 'function') { // 确认renderMathInElement存在
             renderMathInElement(document.body, {
+              strict: false,
               delimiters: [
                 { left: '$$', right: '$$', display: true },
                 { left: '$', right: '$', display: false },

@@ -233,6 +233,7 @@ ChatGPT则依赖成熟的订阅制生态，拥有超百万开发者资源，但�
         window.addEventListener('load', function () {
           if (typeof renderMathInElement === 'function') { // 确认renderMathInElement存在
             renderMathInElement(document.body, {
+              strict: false,
               delimiters: [
                 { left: '$$', right: '$$', display: true },
                 { left: '$', right: '$', display: false },
