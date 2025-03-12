@@ -124,6 +124,7 @@ https://www.60score.com/mdhtml/为什么社会贫富差距越来越大？.html
 https://www.60score.com/mdhtml/为什么语文老师要求多看名著，不让看网络小说？.html
 https://www.60score.com/mdhtml/为什么越想忘记越难忘？.html
 https://www.60score.com/mdhtml/为什么车厘子一个月到中国却不腐烂.html
+https://www.60score.com/mdhtml/为何人类的死亡方式如此千奇百怪？.html
 https://www.60score.com/mdhtml/为何西方雕塑常展现裸露之姿.html
 https://www.60score.com/mdhtml/为何要拥有自己的后代.html
 https://www.60score.com/mdhtml/为啥我爸妈结婚时没喊我参加婚礼？.html
@@ -427,6 +428,7 @@ https://www.60score.com/mdhtml/癌症未来能被彻底治愈吗？.html
 https://www.60score.com/mdhtml/盛年不重来，一日难再晨：珍惜时光，绽放生命华彩.html
 https://www.60score.com/mdhtml/眼镜发明前，眼镜蛇叫什么？.html
 https://www.60score.com/mdhtml/短篇小说畅销秘籍：全方位创作指南.html
+https://www.60score.com/mdhtml/短视频爆款公式：普通人低成本涨粉秘籍.html
 https://www.60score.com/mdhtml/破情关：解锁人生新境界的密钥.html
 https://www.60score.com/mdhtml/破解人际关系中的心理枷锁：实现和谐人际关系的关键.html
 https://www.60score.com/mdhtml/离职抉择：领导加薪挽留与新offer如何权衡.html
@@ -777,6 +779,7 @@ https://www.60score.com/tag/勇气启示.html
 https://www.60score.com/tag/勇气追求.html
 https://www.60score.com/tag/化学稳定性.html
 https://www.60score.com/tag/区块链技术.html
+https://www.60score.com/tag/医疗事故.html
 https://www.60score.com/tag/医疗健康.html
 https://www.60score.com/tag/医疗干预.html
 https://www.60score.com/tag/医疗科技.html
@@ -1177,6 +1180,7 @@ https://www.60score.com/tag/情节推动.html
 https://www.60score.com/tag/情节构建.html
 https://www.60score.com/tag/情节设计.html
 https://www.60score.com/tag/想念.html
+https://www.60score.com/tag/意外事故.html
 https://www.60score.com/tag/感官交互.html
 https://www.60score.com/tag/感官进化.html
 https://www.60score.com/tag/感官障碍.html
@@ -1496,6 +1500,7 @@ https://www.60score.com/tag/消费心理.html
 https://www.60score.com/tag/消费心理学.html
 https://www.60score.com/tag/消费理财.html
 https://www.60score.com/tag/消费规划.html
+https://www.60score.com/tag/涨粉.html
 https://www.60score.com/tag/涨薪谈判.html
 https://www.60score.com/tag/深呼吸.html
 https://www.60score.com/tag/深度学习.html
@@ -1524,6 +1529,7 @@ https://www.60score.com/tag/焦虑抑郁.html
 https://www.60score.com/tag/煎蛋荷包蛋.html
 https://www.60score.com/tag/熵增博弈.html
 https://www.60score.com/tag/燃烧条件.html
+https://www.60score.com/tag/爆款公式.html
 https://www.60score.com/tag/爆款内容.html
 https://www.60score.com/tag/爆款文章.html
 https://www.60score.com/tag/爱与离别.html
@@ -1659,6 +1665,7 @@ https://www.60score.com/tag/男性心理.html
 https://www.60score.com/tag/男性性能力.html
 https://www.60score.com/tag/畅销小说.html
 https://www.60score.com/tag/番茄工作法.html
+https://www.60score.com/tag/疾病与健康.html
 https://www.60score.com/tag/疾病影响.html
 https://www.60score.com/tag/痛风.html
 https://www.60score.com/tag/癌症治疗.html
@@ -1691,6 +1698,7 @@ https://www.60score.com/tag/知识代谢.html
 https://www.60score.com/tag/知识能力.html
 https://www.60score.com/tag/知识诅咒.html
 https://www.60score.com/tag/短篇小说.html
+https://www.60score.com/tag/短视频.html
 https://www.60score.com/tag/矿物质.html
 https://www.60score.com/tag/砝码.html
 https://www.60score.com/tag/破局思维.html
@@ -1939,10 +1947,12 @@ https://www.60score.com/tag/自我认知与内心幸福.html
 https://www.60score.com/tag/自我评估.html
 https://www.60score.com/tag/自我赋能.html
 https://www.60score.com/tag/自杀.html
+https://www.60score.com/tag/自杀与他杀.html
 https://www.60score.com/tag/自杀预防.html
 https://www.60score.com/tag/自来水饮用风险.html
 https://www.60score.com/tag/自然元素.html
 https://www.60score.com/tag/自然助眠法.html
+https://www.60score.com/tag/自然死亡.html
 https://www.60score.com/tag/自然法则.html
 https://www.60score.com/tag/自然状态.html
 https://www.60score.com/tag/自由意志.html
@@ -2047,6 +2057,7 @@ https://www.60score.com/tag/财富观念.html
 https://www.60score.com/tag/财富追求.html
 https://www.60score.com/tag/责任归属.html
 https://www.60score.com/tag/责任担当.html
+https://www.60score.com/tag/账号定位.html
 https://www.60score.com/tag/贫困理解.html
 https://www.60score.com/tag/贫富差距.html
 https://www.60score.com/tag/费用安排.html
