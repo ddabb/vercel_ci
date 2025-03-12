@@ -150,6 +150,7 @@ https://www.60score.com/mdhtml/从月球到地球架设金属杆滑行的探索.
 https://www.60score.com/mdhtml/从权谋闹剧到创作困境：狗尾续貂的千年警示.html
 https://www.60score.com/mdhtml/令人绝望的“文盲”.html
 https://www.60score.com/mdhtml/传统文化该如何传承创新？.html
+https://www.60score.com/mdhtml/使用Puppeteer高效生成PDF的全面指南.html
 https://www.60score.com/mdhtml/倒立的时候是不是举起了地球？.html
 https://www.60score.com/mdhtml/儿童心理健康的早期培养：筑牢孩子未来的根基.html
 https://www.60score.com/mdhtml/元宇宙会改变人类的生活方式吗.html
@@ -526,6 +527,9 @@ https://www.60score.com/tag/B型血输血.html
 https://www.60score.com/tag/ChatGPT.html
 https://www.60score.com/tag/DeepSeek.html
 https://www.60score.com/tag/LED灯.html
+https://www.60score.com/tag/Node.js.html
+https://www.60score.com/tag/PDF生成.html
+https://www.60score.com/tag/Puppeteer.html
 https://www.60score.com/tag/VR-AR.html
 https://www.60score.com/tag/markdown.html
 https://www.60score.com/tag/《西游记》.html
@@ -1839,6 +1843,7 @@ https://www.60score.com/tag/绿色金融.html
 https://www.60score.com/tag/编程基础.html
 https://www.60score.com/tag/网络安全.html
 https://www.60score.com/tag/网络环境净化.html
+https://www.60score.com/tag/网页截图.html
 https://www.60score.com/tag/美国9球公开赛.html
 https://www.60score.com/tag/群体智能.html
 https://www.60score.com/tag/老妈控制欲.html
@@ -1891,6 +1896,7 @@ https://www.60score.com/tag/脂肪酸.html
 https://www.60score.com/tag/脑血栓.html
 https://www.60score.com/tag/腿举机.html
 https://www.60score.com/tag/自信心.html
+https://www.60score.com/tag/自动化.html
 https://www.60score.com/tag/自动化营销.html
 https://www.60score.com/tag/自助台球店.html
 https://www.60score.com/tag/自卑心理.html
