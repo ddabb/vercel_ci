@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "main": "app/tianqi.js",
   "dependencies": {
+
     "@popperjs/core": "^2.11.8",
     "axios": "^1.7.2",
     "body-parser": "^1.20.2",
@@ -28,7 +29,9 @@
     "node-fetch": "^3.3.2",
     "p-limit": "^6.2.0",
     "p-map": "^7.0.2",
+ 
     "poetryesm": "^1.0.16",
+    "puppeteer": "^24.4.0",
     "showdown": "^2.1.0",
     "vercel": "^40.1.0",
     "widget-qrcode": "^1.0.4",
