@@ -45,8 +45,6 @@ https://www.60score.com/category/建筑探索.html
 https://www.60score.com/category/影视评论.html
 https://www.60score.com/category/心灵成长.html
 https://www.60score.com/category/心理情感.html
-https://www.60score.com/category/心理调试.html
-https://www.60score.com/category/心理调适.html
 https://www.60score.com/category/性别健康.html
 https://www.60score.com/category/情感关系.html
 https://www.60score.com/category/教育学习.html
@@ -72,7 +70,7 @@ https://www.60score.com/category/自我提升.html
 https://www.60score.com/category/自然科学.html
 https://www.60score.com/category/艺术赏析.html
 https://www.60score.com/category/财富管理.html
-https://www.60score.com/category/身体健康.html
+https://www.60score.com/category/身心健康.html
 https://www.60score.com/category/软件开发.html
 https://www.60score.com/category/运营指南.html
 https://www.60score.com/category/金融科技.html
@@ -153,6 +151,7 @@ https://www.60score.com/mdhtml/令人绝望的“文盲”.html
 https://www.60score.com/mdhtml/传统文化该如何传承创新？.html
 https://www.60score.com/mdhtml/使用Puppeteer高效生成PDF的全面指南.html
 https://www.60score.com/mdhtml/倒立的时候是不是举起了地球？.html
+https://www.60score.com/mdhtml/儿子带女朋友第一次来家里，红包给不给？.html
 https://www.60score.com/mdhtml/儿童心理健康的早期培养：筑牢孩子未来的根基.html
 https://www.60score.com/mdhtml/元宇宙会改变人类的生活方式吗.html
 https://www.60score.com/mdhtml/全球变暖还能逆转吗？.html
@@ -263,6 +262,7 @@ https://www.60score.com/mdhtml/如果猪肾虚，那它的腰子还补吗？.htm
 https://www.60score.com/mdhtml/如果贞子是秃头，她的恐怖感会减弱吗？.html
 https://www.60score.com/mdhtml/如果霸王龙在纽约生存，每天需要吃多少人？.html
 https://www.60score.com/mdhtml/妲己不是九尾狐而是藏狐，纣王还会爱上她吗？.html
+https://www.60score.com/mdhtml/娶比自己大两岁的老婆：开启别样幸福之旅.html
 https://www.60score.com/mdhtml/婚前同居：是时尚选择还是价值“掉价”？.html
 https://www.60score.com/mdhtml/婚外情能维持到老死吗？.html
 https://www.60score.com/mdhtml/媒体在塑造公众舆论和社会价值观方面扮演着怎样的角色？.html
@@ -315,11 +315,13 @@ https://www.60score.com/mdhtml/恐龙为什么会突然灭绝？.html
 https://www.60score.com/mdhtml/情侣之间婚前性行为的全面剖析.html
 https://www.60score.com/mdhtml/情侣之间的沟通秘籍：构建深度情感连接.html
 https://www.60score.com/mdhtml/情感关系中的边界感设定：守护内心的宁静港湾.html
+https://www.60score.com/mdhtml/想要年入百万需要有什么样的思维方式和行动.html
 https://www.60score.com/mdhtml/愚公移山：一场颠覆认知的时空革命.html
 https://www.60score.com/mdhtml/成功人士从不给自己找借口.html
 https://www.60score.com/mdhtml/我与炉石传说的“分手”之旅：如何摆脱游戏沉迷.html
 https://www.60score.com/mdhtml/我买了一斤藕，为啥半斤都是空的？.html
 https://www.60score.com/mdhtml/我们做出的每一个选择是否都是必然的，还是存在着真正的自由意志？.html
+https://www.60score.com/mdhtml/我们只是掌管了我们的身体，所以我们要对它负责.html
 https://www.60score.com/mdhtml/我们如何在享受科技成果的同时，保持人性的温暖和尊严？.html
 https://www.60score.com/mdhtml/我们应该如何在文化交流中保持自身文化的独特性？.html
 https://www.60score.com/mdhtml/我们是否真正了解自己？.html
@@ -365,9 +367,11 @@ https://www.60score.com/mdhtml/早起的鸟儿有虫吃，早起的虫儿被鸟�
 https://www.60score.com/mdhtml/时间与新欢：情感困境的双重破局之道.html
 https://www.60score.com/mdhtml/时间管理技巧：高效安排工作与生活.html
 https://www.60score.com/mdhtml/时间管理的艺术：提升效率的新策略.html
+https://www.60score.com/mdhtml/明明年入百万会大大改善生活质量，我为什么没有年入百万的自驱力？.html
 https://www.60score.com/mdhtml/明明每天坚持“不自律”，算不算另一种自律？.html
 https://www.60score.com/mdhtml/普通人也能轻松走进的名著宝藏推荐.html
 https://www.60score.com/mdhtml/普通人赚钱的途径.html
+https://www.60score.com/mdhtml/普通人阅读《资本论》的必要性解析.html
 https://www.60score.com/mdhtml/暴雨橙色预警是要下芬达的意思吗？.html
 https://www.60score.com/mdhtml/月入一万二千元在大城市的生活日常.html
 https://www.60score.com/mdhtml/月入一万五千元的生活日常：普通上班族的精致生活攻略.html
@@ -389,6 +393,7 @@ https://www.60score.com/mdhtml/死亡是终点还是新的开始？.html
 https://www.60score.com/mdhtml/毕业3年学费为何不退还：解析教育投资价值.html
 https://www.60score.com/mdhtml/气候变化与植树造林：守护地球的绿色希望.html
 https://www.60score.com/mdhtml/汉语是人类语言中最美的面向对象的语言.html
+https://www.60score.com/mdhtml/没有性生活时男性合理的自慰频率.html
 https://www.60score.com/mdhtml/没钱也要理财：开启财务独立之旅.html
 https://www.60score.com/mdhtml/法律未禁御剑飞行却无人尝试的原因探究.html
 https://www.60score.com/mdhtml/洄游的鱼，南飞的鸟：探寻背后的人生智慧.html
@@ -416,14 +421,17 @@ https://www.60score.com/mdhtml/甩掉脂肪不交智商税：普通人的科学�
 https://www.60score.com/mdhtml/田忌赛马：被低估的职场生存术，看懂的人早已逆袭.html
 https://www.60score.com/mdhtml/甲流发烧为什么不建议洗澡.html
 https://www.60score.com/mdhtml/男人为什么不喜欢戴避孕套.html
+https://www.60score.com/mdhtml/男人喜欢外面女人的背后原因剖析.html
 https://www.60score.com/mdhtml/男人喜欢女人用嘴是什么原因呢.html
 https://www.60score.com/mdhtml/男人多大年龄就没性功能了.html
 https://www.60score.com/mdhtml/男人性时长：正常范围的深度剖析.html
+https://www.60score.com/mdhtml/男人把钱交给老婆是否就是爱她.html
 https://www.60score.com/mdhtml/男人挑选合适钱包指南.html
 https://www.60score.com/mdhtml/男人长期不过性生活有什么影响.html
 https://www.60score.com/mdhtml/男女平等的社会何时才能到来？.html
 https://www.60score.com/mdhtml/男孩何时真正意识到自己是男人？.html
 https://www.60score.com/mdhtml/男朋友得知我不是第一次后的反应：传统观念与现代爱情的碰撞.html
+https://www.60score.com/mdhtml/男生分手后挽回的最佳时间与策略.html
 https://www.60score.com/mdhtml/畅销长篇小说创作秘籍全解析.html
 https://www.60score.com/mdhtml/癌症未来能被彻底治愈吗？.html
 https://www.60score.com/mdhtml/盛年不重来，一日难再晨：珍惜时光，绽放生命华彩.html
@@ -455,6 +463,7 @@ https://www.60score.com/mdhtml/绘画：通往内心平静的奇妙通道.html
 https://www.60score.com/mdhtml/给你一个亿，然后禁止你结婚，逼你一辈子单身，你觉得你会快乐吗？.html
 https://www.60score.com/mdhtml/绿色金融：解锁可持续未来的财富密码.html
 https://www.60score.com/mdhtml/缘木求鱼：逆向思维下的认知突围与生命韧性.html
+https://www.60score.com/mdhtml/老公向着婆婆，婚姻该何去何从？.html
 https://www.60score.com/mdhtml/老公对我不错但性生活缺失是否该离婚.html
 https://www.60score.com/mdhtml/老年人常见的心理问题及应对策略.html
 https://www.60score.com/mdhtml/聊一下乒乓混双得主王楚钦和邓颖莎.html
@@ -539,6 +548,7 @@ https://www.60score.com/tag/Puppeteer.html
 https://www.60score.com/tag/VR-AR.html
 https://www.60score.com/tag/markdown.html
 https://www.60score.com/tag/《西游记》.html
+https://www.60score.com/tag/《资本论》.html
 https://www.60score.com/tag/一把手.html
 https://www.60score.com/tag/三千元月收入.html
 https://www.60score.com/tag/三头六臂.html
@@ -565,6 +575,7 @@ https://www.60score.com/tag/个人品牌.html
 https://www.60score.com/tag/个人影响.html
 https://www.60score.com/tag/个人成长.html
 https://www.60score.com/tag/个人理财.html
+https://www.60score.com/tag/个人素养.html
 https://www.60score.com/tag/个人网站.html
 https://www.60score.com/tag/个人自由.html
 https://www.60score.com/tag/个人行动.html
@@ -712,6 +723,7 @@ https://www.60score.com/tag/公民社会.html
 https://www.60score.com/tag/共同目标.html
 https://www.60score.com/tag/关系修复.html
 https://www.60score.com/tag/关系维护.html
+https://www.60score.com/tag/关键能力.html
 https://www.60score.com/tag/关键词策略.html
 https://www.60score.com/tag/兴趣导向.html
 https://www.60score.com/tag/兴趣爱好.html
@@ -738,6 +750,7 @@ https://www.60score.com/tag/决策智慧.html
 https://www.60score.com/tag/准确性.html
 https://www.60score.com/tag/出发准备.html
 https://www.60score.com/tag/击球顺序.html
+https://www.60score.com/tag/分手挽回.html
 https://www.60score.com/tag/创业.html
 https://www.60score.com/tag/创业公司.html
 https://www.60score.com/tag/创业准备.html
@@ -926,6 +939,7 @@ https://www.60score.com/tag/大城市生活.html
 https://www.60score.com/tag/大数据.html
 https://www.60score.com/tag/大模型.html
 https://www.60score.com/tag/大气折射.html
+https://www.60score.com/tag/大龄妻子.html
 https://www.60score.com/tag/天平.html
 https://www.60score.com/tag/天庭.html
 https://www.60score.com/tag/天文学.html
@@ -935,6 +949,7 @@ https://www.60score.com/tag/太空探索.html
 https://www.60score.com/tag/夫妻关系.html
 https://www.60score.com/tag/夫妻沟通.html
 https://www.60score.com/tag/夫妻生活.html
+https://www.60score.com/tag/夫妻相处.html
 https://www.60score.com/tag/失眠治疗.html
 https://www.60score.com/tag/失落感.html
 https://www.60score.com/tag/失败应对.html
@@ -950,8 +965,11 @@ https://www.60score.com/tag/好妻子.html
 https://www.60score.com/tag/好评陷阱.html
 https://www.60score.com/tag/妲己.html
 https://www.60score.com/tag/娱乐休闲.html
+https://www.60score.com/tag/婆媳关系.html
+https://www.60score.com/tag/婆媳矛盾处理.html
 https://www.60score.com/tag/婚前同居.html
 https://www.60score.com/tag/婚外情.html
+https://www.60score.com/tag/婚姻.html
 https://www.60score.com/tag/婚姻与财富.html
 https://www.60score.com/tag/婚姻修复.html
 https://www.60score.com/tag/婚姻关系.html
@@ -960,6 +978,7 @@ https://www.60score.com/tag/婚姻危机.html
 https://www.60score.com/tag/婚姻持续时间.html
 https://www.60score.com/tag/婚姻满意度.html
 https://www.60score.com/tag/婚姻生活.html
+https://www.60score.com/tag/婚姻组合.html
 https://www.60score.com/tag/婚姻选择.html
 https://www.60score.com/tag/媒体角色.html
 https://www.60score.com/tag/嫉妒心理.html
@@ -1007,6 +1026,7 @@ https://www.60score.com/tag/实战经验.html
 https://www.60score.com/tag/实用建议.html
 https://www.60score.com/tag/实践智慧.html
 https://www.60score.com/tag/实践缺失.html
+https://www.60score.com/tag/实际行动.html
 https://www.60score.com/tag/实验研究.html
 https://www.60score.com/tag/客流量分析.html
 https://www.60score.com/tag/客源分析.html
@@ -1018,9 +1038,11 @@ https://www.60score.com/tag/家庭支持.html
 https://www.60score.com/tag/家庭教育.html
 https://www.60score.com/tag/家庭时光.html
 https://www.60score.com/tag/家庭暴力.html
+https://www.60score.com/tag/家庭氛围.html
 https://www.60score.com/tag/家庭沟通.html
 https://www.60score.com/tag/家庭理财规划.html
 https://www.60score.com/tag/家庭管理.html
+https://www.60score.com/tag/家庭经营.html
 https://www.60score.com/tag/家庭责任.html
 https://www.60score.com/tag/宿命论.html
 https://www.60score.com/tag/寓言新解.html
@@ -1054,9 +1076,11 @@ https://www.60score.com/tag/平台管理.html
 https://www.60score.com/tag/平流层.html
 https://www.60score.com/tag/平衡.html
 https://www.60score.com/tag/平衡生活.html
+https://www.60score.com/tag/年入百万.html
 https://www.60score.com/tag/年度回顾.html
 https://www.60score.com/tag/年轻人.html
 https://www.60score.com/tag/年龄因素.html
+https://www.60score.com/tag/幸福婚姻.html
 https://www.60score.com/tag/幸福本质.html
 https://www.60score.com/tag/幸福满足.html
 https://www.60score.com/tag/幸福研究.html
@@ -1121,6 +1145,7 @@ https://www.60score.com/tag/性别健康.html
 https://www.60score.com/tag/性别平等.html
 https://www.60score.com/tag/性功能.html
 https://www.60score.com/tag/性时长.html
+https://www.60score.com/tag/性格互补.html
 https://www.60score.com/tag/性格分析.html
 https://www.60score.com/tag/性格形成.html
 https://www.60score.com/tag/性生活.html
@@ -1160,6 +1185,7 @@ https://www.60score.com/tag/情感支持.html
 https://www.60score.com/tag/情感沟通.html
 https://www.60score.com/tag/情感疏离.html
 https://www.60score.com/tag/情感科技.html
+https://www.60score.com/tag/情感策略.html
 https://www.60score.com/tag/情感纽带.html
 https://www.60score.com/tag/情感细腻.html
 https://www.60score.com/tag/情感维护.html
@@ -1240,6 +1266,7 @@ https://www.60score.com/tag/技能提升.html
 https://www.60score.com/tag/技能重塑.html
 https://www.60score.com/tag/投资.html
 https://www.60score.com/tag/投资决策.html
+https://www.60score.com/tag/投资创业.html
 https://www.60score.com/tag/投资心态.html
 https://www.60score.com/tag/投资收益.html
 https://www.60score.com/tag/投资方向.html
@@ -1355,9 +1382,11 @@ https://www.60score.com/tag/新offer.html
 https://www.60score.com/tag/新兴技术.html
 https://www.60score.com/tag/新兴金融科技.html
 https://www.60score.com/tag/新思维.html
+https://www.60score.com/tag/新成员融入.html
 https://www.60score.com/tag/新手司机.html
 https://www.60score.com/tag/新欢作用.html
 https://www.60score.com/tag/新职业诞生.html
+https://www.60score.com/tag/新鲜感.html
 https://www.60score.com/tag/方向审计.html
 https://www.60score.com/tag/方法论.html
 https://www.60score.com/tag/无性婚姻.html
@@ -1382,6 +1411,7 @@ https://www.60score.com/tag/星际殖民.html
 https://www.60score.com/tag/星际移民.html
 https://www.60score.com/tag/春招应届生.html
 https://www.60score.com/tag/晚餐搭配.html
+https://www.60score.com/tag/普通人.html
 https://www.60score.com/tag/智能写作助手.html
 https://www.60score.com/tag/智能化金融服务.html
 https://www.60score.com/tag/智能升级.html
@@ -1495,6 +1525,7 @@ https://www.60score.com/tag/泻药.html
 https://www.60score.com/tag/洗澡风险.html
 https://www.60score.com/tag/测量技巧.html
 https://www.60score.com/tag/浪漫爱情.html
+https://www.60score.com/tag/浪漫行动.html
 https://www.60score.com/tag/海洋香型.html
 https://www.60score.com/tag/涂料.html
 https://www.60score.com/tag/消化不良.html
@@ -1540,9 +1571,11 @@ https://www.60score.com/tag/爱与离别.html
 https://www.60score.com/tag/爱情.html
 https://www.60score.com/tag/爱情与婚姻.html
 https://www.60score.com/tag/爱情保鲜.html
+https://www.60score.com/tag/爱情修复.html
 https://www.60score.com/tag/爱情哲学.html
 https://www.60score.com/tag/爱情故事.html
 https://www.60score.com/tag/爱情真谛.html
+https://www.60score.com/tag/爱情表达.html
 https://www.60score.com/tag/爱情观.html
 https://www.60score.com/tag/爱情选择.html
 https://www.60score.com/tag/父母婚礼.html
@@ -1645,6 +1678,7 @@ https://www.60score.com/tag/生活质量.html
 https://www.60score.com/tag/生物多样性.html
 https://www.60score.com/tag/生物技术.html
 https://www.60score.com/tag/生物进化.html
+https://www.60score.com/tag/生理健康.html
 https://www.60score.com/tag/生理变化.html
 https://www.60score.com/tag/生理因素.html
 https://www.60score.com/tag/生理差异.html
@@ -1660,10 +1694,12 @@ https://www.60score.com/tag/甲流.html
 https://www.60score.com/tag/电动剃须.html
 https://www.60score.com/tag/电梯设施.html
 https://www.60score.com/tag/电车难题.html
+https://www.60score.com/tag/男人情感.html
 https://www.60score.com/tag/男士手表.html
 https://www.60score.com/tag/男士护理.html
 https://www.60score.com/tag/男士钱包.html
 https://www.60score.com/tag/男士香水.html
+https://www.60score.com/tag/男性健康.html
 https://www.60score.com/tag/男性审美.html
 https://www.60score.com/tag/男性心理.html
 https://www.60score.com/tag/男性性能力.html
@@ -1680,6 +1716,7 @@ https://www.60score.com/tag/盈利模式.html
 https://www.60score.com/tag/监狱管理.html
 https://www.60score.com/tag/目标受众.html
 https://www.60score.com/tag/目标管理.html
+https://www.60score.com/tag/目标规划.html
 https://www.60score.com/tag/目标计划.html
 https://www.60score.com/tag/目标设定.html
 https://www.60score.com/tag/盲人权益.html
@@ -1730,6 +1767,7 @@ https://www.60score.com/tag/社交技巧.html
 https://www.60score.com/tag/社交支持.html
 https://www.60score.com/tag/社交智慧.html
 https://www.60score.com/tag/社交活动.html
+https://www.60score.com/tag/社交环境.html
 https://www.60score.com/tag/社交生活.html
 https://www.60score.com/tag/社交能力.html
 https://www.60score.com/tag/社交虚假.html
@@ -1753,6 +1791,7 @@ https://www.60score.com/tag/社会支持系统.html
 https://www.60score.com/tag/社会文化.html
 https://www.60score.com/tag/社会流动.html
 https://www.60score.com/tag/社会现象.html
+https://www.60score.com/tag/社会经济.html
 https://www.60score.com/tag/社会观念.html
 https://www.60score.com/tag/社会规范.html
 https://www.60score.com/tag/社会角色.html
@@ -1834,6 +1873,7 @@ https://www.60score.com/tag/精神追求.html
 https://www.60score.com/tag/精致生活.html
 https://www.60score.com/tag/系外行星.html
 https://www.60score.com/tag/系统升级.html
+https://www.60score.com/tag/红包习俗.html
 https://www.60score.com/tag/红楼梦.html
 https://www.60score.com/tag/纣王.html
 https://www.60score.com/tag/纽约.html
@@ -1930,6 +1970,7 @@ https://www.60score.com/tag/自媒体效应.html
 https://www.60score.com/tag/自律.html
 https://www.60score.com/tag/自律能力.html
 https://www.60score.com/tag/自慰.html
+https://www.60score.com/tag/自慰频率.html
 https://www.60score.com/tag/自我价值.html
 https://www.60score.com/tag/自我保护.html
 https://www.60score.com/tag/自我修复.html
@@ -1964,6 +2005,7 @@ https://www.60score.com/tag/自由意志.html
 https://www.60score.com/tag/自由边界.html
 https://www.60score.com/tag/自身优势.html
 https://www.60score.com/tag/自首.html
+https://www.60score.com/tag/自驱力.html
 https://www.60score.com/tag/舆论引导.html
 https://www.60score.com/tag/舒适区.html
 https://www.60score.com/tag/舒适度.html
@@ -2057,6 +2099,7 @@ https://www.60score.com/tag/财务自由.html
 https://www.60score.com/tag/财务规划.html
 https://www.60score.com/tag/财富创造.html
 https://www.60score.com/tag/财富增长.html
+https://www.60score.com/tag/财富思维.html
 https://www.60score.com/tag/财富积累.html
 https://www.60score.com/tag/财富观念.html
 https://www.60score.com/tag/财富追求.html
@@ -2096,6 +2139,7 @@ https://www.60score.com/tag/身份认同.html
 https://www.60score.com/tag/身体健康.html
 https://www.60score.com/tag/身体健康警示.html
 https://www.60score.com/tag/身心健康.html
+https://www.60score.com/tag/身心关系.html
 https://www.60score.com/tag/身高差异.html
 https://www.60score.com/tag/躺成球状.html
 https://www.60score.com/tag/车厘子保鲜.html
@@ -2158,6 +2202,7 @@ https://www.60score.com/tag/金属杆.html
 https://www.60score.com/tag/金融科技.html
 https://www.60score.com/tag/金钱与幸福.html
 https://www.60score.com/tag/金钱与快乐.html
+https://www.60score.com/tag/金钱管理.html
 https://www.60score.com/tag/金钱观.html
 https://www.60score.com/tag/鉴黄师.html
 https://www.60score.com/tag/钱包品牌.html
