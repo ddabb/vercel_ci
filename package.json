@@ -3,8 +3,10 @@
   "version": "1.0.0",
   "main": "app/tianqi.js",
   "dependencies": {
-
+    "@niledatabase/react": "^3.1.0-alpha.0",
+    "@niledatabase/server": "^3.1.0-alpha.0",
     "@popperjs/core": "^2.11.8",
+    "@supabase/supabase-js": "^2.49.1",
     "axios": "^1.7.2",
     "body-parser": "^1.20.2",
     "bootstrap": "^5.3.3",
@@ -12,6 +14,7 @@
     "browser-sync": "^3.0.3",
     "chokidar": "^4.0.3",
     "crypto": "^1.0.1",
+    "dotenv": "^16.4.7",
     "ejs": "^3.1.10",
     "express": "^4.19.2",
     "fishbb": "^1.0.16",
@@ -29,7 +32,7 @@
     "node-fetch": "^3.3.2",
     "p-limit": "^6.2.0",
     "p-map": "^7.0.2",
- 
+    "pg": "^8.14.0",
     "poetryesm": "^1.0.16",
     "puppeteer": "^24.4.0",
     "showdown": "^2.1.0",
