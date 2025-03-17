@@ -1,0 +1,53 @@
+/* 公众号文章搜索表单相关样式 */
+#search-form-weixin {
+    margin-bottom: 20px;
+}
+
+#search-input-weixin {
+    flex-grow: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px 0 0 5px;
+    outline: none;
+}
+
+#search-button-weixin {
+    padding: 10px 20px;
+    background: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    margin-left: -1px;
+}
+
+/* 公众号文章列表相关样式 */
+#article-list-weixin {
+    list-style: none;
+    padding: 0;
+}
+
+#article-list-weixin a {
+    display: block;
+    margin-bottom: 3px;
+    padding: 10px;
+    text-decoration: underline;
+    color: #007bff;
+    transition: all 0.3s ease;
+}
+
+/* 公众号文章分页相关样式 */
+#pagination-weixin {
+    margin-top: 5px;
+}
+
+#pagination-weixin button {
+    background: #fff;
+    border: 1px solid #ccc;
+    padding: 5px 10px;
+    margin-right: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border-radius: 5px;
+}

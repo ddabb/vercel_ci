@@ -1,0 +1,597 @@
+/* 为滚动菜单设置样式 */
+.scrolling-menu {
+    /* 强制水平滚动条在内容超出时显示 */
+    overflow-x: auto !important;
+    /* 防止内容换行 */
+    white-space: nowrap !important;
+    /* 设置最小宽度，确保有足够的空间展示所有内容 */
+    min-width: 100%;
+    /* 隐藏IE和Edge的滚动条 */
+    -ms-overflow-style: none !important;
+    /* 隐藏Firefox的滚动条 */
+    scrollbar-width: none !important;
+}
+
+/* 特定于WebKit浏览器（如Chrome, Safari）隐藏滚动条但允许滚动 */
+.scrolling-menu::-webkit-scrollbar {
+    display: none !important;
+    /* 隐藏滚动条 */
+}
+
+
+.article-container {
+    display: flex;
+    /* 启用Flex布局 */
+    align-items: center;
+    /* 垂直居中 */
+    justify-content: space-between;
+    /* 两端对齐 */
+    width: 100%;
+    /* 确保容器宽度占满 */
+}
+
+.article-date {
+    margin-left: auto;
+    /* 自动左外边距推至右侧[3,6](@ref) */
+}
+
+/* 通用样式 */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #F5F5F5;
+    margin: 0;
+    padding: 0;
+}
+
+/* 固定顶部导航栏 */
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    /* 确保它覆盖其他内容 */
+}
+
+/* 容器样式 */
+.container {
+    max-width: 100%;
+    margin: auto;
+    padding: 20px;
+}
+
+.centercontainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    width: 80%;
+    /* 或者你希望的任何宽度 */
+    max-width: 1200px;
+    /* 最大宽度 */
+    padding: 20px;
+}
+
+.date-input {
+    margin-bottom: 10px;
+}
+
+.input-container-modified {
+    display: flex;
+    /* 使用 Flexbox 布局 */
+}
+
+/* 搜索表单相关样式 */
+#messageInput {
+    flex-grow: 1;
+    /* 让输入框占据剩余空间 */
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px 0 0 5px;
+    /* 左边圆角 */
+    outline: none;
+    /* 移除焦点时的轮廓 */
+}
+
+#sendButton {
+    padding: 10px 20px;
+    background: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 0 5px 5px 0;
+    /* 右边圆角 */
+    cursor: pointer;
+    transition: background 0.3s ease;
+    margin-left: -1px;
+    /* 与输入框紧密相连 */
+}
+
+
+
+
+
+/* 对话相关样式 */
+.chat-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.message-list {
+    padding: 10px;
+}
+
+.message {
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+}
+
+/* 更新消息的背景色和文字色 */
+.bot-message {
+    background: linear-gradient(to right, #FFC107, #FFA000);
+    color: #333;
+    align-self: flex-start;
+    padding: 10px 15px;
+    border-radius: 0.5rem;
+}
+
+.user-message {
+    background: linear-gradient(to right, #4CAF50, #388E3C);
+    color: #fff;
+    justify-content: flex-end;
+    padding: 10px 15px;
+    border-radius: 0.5rem;
+}
+
+.message-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* 修改后的机器人头像样式 */
+.bot-message .avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-image: url('/logo.svg');
+    background-size: cover;
+    flex-shrink: 0;
+    margin-right: 10px;
+}
+
+.user-message .avatar {
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+    background-color: #ccc;
+    border-radius: 50%;
+    background-image: url('/user.png');
+    flex-shrink: 0;
+}
+
+.bot-message .avatar {
+    margin-right: 10px;
+}
+
+.user-message .avatar {
+    margin-left: 10px;
+}
+
+.user-message .message-text {
+    align-self: flex-end;
+    text-align: right;
+}
+
+.message-text {
+    display: inline-block;
+}
+
+.search-container {
+    display: flex;
+    /* 使用 Flexbox 布局 */
+}
+
+/* 搜索表单相关样式 */
+#search-form {
+    margin-bottom: 20px;
+}
+
+#search-input-md {
+    flex-grow: 1;
+    /* 让输入框占据剩余空间 */
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px 0 0 5px;
+    /* 左边圆角 */
+    outline: none;
+    /* 移除焦点时的轮廓 */
+}
+
+#search-button-md {
+    padding: 10px 20px;
+    background: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 0 5px 5px 0;
+    /* 右边圆角 */
+    cursor: pointer;
+    transition: background 0.3s ease;
+    margin-left: -1px;
+    /* 与输入框紧密相连 */
+}
+
+/* 文章列表相关样式 */
+#article-list-md {
+    list-style: none;
+    padding: 0;
+}
+
+/* #article-list-md a {
+  display: block;
+  margin-bottom: 3px;
+  padding: 10px;
+  background: #fff;
+  border: 1px solid #ddd;
+  text-decoration: none;
+  color: #007bff;
+  transition: all 0.3s ease;
+  border-bottom: 1px solid #eee;
+
+} */
+
+
+#article-list-md div {
+    display: flex;
+    align-items: center;
+    /* 垂直居中 */
+    border: 1px solid #ddd;
+    margin-bottom: 5px;
+    /* 分隔各个文章项 */
+    padding: 5px;
+    /* 容器内的填充 */
+    background: #fff;
+    transition: all 0.3s ease;
+}
+
+#article-list-md span {
+    background-color: #4a90e2;
+    /* 使用前面建议的颜色或其他你偏好的颜色 */
+    color: white;
+    padding: 2px 6px;
+    /* 减少内边距以使色块更贴合字体大小 */
+    border-radius: 3px;
+    /* 可以适当减小圆角半径，使外观更精致 */
+    margin-right: 10px;
+    /* 在分类和文章链接之间增加一些空间 */
+    display: inline-block;
+    /* 确保span元素只占据其内容所需的宽度 */
+    line-height: 1.2;
+    /* 根据需要调整行高，使得文本垂直居中于背景色块中 */
+    cursor: pointer;
+}
+
+#article-list-md a {
+    flex-grow: 1;
+    /* 让链接占据剩余的空间 */
+    text-decoration: none;
+    color: #007bff;
+}
+
+/* 当鼠标悬停在容器上时改变背景颜色 */
+#article-list-md div:hover {
+    background-color: #f5f5f5;
+}
+
+/* 分页相关样式 */
+#pagination-md {
+    margin-top: 5px;
+}
+
+#pagination-md button {
+    background: #fff;
+    border: 1px solid #ccc;
+    padding: 5px 10px;
+    margin-right: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border-radius: 5px;
+}
+
+
+
+/* 表单相关样式 */
+h1 {
+    margin-bottom: 20px;
+}
+
+#numberInput {
+    width: 300px;
+    padding: 15px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#result {
+    margin-top: 20px;
+    font-size: 1.2em;
+    color: #333;
+}
+
+/* 返回按钮样式 */
+.back-button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.back-button:hover {
+    background-color: #0056b3;
+}
+
+
+/* Custom styles for the modal */
+.modal-dialog {
+    width: 100%;
+    max-width: 800px;
+    background-color: #fff;
+}
+
+.modal-body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+}
+
+.modal-body img {
+    max-width: 100%;
+    max-height: 80vh;
+    object-fit: contain;
+}
+
+.image-alt {
+    margin-top: 0.5rem;
+    font-size: 0.9em;
+    color: #555;
+    text-align: center;
+}
+
+/* 自定义导航栏位置样式 */
+.navbar-container {
+    display: flex;
+    background-color: #F5F5F5;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #007bff;
+}
+
+.grid-item {
+    width: 200px;
+    /* 根据需要调整 */
+    margin: 10px;
+}
+
+
+
+
+main {
+    margin-top: 60px;
+    margin-bottom: 50px;
+    /* 根据页脚的高度调整这个值 */
+}
+
+.nav-item {
+    margin-right: 10px;
+    /* 按钮间距，可以根据需要调整 */
+}
+
+.nav-item:last-child {
+    margin-right: 0;
+    /* 移除最后一个按钮的右边距 */
+}
+
+
+
+
+
+/* 媒体查询，仅在屏幕宽度小于或等于991px时生效 */
+@media (max-width: 991px) {
+    .navbar-container {
+        height: auto;
+    }
+}
+
+
+/* 在 style.css 文件的末尾添加以下样式 */
+.game-container {
+    margin: 0 auto 10px;
+    padding: 10px;
+    max-width: 400px;
+    text-align: center;
+    display: flex;
+    /* 使用 Flexbox 布局 */
+    flex-direction: column;
+    /* 垂直排列 */
+    align-items: center;
+    /* 居中对齐 */
+}
+
+.game-score {
+    font-size: 24px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(4, 100px);
+    gap: 2px;
+    /* 默认设置 */
+    justify-content: center;
+}
+
+.cell-default {
+
+    background-color: #faf8ee;
+    color: #776e65;
+}
+
+.grid-cell {
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 32px;
+    cursor: pointer;
+    user-select: none;
+
+}
+
+
+.game-button-container {
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    /* 调整宽度为80% */
+    margin-top: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    /* 居中对齐 */
+}
+
+.game-button-container button {
+    flex: 1;
+    /* 让两个按钮平分空间 */
+    margin: 0;
+    /* 移除按钮的默认外边距 */
+    max-width: 100px;
+    /* 限制按钮的最大宽度 */
+    overflow: hidden;
+    /* 隐藏超出的内容 */
+    text-overflow: ellipsis;
+    /* 显示省略号 */
+    white-space: nowrap;
+    /* 不换行 */
+}
+
+.custom-button {
+    /* 这里可以设置一些通用的按钮样式 */
+    padding: 10px 20px;
+    margin: 5px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.restart-btn {
+    /* 这里设置重玩按钮的特定样式 */
+    background-color: #4CAF50;
+    color: white;
+}
+
+.undo-btn {
+    /* 这里设置撤销按钮的特定样式 */
+    background-color: #f44336;
+    color: white;
+}
+
+button {
+    margin-top: 10px;
+    padding: 10px 20px;
+    font-size: 16px;
+}
+
+/* 自定义标签链接样式 */
+.custom-tag-link {
+    display: inline-block;
+    margin-right: 5px;
+    margin-bottom: 5px;
+    padding: 6px 12px;
+    font-size: 0.9em;
+    color: #fff;
+    /* 文本颜色 */
+    background-color: #007bff;
+    /* 背景颜色 */
+    border-radius: 4px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+/* 自定义悬停动画 */
+.btn-hover-scale {
+    transition: transform 0.2s ease;
+}
+
+.btn-hover-scale:hover {
+    transform: scale(1.03);
+    z-index: 1;
+}
+
+
+
+/* 标签文字截断保护 */
+.text-truncate {
+    max-width: 80%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+
+/* 移动端隐藏日期 */
+@media (max-width: 768px) {
+    .article-category {
+        display: none;
+    }
+
+    #article-list-md span {
+        display: none;
+    }
+}
+
+/* 确保在小屏幕上也能良好显示 */
+@media (max-width: 480px) {
+    .game-score {
+        font-size: 20px;
+    }
+
+    .grid-container {
+        gap: 2px;
+        grid-template-columns: repeat(4, 80px);
+        /* 调整网格单元格之间的间距 */
+    }
+
+    .grid-cell {
+        width: 80px;
+        height: 80px;
+        font-size: 24px;
+    }
+
+    button {
+        padding: 8px 16px;
+        font-size: 14px;
+    }
+
+    .game-container {
+        margin: 0 auto 10px;
+        padding: 10px;
+        max-width: 320px;
+        text-align: center;
+    }
+}
