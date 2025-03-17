@@ -109,25 +109,36 @@ export default {
     };
   },
   onLoad() {
+    console.log('onLoad: 页面加载开始');
     this.fetchArticles();
     // 百度统计代码
     var _hmt = _hmt || [];
     (function () {
+      console.log('onLoad: 开始加载百度统计代码');
       var hm = document.createElement("script");
       hm.src = "https://hm.baidu.com/hm.js?9375ffd48c244c211aeaa2bd8c047a43";
       var s = document.getElementsByTagName("script")[0];
       s.parentNode.insertBefore(hm, s);
+      console.log('onLoad: 百度统计代码加载完成');
     })();
+    console.log('onLoad: 页面加载结束');
   },
   onShow() {
+    console.log('onShow: 页面显示开始');
     // 不蒜子统计代码
     const script = document.createElement('script');
     script.src = 'https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js';
     script.async = true;
     document.head.appendChild(script);
+    console.log('onShow: 不蒜子统计代码加载完成');
+    console.log('onShow: 页面显示结束');
   },
   methods: {
     async fetchArticles() {
+      console.log('fetchArticles: 开始获取文章数据');
+      console.log(`fetchArticles: 当前关键字: ${this.keyword}`);
+      console.log(`fetchArticles: 当前页码: ${this.currentPage}`);
+      console.log(`fetchArticles: 每页数量: ${this.pageSize}`);
       try {
         const response = await getJson({
           query: {
@@ -137,23 +148,31 @@ export default {
             calltype: 'md'
           }
         });
+        console.log('fetchArticles: 文章数据获取成功');
+        console.log('fetchArticles: 文章数据:', response.data.articles);
+        console.log('fetchArticles: 总页数:', response.data.totalPages);
         this.articles = response.data.articles;
         this.totalPages = response.data.totalPages;
       } catch (error) {
-        console.error('Error fetching articles:', error);
+        console.error('fetchArticles: 文章数据获取失败:', error);
       }
+      console.log('fetchArticles: 获取文章数据结束');
     },
     prevPage() {
+      console.log('prevPage: 点击上一页按钮');
       if (this.currentPage > 1) {
         this.currentPage--;
         this.fetchArticles();
       }
+      console.log('prevPage: 上一页操作结束');
     },
     nextPage() {
+      console.log('nextPage: 点击下一页按钮');
       if (this.currentPage < this.totalPages) {
         this.currentPage++;
         this.fetchArticles();
       }
+      console.log('nextPage: 下一页操作结束');
     }
   }
 };
