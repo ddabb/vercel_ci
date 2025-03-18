@@ -1,15 +1,21 @@
-import { defineConfig } from 'vite'
-import uni from '@dcloudio/vite-plugin-uni'
-// https://vitejs.dev/config/
+import { defineConfig } from 'vite';
+import vue from '@vitejs/plugin-vue';
+
 export default defineConfig({
-  plugins: [uni()],
-  server: {
-    port: 3000, // 强制前端使用3000端口
-    proxy: {
-      '/api': {
-        target: 'http://localhost:3000', // 统一代理到本机3000端口
-        changeOrigin: true
+  plugins: [vue()],
+  resolve: {
+    alias: {
+      '@': '/src'
+    }
+  },
+  build: {
+    rollupOptions: {
+      external: ['poetryesm'],
+      output: {
+        globals: {
+          poetryesm: 'poetryesm'
+        }
       }
     }
   }
-})
+});

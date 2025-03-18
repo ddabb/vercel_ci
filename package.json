@@ -50,6 +50,7 @@
     "@dcloudio/uni-mp-weixin": "3.0.0-4050620250312001",
     "@dcloudio/uni-mp-xhs": "3.0.0-4050620250312001",
     "@dcloudio/uni-quickapp-webview": "3.0.0-4050620250312001",
+    "@vitejs/plugin-vue": "^5.2.3",
     "ejs": "^3.1.10",
     "fishbb": "^1.0.25",
     "poetryesm": "^1.0.16",

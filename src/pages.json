@@ -3,15 +3,32 @@
 		{
 			"path": "pages/index/index",
 			"style": {
-				"navigationBarTitleText": "无人自助站"
+				"navigationBarTitleText": "首页"
+			}
+		},
+		{
+			"path": "pages/dynasties/dynasties",
+			"style": {
+				"navigationBarTitleText": "朝代列表"
+			}
+		},
+		{
+			"path": "pages/poets/poets",
+			"style": {
+				"navigationBarTitleText": "诗人列表"
+			}
+		},
+		{
+			"path": "pages/poetDetail/poetDetail",
+			"style": {
+				"navigationBarTitleText": "诗人详情"
 			}
 		}
 	],
 	"globalStyle": {
 		"navigationBarTextStyle": "black",
-		"navigationBarTitleText": "uni-app",
+		"navigationBarTitleText": "UniApp 示例",
 		"navigationBarBackgroundColor": "#F8F8F8",
-		"backgroundColor": "#F8F8F8",
-		"pathCheck": false
+		"backgroundColor": "#F8F8F8"
 	}
 }
