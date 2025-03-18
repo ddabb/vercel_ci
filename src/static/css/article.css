@@ -1,0 +1,95 @@
+/* article.css */
+
+#article-content {
+    background-color: #fff;
+    color: #333;
+    padding: 20px;
+    font-size: 1.1em;
+    line-height: 1.6;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, .1);
+}
+
+#article-content h1,
+#article-content h2,
+#article-content h3,
+#article-content h4,
+#article-content h5,
+#article-content h6 {
+    margin-top: 1.6em;
+    margin-bottom: 0.4em;
+    font-weight: bold;
+    line-height: 1.2;
+}
+
+#article-content p {
+    margin-bottom: 1em;
+}
+
+#article-content a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+#article-content a:hover {
+    text-decoration: underline;
+}
+
+#article-content blockquote {
+    border-left: 4px solid #ccc;
+    padding-left: 16px;
+    margin-left: 0;
+    color: #666;
+}
+
+#article-content pre {
+    background-color: #f5f5f5;
+    padding: 10px;
+    overflow-x: auto;
+    font-size: 0.95em;
+    border-radius: 4px;
+    margin-bottom: 1em;
+}
+
+#article-content code {
+    background-color: #f0f0f0;
+    padding: 2px 4px;
+    border-radius: 4px;
+    font-size: 0.95em;
+}
+
+/* article.css */
+.badge.tag-label {
+    background-color: #f8f9fa;
+    /* 浅灰色背景 */
+    color: #333;
+    /* 深灰色文字 */
+    border: 1px solid #dee2e6;
+    /* 边框 */
+    font-size: 0.9rem;
+    padding: 0.5rem 0.75rem;
+    margin-right: 0.5rem;
+    transition: background-color 0.3s ease;
+}
+
+.badge.tag-label:hover {
+    background-color: #e9ecef;
+    /* 悬停时背景颜色 */
+}
+
+.badge.tag-link {
+    background-color: #f8f9fa;
+    /* 浅灰色背景 */
+    color: #333;
+    /* 深灰色文字 */
+    font-size: 0.9rem;
+    padding: 0.5rem 0.75rem;
+    margin-right: 0.5rem;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.badge.tag-link:hover {
+    background-color: #e9ecef;
+    /* 悬停时背景颜色 */
+}

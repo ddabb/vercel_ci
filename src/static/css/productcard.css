@@ -1,0 +1,137 @@
+/* 商品卡片容器 */
+.product-card {
+    position: relative;
+    overflow: hidden;
+    box-sizing: border-box;
+    margin: 0 auto;
+}
+
+/* 图片尺寸控制 */
+.product-card img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+/* 移动端优先设计 */
+.product-card .card-img-top {
+    height: 220px;
+    border-radius: 8px 8px 0 0;
+}
+
+/* 标题样式优化 */
+.product-card .card-title {
+    font-size: 1.3rem;
+    color: #d32f2f;
+    position: relative;
+    padding-left: 32px;
+    margin: 12px 0;
+}
+
+.product-card .card-title::before {
+    content: "🔥";
+    position: absolute;
+    left: 8px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+/* 价格脉冲动画 */
+@keyframes price-pulse {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.05);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+.product-card .card-text:last-child {
+    color: #388e3c;
+    font-weight: 700;
+    font-size: 1.2rem;
+    animation: price-pulse 2s infinite;
+}
+
+/* 悬停效果优化 */
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+    transition: all 0.3s ease;
+}
+
+.product-card:hover img {
+    transform: scale(1.03);
+}
+
+/* 价格高亮样式 */
+.price-highlight {
+    background: linear-gradient(45deg, #ffd700, #ffb300);
+    -webkit-background-clip: text;
+    color: transparent;
+    padding: 2px 8px;
+    border-radius: 4px;
+    display: inline-block;
+}
+
+/* 父容器设置 */
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    /* 卡片之间的间距 */
+}
+
+/* 响应式优化 */
+@media (min-width: 768px) {
+    .container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 16px;
+        /* 卡片之间的间距 */
+    }
+
+    .product-card {
+        flex: 0 0 calc(100% / 3);
+        /* 占据父容器的1/3宽度 */
+        max-width: calc(100% / 3);
+        /* 确保不会超出计算宽度 */
+    }
+
+    .product-card .card-img-top {
+        height: 260px;
+    }
+
+    .product-card::after {
+        right: 10px;
+        padding: 6px 20px;
+        font-size: 0.85rem;
+    }
+
+    .product-card .card-title {
+        font-size: 1.5rem;
+        padding-left: 40px;
+    }
+}
+
+@media (max-width: 768px) {
+    .product-card {
+        flex: 0 0 100%;
+        /* 占据父容器的100%宽度 */
+        max-width: 100%;
+        /* 确保卡片不会超出父容器宽度 */
+    }
+
+    .product-card::after {
+        top: 10px;
+        right: 10px;
+        padding: 4px 20px;
+        font-size: 0.75rem;
+    }
+}
