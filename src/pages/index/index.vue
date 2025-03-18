@@ -3,19 +3,33 @@
     <image class="logo" src="/static/logo.png"></image>
     <view class="text-area">
       <text class="title">{{ title }}</text>
+      <text class="title">API时间: {{ apiTime }}</text>
     </view>
   </view>
 </template>
 
 <script>
+import { fetchServerTime } from '@/services/api';
+
 export default {
   data() {
     return {
       title: 'Hello',
+      apiTime: '加载中...'
     }
   },
-  onLoad() {},
-  methods: {},
+  onLoad() {
+    this.fetchTime()
+  },
+  methods: {
+    async fetchTime() {
+      try {
+        this.apiTime = await fetchServerTime();
+      } catch (error) {
+        this.apiTime = error.message;
+      }
+    }
+  }
 }
 </script>
 
