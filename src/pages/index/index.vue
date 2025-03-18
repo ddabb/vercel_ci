@@ -9,7 +9,7 @@
 </template>
 
 <script>
-import { fetchServerTime } from '@/services/api';
+import { fetchServerTime } from '@/utils/api';
 
 export default {
   data() {
