@@ -4,7 +4,7 @@
       <div class="container-fluid">
         <ul class="navbar-nav d-flex flex-row scrolling-menu">
           <li class="nav-item">
-            <router-link class="nav-link d-flex align-items-center" to="/index">
+            <router-link class="nav-link d-flex align-items-center" to="/">
               <img src="@/static/logo.svg" alt="Logo" style="max-width: 24px; max-height: 24px; margin-right:1px;">
               自助工具站
             </router-link>
@@ -42,7 +42,7 @@ export default {
       "https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js",
       "https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js",
       "https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js",
-      "@/static/js/clarity.js",
+      "src/static/js/clarity.js",
       "https://cdn.jsdelivr.net/npm/widget-qrcode@1.0.4/dist/widget-qrcode.min.js"
     ];
     scripts.forEach(src => {

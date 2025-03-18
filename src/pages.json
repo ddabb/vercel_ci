@@ -23,6 +23,56 @@
 			"style": {
 				"navigationBarTitleText": "诗人详情"
 			}
+		},
+		{
+			"path": "pages/photos/photos",
+			"style": {
+				"navigationBarTitleText": "相册"
+			}
+		},
+		{
+			"path": "pages/ideas/ideas",
+			"style": {
+				"navigationBarTitleText": "想法"
+			}
+		},
+		{
+			"path": "pages/officialAccount/officialAccount",
+			"style": {
+				"navigationBarTitleText": "公众号"
+			}
+		},
+		{
+			"path": "pages/tools/tools",
+			"style": {
+				"navigationBarTitleText": "工具"
+			}
+		},
+		{
+			"path": "pages/games/games",
+			"style": {
+				"navigationBarTitleText": "游戏"
+			}
+		},
+		{
+			"path": "pages/poetry/poetry",
+			"style": {
+				"navigationBarTitleText": "诗词"
+			}
+		}
+		,
+		{
+			"path": "pages/aboutUs/aboutUs",
+			"style": {
+				"navigationBarTitleText": "关于我们"
+			}
+		}
+		,
+		{
+			"path": "pages/contactUs/contactUs",
+			"style": {
+				"navigationBarTitleText": "联系我们"
+			}
 		}
 	],
 	"globalStyle": {
