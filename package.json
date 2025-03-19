@@ -35,6 +35,7 @@
     "build:quickapp-webview-union": "uni build -p quickapp-webview-union"
   },
   "dependencies": {
+    "@chenfengyuan/vue-qrcode": "^2.0.0",
     "@dcloudio/uni-app": "3.0.0-4050620250312001",
     "@dcloudio/uni-app-harmony": "3.0.0-4050620250312001",
     "@dcloudio/uni-app-plus": "3.0.0-4050620250312001",

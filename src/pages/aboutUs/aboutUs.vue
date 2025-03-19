@@ -1,4 +1,5 @@
 <template>
+  <Header />
   <view class="container-fluid">
     <view class="row mt-5">
       <view class="col-lg-8 col-md-12 mx-auto">
@@ -46,11 +47,18 @@
 
               <div class="qr-code mt-4">
                 <h5>扫描二维码查看</h5>
-                <!-- 注意：这里的 widget-qrcode 需要替换为实际可用的二维码生成组件 -->
-                <widget-qrcode id="pageQrCode" template="heart" width="180" height="180" foreground-color="#1A237E"
-                  inner-color="#FF6D00" outer-color="#1A237E" logo="../logo.png"
-                  value="https://www.60score.com/mdhtml/关于我们.html">
-                </widget-qrcode>
+                <view class="qrcode-container">
+                  <vue-qrcode v-if="qrValue" :value="qrValue" tag="svg" :options="{
+                    errorCorrectionLevel: 'Q',
+                    width: 180,
+                    color: {
+                      dark: '#1A237E',
+                      light: '#FFFFFF'
+                    }
+                  }">
+                  </vue-qrcode>
+                  <img class="qrcode__image" src="@/static/logo.png" alt="网站logo" />
+                </view>
               </div>
 
               <div class="tag-links mt-4">
@@ -69,15 +77,60 @@
       </view>
     </view>
   </view>
+  <Footer />
 </template>
 <script>
 import Header from '@/components/Header.vue';
 import Footer from '@/components/Footer.vue';
+import VueQrcode from '@chenfengyuan/vue-qrcode'; // 使用标准库
 
 export default {
   components: {
     Header,
-    Footer
+    Footer,
+    VueQrcode
+  },
+  data() {
+    return {
+      qrValue: 'https://www.60score.com/mdhtml/关于我们.html' // 直接设置默认值
+    };
+  },
+  mounted() {
+    // 优先使用本地存储的值
+    const savedValue = localStorage.getItem('qrValue');
+    if (savedValue) {
+      this.qrValue = savedValue;
+    }
+    // 调试用（可选）
+    console.log('Current QR value:', this.qrValue);
+  },
+  watch: {
+    qrValue(newVal) {
+      localStorage.setItem('qrValue', newVal);
+    }
   }
 };
 </script>
+<style scoped>
+@import url('@/static/css/article.css');
+
+.qrcode-container {
+  display: inline-block;
+  position: relative;
+  margin: 20px 0;
+}
+
+.qrcode__image {
+  background-color: #fff;
+  border: 3px solid #fff;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
+  height: 20%;
+  left: 50%;
+  overflow: hidden;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 20%;
+}
+</style>
