@@ -54,7 +54,6 @@
     "@vitejs/plugin-vue": "^5.2.3",
     "ejs": "^3.1.10",
     "fishbb": "^1.0.25",
-    "poetryesm": "^1.0.16",
     "vue": "3.4.21",
     "vue-i18n": "9.14.3",
     "yargs": "^17.7.2"
@@ -67,7 +66,11 @@
     "@dcloudio/vite-plugin-uni": "3.0.0-4040520250104002",
     "@vue/cli-service": "^5.0.8",
     "@vue/runtime-core": "^3.4.21",
+    "buffer": "^6.0.3",
     "concurrently": "^9.1.2",
-    "vite": "5.2.8"
+    "node-stdlib-browser": "^1.2.0",
+    "process": "^0.11.10",
+    "vite": "5.2.8",
+    "vite-plugin-node-polyfills": "^0.23.0"
   }
 }
