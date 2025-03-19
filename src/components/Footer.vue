@@ -3,8 +3,14 @@
     <div class="container text-center py-1">
       <section>
         <span id="busuanzi_container_page_pv">本页面访问量<span id="busuanzi_value_page_pv"></span>次</span>
-        <router-link to="/aboutUs">关于我们</router-link>
-        <router-link to="/contactUs">联系我们</router-link>
+        <navigator url="/pages/aboutUs/aboutUs" class="action-button" hover-class="button-hover">
+          <text class="iconfont icon-history"></text>
+          关于我们
+        </navigator>
+        <navigator url="/pages/contactUs/contactUs" class="action-button" hover-class="button-hover">
+          <text class="iconfont icon-history"></text>
+          联系我们
+        </navigator>
       </section>
     </div>
   </footer>
@@ -21,5 +27,4 @@ export default {
 
 <style scoped>
 @import url('@/static/css/footer.css');
-
 </style>
