@@ -57,6 +57,28 @@
         /* 垂直居中 */
     }
 
+    /* 修改.container样式 */
+    .sticky-footer .container {
+      justify-content: center; /* 水平居中 */
+      padding: 0 20px;
+    }
+    
+    /* 移动端适配 */
+    @media (max-width: 767px) {
+      .container {
+        gap: 10px;
+        flex-wrap: wrap;
+        height: auto !important;
+        padding: 10px;
+      }
+      
+      .stat-item {
+        order: -1; /* 访问量置顶 */
+        flex: 0 0 100%;
+        text-align: center;
+      }
+    }
+
     .sticky-footer .container {
         display: flex;
         align-items: center;
