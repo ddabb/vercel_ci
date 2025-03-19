@@ -2,6 +2,9 @@
   "name": "uni-preset-vue",
   "version": "0.0.0",
   "scripts": {
+    "serve": "vue-cli-service serve",
+    "build": "uni",
+    "lint": "vue-cli-service lint",
     "dev:local": "concurrently \"vercel dev -l 3000\" \"npm run dev:h5\"",
     "dev:custom": "uni -p",
     "dev:h5": "uni",
