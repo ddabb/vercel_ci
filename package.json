@@ -2,6 +2,9 @@
   "name": "uni-preset-vue",
   "version": "0.0.0",
   "scripts": {
+    "serve": "vue-cli-service serve",
+    "build": "uni",
+    "lint": "vue-cli-service lint",
     "dev:local": "concurrently \"vercel dev -l 3000\" \"npm run dev:h5\"",
     "dev:custom": "uni -p",
     "dev:h5": "uni",
@@ -35,6 +38,7 @@
     "build:quickapp-webview-union": "uni build -p quickapp-webview-union"
   },
   "dependencies": {
+    "@chenfengyuan/vue-qrcode": "^2.0.0",
     "@dcloudio/uni-app": "3.0.0-4050620250312001",
     "@dcloudio/uni-app-harmony": "3.0.0-4050620250312001",
     "@dcloudio/uni-app-plus": "3.0.0-4050620250312001",
@@ -53,7 +57,11 @@
     "@vitejs/plugin-vue": "^5.2.3",
     "ejs": "^3.1.10",
     "fishbb": "^1.0.25",
-    "poetryesm": "^1.0.16",
+    "fs": "^0.0.1-security",
+    "js-yaml": "^4.1.0",
+    "markdown-it": "^14.1.0",
+    "markdown-it-mathjax3": "^4.3.2",
+    "path": "^0.12.7",
     "vue": "3.4.21",
     "vue-i18n": "9.14.3",
     "yargs": "^17.7.2"
@@ -64,8 +72,13 @@
     "@dcloudio/uni-cli-shared": "3.0.0-4040520250104002",
     "@dcloudio/uni-stacktracey": "3.0.0-4040520250104002",
     "@dcloudio/vite-plugin-uni": "3.0.0-4040520250104002",
+    "@vue/cli-service": "^5.0.8",
     "@vue/runtime-core": "^3.4.21",
+    "buffer": "^6.0.3",
     "concurrently": "^9.1.2",
-    "vite": "5.2.8"
+    "node-stdlib-browser": "^1.2.0",
+    "process": "^0.11.10",
+    "vite": "5.2.8",
+    "vite-plugin-node-polyfills": "^0.23.0"
   }
 }

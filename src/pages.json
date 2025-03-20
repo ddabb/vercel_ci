@@ -1,9 +1,20 @@
 {
+	"globalStyle": {
+		"navigationBarTextStyle": "black",
+		"navigationBarTitleText": "UniApp 示例",
+		"navigationBarBackgroundColor": "#F8F8F8",
+		"backgroundColor": "#F8F8F8",
+		"navigationStyle": "custom",
+		"mp-weixin": {
+			"navigationStyle": "custom"
+		}
+	},
 	"pages": [
 		{
 			"path": "pages/index/index",
 			"style": {
-				"navigationBarTitleText": "首页"
+				"navigationBarTitleText": "首页",
+				"navigationStyle": "custom"
 			}
 		},
 		{
@@ -59,26 +70,18 @@
 			"style": {
 				"navigationBarTitleText": "诗词"
 			}
-		}
-		,
+		},
 		{
 			"path": "pages/aboutUs/aboutUs",
 			"style": {
 				"navigationBarTitleText": "关于我们"
 			}
-		}
-		,
+		},
 		{
 			"path": "pages/contactUs/contactUs",
 			"style": {
 				"navigationBarTitleText": "联系我们"
 			}
 		}
-	],
-	"globalStyle": {
-		"navigationBarTextStyle": "black",
-		"navigationBarTitleText": "UniApp 示例",
-		"navigationBarBackgroundColor": "#F8F8F8",
-		"backgroundColor": "#F8F8F8"
-	}
+	]
 }

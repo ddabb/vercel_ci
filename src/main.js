@@ -1,5 +1,9 @@
-import { createApp } from 'vue';
-import App from './App.vue';
-import router from './router';
+import { createSSRApp } from 'vue'
+import App from './App.vue'
 
-createApp(App).use(router).mount('#app');
+export function createApp() {
+  const app = createSSRApp(App)
+  return {
+    app
+  }
+}
