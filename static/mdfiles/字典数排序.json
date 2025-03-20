@@ -1,0 +1,14 @@
+{
+  "content": "<h1>字典数排序</h1>\n<h2>题目内容</h2>\n<p>给定一个整数 n, 返回从 1 到 n 的字典顺序。</p>\n<p>例如，</p>\n<p>给定 n =13，返回 [1,10,11,12,13,2,3,4,5,6,7,8,9] 。</p>\n<p>请尽可能的优化算法的时间复杂度和空间复杂度。 输入的数据 n 小于等于 5,000,000。</p>\n<h2>解题过程</h2>\n<p>初次接触这题,我试图用快速排序,堆排序等排序方式去解决该问题，但是程序运行之后，要么内存不足,要么复杂度达不到时间要求。\n经过两天的瞎折腾，我突然茅塞顿开，找到了以下规律。</p>\n<p>如果 n&lt;10,则 1 后面的数字为 2，否则 1 后面的数组为 10。</p>\n<p>如果 n&lt;20,则 2 后面的数字为 3，否则 1 后面的数组为 20。</p>\n<p>如果 n&lt;30,则 3 后面的数字为 4，否则 1 后面的数组为 30。</p>\n<p>经总结如下</p>\n<pre><code>如果m&lt;n\n   如果 m*10&lt;=n\n   则下一位为m*10\n   否则下一位为m+1;\n否则\n   结束。\n</code></pre>\n<h2>代码示例</h2>\n<p>创建二叉树的类</p>\n<pre><code>/// &lt;summary&gt;\n/// 二叉树\n/// &lt;/summary&gt;\npublic class TreeNode\n{\n    public static int Globalvalue = 1;\n\n    public int value;\n    public TreeNode leftNode;\n    public TreeNode rightNode;\n\n    /// &lt;summary&gt;\n    /// 构造函数\n    /// &lt;/summary&gt;\n    /// &lt;param name=&quot;x&quot;&gt;&lt;/param&gt;\n    public TreeNode(int x)\n    {\n        value = x;\n        int leftvalue = x * 10;\n        int rightvalue = x + 1;\n        if (leftvalue &lt;= Globalvalue)\n        {\n            leftNode = new TreeNode(leftvalue);\n        }\n\n        if (rightvalue &lt;= Globalvalue &amp;&amp; rightvalue % 10 != 0)\n        {\n            rightNode = new TreeNode(rightvalue);\n        }\n    }\n}\n</code></pre>\n<p>二叉树的前序遍历</p>\n<pre><code>/// &lt;summary&gt;\n/// 前序遍历\n/// &lt;/summary&gt;\n/// &lt;param name=&quot;tn&quot;&gt;&lt;/param&gt;\n/// &lt;param name=&quot;result&quot;&gt;&lt;/param&gt;\npublic void preOrder(TreeNode tn, List&lt;int&gt; result)\n{\n    result.Add(tn.value);\n    if (tn.leftNode != null)\n    {\n        preOrder(tn.leftNode, result);\n    }\n\n    if (tn.rightNode != null)\n    {\n        preOrder(tn.rightNode, result);\n    }\n}\n</code></pre>\n<p>调用前序排序方法。</p>\n<pre><code>/// &lt;summary&gt;\n/// 执行排序\n/// &lt;/summary&gt;\n/// &lt;param name=&quot;n&quot;&gt;&lt;/param&gt;\n/// &lt;returns&gt;&lt;/returns&gt;\npublic IList&lt;int&gt; LexicalOrder(int n)\n{\n    TreeNode.Globalvalue = n;\n    TreeNode tn = new TreeNode(1);\n    List&lt;int&gt; result = new List&lt;int&gt;();\n    preOrder(tn, result);\n    return result;\n}\n</code></pre>\n<h2>总结</h2>\n<p>该方案并不是通过测试用例耗时最短的方法，毕竟不构造 TreeNode 类速度会更快，但是恰好复习了一下大学时候所学的二叉树遍历的相关知识,也是挺好的。</p>\n<h2>参考资料</h2>\n<ul>\n<li><a href=\"https://leetcode-cn.com/submissions/detail/1564059/\">字典序排数解题过程</a></li>\n<li><a href=\"https://leetcode-cn.com/problems/lexicographical-numbers/description/\">386. 字典序排数</a></li>\n</ul>\n",
+  "meta": {
+    "title": "字典数排序",
+    "category": "自然科学",
+    "tags": [
+      "字典序排序",
+      "二叉树",
+      "前序遍历",
+      "算法优化"
+    ],
+    "description": "字典序排序问题要求对从1到n的整数按字典顺序排序。文章介绍了一种基于二叉树前序遍历的方法来解决此问题，适用于n小于等于5,000,000的情况。通过构建特殊的二叉树结构，并对其进行前序遍历以生成所需的字典顺序列表。虽然不是最快速的解决方案，但提供了一种复习二叉树遍历知识的有效方式。"
+  }
+}
