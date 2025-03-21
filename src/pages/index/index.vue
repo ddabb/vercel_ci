@@ -19,7 +19,7 @@
                 <span class="article-category" @click="navigateToCategory(article.category)">
                   {{ article.category }}
                 </span>
-                <navigator :url="`/pages/mdhtml/${encodeURIComponent(article.fileName)}.vue`">
+                <navigator :url="`/pages/mdhtml/${encodeURIComponent(article.fileName)}`">
                   {{ article.title }}
                 </navigator>
                 <span class="article-date">{{ formatDate(article.updateTime) }}</span>
@@ -45,8 +45,6 @@
 import Header from '@/components/Header.vue'
 import Footer from '@/components/Footer.vue'
 
-import { fetchArticles } from '@/common/api.js';
-
 export default {
   data() {
     return {
@@ -55,7 +53,8 @@ export default {
       currentPage: 1,
       pageSize: 12,
       totalPages: 1,
-      paginationPages: []
+      paginationPages: [],
+      callType: 'md' // 确保 callType 正确初始化
     };
   },
   components: {
@@ -63,16 +62,6 @@ export default {
     Footer
   },
   methods: {
-    async onSearch() {
-      await this.fetchArticles(this.keyword, 1);
-    },
-    async fetchArticles(keyword = '', page = 1) {
-      const response = await fetchArticles({ keyword, page, pageSize: this.pageSize });
-      this.articles = response.articles;
-      this.totalPages = response.totalPages;
-      this.currentPage = page;
-      this.createPagination();
-    },
     createPagination() {
       this.paginationPages = [];
       let startPage = Math.max(1, this.currentPage - 3);
@@ -94,7 +83,7 @@ export default {
     },
     goToPage(pageNumber) {
       if (pageNumber !== null) {
-        this.fetchArticles(this.keyword, pageNumber);
+        this.fetchArticles(this.keyword, pageNumber, this.callType);
       }
     },
     formatDate(timestamp) {
@@ -103,12 +92,41 @@ export default {
     },
     navigateToCategory(category) {
       uni.navigateTo({
-        url: `/pages/category/${encodeURIComponent(category)}.vue`
+        url: `/pages/category/${encodeURIComponent(category)}`
       });
+    },
+    async onSearch() {
+      await this.fetchArticles(this.keyword, 1, this.callType);
+    },
+    async fetchArticles(keyword = '', page = 1, callType = 'md') {
+  try {
+    const response = await uni.request({
+      url: `/api/getjson?keyword=${keyword}&pageSize=${this.pageSize}&page=${page}&calltype=${callType}`, // 调用API
+      method: 'GET'
+    });
+    debugger;
+    console.log('Response:', response); // 添加调试信息
+
+    // 假设响应结构是 [response, data]
+    const { data } = response[1];
+
+    // 检查数据是否存在
+    if (!data) {
+      throw new Error('No data returned from API');
     }
-  },
-  onLoad() {
-    this.fetchArticles();
+
+    const { articles, currentPage, totalPages, pageSize } = data;
+    this.articles = articles;
+    this.totalPages = totalPages;
+    this.currentPage = currentPage;
+    this.createPagination();
+  } catch (error) {
+    console.error('Error fetching articles:', error);
   }
-};
+},
+  created() {
+    console.log('callType:', this.callType); // 使用 created 生命周期钩子
+    this.fetchArticles('', 1, this.callType);
+  }
+}}
 </script>

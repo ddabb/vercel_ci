@@ -1,7 +1,9 @@
+// src/api/getjson.js
 import fs from 'fs';
 import path from 'path';
 
 export default async function handler(req, res) {
+    console.log('getjson API called:', req.query);
   // 只接受GET请求
   if (req.method !== 'GET') {
     return res.status(405).end(); // Method Not Allowed
@@ -11,6 +13,7 @@ export default async function handler(req, res) {
   const startIndex = (parseInt(page) - 1) * parseInt(pageSize);
 
   try {
+   
     const dataPath = path.join(process.cwd(), 'src', 'jsons', 'articleList.json');
     const jsonData = await fs.promises.readFile(dataPath, 'utf8');
     let articles = JSON.parse(jsonData).articles;
