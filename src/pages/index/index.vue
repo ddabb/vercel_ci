@@ -1,122 +1,114 @@
 <template>
-  <view class="container">
-    <!-- 顶部升级公告 -->
-    <view class="upgrade-banner">
-      🚧 系统升级公告：本站正在从HTML/CSS/JS向Uniapp迁移，持续优化用户体验！
-    </view>
-    
-    <Header />
-    
-    <!-- 主内容区 -->
-    <view class="content-box">
-      <image 
-        src="/static/logo.png" 
-        class="main-logo"
-        mode="aspectFit"
-      />
-      <text class="title">欢迎来到无人自助站</text>
-      <text class="subtitle">敬请期待，更好的未来</text>
-      
-      <!-- 功能入口 -->
-      <view class="button-group">
-        <navigator 
-          url="/pages/dynasties/dynasties" 
-          class="action-button"
-          hover-class="button-hover"
-        >
-          <text class="iconfont icon-history"></text>
-          朝代列表
-        </navigator>
+  <Header />
+  <view class="container-fluid">
+    <view class="row mt-5">
+      <view class="col-lg-8 col-md-12 mx-auto">
+        <view class="card mb-4">
+          <view class="card-header">
+            <text style="font-size: 1.5em; margin: 0.5em 0;">传阅·站长精选·每日更新</text>
+          </view>
+          <view class="card-body">
+            <view id="search-form">
+              <view class="search-container">
+                <input type="text" v-model="keyword" placeholder="输入标题、标签、分类、描述..." @confirm="onSearch" />
+                <button @click="onSearch">找找看</button>
+              </view>
+            </view>
+            <ul id="article-list-md">
+              <li v-for="(article, index) in articles" :key="index" class="article-container">
+                <span class="article-category" @click="navigateToCategory(article.category)">
+                  {{ article.category }}
+                </span>
+                <navigator :url="`/pages/mdhtml/${encodeURIComponent(article.fileName)}.vue`">
+                  {{ article.title }}
+                </navigator>
+                <span class="article-date">{{ formatDate(article.updateTime) }}</span>
+              </li>
+            </ul>
+            <view id="pagination-md">
+              <!-- 分页控件 -->
+              <block v-for="(page, index) in paginationPages" :key="index">
+                <button @click="goToPage(page.pageNumber)" :class="{ active: page.isActive }">
+                  {{ page.text }}
+                </button>
+              </block>
+            </view>
+          </view>
+        </view>
       </view>
     </view>
-
     <Footer />
   </view>
 </template>
 
-// 在script部分修复组件注册方式（Vue3语法）
 <script>
 import Header from '@/components/Header.vue'
 import Footer from '@/components/Footer.vue'
 
+import { fetchArticles } from '@/common/api.js';
+
 export default {
+  data() {
+    return {
+      keyword: '',
+      articles: [],
+      currentPage: 1,
+      pageSize: 12,
+      totalPages: 1,
+      paginationPages: []
+    };
+  },
   components: {
     Header,
     Footer
+  },
+  methods: {
+    async onSearch() {
+      await this.fetchArticles(this.keyword, 1);
+    },
+    async fetchArticles(keyword = '', page = 1) {
+      const response = await fetchArticles({ keyword, page, pageSize: this.pageSize });
+      this.articles = response.articles;
+      this.totalPages = response.totalPages;
+      this.currentPage = page;
+      this.createPagination();
+    },
+    createPagination() {
+      this.paginationPages = [];
+      let startPage = Math.max(1, this.currentPage - 3);
+      let endPage = Math.min(this.totalPages, startPage + 6);
+
+      if (startPage > 1) {
+        this.paginationPages.push({ text: '首页', pageNumber: 1 });
+        this.paginationPages.push({ text: '...', pageNumber: null });
+      }
+
+      for (let i = startPage; i <= endPage; i++) {
+        this.paginationPages.push({ text: i.toString(), pageNumber: i, isActive: i === this.currentPage });
+      }
+
+      if (endPage < this.totalPages) {
+        this.paginationPages.push({ text: '...', pageNumber: null });
+        this.paginationPages.push({ text: '末页', pageNumber: this.totalPages });
+      }
+    },
+    goToPage(pageNumber) {
+      if (pageNumber !== null) {
+        this.fetchArticles(this.keyword, pageNumber);
+      }
+    },
+    formatDate(timestamp) {
+      const date = new Date(timestamp);
+      return `${date.getFullYear()}-${String(date.getMonth() + 1).padStart(2, '0')}-${String(date.getDate()).padStart(2, '0')}`;
+    },
+    navigateToCategory(category) {
+      uni.navigateTo({
+        url: `/pages/category/${encodeURIComponent(category)}.vue`
+      });
+    }
+  },
+  onLoad() {
+    this.fetchArticles();
   }
-}
+};
 </script>
-
-// 在style部分修复选择器作用域问题
-<style scoped>
-/* 保持原有样式不变，仅修改选择器 */
-.container {
-  min-height: 100vh;
-  background: #f5f2e9;
-}
-
-.upgrade-banner {
-  background: #fff9e6;
-  color: #d48806;
-  padding: 12rpx;
-  text-align: center;
-  font-size: 24rpx;
-}
-
-.content-box {
-  margin: 40rpx;
-  padding: 40rpx;
-  background: white;
-  border-radius: 16rpx;
-  box-shadow: 0 4rpx 12rpx rgba(0,0,0,0.1);
-}
-
-.main-logo {
-  width: 200rpx;
-  height: 200rpx;
-  display: block;
-  margin: 0 auto;
-}
-
-.title {
-  display: block;
-  text-align: center;
-  font-size: 44rpx;
-  color: #2c3e50;
-  margin: 30rpx 0;
-  font-weight: bold;
-}
-
-.subtitle {
-  display: block;
-  text-align: center;
-  color: #7f8c8d;
-  margin-bottom: 60rpx;
-}
-
-.button-group {
-  display: flex;
-  justify-content: center;
-}
-
-.action-button {
-  background: #4a90e2;
-  color: white;
-  padding: 20rpx 40rpx;
-  border-radius: 50rpx;
-  display: flex;
-  align-items: center;
-  font-size: 32rpx;
-  transition: all 0.3s;
-}
-
-.button-hover {
-  transform: translateY(-4rpx);
-  box-shadow: 0 8rpx 16rpx rgba(74,144,226,0.3);
-}
-
-.iconfont {
-  margin-right: 15rpx;
-  font-size: 36rpx;
-}
-</style>

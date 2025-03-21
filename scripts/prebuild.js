@@ -73,36 +73,39 @@ async function processMarkdownFile(filePath) {
 
 async function generateArticleList(articleInfos) {
     try {
-        const articleList = articleInfos.filter(info => info !== null).map(info => ({
-            fileName: info.fileName,
-            meta: info.meta
-        }));
-
-        await fs.mkdir(path.dirname(articleListJsonPath), { recursive: true });
-        await fs.writeFile(articleListJsonPath, JSON.stringify({ files: articleList.map(item => item.fileName), meta: articleList }, null, 2));
-        console.log('Generated articleList.json');
+      const articleList = articleInfos.filter(info => info !== null).map(info => ({
+        fileName: info.fileName.replace('.md', '.html'), // 调整为.html后缀
+        title: info.meta.title || info.fileName.replace('.md', ''),
+        category: info.meta.category || '未分类',
+        updateTime: info.meta.updateTime || new Date().toISOString(), // 使用当前时间作为默认值
+        description: info.meta.description || ''
+      }));
+  
+      await fs.mkdir(path.dirname(articleListJsonPath), { recursive: true });
+      await fs.writeFile(articleListJsonPath, JSON.stringify({ articles: articleList }, null, 2));
+      console.log('Generated articleList.json');
     } catch (err) {
-        console.error('Error generating articleList.json:', err);
+      console.error('Error generating articleList.json:', err);
     }
-}
-
-(async () => {
+  }
+  
+  (async () => {
     try {
-        const files = await fs.readdir(mdFilesDirectory);
-        const markdownFiles = files.filter(file => path.extname(file) === '.md');
-
-        const articleInfos = [];
-        for (const file of markdownFiles) {
-            const filePath = path.join(mdFilesDirectory, file);
-            const articleInfo = await processMarkdownFile(filePath);
-            if (articleInfo) {
-                articleInfos.push(articleInfo);
-            }
+      const files = await fs.readdir(mdFilesDirectory);
+      const markdownFiles = files.filter(file => path.extname(file) === '.md');
+  
+      const articleInfos = [];
+      for (const file of markdownFiles) {
+        const filePath = path.join(mdFilesDirectory, file);
+        const articleInfo = await processMarkdownFile(filePath);
+        if (articleInfo) {
+          articleInfos.push(articleInfo);
         }
-
-        await generateArticleList(articleInfos);
-        console.log('Markdown processing complete.');
+      }
+  
+      await generateArticleList(articleInfos);
+      console.log('Markdown processing complete.');
     } catch (err) {
-        console.error('Error during markdown processing:', err);
+      console.error('Error during markdown processing:', err);
     }
-})();
+  })();

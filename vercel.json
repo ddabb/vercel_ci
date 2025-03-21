@@ -2,7 +2,7 @@
   "routes": [
     {
       "src": "/api/(?<apiname>[^/]+)",
-      "dest": "/api/$apiname.js",
+      "dest": "src/api/$apiname.js",
       "headers": {
         "Access-Control-Allow-Origin": "*",
         "Access-Control-Allow-Methods": "GET, POST, PUT, DELETE, OPTIONS",
