@@ -37,7 +37,7 @@ const fetchData = async () => {
 };
 
 onMounted(async () => {
-  await fetchData();
+  await fetchData(); 
 });
 </script>
 
