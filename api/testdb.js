@@ -3,7 +3,7 @@ require('dotenv').config({ path: '.env.production' }); // 使用生产环境变�
 const { createClient } = require('@supabase/supabase-js');
 
 // 创建 Supabase 客户端
-const supabase = createClient(process.env.zenan_SUPABASE_URL, process.env.zenan_SUPABASE_ANON_KEY);
+const supabase = createClient(process.env.SUPABASE_URL, process.env.SUPABASE_ANON_KEY);
 
 // 导出默认函数作为API端点处理程序
 module.exports = async (req, res) => {

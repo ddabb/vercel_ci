@@ -5,7 +5,7 @@ require('dotenv').config({ path: '.env.development.local' }); // 使用开发环
 const { createClient } = require('@supabase/supabase-js');
 
 // 创建 Supabase 客户端
-const supabase = createClient(process.env.zenan_SUPABASE_URL, process.env.zenan_SUPABASE_ANON_KEY);
+const supabase = createClient(process.env.SUPABASE_URL, process.env.SUPABASE_ANON_KEY);
 
 let dbOperationsResults = {};
 

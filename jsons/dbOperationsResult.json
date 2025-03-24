@@ -1,0 +1,38 @@
+{
+  "insert": {
+    "success": true,
+    "data": [
+      {
+        "id": 9,
+        "name": "Test Name"
+      }
+    ]
+  },
+  "select": {
+    "success": true,
+    "data": [
+      {
+        "id": 9,
+        "name": "Test Name"
+      }
+    ]
+  },
+  "update": {
+    "success": true,
+    "data": [
+      {
+        "id": 9,
+        "name": "Updated Test Name"
+      }
+    ]
+  },
+  "delete": {
+    "success": true,
+    "data": [
+      {
+        "id": 9,
+        "name": "Updated Test Name"
+      }
+    ]
+  }
+}
