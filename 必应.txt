@@ -31,6 +31,7 @@ https://www.60score.com/category/人工智能.html
 https://www.60score.com/category/人际相处.html
 https://www.60score.com/category/传统文化.html
 https://www.60score.com/category/体育运动.html
+https://www.60score.com/category/健康养生.html
 https://www.60score.com/category/写作技巧.html
 https://www.60score.com/category/分类列表.html
 https://www.60score.com/category/动物探秘.html
@@ -365,6 +366,7 @@ https://www.60score.com/mdhtml/探索未知的宇宙奥秘.html
 https://www.60score.com/mdhtml/提升台球技能小贴士.html
 https://www.60score.com/mdhtml/揭秘陨石为何总是落在陨石坑里.html
 https://www.60score.com/mdhtml/摆脱情绪宣泄，解锁自我提升新境界.html
+https://www.60score.com/mdhtml/教你敏锐识别身体异常信号，把握诊治黄金期.html
 https://www.60score.com/mdhtml/数字化时代的自我管理：掌控生活与工作的新策略.html
 https://www.60score.com/mdhtml/数字围城下的生存法则：普通人的隐私自卫指南.html
 https://www.60score.com/mdhtml/数学在生活中的一些作用.html
@@ -818,6 +820,7 @@ https://www.60score.com/tag/区块链技术.html
 https://www.60score.com/tag/医疗事故.html
 https://www.60score.com/tag/医疗健康.html
 https://www.60score.com/tag/医疗干预.html
+https://www.60score.com/tag/医疗应对.html
 https://www.60score.com/tag/医疗科技.html
 https://www.60score.com/tag/医疗突破.html
 https://www.60score.com/tag/午餐肉.html
@@ -1762,6 +1765,7 @@ https://www.60score.com/tag/畅销小说.html
 https://www.60score.com/tag/番茄工作法.html
 https://www.60score.com/tag/疾病与健康.html
 https://www.60score.com/tag/疾病影响.html
+https://www.60score.com/tag/疾病预防.html
 https://www.60score.com/tag/痛风.html
 https://www.60score.com/tag/癌症治疗.html
 https://www.60score.com/tag/白垩纪末期.html
@@ -2036,6 +2040,7 @@ https://www.60score.com/tag/自律能力.html
 https://www.60score.com/tag/自慰.html
 https://www.60score.com/tag/自慰频率.html
 https://www.60score.com/tag/自我价值.html
+https://www.60score.com/tag/自我体检.html
 https://www.60score.com/tag/自我保护.html
 https://www.60score.com/tag/自我修复.html
 https://www.60score.com/tag/自我反思.html
@@ -2204,6 +2209,7 @@ https://www.60score.com/tag/身份焦虑.html
 https://www.60score.com/tag/身份认同.html
 https://www.60score.com/tag/身体健康.html
 https://www.60score.com/tag/身体健康警示.html
+https://www.60score.com/tag/身体异常信号.html
 https://www.60score.com/tag/身心健康.html
 https://www.60score.com/tag/身心关系.html
 https://www.60score.com/tag/身高差异.html
