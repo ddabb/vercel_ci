@@ -42,6 +42,7 @@ https://www.60score.com/category/台球经营.html
 https://www.60score.com/category/台球运动.html
 https://www.60score.com/category/商业洞察.html
 https://www.60score.com/category/婚姻情感.html
+https://www.60score.com/category/家庭关系.html
 https://www.60score.com/category/家电知识.html
 https://www.60score.com/category/差旅办公.html
 https://www.60score.com/category/建筑探索.html
@@ -49,6 +50,7 @@ https://www.60score.com/category/影视评论.html
 https://www.60score.com/category/心灵成长.html
 https://www.60score.com/category/心理健康.html
 https://www.60score.com/category/心理情感.html
+https://www.60score.com/category/思维认知.html
 https://www.60score.com/category/性别健康.html
 https://www.60score.com/category/情感关系.html
 https://www.60score.com/category/教育学习.html
@@ -263,6 +265,7 @@ https://www.60score.com/mdhtml/如何走出失恋的痛苦？.html
 https://www.60score.com/mdhtml/如何通过在线课程提升职业技能.html
 https://www.60score.com/mdhtml/如何通过投资组合实现财务自由.html
 https://www.60score.com/mdhtml/如何通过阅读提升个人认知.html
+https://www.60score.com/mdhtml/如何避免“集体智慧”带来的负面影响.html
 https://www.60score.com/mdhtml/如果不孕不育是遗传的，如何传递基因？.html
 https://www.60score.com/mdhtml/如果两个人最终一定会分离，那相遇的意义是什么 ？.html
 https://www.60score.com/mdhtml/如果小孩不停止生长，20岁时会有多高？.html
@@ -305,6 +308,7 @@ https://www.60score.com/mdhtml/当下男性不蓄胡须被视为美的原因剖�
 https://www.60score.com/mdhtml/当个人价值遇上创业公司：何时该为自己的收入争取.html
 https://www.60score.com/mdhtml/当代码重构遇上技术革命：程序员岗位变迁的五个关键信号.html
 https://www.60score.com/mdhtml/当发现我没有道德后，对方放弃了道德绑架.html
+https://www.60score.com/mdhtml/当家庭餐桌成了“战场”：如何优雅应对“残羹剩饭”与“矫情”指责？.html
 https://www.60score.com/mdhtml/当面临两难的道德抉择时，比如为了拯救多数人而牺牲少数人，这种行为是否可以被道德所原谅？.html
 https://www.60score.com/mdhtml/得饶人处且饶人：生活中的智慧与美德.html
 https://www.60score.com/mdhtml/微信公众号爆款文章打造全攻略.html
@@ -769,6 +773,7 @@ https://www.60score.com/tag/冲突管理.html
 https://www.60score.com/tag/冲锋战术.html
 https://www.60score.com/tag/决定论.html
 https://www.60score.com/tag/决策.html
+https://www.60score.com/tag/决策体系.html
 https://www.60score.com/tag/决策困境.html
 https://www.60score.com/tag/决策智慧.html
 https://www.60score.com/tag/准确性.html
@@ -829,6 +834,7 @@ https://www.60score.com/tag/博弈论.html
 https://www.60score.com/tag/即时满足.html
 https://www.60score.com/tag/历史书籍.html
 https://www.60score.com/tag/历史事件.html
+https://www.60score.com/tag/历史借鉴.html
 https://www.60score.com/tag/历史反思.html
 https://www.60score.com/tag/历史学习.html
 https://www.60score.com/tag/历史故事.html
@@ -1080,12 +1086,14 @@ https://www.60score.com/tag/家庭支持.html
 https://www.60score.com/tag/家庭教育.html
 https://www.60score.com/tag/家庭时光.html
 https://www.60score.com/tag/家庭暴力.html
+https://www.60score.com/tag/家庭权力结构.html
 https://www.60score.com/tag/家庭氛围.html
 https://www.60score.com/tag/家庭沟通.html
 https://www.60score.com/tag/家庭理财规划.html
 https://www.60score.com/tag/家庭管理.html
 https://www.60score.com/tag/家庭经营.html
 https://www.60score.com/tag/家庭责任.html
+https://www.60score.com/tag/家庭餐桌.html
 https://www.60score.com/tag/宿命论.html
 https://www.60score.com/tag/寓言新解.html
 https://www.60score.com/tag/对流层.html
@@ -1186,6 +1194,7 @@ https://www.60score.com/tag/思辨方法.html
 https://www.60score.com/tag/性健康.html
 https://www.60score.com/tag/性别健康.html
 https://www.60score.com/tag/性别平等.html
+https://www.60score.com/tag/性别议题.html
 https://www.60score.com/tag/性功能.html
 https://www.60score.com/tag/性时长.html
 https://www.60score.com/tag/性格互补.html
@@ -1227,6 +1236,7 @@ https://www.60score.com/tag/情感思考.html
 https://www.60score.com/tag/情感恢复.html
 https://www.60score.com/tag/情感成长.html
 https://www.60score.com/tag/情感支持.html
+https://www.60score.com/tag/情感暴力.html
 https://www.60score.com/tag/情感沟通.html
 https://www.60score.com/tag/情感疏离.html
 https://www.60score.com/tag/情感科技.html
@@ -1536,6 +1546,7 @@ https://www.60score.com/tag/次生灾害.html
 https://www.60score.com/tag/正面数量.html
 https://www.60score.com/tag/武侠伦理.html
 https://www.60score.com/tag/死亡哲学.html
+https://www.60score.com/tag/残羹剩饭.html
 https://www.60score.com/tag/母系智慧.html
 https://www.60score.com/tag/母系社会.html
 https://www.60score.com/tag/毒性.html
