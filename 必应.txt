@@ -17,6 +17,7 @@ https://www.60score.com/html/lianliankan.html
 https://www.60score.com/html/mdconvert.html
 https://www.60score.com/html/mergeabc.html
 https://www.60score.com/html/oddEven.html
+https://www.60score.com/html/onlychinese.html
 https://www.60score.com/html/photos.html
 https://www.60score.com/html/qrcode.html
 https://www.60score.com/html/retirementCalculator.html
