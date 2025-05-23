@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-    <!-- 保留原有的head部分 -->
     <meta name="baidu-site-verification" content="codeva-dM9hHRE36M" />
     <meta charset="UTF-8">
     <meta http-equiv="Content-Language" content="zh-CN">
@@ -98,45 +97,71 @@
         }
         
         /* 分类筛选器样式 */
-        .category-filter-container {
+        .category-filter {
             margin: 30px 0;
-            padding: 15px;
+            padding: 20px;
             background-color: white;
             border-radius: var(--border-radius);
             box-shadow: var(--box-shadow);
         }
         
-        .category-label {
-            margin-right: 15px;
-            font-weight: 500;
-            color: var(--light-text);
+        .category-filter-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
         }
         
-        .category-buttons {
+        .category-filter-title {
+            font-size: 16px;
+            font-weight: 600;
+            color: var(--text-color);
+            display: flex;
+            align-items: center;
+        }
+        
+        .category-filter-title i {
+            margin-right: 8px;
+            color: var(--primary-color);
+        }
+        
+        .category-tags {
             display: flex;
             flex-wrap: wrap;
-            gap: 10px;
-            margin-top: 10px;
+            gap: 8px;
         }
         
-        .category-btn {
+        .category-tag {
             padding: 8px 16px;
-            border: 1px solid #ddd;
+            background: var(--secondary-color);
             border-radius: 20px;
-            background-color: white;
+            font-size: 14px;
+            color: var(--light-text);
             cursor: pointer;
-            transition: all 0.3s;
+            transition: all 0.3s ease;
+            border: 1px solid #eee;
+            display: flex;
+            align-items: center;
+        }
+        
+        .category-tag i {
+            margin-right: 6px;
             font-size: 14px;
         }
         
-        .category-btn:hover {
-            background-color: var(--secondary-color);
+        .category-tag:hover {
+            background: #e6f7ff;
+            color: var(--primary-color);
+            border-color: var(--primary-color);
         }
         
-        .category-btn.active {
-            background-color: var(--primary-color);
+        .category-tag.active {
+            background: var(--primary-color);
             color: white;
             border-color: var(--primary-color);
+        }
+        
+        .category-tag.active i {
+            color: white;
         }
         
         /* 文章列表样式 */
@@ -234,23 +259,44 @@
             cursor: not-allowed;
         }
         
+        /* 错误和无结果提示样式 */
+        .error-message,
+        .no-results {
+            padding: 20px;
+            text-align: center;
+            background-color: white;
+            border-radius: var(--border-radius);
+            box-shadow: var(--box-shadow);
+            color: #666;
+        }
+        
         /* 响应式设计 */
         @media (max-width: 768px) {
-            #article-list-weixin {
-                grid-template-columns: 1fr;
-            }
-            
-            .search-container {
-                padding: 15px;
+            body {
+                padding: 10px;
             }
             
             #search-form-weixin {
                 flex-direction: column;
-                align-items: stretch;
             }
             
-            #search-button-weixin {
-                width: 100%;
+            #article-list-weixin {
+                grid-template-columns: 1fr;
+            }
+            
+            .article-card {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            
+            .category-tags {
+                overflow-x: auto;
+                flex-wrap: nowrap;
+                padding-bottom: 5px;
+            }
+            
+            .pagination-wrapper {
+                flex-wrap: wrap;
             }
         }
     </style>
@@ -293,7 +339,7 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="../sghtml/dynasties.html"></a>
+                            <a class="nav-link" href="../sghtml/dynasties.html">
                                 📜诗词
                             </a>
                         </li>
@@ -313,11 +359,14 @@
             </form>
         </div>
 
-        <div class="category-filter-container">
-            <div class="category-label">分类筛选：</div>
-            <div class="category-buttons" id="category-buttons-container">
-                <!-- 分类按钮将通过JS动态生成 -->
+        <div class="category-filter">
+            <div class="category-filter-header">
+                <div class="category-filter-title">
+                    <i class="bi bi-funnel"></i>
+                    <span>分类筛选</span>
+                </div>
             </div>
+            <div class="category-tags" id="category-buttons-container"></div>
         </div>
 
         <div id="article-list-weixin"></div>
