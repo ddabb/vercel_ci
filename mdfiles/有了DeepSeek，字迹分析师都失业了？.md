@@ -1,7 +1,7 @@
----
+﻿---
 title: 有了DeepSeek，字迹分析师都失业了？
 category: 人工智能
-tags: [DeepSeek,字迹分析,人工智能,职业转型,AI工具]
+tags: [DeepSeek, 字迹分析, 人工智能, 职业转型, AI工具]
 description: 探讨DeepSeek等AI工具对字迹分析师职业带来的冲击与挑战，以及未来AI与人类协同发展的趋势，展现字迹分析行业在科技助力下的新机遇。
 ---
 

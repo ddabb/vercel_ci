@@ -270,11 +270,16 @@ try {
   console.log('\n🗺️ 进行SEO检查...')
   execSync('node seocheck.js', { stdio: 'inherit' })
 
+  console.log('\n🗺️ 进行Tags格式检查...')
+  execSync('node tagcheck.js', { stdio: 'inherit' })
+
   console.log('\n🗺️ 正在生成图片json文件...')
   execSync('node generateImagesJson.js', { stdio: 'inherit' })
 
   console.log('\n🗺️ 正在生产网站Url...')
   execSync('node biying.js', { stdio: 'inherit' })
+
+
   
   console.log('\n✅ 所有任务已完成！')
 

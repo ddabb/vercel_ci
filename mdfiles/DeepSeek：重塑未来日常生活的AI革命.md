@@ -1,4 +1,4 @@
----
+﻿---
 title: DeepSeek：重塑未来日常生活的AI革命
 category: 人工智能
 goodsName: 【自营正版】deepseek实用操作指南 李尚龙清华大学 2025 deep seek实用操作指南 deepseek使用教程 ai时代生存手册 零基础掌握deepseek 从入门到精通 deepsee

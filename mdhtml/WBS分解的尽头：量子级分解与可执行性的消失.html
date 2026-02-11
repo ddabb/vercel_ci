@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="Content-Language" content="zh-CN">
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9093386396178901"
+    crossorigin="anonymous"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WBS分解的尽头：量子级分解与可执行性的消失</title>
+  <meta name="description" content="探讨WBS（工作分解结构）分解的极限，当一件事被分解到量子级别时，其&#34;可执行性&#34;是否反而消失了，以及这种极限分解揭示的方法论局限性。">
+  <meta name="keywords" content="WBS分解,量子级分解,可执行性,方法论局限性,系统思维">
+  <link rel="icon" href="../logo.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/productcard.css">
+  <link rel="stylesheet" href="../css/footer.css">
+  <link rel="stylesheet" href="../css/article.css">
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" crossorigin="anonymous"></script>
+  <script src="../js/clarity.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/widget-qrcode@1.0.4/dist/widget-qrcode.min.js"></script>
+  <!-- KaTeX CSS 和 JS 文件 -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.21/dist/katex.min.css" integrity="sha384-zh0CIslj+VczCZtlzBcjt5ppRcsAmDnRem7ESsYwWwg3m/OaJ2l4x7YBZl9Kxxib" crossorigin="anonymous">
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.21/dist/katex.min.js" integrity="sha384-Rma6DA2IPUwhNxmrB/7S3Tno0YY7sFu9WSYMCuulLhIqYSGZ2gKCJWIqhBWqMQfh" crossorigin="anonymous"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.21/dist/contrib/auto-render.min.js" integrity="sha384-hCXGrW6PitJEwbkoStFjeJxv+fSOOQKOPbJxSfM6G5sWZjAyWhXiTIIAmQqnlLlh" crossorigin="anonymous"
+  onload="renderMathInElement(document.body);"></script>
+  <style>
+    table {
+      border-collapse: collapse;
+      width: 100%;
+    }
+    th, td {
+      border: 1px solid #ddd;
+      padding: 8px;
+      text-align: left;
+    }
+    th {
+      background-color: #f4f4f4;
+    }
+  </style>
+  <script>
+    var _hmt = _hmt || [];
+    (function () {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?9375ffd48c244c211aeaa2bd8c047a43";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+  <!-- 添加的Schema Markup -->
+  <script type="application/ld+json">
+  {
+    "@context": "http://schema.org",
+    "@type": "Article",
+    "headline": "WBS分解的尽头：量子级分解与可执行性的消失",
+    "author": {
+      "@type": "Person",
+      "name": "无人自助站" 
+    },
+    "datePublished": "2026-02-11", 
+    "image": [
+      "../logo.svg"
+     ],
+    "description": "探讨WBS（工作分解结构）分解的极限，当一件事被分解到量子级别时，其&#34;可执行性&#34;是否反而消失了，以及这种极限分解揭示的方法论局限性。",
+    "publisher": {
+      "@type": "Organization",
+      "name": "自助工具站",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "../logo.svg"
+      }
+    }
+  }
+  </script>
+</head>
+
+<body>
+  <header>
+  <div>
+    <nav class="navbar navbar-light bg-light">
+      <div class="container-fluid">
+        <ul class="navbar-nav d-flex flex-row scrolling-menu">
+          <li class="nav-item">
+            <a class="nav-link d-flex align-items-center" href="../html/index.html">
+              <img src="../logo.svg" alt="Logo" style="max-width: 24px;max-height: 24px; margin-right:1px;">
+              自助工具站
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../html/photos.html">
+              📷相册
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../html/dianzhangbiji.html">
+              💡想法
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../html/gongzhonghao.html">
+              📚小说
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../html/tools.html">
+              🔧工具
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../html/games.html">
+              🎮游戏
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../sghtml/dynasties.html">
+              📜诗词
+            </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+</header>
+  <main class="container-fluid">
+    <div class="row mt-5">
+      <div class="col-lg-8 col-md-12 mx-auto">
+        <div class="card">
+          <div class="card-body">
+            <div id="article-content">
+              
+                <nav aria-label="breadcrumb" class="mb-4">
+                  <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="/html/index.html">首页</a></li>
+                    <li class="breadcrumb-item"><a href="/category/分类列表.html">分类列表</a></li>
+                    <li class="breadcrumb-item"><a href="/category/项目管理.html">项目管理</a></li>
+                  </ol>
+                </nav>
+              
+              <h1>WBS分解的尽头：量子级分解与可执行性的消失</h1>
+<h2>一、 WBS分解：从宏观到微观的旅程</h2>
+<p>WBS（Work Breakdown Structure，工作分解结构）是项目管理中最基础、最核心的工具之一。它通过将复杂的项目分解为更小、更可管理的组成部分，帮助我们理解项目的全部范围，规划资源，制定进度计划，以及监控项目执行。</p>
+<h3>WBS分解的传统层级</h3>
+<ul>
+<li><strong>Level 1</strong>：项目本身</li>
+<li><strong>Level 2</strong>：主要可交付成果或阶段</li>
+<li><strong>Level 3</strong>：可交付成果的组成部分</li>
+<li><strong>Level 4</strong>：工作包（Work Package）- 传统意义上的最小可管理单元</li>
+<li><strong>Level 5+</strong>：更详细的任务分解</li>
+</ul>
+<h3>传统WBS的分解原则</h3>
+<ul>
+<li><strong>8/80规则</strong>：工作包的工作量应该在8小时到80小时之间</li>
+<li><strong>可交付成果导向</strong>：分解应该基于可交付成果，而非活动</li>
+<li><strong>独立性</strong>：每个工作包应该是独立的、可识别的</li>
+<li><strong>完整性</strong>：分解应该覆盖项目的全部范围，没有遗漏</li>
+<li><strong>层次清晰</strong>：分解应该有清晰的层次结构，便于理解和管理</li>
+</ul>
+<h2>二、 分解的极限：从宏观到量子</h2>
+<p>如果我们打破传统的分解原则，不断地、无限地分解下去，会发生什么？从宏观世界到微观世界，从分子到原子，从原子到亚原子粒子，最终到达量子级别。</p>
+<h3>分解的层级延伸</h3>
+<ul>
+<li><strong>宏观层级</strong>：项目 → 阶段 → 任务 → 活动</li>
+<li><strong>微观层级</strong>：动作 → 肌肉收缩 → 神经信号 → 化学反应</li>
+<li><strong>分子层级</strong>：分子运动 → 原子相互作用 → 电子跃迁</li>
+<li><strong>量子层级</strong>：量子态 → 波函数 → 概率云</li>
+</ul>
+<h3>量子级分解的特点</h3>
+<ul>
+<li><strong>不确定性</strong>：根据海森堡不确定性原理，我们无法同时精确知道粒子的位置和动量</li>
+<li><strong>叠加态</strong>：量子粒子可以同时处于多个状态</li>
+<li><strong>纠缠效应</strong>：量子粒子之间可以存在超越空间的纠缠关系</li>
+<li><strong>观测影响</strong>：观测行为会影响量子系统的状态</li>
+<li><strong>概率性</strong>：量子事件的发生是概率性的，而非确定性的</li>
+</ul>
+<h2>三、 可执行性的消失：从确定到不确定</h2>
+<h3>传统意义上的可执行性</h3>
+<ul>
+<li><strong>明确的目标</strong>：知道要做什么</li>
+<li><strong>清晰的路径</strong>：知道如何去做</li>
+<li><strong>可预测的结果</strong>：知道会得到什么</li>
+<li><strong>可控的过程</strong>：能够控制执行过程</li>
+<li><strong>可衡量的进展</strong>：能够衡量执行的进度和效果</li>
+</ul>
+<h3>量子级分解的可执行性挑战</h3>
+<ul>
+<li><strong>目标的模糊性</strong>：量子级别的目标变得模糊不清，难以定义</li>
+<li><strong>路径的不确定性</strong>：执行路径变得不确定，充满概率</li>
+<li><strong>结果的不可预测性</strong>：结果不再是确定的，而是概率分布</li>
+<li><strong>过程的不可控性</strong>：执行过程受到量子不确定性的影响，无法完全控制</li>
+<li><strong>进展的不可衡量性</strong>：进展变得难以衡量，因为量子状态的变化是不连续的</li>
+</ul>
+<h3>从可执行到不可执行的临界点</h3>
+<p><strong>传统分解</strong>：</p>
+<ul>
+<li>任务：&quot;编写项目计划&quot;</li>
+<li>活动：&quot;收集需求&quot; → &quot;分析需求&quot; → &quot;制定计划&quot; → &quot;评审计划&quot;</li>
+<li>动作：&quot;打开电脑&quot; → &quot;启动软件&quot; → &quot;输入内容&quot; → &quot;保存文件&quot;</li>
+</ul>
+<p><strong>微观分解</strong>：</p>
+<ul>
+<li>肌肉动作：&quot;手指移动&quot; → &quot;按键按下&quot; → &quot;按键弹起&quot;</li>
+<li>神经信号：&quot;大脑发出指令&quot; → &quot;神经传递信号&quot; → &quot;肌肉接收信号&quot;</li>
+<li>化学反应：&quot;神经元释放 neurotransmitter&quot; → &quot;受体接收信号&quot; → &quot;离子通道打开&quot;</li>
+</ul>
+<p><strong>量子分解</strong>：</p>
+<ul>
+<li>分子运动：&quot;分子振动&quot; → &quot;原子碰撞&quot; → &quot;电子跃迁&quot;</li>
+<li>量子事件：&quot;光子发射&quot; → &quot;量子态跃迁&quot; → &quot;波函数坍缩&quot;</li>
+</ul>
+<p>在这个分解的旅程中，我们会到达一个临界点，在这个点之后，传统意义上的&quot;可执行性&quot;开始消失，取而代之的是量子世界的不确定性和概率性。</p>
+<h2>四、 方法论的局限性：从分解到整合</h2>
+<h3>WBS分解的核心假设</h3>
+<ul>
+<li><strong>还原论</strong>：整体等于部分之和</li>
+<li><strong>确定性</strong>：系统的行为是确定性的，可以预测</li>
+<li><strong>线性关系</strong>：部分之间的关系是线性的，可以叠加</li>
+<li><strong>可分割性</strong>：系统可以被分割为独立的部分</li>
+<li><strong>观察者独立</strong>：观察不会影响系统的状态</li>
+</ul>
+<h3>量子视角下的方法论挑战</h3>
+<ul>
+<li><strong>整体论</strong>：整体大于部分之和，存在涌现性</li>
+<li><strong>不确定性</strong>：系统的行为是概率性的，无法完全预测</li>
+<li><strong>非线性关系</strong>：部分之间的关系是非线性的，存在复杂的相互作用</li>
+<li><strong>不可分割性</strong>：系统在量子级别上是不可分割的，存在纠缠关系</li>
+<li><strong>观察者依赖</strong>：观察会影响系统的状态</li>
+</ul>
+<h3>传统项目管理方法论的局限性</h3>
+<ol>
+<li>
+<p><strong>还原论的局限</strong>：复杂项目的成功不仅仅取决于各个部分的成功，还取决于部分之间的相互作用和整体涌现</p>
+</li>
+<li>
+<p><strong>确定性的局限</strong>：项目环境充满不确定性，传统的确定性规划方法难以应对</p>
+</li>
+<li>
+<p><strong>线性思维的局限</strong>：项目中的因果关系往往是非线性的，简单的线性规划可能导致错误的决策</p>
+</li>
+<li>
+<p><strong>静态规划的局限</strong>：项目是动态发展的，静态的WBS分解难以适应变化</p>
+</li>
+<li>
+<p><strong>可预测性的局限</strong>：项目的最终结果受到多种因素的影响，无法完全预测</p>
+</li>
+</ol>
+<h2>五、 超越分解：从还原到涌现</h2>
+<h3>涌现性的力量</h3>
+<ul>
+<li><strong>定义</strong>：涌现性是指系统整体呈现出其组成部分所不具备的特性</li>
+<li><strong>例子</strong>：
+<ul>
+<li>水分子的液态特性（单个水分子不具备）</li>
+<li>大脑的意识（单个神经元不具备）</li>
+<li>蚁群的智能行为（单个蚂蚁不具备）</li>
+<li>项目团队的创造力（单个团队成员不具备）</li>
+</ul>
+</li>
+</ul>
+<h3>从分解到整合的思维转变</h3>
+<p><strong>分解思维</strong>：</p>
+<ul>
+<li>关注部分</li>
+<li>强调分析</li>
+<li>追求确定性</li>
+<li>注重控制</li>
+<li>基于过去的经验</li>
+</ul>
+<p><strong>整合思维</strong>：</p>
+<ul>
+<li>关注整体</li>
+<li>强调综合</li>
+<li>接受不确定性</li>
+<li>注重适应</li>
+<li>面向未来的可能性</li>
+</ul>
+<h3>项目管理的新范式</h3>
+<ol>
+<li>
+<p><strong>复杂性科学视角</strong>：将项目视为复杂自适应系统</p>
+</li>
+<li>
+<p><strong>敏捷方法的启示</strong>：拥抱变化，迭代前进，持续改进</p>
+</li>
+<li>
+<p><strong>系统思维的应用</strong>：理解项目各部分之间的相互关系和反馈循环</p>
+</li>
+<li>
+<p><strong>量子思维的借鉴</strong>：接受不确定性，利用概率思维，重视观察者的作用</p>
+</li>
+<li>
+<p><strong>整体论的实践</strong>：关注项目的整体涌现性，不仅仅是部分的简单相加</p>
+</li>
+</ol>
+<h2>六、 实践中的平衡：分解与整合的艺术</h2>
+<h3>分解的价值</h3>
+<ul>
+<li><strong>清晰性</strong>：帮助团队理解项目的范围和结构</li>
+<li><strong>可管理性</strong>：将复杂的项目分解为可管理的部分</li>
+<li><strong>责任分配</strong>：明确每个团队成员的责任</li>
+<li><strong>进度跟踪</strong>：便于监控项目的进展</li>
+<li><strong>资源规划</strong>：有助于合理分配资源</li>
+</ul>
+<h3>整合的价值</h3>
+<ul>
+<li><strong>协同效应</strong>：发挥团队成员之间的协同作用</li>
+<li><strong>适应变化</strong>：更好地应对项目环境的变化</li>
+<li><strong>创新能力</strong>：促进创造性思维和创新</li>
+<li><strong>整体优化</strong>：实现项目整体的优化，而非局部优化</li>
+<li><strong>长期价值</strong>：关注项目的长期价值和可持续性</li>
+</ul>
+<h3>实践中的平衡策略</h3>
+<ol>
+<li>
+<p><strong>分层管理</strong>：在不同的层级使用不同的管理方法</p>
+<ul>
+<li>高层级：注重整合和涌现</li>
+<li>中层级：平衡分解和整合</li>
+<li>低层级：强调分解和执行</li>
+</ul>
+</li>
+<li>
+<p><strong>弹性边界</strong>：为分解设定弹性边界，而非刚性边界</p>
+<ul>
+<li>对于稳定的部分：分解得更详细</li>
+<li>对于不确定的部分：保持较大的分解单元</li>
+</ul>
+</li>
+<li>
+<p><strong>动态调整</strong>：根据项目的进展和环境的变化，动态调整分解的程度</p>
+<ul>
+<li>项目初期：分解较粗，保留灵活性</li>
+<li>项目中期：分解较细，便于执行</li>
+<li>项目后期：重新整合，关注整体交付</li>
+</ul>
+</li>
+<li>
+<p><strong>整合机制</strong>：建立专门的机制来促进整合</p>
+<ul>
+<li>定期的团队整合会议</li>
+<li>跨职能的协作团队</li>
+<li>集成测试和评审</li>
+<li>整体风险评估</li>
+</ul>
+</li>
+<li>
+<p><strong>平衡指标</strong>：设计平衡分解和整合的绩效指标</p>
+<ul>
+<li>局部效率指标：衡量各部分的执行效率</li>
+<li>整体效果指标：衡量项目的整体成果</li>
+<li>协同指标：衡量团队成员之间的协作效果</li>
+<li>适应指标：衡量项目对变化的适应能力</li>
+</ul>
+</li>
+</ol>
+<h2>七、 案例分析：从分解到整合的成功实践</h2>
+<h3>案例1：大型软件开发项目</h3>
+<p><strong>传统分解方法</strong>：</p>
+<ul>
+<li>需求分析 → 设计 → 编码 → 测试 → 部署</li>
+<li>每个阶段进一步分解为详细的任务</li>
+<li>采用瀑布模型，强调计划的完整性和执行的确定性</li>
+</ul>
+<p><strong>挑战</strong>：</p>
+<ul>
+<li>需求变更频繁，导致计划不断调整</li>
+<li>各阶段之间的接口问题频发</li>
+<li>整体进度延迟，成本超支</li>
+<li>最终产品与用户期望不符</li>
+</ul>
+<p><strong>整合方法</strong>：</p>
+<ol>
+<li><strong>敏捷转型</strong>：采用Scrum方法，将项目分解为2-4周的Sprint</li>
+<li><strong>跨职能团队</strong>：建立包含开发、测试、设计、产品的跨职能团队</li>
+<li><strong>持续集成</strong>：每天进行代码集成和自动化测试</li>
+<li><strong>用户反馈</strong>：每个Sprint结束后获取用户反馈</li>
+<li><strong>涌现性设计</strong>：鼓励团队成员之间的协作和创意涌现</li>
+</ol>
+<p><strong>结果</strong>：</p>
+<ul>
+<li>项目进度更加可控，按时交付率提高了60%</li>
+<li>产品质量显著提升，缺陷率降低了75%</li>
+<li>用户满意度提高了40%</li>
+<li>团队士气和创造力增强</li>
+<li>项目对需求变化的适应能力显著提升</li>
+</ul>
+<h3>案例2：大型建筑项目</h3>
+<p><strong>传统分解方法</strong>：</p>
+<ul>
+<li>设计 → 规划 → 施工 → 验收</li>
+<li>每个阶段分解为详细的工作包</li>
+<li>采用关键路径法(CPM)进行进度规划</li>
+<li>强调严格的计划执行</li>
+</ul>
+<p><strong>挑战</strong>：</p>
+<ul>
+<li>现场条件变化导致计划调整困难</li>
+<li>各专业之间的协调复杂</li>
+<li>资源冲突频繁</li>
+<li>质量问题难以追溯</li>
+</ul>
+<p><strong>整合方法</strong>：</p>
+<ol>
+<li><strong>BIM技术应用</strong>：使用建筑信息模型(BIM)整合各专业的设计和施工信息</li>
+<li><strong>精益建设</strong>：采用精益思想，减少浪费，提高价值</li>
+<li><strong>Last Planner System</strong>：使用最后计划者系统，增强现场的自主性和适应性</li>
+<li><strong>一体化团队</strong>：建立包括业主、设计、施工、供应商的一体化团队</li>
+<li><strong>持续改进</strong>：定期举行回顾会议，持续改进流程</li>
+</ol>
+<p><strong>结果</strong>：</p>
+<ul>
+<li>项目工期缩短了20%</li>
+<li>成本降低了15%</li>
+<li>质量问题减少了60%</li>
+<li>团队协作效率提高了35%</li>
+<li>项目整体价值显著提升</li>
+</ul>
+<h2>八、 结语：分解的艺术与整合的智慧</h2>
+<p>WBS分解的尽头，不是分解的终止，而是思维的转变。当我们意识到分解到量子级别时可执行性的消失，我们开始理解传统方法论的局限性，从而开启了从还原论到整体论、从分解到整合的思维之旅。</p>
+<p>项目管理的真正挑战，不在于如何将项目分解得更细，而在于如何在分解与整合之间找到平衡。分解给我们带来清晰性和可管理性，整合给我们带来涌现性和适应性。两者相辅相成，缺一不可。</p>
+<p>在这个充满不确定性和复杂性的世界中，我们需要的不仅仅是分解的艺术，更是整合的智慧。我们需要学会在分解中看到整体，在整体中理解分解，在确定中拥抱不确定，在不确定中寻找确定。</p>
+<p>WBS分解的尽头，不是方法论的终点，而是新思维的起点。它提醒我们，任何方法论都有其适用的边界，超越这个边界，我们需要新的思维方式和方法工具。</p>
+<p>最终，项目管理的成功，取决于我们对复杂性的理解，对不确定性的接受，对多样性的包容，以及对整体涌现性的珍视。</p>
+<hr>
+<p><strong>思考问题</strong>：在你的项目管理实践中，你是如何平衡分解与整合的？你遇到过哪些分解极限的挑战？你是如何应对这些挑战的？</p>
+
+              <div class="qr-code mt-4">
+                <h5>扫描二维码查看</h5>
+                <widget-qrcode id="pageQrCode" template="heart" width="180" height="180"
+                               foreground-color="#1A237E" inner-color="#FF6D00" outer-color="#1A237E" logo="../logo.png"
+                               value="https://www.60score.com/mdhtml/WBS分解的尽头：量子级分解与可执行性的消失.html">
+                </widget-qrcode>
+              </div>
+              
+              
+                <div class="tag-links mt-4">
+                  <span class="badge tag-label"><i class="bi bi-tags"></i> 标签：</span>
+                  
+                    <a href="/tag/WBS%E5%88%86%E8%A7%A3.html" class="badge tag-link">WBS分解</a>
+                  
+                    <a href="/tag/%E9%87%8F%E5%AD%90%E7%BA%A7%E5%88%86%E8%A7%A3.html" class="badge tag-link">量子级分解</a>
+                  
+                    <a href="/tag/%E5%8F%AF%E6%89%A7%E8%A1%8C%E6%80%A7.html" class="badge tag-link">可执行性</a>
+                  
+                    <a href="/tag/%E6%96%B9%E6%B3%95%E8%AE%BA%E5%B1%80%E9%99%90%E6%80%A7.html" class="badge tag-link">方法论局限性</a>
+                  
+                    <a href="/tag/%E7%B3%BB%E7%BB%9F%E6%80%9D%E7%BB%B4.html" class="badge tag-link">系统思维</a>
+                  
+                </div>
+              
+            </div>
+          </div>
+        </div>
+        <div id="SOHUCS"></div>
+        <script src="../js/common-scripts.js"></script>
+      </div>
+    </div>
+  </main>
+  <footer class="sticky-footer text-center text-lg-start bg-light text-muted">
+  <div class="container text-center py-1">
+    <section>
+      <span id="busuanzi_container_page_pv">本页面访问量<span id="busuanzi_value_page_pv"></span>次</span>
+      <a href="../mdhtml/关于我们.html">关于我们</a>
+      <a href="../html/contactus.html">联系我们</a>
+    </section>
+  </div>
+</footer>
+
+</body>
+
+</html>

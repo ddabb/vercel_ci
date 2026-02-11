@@ -1,4 +1,4 @@
----
+﻿---
 title: 职场效率革命：DeepSeek如何重塑数据分析、会议纪要与简历优化
 category: 人工智能
 goodsName: 动手学深度学习 PyTorch版 李沐和阿斯顿·张等强强联合之作！机器学习、深度学习、AI领域重磅教程！ deepseek机器学习（异步图书出品）
