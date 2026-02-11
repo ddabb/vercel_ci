@@ -4,10 +4,13 @@ const xlsx = require('xlsx');
 const path = require('path');
 const yaml = require('js-yaml');
 const ejs = require('ejs');
+// 引入 analyze_files.js 模块
+const { analyzeFiles } = require('./analyze_files');
 const mdFilesDirectory = path.resolve(__dirname, 'mdfiles');
 const jsonOutputPath = path.resolve(__dirname, 'jsons', 'mdfiles.json');
 const NoDescriptionListPath = path.resolve(__dirname, 'jsons', 'NoDescriptionLists.json');
 const TitleAndDescPath = path.resolve(__dirname, 'jsons', 'TitleAndDescPaths.json');
+const mdfilesReorganizedPath = path.resolve(__dirname, 'jsons', 'mdfiles_reorganized.json');
 function prepareCheckData(mdFiles) {
   // 创建一个映射来存储按类别组织的文章
   const categoryMap = {};
@@ -255,6 +258,10 @@ try {
   console.log(`📂 分类统计: ${Object.keys(taxonomy.categories).length}个`);
   console.log(`🏷️ 标签统计: ${Object.keys(taxonomy.tags).length}个`);
   console.log('📄 已生成: 标签列表.html, 分类列表.html 及各自的详细页面');
+
+  // 生成 mdfiles_reorganized.json 文件
+  console.log('\n📊 生成 mdfiles_reorganized.json 文件...');
+  analyzeFiles(mdFilesDirectory, mdfilesReorganizedPath);
 
   console.log('\n📄 转换 Markdown 到 HTML...')
   execSync('node md2html.js', { stdio: 'inherit' })

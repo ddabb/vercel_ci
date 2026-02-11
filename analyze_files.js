@@ -4,12 +4,18 @@ const path = require('path');
 /**
  * 简化的文件分析工具
  * 分析Markdown文件并生成mdfiles_reorganized.json
+ * @param {string} mdfilesPath - Markdown文件目录路径
+ * @param {string} outputPath - 输出文件路径
  */
 
-function analyzeFiles() {
+function analyzeFiles(mdfilesPath = path.join(__dirname, 'mdfiles'), outputPath = path.join(__dirname, 'jsons', 'mdfiles_reorganized.json')) {
     console.log('开始分析文件...');
     
-    const mdfilesPath = 'e:\\git\\vercel-ci\\mdfiles';
+    // 确保目录存在
+    if (!fs.existsSync(mdfilesPath)) {
+        console.error(`目录不存在: ${mdfilesPath}`);
+        return;
+    }
     
     // 读取所有Markdown文件
     const files = fs.readdirSync(mdfilesPath).filter(file => file.endsWith('.md'));
@@ -46,14 +52,24 @@ function analyzeFiles() {
     });
 
     // 生成重组后的结构
-    generateReorganizedStructure(files.length, categories, tags);
+    return generateReorganizedStructure(files.length, categories, tags, outputPath);
 }
 
 /**
  * 生成重组后的分类结构
+ * @param {number} totalFiles - 文件总数
+ * @param {Object} categories - 分类统计
+ * @param {Object} tags - 标签统计
+ * @param {string} outputPath - 输出文件路径
  */
-function generateReorganizedStructure(totalFiles, categories, tags) {
+function generateReorganizedStructure(totalFiles, categories, tags, outputPath) {
     console.log('\n=== 生成重组后的分类结构 ===');
+    
+    // 确保输出目录存在
+    const outputDir = path.dirname(outputPath);
+    if (!fs.existsSync(outputDir)) {
+        fs.mkdirSync(outputDir, { recursive: true });
+    }
     
     // 构建简单的分类结构
     const reorganized = {
@@ -70,12 +86,19 @@ function generateReorganizedStructure(totalFiles, categories, tags) {
     };
 
     // 保存重组后的结构
-    const outputPath = path.join(__dirname, 'jsons', 'mdfiles_reorganized.json');
     fs.writeFileSync(outputPath, JSON.stringify(reorganized, null, 2), 'utf8');
     console.log(`重组后的分类结构已保存到: ${outputPath}`);
 
     return reorganized;
 }
 
-// 运行分析
-analyzeFiles();
+// 导出函数，以便其他模块使用
+module.exports = {
+    analyzeFiles,
+    generateReorganizedStructure
+};
+
+// 如果直接运行此文件，则使用默认参数
+if (require.main === module) {
+    analyzeFiles();
+}

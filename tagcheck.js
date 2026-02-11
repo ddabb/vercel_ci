@@ -7,8 +7,8 @@ let checkResults = {};
 async function checkMdTags(filePath, content) {
   const errors = [];
   
-  // 提取YAML front matter
-  const yamlMatch = content.match(/^---[\s\S]*?---/);
+  // 提取YAML front matter（忽略开头的BOM字符和空白字符）
+  const yamlMatch = content.match(/^\s*---[\s\S]*?---/);
   if (!yamlMatch) {
     errors.push("缺少 YAML front matter");
     return errors;
