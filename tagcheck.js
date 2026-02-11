@@ -3,7 +3,7 @@ const path = require('path');
 
 let checkResults = {};
 
-// 检查Markdown文件的tags格式
+// 检查Markdown文件的tags和category格式
 async function checkMdTags(filePath, content) {
   const errors = [];
   
@@ -19,7 +19,6 @@ async function checkMdTags(filePath, content) {
   // 检查是否有tags字段
   if (!/tags:/m.test(yamlContent)) {
     errors.push("缺少 tags 字段");
-    return errors;
   }
   
   // 检查tags格式
@@ -30,6 +29,22 @@ async function checkMdTags(filePath, content) {
     // 检查是否为数组格式
     if (!/^\[.*\]$/s.test(tagsContent)) {
       errors.push("tags 格式不正确，应为数组格式: tags: [标签1, 标签2]");
+    }
+  }
+  
+  // 检查是否有category字段
+  if (!/category:/m.test(yamlContent)) {
+    errors.push("缺少 category 字段");
+  }
+  
+  // 检查category格式（不应该是数组）
+  const categoryMatch = yamlContent.match(/category:\s*(.*?)(?=\n\w+:|$)/ms);
+  if (categoryMatch) {
+    const categoryContent = categoryMatch[1].trim();
+    
+    // 检查是否为数组格式（不应该是数组）
+    if (/^\[.*\]$/s.test(categoryContent)) {
+      errors.push("category 格式不正确，不应为数组格式，应为字符串格式: category: 分类名称");
     }
   }
   
