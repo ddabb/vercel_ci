@@ -1,6 +1,6 @@
-﻿---
+---
 title: 解决Markdown文件中标题解析异常的问题
-category: 软件开发
+category: 人工智能
 tags: [markdown, 标题解析, 文件编码, 解析器差异]
 description: 解决Markdown文件中标题解析异常的问题，通常由文件编码中的字节顺序标记（BOM）或不同Markdown解析器间的差异引起。文章提供了移除BOM、检查Markdown语法正确性、尝试不同的Markdown解析器或编辑器以及使用在线验证工具等方法来解决这些问题，确保Markdown文档能够正确解析为HTML，保持文档的正确性和可读性。
 ---

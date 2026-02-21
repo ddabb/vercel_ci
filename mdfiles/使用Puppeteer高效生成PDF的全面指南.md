@@ -1,6 +1,6 @@
-﻿---
+---
 title: 使用Puppeteer高效生成PDF的全面指南
-category: 软件开发
+category: 人工智能
 tags: [Puppeteer, PDF生成, Node.js, 自动化, 网页截图]
 description: 深入了解如何使用Puppeteer在Node.js环境中生成PDF文件，包括基础流程、高级应用技巧及实用小窍门，助力高效自动化文档生成。
 ---

@@ -49,19 +49,22 @@ async function ensureDirectoryExist(dirPath) {
   await deleteOldCheckFile();
 
   // 遍历目录数组
-  const promises = dirs.map(async dir => {
+  for (const dir of dirs) {
     const files = await fs.readdir(path.join(__dirname, dir), { withFileTypes: true });
-    // 过滤出 HTML 并为每个文件创建一个 Promise
+    // 过滤出 HTML 文件
     const htmlFiles = files.filter(file => file.isFile() && ['.html'].includes(path.extname(file.name)));
-    return Promise.all(htmlFiles.map(async file => {
-      const filePath = path.join(dir, file.name);
-      const fileContent = await fs.readFile(path.join(__dirname, filePath), 'utf-8');
-      await checkHtmlContent(filePath.replace(/\\/g, '/'), fileContent);
-    }));
-  });
-
-  // 等待所有操作完成并写入结果到 check.json
-  await Promise.all(promises);
+    
+    // 分批处理文件，每批处理10个文件，避免同时打开过多文件
+    const batchSize = 10;
+    for (let i = 0; i < htmlFiles.length; i += batchSize) {
+      const batch = htmlFiles.slice(i, i + batchSize);
+      await Promise.all(batch.map(async file => {
+        const filePath = path.join(dir, file.name);
+        const fileContent = await fs.readFile(path.join(__dirname, filePath), 'utf-8');
+        await checkHtmlContent(filePath.replace(/\\/g, '/'), fileContent);
+      }));
+    }
+  }
   if (Object.keys(checkResults).length > 0) {
     const checkJsonPath = path.join(__dirname, 'jsons', 'checkSeo.json');
     await fs.writeFile(checkJsonPath, JSON.stringify(checkResults, null, 2));
