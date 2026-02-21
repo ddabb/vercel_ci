@@ -1,34 +1,3 @@
-https://www.60score.com/category/人工智能.html
-https://www.60score.com/category/人生哲学.html
-https://www.60score.com/category/人生管理.html
-https://www.60score.com/category/人际相处.html
-https://www.60score.com/category/传统文化.html
-https://www.60score.com/category/健康生活.html
-https://www.60score.com/category/分类列表.html
-https://www.60score.com/category/历史探究.html
-https://www.60score.com/category/台球天地.html
-https://www.60score.com/category/哲学思考.html
-https://www.60score.com/category/婚姻情感.html
-https://www.60score.com/category/心理健康.html
-https://www.60score.com/category/性别健康.html
-https://www.60score.com/category/教育学习.html
-https://www.60score.com/category/未分类.html
-https://www.60score.com/category/环保可持续.html
-https://www.60score.com/category/生活感悟.html
-https://www.60score.com/category/生活日常.html
-https://www.60score.com/category/社会探究.html
-https://www.60score.com/category/社会现象.html
-https://www.60score.com/category/科学探索.html
-https://www.60score.com/category/科幻想象.html
-https://www.60score.com/category/科技前沿.html
-https://www.60score.com/category/职业发展.html
-https://www.60score.com/category/脑洞大开.html
-https://www.60score.com/category/自我提升.html
-https://www.60score.com/category/自然科学.html
-https://www.60score.com/category/财富管理.html
-https://www.60score.com/category/身心健康.html
-https://www.60score.com/category/运营指南.html
-https://www.60score.com/category/项目管理.html
 https://www.60score.com/html/2048.html
 https://www.60score.com/html/404.html
 https://www.60score.com/html/500.html
@@ -177,6 +146,7 @@ https://www.60score.com/mdhtml/什么样的女人在婚恋市场遇冷？.html
 https://www.60score.com/mdhtml/从开发到落地：DeepSeek在2025全球开发者大会的技术前瞻.html
 https://www.60score.com/mdhtml/从月球到地球架设金属杆滑行的探索.html
 https://www.60score.com/mdhtml/从权谋闹剧到创作困境：狗尾续貂的千年警示.html
+https://www.60score.com/mdhtml/代际沟通：跨越年龄的桥梁.html
 https://www.60score.com/mdhtml/令人绝望的“文盲”.html
 https://www.60score.com/mdhtml/价值最大化的艺术：如何在有限资源中实现最优人生.html
 https://www.60score.com/mdhtml/传统寓言的现代职场映射：权力与人性的新解读.html
@@ -215,6 +185,7 @@ https://www.60score.com/mdhtml/公众号号主的心理成长阶段与认知偏�
 https://www.60score.com/mdhtml/公众号的终极形态：个人化智能体时代的内容创作.html
 https://www.60score.com/mdhtml/公司不派活，每天摸鱼，还要继续待着吗？.html
 https://www.60score.com/mdhtml/关于我们.html
+https://www.60score.com/mdhtml/具身智能：AI的下一个进化方向.html
 https://www.60score.com/mdhtml/内向者在职场沟通中的策略与优势.html
 https://www.60score.com/mdhtml/再聊姜萍.html
 https://www.60score.com/mdhtml/写公众号和建立独立网站的差异对比.html
@@ -376,6 +347,7 @@ https://www.60score.com/mdhtml/学习力的提升：如何高效学习新技能.
 https://www.60score.com/mdhtml/学历对成功到底有多重要？.html
 https://www.60score.com/mdhtml/宇宙到底有没有边界.html
 https://www.60score.com/mdhtml/宇宙热寂视角下的项目风险重估：什么是值得管理的真风险.html
+https://www.60score.com/mdhtml/宇宙边界：探索宇宙的终极奥秘.html
 https://www.60score.com/mdhtml/守株待兔：被误读的概率思维实验.html
 https://www.60score.com/mdhtml/安眠药与泻药同服：会否在睡梦中“失守”？.html
 https://www.60score.com/mdhtml/家庭关系中的代际沟通技巧：搭建和谐亲情的坚固桥梁.html
@@ -494,6 +466,7 @@ https://www.60score.com/mdhtml/数字分身与时间循环实验：一万次决�
 https://www.60score.com/mdhtml/数字化时代的自我管理：掌控生活与工作的新策略.html
 https://www.60score.com/mdhtml/数字围城下的生存法则：普通人的隐私自卫指南.html
 https://www.60score.com/mdhtml/数字孪生技术的应用与挑战：虚拟与现实的融合.html
+https://www.60score.com/mdhtml/数字孪生：现实与虚拟的融合.html
 https://www.60score.com/mdhtml/数字时代的「阅读仪式感」：如何在碎片化时代深度阅读.html
 https://www.60score.com/mdhtml/数字时代的专注力提升：如何在信息爆炸中保持深度工作.html
 https://www.60score.com/mdhtml/数字时代的人际关系：虚拟连接与现实情感的平衡.html
@@ -513,6 +486,7 @@ https://www.60score.com/mdhtml/新兴金融科技对传统理财方式的影响.
 https://www.60score.com/mdhtml/新手司机上路有什么值得注意的吗？.html
 https://www.60score.com/mdhtml/新职业形态：AI时代的职业转型与技能重塑.html
 https://www.60score.com/mdhtml/日复一日做好五件事轻松搞钱攻略.html
+https://www.60score.com/mdhtml/早起习惯：开启高效生活的钥匙.html
 https://www.60score.com/mdhtml/早起的鸟儿有虫吃，早起的虫儿被鸟吃：生活中的竞争与智慧.html
 https://www.60score.com/mdhtml/时间与新欢：情感困境的双重破局之道.html
 https://www.60score.com/mdhtml/时间循环与重新开始：割舍沉没成本是打破循环还是跳入新循环.html
@@ -553,6 +527,7 @@ https://www.60score.com/mdhtml/极端换位思考：与最讨厌的人交换思�
 https://www.60score.com/mdhtml/树叶日落日扫背后的人生深意.html
 https://www.60score.com/mdhtml/树挪死人挪活：人生智慧的新解.html
 https://www.60score.com/mdhtml/树木与文化：自然与人类文明的交融.html
+https://www.60score.com/mdhtml/森林浴：自然疗法的现代复兴.html
 https://www.60score.com/mdhtml/植树的意义：为地球增添生机与希望.html
 https://www.60score.com/mdhtml/正义的本质：客观原则还是主观判断.html
 https://www.60score.com/mdhtml/正念冥想与心理健康：从压力到平静的转变.html
@@ -672,6 +647,7 @@ https://www.60score.com/mdhtml/职场晋升攻略：能力与人际关系的双�
 https://www.60score.com/mdhtml/职场沟通的艺术：如何有效表达和倾听.html
 https://www.60score.com/mdhtml/职场沟通秘籍：点燃团队协作的高效引擎.html
 https://www.60score.com/mdhtml/职场生存法则：比学历和经验更重要的4项核心能力.html
+https://www.60score.com/mdhtml/肠道菌群：人体健康的隐形守护者.html
 https://www.60score.com/mdhtml/能力一般者在职场中“逆袭”的实用指南.html
 https://www.60score.com/mdhtml/脑机接口与隐私保护：当技术直接连接大脑时.html
 https://www.60score.com/mdhtml/脑机接口在医疗领域的应用：从康复到增强.html
@@ -766,9 +742,11 @@ https://www.60score.com/mdhtml/量子计算机破解所有密码后，人类社�
 https://www.60score.com/mdhtml/量子计算的实际应用前景：开启科技新时代.html
 https://www.60score.com/mdhtml/量子计算的跨领域应用：超越密码学的科技革命.html
 https://www.60score.com/mdhtml/量子计算：将如何改变我们的未来？.html
+https://www.60score.com/mdhtml/量子计算：未来计算的革命性突破.html
 https://www.60score.com/mdhtml/金斧头银斧头：一场关于人性试炼的千年寓言.html
 https://www.60score.com/mdhtml/金融科技对传统银行业的影响及应对策略.html
 https://www.60score.com/mdhtml/鉴黄师下班看黄色视频：加班还是违法？.html
+https://www.60score.com/mdhtml/钝感力：现代生活的必备素养.html
 https://www.60score.com/mdhtml/钱真的能买到快乐吗？.html
 https://www.60score.com/mdhtml/长期主义与敏捷迭代的个人成长实验.html
 https://www.60score.com/mdhtml/长期主义与概率彩票：坚持是否是另一种形式的赌徒谬误.html
@@ -817,6 +795,37 @@ https://www.60score.com/mdhtml/魔兽世界副本团长团队管理：如何管�
 https://www.60score.com/mdhtml/鸟欲高飞先振翅，人求上进先读书.html
 https://www.60score.com/mdhtml/鹬蚌相争：被低估的博弈论智慧.html
 https://www.60score.com/mdhtml/黔驴技穷：被误读的能力评估智慧.html
+https://www.60score.com/category/人工智能.html
+https://www.60score.com/category/人生哲学.html
+https://www.60score.com/category/人生管理.html
+https://www.60score.com/category/人际相处.html
+https://www.60score.com/category/传统文化.html
+https://www.60score.com/category/健康生活.html
+https://www.60score.com/category/分类列表.html
+https://www.60score.com/category/历史探究.html
+https://www.60score.com/category/台球天地.html
+https://www.60score.com/category/哲学思考.html
+https://www.60score.com/category/婚姻情感.html
+https://www.60score.com/category/心理健康.html
+https://www.60score.com/category/性别健康.html
+https://www.60score.com/category/教育学习.html
+https://www.60score.com/category/未分类.html
+https://www.60score.com/category/环保可持续.html
+https://www.60score.com/category/生活感悟.html
+https://www.60score.com/category/生活日常.html
+https://www.60score.com/category/社会探究.html
+https://www.60score.com/category/社会现象.html
+https://www.60score.com/category/科学探索.html
+https://www.60score.com/category/科幻想象.html
+https://www.60score.com/category/科技前沿.html
+https://www.60score.com/category/职业发展.html
+https://www.60score.com/category/脑洞大开.html
+https://www.60score.com/category/自我提升.html
+https://www.60score.com/category/自然科学.html
+https://www.60score.com/category/财富管理.html
+https://www.60score.com/category/身心健康.html
+https://www.60score.com/category/运营指南.html
+https://www.60score.com/category/项目管理.html
 https://www.60score.com/tag/19世纪.html
 https://www.60score.com/tag/30岁焦虑.html
 https://www.60score.com/tag/35岁危机.html
@@ -1069,6 +1078,7 @@ https://www.60score.com/tag/人际关系改善.html
 https://www.60score.com/tag/人际冲突解决.html
 https://www.60score.com/tag/人际吸引力.html
 https://www.60score.com/tag/人际沟通.html
+https://www.60score.com/tag/人际相处.html
 https://www.60score.com/tag/人际边界设置.html
 https://www.60score.com/tag/人际连接.html
 https://www.60score.com/tag/今日头条.html
@@ -2477,6 +2487,7 @@ https://www.60score.com/tag/本地化实践.html
 https://www.60score.com/tag/机会成本.html
 https://www.60score.com/tag/机会探寻.html
 https://www.60score.com/tag/机会识别.html
+https://www.60score.com/tag/机器人.html
 https://www.60score.com/tag/机器创作版权归属.html
 https://www.60score.com/tag/机器创作社会争议.html
 https://www.60score.com/tag/机遇.html
@@ -2808,6 +2819,7 @@ https://www.60score.com/tag/生活质量.html
 https://www.60score.com/tag/生活质量提升.html
 https://www.60score.com/tag/生物医药.html
 https://www.60score.com/tag/生物多样性.html
+https://www.60score.com/tag/生物学.html
 https://www.60score.com/tag/生物工程.html
 https://www.60score.com/tag/生物技术.html
 https://www.60score.com/tag/生物进化.html
@@ -3271,6 +3283,7 @@ https://www.60score.com/tag/能量补给策略.html
 https://www.60score.com/tag/能量转换.html
 https://www.60score.com/tag/脂肪酸.html
 https://www.60score.com/tag/脑机接口.html
+https://www.60score.com/tag/脑洞大开.html
 https://www.60score.com/tag/脑血栓.html
 https://www.60score.com/tag/腿举机.html
 https://www.60score.com/tag/自主性.html
