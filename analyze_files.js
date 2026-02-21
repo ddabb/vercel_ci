@@ -71,6 +71,15 @@ function generateReorganizedStructure(totalFiles, categories, tags, outputPath) 
         fs.mkdirSync(outputDir, { recursive: true });
     }
     
+    // 按计数倒序排序分类和标签
+    const sortedCategories = Object.fromEntries(
+        Object.entries(categories).sort(([,a], [,b]) => b - a)
+    );
+    
+    const sortedTags = Object.fromEntries(
+        Object.entries(tags).sort(([,a], [,b]) => b - a)
+    );
+
     // 构建简单的分类结构
     const reorganized = {
         meta: {
@@ -80,8 +89,8 @@ function generateReorganizedStructure(totalFiles, categories, tags, outputPath) 
             reorganizationVersion: '1.0'
         },
         taxonomy: {
-            categories: categories,
-            tags: tags
+            categories: sortedCategories,
+            tags: sortedTags
         }
     };
 
