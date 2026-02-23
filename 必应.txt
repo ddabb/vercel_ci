@@ -119,10 +119,12 @@ https://www.60score.com/mdhtml/中式八球台球运动简介.html
 https://www.60score.com/mdhtml/中式八球的发展史.html
 https://www.60score.com/mdhtml/为什么一摘眼镜就听不清.html
 https://www.60score.com/mdhtml/为什么人际关系总是这么复杂？.html
+https://www.60score.com/mdhtml/为什么剪指甲时不觉得疼？.html
 https://www.60score.com/mdhtml/为什么台球店没有请陪打女主教.html
 https://www.60score.com/mdhtml/为什么小龙女不杀强奸她的那个人？.html
 https://www.60score.com/mdhtml/为什么放桃树枝的水会变得浑浊.html
 https://www.60score.com/mdhtml/为什么有钱人喜欢安静？.html
+https://www.60score.com/mdhtml/为什么洗澡时总喜欢唱歌？.html
 https://www.60score.com/mdhtml/为什么现代人焦虑症越来越普遍？.html
 https://www.60score.com/mdhtml/为什么男人会对女人家暴.html
 https://www.60score.com/mdhtml/为什么社会贫富差距越来越大？.html
@@ -1101,6 +1103,7 @@ https://www.60score.com/tag/亲子关系.html
 https://www.60score.com/tag/亲子沟通.html
 https://www.60score.com/tag/亲密关系.html
 https://www.60score.com/tag/人体力学.html
+https://www.60score.com/tag/人体奥秘.html
 https://www.60score.com/tag/人体美.html
 https://www.60score.com/tag/人寿保险.html
 https://www.60score.com/tag/人工智能.html
@@ -1723,6 +1726,7 @@ https://www.60score.com/tag/基础训练.html
 https://www.60score.com/tag/基础设施恢复.html
 https://www.60score.com/tag/塑料恐龙玩具.html
 https://www.60score.com/tag/增强现实.html
+https://www.60score.com/tag/声学.html
 https://www.60score.com/tag/处女情结.html
 https://www.60score.com/tag/备孕全周期.html
 https://www.60score.com/tag/备考计划.html
@@ -2075,6 +2079,7 @@ https://www.60score.com/tag/心理成熟.html
 https://www.60score.com/tag/心理成长.html
 https://www.60score.com/tag/心理投射.html
 https://www.60score.com/tag/心理支持.html
+https://www.60score.com/tag/心理放松.html
 https://www.60score.com/tag/心理机制.html
 https://www.60score.com/tag/心理策略.html
 https://www.60score.com/tag/心理素质.html
@@ -2990,6 +2995,7 @@ https://www.60score.com/tag/生活方式.html
 https://www.60score.com/tag/生活方式调整.html
 https://www.60score.com/tag/生活日常.html
 https://www.60score.com/tag/生活智慧.html
+https://www.60score.com/tag/生活百科.html
 https://www.60score.com/tag/生活竞争.html
 https://www.60score.com/tag/生活细节.html
 https://www.60score.com/tag/生活规划.html
@@ -3005,6 +3011,7 @@ https://www.60score.com/tag/生物钟调节.html
 https://www.60score.com/tag/生理健康.html
 https://www.60score.com/tag/生理变化.html
 https://www.60score.com/tag/生理因素.html
+https://www.60score.com/tag/生理学.html
 https://www.60score.com/tag/生理差异.html
 https://www.60score.com/tag/生理恢复.html
 https://www.60score.com/tag/生理适应.html
@@ -3038,6 +3045,7 @@ https://www.60score.com/tag/男性性能力.html
 https://www.60score.com/tag/男性特质.html
 https://www.60score.com/tag/畅销小说.html
 https://www.60score.com/tag/番茄工作法.html
+https://www.60score.com/tag/疼痛感知.html
 https://www.60score.com/tag/疾病与健康.html
 https://www.60score.com/tag/疾病影响.html
 https://www.60score.com/tag/疾病预防.html
@@ -3606,6 +3614,7 @@ https://www.60score.com/tag/行业趋势.html
 https://www.60score.com/tag/行业选择.html
 https://www.60score.com/tag/行业重塑.html
 https://www.60score.com/tag/行为模式.html
+https://www.60score.com/tag/行为科学.html
 https://www.60score.com/tag/行为经济学.html
 https://www.60score.com/tag/行为艺术.html
 https://www.60score.com/tag/行为金融学.html
@@ -3643,7 +3652,9 @@ https://www.60score.com/tag/角色冲突.html
 https://www.60score.com/tag/角色定义.html
 https://www.60score.com/tag/角色定位.html
 https://www.60score.com/tag/角色理论.html
+https://www.60score.com/tag/角质蛋白.html
 https://www.60score.com/tag/解决方案.html
+https://www.60score.com/tag/解剖学.html
 https://www.60score.com/tag/解析器差异.html
 https://www.60score.com/tag/解锁式文章.html
 https://www.60score.com/tag/计划制定.html
