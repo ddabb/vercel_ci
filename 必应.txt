@@ -27,12 +27,14 @@ https://www.60score.com/html/snake.html
 https://www.60score.com/html/testnpm.html
 https://www.60score.com/html/tools.html
 https://www.60score.com/category/个人成长.html
+https://www.60score.com/category/个人成长与思维重塑.html
 https://www.60score.com/category/人工智能.html
 https://www.60score.com/category/人生哲学.html
 https://www.60score.com/category/人生管理.html
 https://www.60score.com/category/人际相处.html
 https://www.60score.com/category/传统文化.html
 https://www.60score.com/category/健康生活.html
+https://www.60score.com/category/内容创作与知识产品化.html
 https://www.60score.com/category/分类列表.html
 https://www.60score.com/category/历史探究.html
 https://www.60score.com/category/台球天地.html
@@ -54,6 +56,7 @@ https://www.60score.com/category/科学探索.html
 https://www.60score.com/category/科幻想象.html
 https://www.60score.com/category/科技前沿.html
 https://www.60score.com/category/职业发展.html
+https://www.60score.com/category/职场、系统与未来洞察.html
 https://www.60score.com/category/职场发展.html
 https://www.60score.com/category/脑洞大开.html
 https://www.60score.com/category/自我提升.html
@@ -81,6 +84,7 @@ https://www.60score.com/mdhtml/AI生成内容的版权归属：当机器成为�
 https://www.60score.com/mdhtml/AI生成内容的道德责任：当机器创作引发社会争议时.html
 https://www.60score.com/mdhtml/AI评价与创作自由：当智能体预测你的下一篇文章.html
 https://www.60score.com/mdhtml/AI辅助创作下的原创边界：当智能体生成你从未想过的观点.html
+https://www.60score.com/mdhtml/AI魔镜：超越人类自省极限的洞察维度.html
 https://www.60score.com/mdhtml/DeepSeek与ChatGPT：国产AI模型的市场突围之路.html
 https://www.60score.com/mdhtml/DeepSeek引爆AI伦理争议：2025年必须警惕的4类技术失控场景.html
 https://www.60score.com/mdhtml/DeepSeek智能写作助手进阶指南：批量生产与违禁词规避.html
@@ -90,6 +94,8 @@ https://www.60score.com/mdhtml/DeepSeek：重塑未来日常生活的AI革命.ht
 https://www.60score.com/mdhtml/GPT-5时代的创作者：从内容生产到价值构建.html
 https://www.60score.com/mdhtml/IT行业新人快速成长指南.html
 https://www.60score.com/mdhtml/SEO内容生成新范式：DeepSeek关键词策略与语义匹配实战.html
+https://www.60score.com/mdhtml/SIPOC模型：反向推演令人感到空虚的成功人生.html
+https://www.60score.com/mdhtml/SVG交互逻辑迁移：管理人生选择的点击式决策框架.html
 https://www.60score.com/mdhtml/WBS分解的尽头：量子级分解与可执行性的消失.html
 https://www.60score.com/mdhtml/《两小儿辩日》：一场跨越千年的认知突围战.html
 https://www.60score.com/mdhtml/《西游记》猪八戒形象：原著黑猪到影视白猪之变.html
@@ -182,6 +188,7 @@ https://www.60score.com/mdhtml/人生社交网络系统：从关系构建到价�
 https://www.60score.com/mdhtml/人生系统思考：从复杂系统视角管理个人生活.html
 https://www.60score.com/mdhtml/人生能量流动系统：从能量守恒到生活平衡.html
 https://www.60score.com/mdhtml/人生能量管理系统：从物理定律到生活实践.html
+https://www.60score.com/mdhtml/人生角色定位：内部客户与外部客户利益冲突的决策算法.html
 https://www.60score.com/mdhtml/人生这场马拉松，你是在种西瓜还是捡芝麻？.html
 https://www.60score.com/mdhtml/人生项目的角色冲突与内部治理结构：如何化解精神内耗.html
 https://www.60score.com/mdhtml/人生马拉松：坚持的力量与价值.html
@@ -247,6 +254,7 @@ https://www.60score.com/mdhtml/八个瑞士卷与和尚分粥.html
 https://www.60score.com/mdhtml/八千元月收入的都市生活日常.html
 https://www.60score.com/mdhtml/公众号冷启动的行为艺术：SIPOC系统的创意推广.html
 https://www.60score.com/mdhtml/公众号号主的心理成长阶段与认知偏差：从冷启动到稳定增长.html
+https://www.60score.com/mdhtml/公众号智能体的灵魂拷问：当AI获得自我意识时的对话.html
 https://www.60score.com/mdhtml/公众号的终极形态：个人化智能体时代的内容创作.html
 https://www.60score.com/mdhtml/公司不派活，每天摸鱼，还要继续待着吗？.html
 https://www.60score.com/mdhtml/关于我们.html
@@ -269,6 +277,7 @@ https://www.60score.com/mdhtml/利他思维与利己思维：谁更赚钱？.htm
 https://www.60score.com/mdhtml/刻舟求剑：被低估的时空认知实验.html
 https://www.60score.com/mdhtml/削足适履：被误解千年的生存智慧.html
 https://www.60score.com/mdhtml/割舍沉没成本与长期主义的哲学悖论.html
+https://www.60score.com/mdhtml/割舍沉没成本：设计可训练、可量化的心理肌肉锻炼流程.html
 https://www.60score.com/mdhtml/勇做独特的自己，踏出专属之路.html
 https://www.60score.com/mdhtml/区块链技术：除了比特币还能做什么？.html
 https://www.60score.com/mdhtml/区块链：重塑信任的分布式账本技术.html
@@ -282,6 +291,7 @@ https://www.60score.com/mdhtml/压力应对的情绪调节实用技巧.html
 https://www.60score.com/mdhtml/压力管理的实用策略：科学方法与日常实践.html
 https://www.60score.com/mdhtml/压力管理的科学：从识别到应对.html
 https://www.60score.com/mdhtml/原生家庭的影响有多大？.html
+https://www.60score.com/mdhtml/厨房清洁和卫生实用指南.html
 https://www.60score.com/mdhtml/去自首的路上被抓了还算自首吗？.html
 https://www.60score.com/mdhtml/友情中的距离之道：把握分寸，情谊长久.html
 https://www.60score.com/mdhtml/反倦怠指南的系统反抗维度：如何避免成为系统维稳的帮凶.html
@@ -390,6 +400,8 @@ https://www.60score.com/mdhtml/如何探索生命的意义？人生哲学的智�
 https://www.60score.com/mdhtml/如何提高沟通能力：从倾听到表达的实用指南.html
 https://www.60score.com/mdhtml/如何改善睡眠质量：科学方法与实用技巧.html
 https://www.60score.com/mdhtml/如何有效管理时间：提高效率与实现目标的实用指南.html
+https://www.60score.com/mdhtml/如何正确处理家庭垃圾分类.html
+https://www.60score.com/mdhtml/如何正确清洗和保养衣物.html
 https://www.60score.com/mdhtml/如何正确看待“视钱财如粪土”.html
 https://www.60score.com/mdhtml/如何用向下射击的机枪制作飞行背包？.html
 https://www.60score.com/mdhtml/如何看待“近水楼台先得月”这一社会现象.html
@@ -444,9 +456,16 @@ https://www.60score.com/mdhtml/宇宙热寂视角下的项目风险重估：什�
 https://www.60score.com/mdhtml/宇宙边界：探索宇宙的终极奥秘.html
 https://www.60score.com/mdhtml/守株待兔：被误读的概率思维实验.html
 https://www.60score.com/mdhtml/安眠药与泻药同服：会否在睡梦中“失守”？.html
+https://www.60score.com/mdhtml/家居安全实用指南.html
+https://www.60score.com/mdhtml/家庭亲子活动实用指南.html
+https://www.60score.com/mdhtml/家庭健康饮食实用指南.html
 https://www.60score.com/mdhtml/家庭关系中的代际沟通技巧：搭建和谐亲情的坚固桥梁.html
 https://www.60score.com/mdhtml/家庭关系对恋爱关系的隐形塑造.html
+https://www.60score.com/mdhtml/家庭急救实用指南.html
+https://www.60score.com/mdhtml/家庭收纳整理实用指南.html
+https://www.60score.com/mdhtml/家庭时间管理实用指南.html
 https://www.60score.com/mdhtml/家庭理财规划中的保险配置：不同类型保险在家庭理财中的作用.html
+https://www.60score.com/mdhtml/家庭节能和环保实用指南.html
 https://www.60score.com/mdhtml/家庭财务规划：从月光族到财务自由的全家实践指南.html
 https://www.60score.com/mdhtml/导演饺子蛰伏多年终成爆款，长期主义者在“速成”职场如何自洽？.html
 https://www.60score.com/mdhtml/导盲犬禁止入内标识的深度解读.html
@@ -547,6 +566,7 @@ https://www.60score.com/mdhtml/抓住女性消费市场的黄金法则：从洞�
 https://www.60score.com/mdhtml/抖音爆款内容打造全攻略.html
 https://www.60score.com/mdhtml/拿离职威胁涨薪：一把双刃剑.html
 https://www.60score.com/mdhtml/换位思考的高级实践：突破人际困境的5个高阶场景应用.html
+https://www.60score.com/mdhtml/换时空思考APP：核心交互界面与每日推送设计.html
 https://www.60score.com/mdhtml/换时空思考与平行宇宙：重新定义决策模型.html
 https://www.60score.com/mdhtml/掌控情绪：开启美好生活的密钥.html
 https://www.60score.com/mdhtml/掘金男性消费市场：从策略到落地的深度拆解.html
@@ -657,6 +677,7 @@ https://www.60score.com/mdhtml/沉没成本的转化过程：从负担到资源�
 https://www.60score.com/mdhtml/没有性生活时男性合理的自慰频率.html
 https://www.60score.com/mdhtml/没钱也要理财：开启财务独立之旅.html
 https://www.60score.com/mdhtml/法律未禁御剑飞行却无人尝试的原因探究.html
+https://www.60score.com/mdhtml/注意力战略：将个人注意力作为稀缺资源的投资组合管理.html
 https://www.60score.com/mdhtml/注意力的负向SIPOC模型：识别毒性供应商.html
 https://www.60score.com/mdhtml/注意力资产负债表编制：如何管理你的终极货币.html
 https://www.60score.com/mdhtml/洄游的鱼，南飞的鸟：探寻背后的人生智慧.html
@@ -876,6 +897,7 @@ https://www.60score.com/mdhtml/钝感力：现代生活的必备素养.html
 https://www.60score.com/mdhtml/钱真的能买到快乐吗？.html
 https://www.60score.com/mdhtml/长期主义与敏捷迭代的个人成长实验.html
 https://www.60score.com/mdhtml/长期主义与概率彩票：坚持是否是另一种形式的赌徒谬误.html
+https://www.60score.com/mdhtml/长期主义作为敏捷迭代项目：最小可行产品与衡量标准.html
 https://www.60score.com/mdhtml/长期主义的心理陷阱：如何辨别真伪长期主义.html
 https://www.60score.com/mdhtml/长期主义的终极意义：当坚持在宇宙尺度下毫无意义.html
 https://www.60score.com/mdhtml/长期主义：开启成功之门的稳健钥匙.html
@@ -920,6 +942,7 @@ https://www.60score.com/mdhtml/马镫未发明时，骑兵如何作战？.html
 https://www.60score.com/mdhtml/高考满分750，冲击985的秘籍大揭秘.html
 https://www.60score.com/mdhtml/魔兽世界副本团长团队管理：如何管理500人线上社群.html
 https://www.60score.com/mdhtml/鸟欲高飞先振翅，人求上进先读书.html
+https://www.60score.com/mdhtml/鸿蒙系统产品哲学：优化公司会议与家庭决策流程.html
 https://www.60score.com/mdhtml/鹬蚌相争：被低估的博弈论智慧.html
 https://www.60score.com/mdhtml/黔驴技穷：被误读的能力评估智慧.html
 https://www.60score.com/tag/19世纪.html
@@ -929,6 +952,7 @@ https://www.60score.com/tag/5G.html
 https://www.60score.com/tag/985高校.html
 https://www.60score.com/tag/AI.html
 https://www.60score.com/tag/AI与SEO融合.html
+https://www.60score.com/tag/AI伦理.html
 https://www.60score.com/tag/AI伦理原则.html
 https://www.60score.com/tag/AI伦理合规.html
 https://www.60score.com/tag/AI伦理实践框架.html
@@ -974,6 +998,8 @@ https://www.60score.com/tag/AI角色定位.html
 https://www.60score.com/tag/AI责任归属.html
 https://www.60score.com/tag/AI辅助创作.html
 https://www.60score.com/tag/AI隐私保护.html
+https://www.60score.com/tag/AI魔镜.html
+https://www.60score.com/tag/APP设计.html
 https://www.60score.com/tag/B型血输血.html
 https://www.60score.com/tag/ChatGPT.html
 https://www.60score.com/tag/CRISPR.html
@@ -1003,6 +1029,7 @@ https://www.60score.com/tag/SEO内容策略.html
 https://www.60score.com/tag/SIPOC模型.html
 https://www.60score.com/tag/SIPOC系统.html
 https://www.60score.com/tag/stakeholder管理.html
+https://www.60score.com/tag/SVG交互.html
 https://www.60score.com/tag/VR-AR.html
 https://www.60score.com/tag/VR.html
 https://www.60score.com/tag/WBS分解.html
@@ -1015,6 +1042,7 @@ https://www.60score.com/tag/三头六臂.html
 https://www.60score.com/tag/三维视角.html
 https://www.60score.com/tag/上古文明.html
 https://www.60score.com/tag/上班族.html
+https://www.60score.com/tag/上瘾功能.html
 https://www.60score.com/tag/不同人生阶段.html
 https://www.60score.com/tag/不孕不育.html
 https://www.60score.com/tag/不确定性.html
@@ -1104,17 +1132,20 @@ https://www.60score.com/tag/互联网资源.html
 https://www.60score.com/tag/五万元月收入.html
 https://www.60score.com/tag/交互式代码.html
 https://www.60score.com/tag/交互式内容.html
+https://www.60score.com/tag/交互界面.html
 https://www.60score.com/tag/交流电.html
 https://www.60score.com/tag/交通事故.html
 https://www.60score.com/tag/交通安全.html
 https://www.60score.com/tag/交通方式.html
 https://www.60score.com/tag/产后恢复.html
+https://www.60score.com/tag/产品哲学.html
 https://www.60score.com/tag/产品思维.html
 https://www.60score.com/tag/产品描述.html
 https://www.60score.com/tag/产品设计.html
 https://www.60score.com/tag/亲子互动.html
 https://www.60score.com/tag/亲子关系.html
 https://www.60score.com/tag/亲子沟通.html
+https://www.60score.com/tag/亲子活动.html
 https://www.60score.com/tag/亲密关系.html
 https://www.60score.com/tag/人体力学.html
 https://www.60score.com/tag/人体奥秘.html
@@ -1155,6 +1186,7 @@ https://www.60score.com/tag/人生智慧.html
 https://www.60score.com/tag/人生目标.html
 https://www.60score.com/tag/人生管理.html
 https://www.60score.com/tag/人生规划.html
+https://www.60score.com/tag/人生角色定位.html
 https://www.60score.com/tag/人生角色理论.html
 https://www.60score.com/tag/人生选择.html
 https://www.60score.com/tag/人生项目.html
@@ -1228,6 +1260,7 @@ https://www.60score.com/tag/优劣势.html
 https://www.60score.com/tag/优化策略.html
 https://www.60score.com/tag/优质睡眠.html
 https://www.60score.com/tag/优质脂肪.html
+https://www.60score.com/tag/会议系统.html
 https://www.60score.com/tag/传承教育.html
 https://www.60score.com/tag/传承策略.html
 https://www.60score.com/tag/传播.html
@@ -1300,6 +1333,7 @@ https://www.60score.com/tag/健康保险.html
 https://www.60score.com/tag/健康养生.html
 https://www.60score.com/tag/健康危机.html
 https://www.60score.com/tag/健康启示.html
+https://www.60score.com/tag/健康安全.html
 https://www.60score.com/tag/健康幸福产业.html
 https://www.60score.com/tag/健康意识.html
 https://www.60score.com/tag/健康护理.html
@@ -1321,6 +1355,7 @@ https://www.60score.com/tag/儿童发展.html
 https://www.60score.com/tag/儿童心理.html
 https://www.60score.com/tag/儿童心理健康.html
 https://www.60score.com/tag/儿童性教育.html
+https://www.60score.com/tag/儿童成长.html
 https://www.60score.com/tag/儿童教育.html
 https://www.60score.com/tag/儿童身高.html
 https://www.60score.com/tag/元内容.html
@@ -1341,6 +1376,7 @@ https://www.60score.com/tag/全球市场.html
 https://www.60score.com/tag/全球资产配置.html
 https://www.60score.com/tag/公众号.html
 https://www.60score.com/tag/公众号冷启动.html
+https://www.60score.com/tag/公众号智能体.html
 https://www.60score.com/tag/公众号运营.html
 https://www.60score.com/tag/公共WiFi.html
 https://www.60score.com/tag/公共政策.html
@@ -1381,6 +1417,7 @@ https://www.60score.com/tag/内容自动化.html
 https://www.60score.com/tag/内容营销.html
 https://www.60score.com/tag/内心平静.html
 https://www.60score.com/tag/内心探索.html
+https://www.60score.com/tag/内部客户.html
 https://www.60score.com/tag/内部客户需求.html
 https://www.60score.com/tag/内部治理.html
 https://www.60score.com/tag/写作动力.html
@@ -1406,6 +1443,8 @@ https://www.60score.com/tag/决策机制.html
 https://www.60score.com/tag/决策框架.html
 https://www.60score.com/tag/决策模型.html
 https://www.60score.com/tag/决策模拟.html
+https://www.60score.com/tag/决策流程.html
+https://www.60score.com/tag/决策算法.html
 https://www.60score.com/tag/决策管理.html
 https://www.60score.com/tag/决策能力.html
 https://www.60score.com/tag/决策逻辑.html
@@ -1463,6 +1502,7 @@ https://www.60score.com/tag/利己思维.html
 https://www.60score.com/tag/利弊分析.html
 https://www.60score.com/tag/利益光谱图.html
 https://www.60score.com/tag/利益关系.html
+https://www.60score.com/tag/利益冲突.html
 https://www.60score.com/tag/利益相关方.html
 https://www.60score.com/tag/利益相关方管理.html
 https://www.60score.com/tag/制度设计.html
@@ -1525,6 +1565,7 @@ https://www.60score.com/tag/单人责任制.html
 https://www.60score.com/tag/单价信息.html
 https://www.60score.com/tag/单程票.html
 https://www.60score.com/tag/博弈论.html
+https://www.60score.com/tag/卫生消毒.html
 https://www.60score.com/tag/危机管理.html
 https://www.60score.com/tag/即时满足.html
 https://www.60score.com/tag/历史书籍.html
@@ -1556,12 +1597,14 @@ https://www.60score.com/tag/原创边界.html
 https://www.60score.com/tag/原生家庭.html
 https://www.60score.com/tag/原著黑猪.html
 https://www.60score.com/tag/原谅的影响.html
+https://www.60score.com/tag/厨房清洁.html
 https://www.60score.com/tag/去中心化.html
 https://www.60score.com/tag/去公司化.html
 https://www.60score.com/tag/参与管理.html
 https://www.60score.com/tag/友情管理.html
 https://www.60score.com/tag/友情维护.html
 https://www.60score.com/tag/反倦怠.html
+https://www.60score.com/tag/反向推演.html
 https://www.60score.com/tag/反映论.html
 https://www.60score.com/tag/反脆弱组织.html
 https://www.60score.com/tag/反脆弱能力.html
@@ -1696,6 +1739,7 @@ https://www.60score.com/tag/团队引领.html
 https://www.60score.com/tag/团队文化.html
 https://www.60score.com/tag/团队管理.html
 https://www.60score.com/tag/团队组建.html
+https://www.60score.com/tag/困惑与决策依据.html
 https://www.60score.com/tag/国产AI.html
 https://www.60score.com/tag/国产AI技术优势.html
 https://www.60score.com/tag/国际化.html
@@ -1731,6 +1775,7 @@ https://www.60score.com/tag/坚持不懈.html
 https://www.60score.com/tag/坚持耐心.html
 https://www.60score.com/tag/垂直领域AI.html
 https://www.60score.com/tag/垂直领域应用.html
+https://www.60score.com/tag/垃圾分类.html
 https://www.60score.com/tag/城市发展.html
 https://www.60score.com/tag/城市微更新.html
 https://www.60score.com/tag/城市环保.html
@@ -1755,6 +1800,7 @@ https://www.60score.com/tag/复合型发展.html
 https://www.60score.com/tag/复杂系统.html
 https://www.60score.com/tag/外星文明.html
 https://www.60score.com/tag/外界评价.html
+https://www.60score.com/tag/外部客户.html
 https://www.60score.com/tag/多元化收入.html
 https://www.60score.com/tag/多元化经营.html
 https://www.60score.com/tag/多元宇宙.html
@@ -1879,7 +1925,9 @@ https://www.60score.com/tag/安全性.html
 https://www.60score.com/tag/安全感.html
 https://www.60score.com/tag/安全技术.html
 https://www.60score.com/tag/安全问题.html
+https://www.60score.com/tag/安全防范.html
 https://www.60score.com/tag/安全隐忧.html
+https://www.60score.com/tag/安全隐患.html
 https://www.60score.com/tag/安全驾驶.html
 https://www.60score.com/tag/安眠药.html
 https://www.60score.com/tag/安静偏好.html
@@ -1909,14 +1957,18 @@ https://www.60score.com/tag/客源分析.html
 https://www.60score.com/tag/客观主义.html
 https://www.60score.com/tag/家务分担.html
 https://www.60score.com/tag/家居健康.html
+https://www.60score.com/tag/家居安全.html
 https://www.60score.com/tag/家居环境.html
+https://www.60score.com/tag/家居生活.html
 https://www.60score.com/tag/家庭关系.html
 https://www.60score.com/tag/家庭协作.html
 https://www.60score.com/tag/家庭变革.html
 https://www.60score.com/tag/家庭和谐.html
+https://www.60score.com/tag/家庭安全.html
 https://www.60score.com/tag/家庭实践.html
 https://www.60score.com/tag/家庭应用.html
 https://www.60score.com/tag/家庭影响.html
+https://www.60score.com/tag/家庭急救.html
 https://www.60score.com/tag/家庭支持.html
 https://www.60score.com/tag/家庭教育.html
 https://www.60score.com/tag/家庭文化.html
@@ -1930,10 +1982,12 @@ https://www.60score.com/tag/家庭理财规划.html
 https://www.60score.com/tag/家庭管理.html
 https://www.60score.com/tag/家庭经营.html
 https://www.60score.com/tag/家庭结构.html
+https://www.60score.com/tag/家庭节能.html
 https://www.60score.com/tag/家庭财务.html
 https://www.60score.com/tag/家庭财务规划.html
 https://www.60score.com/tag/家庭责任.html
 https://www.60score.com/tag/家庭餐桌.html
+https://www.60score.com/tag/家庭饮食.html
 https://www.60score.com/tag/家族企业传承.html
 https://www.60score.com/tag/家族信托.html
 https://www.60score.com/tag/宿命论.html
@@ -2028,6 +2082,7 @@ https://www.60score.com/tag/应对方法.html
 https://www.60score.com/tag/应对策略.html
 https://www.60score.com/tag/应急响应.html
 https://www.60score.com/tag/应急基金.html
+https://www.60score.com/tag/应急处理.html
 https://www.60score.com/tag/应急方案.html
 https://www.60score.com/tag/应用前景.html
 https://www.60score.com/tag/应用权限.html
@@ -2107,6 +2162,7 @@ https://www.60score.com/tag/心理放松.html
 https://www.60score.com/tag/心理机制.html
 https://www.60score.com/tag/心理策略.html
 https://www.60score.com/tag/心理素质.html
+https://www.60score.com/tag/心理肌肉.html
 https://www.60score.com/tag/心理调节.html
 https://www.60score.com/tag/心理调适.html
 https://www.60score.com/tag/心理问题.html
@@ -2131,6 +2187,7 @@ https://www.60score.com/tag/思维训练.html
 https://www.60score.com/tag/思考快与慢.html
 https://www.60score.com/tag/思考能力.html
 https://www.60score.com/tag/思辨方法.html
+https://www.60score.com/tag/急救知识.html
 https://www.60score.com/tag/性侵犯.html
 https://www.60score.com/tag/性健康.html
 https://www.60score.com/tag/性别健康.html
@@ -2269,6 +2326,7 @@ https://www.60score.com/tag/成长发展.html
 https://www.60score.com/tag/成长型思维.html
 https://www.60score.com/tag/成长挑战.html
 https://www.60score.com/tag/成长智慧.html
+https://www.60score.com/tag/成长系统.html
 https://www.60score.com/tag/成长蜕变.html
 https://www.60score.com/tag/成长规律.html
 https://www.60score.com/tag/成长计划.html
@@ -2407,6 +2465,7 @@ https://www.60score.com/tag/收益维持.html
 https://www.60score.com/tag/收益规划.html
 https://www.60score.com/tag/收益识别.html
 https://www.60score.com/tag/收益风险.html
+https://www.60score.com/tag/收纳整理.html
 https://www.60score.com/tag/收费标准.html
 https://www.60score.com/tag/放大镜聚焦.html
 https://www.60score.com/tag/放松技巧.html
@@ -2633,6 +2692,7 @@ https://www.60score.com/tag/智能设备.html
 https://www.60score.com/tag/智能评估.html
 https://www.60score.com/tag/暗网.html
 https://www.60score.com/tag/暴雨橙色预警.html
+https://www.60score.com/tag/最小可行产品.html
 https://www.60score.com/tag/月亮坍缩.html
 https://www.60score.com/tag/月光特性.html
 https://www.60score.com/tag/月入一万.html
@@ -2745,6 +2805,7 @@ https://www.60score.com/tag/残羹剩饭.html
 https://www.60score.com/tag/毅力培养.html
 https://www.60score.com/tag/母系智慧.html
 https://www.60score.com/tag/母系社会.html
+https://www.60score.com/tag/每日推送.html
 https://www.60score.com/tag/毒性.html
 https://www.60score.com/tag/毒性供应商.html
 https://www.60score.com/tag/毒液.html
@@ -2807,6 +2868,7 @@ https://www.60score.com/tag/注意力管理.html
 https://www.60score.com/tag/泻药.html
 https://www.60score.com/tag/洋葱.html
 https://www.60score.com/tag/洗澡风险.html
+https://www.60score.com/tag/洞察维度.html
 https://www.60score.com/tag/流程优化.html
 https://www.60score.com/tag/流程标准化.html
 https://www.60score.com/tag/流速.html
@@ -2842,6 +2904,7 @@ https://www.60score.com/tag/混合专家系统.html
 https://www.60score.com/tag/混合方法论.html
 https://www.60score.com/tag/混合项目管理.html
 https://www.60score.com/tag/清新花香型.html
+https://www.60score.com/tag/清洁方法.html
 https://www.60score.com/tag/清洁能源.html
 https://www.60score.com/tag/清算仪式.html
 https://www.60score.com/tag/渐进性.html
@@ -2863,8 +2926,10 @@ https://www.60score.com/tag/灵感.html
 https://www.60score.com/tag/灵活工作.html
 https://www.60score.com/tag/灵活性.html
 https://www.60score.com/tag/灵活运用.html
+https://www.60score.com/tag/灵魂拷问.html
 https://www.60score.com/tag/灾难应对.html
 https://www.60score.com/tag/炉石传说.html
+https://www.60score.com/tag/点击式交互.html
 https://www.60score.com/tag/热量缺口.html
 https://www.60score.com/tag/热量调节.html
 https://www.60score.com/tag/热门专业.html
@@ -2944,6 +3009,7 @@ https://www.60score.com/tag/环保可持续.html
 https://www.60score.com/tag/环保意识.html
 https://www.60score.com/tag/环保政策.html
 https://www.60score.com/tag/环保消费.html
+https://www.60score.com/tag/环保生活.html
 https://www.60score.com/tag/环保行动.html
 https://www.60score.com/tag/环境与可持续性.html
 https://www.60score.com/tag/环境保护.html
@@ -3020,6 +3086,7 @@ https://www.60score.com/tag/生活开销.html
 https://www.60score.com/tag/生活态度.html
 https://www.60score.com/tag/生活意义.html
 https://www.60score.com/tag/生活成本.html
+https://www.60score.com/tag/生活技巧.html
 https://www.60score.com/tag/生活文化.html
 https://www.60score.com/tag/生活方式.html
 https://www.60score.com/tag/生活方式调整.html
@@ -3325,6 +3392,8 @@ https://www.60score.com/tag/空心结构.html
 https://www.60score.com/tag/空气动力学.html
 https://www.60score.com/tag/空气质量.html
 https://www.60score.com/tag/空腹.html
+https://www.60score.com/tag/空虚感.html
+https://www.60score.com/tag/空间利用.html
 https://www.60score.com/tag/竞争分析.html
 https://www.60score.com/tag/竞争环境.html
 https://www.60score.com/tag/竞争策略.html
@@ -3354,6 +3423,8 @@ https://www.60score.com/tag/精神原型.html
 https://www.60score.com/tag/精神追求.html
 https://www.60score.com/tag/精致生活.html
 https://www.60score.com/tag/系外行星.html
+https://www.60score.com/tag/系统优化.html
+https://www.60score.com/tag/系统分析.html
 https://www.60score.com/tag/系统升级.html
 https://www.60score.com/tag/系统反抗.html
 https://www.60score.com/tag/系统思维.html
@@ -3586,6 +3657,7 @@ https://www.60score.com/tag/自然节律.html
 https://www.60score.com/tag/自然语言处理.html
 https://www.60score.com/tag/自由意志.html
 https://www.60score.com/tag/自由边界.html
+https://www.60score.com/tag/自省.html
 https://www.60score.com/tag/自身优势.html
 https://www.60score.com/tag/自进化系统.html
 https://www.60score.com/tag/自首.html
@@ -3603,6 +3675,7 @@ https://www.60score.com/tag/艺术疗愈.html
 https://www.60score.com/tag/节后收心.html
 https://www.60score.com/tag/节奏.html
 https://www.60score.com/tag/节日文化.html
+https://www.60score.com/tag/节能减排.html
 https://www.60score.com/tag/苦味.html
 https://www.60score.com/tag/英式台球.html
 https://www.60score.com/tag/苹果.html
@@ -3661,6 +3734,8 @@ https://www.60score.com/tag/行动指南.html
 https://www.60score.com/tag/行动策略.html
 https://www.60score.com/tag/行动计划.html
 https://www.60score.com/tag/行车注意.html
+https://www.60score.com/tag/衣物保养.html
+https://www.60score.com/tag/衣物护理.html
 https://www.60score.com/tag/补肾.html
 https://www.60score.com/tag/补脑.html
 https://www.60score.com/tag/补铁食物.html
@@ -3720,6 +3795,7 @@ https://www.60score.com/tag/认证体系.html
 https://www.60score.com/tag/认识论.html
 https://www.60score.com/tag/训练优化策略.html
 https://www.60score.com/tag/训练成本优化.html
+https://www.60score.com/tag/训练流程.html
 https://www.60score.com/tag/议程设置.html
 https://www.60score.com/tag/记忆.html
 https://www.60score.com/tag/记忆力.html
@@ -3897,11 +3973,13 @@ https://www.60score.com/tag/远程工作.html
 https://www.60score.com/tag/违禁词规避.html
 https://www.60score.com/tag/违规内容.html
 https://www.60score.com/tag/迭代开发.html
+https://www.60score.com/tag/迭代思维.html
 https://www.60score.com/tag/追求卓越平衡.html
 https://www.60score.com/tag/追踪.html
 https://www.60score.com/tag/追逐理想.html
 https://www.60score.com/tag/退休生活.html
 https://www.60score.com/tag/退休规划.html
+https://www.60score.com/tag/退出机制.html
 https://www.60score.com/tag/适应策略.html
 https://www.60score.com/tag/适应能力.html
 https://www.60score.com/tag/适量运动.html
@@ -3946,6 +4024,7 @@ https://www.60score.com/tag/重新开始.html
 https://www.60score.com/tag/重构.html
 https://www.60score.com/tag/野外求生.html
 https://www.60score.com/tag/量刑.html
+https://www.60score.com/tag/量化指标.html
 https://www.60score.com/tag/量子优势.html
 https://www.60score.com/tag/量子力学.html
 https://www.60score.com/tag/量子叠加.html
@@ -4076,6 +4155,7 @@ https://www.60score.com/tag/风险分散.html
 https://www.60score.com/tag/风险应对.html
 https://www.60score.com/tag/风险意识.html
 https://www.60score.com/tag/风险监控.html
+https://www.60score.com/tag/风险管控.html
 https://www.60score.com/tag/风险管理.html
 https://www.60score.com/tag/风险规避.html
 https://www.60score.com/tag/风险认知.html
@@ -4098,6 +4178,7 @@ https://www.60score.com/tag/饮食健康.html
 https://www.60score.com/tag/饮食创新.html
 https://www.60score.com/tag/饮食多样性.html
 https://www.60score.com/tag/饮食建议.html
+https://www.60score.com/tag/饮食搭配.html
 https://www.60score.com/tag/饮食文化.html
 https://www.60score.com/tag/饮食消费.html
 https://www.60score.com/tag/饮食科学.html
