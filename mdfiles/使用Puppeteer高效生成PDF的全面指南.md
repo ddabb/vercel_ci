@@ -1,11 +1,13 @@
 ---
-title: 使用Puppeteer高效生成PDF的全面指南
-category: 人工智能
-tags: [Puppeteer, PDF生成, Node.js, 自动化, 网页截图]
-description: 深入了解如何使用Puppeteer在Node.js环境中生成PDF文件，包括基础流程、高级应用技巧及实用小窍门，助力高效自动化文档生成。
+title: Puppeteer PDF生成教程：Node.js自动化文档生成全面指南
+category: 技术教程
+tags: [Puppeteer, PDF生成, Node.js, 自动化, 网页截图, 无头浏览器, 文档自动化]
+description: 详细介绍如何使用Puppeteer在Node.js环境中高效生成PDF文件，包含安装配置、基础流程、高级技巧和实用案例，帮助开发者实现文档自动化生成。
 ---
-# 使用Puppeteer高效生成PDF的全面指南
-在当今数字化办公与信息传播的大环境下，PDF（Portable Document Format）凭借其出色的跨平台兼容性和始终如一的显示效果，当之无愧地成为了文档分享与打印领域的宠儿。而Puppeteer，这个由Google精心打造的Node.js库，犹如一把神奇的钥匙，为我们开启了通过代码轻松生成PDF的大门。接下来，就让我们一同深入探索如何借助Puppeteer高效生成PDF，并分享一些实用小技巧和示例代码。
+# Puppeteer PDF生成教程：Node.js自动化文档生成全面指南
+在当今数字化办公与信息传播的大环境下，PDF（Portable Document Format）凭借其出色的跨平台兼容性和始终如一的显示效果，当之无愧地成为了文档分享与打印领域的宠儿。而Puppeteer，这个由Google精心打造的Node.js库，犹如一把神奇的钥匙，为我们开启了通过代码轻松生成PDF的大门。
+
+本文将详细介绍如何使用Puppeteer在Node.js环境中高效生成PDF文件，包括安装配置、基础流程、高级技巧和实用案例，帮助开发者实现文档自动化生成。无论是生成报告、发票、合同还是其他类型的文档，Puppeteer都能为你提供强大的支持。
 
 ## 认识Puppeteer
 
