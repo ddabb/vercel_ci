@@ -278,7 +278,7 @@ try {
   execSync('node seocheck.js', { stdio: 'inherit' })
 
   console.log('\n🗺️ 进行Tags格式检查...')
-  execSync('node tagcheck.js', { stdio: 'inherit' })
+  execSync('node checkTags.js', { stdio: 'inherit' })
 
   console.log('\n🗺️ 正在生成图片json文件...')
   execSync('node generateImagesJson.js', { stdio: 'inherit' })
