@@ -90,7 +90,7 @@ async function convertMarkdownToHtml(markdownContent, stats) {
       description: metadata.description || '',
       updateTime: stats.mtime,
       goodsInfo: goodsInfo,
-      tags: metadata.tags?.filter(Boolean) || [],
+      tags: Array.isArray(metadata.tags) ? metadata.tags.map(tag => String(tag).trim()).filter(Boolean) : [],
       category: metadata.category || '未分类'
     }
   };

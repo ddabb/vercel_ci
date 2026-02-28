@@ -120,7 +120,7 @@ try {
         description: frontMatter.description || '',
         goodsName: frontMatter.goodsName,
         category: frontMatter.category || '未分类',
-        tags: frontMatter.tags || [],
+        tags: Array.isArray(frontMatter.tags) ? frontMatter.tags.map(tag => String(tag).trim()).filter(Boolean) : (typeof frontMatter.tags === 'string' ? frontMatter.tags.split(',').map(tag => tag.trim()).filter(Boolean) : []),
         birthtime: stats.birthtime,
         updateTime: stats.mtime,
         wordCount: wordCount
