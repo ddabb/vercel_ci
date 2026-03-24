@@ -15,7 +15,7 @@ let gameData = {
   accuracy: 0, // 正确率
   gameHistory: [], // 游戏历史
   // 游戏模式：'preset'（预设模式） 或 'custom'（自定义模式）
-  gameMode: 'custom',
+  gameMode: 'preset',
   // 自定义数字相关
   customNumbers: ['', '', '', ''], // 自定义输入的4个数字
   customNumbersValid: false, // 自定义数字是否有效（4个数字都已输入）
@@ -211,7 +211,6 @@ function checkSolvability() {
   
   // 更新解法列表
   if (isSolvable && solutions.length > 0) {
-    elements.solutionCount.textContent = `找到 ${solutions.length} 种解法:`;
     let solutionsHTML = '';
     solutions.forEach(solution => {
       solutionsHTML += `<div class="solution-item">
@@ -799,6 +798,23 @@ window.onload = function() {
   
   // 初始化游戏
   if (gameData.gameMode === 'preset') {
+    // 显示预设模式的控件
+    elements.presetControls.style.display = 'block';
+    elements.customControls.style.display = 'none';
+    elements.solvabilitySection.style.display = 'none';
+    elements.globalControlSection.style.display = 'block';
+    elements.statsSection.style.display = 'block';
+    elements.controlSection.classList.remove('hidden-control');
+    
+    // 生成新游戏
     generateNewGame();
+    
+    // 显示历史记录（如果有）
+    if (gameData.gameHistory.length > 0) {
+      elements.historySection.style.display = 'block';
+      updateHistoryDisplay();
+    } else {
+      elements.historySection.style.display = 'none';
+    }
   }
 };

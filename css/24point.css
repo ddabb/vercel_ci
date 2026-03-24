@@ -4,10 +4,123 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Segoe UI, Arial, Roboto, 'PingFang SC', 'miui', 'Hiragino Sans GB', 'Microsoft Yahei', sans-serif;
 }
 
-.container {
+.game-container {
   padding: 20px 15px;
   min-height: 100vh;
   box-sizing: border-box;
+  margin-top: 60px;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* 响应式布局 */
+@media (min-width: 768px) {
+  .header-section,
+  .mode-section,
+  .control-section,
+  .mode-control-section,
+  .global-control-section,
+  .input-section,
+  .result-section,
+  .hint-section,
+  .solution-section,
+  .stats-section,
+  .history-section,
+  .solvability-section {
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .numbers-display {
+    gap: 30px;
+  }
+  
+  .number-card {
+    width: 80px;
+    height: 80px;
+  }
+  
+  .number-text {
+    font-size: 24px;
+  }
+  
+  .mode-tabs {
+    gap: 20px;
+  }
+  
+  .custom-inputs {
+    gap: 20px;
+  }
+  
+  .custom-input {
+    width: 120px;
+    height: 80px;
+    font-size: 20px;
+  }
+  
+  .global-control-buttons {
+    gap: 20px;
+  }
+  
+  .stats-grid {
+    gap: 30px;
+  }
+  
+  .stat-number {
+    font-size: 24px;
+  }
+  
+  .stat-label {
+    font-size: 16px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .game-container {
+    padding: 30px 20px;
+  }
+  
+  .header-section,
+  .mode-section,
+  .control-section,
+  .mode-control-section,
+  .global-control-section,
+  .input-section,
+  .result-section,
+  .hint-section,
+  .solution-section,
+  .stats-section,
+  .history-section,
+  .solvability-section {
+    max-width: 900px;
+  }
+  
+  .numbers-display {
+    gap: 40px;
+  }
+  
+  .number-card {
+    width: 90px;
+    height: 90px;
+  }
+  
+  .number-text {
+    font-size: 28px;
+  }
+  
+  .game-title {
+    font-size: 32px;
+  }
+  
+  .game-desc {
+    font-size: 18px;
+  }
+  
+  .game-rules {
+    font-size: 16px;
+  }
 }
 
 /* 头部说明区域 */
