@@ -2,5 +2,12 @@
   "github": {
     "enabled": true,
     "branch": "main"
-  }
+  },
+  "redirects": [
+    {
+      "source": "/",
+      "destination": "/html/index.html",
+      "permanent": true
+    }
+  ]
 }
