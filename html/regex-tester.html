@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta name="baidu-site-verification" content="codeva-dM9hHRE36M" />
+  <meta charset="UTF-8">
+  <meta http-equiv="Content-Language" content="zh-CN">
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9093386396178901"
+    crossorigin="anonymous"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>正则表达式测试工具 - 自助工具站</title>
+  <meta name="description" content="正则表达式测试工具，支持实时匹配、高亮显示、常用正则表达式模板，帮助你快速测试和调试正则表达式">
+  <meta name="keywords" content="正则表达式测试, 正则调试, 在线正则工具, 常用正则表达式">
+  <link rel="icon" href="../logo.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/app.css">
+  <link rel="stylesheet" href="../css/footer.css">
+  <script>
+    var _hmt = _hmt || [];
+    (function () {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?9375ffd48c244c211aeaa2bd8c047a43";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+  <!-- 引入 Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Noto+Sans+SC:wght@300;400;500;700&family=Roboto:wght@300;400;500;700&display=swap"
+    rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="../css/fonts.css">
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/widget-qrcode@1.0.4/dist/widget-qrcode.min.js"></script>
+  <script src="../js/clarity.js"></script>
+  <link rel="stylesheet" href="../css/regex-tester.css">
+</head>
+
+<body>
+  <header>
+    <div>
+      <nav class="navbar navbar-light bg-light">
+        <div class="container-fluid">
+          <ul class="navbar-nav d-flex flex-row scrolling-menu">
+            <li class="nav-item">
+              <a class="nav-link d-flex align-items-center" href="../html/index.html">
+                <img src="../logo.svg" alt="Logo" style="max-width: 24px;max-height: 24px; margin-right:1px;"
+                  loading="lazy" width="24" height="24">
+                自助工具站
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../html/photos.html">
+                📷相册
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../html/dianzhangbiji.html">
+                💡想法
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../html/gongzhonghao.html">
+                📚小说
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../html/tools.html">
+                🔧工具
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../html/games.html">
+                🎮游戏
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../sghtml/dynasties.html">
+                📜诗词
+              </a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+  </header>
+  <main class="container-fluid">
+    <div class="row mt-5">
+      <div class="col-lg-8 col-md-12 mx-auto">
+        <div class="card mb-4">
+          <div class="card-body">
+            <h1 class="text-center mt-4 mb-4">正则表达式测试工具</h1>
+
+            <!-- 正则表达式输入卡片 -->
+            <div class="card input-card mb-4">
+              <div class="card-header">
+                <h5 class="card-title">正则表达式</h5>
+                <div class="quick-buttons">
+                  <button class="btn btn-primary common-btn" onclick="showCommonRegexModal()">常用正则</button>
+                  <button class="btn btn-secondary" onclick="showOptionsModal()">匹配选项</button>
+                  <button class="btn btn-info" onclick="showSyntaxModal()">语法参考</button>
+                </div>
+              </div>
+              <div class="card-body">
+                <div class="mb-3">
+                  <textarea id="regexPattern" class="form-control regex-textarea" placeholder="输入正则表达式..."
+                    rows="3"></textarea>
+                </div>
+                <div class="options-row">
+                  <div class="flags-grid">
+                    <div class="form-check form-check-inline flag-item">
+                      <input class="form-check-input" type="checkbox" id="flag-i" value="i" checked>
+                      <label class="form-check-label flag-label" for="flag-i">i (忽略大小写)</label>
+                    </div>
+                    <div class="form-check form-check-inline flag-item">
+                      <input class="form-check-input" type="checkbox" id="flag-g" value="g" checked>
+                      <label class="form-check-label flag-label" for="flag-g">g (全局匹配)</label>
+                    </div>
+                    <div class="form-check form-check-inline flag-item">
+                      <input class="form-check-input" type="checkbox" id="flag-m" value="m">
+                      <label class="form-check-label flag-label" for="flag-m">m (多行模式)</label>
+                    </div>
+                    <div class="form-check form-check-inline flag-item">
+                      <input class="form-check-input" type="checkbox" id="flag-s" value="s">
+                      <label class="form-check-label flag-label" for="flag-s">s (点号通配)</label>
+                    </div>
+                    <div class="form-check form-check-inline flag-item">
+                      <input class="form-check-input" type="checkbox" id="flag-u" value="u">
+                      <label class="form-check-label flag-label" for="flag-u">u (Unicode)</label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- 测试文本输入卡片 -->
+            <div class="card text-card mb-4">
+              <div class="card-header">
+                <h5 class="card-title">测试文本</h5>
+                <span class="char-count" id="charCount">字符数: 0</span>
+              </div>
+              <div class="card-body">
+                <textarea id="testText" class="form-control test-textarea" placeholder="输入要测试的文本..."
+                  rows="6"></textarea>
+              </div>
+            </div>
+
+            <!-- 操作按钮 -->
+            <div class="action-bar mb-4">
+              <button class="btn action-btn primary" onclick="testRegex()">
+                <span class="btn-icon">🔍</span> 测试
+              </button>
+              <button class="btn action-btn secondary" onclick="clearResults()">
+                <span class="btn-icon">🗑️</span> 清空
+              </button>
+            </div>
+
+            <!-- 错误提示 -->
+            <div id="errorMessage" class="error-toast mb-4 d-none">
+              <span class="error-icon">⚠️</span>
+              <div class="error-content"></div>
+              <div class="error-close" onclick="clearError()">×</div>
+            </div>
+
+            <!-- 结果区域 -->
+            <div id="resultsSection" class="results-section mb-4 d-none">
+              <!-- 结果概览 -->
+              <div class="card result-overview-card mb-4">
+                <div class="result-status">
+                  <div class="status-icon">✓</div>
+                  <div class="status-info">
+                    <span class="status-title" id="matchCount">0 个匹配</span>
+                    <span class="status-subtitle">正则表达式匹配结果</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- 高亮预览 -->
+              <div class="card highlight-card mb-4">
+                <div class="card-header">
+                  <h5 class="card-title">匹配预览</h5>
+                </div>
+                <div class="card-body">
+                  <div id="highlightPreview" class="highlight-preview"></div>
+                </div>
+              </div>
+
+              <!-- 匹配列表 -->
+              <div class="card matches-card mb-4">
+                <div class="card-header">
+                  <h5 class="card-title">匹配详情</h5>
+                </div>
+                <div class="card-body">
+                  <div id="matchList" class="match-list"></div>
+                </div>
+              </div>
+
+              <!-- 信息卡片 -->
+              <div class="card info-card mb-4">
+                <div class="card-body">
+                  <div class="info-row">
+                    <span class="info-label">正则表达式:</span>
+                    <span class="info-value regex-display" id="regexDisplay"></span>
+                  </div>
+                  <div class="info-row">
+                    <span class="info-label">标志位:</span>
+                    <span class="info-value" id="flagsDisplay"></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- 帮助卡片 -->
+            <div class="card help-card">
+              <div class="help-toggle" onclick="toggleHelp()">
+                <span class="help-icon">❓</span>
+                <span class="help-title">正则表达式帮助</span>
+                <span id="helpArrow" class="help-arrow">▶</span>
+              </div>
+              <div id="helpContent" class="help-content d-none">
+                <div class="help-section">
+                  <span class="help-section-title">常用元字符</span>
+                  <div class="help-item">
+                    <span class="help-code">.</span>
+                    <span class="help-desc">匹配任意字符</span>
+                  </div>
+                  <div class="help-item">
+                    <span class="help-code">^</span>
+                    <span class="help-desc">匹配开始位置</span>
+                  </div>
+                  <div class="help-item">
+                    <span class="help-code">$</span>
+                    <span class="help-desc">匹配结束位置</span>
+                  </div>
+                  <div class="help-item">
+                    <span class="help-code">\d</span>
+                    <span class="help-desc">匹配数字</span>
+                  </div>
+                  <div class="help-item">
+                    <span class="help-code">\w</span>
+                    <span class="help-desc">匹配字母、数字、下划线</span>
+                  </div>
+                  <div class="help-item">
+                    <span class="help-code">\s</span>
+                    <span class="help-desc">匹配空白字符</span>
+                  </div>
+                </div>
+                <div class="help-section">
+                  <span class="help-section-title">量词</span>
+                  <div class="help-item">
+                    <span class="help-code">*</span>
+                    <span class="help-desc">0次或多次</span>
+                  </div>
+                  <div class="help-item">
+                    <span class="help-code">+</span>
+                    <span class="help-desc">1次或多次</span>
+                  </div>
+                  <div class="help-item">
+                    <span class="help-code">?</span>
+                    <span class="help-desc">0次或1次</span>
+                  </div>
+                  <div class="help-item">
+                    <span class="help-code">{n}</span>
+                    <span class="help-desc">恰好n次</span>
+                  </div>
+                  <div class="help-item">
+                    <span class="help-code">{n,}</span>
+                    <span class="help-desc">至少n次</span>
+                  </div>
+                  <div class="help-item">
+                    <span class="help-code">{n,m}</span>
+                    <span class="help-desc">n到m次</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 常用正则表达式弹窗 -->
+          <div id="commonRegexModal" class="modal-overlay d-none">
+            <div class="modal-container">
+              <div class="modal-header">
+                <h5 class="modal-title">常用正则表达式</h5>
+                <div class="modal-close" onclick="closeCommonRegexModal()">×</div>
+              </div>
+              <div class="modal-body">
+                <div class="regex-list" id="commonRegexList">
+                  <!-- 动态生成 -->
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 匹配选项弹窗 -->
+          <div id="optionsModal" class="modal-overlay d-none">
+            <div class="modal-container">
+              <div class="modal-header">
+                <h5 class="modal-title">匹配选项</h5>
+                <div class="modal-close" onclick="closeOptionsModal()">×</div>
+              </div>
+              <div class="modal-body">
+                <div class="flags-list">
+                  <div class="form-check flag-item">
+                    <input class="form-check-input" type="checkbox" id="modal-flag-i" value="i">
+                    <label class="form-check-label flag-label" for="modal-flag-i">i (忽略大小写)</label>
+                  </div>
+                  <div class="form-check flag-item">
+                    <input class="form-check-input" type="checkbox" id="modal-flag-g" value="g">
+                    <label class="form-check-label flag-label" for="modal-flag-g">g (全局匹配)</label>
+                  </div>
+                  <div class="form-check flag-item">
+                    <input class="form-check-input" type="checkbox" id="modal-flag-m" value="m">
+                    <label class="form-check-label flag-label" for="modal-flag-m">m (多行模式)</label>
+                  </div>
+                  <div class="form-check flag-item">
+                    <input class="form-check-input" type="checkbox" id="modal-flag-s" value="s">
+                    <label class="form-check-label flag-label" for="modal-flag-s">s (点号通配)</label>
+                  </div>
+                  <div class="form-check flag-item">
+                    <input class="form-check-input" type="checkbox" id="modal-flag-u" value="u">
+                    <label class="form-check-label flag-label" for="modal-flag-u">u (Unicode)</label>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 语法参考弹窗 -->
+          <div id="syntaxModal" class="modal-overlay d-none">
+            <div class="modal-container">
+              <div class="modal-header">
+                <h5 class="modal-title">正则表达式语法参考</h5>
+                <div class="modal-close" onclick="closeSyntaxModal()">×</div>
+              </div>
+              <div class="modal-body">
+                <h6>字符类</h6>
+                <ul>
+                  <li><code>.</code> - 匹配任意字符（除换行符外）</li>
+                  <li><code>\d</code> - 匹配数字</li>
+                  <li><code>\D</code> - 匹配非数字</li>
+                  <li><code>\w</code> - 匹配字母、数字、下划线</li>
+                  <li><code>\W</code> - 匹配非字母、数字、下划线</li>
+                  <li><code>\s</code> - 匹配空白字符</li>
+                  <li><code>\S</code> - 匹配非空白字符</li>
+                </ul>
+                <h6>量词</h6>
+                <ul>
+                  <li><code>*</code> - 0次或多次</li>
+                  <li><code>+</code> - 1次或多次</li>
+                  <li><code>?</code> - 0次或1次</li>
+                  <li><code>{n}</code> - 恰好n次</li>
+                  <li><code>{n,}</code> - 至少n次</li>
+                  <li><code>{n,m}</code> - n到m次</li>
+                </ul>
+                <h6>边界</h6>
+                <ul>
+                  <li><code>^</code> - 匹配开始位置</li>
+                  <li><code>$</code> - 匹配结束位置</li>
+                  <li><code>\b</code> - 单词边界</li>
+                  <li><code>\B</code> - 非单词边界</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+    </div>
+  </main>
+  <div class="sticky-footer-container">
+    <footer class="sticky-footer text-center text-lg-start bg-light text-muted">
+      <div class="container text-center py-1">
+        <section>
+
+          <p>
+            <span id="busuanzi_container_page_pv">本页面访问量<span id="busuanzi_value_page_pv"></span>次</span>
+            <a href="../mdhtml/关于我们.html">关于我们</a> |
+            <a href="contactus.html">联系我们</a>
+          </p>
+        </section>
+      </div>
+    </footer>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" crossorigin="anonymous"></script>
+  <script src="../js/regex-tester.js"></script>
+</body>
+
+</html>
