@@ -416,6 +416,586 @@ main {
 }
 
 
+/* Hero区域整体样式 */
+.hero-card {
+  border: none;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.hero-header {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
+  color: white !important;
+  text-align: center;
+  padding: 2rem 1.5rem;
+  border-bottom: none;
+}
+
+.hero-title {
+  font-size: 1.8em;
+  margin: 0 0 0.5rem 0;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.sparkle {
+  display: inline-block;
+  animation: sparkle 2s infinite;
+}
+
+.sparkle:nth-child(2) {
+  animation-delay: 1s;
+}
+
+@keyframes sparkle {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.5; transform: scale(1.2); }
+}
+
+.hero-subtitle {
+  font-size: 1rem;
+  opacity: 0.9;
+  margin: 0;
+  font-weight: 300;
+}
+
+.hero-body {
+  padding: 0;
+}
+
+/* 小程序核心引导区 */
+.mini-program-hero {
+  background: linear-gradient(180deg, #f8fff9 0%, #ffffff 50%, #f0fff4 100%);
+  padding: 2rem;
+  text-align: center;
+}
+
+.hero-badge {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+  margin-bottom: 1.5rem;
+}
+
+.hot-tag {
+  background: linear-gradient(135deg, #ff6b6b 0%, #ee5a5a 100%);
+  color: white;
+  padding: 6px 16px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  animation: pulse-bg 2s infinite;
+  box-shadow: 0 4px 15px rgba(255, 107, 107, 0.3);
+}
+
+@keyframes pulse-bg {
+  0%, 100% { box-shadow: 0 4px 15px rgba(255, 107, 107, 0.3); }
+  50% { box-shadow: 0 4px 25px rgba(255, 107, 107, 0.5); }
+}
+
+.user-count {
+  background: linear-gradient(135deg, #ffd93d 0%, #ffb800 100%);
+  color: #333;
+  padding: 6px 16px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.mini-program-title {
+  font-size: 1.6rem;
+  color: #07c160;
+  margin-bottom: 0.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.wechat-icon {
+  font-size: 1.8rem;
+  animation: shake 3s infinite;
+}
+
+@keyframes shake {
+  0%, 90%, 100% { transform: rotate(0deg); }
+  92% { transform: rotate(-10deg); }
+  94% { transform: rotate(10deg); }
+  96% { transform: rotate(-10deg); }
+  98% { transform: rotate(10deg); }
+}
+
+.mini-program-desc {
+  font-size: 1.1rem;
+  color: #555;
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+}
+
+.mini-program-desc strong {
+  color: #07c160;
+  font-weight: 600;
+}
+
+/* 二维码核心展示区 */
+.qr-hero-section {
+  margin-bottom: 2rem;
+}
+
+.qr-wrapper {
+  position: relative;
+  display: inline-block;
+  margin-bottom: 1rem;
+}
+
+.qr-glow {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 220px;
+  height: 220px;
+  background: radial-gradient(circle, rgba(7, 193, 96, 0.2) 0%, transparent 70%);
+  border-radius: 50%;
+  animation: glow-pulse 2s infinite;
+}
+
+@keyframes glow-pulse {
+  0%, 100% { transform: translate(-50%, -50%) scale(1); opacity: 0.5; }
+  50% { transform: translate(-50%, -50%) scale(1.1); opacity: 0.8; }
+}
+
+.qr-hero-image {
+  position: relative;
+  z-index: 2;
+  max-width: 200px;
+  height: auto;
+  border-radius: 16px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+  border: 5px solid white;
+  transition: all 0.3s ease;
+}
+
+.qr-hero-image:hover {
+  transform: scale(1.08);
+  box-shadow: 0 15px 50px rgba(0, 0, 0, 0.25);
+}
+
+/* 脉冲动画 */
+.scan-pulse {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+}
+
+.pulse-ring {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 200px;
+  height: 200px;
+  border: 3px solid #07c160;
+  border-radius: 50%;
+  opacity: 0;
+  animation: ripple 2s infinite;
+}
+
+.pulse-ring:nth-child(2) {
+  animation-delay: 0.5s;
+}
+
+.pulse-ring:nth-child(3) {
+  animation-delay: 1s;
+}
+
+@keyframes ripple {
+  0% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 0.6;
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(1.5);
+    opacity: 0;
+  }
+}
+
+/* 扫码CTA */
+.scan-cta {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.scan-arrow-animated {
+  font-size: 2rem;
+  animation: arrow-bounce 1s infinite;
+}
+
+@keyframes arrow-bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(10px); }
+}
+
+.scan-button {
+  background: linear-gradient(135deg, #07c160 0%, #05a350 100%);
+  color: white;
+  padding: 12px 28px;
+  border-radius: 30px;
+  font-size: 1rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  box-shadow: 0 6px 20px rgba(7, 193, 96, 0.4);
+  animation: button-glow 2s infinite;
+}
+
+@keyframes button-glow {
+  0%, 100% { box-shadow: 0 6px 20px rgba(7, 193, 96, 0.4); }
+  50% { box-shadow: 0 6px 30px rgba(7, 193, 96, 0.6); }
+}
+
+.scan-icon {
+  font-size: 1.2rem;
+}
+
+/* 核心优势 */
+.advantages-row {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-bottom: 1.5rem;
+}
+
+.advantage-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: white;
+  padding: 12px 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  border: 1px solid #e8f5e9;
+  transition: all 0.3s ease;
+}
+
+.advantage-item:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+}
+
+.advantage-icon {
+  font-size: 1.8rem;
+}
+
+.advantage-text {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.advantage-text strong {
+  color: #333;
+  font-size: 0.95rem;
+}
+
+.advantage-text span {
+  color: #888;
+  font-size: 0.8rem;
+}
+
+/* 功能预览 */
+.features-preview {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+}
+
+.preview-label {
+  color: #666;
+  font-size: 0.9rem;
+  margin-right: 5px;
+}
+
+.feature-tag {
+  background: #e8f5e9;
+  color: #07c160;
+  padding: 4px 12px;
+  border-radius: 15px;
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+.feature-tag.more {
+  background: #07c160;
+  color: white;
+}
+
+/* 分割线 */
+.divider {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  padding: 1.5rem 2rem;
+  color: #999;
+}
+
+.divider::before,
+.divider::after {
+  content: '';
+  flex: 1;
+  border-bottom: 1px dashed #ddd;
+}
+
+.divider span {
+  padding: 0 15px;
+  font-size: 0.9rem;
+}
+
+/* 网站简介 */
+.site-intro {
+  padding: 0 2rem 2rem;
+  text-align: center;
+  color: #666;
+}
+
+.site-intro p {
+  margin-bottom: 0.5rem;
+  line-height: 1.6;
+}
+
+/* 响应式调整 */
+@media (max-width: 576px) {
+  .hero-title {
+    font-size: 1.4rem;
+  }
+  
+  .mini-program-hero {
+    padding: 1.5rem 1rem;
+  }
+  
+  .mini-program-title {
+    font-size: 1.3rem;
+  }
+  
+  .qr-hero-image {
+    max-width: 160px;
+  }
+  
+  .advantages-row {
+    gap: 10px;
+  }
+  
+  .advantage-item {
+    padding: 10px 15px;
+  }
+  
+  .advantage-text strong {
+    font-size: 0.85rem;
+  }
+  
+  .divider {
+    padding: 1rem;
+  }
+  
+  .site-intro {
+    padding: 0 1rem 1.5rem;
+  }
+}
+
+/* 随身工具宝小程序卡片样式（保留用于其他页面） */
+.mini-program-card {
+  border: 2px solid #07c160;
+  box-shadow: 0 4px 20px rgba(7, 193, 96, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.mini-program-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 30px rgba(7, 193, 96, 0.25);
+}
+
+.mini-program-header {
+  background: linear-gradient(135deg, #07c160 0%, #05a350 100%) !important;
+  color: white !important;
+  border-bottom: none;
+}
+
+.mini-program-header h1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.pulse-icon {
+  display: inline-block;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+}
+
+.mini-program-body {
+  background: linear-gradient(180deg, #f0fff4 0%, #ffffff 100%);
+  padding: 2rem;
+}
+
+/* 核心卖点标签 */
+.mini-program-badges {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-bottom: 1.5rem;
+}
+
+.badge-item {
+  background: linear-gradient(135deg, #fff5e6 0%, #ffe4cc 100%);
+  color: #ff6b35;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  border: 1px solid #ffd4b3;
+  box-shadow: 0 2px 8px rgba(255, 107, 53, 0.15);
+}
+
+/* 二维码区域 */
+.qr-section {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+}
+
+.qr-container {
+  position: relative;
+  display: inline-block;
+}
+
+.qr-image {
+  max-width: 200px;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+  border: 4px solid white;
+  transition: transform 0.3s ease;
+}
+
+.qr-image:hover {
+  transform: scale(1.05);
+}
+
+.scan-hint {
+  position: absolute;
+  bottom: -40px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  white-space: nowrap;
+}
+
+.scan-arrow {
+  font-size: 1.5rem;
+  animation: bounce 1.5s infinite;
+  margin-bottom: -5px;
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+.scan-text {
+  background: linear-gradient(135deg, #07c160 0%, #05a350 100%);
+  color: white;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  box-shadow: 0 4px 12px rgba(7, 193, 96, 0.3);
+}
+
+/* 功能列表网格 */
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  margin-bottom: 1.5rem;
+  padding: 0 1rem;
+}
+
+.feature-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 12px 8px;
+  background: white;
+  border-radius: 10px;
+  border: 1px solid #e8f5e9;
+  transition: all 0.3s ease;
+}
+
+.feature-item:hover {
+  background: #e8f5e9;
+  transform: translateY(-3px);
+  box-shadow: 0 4px 12px rgba(7, 193, 96, 0.15);
+}
+
+.feature-icon {
+  font-size: 1.5rem;
+  margin-bottom: 6px;
+}
+
+.feature-text {
+  font-size: 0.8rem;
+  color: #333;
+  font-weight: 500;
+}
+
+/* 行动号召区域 */
+.cta-section {
+  text-align: center;
+  padding-top: 1rem;
+  border-top: 1px dashed #c8e6c9;
+}
+
+.cta-text {
+  font-size: 1.1rem;
+  color: #07c160;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.cta-subtext {
+  font-size: 0.9rem;
+  color: #888;
+  margin: 0;
+}
+
 /* 在 style.css 文件的末尾添加以下样式 */
 .game-container {
   margin: 0 auto 10px;

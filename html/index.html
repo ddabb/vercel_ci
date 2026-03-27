@@ -85,17 +85,99 @@
   </header>
 
   <main class="container-fluid">
-    <!-- 欢迎语区域 -->
+    <!-- 欢迎语区域 + 小程序核心引导 -->
     <div class="row mt-5">
       <div class="col-lg-8 col-md-12 mx-auto">
-        <div class="card mb-4">
-          <div class="card-header bg-primary text-white">
-            <h1 style="font-size: 1.5em; margin: 0.5em 0;">欢迎来到自助工具站</h1>
+        <div class="card mb-4 hero-card">
+          <div class="card-header hero-header">
+            <h1 class="hero-title">
+              <span class="sparkle">✨</span> 欢迎来到自助工具站 <span class="sparkle">✨</span>
+            </h1>
+            <p class="hero-subtitle">海量实用工具，一键触手可及</p>
           </div>
-          <div class="card-body">
-            <p>自助工具站是一个集合了各种实用在线工具的平台，旨在为您提供便捷、高效的工具服务。</p>
-            <p>我们提供二维码生成、思维导图、日期计算、BMI计算器、退休计算器等多种实用工具，满足您的日常需求。</p>
-            <p>此外，我们还提供AI聊天助手、小游戏、诗词欣赏等功能，让您在使用工具的同时也能享受休闲娱乐。</p>
+          <div class="card-body hero-body">
+            <!-- 小程序核心引导区 -->
+            <div class="mini-program-hero">
+              <div class="hero-badge">
+                <span class="hot-tag">🔥 强烈推荐</span>
+                <span class="user-count">👥 10万+用户的选择</span>
+              </div>
+              
+              <h2 class="mini-program-title">
+                <span class="wechat-icon">💬</span> 随身工具宝小程序
+              </h2>
+              
+              <p class="mini-program-desc">
+                比网页版更流畅、更快捷！<strong>无需下载安装</strong>，微信扫码<strong>秒开即用</strong>
+              </p>
+              
+              <!-- 二维码核心展示区 -->
+              <div class="qr-hero-section">
+                <div class="qr-wrapper">
+                  <div class="qr-glow"></div>
+                  <img src="../mini.png" alt="随身工具宝小程序" class="qr-hero-image" loading="lazy">
+                  <div class="scan-pulse">
+                    <span class="pulse-ring"></span>
+                    <span class="pulse-ring"></span>
+                    <span class="pulse-ring"></span>
+                  </div>
+                </div>
+                <div class="scan-cta">
+                  <div class="scan-arrow-animated">👇</div>
+                  <div class="scan-button">
+                    <span class="scan-icon">📷</span>
+                    <span>微信扫一扫，立即体验</span>
+                  </div>
+                </div>
+              </div>
+              
+              <!-- 核心优势 -->
+              <div class="advantages-row">
+                <div class="advantage-item">
+                  <div class="advantage-icon">⚡</div>
+                  <div class="advantage-text">
+                    <strong>0秒启动</strong>
+                    <span>无需等待</span>
+                  </div>
+                </div>
+                <div class="advantage-item">
+                  <div class="advantage-icon">📱</div>
+                  <div class="advantage-text">
+                    <strong>不占内存</strong>
+                    <span>即用即走</span>
+                  </div>
+                </div>
+                <div class="advantage-item">
+                  <div class="advantage-icon">🔒</div>
+                  <div class="advantage-text">
+                    <strong>安全可靠</strong>
+                    <span>微信生态</span>
+                  </div>
+                </div>
+              </div>
+              
+              <!-- 功能预览 -->
+              <div class="features-preview">
+                <span class="preview-label">包含工具：</span>
+                <span class="feature-tag">房贷计算器</span>
+                <span class="feature-tag">人生A4纸</span>
+                <span class="feature-tag">二维码生成</span>
+                <span class="feature-tag">健康计算</span>
+                <span class="feature-tag">万年历</span>
+                <span class="feature-tag more">+更多</span>
+              </div>
+            </div>
+            
+            <!-- 分割线 -->
+            <div class="divider">
+              <span>或者继续浏览网页版</span>
+            </div>
+            
+            <!-- 网站简介 -->
+            <div class="site-intro">
+              <p>自助工具站提供丰富的在线小工具，包括思维导图、日期计算、BMI计算器、退休计算器等多种实用工具</p>
+              <p>还有AI聊天助手、小游戏、诗词欣赏等功能，满足您的日常需求</p>
+            </div>
           </div>
         </div>
       </div>
@@ -185,17 +267,64 @@
     <!-- 随身工具宝小程序 -->
     <div class="row mt-5">
       <div class="col-lg-8 col-md-12 mx-auto">
-        <div class="card mb-4">
-          <div class="card-header">
-            <h1 style="font-size: 1.5em; margin: 0.5em 0;">随身工具宝小程序</h1>
+        <div class="card mb-4 mini-program-card">
+          <div class="card-header mini-program-header">
+            <h1 style="font-size: 1.5em; margin: 0.5em 0;">
+              <span class="pulse-icon">📱</span> 随身工具宝小程序
+            </h1>
           </div>
-          <div class="card-body">
-            <div class="text-center mb-4">
-              <img src="../mini.png" alt="随身工具宝" style="max-width: 200px; height: auto;" loading="lazy">
+          <div class="card-body mini-program-body">
+            <!-- 核心卖点标签 -->
+            <div class="mini-program-badges">
+              <span class="badge-item">🔥 即用即走</span>
+              <span class="badge-item">⚡ 无需安装</span>
+              <span class="badge-item">🛡️ 不留痕迹</span>
             </div>
-            <p class="text-center">包含房贷计算器、人生A4纸、二维码生成、健康计算、万年历等实用工具</p>
-            <p class="text-center mt-3 text-success">📱 即用即走，无需安装，不留痕迹</p>
-            <p class="text-center">随时随地，打开微信扫一扫即可使用</p>
+            
+            <!-- 二维码区域 -->
+            <div class="qr-section">
+              <div class="qr-container">
+                <img src="../mini.png" alt="随身工具宝" class="qr-image" loading="lazy">
+                <div class="scan-hint">
+                  <span class="scan-arrow">👆</span>
+                  <span class="scan-text">微信扫码立即使用</span>
+                </div>
+              </div>
+            </div>
+            
+            <!-- 功能列表 -->
+            <div class="features-grid">
+              <div class="feature-item">
+                <span class="feature-icon">🏠</span>
+                <span class="feature-text">房贷计算器</span>
+              </div>
+              <div class="feature-item">
+                <span class="feature-icon">📅</span>
+                <span class="feature-text">人生A4纸</span>
+              </div>
+              <div class="feature-item">
+                <span class="feature-icon">🔗</span>
+                <span class="feature-text">二维码生成</span>
+              </div>
+              <div class="feature-item">
+                <span class="feature-icon">❤️</span>
+                <span class="feature-text">健康计算</span>
+              </div>
+              <div class="feature-item">
+                <span class="feature-icon">📆</span>
+                <span class="feature-text">万年历</span>
+              </div>
+              <div class="feature-item">
+                <span class="feature-icon">🎯</span>
+                <span class="feature-text">更多工具</span>
+              </div>
+            </div>
+            
+            <!-- 行动号召 -->
+            <div class="cta-section">
+              <p class="cta-text">💡 随时随地，打开微信扫一扫</p>
+              <p class="cta-subtext">10万+用户正在使用</p>
+            </div>
           </div>
         </div>
       </div>
