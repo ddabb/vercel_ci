@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
 
 <head>
     <meta charset="UTF-8">
@@ -9,7 +9,7 @@
     <meta name="description" content="无人自助站的【人际关系】分类列表页面，汇集了关于【人际关系】分类的文章和资讯，方便您快速找到感兴趣的内容。">
     <meta name="keywords" content="无人自助站,人际关系">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>分类列表</title>
+    <title>人际关系分类 - 无人自助站</title>
     <link rel="icon" href="../logo.svg" type="image/svg+xml">
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/footer.css">
@@ -27,6 +27,62 @@
     <!-- 引入Masonry -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/masonry/4.2.2/masonry.pkgd.min.js"></script>
 
+    <style>
+        .category-header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 2rem;
+            border-radius: 8px;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        .category-title {
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+        .article-card {
+            transition: all 0.3s ease;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        .article-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+        }
+        .article-title {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            transition: color 0.3s ease;
+        }
+        .article-title:hover {
+            color: #0d6efd;
+        }
+        .article-meta {
+            font-size: 0.85rem;
+            color: #6c757d;
+        }
+        .tag-link {
+            background-color: #e9ecef;
+            color: #495057;
+            transition: all 0.2s ease;
+        }
+        .tag-link:hover {
+            background-color: #dee2e6;
+            color: #212529;
+        }
+        .back-button {
+            transition: all 0.3s ease;
+        }
+        .back-button:hover {
+            transform: translateX(-3px);
+        }
+        .article-count {
+            font-size: 0.9rem;
+            opacity: 0.9;
+        }
+    </style>
 </head>
 
 <body>
@@ -80,7 +136,7 @@
         <main class="container-fluid mt-4">
             <div class="col-lg-8 col-md-12 mx-auto">
                 <!-- 面包屑导航 -->
-                <nav aria-label="breadcrumb">
+                <nav aria-label="breadcrumb" class="mb-4">
                     <ol class="breadcrumb">
                         <li class="breadcrumb-item"><a href="/html/index.html">首页</a></li>
                         <li class="breadcrumb-item"><a href="分类列表.html">分类列表</a></li>
@@ -89,61 +145,71 @@
                         </li>
                     </ol>
                 </nav>
-                <h1 style="font-size: 1.5em; margin: 0.5em 0;">
-                    人际关系分类的文章和资讯
-                </h1>
+                
+                <!-- 分类头部 -->
+                <div class="category-header">
+                    <h1 class="category-title">
+                        <i class="bi bi-folder2 me-2"></i>
+                        人际关系
+                    </h1>
+                    <p class="article-count">
+                        共 9 篇文章
+                    </p>
+                </div>
+                
                 <!-- 分类内容卡片 使用 Masonry 布局 -->
                 <div class="masonry-grid">
                     
                         <div class="masonry-grid-item">
-                            <div class="card shadow-sm">
+                            <div class="card article-card shadow-sm">
                                 <div class="card-body">
-                                    <h5 class="card-title">
-                                        <i class="bi bi-file-earmark-text"></i>
+                                    <h5 class="card-title article-title">
+                                        <i class="bi bi-file-earmark-text me-2 text-primary"></i>
                                         <a href="../mdhtml/2026年的人际关系危机：为什么亲密关系越来越难，如何建立深度连接.html"
-                                            class="text-decoration-none">
+                                            class="text-decoration-none text-dark">
                                             你的朋友都是假的：如何在社交媒体时代建立真实关系
                                         </a>
                                     </h5>
                                     
-                                        <p class="card-text">
+                                        <p class="card-text text-muted mb-3">
                                             深度分析现代人际关系的困境。不是缺少人，而是缺少连接。包含建立深度关系的方法。
                                         </p>
                                         
+                                        <div class="article-meta">
                                             
-                                                <small class="text-muted">
-                                                    2026-03-26
-                                                </small>
+                                                <i class="bi bi-clock me-1"></i>
+                                                2026-03-26
                                                 
+                                        </div>
                                 </div>
-                                <div class="card-footer text-muted">
+                                <div class="card-footer text-muted bg-white border-top">
                                     <a href="/category/%E4%BA%BA%E9%99%85%E5%85%B3%E7%B3%BB.html"
-                                        class="badge bg-primary">
+                                        class="badge bg-primary me-2">
                                         人际关系
                                     </a>
                                     
                                         <a href="/tag/%E4%BA%BA%E9%99%85%E5%85%B3%E7%B3%BB.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             人际关系
                                         </a>
                                         
                                         <a href="/tag/%E4%BA%B2%E5%AF%86%E5%85%B3%E7%B3%BB.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             亲密关系
                                         </a>
                                         
                                         <a href="/tag/%E6%B2%9F%E9%80%9A.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             沟通
                                         </a>
                                         
                                         <a href="/tag/%E5%AD%A4%E7%8B%AC.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             孤独
                                         </a>
                                         
                                         <a href="/tag/2026%E8%B6%8B%E5%8A%BF.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             2026趋势
                                         </a>
                                         
@@ -152,54 +218,55 @@
                         </div>
                         
                         <div class="masonry-grid-item">
-                            <div class="card shadow-sm">
+                            <div class="card article-card shadow-sm">
                                 <div class="card-body">
-                                    <h5 class="card-title">
-                                        <i class="bi bi-file-earmark-text"></i>
+                                    <h5 class="card-title article-title">
+                                        <i class="bi bi-file-earmark-text me-2 text-primary"></i>
                                         <a href="../mdhtml/这8个社交行为让人超级反感，你中了几个.html"
-                                            class="text-decoration-none">
+                                            class="text-decoration-none text-dark">
                                             这8个社交行为让人超级反感，你中了几个
                                         </a>
                                     </h5>
                                     
-                                        <p class="card-text">
+                                        <p class="card-text text-muted mb-3">
                                             分析日常生活中让人反感的社交行为，提供实用的社交技巧，帮助你成为更受欢迎的人。
                                         </p>
                                         
+                                        <div class="article-meta">
                                             
-                                                <small class="text-muted">
-                                                    2026-03-24
-                                                </small>
+                                                <i class="bi bi-clock me-1"></i>
+                                                2026-03-24
                                                 
+                                        </div>
                                 </div>
-                                <div class="card-footer text-muted">
+                                <div class="card-footer text-muted bg-white border-top">
                                     <a href="/category/%E4%BA%BA%E9%99%85%E5%85%B3%E7%B3%BB.html"
-                                        class="badge bg-primary">
+                                        class="badge bg-primary me-2">
                                         人际关系
                                     </a>
                                     
                                         <a href="/tag/%E7%A4%BE%E4%BA%A4%E7%A4%BC%E4%BB%AA.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             社交礼仪
                                         </a>
                                         
                                         <a href="/tag/%E4%BA%BA%E9%99%85%E5%85%B3%E7%B3%BB.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             人际关系
                                         </a>
                                         
                                         <a href="/tag/%E5%8F%8D%E6%84%9F%E8%A1%8C%E4%B8%BA.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             反感行为
                                         </a>
                                         
                                         <a href="/tag/%E6%B2%9F%E9%80%9A.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             沟通
                                         </a>
                                         
                                         <a href="/tag/%E6%83%85%E5%95%86.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             情商
                                         </a>
                                         
@@ -208,54 +275,55 @@
                         </div>
                         
                         <div class="masonry-grid-item">
-                            <div class="card shadow-sm">
+                            <div class="card article-card shadow-sm">
                                 <div class="card-body">
-                                    <h5 class="card-title">
-                                        <i class="bi bi-file-earmark-text"></i>
+                                    <h5 class="card-title article-title">
+                                        <i class="bi bi-file-earmark-text me-2 text-primary"></i>
                                         <a href="../mdhtml/原谅的力量：为什么我们无法放下过去的伤害.html"
-                                            class="text-decoration-none">
+                                            class="text-decoration-none text-dark">
                                             原谅的力量：为什么我们无法放下过去的伤害
                                         </a>
                                     </h5>
                                     
-                                        <p class="card-text">
+                                        <p class="card-text text-muted mb-3">
                                             深入分析原谅的困难，探讨伤害的持久性、原谅的误解、愈合的过程、以及如何学会原谅。
                                         </p>
                                         
+                                        <div class="article-meta">
                                             
-                                                <small class="text-muted">
-                                                    2026-03-24
-                                                </small>
+                                                <i class="bi bi-clock me-1"></i>
+                                                2026-03-24
                                                 
+                                        </div>
                                 </div>
-                                <div class="card-footer text-muted">
+                                <div class="card-footer text-muted bg-white border-top">
                                     <a href="/category/%E4%BA%BA%E9%99%85%E5%85%B3%E7%B3%BB.html"
-                                        class="badge bg-primary">
+                                        class="badge bg-primary me-2">
                                         人际关系
                                     </a>
                                     
                                         <a href="/tag/%E5%8E%9F%E8%B0%85.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             原谅
                                         </a>
                                         
                                         <a href="/tag/%E6%94%BE%E4%B8%8B.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             放下
                                         </a>
                                         
                                         <a href="/tag/%E8%BF%87%E5%8E%BB%E4%BC%A4%E5%AE%B3.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             过去伤害
                                         </a>
                                         
                                         <a href="/tag/%E5%BF%83%E7%90%86%E6%84%88%E5%90%88.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             心理愈合
                                         </a>
                                         
                                         <a href="/tag/%E5%92%8C%E8%A7%A3.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             和解
                                         </a>
                                         
@@ -264,54 +332,55 @@
                         </div>
                         
                         <div class="masonry-grid-item">
-                            <div class="card shadow-sm">
+                            <div class="card article-card shadow-sm">
                                 <div class="card-body">
-                                    <h5 class="card-title">
-                                        <i class="bi bi-file-earmark-text"></i>
+                                    <h5 class="card-title article-title">
+                                        <i class="bi bi-file-earmark-text me-2 text-primary"></i>
                                         <a href="../mdhtml/依赖关系的陷阱：我们如何变成了他人的奴隶.html"
-                                            class="text-decoration-none">
+                                            class="text-decoration-none text-dark">
                                             依赖关系的陷阱：我们如何变成了他人的奴隶
                                         </a>
                                     </h5>
                                     
-                                        <p class="card-text">
+                                        <p class="card-text text-muted mb-3">
                                             深入分析依赖关系的形成，探讨共依赖的危害、自主性的丧失、控制的动态、以及如何建立健康的独立关系。
                                         </p>
                                         
+                                        <div class="article-meta">
                                             
-                                                <small class="text-muted">
-                                                    2026-03-24
-                                                </small>
+                                                <i class="bi bi-clock me-1"></i>
+                                                2026-03-24
                                                 
+                                        </div>
                                 </div>
-                                <div class="card-footer text-muted">
+                                <div class="card-footer text-muted bg-white border-top">
                                     <a href="/category/%E4%BA%BA%E9%99%85%E5%85%B3%E7%B3%BB.html"
-                                        class="badge bg-primary">
+                                        class="badge bg-primary me-2">
                                         人际关系
                                     </a>
                                     
                                         <a href="/tag/%E4%BE%9D%E8%B5%96.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             依赖
                                         </a>
                                         
                                         <a href="/tag/%E5%85%B1%E4%BE%9D%E8%B5%96.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             共依赖
                                         </a>
                                         
                                         <a href="/tag/%E8%87%AA%E4%B8%BB%E6%80%A7.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             自主性
                                         </a>
                                         
                                         <a href="/tag/%E5%85%B3%E7%B3%BB%E5%8A%A8%E6%80%81.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             关系动态
                                         </a>
                                         
                                         <a href="/tag/%E5%BF%83%E7%90%86%E5%81%A5%E5%BA%B7.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             心理健康
                                         </a>
                                         
@@ -320,54 +389,55 @@
                         </div>
                         
                         <div class="masonry-grid-item">
-                            <div class="card shadow-sm">
+                            <div class="card article-card shadow-sm">
                                 <div class="card-body">
-                                    <h5 class="card-title">
-                                        <i class="bi bi-file-earmark-text"></i>
+                                    <h5 class="card-title article-title">
+                                        <i class="bi bi-file-earmark-text me-2 text-primary"></i>
                                         <a href="../mdhtml/边界的设定：为什么我们无法对他人说不.html"
-                                            class="text-decoration-none">
+                                            class="text-decoration-none text-dark">
                                             边界的设定：为什么我们无法对他人说不
                                         </a>
                                     </h5>
                                     
-                                        <p class="card-text">
+                                        <p class="card-text text-muted mb-3">
                                             深入分析人们设定边界的困难，探讨边界的重要性、拒绝的恐惧、内疚感、以及如何学会健康地设定边界。
                                         </p>
                                         
+                                        <div class="article-meta">
                                             
-                                                <small class="text-muted">
-                                                    2026-03-24
-                                                </small>
+                                                <i class="bi bi-clock me-1"></i>
+                                                2026-03-24
                                                 
+                                        </div>
                                 </div>
-                                <div class="card-footer text-muted">
+                                <div class="card-footer text-muted bg-white border-top">
                                     <a href="/category/%E4%BA%BA%E9%99%85%E5%85%B3%E7%B3%BB.html"
-                                        class="badge bg-primary">
+                                        class="badge bg-primary me-2">
                                         人际关系
                                     </a>
                                     
                                         <a href="/tag/%E8%BE%B9%E7%95%8C.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             边界
                                         </a>
                                         
                                         <a href="/tag/%E8%87%AA%E6%88%91%E4%BF%9D%E6%8A%A4.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             自我保护
                                         </a>
                                         
                                         <a href="/tag/%E6%8B%92%E7%BB%9D.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             拒绝
                                         </a>
                                         
                                         <a href="/tag/%E4%BA%BA%E9%99%85%E5%85%B3%E7%B3%BB.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             人际关系
                                         </a>
                                         
                                         <a href="/tag/%E8%87%AA%E5%B0%8A.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             自尊
                                         </a>
                                         
@@ -376,54 +446,55 @@
                         </div>
                         
                         <div class="masonry-grid-item">
-                            <div class="card shadow-sm">
+                            <div class="card article-card shadow-sm">
                                 <div class="card-body">
-                                    <h5 class="card-title">
-                                        <i class="bi bi-file-earmark-text"></i>
+                                    <h5 class="card-title article-title">
+                                        <i class="bi bi-file-earmark-text me-2 text-primary"></i>
                                         <a href="../mdhtml/冲突的艺术：为什么我们害怕与他人发生冲突？.html"
-                                            class="text-decoration-none">
+                                            class="text-decoration-none text-dark">
                                             冲突的艺术：为什么我们害怕与他人发生冲突？
                                         </a>
                                     </h5>
                                     
-                                        <p class="card-text">
+                                        <p class="card-text text-muted mb-3">
                                             深入分析人们对冲突的恐惧，探讨冲突的根源、避免冲突的代价、健康冲突的可能性、以及如何有效地解决冲突。
                                         </p>
                                         
+                                        <div class="article-meta">
                                             
-                                                <small class="text-muted">
-                                                    2026-03-24
-                                                </small>
+                                                <i class="bi bi-clock me-1"></i>
+                                                2026-03-24
                                                 
+                                        </div>
                                 </div>
-                                <div class="card-footer text-muted">
+                                <div class="card-footer text-muted bg-white border-top">
                                     <a href="/category/%E4%BA%BA%E9%99%85%E5%85%B3%E7%B3%BB.html"
-                                        class="badge bg-primary">
+                                        class="badge bg-primary me-2">
                                         人际关系
                                     </a>
                                     
                                         <a href="/tag/%E5%86%B2%E7%AA%81%E8%A7%A3%E5%86%B3.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             冲突解决
                                         </a>
                                         
                                         <a href="/tag/%E6%B2%9F%E9%80%9A.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             沟通
                                         </a>
                                         
                                         <a href="/tag/%E5%AF%B9%E7%AB%8B.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             对立
                                         </a>
                                         
                                         <a href="/tag/%E5%85%B3%E7%B3%BB%E4%BF%AE%E5%A4%8D.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             关系修复
                                         </a>
                                         
                                         <a href="/tag/%E5%86%B2%E7%AA%81%E7%AE%A1%E7%90%86.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             冲突管理
                                         </a>
                                         
@@ -432,54 +503,55 @@
                         </div>
                         
                         <div class="masonry-grid-item">
-                            <div class="card shadow-sm">
+                            <div class="card article-card shadow-sm">
                                 <div class="card-body">
-                                    <h5 class="card-title">
-                                        <i class="bi bi-file-earmark-text"></i>
+                                    <h5 class="card-title article-title">
+                                        <i class="bi bi-file-earmark-text me-2 text-primary"></i>
                                         <a href="../mdhtml/友谊的衰落：为什么我们越来越难交到真正的朋友？.html"
-                                            class="text-decoration-none">
+                                            class="text-decoration-none text-dark">
                                             友谊的衰落：为什么我们越来越难交到真正的朋友？
                                         </a>
                                     </h5>
                                     
-                                        <p class="card-text">
+                                        <p class="card-text text-muted mb-3">
                                             深入分析现代友谊的危机，探讨真实友谊的稀缺、社交媒体的影响、时间的压力、以及如何建立和维护真实的友谊。
                                         </p>
                                         
+                                        <div class="article-meta">
                                             
-                                                <small class="text-muted">
-                                                    2026-03-24
-                                                </small>
+                                                <i class="bi bi-clock me-1"></i>
+                                                2026-03-24
                                                 
+                                        </div>
                                 </div>
-                                <div class="card-footer text-muted">
+                                <div class="card-footer text-muted bg-white border-top">
                                     <a href="/category/%E4%BA%BA%E9%99%85%E5%85%B3%E7%B3%BB.html"
-                                        class="badge bg-primary">
+                                        class="badge bg-primary me-2">
                                         人际关系
                                     </a>
                                     
                                         <a href="/tag/%E5%8F%8B%E8%B0%8A.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             友谊
                                         </a>
                                         
                                         <a href="/tag/%E7%9C%9F%E5%AE%9E%E8%BF%9E%E6%8E%A5.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             真实连接
                                         </a>
                                         
                                         <a href="/tag/%E7%A4%BE%E4%BA%A4%E5%AD%A4%E7%AB%8B.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             社交孤立
                                         </a>
                                         
                                         <a href="/tag/%E6%9C%8B%E5%8F%8B%E5%85%B3%E7%B3%BB.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             朋友关系
                                         </a>
                                         
                                         <a href="/tag/%E7%A4%BE%E5%8C%BA.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             社区
                                         </a>
                                         
@@ -488,54 +560,55 @@
                         </div>
                         
                         <div class="masonry-grid-item">
-                            <div class="card shadow-sm">
+                            <div class="card article-card shadow-sm">
                                 <div class="card-body">
-                                    <h5 class="card-title">
-                                        <i class="bi bi-file-earmark-text"></i>
+                                    <h5 class="card-title article-title">
+                                        <i class="bi bi-file-earmark-text me-2 text-primary"></i>
                                         <a href="../mdhtml/亲密关系的幻觉：我们真的了解我们的伴侣吗？.html"
-                                            class="text-decoration-none">
+                                            class="text-decoration-none text-dark">
                                             亲密关系的幻觉：我们真的了解我们的伴侣吗？
                                         </a>
                                     </h5>
                                     
-                                        <p class="card-text">
+                                        <p class="card-text text-muted mb-3">
                                             深入分析亲密关系中的沟通障碍，探讨理解的幻觉、隐藏的真实自我、沟通的困难、以及如何建立真正的亲密关系。
                                         </p>
                                         
+                                        <div class="article-meta">
                                             
-                                                <small class="text-muted">
-                                                    2026-03-24
-                                                </small>
+                                                <i class="bi bi-clock me-1"></i>
+                                                2026-03-24
                                                 
+                                        </div>
                                 </div>
-                                <div class="card-footer text-muted">
+                                <div class="card-footer text-muted bg-white border-top">
                                     <a href="/category/%E4%BA%BA%E9%99%85%E5%85%B3%E7%B3%BB.html"
-                                        class="badge bg-primary">
+                                        class="badge bg-primary me-2">
                                         人际关系
                                     </a>
                                     
                                         <a href="/tag/%E4%BA%B2%E5%AF%86%E5%85%B3%E7%B3%BB.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             亲密关系
                                         </a>
                                         
                                         <a href="/tag/%E4%BC%B4%E4%BE%A3%E6%B2%9F%E9%80%9A.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             伴侣沟通
                                         </a>
                                         
                                         <a href="/tag/%E7%90%86%E8%A7%A3%E5%B7%AE%E5%BC%82.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             理解差异
                                         </a>
                                         
                                         <a href="/tag/%E5%85%B3%E7%B3%BB%E6%B7%B1%E5%BA%A6.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             关系深度
                                         </a>
                                         
                                         <a href="/tag/%E5%A9%9A%E5%A7%BB.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             婚姻
                                         </a>
                                         
@@ -544,54 +617,55 @@
                         </div>
                         
                         <div class="masonry-grid-item">
-                            <div class="card shadow-sm">
+                            <div class="card article-card shadow-sm">
                                 <div class="card-body">
-                                    <h5 class="card-title">
-                                        <i class="bi bi-file-earmark-text"></i>
+                                    <h5 class="card-title article-title">
+                                        <i class="bi bi-file-earmark-text me-2 text-primary"></i>
                                         <a href="../mdhtml/如何建立和维护健康的人际关系：从沟通到边界的实用指南.html"
-                                            class="text-decoration-none">
+                                            class="text-decoration-none text-dark">
                                             如何建立和维护健康的人际关系：从沟通到边界的实用指南
                                         </a>
                                     </h5>
                                     
-                                        <p class="card-text">
+                                        <p class="card-text text-muted mb-3">
                                             探讨如何建立和维护健康的人际关系，提供实用的方法和技巧，帮助个人改善人际关系质量，增强社交能力。
                                         </p>
                                         
+                                        <div class="article-meta">
                                             
-                                                <small class="text-muted">
-                                                    2026-02-28
-                                                </small>
+                                                <i class="bi bi-clock me-1"></i>
+                                                2026-02-28
                                                 
+                                        </div>
                                 </div>
-                                <div class="card-footer text-muted">
+                                <div class="card-footer text-muted bg-white border-top">
                                     <a href="/category/%E4%BA%BA%E9%99%85%E5%85%B3%E7%B3%BB.html"
-                                        class="badge bg-primary">
+                                        class="badge bg-primary me-2">
                                         人际关系
                                     </a>
                                     
                                         <a href="/tag/%E4%BA%BA%E9%99%85%E5%85%B3%E7%B3%BB.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             人际关系
                                         </a>
                                         
                                         <a href="/tag/%E6%B2%9F%E9%80%9A%E6%8A%80%E5%B7%A7.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             沟通技巧
                                         </a>
                                         
                                         <a href="/tag/%E8%BE%B9%E7%95%8C%E8%AE%BE%E5%AE%9A.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             边界设定
                                         </a>
                                         
                                         <a href="/tag/%E5%85%B3%E7%B3%BB%E7%BB%B4%E6%8A%A4.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             关系维护
                                         </a>
                                         
                                         <a href="/tag/%E7%A4%BE%E4%BA%A4%E6%8A%80%E8%83%BD.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             社交技能
                                         </a>
                                         
@@ -602,9 +676,9 @@
                 </div>
 
                 <!-- 返回按钮 -->
-                <div class="mt-4 text-center">
-                    <a href="分类列表.html" class="btn btn-outline-primary">
-                        <i class="bi bi-arrow-left"></i> 返回分类列表
+                <div class="mt-6 text-center">
+                    <a href="分类列表.html" class="btn btn-outline-primary back-button">
+                        <i class="bi bi-arrow-left me-2"></i> 返回分类列表
                     </a>
                 </div>
             </div>
@@ -628,7 +702,7 @@
                         itemSelector: '.masonry-grid-item',
                         columnWidth: '.masonry-grid-item',
                         percentPosition: true,
-                        gutter: 10 // 明确设置 gutter 值为 10px
+                        gutter: 15 // 增加间距，提升视觉效果
                     });
                 });
             </script>

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
 
 <head>
   <meta charset="UTF-8">
@@ -9,7 +9,7 @@
   <meta name="description" content="无人自助站的【创造力】的标签列表页面，汇集了关于【创造力】标签相关的文章和资讯，方便您快速找到感兴趣的内容。">
   <meta name="keywords" content="无人自助站,创造力">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>标签文章列表</title>
+  <title>创造力标签 - 无人自助站</title>
 
   <link rel="icon" href="../logo.svg" type="image/svg+xml">
   <link rel="stylesheet" href="../css/style.css">
@@ -27,6 +27,62 @@
   <!-- 引入Masonry -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/masonry/4.2.2/masonry.pkgd.min.js"></script>
 
+  <style>
+        .tag-header {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            color: white;
+            padding: 2rem;
+            border-radius: 8px;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        .tag-title {
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+        .article-card {
+            transition: all 0.3s ease;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        .article-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+        }
+        .article-title {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            transition: color 0.3s ease;
+        }
+        .article-title:hover {
+            color: #0d6efd;
+        }
+        .article-meta {
+            font-size: 0.85rem;
+            color: #6c757d;
+        }
+        .tag-link {
+            background-color: #e9ecef;
+            color: #495057;
+            transition: all 0.2s ease;
+        }
+        .tag-link:hover {
+            background-color: #dee2e6;
+            color: #212529;
+        }
+        .back-button {
+            transition: all 0.3s ease;
+        }
+        .back-button:hover {
+            transform: translateX(-3px);
+        }
+        .article-count {
+            font-size: 0.9rem;
+            opacity: 0.9;
+        }
+    </style>
 </head>
 
 <body>
@@ -80,7 +136,7 @@
     <main class="container-fluid mt-4">
       <div class="row">
         <div class="col-lg-8 col-md-12 mx-auto">
-          <nav aria-label="breadcrumb">
+          <nav aria-label="breadcrumb" class="mb-4">
             <ol class="breadcrumb">
               <li class="breadcrumb-item"><a href="/html/index.html">首页</a></li>
               <li class="breadcrumb-item"><a href="标签列表.html">标签列表</a></li>
@@ -89,54 +145,64 @@
               </li>
             </ol>
           </nav>
-          <h1 style="font-size: 1.5em; margin: 0.5em 0;">
-            创造力标签的文章和资讯
-        </h1>
+          
+          <!-- 标签头部 -->
+          <div class="tag-header">
+              <h1 class="tag-title">
+                  <i class="bi bi-tags me-2"></i>
+                  创造力
+              </h1>
+              <p class="article-count">
+                  共 9 篇文章
+              </p>
+          </div>
+          
           <div class="masonry-grid">
             
               <div class="masonry-grid-item">
-                <div class="card shadow-sm">
+                <div class="card article-card shadow-sm">
                   <div class="card-body">
-                    <h5 class="card-title">
-                      <i class="bi bi-file-earmark-text"></i>
-                      <a href="../mdhtml/你的完美主义正在谋杀你的创造力.html" class="text-decoration-none">
+                    <h5 class="card-title article-title">
+                      <i class="bi bi-file-earmark-text me-2 text-primary"></i>
+                      <a href="../mdhtml/你的完美主义正在谋杀你的创造力.html" class="text-decoration-none text-dark">
                         你的完美主义正在谋杀你的创造力
                       </a>
                     </h5>
                     
-                      <p class="card-text">
+                      <p class="card-text text-muted mb-3">
                         深度分析完美主义对创造力的危害。不是追求卓越，而是恐惧失败。包含释放创造力的方法。
                       </p>
                       
-                        
-                          <small class="text-muted">
-                            2026-03-26
-                          </small>
-                          
+                        <div class="article-meta">
+                            
+                                <i class="bi bi-clock me-1"></i>
+                                2026-03-26
+                                
+                        </div>
                   </div>
-                  <div class="card-footer text-muted">
+                  <div class="card-footer text-muted bg-white border-top">
                     <a href="/category/%E5%88%9B%E6%84%8F%E5%B7%A5%E4%BD%9C.html"
-                      class="badge bg-primary">
+                      class="badge bg-primary me-2">
                       创意工作
                     </a>
                     
-                      <a href="/tag/%E5%AE%8C%E7%BE%8E%E4%B8%BB%E4%B9%89.html" class="badge tag-link">
+                      <a href="/tag/%E5%AE%8C%E7%BE%8E%E4%B8%BB%E4%B9%89.html" class="badge tag-link me-2 mb-1">
                         完美主义
                       </a>
                       
-                      <a href="/tag/%E5%88%9B%E9%80%A0%E5%8A%9B.html" class="badge tag-link">
+                      <a href="/tag/%E5%88%9B%E9%80%A0%E5%8A%9B.html" class="badge tag-link me-2 mb-1">
                         创造力
                       </a>
                       
-                      <a href="/tag/%E8%89%BA%E6%9C%AF.html" class="badge tag-link">
+                      <a href="/tag/%E8%89%BA%E6%9C%AF.html" class="badge tag-link me-2 mb-1">
                         艺术
                       </a>
                       
-                      <a href="/tag/%E5%BF%83%E7%90%86%E9%9A%9C%E7%A2%8D.html" class="badge tag-link">
+                      <a href="/tag/%E5%BF%83%E7%90%86%E9%9A%9C%E7%A2%8D.html" class="badge tag-link me-2 mb-1">
                         心理障碍
                       </a>
                       
-                      <a href="/tag/2026%E8%B6%8B%E5%8A%BF.html" class="badge tag-link">
+                      <a href="/tag/2026%E8%B6%8B%E5%8A%BF.html" class="badge tag-link me-2 mb-1">
                         2026趋势
                       </a>
                       
@@ -145,48 +211,49 @@
               </div>
               
               <div class="masonry-grid-item">
-                <div class="card shadow-sm">
+                <div class="card article-card shadow-sm">
                   <div class="card-body">
-                    <h5 class="card-title">
-                      <i class="bi bi-file-earmark-text"></i>
-                      <a href="../mdhtml/人工智能时代的创造力：人类最后的阵地.html" class="text-decoration-none">
+                    <h5 class="card-title article-title">
+                      <i class="bi bi-file-earmark-text me-2 text-primary"></i>
+                      <a href="../mdhtml/人工智能时代的创造力：人类最后的阵地.html" class="text-decoration-none text-dark">
                         人工智能时代的创造力：人类最后的阵地
                       </a>
                     </h5>
                     
-                      <p class="card-text">
+                      <p class="card-text text-muted mb-3">
                         探讨在人工智能时代，人类的创造力如何成为最后的独特价值，以及如何在AI时代保持人类的创造优势。
                       </p>
                       
-                        
-                          <small class="text-muted">
-                            2026-03-24
-                          </small>
-                          
+                        <div class="article-meta">
+                            
+                                <i class="bi bi-clock me-1"></i>
+                                2026-03-24
+                                
+                        </div>
                   </div>
-                  <div class="card-footer text-muted">
+                  <div class="card-footer text-muted bg-white border-top">
                     <a href="/category/%E6%9C%AA%E6%9D%A5%E6%8E%A2%E7%B4%A2.html"
-                      class="badge bg-primary">
+                      class="badge bg-primary me-2">
                       未来探索
                     </a>
                     
-                      <a href="/tag/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD.html" class="badge tag-link">
+                      <a href="/tag/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD.html" class="badge tag-link me-2 mb-1">
                         人工智能
                       </a>
                       
-                      <a href="/tag/%E5%88%9B%E9%80%A0%E5%8A%9B.html" class="badge tag-link">
+                      <a href="/tag/%E5%88%9B%E9%80%A0%E5%8A%9B.html" class="badge tag-link me-2 mb-1">
                         创造力
                       </a>
                       
-                      <a href="/tag/%E4%BA%BA%E7%B1%BB%E6%99%BA%E6%85%A7.html" class="badge tag-link">
+                      <a href="/tag/%E4%BA%BA%E7%B1%BB%E6%99%BA%E6%85%A7.html" class="badge tag-link me-2 mb-1">
                         人类智慧
                       </a>
                       
-                      <a href="/tag/%E7%A7%91%E6%8A%80%E5%8F%91%E5%B1%95.html" class="badge tag-link">
+                      <a href="/tag/%E7%A7%91%E6%8A%80%E5%8F%91%E5%B1%95.html" class="badge tag-link me-2 mb-1">
                         科技发展
                       </a>
                       
-                      <a href="/tag/%E6%9C%AA%E6%9D%A5.html" class="badge tag-link">
+                      <a href="/tag/%E6%9C%AA%E6%9D%A5.html" class="badge tag-link me-2 mb-1">
                         未来
                       </a>
                       
@@ -195,48 +262,49 @@
               </div>
               
               <div class="masonry-grid-item">
-                <div class="card shadow-sm">
+                <div class="card article-card shadow-sm">
                   <div class="card-body">
-                    <h5 class="card-title">
-                      <i class="bi bi-file-earmark-text"></i>
-                      <a href="../mdhtml/华为MatePad Pro：创造力与生产力的完美结合.html" class="text-decoration-none">
+                    <h5 class="card-title article-title">
+                      <i class="bi bi-file-earmark-text me-2 text-primary"></i>
+                      <a href="../mdhtml/华为MatePad Pro：创造力与生产力的完美结合.html" class="text-decoration-none text-dark">
                         华为MatePad Pro：创造力与生产力的完美结合
                       </a>
                     </h5>
                     
-                      <p class="card-text">
+                      <p class="card-text text-muted mb-3">
                         本文分享了华为MatePad Pro的使用体验，包括其设计、性能、功能等方面，展示了它作为创造力与生产力工具的优势。
                       </p>
                       
-                        
-                          <small class="text-muted">
-                            2026-02-28
-                          </small>
-                          
+                        <div class="article-meta">
+                            
+                                <i class="bi bi-clock me-1"></i>
+                                2026-02-28
+                                
+                        </div>
                   </div>
-                  <div class="card-footer text-muted">
+                  <div class="card-footer text-muted bg-white border-top">
                     <a href="/category/%E7%A7%91%E6%8A%80%E4%BA%A7%E5%93%81.html"
-                      class="badge bg-primary">
+                      class="badge bg-primary me-2">
                       科技产品
                     </a>
                     
-                      <a href="/tag/%E5%8D%8E%E4%B8%BA.html" class="badge tag-link">
+                      <a href="/tag/%E5%8D%8E%E4%B8%BA.html" class="badge tag-link me-2 mb-1">
                         华为
                       </a>
                       
-                      <a href="/tag/MatePad%20Pro.html" class="badge tag-link">
+                      <a href="/tag/MatePad%20Pro.html" class="badge tag-link me-2 mb-1">
                         MatePad Pro
                       </a>
                       
-                      <a href="/tag/%E5%B9%B3%E6%9D%BF%E7%94%B5%E8%84%91.html" class="badge tag-link">
+                      <a href="/tag/%E5%B9%B3%E6%9D%BF%E7%94%B5%E8%84%91.html" class="badge tag-link me-2 mb-1">
                         平板电脑
                       </a>
                       
-                      <a href="/tag/%E5%88%9B%E9%80%A0%E5%8A%9B.html" class="badge tag-link">
+                      <a href="/tag/%E5%88%9B%E9%80%A0%E5%8A%9B.html" class="badge tag-link me-2 mb-1">
                         创造力
                       </a>
                       
-                      <a href="/tag/%E7%94%9F%E4%BA%A7%E5%8A%9B.html" class="badge tag-link">
+                      <a href="/tag/%E7%94%9F%E4%BA%A7%E5%8A%9B.html" class="badge tag-link me-2 mb-1">
                         生产力
                       </a>
                       
@@ -245,52 +313,53 @@
               </div>
               
               <div class="masonry-grid-item">
-                <div class="card shadow-sm">
+                <div class="card article-card shadow-sm">
                   <div class="card-body">
-                    <h5 class="card-title">
-                      <i class="bi bi-file-earmark-text"></i>
-                      <a href="../mdhtml/如何培养创造力：从思维激发到实践应用的实用指南.html" class="text-decoration-none">
+                    <h5 class="card-title article-title">
+                      <i class="bi bi-file-earmark-text me-2 text-primary"></i>
+                      <a href="../mdhtml/如何培养创造力：从思维激发到实践应用的实用指南.html" class="text-decoration-none text-dark">
                         如何培养创造力：从思维激发到实践应用的实用指南
                       </a>
                     </h5>
                     
-                      <p class="card-text">
+                      <p class="card-text text-muted mb-3">
                         探讨如何培养创造力，提供从思维激发到实践应用的实用技巧，帮助个人增强创新能力，在工作和生活中发挥创造力，实现个人和职业目标。
                       </p>
                       
-                        
-                          <small class="text-muted">
-                            2026-02-28
-                          </small>
-                          
+                        <div class="article-meta">
+                            
+                                <i class="bi bi-clock me-1"></i>
+                                2026-02-28
+                                
+                        </div>
                   </div>
-                  <div class="card-footer text-muted">
+                  <div class="card-footer text-muted bg-white border-top">
                     <a href="/category/%E8%87%AA%E6%88%91%E6%8F%90%E5%8D%87.html"
-                      class="badge bg-primary">
+                      class="badge bg-primary me-2">
                       自我提升
                     </a>
                     
-                      <a href="/tag/%E5%88%9B%E9%80%A0%E5%8A%9B.html" class="badge tag-link">
+                      <a href="/tag/%E5%88%9B%E9%80%A0%E5%8A%9B.html" class="badge tag-link me-2 mb-1">
                         创造力
                       </a>
                       
-                      <a href="/tag/%E6%80%9D%E7%BB%B4%E6%BF%80%E5%8F%91.html" class="badge tag-link">
+                      <a href="/tag/%E6%80%9D%E7%BB%B4%E6%BF%80%E5%8F%91.html" class="badge tag-link me-2 mb-1">
                         思维激发
                       </a>
                       
-                      <a href="/tag/%E5%88%9B%E6%96%B0%E8%83%BD%E5%8A%9B.html" class="badge tag-link">
+                      <a href="/tag/%E5%88%9B%E6%96%B0%E8%83%BD%E5%8A%9B.html" class="badge tag-link me-2 mb-1">
                         创新能力
                       </a>
                       
-                      <a href="/tag/%E5%AE%9E%E8%B7%B5%E5%BA%94%E7%94%A8.html" class="badge tag-link">
+                      <a href="/tag/%E5%AE%9E%E8%B7%B5%E5%BA%94%E7%94%A8.html" class="badge tag-link me-2 mb-1">
                         实践应用
                       </a>
                       
-                      <a href="/tag/%E8%87%AA%E6%88%91%E6%8F%90%E5%8D%87.html" class="badge tag-link">
+                      <a href="/tag/%E8%87%AA%E6%88%91%E6%8F%90%E5%8D%87.html" class="badge tag-link me-2 mb-1">
                         自我提升
                       </a>
                       
-                      <a href="/tag/%E5%88%9B%E6%84%8F%E5%9F%B9%E5%85%BB.html" class="badge tag-link">
+                      <a href="/tag/%E5%88%9B%E6%84%8F%E5%9F%B9%E5%85%BB.html" class="badge tag-link me-2 mb-1">
                         创意培养
                       </a>
                       
@@ -299,48 +368,49 @@
               </div>
               
               <div class="masonry-grid-item">
-                <div class="card shadow-sm">
+                <div class="card article-card shadow-sm">
                   <div class="card-body">
-                    <h5 class="card-title">
-                      <i class="bi bi-file-earmark-text"></i>
-                      <a href="../mdhtml/如何培养孩子的创造力.html" class="text-decoration-none">
+                    <h5 class="card-title article-title">
+                      <i class="bi bi-file-earmark-text me-2 text-primary"></i>
+                      <a href="../mdhtml/如何培养孩子的创造力.html" class="text-decoration-none text-dark">
                         如何培养孩子的创造力
                       </a>
                     </h5>
                     
-                      <p class="card-text">
+                      <p class="card-text text-muted mb-3">
                         探讨如何培养孩子的创造力，提供实用的方法和策略，帮助家长和教育者激发孩子的创新思维和创造能力。
                       </p>
                       
-                        
-                          <small class="text-muted">
-                            2026-02-28
-                          </small>
-                          
+                        <div class="article-meta">
+                            
+                                <i class="bi bi-clock me-1"></i>
+                                2026-02-28
+                                
+                        </div>
                   </div>
-                  <div class="card-footer text-muted">
+                  <div class="card-footer text-muted bg-white border-top">
                     <a href="/category/%E5%AE%B6%E5%BA%AD%E6%95%99%E8%82%B2.html"
-                      class="badge bg-primary">
+                      class="badge bg-primary me-2">
                       家庭教育
                     </a>
                     
-                      <a href="/tag/%E5%88%9B%E9%80%A0%E5%8A%9B.html" class="badge tag-link">
+                      <a href="/tag/%E5%88%9B%E9%80%A0%E5%8A%9B.html" class="badge tag-link me-2 mb-1">
                         创造力
                       </a>
                       
-                      <a href="/tag/%E5%84%BF%E7%AB%A5%E6%95%99%E8%82%B2.html" class="badge tag-link">
+                      <a href="/tag/%E5%84%BF%E7%AB%A5%E6%95%99%E8%82%B2.html" class="badge tag-link me-2 mb-1">
                         儿童教育
                       </a>
                       
-                      <a href="/tag/%E4%BA%B2%E5%AD%90%E4%BA%92%E5%8A%A8.html" class="badge tag-link">
+                      <a href="/tag/%E4%BA%B2%E5%AD%90%E4%BA%92%E5%8A%A8.html" class="badge tag-link me-2 mb-1">
                         亲子互动
                       </a>
                       
-                      <a href="/tag/%E5%88%9B%E6%96%B0%E6%80%9D%E7%BB%B4.html" class="badge tag-link">
+                      <a href="/tag/%E5%88%9B%E6%96%B0%E6%80%9D%E7%BB%B4.html" class="badge tag-link me-2 mb-1">
                         创新思维
                       </a>
                       
-                      <a href="/tag/%E6%95%99%E8%82%B2%E6%96%B9%E6%B3%95.html" class="badge tag-link">
+                      <a href="/tag/%E6%95%99%E8%82%B2%E6%96%B9%E6%B3%95.html" class="badge tag-link me-2 mb-1">
                         教育方法
                       </a>
                       
@@ -349,48 +419,49 @@
               </div>
               
               <div class="masonry-grid-item">
-                <div class="card shadow-sm">
+                <div class="card article-card shadow-sm">
                   <div class="card-body">
-                    <h5 class="card-title">
-                      <i class="bi bi-file-earmark-text"></i>
-                      <a href="../mdhtml/如何在工作中保持创造力和创新能力.html" class="text-decoration-none">
+                    <h5 class="card-title article-title">
+                      <i class="bi bi-file-earmark-text me-2 text-primary"></i>
+                      <a href="../mdhtml/如何在工作中保持创造力和创新能力.html" class="text-decoration-none text-dark">
                         如何在工作中保持创造力和创新能力
                       </a>
                     </h5>
                     
-                      <p class="card-text">
+                      <p class="card-text text-muted mb-3">
                         探讨如何在工作中保持创造力和创新能力，提供实用的方法和策略，帮助职场人士在竞争激烈的环境中保持创新思维。
                       </p>
                       
-                        
-                          <small class="text-muted">
-                            2026-02-27
-                          </small>
-                          
+                        <div class="article-meta">
+                            
+                                <i class="bi bi-clock me-1"></i>
+                                2026-02-27
+                                
+                        </div>
                   </div>
-                  <div class="card-footer text-muted">
+                  <div class="card-footer text-muted bg-white border-top">
                     <a href="/category/%E8%81%8C%E4%B8%9A%E5%8F%91%E5%B1%95.html"
-                      class="badge bg-primary">
+                      class="badge bg-primary me-2">
                       职业发展
                     </a>
                     
-                      <a href="/tag/%E5%88%9B%E9%80%A0%E5%8A%9B.html" class="badge tag-link">
+                      <a href="/tag/%E5%88%9B%E9%80%A0%E5%8A%9B.html" class="badge tag-link me-2 mb-1">
                         创造力
                       </a>
                       
-                      <a href="/tag/%E5%88%9B%E6%96%B0%E8%83%BD%E5%8A%9B.html" class="badge tag-link">
+                      <a href="/tag/%E5%88%9B%E6%96%B0%E8%83%BD%E5%8A%9B.html" class="badge tag-link me-2 mb-1">
                         创新能力
                       </a>
                       
-                      <a href="/tag/%E8%81%8C%E5%9C%BA%E5%8F%91%E5%B1%95.html" class="badge tag-link">
+                      <a href="/tag/%E8%81%8C%E5%9C%BA%E5%8F%91%E5%B1%95.html" class="badge tag-link me-2 mb-1">
                         职场发展
                       </a>
                       
-                      <a href="/tag/%E6%80%9D%E7%BB%B4%E6%96%B9%E5%BC%8F.html" class="badge tag-link">
+                      <a href="/tag/%E6%80%9D%E7%BB%B4%E6%96%B9%E5%BC%8F.html" class="badge tag-link me-2 mb-1">
                         思维方式
                       </a>
                       
-                      <a href="/tag/%E5%B7%A5%E4%BD%9C%E6%95%88%E7%8E%87.html" class="badge tag-link">
+                      <a href="/tag/%E5%B7%A5%E4%BD%9C%E6%95%88%E7%8E%87.html" class="badge tag-link me-2 mb-1">
                         工作效率
                       </a>
                       
@@ -399,48 +470,49 @@
               </div>
               
               <div class="masonry-grid-item">
-                <div class="card shadow-sm">
+                <div class="card article-card shadow-sm">
                   <div class="card-body">
-                    <h5 class="card-title">
-                      <i class="bi bi-file-earmark-text"></i>
-                      <a href="../mdhtml/为何人类的创造力如此参差不齐？.html" class="text-decoration-none">
+                    <h5 class="card-title article-title">
+                      <i class="bi bi-file-earmark-text me-2 text-primary"></i>
+                      <a href="../mdhtml/为何人类的创造力如此参差不齐？.html" class="text-decoration-none text-dark">
                         为何人类的创造力如此参差不齐？
                       </a>
                     </h5>
                     
-                      <p class="card-text">
+                      <p class="card-text text-muted mb-3">
                         深入剖析人类创造力参差不齐的原因，涵盖大脑机制、环境因素、个人特质以及文化影响等方面，揭示创造力背后的科学原理和影响因素，助你更好地理解和激发自己的创造力。
                       </p>
                       
-                        
-                          <small class="text-muted">
-                            2026-02-24
-                          </small>
-                          
+                        <div class="article-meta">
+                            
+                                <i class="bi bi-clock me-1"></i>
+                                2026-02-24
+                                
+                        </div>
                   </div>
-                  <div class="card-footer text-muted">
+                  <div class="card-footer text-muted bg-white border-top">
                     <a href="/category/%E7%94%9F%E6%B4%BB%E6%84%9F%E6%82%9F.html"
-                      class="badge bg-primary">
+                      class="badge bg-primary me-2">
                       生活感悟
                     </a>
                     
-                      <a href="/tag/%E5%88%9B%E9%80%A0%E5%8A%9B.html" class="badge tag-link">
+                      <a href="/tag/%E5%88%9B%E9%80%A0%E5%8A%9B.html" class="badge tag-link me-2 mb-1">
                         创造力
                       </a>
                       
-                      <a href="/tag/%E5%A4%A7%E8%84%91%E6%9C%BA%E5%88%B6.html" class="badge tag-link">
+                      <a href="/tag/%E5%A4%A7%E8%84%91%E6%9C%BA%E5%88%B6.html" class="badge tag-link me-2 mb-1">
                         大脑机制
                       </a>
                       
-                      <a href="/tag/%E7%8E%AF%E5%A2%83%E5%9B%A0%E7%B4%A0.html" class="badge tag-link">
+                      <a href="/tag/%E7%8E%AF%E5%A2%83%E5%9B%A0%E7%B4%A0.html" class="badge tag-link me-2 mb-1">
                         环境因素
                       </a>
                       
-                      <a href="/tag/%E4%B8%AA%E4%BA%BA%E7%89%B9%E8%B4%A8.html" class="badge tag-link">
+                      <a href="/tag/%E4%B8%AA%E4%BA%BA%E7%89%B9%E8%B4%A8.html" class="badge tag-link me-2 mb-1">
                         个人特质
                       </a>
                       
-                      <a href="/tag/%E6%96%87%E5%8C%96%E5%BD%B1%E5%93%8D.html" class="badge tag-link">
+                      <a href="/tag/%E6%96%87%E5%8C%96%E5%BD%B1%E5%93%8D.html" class="badge tag-link me-2 mb-1">
                         文化影响
                       </a>
                       
@@ -449,48 +521,49 @@
               </div>
               
               <div class="masonry-grid-item">
-                <div class="card shadow-sm">
+                <div class="card article-card shadow-sm">
                   <div class="card-body">
-                    <h5 class="card-title">
-                      <i class="bi bi-file-earmark-text"></i>
-                      <a href="../mdhtml/孤独：生命的别样馈赠.html" class="text-decoration-none">
+                    <h5 class="card-title article-title">
+                      <i class="bi bi-file-earmark-text me-2 text-primary"></i>
+                      <a href="../mdhtml/孤独：生命的别样馈赠.html" class="text-decoration-none text-dark">
                         孤独：生命的别样馈赠
                       </a>
                     </h5>
                     
-                      <p class="card-text">
+                      <p class="card-text text-muted mb-3">
                         阐述孤独在现代社会中的多种呈现，深入探讨孤独对自我认知、创造力激发以及情感成长的积极意义，同时强调要正确对待孤独，在孤独与社交间找到平衡。
                       </p>
                       
-                        
-                          <small class="text-muted">
-                            2026-02-11
-                          </small>
-                          
+                        <div class="article-meta">
+                            
+                                <i class="bi bi-clock me-1"></i>
+                                2026-02-11
+                                
+                        </div>
                   </div>
-                  <div class="card-footer text-muted">
+                  <div class="card-footer text-muted bg-white border-top">
                     <a href="/category/%E8%BA%AB%E5%BF%83%E5%81%A5%E5%BA%B7.html"
-                      class="badge bg-primary">
+                      class="badge bg-primary me-2">
                       身心健康
                     </a>
                     
-                      <a href="/tag/%E5%AD%A4%E7%8B%AC.html" class="badge tag-link">
+                      <a href="/tag/%E5%AD%A4%E7%8B%AC.html" class="badge tag-link me-2 mb-1">
                         孤独
                       </a>
                       
-                      <a href="/tag/%E8%87%AA%E6%88%91%E8%AE%A4%E7%9F%A5%E4%B8%8E%E5%86%85%E5%BF%83%E5%B9%B8%E7%A6%8F.html" class="badge tag-link">
+                      <a href="/tag/%E8%87%AA%E6%88%91%E8%AE%A4%E7%9F%A5%E4%B8%8E%E5%86%85%E5%BF%83%E5%B9%B8%E7%A6%8F.html" class="badge tag-link me-2 mb-1">
                         自我认知与内心幸福
                       </a>
                       
-                      <a href="/tag/%E5%88%9B%E9%80%A0%E5%8A%9B.html" class="badge tag-link">
+                      <a href="/tag/%E5%88%9B%E9%80%A0%E5%8A%9B.html" class="badge tag-link me-2 mb-1">
                         创造力
                       </a>
                       
-                      <a href="/tag/%E6%83%85%E6%84%9F%E6%88%90%E9%95%BF.html" class="badge tag-link">
+                      <a href="/tag/%E6%83%85%E6%84%9F%E6%88%90%E9%95%BF.html" class="badge tag-link me-2 mb-1">
                         情感成长
                       </a>
                       
-                      <a href="/tag/%E5%86%85%E5%BF%83%E6%8E%A2%E7%B4%A2.html" class="badge tag-link">
+                      <a href="/tag/%E5%86%85%E5%BF%83%E6%8E%A2%E7%B4%A2.html" class="badge tag-link me-2 mb-1">
                         内心探索
                       </a>
                       
@@ -499,52 +572,53 @@
               </div>
               
               <div class="masonry-grid-item">
-                <div class="card shadow-sm">
+                <div class="card article-card shadow-sm">
                   <div class="card-body">
-                    <h5 class="card-title">
-                      <i class="bi bi-file-earmark-text"></i>
-                      <a href="../mdhtml/AI辅助创作下的原创边界：当智能体生成你从未想过的观点.html" class="text-decoration-none">
+                    <h5 class="card-title article-title">
+                      <i class="bi bi-file-earmark-text me-2 text-primary"></i>
+                      <a href="../mdhtml/AI辅助创作下的原创边界：当智能体生成你从未想过的观点.html" class="text-decoration-none text-dark">
                         AI辅助创作下的原创边界：当智能体生成你从未想过的观点
                       </a>
                     </h5>
                     
-                      <p class="card-text">
+                      <p class="card-text text-muted mb-3">
                         探讨AI辅助创作时代的原创边界问题，分析传统原创概念在AI参与创作过程中的挑战，从法律、伦理和实践层面考量，并尝试为创作者提供一套在AI时代重新定义和保护原创性的框架。
                       </p>
                       
-                        
-                          <small class="text-muted">
-                            2026-02-11
-                          </small>
-                          
+                        <div class="article-meta">
+                            
+                                <i class="bi bi-clock me-1"></i>
+                                2026-02-11
+                                
+                        </div>
                   </div>
-                  <div class="card-footer text-muted">
+                  <div class="card-footer text-muted bg-white border-top">
                     <a href="/category/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD.html"
-                      class="badge bg-primary">
+                      class="badge bg-primary me-2">
                       人工智能
                     </a>
                     
-                      <a href="/tag/AI%E8%BE%85%E5%8A%A9%E5%88%9B%E4%BD%9C.html" class="badge tag-link">
+                      <a href="/tag/AI%E8%BE%85%E5%8A%A9%E5%88%9B%E4%BD%9C.html" class="badge tag-link me-2 mb-1">
                         AI辅助创作
                       </a>
                       
-                      <a href="/tag/%E5%8E%9F%E5%88%9B%E8%BE%B9%E7%95%8C.html" class="badge tag-link">
+                      <a href="/tag/%E5%8E%9F%E5%88%9B%E8%BE%B9%E7%95%8C.html" class="badge tag-link me-2 mb-1">
                         原创边界
                       </a>
                       
-                      <a href="/tag/%E7%89%88%E6%9D%83.html" class="badge tag-link">
+                      <a href="/tag/%E7%89%88%E6%9D%83.html" class="badge tag-link me-2 mb-1">
                         版权
                       </a>
                       
-                      <a href="/tag/%E5%88%9B%E9%80%A0%E5%8A%9B.html" class="badge tag-link">
+                      <a href="/tag/%E5%88%9B%E9%80%A0%E5%8A%9B.html" class="badge tag-link me-2 mb-1">
                         创造力
                       </a>
                       
-                      <a href="/tag/%E7%9F%A5%E8%AF%86%E5%BA%93.html" class="badge tag-link">
+                      <a href="/tag/%E7%9F%A5%E8%AF%86%E5%BA%93.html" class="badge tag-link me-2 mb-1">
                         知识库
                       </a>
                       
-                      <a href="/tag/%E4%BC%A6%E7%90%86.html" class="badge tag-link">
+                      <a href="/tag/%E4%BC%A6%E7%90%86.html" class="badge tag-link me-2 mb-1">
                         伦理
                       </a>
                       
@@ -554,8 +628,8 @@
               
           </div>
 
-          <div class="mt-4 text-center">
-            <a href="标签列表.html" class="btn btn-outline-primary"><i class="bi bi-arrow-left"></i> 返回标签列表</a>
+          <div class="mt-6 text-center">
+            <a href="标签列表.html" class="btn btn-outline-primary back-button"><i class="bi bi-arrow-left me-2"></i> 返回标签列表</a>
           </div>
         </div>
       </div>
@@ -579,7 +653,7 @@
             itemSelector: '.masonry-grid-item',
             columnWidth: '.masonry-grid-item',
             percentPosition: true,
-            gutter: 10 // 可选，添加卡片间的间距
+            gutter: 15 // 增加间距，提升视觉效果
           });
         });
       </script>

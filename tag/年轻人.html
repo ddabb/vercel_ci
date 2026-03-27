@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
 
 <head>
   <meta charset="UTF-8">
@@ -9,7 +9,7 @@
   <meta name="description" content="无人自助站的【年轻人】的标签列表页面，汇集了关于【年轻人】标签相关的文章和资讯，方便您快速找到感兴趣的内容。">
   <meta name="keywords" content="无人自助站,年轻人">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>标签文章列表</title>
+  <title>年轻人标签 - 无人自助站</title>
 
   <link rel="icon" href="../logo.svg" type="image/svg+xml">
   <link rel="stylesheet" href="../css/style.css">
@@ -27,6 +27,62 @@
   <!-- 引入Masonry -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/masonry/4.2.2/masonry.pkgd.min.js"></script>
 
+  <style>
+        .tag-header {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            color: white;
+            padding: 2rem;
+            border-radius: 8px;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        .tag-title {
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+        .article-card {
+            transition: all 0.3s ease;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        .article-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+        }
+        .article-title {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            transition: color 0.3s ease;
+        }
+        .article-title:hover {
+            color: #0d6efd;
+        }
+        .article-meta {
+            font-size: 0.85rem;
+            color: #6c757d;
+        }
+        .tag-link {
+            background-color: #e9ecef;
+            color: #495057;
+            transition: all 0.2s ease;
+        }
+        .tag-link:hover {
+            background-color: #dee2e6;
+            color: #212529;
+        }
+        .back-button {
+            transition: all 0.3s ease;
+        }
+        .back-button:hover {
+            transform: translateX(-3px);
+        }
+        .article-count {
+            font-size: 0.9rem;
+            opacity: 0.9;
+        }
+    </style>
 </head>
 
 <body>
@@ -80,7 +136,7 @@
     <main class="container-fluid mt-4">
       <div class="row">
         <div class="col-lg-8 col-md-12 mx-auto">
-          <nav aria-label="breadcrumb">
+          <nav aria-label="breadcrumb" class="mb-4">
             <ol class="breadcrumb">
               <li class="breadcrumb-item"><a href="/html/index.html">首页</a></li>
               <li class="breadcrumb-item"><a href="标签列表.html">标签列表</a></li>
@@ -89,54 +145,64 @@
               </li>
             </ol>
           </nav>
-          <h1 style="font-size: 1.5em; margin: 0.5em 0;">
-            年轻人标签的文章和资讯
-        </h1>
+          
+          <!-- 标签头部 -->
+          <div class="tag-header">
+              <h1 class="tag-title">
+                  <i class="bi bi-tags me-2"></i>
+                  年轻人
+              </h1>
+              <p class="article-count">
+                  共 27 篇文章
+              </p>
+          </div>
+          
           <div class="masonry-grid">
             
               <div class="masonry-grid-item">
-                <div class="card shadow-sm">
+                <div class="card article-card shadow-sm">
                   <div class="card-body">
-                    <h5 class="card-title">
-                      <i class="bi bi-file-earmark-text"></i>
-                      <a href="../mdhtml/为什么现在的年轻人都开始买社保了.html" class="text-decoration-none">
+                    <h5 class="card-title article-title">
+                      <i class="bi bi-file-earmark-text me-2 text-primary"></i>
+                      <a href="../mdhtml/为什么现在的年轻人都开始买社保了.html" class="text-decoration-none text-dark">
                         为什么现在的年轻人都开始买社保了
                       </a>
                     </h5>
                     
-                      <p class="card-text">
+                      <p class="card-text text-muted mb-3">
                         分析年轻人购买社保的现象。
                       </p>
                       
-                        
-                          <small class="text-muted">
-                            2026-03-24
-                          </small>
-                          
+                        <div class="article-meta">
+                            
+                                <i class="bi bi-clock me-1"></i>
+                                2026-03-24
+                                
+                        </div>
                   </div>
-                  <div class="card-footer text-muted">
+                  <div class="card-footer text-muted bg-white border-top">
                     <a href="/category/%E7%A4%BE%E4%BC%9A%E8%A7%82%E5%AF%9F.html"
-                      class="badge bg-primary">
+                      class="badge bg-primary me-2">
                       社会观察
                     </a>
                     
-                      <a href="/tag/%E7%A4%BE%E4%BF%9D.html" class="badge tag-link">
+                      <a href="/tag/%E7%A4%BE%E4%BF%9D.html" class="badge tag-link me-2 mb-1">
                         社保
                       </a>
                       
-                      <a href="/tag/%E5%B9%B4%E8%BD%BB%E4%BA%BA.html" class="badge tag-link">
+                      <a href="/tag/%E5%B9%B4%E8%BD%BB%E4%BA%BA.html" class="badge tag-link me-2 mb-1">
                         年轻人
                       </a>
                       
-                      <a href="/tag/%E4%BF%9D%E9%9A%9C.html" class="badge tag-link">
+                      <a href="/tag/%E4%BF%9D%E9%9A%9C.html" class="badge tag-link me-2 mb-1">
                         保障
                       </a>
                       
-                      <a href="/tag/%E6%84%8F%E8%AF%86.html" class="badge tag-link">
+                      <a href="/tag/%E6%84%8F%E8%AF%86.html" class="badge tag-link me-2 mb-1">
                         意识
                       </a>
                       
-                      <a href="/tag/%E6%9C%AA%E6%9D%A5.html" class="badge tag-link">
+                      <a href="/tag/%E6%9C%AA%E6%9D%A5.html" class="badge tag-link me-2 mb-1">
                         未来
                       </a>
                       
@@ -145,48 +211,49 @@
               </div>
               
               <div class="masonry-grid-item">
-                <div class="card shadow-sm">
+                <div class="card article-card shadow-sm">
                   <div class="card-body">
-                    <h5 class="card-title">
-                      <i class="bi bi-file-earmark-text"></i>
-                      <a href="../mdhtml/为什么现在的年轻人都开始存黄金了.html" class="text-decoration-none">
+                    <h5 class="card-title article-title">
+                      <i class="bi bi-file-earmark-text me-2 text-primary"></i>
+                      <a href="../mdhtml/为什么现在的年轻人都开始存黄金了.html" class="text-decoration-none text-dark">
                         为什么现在的年轻人都开始存黄金了
                       </a>
                     </h5>
                     
-                      <p class="card-text">
+                      <p class="card-text text-muted mb-3">
                         分析年轻人购买和存储黄金的现象。
                       </p>
                       
-                        
-                          <small class="text-muted">
-                            2026-03-24
-                          </small>
-                          
+                        <div class="article-meta">
+                            
+                                <i class="bi bi-clock me-1"></i>
+                                2026-03-24
+                                
+                        </div>
                   </div>
-                  <div class="card-footer text-muted">
+                  <div class="card-footer text-muted bg-white border-top">
                     <a href="/category/%E7%90%86%E8%B4%A2%E8%A7%82%E5%AF%9F.html"
-                      class="badge bg-primary">
+                      class="badge bg-primary me-2">
                       理财观察
                     </a>
                     
-                      <a href="/tag/%E9%BB%84%E9%87%91.html" class="badge tag-link">
+                      <a href="/tag/%E9%BB%84%E9%87%91.html" class="badge tag-link me-2 mb-1">
                         黄金
                       </a>
                       
-                      <a href="/tag/%E5%AD%98%E9%92%B1.html" class="badge tag-link">
+                      <a href="/tag/%E5%AD%98%E9%92%B1.html" class="badge tag-link me-2 mb-1">
                         存钱
                       </a>
                       
-                      <a href="/tag/%E5%B9%B4%E8%BD%BB%E4%BA%BA.html" class="badge tag-link">
+                      <a href="/tag/%E5%B9%B4%E8%BD%BB%E4%BA%BA.html" class="badge tag-link me-2 mb-1">
                         年轻人
                       </a>
                       
-                      <a href="/tag/%E4%BF%9D%E5%80%BC.html" class="badge tag-link">
+                      <a href="/tag/%E4%BF%9D%E5%80%BC.html" class="badge tag-link me-2 mb-1">
                         保值
                       </a>
                       
-                      <a href="/tag/%E6%8A%95%E8%B5%84.html" class="badge tag-link">
+                      <a href="/tag/%E6%8A%95%E8%B5%84.html" class="badge tag-link me-2 mb-1">
                         投资
                       </a>
                       
@@ -195,48 +262,49 @@
               </div>
               
               <div class="masonry-grid-item">
-                <div class="card shadow-sm">
+                <div class="card article-card shadow-sm">
                   <div class="card-body">
-                    <h5 class="card-title">
-                      <i class="bi bi-file-earmark-text"></i>
-                      <a href="../mdhtml/为什么现在的年轻人都开始极简生活了.html" class="text-decoration-none">
+                    <h5 class="card-title article-title">
+                      <i class="bi bi-file-earmark-text me-2 text-primary"></i>
+                      <a href="../mdhtml/为什么现在的年轻人都开始极简生活了.html" class="text-decoration-none text-dark">
                         为什么现在的年轻人都开始极简生活了
                       </a>
                     </h5>
                     
-                      <p class="card-text">
+                      <p class="card-text text-muted mb-3">
                         分析年轻人极简生活的现象，探讨生活方式变化。
                       </p>
                       
-                        
-                          <small class="text-muted">
-                            2026-03-24
-                          </small>
-                          
+                        <div class="article-meta">
+                            
+                                <i class="bi bi-clock me-1"></i>
+                                2026-03-24
+                                
+                        </div>
                   </div>
-                  <div class="card-footer text-muted">
+                  <div class="card-footer text-muted bg-white border-top">
                     <a href="/category/%E7%94%9F%E6%B4%BB%E8%A7%82%E5%AF%9F.html"
-                      class="badge bg-primary">
+                      class="badge bg-primary me-2">
                       生活观察
                     </a>
                     
-                      <a href="/tag/%E6%9E%81%E7%AE%80.html" class="badge tag-link">
+                      <a href="/tag/%E6%9E%81%E7%AE%80.html" class="badge tag-link me-2 mb-1">
                         极简
                       </a>
                       
-                      <a href="/tag/%E7%94%9F%E6%B4%BB.html" class="badge tag-link">
+                      <a href="/tag/%E7%94%9F%E6%B4%BB.html" class="badge tag-link me-2 mb-1">
                         生活
                       </a>
                       
-                      <a href="/tag/%E5%B9%B4%E8%BD%BB%E4%BA%BA.html" class="badge tag-link">
+                      <a href="/tag/%E5%B9%B4%E8%BD%BB%E4%BA%BA.html" class="badge tag-link me-2 mb-1">
                         年轻人
                       </a>
                       
-                      <a href="/tag/%E7%AE%80%E5%8D%95.html" class="badge tag-link">
+                      <a href="/tag/%E7%AE%80%E5%8D%95.html" class="badge tag-link me-2 mb-1">
                         简单
                       </a>
                       
-                      <a href="/tag/%E6%96%AD%E8%88%8D%E7%A6%BB.html" class="badge tag-link">
+                      <a href="/tag/%E6%96%AD%E8%88%8D%E7%A6%BB.html" class="badge tag-link me-2 mb-1">
                         断舍离
                       </a>
                       
@@ -245,48 +313,49 @@
               </div>
               
               <div class="masonry-grid-item">
-                <div class="card shadow-sm">
+                <div class="card article-card shadow-sm">
                   <div class="card-body">
-                    <h5 class="card-title">
-                      <i class="bi bi-file-earmark-text"></i>
-                      <a href="../mdhtml/为什么现在的年轻人都开始做TikTok了.html" class="text-decoration-none">
+                    <h5 class="card-title article-title">
+                      <i class="bi bi-file-earmark-text me-2 text-primary"></i>
+                      <a href="../mdhtml/为什么现在的年轻人都开始做TikTok了.html" class="text-decoration-none text-dark">
                         为什么现在的年轻人都开始做Tiktok了
                       </a>
                     </h5>
                     
-                      <p class="card-text">
+                      <p class="card-text text-muted mb-3">
                         分析年轻人做TikTok的现象，探讨短视频创业趋势。
                       </p>
                       
-                        
-                          <small class="text-muted">
-                            2026-03-24
-                          </small>
-                          
+                        <div class="article-meta">
+                            
+                                <i class="bi bi-clock me-1"></i>
+                                2026-03-24
+                                
+                        </div>
                   </div>
-                  <div class="card-footer text-muted">
+                  <div class="card-footer text-muted bg-white border-top">
                     <a href="/category/%E8%87%AA%E5%AA%92%E4%BD%93%E8%A7%82%E5%AF%9F.html"
-                      class="badge bg-primary">
+                      class="badge bg-primary me-2">
                       自媒体观察
                     </a>
                     
-                      <a href="/tag/TikTok.html" class="badge tag-link">
+                      <a href="/tag/TikTok.html" class="badge tag-link me-2 mb-1">
                         TikTok
                       </a>
                       
-                      <a href="/tag/%E8%87%AA%E5%AA%92%E4%BD%93.html" class="badge tag-link">
+                      <a href="/tag/%E8%87%AA%E5%AA%92%E4%BD%93.html" class="badge tag-link me-2 mb-1">
                         自媒体
                       </a>
                       
-                      <a href="/tag/%E5%B9%B4%E8%BD%BB%E4%BA%BA.html" class="badge tag-link">
+                      <a href="/tag/%E5%B9%B4%E8%BD%BB%E4%BA%BA.html" class="badge tag-link me-2 mb-1">
                         年轻人
                       </a>
                       
-                      <a href="/tag/%E5%88%9B%E4%B8%9A.html" class="badge tag-link">
+                      <a href="/tag/%E5%88%9B%E4%B8%9A.html" class="badge tag-link me-2 mb-1">
                         创业
                       </a>
                       
-                      <a href="/tag/%E7%9F%AD%E8%A7%86%E9%A2%91.html" class="badge tag-link">
+                      <a href="/tag/%E7%9F%AD%E8%A7%86%E9%A2%91.html" class="badge tag-link me-2 mb-1">
                         短视频
                       </a>
                       
@@ -295,48 +364,49 @@
               </div>
               
               <div class="masonry-grid-item">
-                <div class="card shadow-sm">
+                <div class="card article-card shadow-sm">
                   <div class="card-body">
-                    <h5 class="card-title">
-                      <i class="bi bi-file-earmark-text"></i>
-                      <a href="../mdhtml/为什么现在的年轻人都不爱换手机号了.html" class="text-decoration-none">
+                    <h5 class="card-title article-title">
+                      <i class="bi bi-file-earmark-text me-2 text-primary"></i>
+                      <a href="../mdhtml/为什么现在的年轻人都不爱换手机号了.html" class="text-decoration-none text-dark">
                         为什么现在的年轻人都不爱换手机号了
                       </a>
                     </h5>
                     
-                      <p class="card-text">
+                      <p class="card-text text-muted mb-3">
                         分析年轻人不换手机号的现象，探讨原因和影响。
                       </p>
                       
-                        
-                          <small class="text-muted">
-                            2026-03-24
-                          </small>
-                          
+                        <div class="article-meta">
+                            
+                                <i class="bi bi-clock me-1"></i>
+                                2026-03-24
+                                
+                        </div>
                   </div>
-                  <div class="card-footer text-muted">
+                  <div class="card-footer text-muted bg-white border-top">
                     <a href="/category/%E6%95%B0%E5%AD%97%E7%94%9F%E6%B4%BB.html"
-                      class="badge bg-primary">
+                      class="badge bg-primary me-2">
                       数字生活
                     </a>
                     
-                      <a href="/tag/%E6%89%8B%E6%9C%BA%E5%8F%B7.html" class="badge tag-link">
+                      <a href="/tag/%E6%89%8B%E6%9C%BA%E5%8F%B7.html" class="badge tag-link me-2 mb-1">
                         手机号
                       </a>
                       
-                      <a href="/tag/%E6%8D%A2%E5%8F%B7.html" class="badge tag-link">
+                      <a href="/tag/%E6%8D%A2%E5%8F%B7.html" class="badge tag-link me-2 mb-1">
                         换号
                       </a>
                       
-                      <a href="/tag/%E5%B9%B4%E8%BD%BB%E4%BA%BA.html" class="badge tag-link">
+                      <a href="/tag/%E5%B9%B4%E8%BD%BB%E4%BA%BA.html" class="badge tag-link me-2 mb-1">
                         年轻人
                       </a>
                       
-                      <a href="/tag/%E9%BA%BB%E7%83%A6.html" class="badge tag-link">
+                      <a href="/tag/%E9%BA%BB%E7%83%A6.html" class="badge tag-link me-2 mb-1">
                         麻烦
                       </a>
                       
-                      <a href="/tag/%E7%A4%BE%E4%BA%A4.html" class="badge tag-link">
+                      <a href="/tag/%E7%A4%BE%E4%BA%A4.html" class="badge tag-link me-2 mb-1">
                         社交
                       </a>
                       
@@ -345,48 +415,49 @@
               </div>
               
               <div class="masonry-grid-item">
-                <div class="card shadow-sm">
+                <div class="card article-card shadow-sm">
                   <div class="card-body">
-                    <h5 class="card-title">
-                      <i class="bi bi-file-earmark-text"></i>
-                      <a href="../mdhtml/为什么现在的人都不愿走亲戚了.html" class="text-decoration-none">
+                    <h5 class="card-title article-title">
+                      <i class="bi bi-file-earmark-text me-2 text-primary"></i>
+                      <a href="../mdhtml/为什么现在的人都不愿走亲戚了.html" class="text-decoration-none text-dark">
                         为什么现在的人都不愿走亲戚了
                       </a>
                     </h5>
                     
-                      <p class="card-text">
+                      <p class="card-text text-muted mb-3">
                         分析春节走亲戚减少的现象，探讨人情关系变化。
                       </p>
                       
-                        
-                          <small class="text-muted">
-                            2026-03-24
-                          </small>
-                          
+                        <div class="article-meta">
+                            
+                                <i class="bi bi-clock me-1"></i>
+                                2026-03-24
+                                
+                        </div>
                   </div>
-                  <div class="card-footer text-muted">
+                  <div class="card-footer text-muted bg-white border-top">
                     <a href="/category/%E7%A4%BE%E4%BC%9A%E8%A7%82%E5%AF%9F.html"
-                      class="badge bg-primary">
+                      class="badge bg-primary me-2">
                       社会观察
                     </a>
                     
-                      <a href="/tag/%E8%B5%B0%E4%BA%B2%E6%88%9A.html" class="badge tag-link">
+                      <a href="/tag/%E8%B5%B0%E4%BA%B2%E6%88%9A.html" class="badge tag-link me-2 mb-1">
                         走亲戚
                       </a>
                       
-                      <a href="/tag/%E6%98%A5%E8%8A%82.html" class="badge tag-link">
+                      <a href="/tag/%E6%98%A5%E8%8A%82.html" class="badge tag-link me-2 mb-1">
                         春节
                       </a>
                       
-                      <a href="/tag/%E5%B9%B4%E8%BD%BB%E4%BA%BA.html" class="badge tag-link">
+                      <a href="/tag/%E5%B9%B4%E8%BD%BB%E4%BA%BA.html" class="badge tag-link me-2 mb-1">
                         年轻人
                       </a>
                       
-                      <a href="/tag/%E4%BA%BA%E6%83%85.html" class="badge tag-link">
+                      <a href="/tag/%E4%BA%BA%E6%83%85.html" class="badge tag-link me-2 mb-1">
                         人情
                       </a>
                       
-                      <a href="/tag/%E4%BC%A0%E7%BB%9F.html" class="badge tag-link">
+                      <a href="/tag/%E4%BC%A0%E7%BB%9F.html" class="badge tag-link me-2 mb-1">
                         传统
                       </a>
                       
@@ -395,48 +466,49 @@
               </div>
               
               <div class="masonry-grid-item">
-                <div class="card shadow-sm">
+                <div class="card article-card shadow-sm">
                   <div class="card-body">
-                    <h5 class="card-title">
-                      <i class="bi bi-file-earmark-text"></i>
-                      <a href="../mdhtml/为什么现在的年轻人都开始存定期了.html" class="text-decoration-none">
+                    <h5 class="card-title article-title">
+                      <i class="bi bi-file-earmark-text me-2 text-primary"></i>
+                      <a href="../mdhtml/为什么现在的年轻人都开始存定期了.html" class="text-decoration-none text-dark">
                         为什么现在的年轻人都开始存定期了
                       </a>
                     </h5>
                     
-                      <p class="card-text">
+                      <p class="card-text text-muted mb-3">
                         分析年轻人存定期的现象，探讨理财观念的变化。
                       </p>
                       
-                        
-                          <small class="text-muted">
-                            2026-03-24
-                          </small>
-                          
+                        <div class="article-meta">
+                            
+                                <i class="bi bi-clock me-1"></i>
+                                2026-03-24
+                                
+                        </div>
                   </div>
-                  <div class="card-footer text-muted">
+                  <div class="card-footer text-muted bg-white border-top">
                     <a href="/category/%E7%90%86%E8%B4%A2%E8%A7%82%E5%AF%9F.html"
-                      class="badge bg-primary">
+                      class="badge bg-primary me-2">
                       理财观察
                     </a>
                     
-                      <a href="/tag/%E5%AD%98%E9%92%B1.html" class="badge tag-link">
+                      <a href="/tag/%E5%AD%98%E9%92%B1.html" class="badge tag-link me-2 mb-1">
                         存钱
                       </a>
                       
-                      <a href="/tag/%E5%AE%9A%E6%9C%9F.html" class="badge tag-link">
+                      <a href="/tag/%E5%AE%9A%E6%9C%9F.html" class="badge tag-link me-2 mb-1">
                         定期
                       </a>
                       
-                      <a href="/tag/%E5%B9%B4%E8%BD%BB%E4%BA%BA.html" class="badge tag-link">
+                      <a href="/tag/%E5%B9%B4%E8%BD%BB%E4%BA%BA.html" class="badge tag-link me-2 mb-1">
                         年轻人
                       </a>
                       
-                      <a href="/tag/%E7%90%86%E8%B4%A2.html" class="badge tag-link">
+                      <a href="/tag/%E7%90%86%E8%B4%A2.html" class="badge tag-link me-2 mb-1">
                         理财
                       </a>
                       
-                      <a href="/tag/%E5%82%A8%E8%93%84.html" class="badge tag-link">
+                      <a href="/tag/%E5%82%A8%E8%93%84.html" class="badge tag-link me-2 mb-1">
                         储蓄
                       </a>
                       
@@ -445,48 +517,49 @@
               </div>
               
               <div class="masonry-grid-item">
-                <div class="card shadow-sm">
+                <div class="card article-card shadow-sm">
                   <div class="card-body">
-                    <h5 class="card-title">
-                      <i class="bi bi-file-earmark-text"></i>
-                      <a href="../mdhtml/为什么现在的年轻人都开始写遗书了.html" class="text-decoration-none">
+                    <h5 class="card-title article-title">
+                      <i class="bi bi-file-earmark-text me-2 text-primary"></i>
+                      <a href="../mdhtml/为什么现在的年轻人都开始写遗书了.html" class="text-decoration-none text-dark">
                         为什么现在的年轻人都开始写遗书了
                       </a>
                     </h5>
                     
-                      <p class="card-text">
+                      <p class="card-text text-muted mb-3">
                         分析年轻人写遗书的现象，探讨心理健康问题。
                       </p>
                       
-                        
-                          <small class="text-muted">
-                            2026-03-24
-                          </small>
-                          
+                        <div class="article-meta">
+                            
+                                <i class="bi bi-clock me-1"></i>
+                                2026-03-24
+                                
+                        </div>
                   </div>
-                  <div class="card-footer text-muted">
+                  <div class="card-footer text-muted bg-white border-top">
                     <a href="/category/%E5%BF%83%E7%90%86%E5%81%A5%E5%BA%B7.html"
-                      class="badge bg-primary">
+                      class="badge bg-primary me-2">
                       心理健康
                     </a>
                     
-                      <a href="/tag/%E9%81%97%E4%B9%A6.html" class="badge tag-link">
+                      <a href="/tag/%E9%81%97%E4%B9%A6.html" class="badge tag-link me-2 mb-1">
                         遗书
                       </a>
                       
-                      <a href="/tag/%E5%B9%B4%E8%BD%BB%E4%BA%BA.html" class="badge tag-link">
+                      <a href="/tag/%E5%B9%B4%E8%BD%BB%E4%BA%BA.html" class="badge tag-link me-2 mb-1">
                         年轻人
                       </a>
                       
-                      <a href="/tag/%E5%BF%83%E7%90%86%E5%81%A5%E5%BA%B7.html" class="badge tag-link">
+                      <a href="/tag/%E5%BF%83%E7%90%86%E5%81%A5%E5%BA%B7.html" class="badge tag-link me-2 mb-1">
                         心理健康
                       </a>
                       
-                      <a href="/tag/%E5%8E%8B%E5%8A%9B.html" class="badge tag-link">
+                      <a href="/tag/%E5%8E%8B%E5%8A%9B.html" class="badge tag-link me-2 mb-1">
                         压力
                       </a>
                       
-                      <a href="/tag/%E7%94%9F%E5%91%BD.html" class="badge tag-link">
+                      <a href="/tag/%E7%94%9F%E5%91%BD.html" class="badge tag-link me-2 mb-1">
                         生命
                       </a>
                       
@@ -495,48 +568,49 @@
               </div>
               
               <div class="masonry-grid-item">
-                <div class="card shadow-sm">
+                <div class="card article-card shadow-sm">
                   <div class="card-body">
-                    <h5 class="card-title">
-                      <i class="bi bi-file-earmark-text"></i>
-                      <a href="../mdhtml/为什么现在的年轻人都开始养宠物了.html" class="text-decoration-none">
+                    <h5 class="card-title article-title">
+                      <i class="bi bi-file-earmark-text me-2 text-primary"></i>
+                      <a href="../mdhtml/为什么现在的年轻人都开始养宠物了.html" class="text-decoration-none text-dark">
                         为什么现在的年轻人都开始养宠物了
                       </a>
                     </h5>
                     
-                      <p class="card-text">
+                      <p class="card-text text-muted mb-3">
                         分析年轻人养宠物的现象，探讨情感需求和社会变化。
                       </p>
                       
-                        
-                          <small class="text-muted">
-                            2026-03-24
-                          </small>
-                          
+                        <div class="article-meta">
+                            
+                                <i class="bi bi-clock me-1"></i>
+                                2026-03-24
+                                
+                        </div>
                   </div>
-                  <div class="card-footer text-muted">
+                  <div class="card-footer text-muted bg-white border-top">
                     <a href="/category/%E7%A4%BE%E4%BC%9A%E8%A7%82%E5%AF%9F.html"
-                      class="badge bg-primary">
+                      class="badge bg-primary me-2">
                       社会观察
                     </a>
                     
-                      <a href="/tag/%E5%AE%A0%E7%89%A9.html" class="badge tag-link">
+                      <a href="/tag/%E5%AE%A0%E7%89%A9.html" class="badge tag-link me-2 mb-1">
                         宠物
                       </a>
                       
-                      <a href="/tag/%E5%B9%B4%E8%BD%BB%E4%BA%BA.html" class="badge tag-link">
+                      <a href="/tag/%E5%B9%B4%E8%BD%BB%E4%BA%BA.html" class="badge tag-link me-2 mb-1">
                         年轻人
                       </a>
                       
-                      <a href="/tag/%E5%85%BB%E5%AE%A0%E7%89%A9.html" class="badge tag-link">
+                      <a href="/tag/%E5%85%BB%E5%AE%A0%E7%89%A9.html" class="badge tag-link me-2 mb-1">
                         养宠物
                       </a>
                       
-                      <a href="/tag/%E9%99%AA%E4%BC%B4.html" class="badge tag-link">
+                      <a href="/tag/%E9%99%AA%E4%BC%B4.html" class="badge tag-link me-2 mb-1">
                         陪伴
                       </a>
                       
-                      <a href="/tag/%E6%83%85%E6%84%9F.html" class="badge tag-link">
+                      <a href="/tag/%E6%83%85%E6%84%9F.html" class="badge tag-link me-2 mb-1">
                         情感
                       </a>
                       
@@ -545,48 +619,49 @@
               </div>
               
               <div class="masonry-grid-item">
-                <div class="card shadow-sm">
+                <div class="card article-card shadow-sm">
                   <div class="card-body">
-                    <h5 class="card-title">
-                      <i class="bi bi-file-earmark-text"></i>
-                      <a href="../mdhtml/为什么现在的年轻人都开始买基金了.html" class="text-decoration-none">
+                    <h5 class="card-title article-title">
+                      <i class="bi bi-file-earmark-text me-2 text-primary"></i>
+                      <a href="../mdhtml/为什么现在的年轻人都开始买基金了.html" class="text-decoration-none text-dark">
                         为什么现在的年轻人都开始买基金了
                       </a>
                     </h5>
                     
-                      <p class="card-text">
+                      <p class="card-text text-muted mb-3">
                         分析年轻人投资基金的现象，探讨理财观念的普及。
                       </p>
                       
-                        
-                          <small class="text-muted">
-                            2026-03-24
-                          </small>
-                          
+                        <div class="article-meta">
+                            
+                                <i class="bi bi-clock me-1"></i>
+                                2026-03-24
+                                
+                        </div>
                   </div>
-                  <div class="card-footer text-muted">
+                  <div class="card-footer text-muted bg-white border-top">
                     <a href="/category/%E7%90%86%E8%B4%A2%E8%A7%82%E5%AF%9F.html"
-                      class="badge bg-primary">
+                      class="badge bg-primary me-2">
                       理财观察
                     </a>
                     
-                      <a href="/tag/%E5%9F%BA%E9%87%91.html" class="badge tag-link">
+                      <a href="/tag/%E5%9F%BA%E9%87%91.html" class="badge tag-link me-2 mb-1">
                         基金
                       </a>
                       
-                      <a href="/tag/%E7%90%86%E8%B4%A2.html" class="badge tag-link">
+                      <a href="/tag/%E7%90%86%E8%B4%A2.html" class="badge tag-link me-2 mb-1">
                         理财
                       </a>
                       
-                      <a href="/tag/%E5%B9%B4%E8%BD%BB%E4%BA%BA.html" class="badge tag-link">
+                      <a href="/tag/%E5%B9%B4%E8%BD%BB%E4%BA%BA.html" class="badge tag-link me-2 mb-1">
                         年轻人
                       </a>
                       
-                      <a href="/tag/%E6%8A%95%E8%B5%84.html" class="badge tag-link">
+                      <a href="/tag/%E6%8A%95%E8%B5%84.html" class="badge tag-link me-2 mb-1">
                         投资
                       </a>
                       
-                      <a href="/tag/%E8%B4%A2%E5%AF%8C.html" class="badge tag-link">
+                      <a href="/tag/%E8%B4%A2%E5%AF%8C.html" class="badge tag-link me-2 mb-1">
                         财富
                       </a>
                       
@@ -595,48 +670,49 @@
               </div>
               
               <div class="masonry-grid-item">
-                <div class="card shadow-sm">
+                <div class="card article-card shadow-sm">
                   <div class="card-body">
-                    <h5 class="card-title">
-                      <i class="bi bi-file-earmark-text"></i>
-                      <a href="../mdhtml/为什么现在的年轻人都不爱买房子了.html" class="text-decoration-none">
+                    <h5 class="card-title article-title">
+                      <i class="bi bi-file-earmark-text me-2 text-primary"></i>
+                      <a href="../mdhtml/为什么现在的年轻人都不爱买房子了.html" class="text-decoration-none text-dark">
                         为什么现在的年轻人都不爱买房子了
                       </a>
                     </h5>
                     
-                      <p class="card-text">
+                      <p class="card-text text-muted mb-3">
                         分析年轻人不买房的现象，探讨房价压力和生活观念的变化。
                       </p>
                       
-                        
-                          <small class="text-muted">
-                            2026-03-24
-                          </small>
-                          
+                        <div class="article-meta">
+                            
+                                <i class="bi bi-clock me-1"></i>
+                                2026-03-24
+                                
+                        </div>
                   </div>
-                  <div class="card-footer text-muted">
+                  <div class="card-footer text-muted bg-white border-top">
                     <a href="/category/%E7%A4%BE%E4%BC%9A%E8%A7%82%E5%AF%9F.html"
-                      class="badge bg-primary">
+                      class="badge bg-primary me-2">
                       社会观察
                     </a>
                     
-                      <a href="/tag/%E4%B9%B0%E6%88%BF.html" class="badge tag-link">
+                      <a href="/tag/%E4%B9%B0%E6%88%BF.html" class="badge tag-link me-2 mb-1">
                         买房
                       </a>
                       
-                      <a href="/tag/%E6%88%BF%E4%BB%B7.html" class="badge tag-link">
+                      <a href="/tag/%E6%88%BF%E4%BB%B7.html" class="badge tag-link me-2 mb-1">
                         房价
                       </a>
                       
-                      <a href="/tag/%E5%B9%B4%E8%BD%BB%E4%BA%BA.html" class="badge tag-link">
+                      <a href="/tag/%E5%B9%B4%E8%BD%BB%E4%BA%BA.html" class="badge tag-link me-2 mb-1">
                         年轻人
                       </a>
                       
-                      <a href="/tag/%E6%88%BF%E5%9C%B0%E4%BA%A7.html" class="badge tag-link">
+                      <a href="/tag/%E6%88%BF%E5%9C%B0%E4%BA%A7.html" class="badge tag-link me-2 mb-1">
                         房地产
                       </a>
                       
-                      <a href="/tag/%E7%94%9F%E6%B4%BB%E9%80%89%E6%8B%A9.html" class="badge tag-link">
+                      <a href="/tag/%E7%94%9F%E6%B4%BB%E9%80%89%E6%8B%A9.html" class="badge tag-link me-2 mb-1">
                         生活选择
                       </a>
                       
@@ -645,48 +721,49 @@
               </div>
               
               <div class="masonry-grid-item">
-                <div class="card shadow-sm">
+                <div class="card article-card shadow-sm">
                   <div class="card-body">
-                    <h5 class="card-title">
-                      <i class="bi bi-file-earmark-text"></i>
-                      <a href="../mdhtml/为什么现在的年轻人都开始反向消费了.html" class="text-decoration-none">
+                    <h5 class="card-title article-title">
+                      <i class="bi bi-file-earmark-text me-2 text-primary"></i>
+                      <a href="../mdhtml/为什么现在的年轻人都开始反向消费了.html" class="text-decoration-none text-dark">
                         为什么现在的年轻人都开始反向消费了
                       </a>
                     </h5>
                     
-                      <p class="card-text">
+                      <p class="card-text text-muted mb-3">
                         分析年轻人反向消费的现象，探讨理性消费观念的回归。
                       </p>
                       
-                        
-                          <small class="text-muted">
-                            2026-03-24
-                          </small>
-                          
+                        <div class="article-meta">
+                            
+                                <i class="bi bi-clock me-1"></i>
+                                2026-03-24
+                                
+                        </div>
                   </div>
-                  <div class="card-footer text-muted">
+                  <div class="card-footer text-muted bg-white border-top">
                     <a href="/category/%E6%B6%88%E8%B4%B9%E8%A7%82%E5%AF%9F.html"
-                      class="badge bg-primary">
+                      class="badge bg-primary me-2">
                       消费观察
                     </a>
                     
-                      <a href="/tag/%E5%8F%8D%E5%90%91%E6%B6%88%E8%B4%B9.html" class="badge tag-link">
+                      <a href="/tag/%E5%8F%8D%E5%90%91%E6%B6%88%E8%B4%B9.html" class="badge tag-link me-2 mb-1">
                         反向消费
                       </a>
                       
-                      <a href="/tag/%E5%B9%B4%E8%BD%BB%E4%BA%BA.html" class="badge tag-link">
+                      <a href="/tag/%E5%B9%B4%E8%BD%BB%E4%BA%BA.html" class="badge tag-link me-2 mb-1">
                         年轻人
                       </a>
                       
-                      <a href="/tag/%E6%B6%88%E8%B4%B9%E8%A7%82.html" class="badge tag-link">
+                      <a href="/tag/%E6%B6%88%E8%B4%B9%E8%A7%82.html" class="badge tag-link me-2 mb-1">
                         消费观
                       </a>
                       
-                      <a href="/tag/%E7%90%86%E6%80%A7.html" class="badge tag-link">
+                      <a href="/tag/%E7%90%86%E6%80%A7.html" class="badge tag-link me-2 mb-1">
                         理性
                       </a>
                       
-                      <a href="/tag/%E7%9C%81%E9%92%B1.html" class="badge tag-link">
+                      <a href="/tag/%E7%9C%81%E9%92%B1.html" class="badge tag-link me-2 mb-1">
                         省钱
                       </a>
                       
@@ -695,48 +772,49 @@
               </div>
               
               <div class="masonry-grid-item">
-                <div class="card shadow-sm">
+                <div class="card article-card shadow-sm">
                   <div class="card-body">
-                    <h5 class="card-title">
-                      <i class="bi bi-file-earmark-text"></i>
-                      <a href="../mdhtml/为什么现在的年轻人都变成社恐了.html" class="text-decoration-none">
+                    <h5 class="card-title article-title">
+                      <i class="bi bi-file-earmark-text me-2 text-primary"></i>
+                      <a href="../mdhtml/为什么现在的年轻人都变成社恐了.html" class="text-decoration-none text-dark">
                         为什么现在的年轻人都变成社恐了
                       </a>
                     </h5>
                     
-                      <p class="card-text">
+                      <p class="card-text text-muted mb-3">
                         分析年轻人社交恐惧的原因，探讨社恐现象的普遍性和影响。
                       </p>
                       
-                        
-                          <small class="text-muted">
-                            2026-03-24
-                          </small>
-                          
+                        <div class="article-meta">
+                            
+                                <i class="bi bi-clock me-1"></i>
+                                2026-03-24
+                                
+                        </div>
                   </div>
-                  <div class="card-footer text-muted">
+                  <div class="card-footer text-muted bg-white border-top">
                     <a href="/category/%E5%BF%83%E7%90%86%E8%A7%82%E5%AF%9F.html"
-                      class="badge bg-primary">
+                      class="badge bg-primary me-2">
                       心理观察
                     </a>
                     
-                      <a href="/tag/%E7%A4%BE%E6%81%90.html" class="badge tag-link">
+                      <a href="/tag/%E7%A4%BE%E6%81%90.html" class="badge tag-link me-2 mb-1">
                         社恐
                       </a>
                       
-                      <a href="/tag/%E7%A4%BE%E4%BA%A4%E6%81%90%E6%83%A7.html" class="badge tag-link">
+                      <a href="/tag/%E7%A4%BE%E4%BA%A4%E6%81%90%E6%83%A7.html" class="badge tag-link me-2 mb-1">
                         社交恐惧
                       </a>
                       
-                      <a href="/tag/%E5%B9%B4%E8%BD%BB%E4%BA%BA.html" class="badge tag-link">
+                      <a href="/tag/%E5%B9%B4%E8%BD%BB%E4%BA%BA.html" class="badge tag-link me-2 mb-1">
                         年轻人
                       </a>
                       
-                      <a href="/tag/%E5%BF%83%E7%90%86.html" class="badge tag-link">
+                      <a href="/tag/%E5%BF%83%E7%90%86.html" class="badge tag-link me-2 mb-1">
                         心理
                       </a>
                       
-                      <a href="/tag/%E7%A4%BE%E4%BA%A4.html" class="badge tag-link">
+                      <a href="/tag/%E7%A4%BE%E4%BA%A4.html" class="badge tag-link me-2 mb-1">
                         社交
                       </a>
                       
@@ -745,48 +823,49 @@
               </div>
               
               <div class="masonry-grid-item">
-                <div class="card shadow-sm">
+                <div class="card article-card shadow-sm">
                   <div class="card-body">
-                    <h5 class="card-title">
-                      <i class="bi bi-file-earmark-text"></i>
-                      <a href="../mdhtml/为什么现在的年轻人都不爱发朋友圈了.html" class="text-decoration-none">
+                    <h5 class="card-title article-title">
+                      <i class="bi bi-file-earmark-text me-2 text-primary"></i>
+                      <a href="../mdhtml/为什么现在的年轻人都不爱发朋友圈了.html" class="text-decoration-none text-dark">
                         为什么现在的年轻人都不爱发朋友圈了
                       </a>
                     </h5>
                     
-                      <p class="card-text">
+                      <p class="card-text text-muted mb-3">
                         分析年轻人不发朋友圈的原因，探讨社交习惯的变化。
                       </p>
                       
-                        
-                          <small class="text-muted">
-                            2026-03-24
-                          </small>
-                          
+                        <div class="article-meta">
+                            
+                                <i class="bi bi-clock me-1"></i>
+                                2026-03-24
+                                
+                        </div>
                   </div>
-                  <div class="card-footer text-muted">
+                  <div class="card-footer text-muted bg-white border-top">
                     <a href="/category/%E6%95%B0%E5%AD%97%E7%94%9F%E6%B4%BB.html"
-                      class="badge bg-primary">
+                      class="badge bg-primary me-2">
                       数字生活
                     </a>
                     
-                      <a href="/tag/%E6%9C%8B%E5%8F%8B%E5%9C%88.html" class="badge tag-link">
+                      <a href="/tag/%E6%9C%8B%E5%8F%8B%E5%9C%88.html" class="badge tag-link me-2 mb-1">
                         朋友圈
                       </a>
                       
-                      <a href="/tag/%E7%A4%BE%E4%BA%A4%E5%AA%92%E4%BD%93.html" class="badge tag-link">
+                      <a href="/tag/%E7%A4%BE%E4%BA%A4%E5%AA%92%E4%BD%93.html" class="badge tag-link me-2 mb-1">
                         社交媒体
                       </a>
                       
-                      <a href="/tag/%E5%B9%B4%E8%BD%BB%E4%BA%BA.html" class="badge tag-link">
+                      <a href="/tag/%E5%B9%B4%E8%BD%BB%E4%BA%BA.html" class="badge tag-link me-2 mb-1">
                         年轻人
                       </a>
                       
-                      <a href="/tag/%E9%9A%90%E7%A7%81.html" class="badge tag-link">
+                      <a href="/tag/%E9%9A%90%E7%A7%81.html" class="badge tag-link me-2 mb-1">
                         隐私
                       </a>
                       
-                      <a href="/tag/%E7%A4%BE%E4%BA%A4.html" class="badge tag-link">
+                      <a href="/tag/%E7%A4%BE%E4%BA%A4.html" class="badge tag-link me-2 mb-1">
                         社交
                       </a>
                       
@@ -795,48 +874,49 @@
               </div>
               
               <div class="masonry-grid-item">
-                <div class="card shadow-sm">
+                <div class="card article-card shadow-sm">
                   <div class="card-body">
-                    <h5 class="card-title">
-                      <i class="bi bi-file-earmark-text"></i>
-                      <a href="../mdhtml/为什么现在的年轻人都信星座了.html" class="text-decoration-none">
+                    <h5 class="card-title article-title">
+                      <i class="bi bi-file-earmark-text me-2 text-primary"></i>
+                      <a href="../mdhtml/为什么现在的年轻人都信星座了.html" class="text-decoration-none text-dark">
                         为什么现在的年轻人都信星座了
                       </a>
                     </h5>
                     
-                      <p class="card-text">
+                      <p class="card-text text-muted mb-3">
                         分析年轻人相信星座的原因，探讨星座文化的流行和作用。
                       </p>
                       
-                        
-                          <small class="text-muted">
-                            2026-03-24
-                          </small>
-                          
+                        <div class="article-meta">
+                            
+                                <i class="bi bi-clock me-1"></i>
+                                2026-03-24
+                                
+                        </div>
                   </div>
-                  <div class="card-footer text-muted">
+                  <div class="card-footer text-muted bg-white border-top">
                     <a href="/category/%E5%BF%83%E7%90%86%E6%96%87%E5%8C%96.html"
-                      class="badge bg-primary">
+                      class="badge bg-primary me-2">
                       心理文化
                     </a>
                     
-                      <a href="/tag/%E6%98%9F%E5%BA%A7.html" class="badge tag-link">
+                      <a href="/tag/%E6%98%9F%E5%BA%A7.html" class="badge tag-link me-2 mb-1">
                         星座
                       </a>
                       
-                      <a href="/tag/%E5%B9%B4%E8%BD%BB%E4%BA%BA.html" class="badge tag-link">
+                      <a href="/tag/%E5%B9%B4%E8%BD%BB%E4%BA%BA.html" class="badge tag-link me-2 mb-1">
                         年轻人
                       </a>
                       
-                      <a href="/tag/%E4%BF%A1%E4%BB%B0.html" class="badge tag-link">
+                      <a href="/tag/%E4%BF%A1%E4%BB%B0.html" class="badge tag-link me-2 mb-1">
                         信仰
                       </a>
                       
-                      <a href="/tag/%E5%BF%83%E7%90%86.html" class="badge tag-link">
+                      <a href="/tag/%E5%BF%83%E7%90%86.html" class="badge tag-link me-2 mb-1">
                         心理
                       </a>
                       
-                      <a href="/tag/%E7%A4%BE%E4%BA%A4.html" class="badge tag-link">
+                      <a href="/tag/%E7%A4%BE%E4%BA%A4.html" class="badge tag-link me-2 mb-1">
                         社交
                       </a>
                       
@@ -845,48 +925,49 @@
               </div>
               
               <div class="masonry-grid-item">
-                <div class="card shadow-sm">
+                <div class="card article-card shadow-sm">
                   <div class="card-body">
-                    <h5 class="card-title">
-                      <i class="bi bi-file-earmark-text"></i>
-                      <a href="../mdhtml/为什么现在的年轻人都开始吃软饭了.html" class="text-decoration-none">
+                    <h5 class="card-title article-title">
+                      <i class="bi bi-file-earmark-text me-2 text-primary"></i>
+                      <a href="../mdhtml/为什么现在的年轻人都开始吃软饭了.html" class="text-decoration-none text-dark">
                         为什么现在的年轻人都开始吃软饭了
                       </a>
                     </h5>
                     
-                      <p class="card-text">
+                      <p class="card-text text-muted mb-3">
                         探讨年轻人&#34;吃软饭&#34;现象，分析背后的经济压力和婚恋观念变化。
                       </p>
                       
-                        
-                          <small class="text-muted">
-                            2026-03-24
-                          </small>
-                          
+                        <div class="article-meta">
+                            
+                                <i class="bi bi-clock me-1"></i>
+                                2026-03-24
+                                
+                        </div>
                   </div>
-                  <div class="card-footer text-muted">
+                  <div class="card-footer text-muted bg-white border-top">
                     <a href="/category/%E7%A4%BE%E4%BC%9A%E8%A7%82%E5%AF%9F.html"
-                      class="badge bg-primary">
+                      class="badge bg-primary me-2">
                       社会观察
                     </a>
                     
-                      <a href="/tag/%E5%90%83%E8%BD%AF%E9%A5%AD.html" class="badge tag-link">
+                      <a href="/tag/%E5%90%83%E8%BD%AF%E9%A5%AD.html" class="badge tag-link me-2 mb-1">
                         吃软饭
                       </a>
                       
-                      <a href="/tag/%E5%B9%B4%E8%BD%BB%E4%BA%BA.html" class="badge tag-link">
+                      <a href="/tag/%E5%B9%B4%E8%BD%BB%E4%BA%BA.html" class="badge tag-link me-2 mb-1">
                         年轻人
                       </a>
                       
-                      <a href="/tag/%E5%A9%9A%E6%81%8B.html" class="badge tag-link">
+                      <a href="/tag/%E5%A9%9A%E6%81%8B.html" class="badge tag-link me-2 mb-1">
                         婚恋
                       </a>
                       
-                      <a href="/tag/%E7%BB%8F%E6%B5%8E.html" class="badge tag-link">
+                      <a href="/tag/%E7%BB%8F%E6%B5%8E.html" class="badge tag-link me-2 mb-1">
                         经济
                       </a>
                       
-                      <a href="/tag/%E6%80%A7%E5%88%AB.html" class="badge tag-link">
+                      <a href="/tag/%E6%80%A7%E5%88%AB.html" class="badge tag-link me-2 mb-1">
                         性别
                       </a>
                       
@@ -895,48 +976,49 @@
               </div>
               
               <div class="masonry-grid-item">
-                <div class="card shadow-sm">
+                <div class="card article-card shadow-sm">
                   <div class="card-body">
-                    <h5 class="card-title">
-                      <i class="bi bi-file-earmark-text"></i>
-                      <a href="../mdhtml/为什么现在的年轻人都不爱用信用卡了.html" class="text-decoration-none">
+                    <h5 class="card-title article-title">
+                      <i class="bi bi-file-earmark-text me-2 text-primary"></i>
+                      <a href="../mdhtml/为什么现在的年轻人都不爱用信用卡了.html" class="text-decoration-none text-dark">
                         为什么现在的年轻人都不爱用信用卡了
                       </a>
                     </h5>
                     
-                      <p class="card-text">
+                      <p class="card-text text-muted mb-3">
                         分析年轻人抛弃信用卡的原因，探讨理性消费观念的回归。
                       </p>
                       
-                        
-                          <small class="text-muted">
-                            2026-03-24
-                          </small>
-                          
+                        <div class="article-meta">
+                            
+                                <i class="bi bi-clock me-1"></i>
+                                2026-03-24
+                                
+                        </div>
                   </div>
-                  <div class="card-footer text-muted">
+                  <div class="card-footer text-muted bg-white border-top">
                     <a href="/category/%E6%B6%88%E8%B4%B9%E8%A7%82%E5%AF%9F.html"
-                      class="badge bg-primary">
+                      class="badge bg-primary me-2">
                       消费观察
                     </a>
                     
-                      <a href="/tag/%E4%BF%A1%E7%94%A8%E5%8D%A1.html" class="badge tag-link">
+                      <a href="/tag/%E4%BF%A1%E7%94%A8%E5%8D%A1.html" class="badge tag-link me-2 mb-1">
                         信用卡
                       </a>
                       
-                      <a href="/tag/%E6%B6%88%E8%B4%B9.html" class="badge tag-link">
+                      <a href="/tag/%E6%B6%88%E8%B4%B9.html" class="badge tag-link me-2 mb-1">
                         消费
                       </a>
                       
-                      <a href="/tag/%E5%B9%B4%E8%BD%BB%E4%BA%BA.html" class="badge tag-link">
+                      <a href="/tag/%E5%B9%B4%E8%BD%BB%E4%BA%BA.html" class="badge tag-link me-2 mb-1">
                         年轻人
                       </a>
                       
-                      <a href="/tag/%E7%90%86%E6%80%A7%E6%B6%88%E8%B4%B9.html" class="badge tag-link">
+                      <a href="/tag/%E7%90%86%E6%80%A7%E6%B6%88%E8%B4%B9.html" class="badge tag-link me-2 mb-1">
                         理性消费
                       </a>
                       
-                      <a href="/tag/%E8%B4%A2%E5%8A%A1.html" class="badge tag-link">
+                      <a href="/tag/%E8%B4%A2%E5%8A%A1.html" class="badge tag-link me-2 mb-1">
                         财务
                       </a>
                       
@@ -945,48 +1027,49 @@
               </div>
               
               <div class="masonry-grid-item">
-                <div class="card shadow-sm">
+                <div class="card article-card shadow-sm">
                   <div class="card-body">
-                    <h5 class="card-title">
-                      <i class="bi bi-file-earmark-text"></i>
-                      <a href="../mdhtml/为什么现在的年轻人都不爱走亲戚了.html" class="text-decoration-none">
+                    <h5 class="card-title article-title">
+                      <i class="bi bi-file-earmark-text me-2 text-primary"></i>
+                      <a href="../mdhtml/为什么现在的年轻人都不爱走亲戚了.html" class="text-decoration-none text-dark">
                         为什么现在的年轻人都不爱走亲戚了
                       </a>
                     </h5>
                     
-                      <p class="card-text">
+                      <p class="card-text text-muted mb-3">
                         探讨年轻人疏远亲戚的现象，分析背后的社会原因和个人心理。
                       </p>
                       
-                        
-                          <small class="text-muted">
-                            2026-03-24
-                          </small>
-                          
+                        <div class="article-meta">
+                            
+                                <i class="bi bi-clock me-1"></i>
+                                2026-03-24
+                                
+                        </div>
                   </div>
-                  <div class="card-footer text-muted">
+                  <div class="card-footer text-muted bg-white border-top">
                     <a href="/category/%E7%A4%BE%E4%BC%9A%E8%A7%82%E5%AF%9F.html"
-                      class="badge bg-primary">
+                      class="badge bg-primary me-2">
                       社会观察
                     </a>
                     
-                      <a href="/tag/%E4%BA%B2%E6%88%9A.html" class="badge tag-link">
+                      <a href="/tag/%E4%BA%B2%E6%88%9A.html" class="badge tag-link me-2 mb-1">
                         亲戚
                       </a>
                       
-                      <a href="/tag/%E8%B5%B0%E4%BA%B2.html" class="badge tag-link">
+                      <a href="/tag/%E8%B5%B0%E4%BA%B2.html" class="badge tag-link me-2 mb-1">
                         走亲
                       </a>
                       
-                      <a href="/tag/%E5%B9%B4%E8%BD%BB%E4%BA%BA.html" class="badge tag-link">
+                      <a href="/tag/%E5%B9%B4%E8%BD%BB%E4%BA%BA.html" class="badge tag-link me-2 mb-1">
                         年轻人
                       </a>
                       
-                      <a href="/tag/%E4%BA%BA%E6%83%85.html" class="badge tag-link">
+                      <a href="/tag/%E4%BA%BA%E6%83%85.html" class="badge tag-link me-2 mb-1">
                         人情
                       </a>
                       
-                      <a href="/tag/%E7%A4%BE%E4%BA%A4.html" class="badge tag-link">
+                      <a href="/tag/%E7%A4%BE%E4%BA%A4.html" class="badge tag-link me-2 mb-1">
                         社交
                       </a>
                       
@@ -995,48 +1078,49 @@
               </div>
               
               <div class="masonry-grid-item">
-                <div class="card shadow-sm">
+                <div class="card article-card shadow-sm">
                   <div class="card-body">
-                    <h5 class="card-title">
-                      <i class="bi bi-file-earmark-text"></i>
-                      <a href="../mdhtml/为什么越来越多的年轻人开始信佛了.html" class="text-decoration-none">
+                    <h5 class="card-title article-title">
+                      <i class="bi bi-file-earmark-text me-2 text-primary"></i>
+                      <a href="../mdhtml/为什么越来越多的年轻人开始信佛了.html" class="text-decoration-none text-dark">
                         为什么越来越多的年轻人开始信佛了
                       </a>
                     </h5>
                     
-                      <p class="card-text">
+                      <p class="card-text text-muted mb-3">
                         探讨年轻人信佛的现象，分析背后的心理需求和社会原因。
                       </p>
                       
-                        
-                          <small class="text-muted">
-                            2026-03-24
-                          </small>
-                          
+                        <div class="article-meta">
+                            
+                                <i class="bi bi-clock me-1"></i>
+                                2026-03-24
+                                
+                        </div>
                   </div>
-                  <div class="card-footer text-muted">
+                  <div class="card-footer text-muted bg-white border-top">
                     <a href="/category/%E7%A4%BE%E4%BC%9A%E8%A7%82%E5%AF%9F.html"
-                      class="badge bg-primary">
+                      class="badge bg-primary me-2">
                       社会观察
                     </a>
                     
-                      <a href="/tag/%E4%BF%A1%E4%BB%B0.html" class="badge tag-link">
+                      <a href="/tag/%E4%BF%A1%E4%BB%B0.html" class="badge tag-link me-2 mb-1">
                         信仰
                       </a>
                       
-                      <a href="/tag/%E4%BD%9B%E6%95%99.html" class="badge tag-link">
+                      <a href="/tag/%E4%BD%9B%E6%95%99.html" class="badge tag-link me-2 mb-1">
                         佛教
                       </a>
                       
-                      <a href="/tag/%E5%B9%B4%E8%BD%BB%E4%BA%BA.html" class="badge tag-link">
+                      <a href="/tag/%E5%B9%B4%E8%BD%BB%E4%BA%BA.html" class="badge tag-link me-2 mb-1">
                         年轻人
                       </a>
                       
-                      <a href="/tag/%E5%BF%83%E7%90%86.html" class="badge tag-link">
+                      <a href="/tag/%E5%BF%83%E7%90%86.html" class="badge tag-link me-2 mb-1">
                         心理
                       </a>
                       
-                      <a href="/tag/%E7%B2%BE%E7%A5%9E%E5%AF%84%E6%89%98.html" class="badge tag-link">
+                      <a href="/tag/%E7%B2%BE%E7%A5%9E%E5%AF%84%E6%89%98.html" class="badge tag-link me-2 mb-1">
                         精神寄托
                       </a>
                       
@@ -1045,48 +1129,49 @@
               </div>
               
               <div class="masonry-grid-item">
-                <div class="card shadow-sm">
+                <div class="card article-card shadow-sm">
                   <div class="card-body">
-                    <h5 class="card-title">
-                      <i class="bi bi-file-earmark-text"></i>
-                      <a href="../mdhtml/为什么现在的年轻人都不爱换头像了.html" class="text-decoration-none">
+                    <h5 class="card-title article-title">
+                      <i class="bi bi-file-earmark-text me-2 text-primary"></i>
+                      <a href="../mdhtml/为什么现在的年轻人都不爱换头像了.html" class="text-decoration-none text-dark">
                         为什么现在的年轻人都不爱换头像了
                       </a>
                     </h5>
                     
-                      <p class="card-text">
+                      <p class="card-text text-muted mb-3">
                         探讨年轻人不换头像的现象，分析背后的心理原因和社会变化。
                       </p>
                       
-                        
-                          <small class="text-muted">
-                            2026-03-24
-                          </small>
-                          
+                        <div class="article-meta">
+                            
+                                <i class="bi bi-clock me-1"></i>
+                                2026-03-24
+                                
+                        </div>
                   </div>
-                  <div class="card-footer text-muted">
+                  <div class="card-footer text-muted bg-white border-top">
                     <a href="/category/%E6%95%B0%E5%AD%97%E7%94%9F%E6%B4%BB.html"
-                      class="badge bg-primary">
+                      class="badge bg-primary me-2">
                       数字生活
                     </a>
                     
-                      <a href="/tag/%E5%A4%B4%E5%83%8F.html" class="badge tag-link">
+                      <a href="/tag/%E5%A4%B4%E5%83%8F.html" class="badge tag-link me-2 mb-1">
                         头像
                       </a>
                       
-                      <a href="/tag/%E5%B9%B4%E8%BD%BB%E4%BA%BA.html" class="badge tag-link">
+                      <a href="/tag/%E5%B9%B4%E8%BD%BB%E4%BA%BA.html" class="badge tag-link me-2 mb-1">
                         年轻人
                       </a>
                       
-                      <a href="/tag/%E7%A4%BE%E4%BA%A4.html" class="badge tag-link">
+                      <a href="/tag/%E7%A4%BE%E4%BA%A4.html" class="badge tag-link me-2 mb-1">
                         社交
                       </a>
                       
-                      <a href="/tag/%E5%BF%83%E7%90%86.html" class="badge tag-link">
+                      <a href="/tag/%E5%BF%83%E7%90%86.html" class="badge tag-link me-2 mb-1">
                         心理
                       </a>
                       
-                      <a href="/tag/%E7%A4%BE%E4%BA%A4%E5%AA%92%E4%BD%93.html" class="badge tag-link">
+                      <a href="/tag/%E7%A4%BE%E4%BA%A4%E5%AA%92%E4%BD%93.html" class="badge tag-link me-2 mb-1">
                         社交媒体
                       </a>
                       
@@ -1095,48 +1180,49 @@
               </div>
               
               <div class="masonry-grid-item">
-                <div class="card shadow-sm">
+                <div class="card article-card shadow-sm">
                   <div class="card-body">
-                    <h5 class="card-title">
-                      <i class="bi bi-file-earmark-text"></i>
-                      <a href="../mdhtml/为什么现在的年轻人都喜欢独居？.html" class="text-decoration-none">
+                    <h5 class="card-title article-title">
+                      <i class="bi bi-file-earmark-text me-2 text-primary"></i>
+                      <a href="../mdhtml/为什么现在的年轻人都喜欢独居？.html" class="text-decoration-none text-dark">
                         为什么现在的年轻人都喜欢独居？
                       </a>
                     </h5>
                     
-                      <p class="card-text">
+                      <p class="card-text text-muted mb-3">
                         探讨年轻人选择独居的现象，分析背后的原因和社会影响。
                       </p>
                       
-                        
-                          <small class="text-muted">
-                            2026-03-24
-                          </small>
-                          
+                        <div class="article-meta">
+                            
+                                <i class="bi bi-clock me-1"></i>
+                                2026-03-24
+                                
+                        </div>
                   </div>
-                  <div class="card-footer text-muted">
+                  <div class="card-footer text-muted bg-white border-top">
                     <a href="/category/%E7%A4%BE%E4%BC%9A%E8%A7%82%E5%AF%9F.html"
-                      class="badge bg-primary">
+                      class="badge bg-primary me-2">
                       社会观察
                     </a>
                     
-                      <a href="/tag/%E7%8B%AC%E5%B1%85.html" class="badge tag-link">
+                      <a href="/tag/%E7%8B%AC%E5%B1%85.html" class="badge tag-link me-2 mb-1">
                         独居
                       </a>
                       
-                      <a href="/tag/%E5%B9%B4%E8%BD%BB%E4%BA%BA.html" class="badge tag-link">
+                      <a href="/tag/%E5%B9%B4%E8%BD%BB%E4%BA%BA.html" class="badge tag-link me-2 mb-1">
                         年轻人
                       </a>
                       
-                      <a href="/tag/%E5%8D%95%E8%BA%AB.html" class="badge tag-link">
+                      <a href="/tag/%E5%8D%95%E8%BA%AB.html" class="badge tag-link me-2 mb-1">
                         单身
                       </a>
                       
-                      <a href="/tag/%E7%94%9F%E6%B4%BB%E9%80%89%E6%8B%A9.html" class="badge tag-link">
+                      <a href="/tag/%E7%94%9F%E6%B4%BB%E9%80%89%E6%8B%A9.html" class="badge tag-link me-2 mb-1">
                         生活选择
                       </a>
                       
-                      <a href="/tag/%E5%AD%A4%E7%8B%AC.html" class="badge tag-link">
+                      <a href="/tag/%E5%AD%A4%E7%8B%AC.html" class="badge tag-link me-2 mb-1">
                         孤独
                       </a>
                       
@@ -1145,48 +1231,49 @@
               </div>
               
               <div class="masonry-grid-item">
-                <div class="card shadow-sm">
+                <div class="card article-card shadow-sm">
                   <div class="card-body">
-                    <h5 class="card-title">
-                      <i class="bi bi-file-earmark-text"></i>
-                      <a href="../mdhtml/为什么现在的年轻人都在做兼职？原因很心酸.html" class="text-decoration-none">
+                    <h5 class="card-title article-title">
+                      <i class="bi bi-file-earmark-text me-2 text-primary"></i>
+                      <a href="../mdhtml/为什么现在的年轻人都在做兼职？原因很心酸.html" class="text-decoration-none text-dark">
                         为什么现在的年轻人都在做兼职？原因很心酸
                       </a>
                     </h5>
                     
-                      <p class="card-text">
+                      <p class="card-text text-muted mb-3">
                         探讨年轻人做兼职的现象，分析背后的经济压力和生活困境。
                       </p>
                       
-                        
-                          <small class="text-muted">
-                            2026-03-24
-                          </small>
-                          
+                        <div class="article-meta">
+                            
+                                <i class="bi bi-clock me-1"></i>
+                                2026-03-24
+                                
+                        </div>
                   </div>
-                  <div class="card-footer text-muted">
+                  <div class="card-footer text-muted bg-white border-top">
                     <a href="/category/%E8%81%8C%E5%9C%BA%E8%A7%82%E5%AF%9F.html"
-                      class="badge bg-primary">
+                      class="badge bg-primary me-2">
                       职场观察
                     </a>
                     
-                      <a href="/tag/%E5%85%BC%E8%81%8C.html" class="badge tag-link">
+                      <a href="/tag/%E5%85%BC%E8%81%8C.html" class="badge tag-link me-2 mb-1">
                         兼职
                       </a>
                       
-                      <a href="/tag/%E5%89%AF%E4%B8%9A.html" class="badge tag-link">
+                      <a href="/tag/%E5%89%AF%E4%B8%9A.html" class="badge tag-link me-2 mb-1">
                         副业
                       </a>
                       
-                      <a href="/tag/%E5%B9%B4%E8%BD%BB%E4%BA%BA.html" class="badge tag-link">
+                      <a href="/tag/%E5%B9%B4%E8%BD%BB%E4%BA%BA.html" class="badge tag-link me-2 mb-1">
                         年轻人
                       </a>
                       
-                      <a href="/tag/%E6%94%B6%E5%85%A5.html" class="badge tag-link">
+                      <a href="/tag/%E6%94%B6%E5%85%A5.html" class="badge tag-link me-2 mb-1">
                         收入
                       </a>
                       
-                      <a href="/tag/%E7%94%9F%E6%B4%BB%E5%8E%8B%E5%8A%9B.html" class="badge tag-link">
+                      <a href="/tag/%E7%94%9F%E6%B4%BB%E5%8E%8B%E5%8A%9B.html" class="badge tag-link me-2 mb-1">
                         生活压力
                       </a>
                       
@@ -1195,48 +1282,49 @@
               </div>
               
               <div class="masonry-grid-item">
-                <div class="card shadow-sm">
+                <div class="card article-card shadow-sm">
                   <div class="card-body">
-                    <h5 class="card-title">
-                      <i class="bi bi-file-earmark-text"></i>
-                      <a href="../mdhtml/为什么现在年轻人都不爱结婚了？原因太现实了.html" class="text-decoration-none">
+                    <h5 class="card-title article-title">
+                      <i class="bi bi-file-earmark-text me-2 text-primary"></i>
+                      <a href="../mdhtml/为什么现在年轻人都不爱结婚了？原因太现实了.html" class="text-decoration-none text-dark">
                         为什么现在年轻人都不爱结婚了？原因太现实了
                       </a>
                     </h5>
                     
-                      <p class="card-text">
+                      <p class="card-text text-muted mb-3">
                         探讨当代年轻人不愿意结婚的现象，分析背后的经济压力、观念变化和个人选择。
                       </p>
                       
-                        
-                          <small class="text-muted">
-                            2026-03-24
-                          </small>
-                          
+                        <div class="article-meta">
+                            
+                                <i class="bi bi-clock me-1"></i>
+                                2026-03-24
+                                
+                        </div>
                   </div>
-                  <div class="card-footer text-muted">
+                  <div class="card-footer text-muted bg-white border-top">
                     <a href="/category/%E7%A4%BE%E4%BC%9A%E8%A7%82%E5%AF%9F.html"
-                      class="badge bg-primary">
+                      class="badge bg-primary me-2">
                       社会观察
                     </a>
                     
-                      <a href="/tag/%E7%BB%93%E5%A9%9A.html" class="badge tag-link">
+                      <a href="/tag/%E7%BB%93%E5%A9%9A.html" class="badge tag-link me-2 mb-1">
                         结婚
                       </a>
                       
-                      <a href="/tag/%E5%B9%B4%E8%BD%BB%E4%BA%BA.html" class="badge tag-link">
+                      <a href="/tag/%E5%B9%B4%E8%BD%BB%E4%BA%BA.html" class="badge tag-link me-2 mb-1">
                         年轻人
                       </a>
                       
-                      <a href="/tag/%E5%A9%9A%E5%A7%BB%E8%A7%82.html" class="badge tag-link">
+                      <a href="/tag/%E5%A9%9A%E5%A7%BB%E8%A7%82.html" class="badge tag-link me-2 mb-1">
                         婚姻观
                       </a>
                       
-                      <a href="/tag/%E5%8D%95%E8%BA%AB.html" class="badge tag-link">
+                      <a href="/tag/%E5%8D%95%E8%BA%AB.html" class="badge tag-link me-2 mb-1">
                         单身
                       </a>
                       
-                      <a href="/tag/%E7%A4%BE%E4%BC%9A%E7%8E%B0%E8%B1%A1.html" class="badge tag-link">
+                      <a href="/tag/%E7%A4%BE%E4%BC%9A%E7%8E%B0%E8%B1%A1.html" class="badge tag-link me-2 mb-1">
                         社会现象
                       </a>
                       
@@ -1245,48 +1333,49 @@
               </div>
               
               <div class="masonry-grid-item">
-                <div class="card shadow-sm">
+                <div class="card article-card shadow-sm">
                   <div class="card-body">
-                    <h5 class="card-title">
-                      <i class="bi bi-file-earmark-text"></i>
-                      <a href="../mdhtml/为什么现在的年轻人都开始攒黄金了.html" class="text-decoration-none">
+                    <h5 class="card-title article-title">
+                      <i class="bi bi-file-earmark-text me-2 text-primary"></i>
+                      <a href="../mdhtml/为什么现在的年轻人都开始攒黄金了.html" class="text-decoration-none text-dark">
                         为什么现在的年轻人都开始攒黄金了
                       </a>
                     </h5>
                     
-                      <p class="card-text">
+                      <p class="card-text text-muted mb-3">
                         分析年轻人热衷购买黄金的原因，探讨黄金投资的优势和风险，以及年轻人应该如何理性投资。
                       </p>
                       
-                        
-                          <small class="text-muted">
-                            2026-03-24
-                          </small>
-                          
+                        <div class="article-meta">
+                            
+                                <i class="bi bi-clock me-1"></i>
+                                2026-03-24
+                                
+                        </div>
                   </div>
-                  <div class="card-footer text-muted">
+                  <div class="card-footer text-muted bg-white border-top">
                     <a href="/category/%E7%90%86%E8%B4%A2%E8%A7%82%E5%AF%9F.html"
-                      class="badge bg-primary">
+                      class="badge bg-primary me-2">
                       理财观察
                     </a>
                     
-                      <a href="/tag/%E9%BB%84%E9%87%91.html" class="badge tag-link">
+                      <a href="/tag/%E9%BB%84%E9%87%91.html" class="badge tag-link me-2 mb-1">
                         黄金
                       </a>
                       
-                      <a href="/tag/%E6%8A%95%E8%B5%84.html" class="badge tag-link">
+                      <a href="/tag/%E6%8A%95%E8%B5%84.html" class="badge tag-link me-2 mb-1">
                         投资
                       </a>
                       
-                      <a href="/tag/%E5%B9%B4%E8%BD%BB%E4%BA%BA.html" class="badge tag-link">
+                      <a href="/tag/%E5%B9%B4%E8%BD%BB%E4%BA%BA.html" class="badge tag-link me-2 mb-1">
                         年轻人
                       </a>
                       
-                      <a href="/tag/%E7%90%86%E8%B4%A2.html" class="badge tag-link">
+                      <a href="/tag/%E7%90%86%E8%B4%A2.html" class="badge tag-link me-2 mb-1">
                         理财
                       </a>
                       
-                      <a href="/tag/%E4%BF%9D%E5%80%BC.html" class="badge tag-link">
+                      <a href="/tag/%E4%BF%9D%E5%80%BC.html" class="badge tag-link me-2 mb-1">
                         保值
                       </a>
                       
@@ -1295,48 +1384,49 @@
               </div>
               
               <div class="masonry-grid-item">
-                <div class="card shadow-sm">
+                <div class="card article-card shadow-sm">
                   <div class="card-body">
-                    <h5 class="card-title">
-                      <i class="bi bi-file-earmark-text"></i>
-                      <a href="../mdhtml/为什么现在的年轻人都不爱换手机了.html" class="text-decoration-none">
+                    <h5 class="card-title article-title">
+                      <i class="bi bi-file-earmark-text me-2 text-primary"></i>
+                      <a href="../mdhtml/为什么现在的年轻人都不爱换手机了.html" class="text-decoration-none text-dark">
                         为什么现在的年轻人都不爱换手机了
                       </a>
                     </h5>
                     
-                      <p class="card-text">
+                      <p class="card-text text-muted mb-3">
                         探讨年轻人不再频繁更换手机的现象，分析背后的经济原因、消费观念变化以及对手机行业的影响。
                       </p>
                       
-                        
-                          <small class="text-muted">
-                            2026-03-24
-                          </small>
-                          
+                        <div class="article-meta">
+                            
+                                <i class="bi bi-clock me-1"></i>
+                                2026-03-24
+                                
+                        </div>
                   </div>
-                  <div class="card-footer text-muted">
+                  <div class="card-footer text-muted bg-white border-top">
                     <a href="/category/%E7%A7%91%E6%8A%80%E8%A7%82%E5%AF%9F.html"
-                      class="badge bg-primary">
+                      class="badge bg-primary me-2">
                       科技观察
                     </a>
                     
-                      <a href="/tag/%E6%89%8B%E6%9C%BA.html" class="badge tag-link">
+                      <a href="/tag/%E6%89%8B%E6%9C%BA.html" class="badge tag-link me-2 mb-1">
                         手机
                       </a>
                       
-                      <a href="/tag/%E6%B6%88%E8%B4%B9%E9%99%8D%E7%BA%A7.html" class="badge tag-link">
+                      <a href="/tag/%E6%B6%88%E8%B4%B9%E9%99%8D%E7%BA%A7.html" class="badge tag-link me-2 mb-1">
                         消费降级
                       </a>
                       
-                      <a href="/tag/%E7%94%B5%E5%AD%90%E4%BA%A7%E5%93%81.html" class="badge tag-link">
+                      <a href="/tag/%E7%94%B5%E5%AD%90%E4%BA%A7%E5%93%81.html" class="badge tag-link me-2 mb-1">
                         电子产品
                       </a>
                       
-                      <a href="/tag/%E5%B9%B4%E8%BD%BB%E4%BA%BA.html" class="badge tag-link">
+                      <a href="/tag/%E5%B9%B4%E8%BD%BB%E4%BA%BA.html" class="badge tag-link me-2 mb-1">
                         年轻人
                       </a>
                       
-                      <a href="/tag/%E7%BB%8F%E6%B5%8E.html" class="badge tag-link">
+                      <a href="/tag/%E7%BB%8F%E6%B5%8E.html" class="badge tag-link me-2 mb-1">
                         经济
                       </a>
                       
@@ -1345,48 +1435,49 @@
               </div>
               
               <div class="masonry-grid-item">
-                <div class="card shadow-sm">
+                <div class="card article-card shadow-sm">
                   <div class="card-body">
-                    <h5 class="card-title">
-                      <i class="bi bi-file-earmark-text"></i>
-                      <a href="../mdhtml/2026年年轻人最新的10种生活方式，看看你占了几个.html" class="text-decoration-none">
+                    <h5 class="card-title article-title">
+                      <i class="bi bi-file-earmark-text me-2 text-primary"></i>
+                      <a href="../mdhtml/2026年年轻人最新的10种生活方式，看看你占了几个.html" class="text-decoration-none text-dark">
                         2026年年轻人最新的10种生活方式，看看你占了几个
                       </a>
                     </h5>
                     
-                      <p class="card-text">
+                      <p class="card-text text-muted mb-3">
                         盘点2026年年轻人最流行的生活方式，从消费观到社交观，从工作观到生活观，全面解读当代青年的生活状态。
                       </p>
                       
-                        
-                          <small class="text-muted">
-                            2026-03-24
-                          </small>
-                          
+                        <div class="article-meta">
+                            
+                                <i class="bi bi-clock me-1"></i>
+                                2026-03-24
+                                
+                        </div>
                   </div>
-                  <div class="card-footer text-muted">
+                  <div class="card-footer text-muted bg-white border-top">
                     <a href="/category/%E7%94%9F%E6%B4%BB%E8%A7%82%E5%AF%9F.html"
-                      class="badge bg-primary">
+                      class="badge bg-primary me-2">
                       生活观察
                     </a>
                     
-                      <a href="/tag/%E5%B9%B4%E8%BD%BB%E4%BA%BA.html" class="badge tag-link">
+                      <a href="/tag/%E5%B9%B4%E8%BD%BB%E4%BA%BA.html" class="badge tag-link me-2 mb-1">
                         年轻人
                       </a>
                       
-                      <a href="/tag/%E7%94%9F%E6%B4%BB%E6%96%B9%E5%BC%8F.html" class="badge tag-link">
+                      <a href="/tag/%E7%94%9F%E6%B4%BB%E6%96%B9%E5%BC%8F.html" class="badge tag-link me-2 mb-1">
                         生活方式
                       </a>
                       
-                      <a href="/tag/%E6%B6%88%E8%B4%B9%E8%B6%8B%E5%8A%BF.html" class="badge tag-link">
+                      <a href="/tag/%E6%B6%88%E8%B4%B9%E8%B6%8B%E5%8A%BF.html" class="badge tag-link me-2 mb-1">
                         消费趋势
                       </a>
                       
-                      <a href="/tag/%E6%96%B0%E6%BD%AE%E6%B5%81.html" class="badge tag-link">
+                      <a href="/tag/%E6%96%B0%E6%BD%AE%E6%B5%81.html" class="badge tag-link me-2 mb-1">
                         新潮流
                       </a>
                       
-                      <a href="/tag/%E7%A4%BE%E4%BC%9A%E7%8E%B0%E8%B1%A1.html" class="badge tag-link">
+                      <a href="/tag/%E7%A4%BE%E4%BC%9A%E7%8E%B0%E8%B1%A1.html" class="badge tag-link me-2 mb-1">
                         社会现象
                       </a>
                       
@@ -1395,48 +1486,49 @@
               </div>
               
               <div class="masonry-grid-item">
-                <div class="card shadow-sm">
+                <div class="card article-card shadow-sm">
                   <div class="card-body">
-                    <h5 class="card-title">
-                      <i class="bi bi-file-earmark-text"></i>
-                      <a href="../mdhtml/年轻人如何面对选择与被选择.html" class="text-decoration-none">
+                    <h5 class="card-title article-title">
+                      <i class="bi bi-file-earmark-text me-2 text-primary"></i>
+                      <a href="../mdhtml/年轻人如何面对选择与被选择.html" class="text-decoration-none text-dark">
                         年轻人如何面对选择与被选择
                       </a>
                     </h5>
                     
-                      <p class="card-text">
+                      <p class="card-text text-muted mb-3">
                         阐述年轻人在生活中面临众多选择与被选择的现状，包括职业、生活方式、感情等方面的选择迷茫和被选择的无奈，并提供应对方法，探讨如何在过程中实现蜕变。
                       </p>
                       
-                        
-                          <small class="text-muted">
-                            2026-02-24
-                          </small>
-                          
+                        <div class="article-meta">
+                            
+                                <i class="bi bi-clock me-1"></i>
+                                2026-02-24
+                                
+                        </div>
                   </div>
-                  <div class="card-footer text-muted">
+                  <div class="card-footer text-muted bg-white border-top">
                     <a href="/category/%E8%81%8C%E4%B8%9A%E5%8F%91%E5%B1%95.html"
-                      class="badge bg-primary">
+                      class="badge bg-primary me-2">
                       职业发展
                     </a>
                     
-                      <a href="/tag/%E5%B9%B4%E8%BD%BB%E4%BA%BA.html" class="badge tag-link">
+                      <a href="/tag/%E5%B9%B4%E8%BD%BB%E4%BA%BA.html" class="badge tag-link me-2 mb-1">
                         年轻人
                       </a>
                       
-                      <a href="/tag/%E9%80%89%E6%8B%A9.html" class="badge tag-link">
+                      <a href="/tag/%E9%80%89%E6%8B%A9.html" class="badge tag-link me-2 mb-1">
                         选择
                       </a>
                       
-                      <a href="/tag/%E8%A2%AB%E9%80%89%E6%8B%A9.html" class="badge tag-link">
+                      <a href="/tag/%E8%A2%AB%E9%80%89%E6%8B%A9.html" class="badge tag-link me-2 mb-1">
                         被选择
                       </a>
                       
-                      <a href="/tag/%E8%81%8C%E4%B8%9A%E8%A7%84%E5%88%92.html" class="badge tag-link">
+                      <a href="/tag/%E8%81%8C%E4%B8%9A%E8%A7%84%E5%88%92.html" class="badge tag-link me-2 mb-1">
                         职业规划
                       </a>
                       
-                      <a href="/tag/%E6%84%9F%E6%83%85.html" class="badge tag-link">
+                      <a href="/tag/%E6%84%9F%E6%83%85.html" class="badge tag-link me-2 mb-1">
                         感情
                       </a>
                       
@@ -1446,8 +1538,8 @@
               
           </div>
 
-          <div class="mt-4 text-center">
-            <a href="标签列表.html" class="btn btn-outline-primary"><i class="bi bi-arrow-left"></i> 返回标签列表</a>
+          <div class="mt-6 text-center">
+            <a href="标签列表.html" class="btn btn-outline-primary back-button"><i class="bi bi-arrow-left me-2"></i> 返回标签列表</a>
           </div>
         </div>
       </div>
@@ -1471,7 +1563,7 @@
             itemSelector: '.masonry-grid-item',
             columnWidth: '.masonry-grid-item',
             percentPosition: true,
-            gutter: 10 // 可选，添加卡片间的间距
+            gutter: 15 // 增加间距，提升视觉效果
           });
         });
       </script>

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
 
 <head>
   <meta charset="UTF-8">
@@ -9,7 +9,7 @@
   <meta name="description" content="无人自助站的【文化传承】的标签列表页面，汇集了关于【文化传承】标签相关的文章和资讯，方便您快速找到感兴趣的内容。">
   <meta name="keywords" content="无人自助站,文化传承">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>标签文章列表</title>
+  <title>文化传承标签 - 无人自助站</title>
 
   <link rel="icon" href="../logo.svg" type="image/svg+xml">
   <link rel="stylesheet" href="../css/style.css">
@@ -27,6 +27,62 @@
   <!-- 引入Masonry -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/masonry/4.2.2/masonry.pkgd.min.js"></script>
 
+  <style>
+        .tag-header {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            color: white;
+            padding: 2rem;
+            border-radius: 8px;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        .tag-title {
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+        .article-card {
+            transition: all 0.3s ease;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        .article-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+        }
+        .article-title {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            transition: color 0.3s ease;
+        }
+        .article-title:hover {
+            color: #0d6efd;
+        }
+        .article-meta {
+            font-size: 0.85rem;
+            color: #6c757d;
+        }
+        .tag-link {
+            background-color: #e9ecef;
+            color: #495057;
+            transition: all 0.2s ease;
+        }
+        .tag-link:hover {
+            background-color: #dee2e6;
+            color: #212529;
+        }
+        .back-button {
+            transition: all 0.3s ease;
+        }
+        .back-button:hover {
+            transform: translateX(-3px);
+        }
+        .article-count {
+            font-size: 0.9rem;
+            opacity: 0.9;
+        }
+    </style>
 </head>
 
 <body>
@@ -80,7 +136,7 @@
     <main class="container-fluid mt-4">
       <div class="row">
         <div class="col-lg-8 col-md-12 mx-auto">
-          <nav aria-label="breadcrumb">
+          <nav aria-label="breadcrumb" class="mb-4">
             <ol class="breadcrumb">
               <li class="breadcrumb-item"><a href="/html/index.html">首页</a></li>
               <li class="breadcrumb-item"><a href="标签列表.html">标签列表</a></li>
@@ -89,74 +145,84 @@
               </li>
             </ol>
           </nav>
-          <h1 style="font-size: 1.5em; margin: 0.5em 0;">
-            文化传承标签的文章和资讯
-        </h1>
+          
+          <!-- 标签头部 -->
+          <div class="tag-header">
+              <h1 class="tag-title">
+                  <i class="bi bi-tags me-2"></i>
+                  文化传承
+              </h1>
+              <p class="article-count">
+                  共 14 篇文章
+              </p>
+          </div>
+          
           <div class="masonry-grid">
             
               <div class="masonry-grid-item">
-                <div class="card shadow-sm">
+                <div class="card article-card shadow-sm">
                   <div class="card-body">
-                    <h5 class="card-title">
-                      <i class="bi bi-file-earmark-text"></i>
-                      <a href="../mdhtml/科技与人文的平衡：如何在技术发展中保持人性温度.html" class="text-decoration-none">
+                    <h5 class="card-title article-title">
+                      <i class="bi bi-file-earmark-text me-2 text-primary"></i>
+                      <a href="../mdhtml/科技与人文的平衡：如何在技术发展中保持人性温度.html" class="text-decoration-none text-dark">
                         科技与人文的平衡：如何在技术发展中保持人性温度
                       </a>
                     </h5>
                     
-                      <p class="card-text">
+                      <p class="card-text text-muted mb-3">
                         探讨科技发展与人文价值的关系，分析技术进步对人类社会的影响，提供在技术发展中保持人性温度的方法和思考，为构建更加和谐、平衡的未来社会提供参考。
                       </p>
                       
-                        
-                          <small class="text-muted">
-                            2026-02-27
-                          </small>
-                          
+                        <div class="article-meta">
+                            
+                                <i class="bi bi-clock me-1"></i>
+                                2026-02-27
+                                
+                        </div>
                   </div>
-                  <div class="card-footer text-muted">
+                  <div class="card-footer text-muted bg-white border-top">
                     <a href="/category/%E7%A7%91%E6%8A%80%E5%89%8D%E6%B2%BF.html"
-                      class="badge bg-primary">
+                      class="badge bg-primary me-2">
                       科技前沿
                     </a>
                     
-                      <a href="/tag/%E7%A7%91%E6%8A%80%E4%B8%8E%E4%BA%BA%E6%96%87.html" class="badge tag-link">
+                      <a href="/tag/%E7%A7%91%E6%8A%80%E4%B8%8E%E4%BA%BA%E6%96%87.html" class="badge tag-link me-2 mb-1">
                         科技与人文
                       </a>
                       
-                      <a href="/tag/%E4%BA%BA%E6%80%A7%E6%B8%A9%E5%BA%A6.html" class="badge tag-link">
+                      <a href="/tag/%E4%BA%BA%E6%80%A7%E6%B8%A9%E5%BA%A6.html" class="badge tag-link me-2 mb-1">
                         人性温度
                       </a>
                       
-                      <a href="/tag/%E6%8A%80%E6%9C%AF%E5%8F%91%E5%B1%95.html" class="badge tag-link">
+                      <a href="/tag/%E6%8A%80%E6%9C%AF%E5%8F%91%E5%B1%95.html" class="badge tag-link me-2 mb-1">
                         技术发展
                       </a>
                       
-                      <a href="/tag/%E4%BC%A6%E7%90%86%E6%80%9D%E8%80%83.html" class="badge tag-link">
+                      <a href="/tag/%E4%BC%A6%E7%90%86%E6%80%9D%E8%80%83.html" class="badge tag-link me-2 mb-1">
                         伦理思考
                       </a>
                       
-                      <a href="/tag/%E6%95%B0%E5%AD%97%E5%8C%96%E7%94%9F%E6%B4%BB.html" class="badge tag-link">
+                      <a href="/tag/%E6%95%B0%E5%AD%97%E5%8C%96%E7%94%9F%E6%B4%BB.html" class="badge tag-link me-2 mb-1">
                         数字化生活
                       </a>
                       
-                      <a href="/tag/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD.html" class="badge tag-link">
+                      <a href="/tag/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD.html" class="badge tag-link me-2 mb-1">
                         人工智能
                       </a>
                       
-                      <a href="/tag/%E4%BA%BA%E9%99%85%E5%85%B3%E7%B3%BB.html" class="badge tag-link">
+                      <a href="/tag/%E4%BA%BA%E9%99%85%E5%85%B3%E7%B3%BB.html" class="badge tag-link me-2 mb-1">
                         人际关系
                       </a>
                       
-                      <a href="/tag/%E7%A4%BE%E4%BC%9A%E5%8F%91%E5%B1%95.html" class="badge tag-link">
+                      <a href="/tag/%E7%A4%BE%E4%BC%9A%E5%8F%91%E5%B1%95.html" class="badge tag-link me-2 mb-1">
                         社会发展
                       </a>
                       
-                      <a href="/tag/%E6%96%87%E5%8C%96%E4%BC%A0%E6%89%BF.html" class="badge tag-link">
+                      <a href="/tag/%E6%96%87%E5%8C%96%E4%BC%A0%E6%89%BF.html" class="badge tag-link me-2 mb-1">
                         文化传承
                       </a>
                       
-                      <a href="/tag/%E6%9C%AA%E6%9D%A5%E5%B1%95%E6%9C%9B.html" class="badge tag-link">
+                      <a href="/tag/%E6%9C%AA%E6%9D%A5%E5%B1%95%E6%9C%9B.html" class="badge tag-link me-2 mb-1">
                         未来展望
                       </a>
                       
@@ -165,48 +231,49 @@
               </div>
               
               <div class="masonry-grid-item">
-                <div class="card shadow-sm">
+                <div class="card article-card shadow-sm">
                   <div class="card-body">
-                    <h5 class="card-title">
-                      <i class="bi bi-file-earmark-text"></i>
-                      <a href="../mdhtml/台球中的中国传统文化：从&#39;孔融让梨&#39;到台球礼仪的现代诠释.html" class="text-decoration-none">
+                    <h5 class="card-title article-title">
+                      <i class="bi bi-file-earmark-text me-2 text-primary"></i>
+                      <a href="../mdhtml/台球中的中国传统文化：从&#39;孔融让梨&#39;到台球礼仪的现代诠释.html" class="text-decoration-none text-dark">
                         台球中的中国传统文化：从&#39;孔融让梨&#39;到台球礼仪的现代诠释
                       </a>
                     </h5>
                     
-                      <p class="card-text">
+                      <p class="card-text text-muted mb-3">
                         挖掘传统文化与现代台球运动的深层联系，从&#39;孔融让梨&#39;到台球礼仪的现代诠释，展现台球运动中的文化内涵和传统美德。
                       </p>
                       
-                        
-                          <small class="text-muted">
-                            2026-02-27
-                          </small>
-                          
+                        <div class="article-meta">
+                            
+                                <i class="bi bi-clock me-1"></i>
+                                2026-02-27
+                                
+                        </div>
                   </div>
-                  <div class="card-footer text-muted">
+                  <div class="card-footer text-muted bg-white border-top">
                     <a href="/category/%E5%8F%B0%E7%90%83%E5%A4%A9%E5%9C%B0.html"
-                      class="badge bg-primary">
+                      class="badge bg-primary me-2">
                       台球天地
                     </a>
                     
-                      <a href="/tag/%E5%8F%B0%E7%90%83.html" class="badge tag-link">
+                      <a href="/tag/%E5%8F%B0%E7%90%83.html" class="badge tag-link me-2 mb-1">
                         台球
                       </a>
                       
-                      <a href="/tag/%E4%B8%AD%E5%9B%BD%E4%BC%A0%E7%BB%9F.html" class="badge tag-link">
+                      <a href="/tag/%E4%B8%AD%E5%9B%BD%E4%BC%A0%E7%BB%9F.html" class="badge tag-link me-2 mb-1">
                         中国传统
                       </a>
                       
-                      <a href="/tag/%E7%A4%BC%E4%BB%AA%E8%A7%84%E8%8C%83.html" class="badge tag-link">
+                      <a href="/tag/%E7%A4%BC%E4%BB%AA%E8%A7%84%E8%8C%83.html" class="badge tag-link me-2 mb-1">
                         礼仪规范
                       </a>
                       
-                      <a href="/tag/%E6%96%87%E5%8C%96%E4%BC%A0%E6%89%BF.html" class="badge tag-link">
+                      <a href="/tag/%E6%96%87%E5%8C%96%E4%BC%A0%E6%89%BF.html" class="badge tag-link me-2 mb-1">
                         文化传承
                       </a>
                       
-                      <a href="/tag/%E7%8E%B0%E4%BB%A3%E8%AF%A0%E9%87%8A.html" class="badge tag-link">
+                      <a href="/tag/%E7%8E%B0%E4%BB%A3%E8%AF%A0%E9%87%8A.html" class="badge tag-link me-2 mb-1">
                         现代诠释
                       </a>
                       
@@ -215,48 +282,49 @@
               </div>
               
               <div class="masonry-grid-item">
-                <div class="card shadow-sm">
+                <div class="card article-card shadow-sm">
                   <div class="card-body">
-                    <h5 class="card-title">
-                      <i class="bi bi-file-earmark-text"></i>
-                      <a href="../mdhtml/传统饮食文化在现代生活中的传承与创新.html" class="text-decoration-none">
+                    <h5 class="card-title article-title">
+                      <i class="bi bi-file-earmark-text me-2 text-primary"></i>
+                      <a href="../mdhtml/传统饮食文化在现代生活中的传承与创新.html" class="text-decoration-none text-dark">
                         传统饮食文化在现代生活中的传承与创新
                       </a>
                     </h5>
                     
-                      <p class="card-text">
+                      <p class="card-text text-muted mb-3">
                         探讨传统饮食文化如何与现代生活相结合，分析传统饮食文化在现代生活中的应用价值，以及如何通过创新让传统饮食文化在现代社会焕发新活力。
                       </p>
                       
-                        
-                          <small class="text-muted">
-                            2026-02-27
-                          </small>
-                          
+                        <div class="article-meta">
+                            
+                                <i class="bi bi-clock me-1"></i>
+                                2026-02-27
+                                
+                        </div>
                   </div>
-                  <div class="card-footer text-muted">
+                  <div class="card-footer text-muted bg-white border-top">
                     <a href="/category/%E4%BC%A0%E7%BB%9F%E6%96%87%E5%8C%96.html"
-                      class="badge bg-primary">
+                      class="badge bg-primary me-2">
                       传统文化
                     </a>
                     
-                      <a href="/tag/%E4%BC%A0%E7%BB%9F%E6%96%87%E5%8C%96.html" class="badge tag-link">
+                      <a href="/tag/%E4%BC%A0%E7%BB%9F%E6%96%87%E5%8C%96.html" class="badge tag-link me-2 mb-1">
                         传统文化
                       </a>
                       
-                      <a href="/tag/%E6%96%87%E5%8C%96%E4%BC%A0%E6%89%BF.html" class="badge tag-link">
+                      <a href="/tag/%E6%96%87%E5%8C%96%E4%BC%A0%E6%89%BF.html" class="badge tag-link me-2 mb-1">
                         文化传承
                       </a>
                       
-                      <a href="/tag/%E7%8E%B0%E4%BB%A3%E5%90%AF%E7%A4%BA.html" class="badge tag-link">
+                      <a href="/tag/%E7%8E%B0%E4%BB%A3%E5%90%AF%E7%A4%BA.html" class="badge tag-link me-2 mb-1">
                         现代启示
                       </a>
                       
-                      <a href="/tag/%E7%94%9F%E6%B4%BB%E6%99%BA%E6%85%A7.html" class="badge tag-link">
+                      <a href="/tag/%E7%94%9F%E6%B4%BB%E6%99%BA%E6%85%A7.html" class="badge tag-link me-2 mb-1">
                         生活智慧
                       </a>
                       
-                      <a href="/tag/%E9%A5%AE%E9%A3%9F%E6%96%87%E5%8C%96.html" class="badge tag-link">
+                      <a href="/tag/%E9%A5%AE%E9%A3%9F%E6%96%87%E5%8C%96.html" class="badge tag-link me-2 mb-1">
                         饮食文化
                       </a>
                       
@@ -265,72 +333,73 @@
               </div>
               
               <div class="masonry-grid-item">
-                <div class="card shadow-sm">
+                <div class="card article-card shadow-sm">
                   <div class="card-body">
-                    <h5 class="card-title">
-                      <i class="bi bi-file-earmark-text"></i>
-                      <a href="../mdhtml/历史探究：穿越时空的智慧之旅.html" class="text-decoration-none">
+                    <h5 class="card-title article-title">
+                      <i class="bi bi-file-earmark-text me-2 text-primary"></i>
+                      <a href="../mdhtml/历史探究：穿越时空的智慧之旅.html" class="text-decoration-none text-dark">
                         历史探究：穿越时空的智慧指南
                       </a>
                     </h5>
                     
-                      <p class="card-text">
+                      <p class="card-text text-muted mb-3">
                         全面梳理历史探究的核心概念与方法，从古代文明到现代社会的完整历史脉络。深入分析重大历史事件、重要历史人物和关键历史时期，探讨历史对现实的深刻启示，为读者构建从历史知识到历史思维的全方位认知体系。
                       </p>
                       
-                        
-                          <small class="text-muted">
-                            2026-02-24
-                          </small>
-                          
+                        <div class="article-meta">
+                            
+                                <i class="bi bi-clock me-1"></i>
+                                2026-02-24
+                                
+                        </div>
                   </div>
-                  <div class="card-footer text-muted">
+                  <div class="card-footer text-muted bg-white border-top">
                     <a href="/category/%E5%8E%86%E5%8F%B2%E6%8E%A2%E7%A9%B6.html"
-                      class="badge bg-primary">
+                      class="badge bg-primary me-2">
                       历史探究
                     </a>
                     
-                      <a href="/tag/%E5%8E%86%E5%8F%B2%E6%8E%A2%E7%A9%B6.html" class="badge tag-link">
+                      <a href="/tag/%E5%8E%86%E5%8F%B2%E6%8E%A2%E7%A9%B6.html" class="badge tag-link me-2 mb-1">
                         历史探究
                       </a>
                       
-                      <a href="/tag/%E5%8F%A4%E4%BB%A3%E6%96%87%E6%98%8E.html" class="badge tag-link">
+                      <a href="/tag/%E5%8F%A4%E4%BB%A3%E6%96%87%E6%98%8E.html" class="badge tag-link me-2 mb-1">
                         古代文明
                       </a>
                       
-                      <a href="/tag/%E5%8E%86%E5%8F%B2%E4%BA%8B%E4%BB%B6.html" class="badge tag-link">
+                      <a href="/tag/%E5%8E%86%E5%8F%B2%E4%BA%8B%E4%BB%B6.html" class="badge tag-link me-2 mb-1">
                         历史事件
                       </a>
                       
-                      <a href="/tag/%E5%8E%86%E5%8F%B2%E4%BA%BA%E7%89%A9.html" class="badge tag-link">
+                      <a href="/tag/%E5%8E%86%E5%8F%B2%E4%BA%BA%E7%89%A9.html" class="badge tag-link me-2 mb-1">
                         历史人物
                       </a>
                       
-                      <a href="/tag/%E6%96%87%E5%8C%96%E4%BC%A0%E6%89%BF.html" class="badge tag-link">
+                      <a href="/tag/%E6%96%87%E5%8C%96%E4%BC%A0%E6%89%BF.html" class="badge tag-link me-2 mb-1">
                         文化传承
                       </a>
                       
-                      <a href="/tag/%E5%8E%86%E5%8F%B2%E6%95%99%E8%AE%AD.html" class="badge tag-link">
+                      <a href="/tag/%E5%8E%86%E5%8F%B2%E6%95%99%E8%AE%AD.html" class="badge tag-link me-2 mb-1">
                         历史教训
                       </a>
                       
-                      <a href="/tag/%E5%8E%86%E5%8F%B2%E8%B0%9C%E5%9B%A2.html" class="badge tag-link">
+                      <a href="/tag/%E5%8E%86%E5%8F%B2%E8%B0%9C%E5%9B%A2.html" class="badge tag-link me-2 mb-1">
                         历史谜团
                       </a>
                       
-                      <a href="/tag/%E5%8E%86%E5%8F%B2%E5%BD%B1%E5%93%8D.html" class="badge tag-link">
+                      <a href="/tag/%E5%8E%86%E5%8F%B2%E5%BD%B1%E5%93%8D.html" class="badge tag-link me-2 mb-1">
                         历史影响
                       </a>
                       
-                      <a href="/tag/%E5%8E%86%E5%8F%B2%E8%A7%86%E8%A7%92.html" class="badge tag-link">
+                      <a href="/tag/%E5%8E%86%E5%8F%B2%E8%A7%86%E8%A7%92.html" class="badge tag-link me-2 mb-1">
                         历史视角
                       </a>
                       
-                      <a href="/tag/%E5%8E%86%E5%8F%B2%E6%96%B9%E6%B3%95.html" class="badge tag-link">
+                      <a href="/tag/%E5%8E%86%E5%8F%B2%E6%96%B9%E6%B3%95.html" class="badge tag-link me-2 mb-1">
                         历史方法
                       </a>
                       
-                      <a href="/tag/%E5%8E%86%E5%8F%B2%E6%80%9D%E7%BB%B4.html" class="badge tag-link">
+                      <a href="/tag/%E5%8E%86%E5%8F%B2%E6%80%9D%E7%BB%B4.html" class="badge tag-link me-2 mb-1">
                         历史思维
                       </a>
                       
@@ -339,48 +408,49 @@
               </div>
               
               <div class="masonry-grid-item">
-                <div class="card shadow-sm">
+                <div class="card article-card shadow-sm">
                   <div class="card-body">
-                    <h5 class="card-title">
-                      <i class="bi bi-file-earmark-text"></i>
-                      <a href="../mdhtml/传统音乐艺术在现代生活中的传承与创新.html" class="text-decoration-none">
+                    <h5 class="card-title article-title">
+                      <i class="bi bi-file-earmark-text me-2 text-primary"></i>
+                      <a href="../mdhtml/传统音乐艺术在现代生活中的传承与创新.html" class="text-decoration-none text-dark">
                         传统音乐艺术在现代生活中的传承与创新
                       </a>
                     </h5>
                     
-                      <p class="card-text">
+                      <p class="card-text text-muted mb-3">
                         探讨传统音乐艺术在现代生活中的传承与创新，分析传统音乐艺术的现代价值，以及如何通过创新让传统音乐艺术在现代社会焕发新活力。
                       </p>
                       
-                        
-                          <small class="text-muted">
-                            2026-02-24
-                          </small>
-                          
+                        <div class="article-meta">
+                            
+                                <i class="bi bi-clock me-1"></i>
+                                2026-02-24
+                                
+                        </div>
                   </div>
-                  <div class="card-footer text-muted">
+                  <div class="card-footer text-muted bg-white border-top">
                     <a href="/category/%E4%BC%A0%E7%BB%9F%E6%96%87%E5%8C%96.html"
-                      class="badge bg-primary">
+                      class="badge bg-primary me-2">
                       传统文化
                     </a>
                     
-                      <a href="/tag/%E6%96%87%E5%8C%96%E4%BC%A0%E6%89%BF.html" class="badge tag-link">
+                      <a href="/tag/%E6%96%87%E5%8C%96%E4%BC%A0%E6%89%BF.html" class="badge tag-link me-2 mb-1">
                         文化传承
                       </a>
                       
-                      <a href="/tag/%E7%8E%B0%E4%BB%A3%E5%90%AF%E7%A4%BA.html" class="badge tag-link">
+                      <a href="/tag/%E7%8E%B0%E4%BB%A3%E5%90%AF%E7%A4%BA.html" class="badge tag-link me-2 mb-1">
                         现代启示
                       </a>
                       
-                      <a href="/tag/%E7%94%9F%E6%B4%BB%E6%99%BA%E6%85%A7.html" class="badge tag-link">
+                      <a href="/tag/%E7%94%9F%E6%B4%BB%E6%99%BA%E6%85%A7.html" class="badge tag-link me-2 mb-1">
                         生活智慧
                       </a>
                       
-                      <a href="/tag/%E4%BC%A0%E7%BB%9F%E9%9F%B3%E4%B9%90.html" class="badge tag-link">
+                      <a href="/tag/%E4%BC%A0%E7%BB%9F%E9%9F%B3%E4%B9%90.html" class="badge tag-link me-2 mb-1">
                         传统音乐
                       </a>
                       
-                      <a href="/tag/%E8%89%BA%E6%9C%AF%E5%88%9B%E6%96%B0.html" class="badge tag-link">
+                      <a href="/tag/%E8%89%BA%E6%9C%AF%E5%88%9B%E6%96%B0.html" class="badge tag-link me-2 mb-1">
                         艺术创新
                       </a>
                       
@@ -389,48 +459,49 @@
               </div>
               
               <div class="masonry-grid-item">
-                <div class="card shadow-sm">
+                <div class="card article-card shadow-sm">
                   <div class="card-body">
-                    <h5 class="card-title">
-                      <i class="bi bi-file-earmark-text"></i>
-                      <a href="../mdhtml/传统节日在现代生活中的创新表达.html" class="text-decoration-none">
+                    <h5 class="card-title article-title">
+                      <i class="bi bi-file-earmark-text me-2 text-primary"></i>
+                      <a href="../mdhtml/传统节日在现代生活中的创新表达.html" class="text-decoration-none text-dark">
                         传统节日在现代生活中的创新表达
                       </a>
                     </h5>
                     
-                      <p class="card-text">
+                      <p class="card-text text-muted mb-3">
                         探讨如何将传统节日的文化内涵与现代生活方式相结合，通过创新表达让传统节日在现代社会焕发新活力，传承文化根脉的同时满足当代人的精神需求。
                       </p>
                       
-                        
-                          <small class="text-muted">
-                            2026-02-24
-                          </small>
-                          
+                        <div class="article-meta">
+                            
+                                <i class="bi bi-clock me-1"></i>
+                                2026-02-24
+                                
+                        </div>
                   </div>
-                  <div class="card-footer text-muted">
+                  <div class="card-footer text-muted bg-white border-top">
                     <a href="/category/%E4%BC%A0%E7%BB%9F%E6%96%87%E5%8C%96.html"
-                      class="badge bg-primary">
+                      class="badge bg-primary me-2">
                       传统文化
                     </a>
                     
-                      <a href="/tag/%E6%96%87%E5%8C%96%E4%BC%A0%E6%89%BF.html" class="badge tag-link">
+                      <a href="/tag/%E6%96%87%E5%8C%96%E4%BC%A0%E6%89%BF.html" class="badge tag-link me-2 mb-1">
                         文化传承
                       </a>
                       
-                      <a href="/tag/%E7%8E%B0%E4%BB%A3%E5%90%AF%E7%A4%BA.html" class="badge tag-link">
+                      <a href="/tag/%E7%8E%B0%E4%BB%A3%E5%90%AF%E7%A4%BA.html" class="badge tag-link me-2 mb-1">
                         现代启示
                       </a>
                       
-                      <a href="/tag/%E7%94%9F%E6%B4%BB%E6%99%BA%E6%85%A7.html" class="badge tag-link">
+                      <a href="/tag/%E7%94%9F%E6%B4%BB%E6%99%BA%E6%85%A7.html" class="badge tag-link me-2 mb-1">
                         生活智慧
                       </a>
                       
-                      <a href="/tag/%E8%8A%82%E6%97%A5%E6%96%87%E5%8C%96.html" class="badge tag-link">
+                      <a href="/tag/%E8%8A%82%E6%97%A5%E6%96%87%E5%8C%96.html" class="badge tag-link me-2 mb-1">
                         节日文化
                       </a>
                       
-                      <a href="/tag/%E5%88%9B%E6%96%B0%E8%A1%A8%E8%BE%BE.html" class="badge tag-link">
+                      <a href="/tag/%E5%88%9B%E6%96%B0%E8%A1%A8%E8%BE%BE.html" class="badge tag-link me-2 mb-1">
                         创新表达
                       </a>
                       
@@ -439,48 +510,49 @@
               </div>
               
               <div class="masonry-grid-item">
-                <div class="card shadow-sm">
+                <div class="card article-card shadow-sm">
                   <div class="card-body">
-                    <h5 class="card-title">
-                      <i class="bi bi-file-earmark-text"></i>
-                      <a href="../mdhtml/传统民俗文化在现代社会中的传承与创新.html" class="text-decoration-none">
+                    <h5 class="card-title article-title">
+                      <i class="bi bi-file-earmark-text me-2 text-primary"></i>
+                      <a href="../mdhtml/传统民俗文化在现代社会中的传承与创新.html" class="text-decoration-none text-dark">
                         传统民俗文化在现代社会中的传承与创新
                       </a>
                     </h5>
                     
-                      <p class="card-text">
+                      <p class="card-text text-muted mb-3">
                         探讨传统民俗文化如何与现代社会相结合，分析传统民俗文化在现代社会中的应用价值，以及如何通过创新让传统民俗文化在现代社会焕发新活力。
                       </p>
                       
-                        
-                          <small class="text-muted">
-                            2026-02-24
-                          </small>
-                          
+                        <div class="article-meta">
+                            
+                                <i class="bi bi-clock me-1"></i>
+                                2026-02-24
+                                
+                        </div>
                   </div>
-                  <div class="card-footer text-muted">
+                  <div class="card-footer text-muted bg-white border-top">
                     <a href="/category/%E4%BC%A0%E7%BB%9F%E6%96%87%E5%8C%96.html"
-                      class="badge bg-primary">
+                      class="badge bg-primary me-2">
                       传统文化
                     </a>
                     
-                      <a href="/tag/%E6%96%87%E5%8C%96%E4%BC%A0%E6%89%BF.html" class="badge tag-link">
+                      <a href="/tag/%E6%96%87%E5%8C%96%E4%BC%A0%E6%89%BF.html" class="badge tag-link me-2 mb-1">
                         文化传承
                       </a>
                       
-                      <a href="/tag/%E7%8E%B0%E4%BB%A3%E5%90%AF%E7%A4%BA.html" class="badge tag-link">
+                      <a href="/tag/%E7%8E%B0%E4%BB%A3%E5%90%AF%E7%A4%BA.html" class="badge tag-link me-2 mb-1">
                         现代启示
                       </a>
                       
-                      <a href="/tag/%E7%94%9F%E6%B4%BB%E6%99%BA%E6%85%A7.html" class="badge tag-link">
+                      <a href="/tag/%E7%94%9F%E6%B4%BB%E6%99%BA%E6%85%A7.html" class="badge tag-link me-2 mb-1">
                         生活智慧
                       </a>
                       
-                      <a href="/tag/%E4%BC%A0%E7%BB%9F%E6%B0%91%E4%BF%97.html" class="badge tag-link">
+                      <a href="/tag/%E4%BC%A0%E7%BB%9F%E6%B0%91%E4%BF%97.html" class="badge tag-link me-2 mb-1">
                         传统民俗
                       </a>
                       
-                      <a href="/tag/%E6%B0%91%E4%BF%97%E5%88%9B%E6%96%B0.html" class="badge tag-link">
+                      <a href="/tag/%E6%B0%91%E4%BF%97%E5%88%9B%E6%96%B0.html" class="badge tag-link me-2 mb-1">
                         民俗创新
                       </a>
                       
@@ -489,48 +561,49 @@
               </div>
               
               <div class="masonry-grid-item">
-                <div class="card shadow-sm">
+                <div class="card article-card shadow-sm">
                   <div class="card-body">
-                    <h5 class="card-title">
-                      <i class="bi bi-file-earmark-text"></i>
-                      <a href="../mdhtml/传统礼仪文化在现代社会中的传承与创新.html" class="text-decoration-none">
+                    <h5 class="card-title article-title">
+                      <i class="bi bi-file-earmark-text me-2 text-primary"></i>
+                      <a href="../mdhtml/传统礼仪文化在现代社会中的传承与创新.html" class="text-decoration-none text-dark">
                         传统礼仪文化在现代社会中的传承与创新
                       </a>
                     </h5>
                     
-                      <p class="card-text">
+                      <p class="card-text text-muted mb-3">
                         探讨传统礼仪文化如何与现代社会相结合，分析传统礼仪文化在现代社会中的应用价值，以及如何通过创新让传统礼仪文化在现代社会焕发新活力。
                       </p>
                       
-                        
-                          <small class="text-muted">
-                            2026-02-24
-                          </small>
-                          
+                        <div class="article-meta">
+                            
+                                <i class="bi bi-clock me-1"></i>
+                                2026-02-24
+                                
+                        </div>
                   </div>
-                  <div class="card-footer text-muted">
+                  <div class="card-footer text-muted bg-white border-top">
                     <a href="/category/%E4%BC%A0%E7%BB%9F%E6%96%87%E5%8C%96.html"
-                      class="badge bg-primary">
+                      class="badge bg-primary me-2">
                       传统文化
                     </a>
                     
-                      <a href="/tag/%E6%96%87%E5%8C%96%E4%BC%A0%E6%89%BF.html" class="badge tag-link">
+                      <a href="/tag/%E6%96%87%E5%8C%96%E4%BC%A0%E6%89%BF.html" class="badge tag-link me-2 mb-1">
                         文化传承
                       </a>
                       
-                      <a href="/tag/%E7%8E%B0%E4%BB%A3%E5%90%AF%E7%A4%BA.html" class="badge tag-link">
+                      <a href="/tag/%E7%8E%B0%E4%BB%A3%E5%90%AF%E7%A4%BA.html" class="badge tag-link me-2 mb-1">
                         现代启示
                       </a>
                       
-                      <a href="/tag/%E7%94%9F%E6%B4%BB%E6%99%BA%E6%85%A7.html" class="badge tag-link">
+                      <a href="/tag/%E7%94%9F%E6%B4%BB%E6%99%BA%E6%85%A7.html" class="badge tag-link me-2 mb-1">
                         生活智慧
                       </a>
                       
-                      <a href="/tag/%E4%BC%A0%E7%BB%9F%E7%A4%BC%E4%BB%AA.html" class="badge tag-link">
+                      <a href="/tag/%E4%BC%A0%E7%BB%9F%E7%A4%BC%E4%BB%AA.html" class="badge tag-link me-2 mb-1">
                         传统礼仪
                       </a>
                       
-                      <a href="/tag/%E7%A4%BC%E4%BB%AA%E5%88%9B%E6%96%B0.html" class="badge tag-link">
+                      <a href="/tag/%E7%A4%BC%E4%BB%AA%E5%88%9B%E6%96%B0.html" class="badge tag-link me-2 mb-1">
                         礼仪创新
                       </a>
                       
@@ -539,48 +612,49 @@
               </div>
               
               <div class="masonry-grid-item">
-                <div class="card shadow-sm">
+                <div class="card article-card shadow-sm">
                   <div class="card-body">
-                    <h5 class="card-title">
-                      <i class="bi bi-file-earmark-text"></i>
-                      <a href="../mdhtml/传统文学经典在现代阅读中的价值.html" class="text-decoration-none">
+                    <h5 class="card-title article-title">
+                      <i class="bi bi-file-earmark-text me-2 text-primary"></i>
+                      <a href="../mdhtml/传统文学经典在现代阅读中的价值.html" class="text-decoration-none text-dark">
                         传统文学经典在现代阅读中的价值
                       </a>
                     </h5>
                     
-                      <p class="card-text">
+                      <p class="card-text text-muted mb-3">
                         探讨传统文学经典在现代阅读中的价值和意义，分析如何通过阅读传统文学经典提升现代人文素养，以及传统文学经典对现代生活的启示。
                       </p>
                       
-                        
-                          <small class="text-muted">
-                            2026-02-24
-                          </small>
-                          
+                        <div class="article-meta">
+                            
+                                <i class="bi bi-clock me-1"></i>
+                                2026-02-24
+                                
+                        </div>
                   </div>
-                  <div class="card-footer text-muted">
+                  <div class="card-footer text-muted bg-white border-top">
                     <a href="/category/%E4%BC%A0%E7%BB%9F%E6%96%87%E5%8C%96.html"
-                      class="badge bg-primary">
+                      class="badge bg-primary me-2">
                       传统文化
                     </a>
                     
-                      <a href="/tag/%E6%96%87%E5%8C%96%E4%BC%A0%E6%89%BF.html" class="badge tag-link">
+                      <a href="/tag/%E6%96%87%E5%8C%96%E4%BC%A0%E6%89%BF.html" class="badge tag-link me-2 mb-1">
                         文化传承
                       </a>
                       
-                      <a href="/tag/%E7%8E%B0%E4%BB%A3%E5%90%AF%E7%A4%BA.html" class="badge tag-link">
+                      <a href="/tag/%E7%8E%B0%E4%BB%A3%E5%90%AF%E7%A4%BA.html" class="badge tag-link me-2 mb-1">
                         现代启示
                       </a>
                       
-                      <a href="/tag/%E7%94%9F%E6%B4%BB%E6%99%BA%E6%85%A7.html" class="badge tag-link">
+                      <a href="/tag/%E7%94%9F%E6%B4%BB%E6%99%BA%E6%85%A7.html" class="badge tag-link me-2 mb-1">
                         生活智慧
                       </a>
                       
-                      <a href="/tag/%E4%BC%A0%E7%BB%9F%E6%96%87%E5%AD%A6.html" class="badge tag-link">
+                      <a href="/tag/%E4%BC%A0%E7%BB%9F%E6%96%87%E5%AD%A6.html" class="badge tag-link me-2 mb-1">
                         传统文学
                       </a>
                       
-                      <a href="/tag/%E7%BB%8F%E5%85%B8%E9%98%85%E8%AF%BB.html" class="badge tag-link">
+                      <a href="/tag/%E7%BB%8F%E5%85%B8%E9%98%85%E8%AF%BB.html" class="badge tag-link me-2 mb-1">
                         经典阅读
                       </a>
                       
@@ -589,48 +663,49 @@
               </div>
               
               <div class="masonry-grid-item">
-                <div class="card shadow-sm">
+                <div class="card article-card shadow-sm">
                   <div class="card-body">
-                    <h5 class="card-title">
-                      <i class="bi bi-file-earmark-text"></i>
-                      <a href="../mdhtml/传统工艺在现代设计中的应用.html" class="text-decoration-none">
+                    <h5 class="card-title article-title">
+                      <i class="bi bi-file-earmark-text me-2 text-primary"></i>
+                      <a href="../mdhtml/传统工艺在现代设计中的应用.html" class="text-decoration-none text-dark">
                         传统工艺在现代设计中的应用
                       </a>
                     </h5>
                     
-                      <p class="card-text">
+                      <p class="card-text text-muted mb-3">
                         探索传统工艺与现代设计的融合之道，分析传统工艺在现代设计中的创新应用，以及如何通过设计创新赋予传统工艺新的生命力，实现传统文化的现代传承。
                       </p>
                       
-                        
-                          <small class="text-muted">
-                            2026-02-24
-                          </small>
-                          
+                        <div class="article-meta">
+                            
+                                <i class="bi bi-clock me-1"></i>
+                                2026-02-24
+                                
+                        </div>
                   </div>
-                  <div class="card-footer text-muted">
+                  <div class="card-footer text-muted bg-white border-top">
                     <a href="/category/%E4%BC%A0%E7%BB%9F%E6%96%87%E5%8C%96.html"
-                      class="badge bg-primary">
+                      class="badge bg-primary me-2">
                       传统文化
                     </a>
                     
-                      <a href="/tag/%E6%96%87%E5%8C%96%E4%BC%A0%E6%89%BF.html" class="badge tag-link">
+                      <a href="/tag/%E6%96%87%E5%8C%96%E4%BC%A0%E6%89%BF.html" class="badge tag-link me-2 mb-1">
                         文化传承
                       </a>
                       
-                      <a href="/tag/%E7%8E%B0%E4%BB%A3%E5%90%AF%E7%A4%BA.html" class="badge tag-link">
+                      <a href="/tag/%E7%8E%B0%E4%BB%A3%E5%90%AF%E7%A4%BA.html" class="badge tag-link me-2 mb-1">
                         现代启示
                       </a>
                       
-                      <a href="/tag/%E7%94%9F%E6%B4%BB%E6%99%BA%E6%85%A7.html" class="badge tag-link">
+                      <a href="/tag/%E7%94%9F%E6%B4%BB%E6%99%BA%E6%85%A7.html" class="badge tag-link me-2 mb-1">
                         生活智慧
                       </a>
                       
-                      <a href="/tag/%E4%BC%A0%E7%BB%9F%E5%B7%A5%E8%89%BA.html" class="badge tag-link">
+                      <a href="/tag/%E4%BC%A0%E7%BB%9F%E5%B7%A5%E8%89%BA.html" class="badge tag-link me-2 mb-1">
                         传统工艺
                       </a>
                       
-                      <a href="/tag/%E7%8E%B0%E4%BB%A3%E8%AE%BE%E8%AE%A1.html" class="badge tag-link">
+                      <a href="/tag/%E7%8E%B0%E4%BB%A3%E8%AE%BE%E8%AE%A1.html" class="badge tag-link me-2 mb-1">
                         现代设计
                       </a>
                       
@@ -639,48 +714,49 @@
               </div>
               
               <div class="masonry-grid-item">
-                <div class="card shadow-sm">
+                <div class="card article-card shadow-sm">
                   <div class="card-body">
-                    <h5 class="card-title">
-                      <i class="bi bi-file-earmark-text"></i>
-                      <a href="../mdhtml/传统建筑文化在现代建筑中的传承与创新.html" class="text-decoration-none">
+                    <h5 class="card-title article-title">
+                      <i class="bi bi-file-earmark-text me-2 text-primary"></i>
+                      <a href="../mdhtml/传统建筑文化在现代建筑中的传承与创新.html" class="text-decoration-none text-dark">
                         传统建筑文化在现代建筑中的传承与创新
                       </a>
                     </h5>
                     
-                      <p class="card-text">
+                      <p class="card-text text-muted mb-3">
                         探讨传统建筑文化如何与现代建筑设计相结合，分析传统建筑文化在现代建筑中的应用价值，以及如何通过创新让传统建筑文化在现代社会焕发新活力。
                       </p>
                       
-                        
-                          <small class="text-muted">
-                            2026-02-24
-                          </small>
-                          
+                        <div class="article-meta">
+                            
+                                <i class="bi bi-clock me-1"></i>
+                                2026-02-24
+                                
+                        </div>
                   </div>
-                  <div class="card-footer text-muted">
+                  <div class="card-footer text-muted bg-white border-top">
                     <a href="/category/%E4%BC%A0%E7%BB%9F%E6%96%87%E5%8C%96.html"
-                      class="badge bg-primary">
+                      class="badge bg-primary me-2">
                       传统文化
                     </a>
                     
-                      <a href="/tag/%E6%96%87%E5%8C%96%E4%BC%A0%E6%89%BF.html" class="badge tag-link">
+                      <a href="/tag/%E6%96%87%E5%8C%96%E4%BC%A0%E6%89%BF.html" class="badge tag-link me-2 mb-1">
                         文化传承
                       </a>
                       
-                      <a href="/tag/%E7%8E%B0%E4%BB%A3%E5%90%AF%E7%A4%BA.html" class="badge tag-link">
+                      <a href="/tag/%E7%8E%B0%E4%BB%A3%E5%90%AF%E7%A4%BA.html" class="badge tag-link me-2 mb-1">
                         现代启示
                       </a>
                       
-                      <a href="/tag/%E7%94%9F%E6%B4%BB%E6%99%BA%E6%85%A7.html" class="badge tag-link">
+                      <a href="/tag/%E7%94%9F%E6%B4%BB%E6%99%BA%E6%85%A7.html" class="badge tag-link me-2 mb-1">
                         生活智慧
                       </a>
                       
-                      <a href="/tag/%E4%BC%A0%E7%BB%9F%E5%BB%BA%E7%AD%91.html" class="badge tag-link">
+                      <a href="/tag/%E4%BC%A0%E7%BB%9F%E5%BB%BA%E7%AD%91.html" class="badge tag-link me-2 mb-1">
                         传统建筑
                       </a>
                       
-                      <a href="/tag/%E5%BB%BA%E7%AD%91%E5%88%9B%E6%96%B0.html" class="badge tag-link">
+                      <a href="/tag/%E5%BB%BA%E7%AD%91%E5%88%9B%E6%96%B0.html" class="badge tag-link me-2 mb-1">
                         建筑创新
                       </a>
                       
@@ -689,48 +765,49 @@
               </div>
               
               <div class="masonry-grid-item">
-                <div class="card shadow-sm">
+                <div class="card article-card shadow-sm">
                   <div class="card-body">
-                    <h5 class="card-title">
-                      <i class="bi bi-file-earmark-text"></i>
-                      <a href="../mdhtml/传统哲学思想在现代管理中的应用.html" class="text-decoration-none">
+                    <h5 class="card-title article-title">
+                      <i class="bi bi-file-earmark-text me-2 text-primary"></i>
+                      <a href="../mdhtml/传统哲学思想在现代管理中的应用.html" class="text-decoration-none text-dark">
                         传统哲学思想在现代管理中的应用
                       </a>
                     </h5>
                     
-                      <p class="card-text">
+                      <p class="card-text text-muted mb-3">
                         探讨传统哲学思想如何与现代管理实践相结合，分析传统哲学思想在现代管理中的应用价值，以及如何通过传统智慧提升现代管理水平。
                       </p>
                       
-                        
-                          <small class="text-muted">
-                            2026-02-24
-                          </small>
-                          
+                        <div class="article-meta">
+                            
+                                <i class="bi bi-clock me-1"></i>
+                                2026-02-24
+                                
+                        </div>
                   </div>
-                  <div class="card-footer text-muted">
+                  <div class="card-footer text-muted bg-white border-top">
                     <a href="/category/%E4%BC%A0%E7%BB%9F%E6%96%87%E5%8C%96.html"
-                      class="badge bg-primary">
+                      class="badge bg-primary me-2">
                       传统文化
                     </a>
                     
-                      <a href="/tag/%E6%96%87%E5%8C%96%E4%BC%A0%E6%89%BF.html" class="badge tag-link">
+                      <a href="/tag/%E6%96%87%E5%8C%96%E4%BC%A0%E6%89%BF.html" class="badge tag-link me-2 mb-1">
                         文化传承
                       </a>
                       
-                      <a href="/tag/%E7%8E%B0%E4%BB%A3%E5%90%AF%E7%A4%BA.html" class="badge tag-link">
+                      <a href="/tag/%E7%8E%B0%E4%BB%A3%E5%90%AF%E7%A4%BA.html" class="badge tag-link me-2 mb-1">
                         现代启示
                       </a>
                       
-                      <a href="/tag/%E7%94%9F%E6%B4%BB%E6%99%BA%E6%85%A7.html" class="badge tag-link">
+                      <a href="/tag/%E7%94%9F%E6%B4%BB%E6%99%BA%E6%85%A7.html" class="badge tag-link me-2 mb-1">
                         生活智慧
                       </a>
                       
-                      <a href="/tag/%E4%BC%A0%E7%BB%9F%E5%93%B2%E5%AD%A6.html" class="badge tag-link">
+                      <a href="/tag/%E4%BC%A0%E7%BB%9F%E5%93%B2%E5%AD%A6.html" class="badge tag-link me-2 mb-1">
                         传统哲学
                       </a>
                       
-                      <a href="/tag/%E7%8E%B0%E4%BB%A3%E7%AE%A1%E7%90%86.html" class="badge tag-link">
+                      <a href="/tag/%E7%8E%B0%E4%BB%A3%E7%AE%A1%E7%90%86.html" class="badge tag-link me-2 mb-1">
                         现代管理
                       </a>
                       
@@ -739,48 +816,49 @@
               </div>
               
               <div class="masonry-grid-item">
-                <div class="card shadow-sm">
+                <div class="card article-card shadow-sm">
                   <div class="card-body">
-                    <h5 class="card-title">
-                      <i class="bi bi-file-earmark-text"></i>
-                      <a href="../mdhtml/传统医学智慧在现代健康生活中的应用.html" class="text-decoration-none">
+                    <h5 class="card-title article-title">
+                      <i class="bi bi-file-earmark-text me-2 text-primary"></i>
+                      <a href="../mdhtml/传统医学智慧在现代健康生活中的应用.html" class="text-decoration-none text-dark">
                         传统医学智慧在现代健康生活中的应用
                       </a>
                     </h5>
                     
-                      <p class="card-text">
+                      <p class="card-text text-muted mb-3">
                         探讨传统医学的智慧如何与现代健康生活相结合，分析传统医学在现代健康管理中的应用价值，以及如何通过传统医学理念指导现代健康生活方式。
                       </p>
                       
-                        
-                          <small class="text-muted">
-                            2026-02-24
-                          </small>
-                          
+                        <div class="article-meta">
+                            
+                                <i class="bi bi-clock me-1"></i>
+                                2026-02-24
+                                
+                        </div>
                   </div>
-                  <div class="card-footer text-muted">
+                  <div class="card-footer text-muted bg-white border-top">
                     <a href="/category/%E4%BC%A0%E7%BB%9F%E6%96%87%E5%8C%96.html"
-                      class="badge bg-primary">
+                      class="badge bg-primary me-2">
                       传统文化
                     </a>
                     
-                      <a href="/tag/%E6%96%87%E5%8C%96%E4%BC%A0%E6%89%BF.html" class="badge tag-link">
+                      <a href="/tag/%E6%96%87%E5%8C%96%E4%BC%A0%E6%89%BF.html" class="badge tag-link me-2 mb-1">
                         文化传承
                       </a>
                       
-                      <a href="/tag/%E7%8E%B0%E4%BB%A3%E5%90%AF%E7%A4%BA.html" class="badge tag-link">
+                      <a href="/tag/%E7%8E%B0%E4%BB%A3%E5%90%AF%E7%A4%BA.html" class="badge tag-link me-2 mb-1">
                         现代启示
                       </a>
                       
-                      <a href="/tag/%E7%94%9F%E6%B4%BB%E6%99%BA%E6%85%A7.html" class="badge tag-link">
+                      <a href="/tag/%E7%94%9F%E6%B4%BB%E6%99%BA%E6%85%A7.html" class="badge tag-link me-2 mb-1">
                         生活智慧
                       </a>
                       
-                      <a href="/tag/%E4%BC%A0%E7%BB%9F%E5%8C%BB%E5%AD%A6.html" class="badge tag-link">
+                      <a href="/tag/%E4%BC%A0%E7%BB%9F%E5%8C%BB%E5%AD%A6.html" class="badge tag-link me-2 mb-1">
                         传统医学
                       </a>
                       
-                      <a href="/tag/%E5%81%A5%E5%BA%B7%E7%94%9F%E6%B4%BB.html" class="badge tag-link">
+                      <a href="/tag/%E5%81%A5%E5%BA%B7%E7%94%9F%E6%B4%BB.html" class="badge tag-link me-2 mb-1">
                         健康生活
                       </a>
                       
@@ -789,44 +867,45 @@
               </div>
               
               <div class="masonry-grid-item">
-                <div class="card shadow-sm">
+                <div class="card article-card shadow-sm">
                   <div class="card-body">
-                    <h5 class="card-title">
-                      <i class="bi bi-file-earmark-text"></i>
-                      <a href="../mdhtml/传统文化该如何传承创新？.html" class="text-decoration-none">
+                    <h5 class="card-title article-title">
+                      <i class="bi bi-file-earmark-text me-2 text-primary"></i>
+                      <a href="../mdhtml/传统文化该如何传承创新？.html" class="text-decoration-none text-dark">
                         传统文化该如何传承创新？
                       </a>
                     </h5>
                     
-                      <p class="card-text">
+                      <p class="card-text text-muted mb-3">
                         本文探讨传统文化传承与创新的四种方法：守艺、破界、焕新及播种。通过坚持传统工艺、跨界融合科技与艺术、融入日常生活以及激发年轻一代的力量，让传统文化在当代社会中焕发新生，实现千年文脉的延续与发展。
                       </p>
                       
-                        
-                          <small class="text-muted">
-                            2026-02-11
-                          </small>
-                          
+                        <div class="article-meta">
+                            
+                                <i class="bi bi-clock me-1"></i>
+                                2026-02-11
+                                
+                        </div>
                   </div>
-                  <div class="card-footer text-muted">
+                  <div class="card-footer text-muted bg-white border-top">
                     <a href="/category/%E4%BC%A0%E7%BB%9F%E6%96%87%E5%8C%96.html"
-                      class="badge bg-primary">
+                      class="badge bg-primary me-2">
                       传统文化
                     </a>
                     
-                      <a href="/tag/%E6%96%87%E5%8C%96%E4%BC%A0%E6%89%BF.html" class="badge tag-link">
+                      <a href="/tag/%E6%96%87%E5%8C%96%E4%BC%A0%E6%89%BF.html" class="badge tag-link me-2 mb-1">
                         文化传承
                       </a>
                       
-                      <a href="/tag/%E5%AE%88%E8%89%BA.html" class="badge tag-link">
+                      <a href="/tag/%E5%AE%88%E8%89%BA.html" class="badge tag-link me-2 mb-1">
                         守艺
                       </a>
                       
-                      <a href="/tag/%E9%9D%9E%E9%81%97%E4%BF%9D%E6%8A%A4.html" class="badge tag-link">
+                      <a href="/tag/%E9%9D%9E%E9%81%97%E4%BF%9D%E6%8A%A4.html" class="badge tag-link me-2 mb-1">
                         非遗保护
                       </a>
                       
-                      <a href="/tag/%E7%94%9F%E6%B4%BB%E6%96%87%E5%8C%96.html" class="badge tag-link">
+                      <a href="/tag/%E7%94%9F%E6%B4%BB%E6%96%87%E5%8C%96.html" class="badge tag-link me-2 mb-1">
                         生活文化
                       </a>
                       
@@ -836,8 +915,8 @@
               
           </div>
 
-          <div class="mt-4 text-center">
-            <a href="标签列表.html" class="btn btn-outline-primary"><i class="bi bi-arrow-left"></i> 返回标签列表</a>
+          <div class="mt-6 text-center">
+            <a href="标签列表.html" class="btn btn-outline-primary back-button"><i class="bi bi-arrow-left me-2"></i> 返回标签列表</a>
           </div>
         </div>
       </div>
@@ -861,7 +940,7 @@
             itemSelector: '.masonry-grid-item',
             columnWidth: '.masonry-grid-item',
             percentPosition: true,
-            gutter: 10 // 可选，添加卡片间的间距
+            gutter: 15 // 增加间距，提升视觉效果
           });
         });
       </script>

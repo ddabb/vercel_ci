@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
 
 <head>
   <meta charset="UTF-8">
@@ -9,7 +9,7 @@
   <meta name="description" content="无人自助站的【医疗干预】的标签列表页面，汇集了关于【医疗干预】标签相关的文章和资讯，方便您快速找到感兴趣的内容。">
   <meta name="keywords" content="无人自助站,医疗干预">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>标签文章列表</title>
+  <title>医疗干预标签 - 无人自助站</title>
 
   <link rel="icon" href="../logo.svg" type="image/svg+xml">
   <link rel="stylesheet" href="../css/style.css">
@@ -27,6 +27,62 @@
   <!-- 引入Masonry -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/masonry/4.2.2/masonry.pkgd.min.js"></script>
 
+  <style>
+        .tag-header {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            color: white;
+            padding: 2rem;
+            border-radius: 8px;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        .tag-title {
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+        .article-card {
+            transition: all 0.3s ease;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        .article-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+        }
+        .article-title {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            transition: color 0.3s ease;
+        }
+        .article-title:hover {
+            color: #0d6efd;
+        }
+        .article-meta {
+            font-size: 0.85rem;
+            color: #6c757d;
+        }
+        .tag-link {
+            background-color: #e9ecef;
+            color: #495057;
+            transition: all 0.2s ease;
+        }
+        .tag-link:hover {
+            background-color: #dee2e6;
+            color: #212529;
+        }
+        .back-button {
+            transition: all 0.3s ease;
+        }
+        .back-button:hover {
+            transform: translateX(-3px);
+        }
+        .article-count {
+            font-size: 0.9rem;
+            opacity: 0.9;
+        }
+    </style>
 </head>
 
 <body>
@@ -80,7 +136,7 @@
     <main class="container-fluid mt-4">
       <div class="row">
         <div class="col-lg-8 col-md-12 mx-auto">
-          <nav aria-label="breadcrumb">
+          <nav aria-label="breadcrumb" class="mb-4">
             <ol class="breadcrumb">
               <li class="breadcrumb-item"><a href="/html/index.html">首页</a></li>
               <li class="breadcrumb-item"><a href="标签列表.html">标签列表</a></li>
@@ -89,54 +145,64 @@
               </li>
             </ol>
           </nav>
-          <h1 style="font-size: 1.5em; margin: 0.5em 0;">
-            医疗干预标签的文章和资讯
-        </h1>
+          
+          <!-- 标签头部 -->
+          <div class="tag-header">
+              <h1 class="tag-title">
+                  <i class="bi bi-tags me-2"></i>
+                  医疗干预
+              </h1>
+              <p class="article-count">
+                  共 1 篇文章
+              </p>
+          </div>
+          
           <div class="masonry-grid">
             
               <div class="masonry-grid-item">
-                <div class="card shadow-sm">
+                <div class="card article-card shadow-sm">
                   <div class="card-body">
-                    <h5 class="card-title">
-                      <i class="bi bi-file-earmark-text"></i>
-                      <a href="../mdhtml/怎样降低尿酸？超实用指南来了！.html" class="text-decoration-none">
+                    <h5 class="card-title article-title">
+                      <i class="bi bi-file-earmark-text me-2 text-primary"></i>
+                      <a href="../mdhtml/怎样降低尿酸？超实用指南来了！.html" class="text-decoration-none text-dark">
                         怎样降低尿酸？超实用指南来了！
                       </a>
                     </h5>
                     
-                      <p class="card-text">
+                      <p class="card-text text-muted mb-3">
                         提供降低尿酸的实用指南，涵盖饮食调整、生活习惯改善和医疗干预等多方面内容，帮助读者有效控制尿酸水平，预防并发症，保持身体健康。
                       </p>
                       
-                        
-                          <small class="text-muted">
-                            2026-02-11
-                          </small>
-                          
+                        <div class="article-meta">
+                            
+                                <i class="bi bi-clock me-1"></i>
+                                2026-02-11
+                                
+                        </div>
                   </div>
-                  <div class="card-footer text-muted">
+                  <div class="card-footer text-muted bg-white border-top">
                     <a href="/category/%E8%BA%AB%E5%BF%83%E5%81%A5%E5%BA%B7.html"
-                      class="badge bg-primary">
+                      class="badge bg-primary me-2">
                       身心健康
                     </a>
                     
-                      <a href="/tag/%E5%B0%BF%E9%85%B8.html" class="badge tag-link">
+                      <a href="/tag/%E5%B0%BF%E9%85%B8.html" class="badge tag-link me-2 mb-1">
                         尿酸
                       </a>
                       
-                      <a href="/tag/%E7%97%9B%E9%A3%8E.html" class="badge tag-link">
+                      <a href="/tag/%E7%97%9B%E9%A3%8E.html" class="badge tag-link me-2 mb-1">
                         痛风
                       </a>
                       
-                      <a href="/tag/%E9%A5%AE%E9%A3%9F%E8%B0%83%E6%95%B4.html" class="badge tag-link">
+                      <a href="/tag/%E9%A5%AE%E9%A3%9F%E8%B0%83%E6%95%B4.html" class="badge tag-link me-2 mb-1">
                         饮食调整
                       </a>
                       
-                      <a href="/tag/%E7%94%9F%E6%B4%BB%E4%B9%A0%E6%83%AF.html" class="badge tag-link">
+                      <a href="/tag/%E7%94%9F%E6%B4%BB%E4%B9%A0%E6%83%AF.html" class="badge tag-link me-2 mb-1">
                         生活习惯
                       </a>
                       
-                      <a href="/tag/%E5%8C%BB%E7%96%97%E5%B9%B2%E9%A2%84.html" class="badge tag-link">
+                      <a href="/tag/%E5%8C%BB%E7%96%97%E5%B9%B2%E9%A2%84.html" class="badge tag-link me-2 mb-1">
                         医疗干预
                       </a>
                       
@@ -146,8 +212,8 @@
               
           </div>
 
-          <div class="mt-4 text-center">
-            <a href="标签列表.html" class="btn btn-outline-primary"><i class="bi bi-arrow-left"></i> 返回标签列表</a>
+          <div class="mt-6 text-center">
+            <a href="标签列表.html" class="btn btn-outline-primary back-button"><i class="bi bi-arrow-left me-2"></i> 返回标签列表</a>
           </div>
         </div>
       </div>
@@ -171,7 +237,7 @@
             itemSelector: '.masonry-grid-item',
             columnWidth: '.masonry-grid-item',
             percentPosition: true,
-            gutter: 10 // 可选，添加卡片间的间距
+            gutter: 15 // 增加间距，提升视觉效果
           });
         });
       </script>

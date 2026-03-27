@@ -133,9 +133,4 @@ dist
 .vs/slnx.sqlite
 .vs/NodeAgent/FileContentIndex/a3c34e66-5559-4c17-89b6-5ad3a0494ba6.vsidx
 .vs/
-# CodeBuddy
-.codebuddy/*
-!.codebuddy/skills/
-!.codebuddy/rules/
-!.codebuddy/prompts/
-!.codebuddy/config.json
+.codebuddy

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
 
 <head>
     <meta charset="UTF-8">
@@ -9,7 +9,7 @@
     <meta name="description" content="无人自助站的【心理健康】分类列表页面，汇集了关于【心理健康】分类的文章和资讯，方便您快速找到感兴趣的内容。">
     <meta name="keywords" content="无人自助站,心理健康">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>分类列表</title>
+    <title>心理健康分类 - 无人自助站</title>
     <link rel="icon" href="../logo.svg" type="image/svg+xml">
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/footer.css">
@@ -27,6 +27,62 @@
     <!-- 引入Masonry -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/masonry/4.2.2/masonry.pkgd.min.js"></script>
 
+    <style>
+        .category-header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 2rem;
+            border-radius: 8px;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        .category-title {
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+        .article-card {
+            transition: all 0.3s ease;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        .article-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+        }
+        .article-title {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            transition: color 0.3s ease;
+        }
+        .article-title:hover {
+            color: #0d6efd;
+        }
+        .article-meta {
+            font-size: 0.85rem;
+            color: #6c757d;
+        }
+        .tag-link {
+            background-color: #e9ecef;
+            color: #495057;
+            transition: all 0.2s ease;
+        }
+        .tag-link:hover {
+            background-color: #dee2e6;
+            color: #212529;
+        }
+        .back-button {
+            transition: all 0.3s ease;
+        }
+        .back-button:hover {
+            transform: translateX(-3px);
+        }
+        .article-count {
+            font-size: 0.9rem;
+            opacity: 0.9;
+        }
+    </style>
 </head>
 
 <body>
@@ -80,7 +136,7 @@
         <main class="container-fluid mt-4">
             <div class="col-lg-8 col-md-12 mx-auto">
                 <!-- 面包屑导航 -->
-                <nav aria-label="breadcrumb">
+                <nav aria-label="breadcrumb" class="mb-4">
                     <ol class="breadcrumb">
                         <li class="breadcrumb-item"><a href="/html/index.html">首页</a></li>
                         <li class="breadcrumb-item"><a href="分类列表.html">分类列表</a></li>
@@ -89,61 +145,71 @@
                         </li>
                     </ol>
                 </nav>
-                <h1 style="font-size: 1.5em; margin: 0.5em 0;">
-                    心理健康分类的文章和资讯
-                </h1>
+                
+                <!-- 分类头部 -->
+                <div class="category-header">
+                    <h1 class="category-title">
+                        <i class="bi bi-folder2 me-2"></i>
+                        心理健康
+                    </h1>
+                    <p class="article-count">
+                        共 10 篇文章
+                    </p>
+                </div>
+                
                 <!-- 分类内容卡片 使用 Masonry 布局 -->
                 <div class="masonry-grid">
                     
                         <div class="masonry-grid-item">
-                            <div class="card shadow-sm">
+                            <div class="card article-card shadow-sm">
                                 <div class="card-body">
-                                    <h5 class="card-title">
-                                        <i class="bi bi-file-earmark-text"></i>
+                                    <h5 class="card-title article-title">
+                                        <i class="bi bi-file-earmark-text me-2 text-primary"></i>
                                         <a href="../mdhtml/你不是焦虑，你是肾上腺素成瘾者.html"
-                                            class="text-decoration-none">
+                                            class="text-decoration-none text-dark">
                                             你不是焦虑，你是肾上腺素成瘾者
                                         </a>
                                     </h5>
                                     
-                                        <p class="card-text">
+                                        <p class="card-text text-muted mb-3">
                                             深度分析为什么你其实迷恋焦虑。不是压力太大，而是你在成瘾压力。包含打破焦虑成瘾循环的方法。
                                         </p>
                                         
+                                        <div class="article-meta">
                                             
-                                                <small class="text-muted">
-                                                    2026-03-26
-                                                </small>
+                                                <i class="bi bi-clock me-1"></i>
+                                                2026-03-26
                                                 
+                                        </div>
                                 </div>
-                                <div class="card-footer text-muted">
+                                <div class="card-footer text-muted bg-white border-top">
                                     <a href="/category/%E5%BF%83%E7%90%86%E5%81%A5%E5%BA%B7.html"
-                                        class="badge bg-primary">
+                                        class="badge bg-primary me-2">
                                         心理健康
                                     </a>
                                     
                                         <a href="/tag/%E7%84%A6%E8%99%91.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             焦虑
                                         </a>
                                         
                                         <a href="/tag/%E8%82%BE%E4%B8%8A%E8%85%BA%E7%B4%A0.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             肾上腺素
                                         </a>
                                         
                                         <a href="/tag/%E6%88%90%E7%98%BE.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             成瘾
                                         </a>
                                         
                                         <a href="/tag/%E5%8E%8B%E5%8A%9B.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             压力
                                         </a>
                                         
                                         <a href="/tag/2026%E8%B6%8B%E5%8A%BF.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             2026趋势
                                         </a>
                                         
@@ -152,54 +218,55 @@
                         </div>
                         
                         <div class="masonry-grid-item">
-                            <div class="card shadow-sm">
+                            <div class="card article-card shadow-sm">
                                 <div class="card-body">
-                                    <h5 class="card-title">
-                                        <i class="bi bi-file-earmark-text"></i>
+                                    <h5 class="card-title article-title">
+                                        <i class="bi bi-file-earmark-text me-2 text-primary"></i>
                                         <a href="../mdhtml/你的身体不是你的：如何从身体羞耻中解放.html"
-                                            class="text-decoration-none">
+                                            class="text-decoration-none text-dark">
                                             你的身体不是你的：如何从身体羞耻中解放
                                         </a>
                                     </h5>
                                     
-                                        <p class="card-text">
+                                        <p class="card-text text-muted mb-3">
                                             深度分析身体羞耻的根源和社会影响。不是你的身体不够好，而是社会标准在伤害你。包含建立健康身体形象的方法。
                                         </p>
                                         
+                                        <div class="article-meta">
                                             
-                                                <small class="text-muted">
-                                                    2026-03-26
-                                                </small>
+                                                <i class="bi bi-clock me-1"></i>
+                                                2026-03-26
                                                 
+                                        </div>
                                 </div>
-                                <div class="card-footer text-muted">
+                                <div class="card-footer text-muted bg-white border-top">
                                     <a href="/category/%E5%BF%83%E7%90%86%E5%81%A5%E5%BA%B7.html"
-                                        class="badge bg-primary">
+                                        class="badge bg-primary me-2">
                                         心理健康
                                     </a>
                                     
                                         <a href="/tag/%E8%BA%AB%E4%BD%93%E5%BD%A2%E8%B1%A1.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             身体形象
                                         </a>
                                         
                                         <a href="/tag/%E8%87%AA%E6%88%91%E6%8E%A5%E7%BA%B3.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             自我接纳
                                         </a>
                                         
                                         <a href="/tag/%E8%BA%AB%E4%BD%93%E7%BE%9E%E8%80%BB.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             身体羞耻
                                         </a>
                                         
                                         <a href="/tag/%E5%BF%83%E7%90%86%E5%81%A5%E5%BA%B7.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             心理健康
                                         </a>
                                         
                                         <a href="/tag/2026%E8%B6%8B%E5%8A%BF.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             2026趋势
                                         </a>
                                         
@@ -208,54 +275,55 @@
                         </div>
                         
                         <div class="masonry-grid-item">
-                            <div class="card shadow-sm">
+                            <div class="card article-card shadow-sm">
                                 <div class="card-body">
-                                    <h5 class="card-title">
-                                        <i class="bi bi-file-earmark-text"></i>
+                                    <h5 class="card-title article-title">
+                                        <i class="bi bi-file-earmark-text me-2 text-primary"></i>
                                         <a href="../mdhtml/2026年的焦虑症流行病：为什么越来越多人患上焦虑症，如何自救.html"
-                                            class="text-decoration-none">
+                                            class="text-decoration-none text-dark">
                                             焦虑症不是病：它是你的身体在求救
                                         </a>
                                     </h5>
                                     
-                                        <p class="card-text">
+                                        <p class="card-text text-muted mb-3">
                                             深度分析焦虑症的根本原因。不是心理问题，而是生活方式问题。包含科学的自救方法。
                                         </p>
                                         
+                                        <div class="article-meta">
                                             
-                                                <small class="text-muted">
-                                                    2026-03-26
-                                                </small>
+                                                <i class="bi bi-clock me-1"></i>
+                                                2026-03-26
                                                 
+                                        </div>
                                 </div>
-                                <div class="card-footer text-muted">
+                                <div class="card-footer text-muted bg-white border-top">
                                     <a href="/category/%E5%BF%83%E7%90%86%E5%81%A5%E5%BA%B7.html"
-                                        class="badge bg-primary">
+                                        class="badge bg-primary me-2">
                                         心理健康
                                     </a>
                                     
                                         <a href="/tag/%E7%84%A6%E8%99%91%E7%97%87.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             焦虑症
                                         </a>
                                         
                                         <a href="/tag/%E5%BF%83%E7%90%86%E5%81%A5%E5%BA%B7.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             心理健康
                                         </a>
                                         
                                         <a href="/tag/%E8%87%AA%E6%95%91%E6%96%B9%E6%B3%95.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             自救方法
                                         </a>
                                         
                                         <a href="/tag/%E5%86%A5%E6%83%B3.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             冥想
                                         </a>
                                         
                                         <a href="/tag/2026%E8%B6%8B%E5%8A%BF.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             2026趋势
                                         </a>
                                         
@@ -264,54 +332,55 @@
                         </div>
                         
                         <div class="masonry-grid-item">
-                            <div class="card shadow-sm">
+                            <div class="card article-card shadow-sm">
                                 <div class="card-body">
-                                    <h5 class="card-title">
-                                        <i class="bi bi-file-earmark-text"></i>
+                                    <h5 class="card-title article-title">
+                                        <i class="bi bi-file-earmark-text me-2 text-primary"></i>
                                         <a href="../mdhtml/为什么现在的年轻人都开始写遗书了.html"
-                                            class="text-decoration-none">
+                                            class="text-decoration-none text-dark">
                                             为什么现在的年轻人都开始写遗书了
                                         </a>
                                     </h5>
                                     
-                                        <p class="card-text">
+                                        <p class="card-text text-muted mb-3">
                                             分析年轻人写遗书的现象，探讨心理健康问题。
                                         </p>
                                         
+                                        <div class="article-meta">
                                             
-                                                <small class="text-muted">
-                                                    2026-03-24
-                                                </small>
+                                                <i class="bi bi-clock me-1"></i>
+                                                2026-03-24
                                                 
+                                        </div>
                                 </div>
-                                <div class="card-footer text-muted">
+                                <div class="card-footer text-muted bg-white border-top">
                                     <a href="/category/%E5%BF%83%E7%90%86%E5%81%A5%E5%BA%B7.html"
-                                        class="badge bg-primary">
+                                        class="badge bg-primary me-2">
                                         心理健康
                                     </a>
                                     
                                         <a href="/tag/%E9%81%97%E4%B9%A6.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             遗书
                                         </a>
                                         
                                         <a href="/tag/%E5%B9%B4%E8%BD%BB%E4%BA%BA.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             年轻人
                                         </a>
                                         
                                         <a href="/tag/%E5%BF%83%E7%90%86%E5%81%A5%E5%BA%B7.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             心理健康
                                         </a>
                                         
                                         <a href="/tag/%E5%8E%8B%E5%8A%9B.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             压力
                                         </a>
                                         
                                         <a href="/tag/%E7%94%9F%E5%91%BD.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             生命
                                         </a>
                                         
@@ -320,54 +389,55 @@
                         </div>
                         
                         <div class="masonry-grid-item">
-                            <div class="card shadow-sm">
+                            <div class="card article-card shadow-sm">
                                 <div class="card-body">
-                                    <h5 class="card-title">
-                                        <i class="bi bi-file-earmark-text"></i>
+                                    <h5 class="card-title article-title">
+                                        <i class="bi bi-file-earmark-text me-2 text-primary"></i>
                                         <a href="../mdhtml/这4种人最容易抑郁，看看有没有你.html"
-                                            class="text-decoration-none">
+                                            class="text-decoration-none text-dark">
                                             这4种人最容易抑郁，看看有没有你
                                         </a>
                                     </h5>
                                     
-                                        <p class="card-text">
+                                        <p class="card-text text-muted mb-3">
                                             分析容易抑郁的人群特征，提供预防建议，关爱心理健康。
                                         </p>
                                         
+                                        <div class="article-meta">
                                             
-                                                <small class="text-muted">
-                                                    2026-03-24
-                                                </small>
+                                                <i class="bi bi-clock me-1"></i>
+                                                2026-03-24
                                                 
+                                        </div>
                                 </div>
-                                <div class="card-footer text-muted">
+                                <div class="card-footer text-muted bg-white border-top">
                                     <a href="/category/%E5%BF%83%E7%90%86%E5%81%A5%E5%BA%B7.html"
-                                        class="badge bg-primary">
+                                        class="badge bg-primary me-2">
                                         心理健康
                                     </a>
                                     
                                         <a href="/tag/%E6%8A%91%E9%83%81.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             抑郁
                                         </a>
                                         
                                         <a href="/tag/%E5%BF%83%E7%90%86%E5%81%A5%E5%BA%B7.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             心理健康
                                         </a>
                                         
                                         <a href="/tag/%E9%AB%98%E5%8D%B1%E4%BA%BA%E7%BE%A4.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             高危人群
                                         </a>
                                         
                                         <a href="/tag/%E9%A2%84%E9%98%B2.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             预防
                                         </a>
                                         
                                         <a href="/tag/%E5%BF%83%E7%90%86.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             心理
                                         </a>
                                         
@@ -376,54 +446,55 @@
                         </div>
                         
                         <div class="masonry-grid-item">
-                            <div class="card shadow-sm">
+                            <div class="card article-card shadow-sm">
                                 <div class="card-body">
-                                    <h5 class="card-title">
-                                        <i class="bi bi-file-earmark-text"></i>
+                                    <h5 class="card-title article-title">
+                                        <i class="bi bi-file-earmark-text me-2 text-primary"></i>
                                         <a href="../mdhtml/自我接纳的艺术：停止与自己作战.html"
-                                            class="text-decoration-none">
+                                            class="text-decoration-none text-dark">
                                             自我接纳的艺术：停止与自己作战
                                         </a>
                                     </h5>
                                     
-                                        <p class="card-text">
+                                        <p class="card-text text-muted mb-3">
                                             深入探讨自我接纳的重要性，分析自我批评的危害、完美主义的陷阱、自我同情的力量、以及如何学会接纳自己。
                                         </p>
                                         
+                                        <div class="article-meta">
                                             
-                                                <small class="text-muted">
-                                                    2026-03-24
-                                                </small>
+                                                <i class="bi bi-clock me-1"></i>
+                                                2026-03-24
                                                 
+                                        </div>
                                 </div>
-                                <div class="card-footer text-muted">
+                                <div class="card-footer text-muted bg-white border-top">
                                     <a href="/category/%E5%BF%83%E7%90%86%E5%81%A5%E5%BA%B7.html"
-                                        class="badge bg-primary">
+                                        class="badge bg-primary me-2">
                                         心理健康
                                     </a>
                                     
                                         <a href="/tag/%E8%87%AA%E6%88%91%E6%8E%A5%E7%BA%B3.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             自我接纳
                                         </a>
                                         
                                         <a href="/tag/%E8%87%AA%E6%88%91%E6%89%B9%E8%AF%84.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             自我批评
                                         </a>
                                         
                                         <a href="/tag/%E8%87%AA%E6%88%91%E5%90%8C%E6%83%85.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             自我同情
                                         </a>
                                         
                                         <a href="/tag/%E5%BF%83%E7%90%86%E5%81%A5%E5%BA%B7.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             心理健康
                                         </a>
                                         
                                         <a href="/tag/%E4%B8%AA%E4%BA%BA%E6%88%90%E9%95%BF.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             个人成长
                                         </a>
                                         
@@ -432,54 +503,55 @@
                         </div>
                         
                         <div class="masonry-grid-item">
-                            <div class="card shadow-sm">
+                            <div class="card article-card shadow-sm">
                                 <div class="card-body">
-                                    <h5 class="card-title">
-                                        <i class="bi bi-file-earmark-text"></i>
+                                    <h5 class="card-title article-title">
+                                        <i class="bi bi-file-earmark-text me-2 text-primary"></i>
                                         <a href="../mdhtml/2026年心理健康的重视：从个人到社会的关注.html"
-                                            class="text-decoration-none">
+                                            class="text-decoration-none text-dark">
                                             2026年心理健康的重视：从个人到社会的关注
                                         </a>
                                     </h5>
                                     
-                                        <p class="card-text">
+                                        <p class="card-text text-muted mb-3">
                                             分析2026年心理健康受到的重视，从个人心理健康到社会心理援助，从心理咨询的普及到心理健康的预防，探讨如何建立更加健康的社会。
                                         </p>
                                         
+                                        <div class="article-meta">
                                             
-                                                <small class="text-muted">
-                                                    2026-03-23
-                                                </small>
+                                                <i class="bi bi-clock me-1"></i>
+                                                2026-03-23
                                                 
+                                        </div>
                                 </div>
-                                <div class="card-footer text-muted">
+                                <div class="card-footer text-muted bg-white border-top">
                                     <a href="/category/%E5%BF%83%E7%90%86%E5%81%A5%E5%BA%B7.html"
-                                        class="badge bg-primary">
+                                        class="badge bg-primary me-2">
                                         心理健康
                                     </a>
                                     
                                         <a href="/tag/%E5%BF%83%E7%90%86%E5%81%A5%E5%BA%B7.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             心理健康
                                         </a>
                                         
                                         <a href="/tag/%E5%BF%83%E7%90%86%E5%92%A8%E8%AF%A2.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             心理咨询
                                         </a>
                                         
                                         <a href="/tag/%E5%BF%83%E7%90%86%E6%8F%B4%E5%8A%A9.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             心理援助
                                         </a>
                                         
                                         <a href="/tag/%E5%B7%A5%E4%BD%9C%E5%8E%8B%E5%8A%9B.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             工作压力
                                         </a>
                                         
                                         <a href="/tag/%E7%A4%BE%E4%BC%9A%E6%94%AF%E6%8C%81.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             社会支持
                                         </a>
                                         
@@ -488,54 +560,55 @@
                         </div>
                         
                         <div class="masonry-grid-item">
-                            <div class="card shadow-sm">
+                            <div class="card article-card shadow-sm">
                                 <div class="card-body">
-                                    <h5 class="card-title">
-                                        <i class="bi bi-file-earmark-text"></i>
+                                    <h5 class="card-title article-title">
+                                        <i class="bi bi-file-earmark-text me-2 text-primary"></i>
                                         <a href="../mdhtml/Z世代数字生存指南：2026年应对社交媒体焦虑的10个科学策略.html"
-                                            class="text-decoration-none">
+                                            class="text-decoration-none text-dark">
                                             Z世代数字生存指南：2026年应对社交媒体焦虑的10个科学策略
                                         </a>
                                     </h5>
                                     
-                                        <p class="card-text">
+                                        <p class="card-text text-muted mb-3">
                                             本文介绍了2026年Z世代应对社交媒体焦虑的10个科学策略，帮助年轻群体在数字时代保持心理健康。
                                         </p>
                                         
+                                        <div class="article-meta">
                                             
-                                                <small class="text-muted">
-                                                    2026-02-28
-                                                </small>
+                                                <i class="bi bi-clock me-1"></i>
+                                                2026-02-28
                                                 
+                                        </div>
                                 </div>
-                                <div class="card-footer text-muted">
+                                <div class="card-footer text-muted bg-white border-top">
                                     <a href="/category/%E5%BF%83%E7%90%86%E5%81%A5%E5%BA%B7.html"
-                                        class="badge bg-primary">
+                                        class="badge bg-primary me-2">
                                         心理健康
                                     </a>
                                     
                                         <a href="/tag/Z%E4%B8%96%E4%BB%A3.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             Z世代
                                         </a>
                                         
                                         <a href="/tag/%E6%95%B0%E5%AD%97%E7%94%9F%E5%AD%98.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             数字生存
                                         </a>
                                         
                                         <a href="/tag/%E7%A4%BE%E4%BA%A4%E5%AA%92%E4%BD%93%E7%84%A6%E8%99%91.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             社交媒体焦虑
                                         </a>
                                         
                                         <a href="/tag/2026%E5%B9%B4.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             2026年
                                         </a>
                                         
                                         <a href="/tag/%E7%A7%91%E5%AD%A6%E7%AD%96%E7%95%A5.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             科学策略
                                         </a>
                                         
@@ -544,54 +617,55 @@
                         </div>
                         
                         <div class="masonry-grid-item">
-                            <div class="card shadow-sm">
+                            <div class="card article-card shadow-sm">
                                 <div class="card-body">
-                                    <h5 class="card-title">
-                                        <i class="bi bi-file-earmark-text"></i>
+                                    <h5 class="card-title article-title">
+                                        <i class="bi bi-file-earmark-text me-2 text-primary"></i>
                                         <a href="../mdhtml/正念科技：2026年数字时代如何保持心理健康.html"
-                                            class="text-decoration-none">
+                                            class="text-decoration-none text-dark">
                                             正念科技：2026年数字时代如何保持心理健康
                                         </a>
                                     </h5>
                                     
-                                        <p class="card-text">
+                                        <p class="card-text text-muted mb-3">
                                             将正念与科技结合，提供新视角的健康解决方案，帮助人们在2026年数字时代保持心理健康
                                         </p>
                                         
+                                        <div class="article-meta">
                                             
-                                                <small class="text-muted">
-                                                    2026-02-28
-                                                </small>
+                                                <i class="bi bi-clock me-1"></i>
+                                                2026-02-28
                                                 
+                                        </div>
                                 </div>
-                                <div class="card-footer text-muted">
+                                <div class="card-footer text-muted bg-white border-top">
                                     <a href="/category/%E5%BF%83%E7%90%86%E5%81%A5%E5%BA%B7.html"
-                                        class="badge bg-primary">
+                                        class="badge bg-primary me-2">
                                         心理健康
                                     </a>
                                     
                                         <a href="/tag/%E6%AD%A3%E5%BF%B5%E7%A7%91%E6%8A%80.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             正念科技
                                         </a>
                                         
                                         <a href="/tag/%E6%95%B0%E5%AD%97%E6%97%B6%E4%BB%A3.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             数字时代
                                         </a>
                                         
                                         <a href="/tag/%E5%BF%83%E7%90%86%E5%81%A5%E5%BA%B7.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             心理健康
                                         </a>
                                         
                                         <a href="/tag/2026.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             2026
                                         </a>
                                         
                                         <a href="/tag/%E5%81%A5%E5%BA%B7%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             健康解决方案
                                         </a>
                                         
@@ -600,54 +674,55 @@
                         </div>
                         
                         <div class="masonry-grid-item">
-                            <div class="card shadow-sm">
+                            <div class="card article-card shadow-sm">
                                 <div class="card-body">
-                                    <h5 class="card-title">
-                                        <i class="bi bi-file-earmark-text"></i>
+                                    <h5 class="card-title article-title">
+                                        <i class="bi bi-file-earmark-text me-2 text-primary"></i>
                                         <a href="../mdhtml/如何应对压力和焦虑：科学方法与实用技巧.html"
-                                            class="text-decoration-none">
+                                            class="text-decoration-none text-dark">
                                             如何应对压力和焦虑：科学方法与实用技巧
                                         </a>
                                     </h5>
                                     
-                                        <p class="card-text">
+                                        <p class="card-text text-muted mb-3">
                                             探讨如何科学应对压力和焦虑，提供实用的方法和技巧，帮助个人减轻压力，缓解焦虑，提高心理健康水平。
                                         </p>
                                         
+                                        <div class="article-meta">
                                             
-                                                <small class="text-muted">
-                                                    2026-02-28
-                                                </small>
+                                                <i class="bi bi-clock me-1"></i>
+                                                2026-02-28
                                                 
+                                        </div>
                                 </div>
-                                <div class="card-footer text-muted">
+                                <div class="card-footer text-muted bg-white border-top">
                                     <a href="/category/%E5%BF%83%E7%90%86%E5%81%A5%E5%BA%B7.html"
-                                        class="badge bg-primary">
+                                        class="badge bg-primary me-2">
                                         心理健康
                                     </a>
                                     
                                         <a href="/tag/%E5%8E%8B%E5%8A%9B%E7%AE%A1%E7%90%86.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             压力管理
                                         </a>
                                         
                                         <a href="/tag/%E7%84%A6%E8%99%91%E5%BA%94%E5%AF%B9.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             焦虑应对
                                         </a>
                                         
                                         <a href="/tag/%E5%BF%83%E7%90%86%E5%81%A5%E5%BA%B7.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             心理健康
                                         </a>
                                         
                                         <a href="/tag/%E6%83%85%E7%BB%AA%E8%B0%83%E8%8A%82.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             情绪调节
                                         </a>
                                         
                                         <a href="/tag/%E6%94%BE%E6%9D%BE%E6%8A%80%E5%B7%A7.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             放松技巧
                                         </a>
                                         
@@ -658,9 +733,9 @@
                 </div>
 
                 <!-- 返回按钮 -->
-                <div class="mt-4 text-center">
-                    <a href="分类列表.html" class="btn btn-outline-primary">
-                        <i class="bi bi-arrow-left"></i> 返回分类列表
+                <div class="mt-6 text-center">
+                    <a href="分类列表.html" class="btn btn-outline-primary back-button">
+                        <i class="bi bi-arrow-left me-2"></i> 返回分类列表
                     </a>
                 </div>
             </div>
@@ -684,7 +759,7 @@
                         itemSelector: '.masonry-grid-item',
                         columnWidth: '.masonry-grid-item',
                         percentPosition: true,
-                        gutter: 10 // 明确设置 gutter 值为 10px
+                        gutter: 15 // 增加间距，提升视觉效果
                     });
                 });
             </script>

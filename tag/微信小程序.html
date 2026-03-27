@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
 
 <head>
   <meta charset="UTF-8">
@@ -9,7 +9,7 @@
   <meta name="description" content="无人自助站的【微信小程序】的标签列表页面，汇集了关于【微信小程序】标签相关的文章和资讯，方便您快速找到感兴趣的内容。">
   <meta name="keywords" content="无人自助站,微信小程序">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>标签文章列表</title>
+  <title>微信小程序标签 - 无人自助站</title>
 
   <link rel="icon" href="../logo.svg" type="image/svg+xml">
   <link rel="stylesheet" href="../css/style.css">
@@ -27,6 +27,62 @@
   <!-- 引入Masonry -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/masonry/4.2.2/masonry.pkgd.min.js"></script>
 
+  <style>
+        .tag-header {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            color: white;
+            padding: 2rem;
+            border-radius: 8px;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        .tag-title {
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+        .article-card {
+            transition: all 0.3s ease;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        .article-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+        }
+        .article-title {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            transition: color 0.3s ease;
+        }
+        .article-title:hover {
+            color: #0d6efd;
+        }
+        .article-meta {
+            font-size: 0.85rem;
+            color: #6c757d;
+        }
+        .tag-link {
+            background-color: #e9ecef;
+            color: #495057;
+            transition: all 0.2s ease;
+        }
+        .tag-link:hover {
+            background-color: #dee2e6;
+            color: #212529;
+        }
+        .back-button {
+            transition: all 0.3s ease;
+        }
+        .back-button:hover {
+            transform: translateX(-3px);
+        }
+        .article-count {
+            font-size: 0.9rem;
+            opacity: 0.9;
+        }
+    </style>
 </head>
 
 <body>
@@ -80,7 +136,7 @@
     <main class="container-fluid mt-4">
       <div class="row">
         <div class="col-lg-8 col-md-12 mx-auto">
-          <nav aria-label="breadcrumb">
+          <nav aria-label="breadcrumb" class="mb-4">
             <ol class="breadcrumb">
               <li class="breadcrumb-item"><a href="/html/index.html">首页</a></li>
               <li class="breadcrumb-item"><a href="标签列表.html">标签列表</a></li>
@@ -89,54 +145,64 @@
               </li>
             </ol>
           </nav>
-          <h1 style="font-size: 1.5em; margin: 0.5em 0;">
-            微信小程序标签的文章和资讯
-        </h1>
+          
+          <!-- 标签头部 -->
+          <div class="tag-header">
+              <h1 class="tag-title">
+                  <i class="bi bi-tags me-2"></i>
+                  微信小程序
+              </h1>
+              <p class="article-count">
+                  共 18 篇文章
+              </p>
+          </div>
+          
           <div class="masonry-grid">
             
               <div class="masonry-grid-item">
-                <div class="card shadow-sm">
+                <div class="card article-card shadow-sm">
                   <div class="card-body">
-                    <h5 class="card-title">
-                      <i class="bi bi-file-earmark-text"></i>
-                      <a href="../mdhtml/文案生图：一键将文字变成精美图片的微信小程序工具.html" class="text-decoration-none">
+                    <h5 class="card-title article-title">
+                      <i class="bi bi-file-earmark-text me-2 text-primary"></i>
+                      <a href="../mdhtml/文案生图：一键将文字变成精美图片的微信小程序工具.html" class="text-decoration-none text-dark">
                         文案生图：一键将文字变成精美图片的微信小程序工具
                       </a>
                     </h5>
                     
-                      <p class="card-text">
+                      <p class="card-text text-muted mb-3">
                         还在为朋友圈文案配图发愁？文案生图小程序帮你一键将文字变成精美图片，支持自定义二维码、出处信息，轻松打造朋友圈高赞内容！
                       </p>
                       
-                        
-                          <small class="text-muted">
-                            2026-03-23
-                          </small>
-                          
+                        <div class="article-meta">
+                            
+                                <i class="bi bi-clock me-1"></i>
+                                2026-03-23
+                                
+                        </div>
                   </div>
-                  <div class="card-footer text-muted">
+                  <div class="card-footer text-muted bg-white border-top">
                     <a href="/category/%E5%B7%A5%E5%85%B7%E6%8E%A8%E8%8D%90.html"
-                      class="badge bg-primary">
+                      class="badge bg-primary me-2">
                       工具推荐
                     </a>
                     
-                      <a href="/tag/%E6%96%87%E6%A1%88%E7%94%9F%E5%9B%BE.html" class="badge tag-link">
+                      <a href="/tag/%E6%96%87%E6%A1%88%E7%94%9F%E5%9B%BE.html" class="badge tag-link me-2 mb-1">
                         文案生图
                       </a>
                       
-                      <a href="/tag/%E6%96%87%E5%AD%97%E8%BD%AC%E5%9B%BE%E7%89%87.html" class="badge tag-link">
+                      <a href="/tag/%E6%96%87%E5%AD%97%E8%BD%AC%E5%9B%BE%E7%89%87.html" class="badge tag-link me-2 mb-1">
                         文字转图片
                       </a>
                       
-                      <a href="/tag/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F.html" class="badge tag-link">
+                      <a href="/tag/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F.html" class="badge tag-link me-2 mb-1">
                         微信小程序
                       </a>
                       
-                      <a href="/tag/%E5%9B%BE%E7%89%87%E7%94%9F%E6%88%90.html" class="badge tag-link">
+                      <a href="/tag/%E5%9B%BE%E7%89%87%E7%94%9F%E6%88%90.html" class="badge tag-link me-2 mb-1">
                         图片生成
                       </a>
                       
-                      <a href="/tag/%E7%A4%BE%E4%BA%A4%E5%AA%92%E4%BD%93.html" class="badge tag-link">
+                      <a href="/tag/%E7%A4%BE%E4%BA%A4%E5%AA%92%E4%BD%93.html" class="badge tag-link me-2 mb-1">
                         社交媒体
                       </a>
                       
@@ -145,48 +211,49 @@
               </div>
               
               <div class="masonry-grid-item">
-                <div class="card shadow-sm">
+                <div class="card article-card shadow-sm">
                   <div class="card-body">
-                    <h5 class="card-title">
-                      <i class="bi bi-file-earmark-text"></i>
-                      <a href="../mdhtml/文案灵感库：微信小程序里的创意宝藏.html" class="text-decoration-none">
+                    <h5 class="card-title article-title">
+                      <i class="bi bi-file-earmark-text me-2 text-primary"></i>
+                      <a href="../mdhtml/文案灵感库：微信小程序里的创意宝藏.html" class="text-decoration-none text-dark">
                         文案灵感库：微信小程序里的创意宝藏
                       </a>
                     </h5>
                     
-                      <p class="card-text">
+                      <p class="card-text text-muted mb-3">
                         还在为写文案发愁？这个微信小程序的文案灵感库帮你轻松搞定！分类浏览、关键词搜索、一键复制...创意灵感随时获取，让你的文案创作不再难。
                       </p>
                       
-                        
-                          <small class="text-muted">
-                            2026-03-20
-                          </small>
-                          
+                        <div class="article-meta">
+                            
+                                <i class="bi bi-clock me-1"></i>
+                                2026-03-20
+                                
+                        </div>
                   </div>
-                  <div class="card-footer text-muted">
+                  <div class="card-footer text-muted bg-white border-top">
                     <a href="/category/%E5%B7%A5%E5%85%B7%E6%8E%A8%E8%8D%90.html"
-                      class="badge bg-primary">
+                      class="badge bg-primary me-2">
                       工具推荐
                     </a>
                     
-                      <a href="/tag/%E6%96%87%E6%A1%88%E5%88%9B%E6%84%8F.html" class="badge tag-link">
+                      <a href="/tag/%E6%96%87%E6%A1%88%E5%88%9B%E6%84%8F.html" class="badge tag-link me-2 mb-1">
                         文案创意
                       </a>
                       
-                      <a href="/tag/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F.html" class="badge tag-link">
+                      <a href="/tag/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F.html" class="badge tag-link me-2 mb-1">
                         微信小程序
                       </a>
                       
-                      <a href="/tag/%E8%90%A5%E9%94%80%E5%B7%A5%E5%85%B7.html" class="badge tag-link">
+                      <a href="/tag/%E8%90%A5%E9%94%80%E5%B7%A5%E5%85%B7.html" class="badge tag-link me-2 mb-1">
                         营销工具
                       </a>
                       
-                      <a href="/tag/%E5%86%85%E5%AE%B9%E5%88%9B%E4%BD%9C.html" class="badge tag-link">
+                      <a href="/tag/%E5%86%85%E5%AE%B9%E5%88%9B%E4%BD%9C.html" class="badge tag-link me-2 mb-1">
                         内容创作
                       </a>
                       
-                      <a href="/tag/%E7%81%B5%E6%84%9F%E6%9D%A5%E6%BA%90.html" class="badge tag-link">
+                      <a href="/tag/%E7%81%B5%E6%84%9F%E6%9D%A5%E6%BA%90.html" class="badge tag-link me-2 mb-1">
                         灵感来源
                       </a>
                       
@@ -195,48 +262,49 @@
               </div>
               
               <div class="masonry-grid-item">
-                <div class="card shadow-sm">
+                <div class="card article-card shadow-sm">
                   <div class="card-body">
-                    <h5 class="card-title">
-                      <i class="bi bi-file-earmark-text"></i>
-                      <a href="../mdhtml/微信身份证验证器：3秒识别身份证真假.html" class="text-decoration-none">
+                    <h5 class="card-title article-title">
+                      <i class="bi bi-file-earmark-text me-2 text-primary"></i>
+                      <a href="../mdhtml/微信身份证验证器：3秒识别身份证真假.html" class="text-decoration-none text-dark">
                         微信身份证验证器：3秒识别身份证真假
                       </a>
                     </h5>
                     
-                      <p class="card-text">
+                      <p class="card-text text-muted mb-3">
                         身份证号是18位到底代表什么？随手工具宝身份证验证器3秒识别身份证真假，还能查询归属地、出生日期、性别，这个功能太强大了！
                       </p>
                       
-                        
-                          <small class="text-muted">
-                            2026-03-18
-                          </small>
-                          
+                        <div class="article-meta">
+                            
+                                <i class="bi bi-clock me-1"></i>
+                                2026-03-18
+                                
+                        </div>
                   </div>
-                  <div class="card-footer text-muted">
+                  <div class="card-footer text-muted bg-white border-top">
                     <a href="/category/%E5%B7%A5%E5%85%B7%E6%8E%A8%E8%8D%90.html"
-                      class="badge bg-primary">
+                      class="badge bg-primary me-2">
                       工具推荐
                     </a>
                     
-                      <a href="/tag/%E8%BA%AB%E4%BB%BD%E8%AF%81%E9%AA%8C%E8%AF%81.html" class="badge tag-link">
+                      <a href="/tag/%E8%BA%AB%E4%BB%BD%E8%AF%81%E9%AA%8C%E8%AF%81.html" class="badge tag-link me-2 mb-1">
                         身份证验证
                       </a>
                       
-                      <a href="/tag/%E8%BA%AB%E4%BB%BD%E9%AA%8C%E8%AF%81.html" class="badge tag-link">
+                      <a href="/tag/%E8%BA%AB%E4%BB%BD%E9%AA%8C%E8%AF%81.html" class="badge tag-link me-2 mb-1">
                         身份验证
                       </a>
                       
-                      <a href="/tag/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F.html" class="badge tag-link">
+                      <a href="/tag/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F.html" class="badge tag-link me-2 mb-1">
                         微信小程序
                       </a>
                       
-                      <a href="/tag/%E7%94%9F%E6%B4%BB%E5%A6%99%E6%8B%9B.html" class="badge tag-link">
+                      <a href="/tag/%E7%94%9F%E6%B4%BB%E5%A6%99%E6%8B%9B.html" class="badge tag-link me-2 mb-1">
                         生活妙招
                       </a>
                       
-                      <a href="/tag/%E5%AE%89%E5%85%A8%E5%B7%A5%E5%85%B7.html" class="badge tag-link">
+                      <a href="/tag/%E5%AE%89%E5%85%A8%E5%B7%A5%E5%85%B7.html" class="badge tag-link me-2 mb-1">
                         安全工具
                       </a>
                       
@@ -245,48 +313,49 @@
               </div>
               
               <div class="masonry-grid-item">
-                <div class="card shadow-sm">
+                <div class="card article-card shadow-sm">
                   <div class="card-body">
-                    <h5 class="card-title">
-                      <i class="bi bi-file-earmark-text"></i>
-                      <a href="../mdhtml/24点速算游戏：微信上最好玩的数学游戏.html" class="text-decoration-none">
+                    <h5 class="card-title article-title">
+                      <i class="bi bi-file-earmark-text me-2 text-primary"></i>
+                      <a href="../mdhtml/24点速算游戏：微信上最好玩的数学游戏.html" class="text-decoration-none text-dark">
                         24点速算游戏：微信上最好玩的数学游戏
                       </a>
                     </h5>
                     
-                      <p class="card-text">
+                      <p class="card-text text-muted mb-3">
                         还在刷短视频打发时间？24点速算，微信上最好玩的数学游戏！随时随地打开小程序来一局，锻炼思维又打发时间，关键是还能提升数学能力！
                       </p>
                       
-                        
-                          <small class="text-muted">
-                            2026-03-18
-                          </small>
-                          
+                        <div class="article-meta">
+                            
+                                <i class="bi bi-clock me-1"></i>
+                                2026-03-18
+                                
+                        </div>
                   </div>
-                  <div class="card-footer text-muted">
+                  <div class="card-footer text-muted bg-white border-top">
                     <a href="/category/%E5%B7%A5%E5%85%B7%E6%8E%A8%E8%8D%90.html"
-                      class="badge bg-primary">
+                      class="badge bg-primary me-2">
                       工具推荐
                     </a>
                     
-                      <a href="/tag/24%E7%82%B9%E6%B8%B8%E6%88%8F.html" class="badge tag-link">
+                      <a href="/tag/24%E7%82%B9%E6%B8%B8%E6%88%8F.html" class="badge tag-link me-2 mb-1">
                         24点游戏
                       </a>
                       
-                      <a href="/tag/%E6%95%B0%E5%AD%A6%E6%B8%B8%E6%88%8F.html" class="badge tag-link">
+                      <a href="/tag/%E6%95%B0%E5%AD%A6%E6%B8%B8%E6%88%8F.html" class="badge tag-link me-2 mb-1">
                         数学游戏
                       </a>
                       
-                      <a href="/tag/%E7%9B%8A%E6%99%BA%E6%B8%B8%E6%88%8F.html" class="badge tag-link">
+                      <a href="/tag/%E7%9B%8A%E6%99%BA%E6%B8%B8%E6%88%8F.html" class="badge tag-link me-2 mb-1">
                         益智游戏
                       </a>
                       
-                      <a href="/tag/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F.html" class="badge tag-link">
+                      <a href="/tag/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F.html" class="badge tag-link me-2 mb-1">
                         微信小程序
                       </a>
                       
-                      <a href="/tag/%E9%80%9F%E7%AE%97%E7%BB%83%E4%B9%A0.html" class="badge tag-link">
+                      <a href="/tag/%E9%80%9F%E7%AE%97%E7%BB%83%E4%B9%A0.html" class="badge tag-link me-2 mb-1">
                         速算练习
                       </a>
                       
@@ -295,48 +364,49 @@
               </div>
               
               <div class="masonry-grid-item">
-                <div class="card shadow-sm">
+                <div class="card article-card shadow-sm">
                   <div class="card-body">
-                    <h5 class="card-title">
-                      <i class="bi bi-file-earmark-text"></i>
-                      <a href="../mdhtml/为什么你需要随身工具宝的7个理由.html" class="text-decoration-none">
+                    <h5 class="card-title article-title">
+                      <i class="bi bi-file-earmark-text me-2 text-primary"></i>
+                      <a href="../mdhtml/为什么你需要随身工具宝的7个理由.html" class="text-decoration-none text-dark">
                         为什么你需要随身工具宝的7个理由
                       </a>
                     </h5>
                     
-                      <p class="card-text">
+                      <p class="card-text text-muted mb-3">
                         微信小程序随身工具宝为什么值得你拥有？7个理由告诉你答案！免费、全能、便捷...这可能是你需要的最后一个工具类小程序。
                       </p>
                       
-                        
-                          <small class="text-muted">
-                            2026-03-18
-                          </small>
-                          
+                        <div class="article-meta">
+                            
+                                <i class="bi bi-clock me-1"></i>
+                                2026-03-18
+                                
+                        </div>
                   </div>
-                  <div class="card-footer text-muted">
+                  <div class="card-footer text-muted bg-white border-top">
                     <a href="/category/%E5%B7%A5%E5%85%B7%E6%8E%A8%E8%8D%90.html"
-                      class="badge bg-primary">
+                      class="badge bg-primary me-2">
                       工具推荐
                     </a>
                     
-                      <a href="/tag/%E5%B7%A5%E5%85%B7%E6%8E%A8%E8%8D%90.html" class="badge tag-link">
+                      <a href="/tag/%E5%B7%A5%E5%85%B7%E6%8E%A8%E8%8D%90.html" class="badge tag-link me-2 mb-1">
                         工具推荐
                       </a>
                       
-                      <a href="/tag/%E5%AE%9E%E7%94%A8%E5%B7%A5%E5%85%B7.html" class="badge tag-link">
+                      <a href="/tag/%E5%AE%9E%E7%94%A8%E5%B7%A5%E5%85%B7.html" class="badge tag-link me-2 mb-1">
                         实用工具
                       </a>
                       
-                      <a href="/tag/%E7%94%9F%E6%B4%BB%E5%A6%99%E6%8B%9B.html" class="badge tag-link">
+                      <a href="/tag/%E7%94%9F%E6%B4%BB%E5%A6%99%E6%8B%9B.html" class="badge tag-link me-2 mb-1">
                         生活妙招
                       </a>
                       
-                      <a href="/tag/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F.html" class="badge tag-link">
+                      <a href="/tag/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F.html" class="badge tag-link me-2 mb-1">
                         微信小程序
                       </a>
                       
-                      <a href="/tag/%E6%95%88%E7%8E%87%E6%8F%90%E5%8D%87.html" class="badge tag-link">
+                      <a href="/tag/%E6%95%88%E7%8E%87%E6%8F%90%E5%8D%87.html" class="badge tag-link me-2 mb-1">
                         效率提升
                       </a>
                       
@@ -345,48 +415,49 @@
               </div>
               
               <div class="masonry-grid-item">
-                <div class="card shadow-sm">
+                <div class="card article-card shadow-sm">
                   <div class="card-body">
-                    <h5 class="card-title">
-                      <i class="bi bi-file-earmark-text"></i>
-                      <a href="../mdhtml/微信最强工具箱！这50+实用功能一个小程序全搞定.html" class="text-decoration-none">
+                    <h5 class="card-title article-title">
+                      <i class="bi bi-file-earmark-text me-2 text-primary"></i>
+                      <a href="../mdhtml/微信最强工具箱！这50+实用功能一个小程序全搞定.html" class="text-decoration-none text-dark">
                         微信最强工具箱！这50+实用功能一个小程序全搞定
                       </a>
                     </h5>
                     
-                      <p class="card-text">
+                      <p class="card-text text-muted mb-3">
                         你的微信里还只有聊天？这50+实用功能一个微信小程序全搞定！财务、生活、学习、开发...所有工具都在这里，关键是全部免费！
                       </p>
                       
-                        
-                          <small class="text-muted">
-                            2026-03-18
-                          </small>
-                          
+                        <div class="article-meta">
+                            
+                                <i class="bi bi-clock me-1"></i>
+                                2026-03-18
+                                
+                        </div>
                   </div>
-                  <div class="card-footer text-muted">
+                  <div class="card-footer text-muted bg-white border-top">
                     <a href="/category/%E5%B7%A5%E5%85%B7%E6%8E%A8%E8%8D%90.html"
-                      class="badge bg-primary">
+                      class="badge bg-primary me-2">
                       工具推荐
                     </a>
                     
-                      <a href="/tag/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F.html" class="badge tag-link">
+                      <a href="/tag/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F.html" class="badge tag-link me-2 mb-1">
                         微信小程序
                       </a>
                       
-                      <a href="/tag/%E5%B7%A5%E5%85%B7%E9%9B%86%E5%90%88.html" class="badge tag-link">
+                      <a href="/tag/%E5%B7%A5%E5%85%B7%E9%9B%86%E5%90%88.html" class="badge tag-link me-2 mb-1">
                         工具集合
                       </a>
                       
-                      <a href="/tag/%E5%AE%9E%E7%94%A8%E5%B7%A5%E5%85%B7.html" class="badge tag-link">
+                      <a href="/tag/%E5%AE%9E%E7%94%A8%E5%B7%A5%E5%85%B7.html" class="badge tag-link me-2 mb-1">
                         实用工具
                       </a>
                       
-                      <a href="/tag/%E5%85%8D%E8%B4%B9%E5%B7%A5%E5%85%B7.html" class="badge tag-link">
+                      <a href="/tag/%E5%85%8D%E8%B4%B9%E5%B7%A5%E5%85%B7.html" class="badge tag-link me-2 mb-1">
                         免费工具
                       </a>
                       
-                      <a href="/tag/%E9%9A%8F%E8%BA%AB%E5%B7%A5%E5%85%B7%E5%AE%9D.html" class="badge tag-link">
+                      <a href="/tag/%E9%9A%8F%E8%BA%AB%E5%B7%A5%E5%85%B7%E5%AE%9D.html" class="badge tag-link me-2 mb-1">
                         随身工具宝
                       </a>
                       
@@ -395,48 +466,49 @@
               </div>
               
               <div class="masonry-grid-item">
-                <div class="card shadow-sm">
+                <div class="card article-card shadow-sm">
                   <div class="card-body">
-                    <h5 class="card-title">
-                      <i class="bi bi-file-earmark-text"></i>
-                      <a href="../mdhtml/程序员必收藏！进制转换器让编码效率飞升.html" class="text-decoration-none">
+                    <h5 class="card-title article-title">
+                      <i class="bi bi-file-earmark-text me-2 text-primary"></i>
+                      <a href="../mdhtml/程序员必收藏！进制转换器让编码效率飞升.html" class="text-decoration-none text-dark">
                         程序员必收藏！进制转换器让编码效率飞升
                       </a>
                     </h5>
                     
-                      <p class="card-text">
+                      <p class="card-text text-muted mb-3">
                         二进制、八进制、十进制、十六进制、Base64...程序员每天都在和各种进制打交道。随身工具宝进制转换器，手机上最好用的转换工具，没有之一！
                       </p>
                       
-                        
-                          <small class="text-muted">
-                            2026-03-18
-                          </small>
-                          
+                        <div class="article-meta">
+                            
+                                <i class="bi bi-clock me-1"></i>
+                                2026-03-18
+                                
+                        </div>
                   </div>
-                  <div class="card-footer text-muted">
+                  <div class="card-footer text-muted bg-white border-top">
                     <a href="/category/%E5%B7%A5%E5%85%B7%E6%8E%A8%E8%8D%90.html"
-                      class="badge bg-primary">
+                      class="badge bg-primary me-2">
                       工具推荐
                     </a>
                     
-                      <a href="/tag/%E8%BF%9B%E5%88%B6%E8%BD%AC%E6%8D%A2.html" class="badge tag-link">
+                      <a href="/tag/%E8%BF%9B%E5%88%B6%E8%BD%AC%E6%8D%A2.html" class="badge tag-link me-2 mb-1">
                         进制转换
                       </a>
                       
-                      <a href="/tag/%E7%A8%8B%E5%BA%8F%E5%91%98%E5%B7%A5%E5%85%B7.html" class="badge tag-link">
+                      <a href="/tag/%E7%A8%8B%E5%BA%8F%E5%91%98%E5%B7%A5%E5%85%B7.html" class="badge tag-link me-2 mb-1">
                         程序员工具
                       </a>
                       
-                      <a href="/tag/%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7.html" class="badge tag-link">
+                      <a href="/tag/%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7.html" class="badge tag-link me-2 mb-1">
                         开发工具
                       </a>
                       
-                      <a href="/tag/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F.html" class="badge tag-link">
+                      <a href="/tag/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F.html" class="badge tag-link me-2 mb-1">
                         微信小程序
                       </a>
                       
-                      <a href="/tag/Base64.html" class="badge tag-link">
+                      <a href="/tag/Base64.html" class="badge tag-link me-2 mb-1">
                         Base64
                       </a>
                       
@@ -445,48 +517,49 @@
               </div>
               
               <div class="masonry-grid-item">
-                <div class="card shadow-sm">
+                <div class="card article-card shadow-sm">
                   <div class="card-body">
-                    <h5 class="card-title">
-                      <i class="bi bi-file-earmark-text"></i>
-                      <a href="../mdhtml/文案工作者必备！微信小程序文本处理工具箱.html" class="text-decoration-none">
+                    <h5 class="card-title article-title">
+                      <i class="bi bi-file-earmark-text me-2 text-primary"></i>
+                      <a href="../mdhtml/文案工作者必备！微信小程序文本处理工具箱.html" class="text-decoration-none text-dark">
                         文案工作者必备！微信小程序文本处理工具箱
                       </a>
                     </h5>
                     
-                      <p class="card-text">
+                      <p class="card-text text-muted mb-3">
                         还在为字数统计发愁？文本对比太麻烦？随身工具宝文本处理工具箱，文案工作者必备神器！字数统计、文本对比、Markdown预览，一个小程序全搞定。
                       </p>
                       
-                        
-                          <small class="text-muted">
-                            2026-03-18
-                          </small>
-                          
+                        <div class="article-meta">
+                            
+                                <i class="bi bi-clock me-1"></i>
+                                2026-03-18
+                                
+                        </div>
                   </div>
-                  <div class="card-footer text-muted">
+                  <div class="card-footer text-muted bg-white border-top">
                     <a href="/category/%E5%B7%A5%E5%85%B7%E6%8E%A8%E8%8D%90.html"
-                      class="badge bg-primary">
+                      class="badge bg-primary me-2">
                       工具推荐
                     </a>
                     
-                      <a href="/tag/%E6%96%87%E6%9C%AC%E5%B7%A5%E5%85%B7.html" class="badge tag-link">
+                      <a href="/tag/%E6%96%87%E6%9C%AC%E5%B7%A5%E5%85%B7.html" class="badge tag-link me-2 mb-1">
                         文本工具
                       </a>
                       
-                      <a href="/tag/%E5%AD%97%E6%95%B0%E7%BB%9F%E8%AE%A1.html" class="badge tag-link">
+                      <a href="/tag/%E5%AD%97%E6%95%B0%E7%BB%9F%E8%AE%A1.html" class="badge tag-link me-2 mb-1">
                         字数统计
                       </a>
                       
-                      <a href="/tag/%E6%96%87%E6%9C%AC%E5%AF%B9%E6%AF%94.html" class="badge tag-link">
+                      <a href="/tag/%E6%96%87%E6%9C%AC%E5%AF%B9%E6%AF%94.html" class="badge tag-link me-2 mb-1">
                         文本对比
                       </a>
                       
-                      <a href="/tag/Markdown.html" class="badge tag-link">
+                      <a href="/tag/Markdown.html" class="badge tag-link me-2 mb-1">
                         Markdown
                       </a>
                       
-                      <a href="/tag/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F.html" class="badge tag-link">
+                      <a href="/tag/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F.html" class="badge tag-link me-2 mb-1">
                         微信小程序
                       </a>
                       
@@ -495,48 +568,49 @@
               </div>
               
               <div class="masonry-grid-item">
-                <div class="card shadow-sm">
+                <div class="card article-card shadow-sm">
                   <div class="card-body">
-                    <h5 class="card-title">
-                      <i class="bi bi-file-earmark-text"></i>
-                      <a href="../mdhtml/双11购物避坑指南：价格对比器帮你识破商家套路.html" class="text-decoration-none">
+                    <h5 class="card-title article-title">
+                      <i class="bi bi-file-earmark-text me-2 text-primary"></i>
+                      <a href="../mdhtml/双11购物避坑指南：价格对比器帮你识破商家套路.html" class="text-decoration-none text-dark">
                         双11购物避坑指南：价格对比器帮你识破商家套路
                       </a>
                     </h5>
                     
-                      <p class="card-text">
+                      <p class="card-text text-muted mb-3">
                         双11各种优惠券叠加、满减活动，算得人头大！随身工具宝价格对比器帮你快速计算真实优惠力度，双11再也不踩坑！
                       </p>
                       
-                        
-                          <small class="text-muted">
-                            2026-03-18
-                          </small>
-                          
+                        <div class="article-meta">
+                            
+                                <i class="bi bi-clock me-1"></i>
+                                2026-03-18
+                                
+                        </div>
                   </div>
-                  <div class="card-footer text-muted">
+                  <div class="card-footer text-muted bg-white border-top">
                     <a href="/category/%E5%B7%A5%E5%85%B7%E6%8E%A8%E8%8D%90.html"
-                      class="badge bg-primary">
+                      class="badge bg-primary me-2">
                       工具推荐
                     </a>
                     
-                      <a href="/tag/%E4%BB%B7%E6%A0%BC%E5%AF%B9%E6%AF%94.html" class="badge tag-link">
+                      <a href="/tag/%E4%BB%B7%E6%A0%BC%E5%AF%B9%E6%AF%94.html" class="badge tag-link me-2 mb-1">
                         价格对比
                       </a>
                       
-                      <a href="/tag/%E8%B4%AD%E7%89%A9%E6%94%BB%E7%95%A5.html" class="badge tag-link">
+                      <a href="/tag/%E8%B4%AD%E7%89%A9%E6%94%BB%E7%95%A5.html" class="badge tag-link me-2 mb-1">
                         购物攻略
                       </a>
                       
-                      <a href="/tag/%E5%8F%8C11.html" class="badge tag-link">
+                      <a href="/tag/%E5%8F%8C11.html" class="badge tag-link me-2 mb-1">
                         双11
                       </a>
                       
-                      <a href="/tag/%E7%9C%81%E9%92%B1%E6%8A%80%E5%B7%A7.html" class="badge tag-link">
+                      <a href="/tag/%E7%9C%81%E9%92%B1%E6%8A%80%E5%B7%A7.html" class="badge tag-link me-2 mb-1">
                         省钱技巧
                       </a>
                       
-                      <a href="/tag/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F.html" class="badge tag-link">
+                      <a href="/tag/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F.html" class="badge tag-link me-2 mb-1">
                         微信小程序
                       </a>
                       
@@ -545,48 +619,49 @@
               </div>
               
               <div class="masonry-grid-item">
-                <div class="card shadow-sm">
+                <div class="card article-card shadow-sm">
                   <div class="card-body">
-                    <h5 class="card-title">
-                      <i class="bi bi-file-earmark-text"></i>
-                      <a href="../mdhtml/退休金要存多少才够？微信小程序帮你提前规划.html" class="text-decoration-none">
+                    <h5 class="card-title article-title">
+                      <i class="bi bi-file-earmark-text me-2 text-primary"></i>
+                      <a href="../mdhtml/退休金要存多少才够？微信小程序帮你提前规划.html" class="text-decoration-none text-dark">
                         退休金要存多少才够？微信小程序帮你提前规划
                       </a>
                     </h5>
                     
-                      <p class="card-text">
+                      <p class="card-text text-muted mb-3">
                         养老焦虑怎么办？退休金要存多少才够花？随身工具宝退休金计算器帮你科学计算养老所需金额，提前规划养老计划，让晚年生活更从容。
                       </p>
                       
-                        
-                          <small class="text-muted">
-                            2026-03-18
-                          </small>
-                          
+                        <div class="article-meta">
+                            
+                                <i class="bi bi-clock me-1"></i>
+                                2026-03-18
+                                
+                        </div>
                   </div>
-                  <div class="card-footer text-muted">
+                  <div class="card-footer text-muted bg-white border-top">
                     <a href="/category/%E5%B7%A5%E5%85%B7%E6%8E%A8%E8%8D%90.html"
-                      class="badge bg-primary">
+                      class="badge bg-primary me-2">
                       工具推荐
                     </a>
                     
-                      <a href="/tag/%E9%80%80%E4%BC%91%E9%87%91%E8%AE%A1%E7%AE%97.html" class="badge tag-link">
+                      <a href="/tag/%E9%80%80%E4%BC%91%E9%87%91%E8%AE%A1%E7%AE%97.html" class="badge tag-link me-2 mb-1">
                         退休金计算
                       </a>
                       
-                      <a href="/tag/%E5%85%BB%E8%80%81%E8%A7%84%E5%88%92.html" class="badge tag-link">
+                      <a href="/tag/%E5%85%BB%E8%80%81%E8%A7%84%E5%88%92.html" class="badge tag-link me-2 mb-1">
                         养老规划
                       </a>
                       
-                      <a href="/tag/%E8%B4%A2%E5%8A%A1%E8%A7%84%E5%88%92.html" class="badge tag-link">
+                      <a href="/tag/%E8%B4%A2%E5%8A%A1%E8%A7%84%E5%88%92.html" class="badge tag-link me-2 mb-1">
                         财务规划
                       </a>
                       
-                      <a href="/tag/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F.html" class="badge tag-link">
+                      <a href="/tag/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F.html" class="badge tag-link me-2 mb-1">
                         微信小程序
                       </a>
                       
-                      <a href="/tag/%E7%90%86%E8%B4%A2%E5%B7%A5%E5%85%B7.html" class="badge tag-link">
+                      <a href="/tag/%E7%90%86%E8%B4%A2%E5%B7%A5%E5%85%B7.html" class="badge tag-link me-2 mb-1">
                         理财工具
                       </a>
                       
@@ -595,48 +670,49 @@
               </div>
               
               <div class="masonry-grid-item">
-                <div class="card shadow-sm">
+                <div class="card article-card shadow-sm">
                   <div class="card-body">
-                    <h5 class="card-title">
-                      <i class="bi bi-file-earmark-text"></i>
-                      <a href="../mdhtml/单位换算一个就够！微信最全的单位转换工具.html" class="text-decoration-none">
+                    <h5 class="card-title article-title">
+                      <i class="bi bi-file-earmark-text me-2 text-primary"></i>
+                      <a href="../mdhtml/单位换算一个就够！微信最全的单位转换工具.html" class="text-decoration-none text-dark">
                         单位换算一个就够！微信最全的单位转换工具
                       </a>
                     </h5>
                     
-                      <p class="card-text">
+                      <p class="card-text text-muted mb-3">
                         长度、重量、温度、面积、体积、时间...生活中的单位转换这个微信小程序全搞定！留学党、海淘族、厨神必备神器，精准快速无需联网！
                       </p>
                       
-                        
-                          <small class="text-muted">
-                            2026-03-18
-                          </small>
-                          
+                        <div class="article-meta">
+                            
+                                <i class="bi bi-clock me-1"></i>
+                                2026-03-18
+                                
+                        </div>
                   </div>
-                  <div class="card-footer text-muted">
+                  <div class="card-footer text-muted bg-white border-top">
                     <a href="/category/%E5%B7%A5%E5%85%B7%E6%8E%A8%E8%8D%90.html"
-                      class="badge bg-primary">
+                      class="badge bg-primary me-2">
                       工具推荐
                     </a>
                     
-                      <a href="/tag/%E5%8D%95%E4%BD%8D%E6%8D%A2%E7%AE%97.html" class="badge tag-link">
+                      <a href="/tag/%E5%8D%95%E4%BD%8D%E6%8D%A2%E7%AE%97.html" class="badge tag-link me-2 mb-1">
                         单位换算
                       </a>
                       
-                      <a href="/tag/%E8%BD%AC%E6%8D%A2%E5%B7%A5%E5%85%B7.html" class="badge tag-link">
+                      <a href="/tag/%E8%BD%AC%E6%8D%A2%E5%B7%A5%E5%85%B7.html" class="badge tag-link me-2 mb-1">
                         转换工具
                       </a>
                       
-                      <a href="/tag/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F.html" class="badge tag-link">
+                      <a href="/tag/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F.html" class="badge tag-link me-2 mb-1">
                         微信小程序
                       </a>
                       
-                      <a href="/tag/%E7%94%9F%E6%B4%BB%E5%BF%85%E5%A4%87.html" class="badge tag-link">
+                      <a href="/tag/%E7%94%9F%E6%B4%BB%E5%BF%85%E5%A4%87.html" class="badge tag-link me-2 mb-1">
                         生活必备
                       </a>
                       
-                      <a href="/tag/%E5%AE%9E%E7%94%A8%E5%B7%A5%E5%85%B7.html" class="badge tag-link">
+                      <a href="/tag/%E5%AE%9E%E7%94%A8%E5%B7%A5%E5%85%B7.html" class="badge tag-link me-2 mb-1">
                         实用工具
                       </a>
                       
@@ -645,48 +721,49 @@
               </div>
               
               <div class="masonry-grid-item">
-                <div class="card shadow-sm">
+                <div class="card article-card shadow-sm">
                   <div class="card-body">
-                    <h5 class="card-title">
-                      <i class="bi bi-file-earmark-text"></i>
-                      <a href="../mdhtml/原来日子还能这样算！日期差计算器帮你搞定所有日期难题.html" class="text-decoration-none">
+                    <h5 class="card-title article-title">
+                      <i class="bi bi-file-earmark-text me-2 text-primary"></i>
+                      <a href="../mdhtml/原来日子还能这样算！日期差计算器帮你搞定所有日期难题.html" class="text-decoration-none text-dark">
                         原来日子还能这样算！日期差计算器帮你搞定所有日期难题
                       </a>
                     </h5>
                     
-                      <p class="card-text">
+                      <p class="card-text text-muted mb-3">
                         结婚纪念日还有几天？距离过年还有多少天？宝宝还有几天出生？日期差计算器帮你轻松搞定所有日期计算，2026年最新农历历法，准确无误！
                       </p>
                       
-                        
-                          <small class="text-muted">
-                            2026-03-18
-                          </small>
-                          
+                        <div class="article-meta">
+                            
+                                <i class="bi bi-clock me-1"></i>
+                                2026-03-18
+                                
+                        </div>
                   </div>
-                  <div class="card-footer text-muted">
+                  <div class="card-footer text-muted bg-white border-top">
                     <a href="/category/%E5%B7%A5%E5%85%B7%E6%8E%A8%E8%8D%90.html"
-                      class="badge bg-primary">
+                      class="badge bg-primary me-2">
                       工具推荐
                     </a>
                     
-                      <a href="/tag/%E6%97%A5%E6%9C%9F%E8%AE%A1%E7%AE%97.html" class="badge tag-link">
+                      <a href="/tag/%E6%97%A5%E6%9C%9F%E8%AE%A1%E7%AE%97.html" class="badge tag-link me-2 mb-1">
                         日期计算
                       </a>
                       
-                      <a href="/tag/%E6%97%A5%E6%9C%9F%E5%B7%AE.html" class="badge tag-link">
+                      <a href="/tag/%E6%97%A5%E6%9C%9F%E5%B7%AE.html" class="badge tag-link me-2 mb-1">
                         日期差
                       </a>
                       
-                      <a href="/tag/%E4%B8%87%E5%B9%B4%E5%8E%86.html" class="badge tag-link">
+                      <a href="/tag/%E4%B8%87%E5%B9%B4%E5%8E%86.html" class="badge tag-link me-2 mb-1">
                         万年历
                       </a>
                       
-                      <a href="/tag/%E5%AE%9E%E7%94%A8%E5%B7%A5%E5%85%B7.html" class="badge tag-link">
+                      <a href="/tag/%E5%AE%9E%E7%94%A8%E5%B7%A5%E5%85%B7.html" class="badge tag-link me-2 mb-1">
                         实用工具
                       </a>
                       
-                      <a href="/tag/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F.html" class="badge tag-link">
+                      <a href="/tag/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F.html" class="badge tag-link me-2 mb-1">
                         微信小程序
                       </a>
                       
@@ -695,48 +772,49 @@
               </div>
               
               <div class="masonry-grid-item">
-                <div class="card shadow-sm">
+                <div class="card article-card shadow-sm">
                   <div class="card-body">
-                    <h5 class="card-title">
-                      <i class="bi bi-file-earmark-text"></i>
-                      <a href="../mdhtml/健康瘦身必看！BMI计算器帮你科学管理体重.html" class="text-decoration-none">
+                    <h5 class="card-title article-title">
+                      <i class="bi bi-file-earmark-text me-2 text-primary"></i>
+                      <a href="../mdhtml/健康瘦身必看！BMI计算器帮你科学管理体重.html" class="text-decoration-none text-dark">
                         健康瘦身必看！BMI计算器帮你科学管理体重
                       </a>
                     </h5>
                     
-                      <p class="card-text">
+                      <p class="card-text text-muted mb-3">
                         你知道自己的BMI是多少吗？BMI不仅是数字，更是你健康状况的重要指标。随身工具宝BMI计算器帮你科学认识自己的身体，定制合理的健康目标。
                       </p>
                       
-                        
-                          <small class="text-muted">
-                            2026-03-18
-                          </small>
-                          
+                        <div class="article-meta">
+                            
+                                <i class="bi bi-clock me-1"></i>
+                                2026-03-18
+                                
+                        </div>
                   </div>
-                  <div class="card-footer text-muted">
+                  <div class="card-footer text-muted bg-white border-top">
                     <a href="/category/%E5%B7%A5%E5%85%B7%E6%8E%A8%E8%8D%90.html"
-                      class="badge bg-primary">
+                      class="badge bg-primary me-2">
                       工具推荐
                     </a>
                     
-                      <a href="/tag/BMI%E8%AE%A1%E7%AE%97.html" class="badge tag-link">
+                      <a href="/tag/BMI%E8%AE%A1%E7%AE%97.html" class="badge tag-link me-2 mb-1">
                         BMI计算
                       </a>
                       
-                      <a href="/tag/%E5%81%A5%E5%BA%B7%E7%AE%A1%E7%90%86.html" class="badge tag-link">
+                      <a href="/tag/%E5%81%A5%E5%BA%B7%E7%AE%A1%E7%90%86.html" class="badge tag-link me-2 mb-1">
                         健康管理
                       </a>
                       
-                      <a href="/tag/%E4%BD%93%E9%87%8D%E7%AE%A1%E7%90%86.html" class="badge tag-link">
+                      <a href="/tag/%E4%BD%93%E9%87%8D%E7%AE%A1%E7%90%86.html" class="badge tag-link me-2 mb-1">
                         体重管理
                       </a>
                       
-                      <a href="/tag/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F.html" class="badge tag-link">
+                      <a href="/tag/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F.html" class="badge tag-link me-2 mb-1">
                         微信小程序
                       </a>
                       
-                      <a href="/tag/%E5%81%A5%E5%BA%B7%E5%B7%A5%E5%85%B7.html" class="badge tag-link">
+                      <a href="/tag/%E5%81%A5%E5%BA%B7%E5%B7%A5%E5%85%B7.html" class="badge tag-link me-2 mb-1">
                         健康工具
                       </a>
                       
@@ -745,48 +823,49 @@
               </div>
               
               <div class="masonry-grid-item">
-                <div class="card shadow-sm">
+                <div class="card article-card shadow-sm">
                   <div class="card-body">
-                    <h5 class="card-title">
-                      <i class="bi bi-file-earmark-text"></i>
-                      <a href="../mdhtml/办公效率翻倍！这8个微信小程序工具职场人都在用.html" class="text-decoration-none">
+                    <h5 class="card-title article-title">
+                      <i class="bi bi-file-earmark-text me-2 text-primary"></i>
+                      <a href="../mdhtml/办公效率翻倍！这8个微信小程序工具职场人都在用.html" class="text-decoration-none text-dark">
                         办公效率翻倍！这8个微信小程序工具职场人都在用
                       </a>
                     </h5>
                     
-                      <p class="card-text">
+                      <p class="card-text text-muted mb-3">
                         还在为工作中的繁琐操作烦恼？这8个微信小程序工具帮你轻松搞定！二维码生成、密码生成、身份证验证...职场效率神器合集，看完收藏！
                       </p>
                       
-                        
-                          <small class="text-muted">
-                            2026-03-18
-                          </small>
-                          
+                        <div class="article-meta">
+                            
+                                <i class="bi bi-clock me-1"></i>
+                                2026-03-18
+                                
+                        </div>
                   </div>
-                  <div class="card-footer text-muted">
+                  <div class="card-footer text-muted bg-white border-top">
                     <a href="/category/%E5%B7%A5%E5%85%B7%E6%8E%A8%E8%8D%90.html"
-                      class="badge bg-primary">
+                      class="badge bg-primary me-2">
                       工具推荐
                     </a>
                     
-                      <a href="/tag/%E5%8A%9E%E5%85%AC%E6%95%88%E7%8E%87.html" class="badge tag-link">
+                      <a href="/tag/%E5%8A%9E%E5%85%AC%E6%95%88%E7%8E%87.html" class="badge tag-link me-2 mb-1">
                         办公效率
                       </a>
                       
-                      <a href="/tag/%E8%81%8C%E5%9C%BA%E5%B7%A5%E5%85%B7.html" class="badge tag-link">
+                      <a href="/tag/%E8%81%8C%E5%9C%BA%E5%B7%A5%E5%85%B7.html" class="badge tag-link me-2 mb-1">
                         职场工具
                       </a>
                       
-                      <a href="/tag/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F.html" class="badge tag-link">
+                      <a href="/tag/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F.html" class="badge tag-link me-2 mb-1">
                         微信小程序
                       </a>
                       
-                      <a href="/tag/%E5%AE%9E%E7%94%A8%E5%B7%A5%E5%85%B7.html" class="badge tag-link">
+                      <a href="/tag/%E5%AE%9E%E7%94%A8%E5%B7%A5%E5%85%B7.html" class="badge tag-link me-2 mb-1">
                         实用工具
                       </a>
                       
-                      <a href="/tag/%E6%95%88%E7%8E%87%E6%8F%90%E5%8D%87.html" class="badge tag-link">
+                      <a href="/tag/%E6%95%88%E7%8E%87%E6%8F%90%E5%8D%87.html" class="badge tag-link me-2 mb-1">
                         效率提升
                       </a>
                       
@@ -795,48 +874,49 @@
               </div>
               
               <div class="masonry-grid-item">
-                <div class="card shadow-sm">
+                <div class="card article-card shadow-sm">
                   <div class="card-body">
-                    <h5 class="card-title">
-                      <i class="bi bi-file-earmark-text"></i>
-                      <a href="../mdhtml/学生党必看！这5个微信小程序工具让学习效率飙升.html" class="text-decoration-none">
+                    <h5 class="card-title article-title">
+                      <i class="bi bi-file-earmark-text me-2 text-primary"></i>
+                      <a href="../mdhtml/学生党必看！这5个微信小程序工具让学习效率飙升.html" class="text-decoration-none text-dark">
                         学生党必看！这5个微信小程序工具让学习效率飙升
                       </a>
                     </h5>
                     
-                      <p class="card-text">
+                      <p class="card-text text-muted mb-3">
                         学生党福音！24点速算、公约数计算、质因数分解...这些数学学习神器竟然都在一个微信小程序里！还有字统计、文本对比等语文学习工具，学习效率翻倍不是梦。
                       </p>
                       
-                        
-                          <small class="text-muted">
-                            2026-03-18
-                          </small>
-                          
+                        <div class="article-meta">
+                            
+                                <i class="bi bi-clock me-1"></i>
+                                2026-03-18
+                                
+                        </div>
                   </div>
-                  <div class="card-footer text-muted">
+                  <div class="card-footer text-muted bg-white border-top">
                     <a href="/category/%E5%B7%A5%E5%85%B7%E6%8E%A8%E8%8D%90.html"
-                      class="badge bg-primary">
+                      class="badge bg-primary me-2">
                       工具推荐
                     </a>
                     
-                      <a href="/tag/%E5%AD%A6%E4%B9%A0%E5%B7%A5%E5%85%B7.html" class="badge tag-link">
+                      <a href="/tag/%E5%AD%A6%E4%B9%A0%E5%B7%A5%E5%85%B7.html" class="badge tag-link me-2 mb-1">
                         学习工具
                       </a>
                       
-                      <a href="/tag/%E5%AD%A6%E7%94%9F%E5%BF%85%E5%A4%87.html" class="badge tag-link">
+                      <a href="/tag/%E5%AD%A6%E7%94%9F%E5%BF%85%E5%A4%87.html" class="badge tag-link me-2 mb-1">
                         学生必备
                       </a>
                       
-                      <a href="/tag/%E6%95%B0%E5%AD%A6%E5%B7%A5%E5%85%B7.html" class="badge tag-link">
+                      <a href="/tag/%E6%95%B0%E5%AD%A6%E5%B7%A5%E5%85%B7.html" class="badge tag-link me-2 mb-1">
                         数学工具
                       </a>
                       
-                      <a href="/tag/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F.html" class="badge tag-link">
+                      <a href="/tag/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F.html" class="badge tag-link me-2 mb-1">
                         微信小程序
                       </a>
                       
-                      <a href="/tag/%E5%AD%A6%E4%B9%A0%E6%95%88%E7%8E%87.html" class="badge tag-link">
+                      <a href="/tag/%E5%AD%A6%E4%B9%A0%E6%95%88%E7%8E%87.html" class="badge tag-link me-2 mb-1">
                         学习效率
                       </a>
                       
@@ -845,48 +925,49 @@
               </div>
               
               <div class="masonry-grid-item">
-                <div class="card shadow-sm">
+                <div class="card article-card shadow-sm">
                   <div class="card-body">
-                    <h5 class="card-title">
-                      <i class="bi bi-file-earmark-text"></i>
-                      <a href="../mdhtml/程序员必备！这5个微信小程序工具让你的效率翻倍.html" class="text-decoration-none">
+                    <h5 class="card-title article-title">
+                      <i class="bi bi-file-earmark-text me-2 text-primary"></i>
+                      <a href="../mdhtml/程序员必备！这5个微信小程序工具让你的效率翻倍.html" class="text-decoration-none text-dark">
                         程序员必备！这5个微信小程序工具让你的效率翻倍
                       </a>
                     </h5>
                     
-                      <p class="card-text">
+                      <p class="card-text text-muted mb-3">
                         程序员每天都在用的工具合集！时间戳转换、颜色格式转换、JSON格式化...这些高频需求，一个小程序全搞定，无需安装APP，随时随地高效开发。
                       </p>
                       
-                        
-                          <small class="text-muted">
-                            2026-03-18
-                          </small>
-                          
+                        <div class="article-meta">
+                            
+                                <i class="bi bi-clock me-1"></i>
+                                2026-03-18
+                                
+                        </div>
                   </div>
-                  <div class="card-footer text-muted">
+                  <div class="card-footer text-muted bg-white border-top">
                     <a href="/category/%E5%B7%A5%E5%85%B7%E6%8E%A8%E8%8D%90.html"
-                      class="badge bg-primary">
+                      class="badge bg-primary me-2">
                       工具推荐
                     </a>
                     
-                      <a href="/tag/%E7%A8%8B%E5%BA%8F%E5%91%98%E5%B7%A5%E5%85%B7.html" class="badge tag-link">
+                      <a href="/tag/%E7%A8%8B%E5%BA%8F%E5%91%98%E5%B7%A5%E5%85%B7.html" class="badge tag-link me-2 mb-1">
                         程序员工具
                       </a>
                       
-                      <a href="/tag/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F.html" class="badge tag-link">
+                      <a href="/tag/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F.html" class="badge tag-link me-2 mb-1">
                         微信小程序
                       </a>
                       
-                      <a href="/tag/%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7.html" class="badge tag-link">
+                      <a href="/tag/%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7.html" class="badge tag-link me-2 mb-1">
                         开发工具
                       </a>
                       
-                      <a href="/tag/%E6%97%B6%E9%97%B4%E6%88%B3%E8%BD%AC%E6%8D%A2.html" class="badge tag-link">
+                      <a href="/tag/%E6%97%B6%E9%97%B4%E6%88%B3%E8%BD%AC%E6%8D%A2.html" class="badge tag-link me-2 mb-1">
                         时间戳转换
                       </a>
                       
-                      <a href="/tag/%E9%A2%9C%E8%89%B2%E8%BD%AC%E6%8D%A2.html" class="badge tag-link">
+                      <a href="/tag/%E9%A2%9C%E8%89%B2%E8%BD%AC%E6%8D%A2.html" class="badge tag-link me-2 mb-1">
                         颜色转换
                       </a>
                       
@@ -895,48 +976,49 @@
               </div>
               
               <div class="masonry-grid-item">
-                <div class="card shadow-sm">
+                <div class="card article-card shadow-sm">
                   <div class="card-body">
-                    <h5 class="card-title">
-                      <i class="bi bi-file-earmark-text"></i>
-                      <a href="../mdhtml/你的人生还有多少天？这个微信小程序让你重新思考人生.html" class="text-decoration-none">
+                    <h5 class="card-title article-title">
+                      <i class="bi bi-file-earmark-text me-2 text-primary"></i>
+                      <a href="../mdhtml/你的人生还有多少天？这个微信小程序让你重新思考人生.html" class="text-decoration-none text-dark">
                         你的人生还有多少天？这个微信小程序让你重新思考人生
                       </a>
                     </h5>
                     
-                      <p class="card-text">
+                      <p class="card-text text-muted mb-3">
                         人生不过3万多天，你的A4纸上还剩多少空白？随身工具宝「人生A4纸」工具用最直观的方式让你看清生命的本质，重新审视人生优先级。
                       </p>
                       
-                        
-                          <small class="text-muted">
-                            2026-03-18
-                          </small>
-                          
+                        <div class="article-meta">
+                            
+                                <i class="bi bi-clock me-1"></i>
+                                2026-03-18
+                                
+                        </div>
                   </div>
-                  <div class="card-footer text-muted">
+                  <div class="card-footer text-muted bg-white border-top">
                     <a href="/category/%E5%B7%A5%E5%85%B7%E6%8E%A8%E8%8D%90.html"
-                      class="badge bg-primary">
+                      class="badge bg-primary me-2">
                       工具推荐
                     </a>
                     
-                      <a href="/tag/%E4%BA%BA%E7%94%9FA4%E7%BA%B8.html" class="badge tag-link">
+                      <a href="/tag/%E4%BA%BA%E7%94%9FA4%E7%BA%B8.html" class="badge tag-link me-2 mb-1">
                         人生A4纸
                       </a>
                       
-                      <a href="/tag/%E7%94%9F%E5%91%BD%E5%80%92%E8%AE%A1%E6%97%B6.html" class="badge tag-link">
+                      <a href="/tag/%E7%94%9F%E5%91%BD%E5%80%92%E8%AE%A1%E6%97%B6.html" class="badge tag-link me-2 mb-1">
                         生命倒计时
                       </a>
                       
-                      <a href="/tag/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F.html" class="badge tag-link">
+                      <a href="/tag/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F.html" class="badge tag-link me-2 mb-1">
                         微信小程序
                       </a>
                       
-                      <a href="/tag/%E4%BA%BA%E7%94%9F%E6%80%9D%E8%80%83.html" class="badge tag-link">
+                      <a href="/tag/%E4%BA%BA%E7%94%9F%E6%80%9D%E8%80%83.html" class="badge tag-link me-2 mb-1">
                         人生思考
                       </a>
                       
-                      <a href="/tag/%E6%97%B6%E9%97%B4%E7%AE%A1%E7%90%86.html" class="badge tag-link">
+                      <a href="/tag/%E6%97%B6%E9%97%B4%E7%AE%A1%E7%90%86.html" class="badge tag-link me-2 mb-1">
                         时间管理
                       </a>
                       
@@ -945,48 +1027,49 @@
               </div>
               
               <div class="masonry-grid-item">
-                <div class="card shadow-sm">
+                <div class="card article-card shadow-sm">
                   <div class="card-body">
-                    <h5 class="card-title">
-                      <i class="bi bi-file-earmark-text"></i>
-                      <a href="../mdhtml/房贷月供怎么算？这个微信小程序3秒帮你搞定.html" class="text-decoration-none">
+                    <h5 class="card-title article-title">
+                      <i class="bi bi-file-earmark-text me-2 text-primary"></i>
+                      <a href="../mdhtml/房贷月供怎么算？这个微信小程序3秒帮你搞定.html" class="text-decoration-none text-dark">
                         房贷月供怎么算？这个微信小程序3秒帮你搞定
                       </a>
                     </h5>
                     
-                      <p class="card-text">
+                      <p class="card-text text-muted mb-3">
                         还在为房贷计算发愁？随身工具宝小程序房贷计算器功能全面，操作简单，3秒生成详细还款计划，购房决策更明智。
                       </p>
                       
-                        
-                          <small class="text-muted">
-                            2026-03-18
-                          </small>
-                          
+                        <div class="article-meta">
+                            
+                                <i class="bi bi-clock me-1"></i>
+                                2026-03-18
+                                
+                        </div>
                   </div>
-                  <div class="card-footer text-muted">
+                  <div class="card-footer text-muted bg-white border-top">
                     <a href="/category/%E5%B7%A5%E5%85%B7%E6%8E%A8%E8%8D%90.html"
-                      class="badge bg-primary">
+                      class="badge bg-primary me-2">
                       工具推荐
                     </a>
                     
-                      <a href="/tag/%E6%88%BF%E8%B4%B7%E8%AE%A1%E7%AE%97%E5%99%A8.html" class="badge tag-link">
+                      <a href="/tag/%E6%88%BF%E8%B4%B7%E8%AE%A1%E7%AE%97%E5%99%A8.html" class="badge tag-link me-2 mb-1">
                         房贷计算器
                       </a>
                       
-                      <a href="/tag/%E8%B4%AD%E6%88%BF%E5%B7%A5%E5%85%B7.html" class="badge tag-link">
+                      <a href="/tag/%E8%B4%AD%E6%88%BF%E5%B7%A5%E5%85%B7.html" class="badge tag-link me-2 mb-1">
                         购房工具
                       </a>
                       
-                      <a href="/tag/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F.html" class="badge tag-link">
+                      <a href="/tag/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F.html" class="badge tag-link me-2 mb-1">
                         微信小程序
                       </a>
                       
-                      <a href="/tag/%E5%AE%9E%E7%94%A8%E5%B7%A5%E5%85%B7.html" class="badge tag-link">
+                      <a href="/tag/%E5%AE%9E%E7%94%A8%E5%B7%A5%E5%85%B7.html" class="badge tag-link me-2 mb-1">
                         实用工具
                       </a>
                       
-                      <a href="/tag/%E8%B4%A2%E5%8A%A1%E8%A7%84%E5%88%92.html" class="badge tag-link">
+                      <a href="/tag/%E8%B4%A2%E5%8A%A1%E8%A7%84%E5%88%92.html" class="badge tag-link me-2 mb-1">
                         财务规划
                       </a>
                       
@@ -996,8 +1079,8 @@
               
           </div>
 
-          <div class="mt-4 text-center">
-            <a href="标签列表.html" class="btn btn-outline-primary"><i class="bi bi-arrow-left"></i> 返回标签列表</a>
+          <div class="mt-6 text-center">
+            <a href="标签列表.html" class="btn btn-outline-primary back-button"><i class="bi bi-arrow-left me-2"></i> 返回标签列表</a>
           </div>
         </div>
       </div>
@@ -1021,7 +1104,7 @@
             itemSelector: '.masonry-grid-item',
             columnWidth: '.masonry-grid-item',
             percentPosition: true,
-            gutter: 10 // 可选，添加卡片间的间距
+            gutter: 15 // 增加间距，提升视觉效果
           });
         });
       </script>

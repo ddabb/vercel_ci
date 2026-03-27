@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
 
 <head>
     <meta charset="UTF-8">
@@ -9,7 +9,7 @@
     <meta name="description" content="无人自助站的【社会现象】分类列表页面，汇集了关于【社会现象】分类的文章和资讯，方便您快速找到感兴趣的内容。">
     <meta name="keywords" content="无人自助站,社会现象">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>分类列表</title>
+    <title>社会现象分类 - 无人自助站</title>
     <link rel="icon" href="../logo.svg" type="image/svg+xml">
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/footer.css">
@@ -27,6 +27,62 @@
     <!-- 引入Masonry -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/masonry/4.2.2/masonry.pkgd.min.js"></script>
 
+    <style>
+        .category-header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 2rem;
+            border-radius: 8px;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        .category-title {
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+        .article-card {
+            transition: all 0.3s ease;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        .article-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+        }
+        .article-title {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            transition: color 0.3s ease;
+        }
+        .article-title:hover {
+            color: #0d6efd;
+        }
+        .article-meta {
+            font-size: 0.85rem;
+            color: #6c757d;
+        }
+        .tag-link {
+            background-color: #e9ecef;
+            color: #495057;
+            transition: all 0.2s ease;
+        }
+        .tag-link:hover {
+            background-color: #dee2e6;
+            color: #212529;
+        }
+        .back-button {
+            transition: all 0.3s ease;
+        }
+        .back-button:hover {
+            transform: translateX(-3px);
+        }
+        .article-count {
+            font-size: 0.9rem;
+            opacity: 0.9;
+        }
+    </style>
 </head>
 
 <body>
@@ -80,7 +136,7 @@
         <main class="container-fluid mt-4">
             <div class="col-lg-8 col-md-12 mx-auto">
                 <!-- 面包屑导航 -->
-                <nav aria-label="breadcrumb">
+                <nav aria-label="breadcrumb" class="mb-4">
                     <ol class="breadcrumb">
                         <li class="breadcrumb-item"><a href="/html/index.html">首页</a></li>
                         <li class="breadcrumb-item"><a href="分类列表.html">分类列表</a></li>
@@ -89,61 +145,71 @@
                         </li>
                     </ol>
                 </nav>
-                <h1 style="font-size: 1.5em; margin: 0.5em 0;">
-                    社会现象分类的文章和资讯
-                </h1>
+                
+                <!-- 分类头部 -->
+                <div class="category-header">
+                    <h1 class="category-title">
+                        <i class="bi bi-folder2 me-2"></i>
+                        社会现象
+                    </h1>
+                    <p class="article-count">
+                        共 17 篇文章
+                    </p>
+                </div>
+                
                 <!-- 分类内容卡片 使用 Masonry 布局 -->
                 <div class="masonry-grid">
                     
                         <div class="masonry-grid-item">
-                            <div class="card shadow-sm">
+                            <div class="card article-card shadow-sm">
                                 <div class="card-body">
-                                    <h5 class="card-title">
-                                        <i class="bi bi-file-earmark-text"></i>
+                                    <h5 class="card-title article-title">
+                                        <i class="bi bi-file-earmark-text me-2 text-primary"></i>
                                         <a href="../mdhtml/虚假信息和舆论引导对社会和个人会产生哪些深远影响？.html"
-                                            class="text-decoration-none">
+                                            class="text-decoration-none text-dark">
                                             虚假信息和舆论引导对社会和个人会产生哪些深远影响？
                                         </a>
                                     </h5>
                                     
-                                        <p class="card-text">
+                                        <p class="card-text text-muted mb-3">
                                             虚假信息如网络谣言等破坏社会信任，影响决策，加剧分化；对个人则妨碍认知，威胁财产，影响心理。应对措施有提升媒介素养、加强法律和技术手段来识别拦截虚假信息。共同营造健康网络环境至关重要。
                                         </p>
                                         
+                                        <div class="article-meta">
                                             
-                                                <small class="text-muted">
-                                                    2026-02-11
-                                                </small>
+                                                <i class="bi bi-clock me-1"></i>
+                                                2026-02-11
                                                 
+                                        </div>
                                 </div>
-                                <div class="card-footer text-muted">
+                                <div class="card-footer text-muted bg-white border-top">
                                     <a href="/category/%E7%A4%BE%E4%BC%9A%E7%8E%B0%E8%B1%A1.html"
-                                        class="badge bg-primary">
+                                        class="badge bg-primary me-2">
                                         社会现象
                                     </a>
                                     
                                         <a href="/tag/%E8%99%9A%E5%81%87%E4%BF%A1%E6%81%AF.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             虚假信息
                                         </a>
                                         
                                         <a href="/tag/%E8%88%86%E8%AE%BA%E5%BC%95%E5%AF%BC.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             舆论引导
                                         </a>
                                         
                                         <a href="/tag/%E7%A4%BE%E4%BC%9A%E5%BD%B1%E5%93%8D.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             社会影响
                                         </a>
                                         
                                         <a href="/tag/%E4%B8%AA%E4%BA%BA%E5%BD%B1%E5%93%8D.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             个人影响
                                         </a>
                                         
                                         <a href="/tag/%E5%BA%94%E5%AF%B9%E7%AD%96%E7%95%A5.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             应对策略
                                         </a>
                                         
@@ -152,54 +218,55 @@
                         </div>
                         
                         <div class="masonry-grid-item">
-                            <div class="card shadow-sm">
+                            <div class="card article-card shadow-sm">
                                 <div class="card-body">
-                                    <h5 class="card-title">
-                                        <i class="bi bi-file-earmark-text"></i>
+                                    <h5 class="card-title article-title">
+                                        <i class="bi bi-file-earmark-text me-2 text-primary"></i>
                                         <a href="../mdhtml/经济差距、教育资源分配不均等问题能否得到根本解决？.html"
-                                            class="text-decoration-none">
+                                            class="text-decoration-none text-dark">
                                             经济差距、教育资源分配不均等问题能否得到根本解决？
                                         </a>
                                     </h5>
                                     
-                                        <p class="card-text">
+                                        <p class="card-text text-muted mb-3">
                                             探讨经济差距与教育资源分配不均的问题，分析其形成原因及对社会的影响，并提出通过政策引导和社会各界共同努力来促进教育公平、缩小经济差距的解决之道。文章强调了实现教育资源均衡分配的重要性，以及为每个人提供平等发展机会的长远目标。尽管完全消除这些问题极具挑战性，但通过持续努力可以逐步改善现状，促进社会更加公平和谐的发展。
                                         </p>
                                         
+                                        <div class="article-meta">
                                             
-                                                <small class="text-muted">
-                                                    2026-02-11
-                                                </small>
+                                                <i class="bi bi-clock me-1"></i>
+                                                2026-02-11
                                                 
+                                        </div>
                                 </div>
-                                <div class="card-footer text-muted">
+                                <div class="card-footer text-muted bg-white border-top">
                                     <a href="/category/%E7%A4%BE%E4%BC%9A%E7%8E%B0%E8%B1%A1.html"
-                                        class="badge bg-primary">
+                                        class="badge bg-primary me-2">
                                         社会现象
                                     </a>
                                     
                                         <a href="/tag/%E7%BB%8F%E6%B5%8E%E5%B7%AE%E8%B7%9D.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             经济差距
                                         </a>
                                         
                                         <a href="/tag/%E6%95%99%E8%82%B2%E8%B5%84%E6%BA%90%E5%88%86%E9%85%8D.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             教育资源分配
                                         </a>
                                         
                                         <a href="/tag/%E7%A4%BE%E4%BC%9A%E6%B5%81%E5%8A%A8.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             社会流动
                                         </a>
                                         
                                         <a href="/tag/%E5%85%AC%E5%85%B1%E6%94%BF%E7%AD%96.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             公共政策
                                         </a>
                                         
                                         <a href="/tag/%E6%95%99%E8%82%B2%E5%85%AC%E5%B9%B3.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             教育公平
                                         </a>
                                         
@@ -208,54 +275,55 @@
                         </div>
                         
                         <div class="masonry-grid-item">
-                            <div class="card shadow-sm">
+                            <div class="card article-card shadow-sm">
                                 <div class="card-body">
-                                    <h5 class="card-title">
-                                        <i class="bi bi-file-earmark-text"></i>
+                                    <h5 class="card-title article-title">
+                                        <i class="bi bi-file-earmark-text me-2 text-primary"></i>
                                         <a href="../mdhtml/未成年人玩手机有各种限制，要不要将手机列为成人用品？.html"
-                                            class="text-decoration-none">
+                                            class="text-decoration-none text-dark">
                                             未成年人玩手机有各种限制，要不要将手机列为成人用品？
                                         </a>
                                     </h5>
                                     
-                                        <p class="card-text">
+                                        <p class="card-text text-muted mb-3">
                                             探讨未成年人玩手机带来的诸多问题，分析现有限制措施的不足，讨论将手机列为成人用品的利弊，提出平衡解决未成年人手机使用问题的策略。
                                         </p>
                                         
+                                        <div class="article-meta">
                                             
-                                                <small class="text-muted">
-                                                    2026-02-11
-                                                </small>
+                                                <i class="bi bi-clock me-1"></i>
+                                                2026-02-11
                                                 
+                                        </div>
                                 </div>
-                                <div class="card-footer text-muted">
+                                <div class="card-footer text-muted bg-white border-top">
                                     <a href="/category/%E7%A4%BE%E4%BC%9A%E7%8E%B0%E8%B1%A1.html"
-                                        class="badge bg-primary">
+                                        class="badge bg-primary me-2">
                                         社会现象
                                     </a>
                                     
                                         <a href="/tag/%E6%9C%AA%E6%88%90%E5%B9%B4%E4%BA%BA.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             未成年人
                                         </a>
                                         
                                         <a href="/tag/%E6%89%8B%E6%9C%BA%E4%BD%BF%E7%94%A8.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             手机使用
                                         </a>
                                         
                                         <a href="/tag/%E9%99%90%E5%88%B6%E6%8E%AA%E6%96%BD.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             限制措施
                                         </a>
                                         
                                         <a href="/tag/%E8%BA%AB%E5%BF%83%E5%81%A5%E5%BA%B7.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             身心健康
                                         </a>
                                         
                                         <a href="/tag/%E6%95%99%E8%82%B2%E5%BC%95%E5%AF%BC.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             教育引导
                                         </a>
                                         
@@ -264,64 +332,65 @@
                         </div>
                         
                         <div class="masonry-grid-item">
-                            <div class="card shadow-sm">
+                            <div class="card article-card shadow-sm">
                                 <div class="card-body">
-                                    <h5 class="card-title">
-                                        <i class="bi bi-file-earmark-text"></i>
+                                    <h5 class="card-title article-title">
+                                        <i class="bi bi-file-earmark-text me-2 text-primary"></i>
                                         <a href="../mdhtml/新手司机上路有什么值得注意的吗？.html"
-                                            class="text-decoration-none">
+                                            class="text-decoration-none text-dark">
                                             新手司机上路有什么值得注意的吗？
                                         </a>
                                     </h5>
                                     
-                                        <p class="card-text">
+                                        <p class="card-text text-muted mb-3">
                                             本文为新手司机提供了详尽的上路指南，包括出发前的车辆检查与准备、行车中的安全事项、停车规范、突发事件处理的心理建设及培养良好驾驶习惯。了解这些关键细节，有助于确保行车安全，逐步成长为一名自信且负责任的驾驶员。掌握正确的新手驾驶技巧，从细节做起，保障你和他人的安全。
                                         </p>
                                         
+                                        <div class="article-meta">
                                             
-                                                <small class="text-muted">
-                                                    2026-02-11
-                                                </small>
+                                                <i class="bi bi-clock me-1"></i>
+                                                2026-02-11
                                                 
+                                        </div>
                                 </div>
-                                <div class="card-footer text-muted">
+                                <div class="card-footer text-muted bg-white border-top">
                                     <a href="/category/%E7%A4%BE%E4%BC%9A%E7%8E%B0%E8%B1%A1.html"
-                                        class="badge bg-primary">
+                                        class="badge bg-primary me-2">
                                         社会现象
                                     </a>
                                     
                                         <a href="/tag/%E6%96%B0%E6%89%8B%E5%8F%B8%E6%9C%BA.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             新手司机
                                         </a>
                                         
                                         <a href="/tag/%E5%AE%89%E5%85%A8%E9%A9%BE%E9%A9%B6.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             安全驾驶
                                         </a>
                                         
                                         <a href="/tag/%E5%87%BA%E5%8F%91%E5%87%86%E5%A4%87.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             出发准备
                                         </a>
                                         
                                         <a href="/tag/%E8%A1%8C%E8%BD%A6%E6%B3%A8%E6%84%8F.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             行车注意
                                         </a>
                                         
                                         <a href="/tag/%E5%81%9C%E8%BD%A6%E8%A7%84%E8%8C%83.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             停车规范
                                         </a>
                                         
                                         <a href="/tag/%E5%BF%83%E7%90%86%E5%BB%BA%E8%AE%BE.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             心理建设
                                         </a>
                                         
                                         <a href="/tag/%E9%A9%BE%E9%A9%B6%E4%B9%A0%E6%83%AF.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             驾驶习惯
                                         </a>
                                         
@@ -330,54 +399,55 @@
                         </div>
                         
                         <div class="masonry-grid-item">
-                            <div class="card shadow-sm">
+                            <div class="card article-card shadow-sm">
                                 <div class="card-body">
-                                    <h5 class="card-title">
-                                        <i class="bi bi-file-earmark-text"></i>
+                                    <h5 class="card-title article-title">
+                                        <i class="bi bi-file-earmark-text me-2 text-primary"></i>
                                         <a href="../mdhtml/我们应该如何在文化交流中保持自身文化的独特性？.html"
-                                            class="text-decoration-none">
+                                            class="text-decoration-none text-dark">
                                             我们应该如何在文化交流中保持自身文化的独特性？
                                         </a>
                                     </h5>
                                     
-                                        <p class="card-text">
+                                        <p class="card-text text-muted mb-3">
                                             在全球化背景下，保持文化独特性需要理解与尊重其他文化、坚守自身文化的核心价值、通过创新传承文化、在开放中寻求平衡以及培养文化自信。通过这些方法，我们可以在多元文化交流中既展现自我又吸收外来文化的精华，确保文化的独特性和活力得以延续。
                                         </p>
                                         
+                                        <div class="article-meta">
                                             
-                                                <small class="text-muted">
-                                                    2026-02-11
-                                                </small>
+                                                <i class="bi bi-clock me-1"></i>
+                                                2026-02-11
                                                 
+                                        </div>
                                 </div>
-                                <div class="card-footer text-muted">
+                                <div class="card-footer text-muted bg-white border-top">
                                     <a href="/category/%E7%A4%BE%E4%BC%9A%E7%8E%B0%E8%B1%A1.html"
-                                        class="badge bg-primary">
+                                        class="badge bg-primary me-2">
                                         社会现象
                                     </a>
                                     
                                         <a href="/tag/%E6%96%87%E5%8C%96%E4%BA%A4%E6%B5%81.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             文化交流
                                         </a>
                                         
                                         <a href="/tag/%E6%96%87%E5%8C%96%E7%8B%AC%E7%89%B9%E6%80%A7.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             文化独特性
                                         </a>
                                         
                                         <a href="/tag/%E6%A0%B8%E5%BF%83%E4%BB%B7%E5%80%BC.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             核心价值
                                         </a>
                                         
                                         <a href="/tag/%E5%88%9B%E6%96%B0%E4%BC%A0%E6%89%BF.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             创新传承
                                         </a>
                                         
                                         <a href="/tag/%E6%96%87%E5%8C%96%E8%87%AA%E4%BF%A1.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             文化自信
                                         </a>
                                         
@@ -386,54 +456,55 @@
                         </div>
                         
                         <div class="masonry-grid-item">
-                            <div class="card shadow-sm">
+                            <div class="card article-card shadow-sm">
                                 <div class="card-body">
-                                    <h5 class="card-title">
-                                        <i class="bi bi-file-earmark-text"></i>
+                                    <h5 class="card-title article-title">
+                                        <i class="bi bi-file-earmark-text me-2 text-primary"></i>
                                         <a href="../mdhtml/导盲犬禁止入内标识的深度解读.html"
-                                            class="text-decoration-none">
+                                            class="text-decoration-none text-dark">
                                             导盲犬禁止入内标识的深度解读
                                         </a>
                                     </h5>
                                     
-                                        <p class="card-text">
+                                        <p class="card-text text-muted mb-3">
                                             深度剖析“导盲犬禁止入内”标识背后的意义，探讨其在保障盲人权益与维护公共秩序之间的平衡作用，以及如何通过社会宣传和法律完善来消除误解，创造更包容的社会环境。
                                         </p>
                                         
+                                        <div class="article-meta">
                                             
-                                                <small class="text-muted">
-                                                    2026-02-11
-                                                </small>
+                                                <i class="bi bi-clock me-1"></i>
+                                                2026-02-11
                                                 
+                                        </div>
                                 </div>
-                                <div class="card-footer text-muted">
+                                <div class="card-footer text-muted bg-white border-top">
                                     <a href="/category/%E7%A4%BE%E4%BC%9A%E7%8E%B0%E8%B1%A1.html"
-                                        class="badge bg-primary">
+                                        class="badge bg-primary me-2">
                                         社会现象
                                     </a>
                                     
                                         <a href="/tag/%E5%AF%BC%E7%9B%B2%E7%8A%AC.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             导盲犬
                                         </a>
                                         
                                         <a href="/tag/%E5%85%AC%E5%85%B1%E7%A7%A9%E5%BA%8F.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             公共秩序
                                         </a>
                                         
                                         <a href="/tag/%E7%9B%B2%E4%BA%BA%E6%9D%83%E7%9B%8A.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             盲人权益
                                         </a>
                                         
                                         <a href="/tag/%E7%A4%BE%E4%BC%9A%E5%8C%85%E5%AE%B9.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             社会包容
                                         </a>
                                         
                                         <a href="/tag/%E6%A0%87%E8%AF%86%E8%A7%A3%E8%AF%BB.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             标识解读
                                         </a>
                                         
@@ -442,54 +513,55 @@
                         </div>
                         
                         <div class="masonry-grid-item">
-                            <div class="card shadow-sm">
+                            <div class="card article-card shadow-sm">
                                 <div class="card-body">
-                                    <h5 class="card-title">
-                                        <i class="bi bi-file-earmark-text"></i>
+                                    <h5 class="card-title article-title">
+                                        <i class="bi bi-file-earmark-text me-2 text-primary"></i>
                                         <a href="../mdhtml/学历对成功到底有多重要？.html"
-                                            class="text-decoration-none">
+                                            class="text-decoration-none text-dark">
                                             学历对成功到底有多重要？
                                         </a>
                                     </h5>
                                     
-                                        <p class="card-text">
+                                        <p class="card-text text-muted mb-3">
                                             学历在成功之路上扮演着重要角色，但并非唯一决定因素。文章探讨了学历作为职场入场券的价值、其隐性优势如圈层资源和政策红利，以及在不同行业中学历权重的差异。同时强调了能力与学历之间的动态平衡，及终身学习的重要性，提出构建“学历+能力+认知”的三维竞争力模型才是通往成功的路径。
                                         </p>
                                         
+                                        <div class="article-meta">
                                             
-                                                <small class="text-muted">
-                                                    2026-02-11
-                                                </small>
+                                                <i class="bi bi-clock me-1"></i>
+                                                2026-02-11
                                                 
+                                        </div>
                                 </div>
-                                <div class="card-footer text-muted">
+                                <div class="card-footer text-muted bg-white border-top">
                                     <a href="/category/%E7%A4%BE%E4%BC%9A%E7%8E%B0%E8%B1%A1.html"
-                                        class="badge bg-primary">
+                                        class="badge bg-primary me-2">
                                         社会现象
                                     </a>
                                     
                                         <a href="/tag/%E5%AD%A6%E5%8E%86%E4%BB%B7%E5%80%BC.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             学历价值
                                         </a>
                                         
                                         <a href="/tag/%E8%81%8C%E4%B8%9A%E5%8F%91%E5%B1%95.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             职业发展
                                         </a>
                                         
                                         <a href="/tag/%E8%A1%8C%E4%B8%9A%E5%B7%AE%E5%BC%82.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             行业差异
                                         </a>
                                         
                                         <a href="/tag/%E7%BB%88%E8%BA%AB%E5%AD%A6%E4%B9%A0.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             终身学习
                                         </a>
                                         
                                         <a href="/tag/%E6%88%90%E5%8A%9F%E5%9B%A0%E7%B4%A0.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             成功因素
                                         </a>
                                         
@@ -498,54 +570,55 @@
                         </div>
                         
                         <div class="masonry-grid-item">
-                            <div class="card shadow-sm">
+                            <div class="card article-card shadow-sm">
                                 <div class="card-body">
-                                    <h5 class="card-title">
-                                        <i class="bi bi-file-earmark-text"></i>
+                                    <h5 class="card-title article-title">
+                                        <i class="bi bi-file-earmark-text me-2 text-primary"></i>
                                         <a href="../mdhtml/如何反驳“现实点，社会就是这样”？.html"
-                                            class="text-decoration-none">
+                                            class="text-decoration-none text-dark">
                                             如何反驳“现实点，社会就是这样”？
                                         </a>
                                     </h5>
                                     
-                                        <p class="card-text">
+                                        <p class="card-text text-muted mb-3">
                                             针对“现实点，社会就是这样”这一常见观点进行有力反驳，阐述社会时刻在变、社会具有多元性、追求理想与适应现实可融合等内容，鼓励人们积极改变社会、追求理想。
                                         </p>
                                         
+                                        <div class="article-meta">
                                             
-                                                <small class="text-muted">
-                                                    2026-02-11
-                                                </small>
+                                                <i class="bi bi-clock me-1"></i>
+                                                2026-02-11
                                                 
+                                        </div>
                                 </div>
-                                <div class="card-footer text-muted">
+                                <div class="card-footer text-muted bg-white border-top">
                                     <a href="/category/%E7%A4%BE%E4%BC%9A%E7%8E%B0%E8%B1%A1.html"
-                                        class="badge bg-primary">
+                                        class="badge bg-primary me-2">
                                         社会现象
                                     </a>
                                     
                                         <a href="/tag/%E7%A4%BE%E4%BC%9A%E5%8F%98%E9%9D%A9.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             社会变革
                                         </a>
                                         
                                         <a href="/tag/%E4%B8%AA%E4%BA%BA%E5%8A%9B%E9%87%8F.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             个人力量
                                         </a>
                                         
                                         <a href="/tag/%E7%A4%BE%E4%BC%9A%E5%A4%9A%E5%85%83%E6%80%A7.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             社会多元性
                                         </a>
                                         
                                         <a href="/tag/%E7%90%86%E6%83%B3%E8%BF%BD%E6%B1%82.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             理想追求
                                         </a>
                                         
                                         <a href="/tag/%E7%A4%BE%E4%BC%9A%E8%BF%9B%E6%AD%A5.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             社会进步
                                         </a>
                                         
@@ -554,44 +627,45 @@
                         </div>
                         
                         <div class="masonry-grid-item">
-                            <div class="card shadow-sm">
+                            <div class="card article-card shadow-sm">
                                 <div class="card-body">
-                                    <h5 class="card-title">
-                                        <i class="bi bi-file-earmark-text"></i>
+                                    <h5 class="card-title article-title">
+                                        <i class="bi bi-file-earmark-text me-2 text-primary"></i>
                                         <a href="../mdhtml/大货车未安装无死角摄像头的原因分析.html"
-                                            class="text-decoration-none">
+                                            class="text-decoration-none text-dark">
                                             大货车未安装无死角摄像头的原因分析
                                         </a>
                                     </h5>
                                     
-                                        <p class="card-text">
+                                        <p class="card-text text-muted mb-3">
                                             深入探讨大货车未普遍安装无死角摄像头的原因，包括技术瓶颈、成本高昂及法规标准缺失等问题，并提出相应的替代策略和未来发展建议，以期为提升道路交通安全提供有益参考。
                                         </p>
                                         
+                                        <div class="article-meta">
                                             
-                                                <small class="text-muted">
-                                                    2026-02-11
-                                                </small>
+                                                <i class="bi bi-clock me-1"></i>
+                                                2026-02-11
                                                 
+                                        </div>
                                 </div>
-                                <div class="card-footer text-muted">
+                                <div class="card-footer text-muted bg-white border-top">
                                     <a href="/category/%E7%A4%BE%E4%BC%9A%E7%8E%B0%E8%B1%A1.html"
-                                        class="badge bg-primary">
+                                        class="badge bg-primary me-2">
                                         社会现象
                                     </a>
                                     
                                         <a href="/tag/%E8%A7%86%E7%BA%BF%E7%9B%B2%E5%8C%BA.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             视线盲区
                                         </a>
                                         
                                         <a href="/tag/%E5%AE%89%E5%85%A8%E6%8A%80%E6%9C%AF.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             安全技术
                                         </a>
                                         
                                         <a href="/tag/%E4%BA%A4%E9%80%9A%E4%BA%8B%E6%95%85.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             交通事故
                                         </a>
                                         
@@ -600,49 +674,50 @@
                         </div>
                         
                         <div class="masonry-grid-item">
-                            <div class="card shadow-sm">
+                            <div class="card article-card shadow-sm">
                                 <div class="card-body">
-                                    <h5 class="card-title">
-                                        <i class="bi bi-file-earmark-text"></i>
+                                    <h5 class="card-title article-title">
+                                        <i class="bi bi-file-earmark-text me-2 text-primary"></i>
                                         <a href="../mdhtml/在追求自由的过程中，如何平衡个人自由与社会责任？.html"
-                                            class="text-decoration-none">
+                                            class="text-decoration-none text-dark">
                                             在追求自由的过程中，如何平衡个人自由与社会责任？
                                         </a>
                                     </h5>
                                     
-                                        <p class="card-text">
+                                        <p class="card-text text-muted mb-3">
                                             文章探讨了个人自由与社会责任之间的关系，强调在追求自由的同时必须履行对社会的责任，提出通过法律框架、道德价值观及社会契约来实现两者的平衡，以促进个人成长和社会进步。
                                         </p>
                                         
+                                        <div class="article-meta">
                                             
-                                                <small class="text-muted">
-                                                    2026-02-11
-                                                </small>
+                                                <i class="bi bi-clock me-1"></i>
+                                                2026-02-11
                                                 
+                                        </div>
                                 </div>
-                                <div class="card-footer text-muted">
+                                <div class="card-footer text-muted bg-white border-top">
                                     <a href="/category/%E7%A4%BE%E4%BC%9A%E7%8E%B0%E8%B1%A1.html"
-                                        class="badge bg-primary">
+                                        class="badge bg-primary me-2">
                                         社会现象
                                     </a>
                                     
                                         <a href="/tag/%E4%B8%AA%E4%BA%BA%E8%87%AA%E7%94%B1.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             个人自由
                                         </a>
                                         
                                         <a href="/tag/%E7%A4%BE%E4%BC%9A%E8%B4%A3%E4%BB%BB.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             社会责任
                                         </a>
                                         
                                         <a href="/tag/%E6%B3%95%E5%BE%8B%E6%A1%86%E6%9E%B6.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             法律框架
                                         </a>
                                         
                                         <a href="/tag/%E9%81%93%E5%BE%B7%E9%80%89%E6%8B%A9.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             道德选择
                                         </a>
                                         
@@ -651,49 +726,50 @@
                         </div>
                         
                         <div class="masonry-grid-item">
-                            <div class="card shadow-sm">
+                            <div class="card article-card shadow-sm">
                                 <div class="card-body">
-                                    <h5 class="card-title">
-                                        <i class="bi bi-file-earmark-text"></i>
+                                    <h5 class="card-title article-title">
+                                        <i class="bi bi-file-earmark-text me-2 text-primary"></i>
                                         <a href="../mdhtml/在现代社会中，如何真正实现社会公平？.html"
-                                            class="text-decoration-none">
+                                            class="text-decoration-none text-dark">
                                             在现代社会中，如何真正实现社会公平？
                                         </a>
                                     </h5>
                                     
-                                        <p class="card-text">
+                                        <p class="card-text text-muted mb-3">
                                             文章探讨了在现代社会中实现社会公平的途径，包括推动教育公平、优化经济分配、均衡资源布局及强化法律保障等方面，强调需要政府、企业和社会各界共同努力，构建一个更加公平和谐的社会。
                                         </p>
                                         
+                                        <div class="article-meta">
                                             
-                                                <small class="text-muted">
-                                                    2026-02-11
-                                                </small>
+                                                <i class="bi bi-clock me-1"></i>
+                                                2026-02-11
                                                 
+                                        </div>
                                 </div>
-                                <div class="card-footer text-muted">
+                                <div class="card-footer text-muted bg-white border-top">
                                     <a href="/category/%E7%A4%BE%E4%BC%9A%E7%8E%B0%E8%B1%A1.html"
-                                        class="badge bg-primary">
+                                        class="badge bg-primary me-2">
                                         社会现象
                                     </a>
                                     
                                         <a href="/tag/%E7%A4%BE%E4%BC%9A%E5%85%AC%E5%B9%B3.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             社会公平
                                         </a>
                                         
                                         <a href="/tag/%E6%95%99%E8%82%B2%E5%85%AC%E5%B9%B3.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             教育公平
                                         </a>
                                         
                                         <a href="/tag/%E7%BB%8F%E6%B5%8E%E5%85%AC%E5%B9%B3.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             经济公平
                                         </a>
                                         
                                         <a href="/tag/%E8%B5%84%E6%BA%90%E5%88%86%E9%85%8D.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             资源分配
                                         </a>
                                         
@@ -702,54 +778,55 @@
                         </div>
                         
                         <div class="masonry-grid-item">
-                            <div class="card shadow-sm">
+                            <div class="card article-card shadow-sm">
                                 <div class="card-body">
-                                    <h5 class="card-title">
-                                        <i class="bi bi-file-earmark-text"></i>
+                                    <h5 class="card-title article-title">
+                                        <i class="bi bi-file-earmark-text me-2 text-primary"></i>
                                         <a href="../mdhtml/在全球化的背景下，文化的多样性是否会逐渐消失？.html"
-                                            class="text-decoration-none">
+                                            class="text-decoration-none text-dark">
                                             在全球化的背景下，文化的多样性是否会逐渐消失？
                                         </a>
                                     </h5>
                                     
-                                        <p class="card-text">
+                                        <p class="card-text text-muted mb-3">
                                             全球化促进了文化的快速传播与融合，既带来了文化交流与创新的机会，也引发了文化同质化的担忧。文章探讨了在全球化背景下文化多样性的现状、面临的挑战及保护措施，强调通过政策支持、企业责任和个人行动共同维护文化多样性，促进文化在交融中焕发新生，确保人类文明的可持续发展。
                                         </p>
                                         
+                                        <div class="article-meta">
                                             
-                                                <small class="text-muted">
-                                                    2026-02-11
-                                                </small>
+                                                <i class="bi bi-clock me-1"></i>
+                                                2026-02-11
                                                 
+                                        </div>
                                 </div>
-                                <div class="card-footer text-muted">
+                                <div class="card-footer text-muted bg-white border-top">
                                     <a href="/category/%E7%A4%BE%E4%BC%9A%E7%8E%B0%E8%B1%A1.html"
-                                        class="badge bg-primary">
+                                        class="badge bg-primary me-2">
                                         社会现象
                                     </a>
                                     
                                         <a href="/tag/%E5%85%A8%E7%90%83%E5%8C%96.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             全球化
                                         </a>
                                         
                                         <a href="/tag/%E6%96%87%E5%8C%96%E5%A4%9A%E6%A0%B7%E6%80%A7.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             文化多样性
                                         </a>
                                         
                                         <a href="/tag/%E6%96%87%E5%8C%96%E4%BA%A4%E8%9E%8D.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             文化交融
                                         </a>
                                         
                                         <a href="/tag/%E6%96%87%E5%8C%96%E4%BF%9D%E6%8A%A4.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             文化保护
                                         </a>
                                         
                                         <a href="/tag/%E6%96%87%E5%8C%96%E5%88%9B%E6%96%B0.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             文化创新
                                         </a>
                                         
@@ -758,49 +835,50 @@
                         </div>
                         
                         <div class="masonry-grid-item">
-                            <div class="card shadow-sm">
+                            <div class="card article-card shadow-sm">
                                 <div class="card-body">
-                                    <h5 class="card-title">
-                                        <i class="bi bi-file-earmark-text"></i>
+                                    <h5 class="card-title article-title">
+                                        <i class="bi bi-file-earmark-text me-2 text-primary"></i>
                                         <a href="../mdhtml/再聊姜萍.html"
-                                            class="text-decoration-none">
+                                            class="text-decoration-none text-dark">
                                             再聊姜萍
                                         </a>
                                     </h5>
                                     
-                                        <p class="card-text">
+                                        <p class="card-text text-muted mb-3">
                                             文章通过“姜萍事件”探讨如何运用概率学与批判性思维辨别生活中的骗局，强调独立思考的重要性，提醒读者不要轻信低概率事件，避免成为骗子的目标。
                                         </p>
                                         
+                                        <div class="article-meta">
                                             
-                                                <small class="text-muted">
-                                                    2026-02-11
-                                                </small>
+                                                <i class="bi bi-clock me-1"></i>
+                                                2026-02-11
                                                 
+                                        </div>
                                 </div>
-                                <div class="card-footer text-muted">
+                                <div class="card-footer text-muted bg-white border-top">
                                     <a href="/category/%E7%A4%BE%E4%BC%9A%E7%8E%B0%E8%B1%A1.html"
-                                        class="badge bg-primary">
+                                        class="badge bg-primary me-2">
                                         社会现象
                                     </a>
                                     
                                         <a href="/tag/%E6%89%B9%E5%88%A4%E6%80%A7%E6%80%9D%E7%BB%B4.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             批判性思维
                                         </a>
                                         
                                         <a href="/tag/%E6%A6%82%E7%8E%87%E5%AD%A6.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             概率学
                                         </a>
                                         
                                         <a href="/tag/%E9%AA%97%E5%B1%80%E8%AF%86%E5%88%AB.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             骗局识别
                                         </a>
                                         
                                         <a href="/tag/%E7%8B%AC%E7%AB%8B%E6%80%9D%E8%80%83.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             独立思考
                                         </a>
                                         
@@ -809,49 +887,50 @@
                         </div>
                         
                         <div class="masonry-grid-item">
-                            <div class="card shadow-sm">
+                            <div class="card article-card shadow-sm">
                                 <div class="card-body">
-                                    <h5 class="card-title">
-                                        <i class="bi bi-file-earmark-text"></i>
+                                    <h5 class="card-title article-title">
+                                        <i class="bi bi-file-earmark-text me-2 text-primary"></i>
                                         <a href="../mdhtml/为什么车厘子一个月到中国却不腐烂.html"
-                                            class="text-decoration-none">
+                                            class="text-decoration-none text-dark">
                                             为什么车厘子一个月到中国却不腐烂
                                         </a>
                                     </h5>
                                     
-                                        <p class="card-text">
+                                        <p class="card-text text-muted mb-3">
                                             文章分析了车厘子能够在长时间运输过程中保持不腐烂的原因，包括采摘后的快速冷却和预冷处理、使用专用包装材料和气调包装、全程冷链运输以及优化物流链等保鲜技术和物流管理措施，同时也提及了某些车厘子品种自身具备的良好耐储性。
                                         </p>
                                         
+                                        <div class="article-meta">
                                             
-                                                <small class="text-muted">
-                                                    2026-02-11
-                                                </small>
+                                                <i class="bi bi-clock me-1"></i>
+                                                2026-02-11
                                                 
+                                        </div>
                                 </div>
-                                <div class="card-footer text-muted">
+                                <div class="card-footer text-muted bg-white border-top">
                                     <a href="/category/%E7%A4%BE%E4%BC%9A%E7%8E%B0%E8%B1%A1.html"
-                                        class="badge bg-primary">
+                                        class="badge bg-primary me-2">
                                         社会现象
                                     </a>
                                     
                                         <a href="/tag/%E8%BD%A6%E5%8E%98%E5%AD%90%E4%BF%9D%E9%B2%9C.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             车厘子保鲜
                                         </a>
                                         
                                         <a href="/tag/%E7%89%A9%E6%B5%81%E7%AE%A1%E7%90%86.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             物流管理
                                         </a>
                                         
                                         <a href="/tag/%E9%87%87%E6%91%98%E5%90%8E%E5%A4%84%E7%90%86.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             采摘后处理
                                         </a>
                                         
                                         <a href="/tag/%E5%93%81%E7%A7%8D%E7%89%B9%E6%80%A7.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             品种特性
                                         </a>
                                         
@@ -860,54 +939,55 @@
                         </div>
                         
                         <div class="masonry-grid-item">
-                            <div class="card shadow-sm">
+                            <div class="card article-card shadow-sm">
                                 <div class="card-body">
-                                    <h5 class="card-title">
-                                        <i class="bi bi-file-earmark-text"></i>
+                                    <h5 class="card-title article-title">
+                                        <i class="bi bi-file-earmark-text me-2 text-primary"></i>
                                         <a href="../mdhtml/为什么社会贫富差距越来越大？.html"
-                                            class="text-decoration-none">
+                                            class="text-decoration-none text-dark">
                                             为什么社会贫富差距越来越大？
                                         </a>
                                     </h5>
                                     
-                                        <p class="card-text">
+                                        <p class="card-text text-muted mb-3">
                                             贫富差距扩大是全球面临的挑战，受经济全球化、科技革命、政策机制及教育机会不平等的影响。发达国家与发展中国家、资本与劳动者的收益差距逐渐拉大，同时，高收入者通过税务规划规避税负，而低收入群体缺乏社会支持。解决这一问题需要完善税收和社会保障体系，推动技术普及和共享，确保社会发展的成果能够惠及更广泛的人群。
                                         </p>
                                         
+                                        <div class="article-meta">
                                             
-                                                <small class="text-muted">
-                                                    2026-02-11
-                                                </small>
+                                                <i class="bi bi-clock me-1"></i>
+                                                2026-02-11
                                                 
+                                        </div>
                                 </div>
-                                <div class="card-footer text-muted">
+                                <div class="card-footer text-muted bg-white border-top">
                                     <a href="/category/%E7%A4%BE%E4%BC%9A%E7%8E%B0%E8%B1%A1.html"
-                                        class="badge bg-primary">
+                                        class="badge bg-primary me-2">
                                         社会现象
                                     </a>
                                     
                                         <a href="/tag/%E8%B4%AB%E5%AF%8C%E5%B7%AE%E8%B7%9D.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             贫富差距
                                         </a>
                                         
                                         <a href="/tag/%E7%BB%8F%E6%B5%8E%E5%85%A8%E7%90%83%E5%8C%96.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             经济全球化
                                         </a>
                                         
                                         <a href="/tag/%E7%A7%91%E6%8A%80%E9%9D%A9%E5%91%BD.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             科技革命
                                         </a>
                                         
                                         <a href="/tag/%E6%94%BF%E7%AD%96%E6%9C%BA%E5%88%B6.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             政策机制
                                         </a>
                                         
                                         <a href="/tag/%E6%95%99%E8%82%B2%E6%9C%BA%E4%BC%9A.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             教育机会
                                         </a>
                                         
@@ -916,54 +996,55 @@
                         </div>
                         
                         <div class="masonry-grid-item">
-                            <div class="card shadow-sm">
+                            <div class="card article-card shadow-sm">
                                 <div class="card-body">
-                                    <h5 class="card-title">
-                                        <i class="bi bi-file-earmark-text"></i>
+                                    <h5 class="card-title article-title">
+                                        <i class="bi bi-file-earmark-text me-2 text-primary"></i>
                                         <a href="../mdhtml/为什么男人会对女人家暴.html"
-                                            class="text-decoration-none">
+                                            class="text-decoration-none text-dark">
                                             为何男人会对女人家暴
                                         </a>
                                     </h5>
                                     
-                                        <p class="card-text">
+                                        <p class="card-text text-muted mb-3">
                                             深入剖析男人对女人家暴的原因，涵盖社会文化根源、个人心理因素、婚姻关系矛盾以及法律意识与监管缺失等多方面，探讨如何解决这一复杂的社会问题。
                                         </p>
                                         
+                                        <div class="article-meta">
                                             
-                                                <small class="text-muted">
-                                                    2026-02-11
-                                                </small>
+                                                <i class="bi bi-clock me-1"></i>
+                                                2026-02-11
                                                 
+                                        </div>
                                 </div>
-                                <div class="card-footer text-muted">
+                                <div class="card-footer text-muted bg-white border-top">
                                     <a href="/category/%E7%A4%BE%E4%BC%9A%E7%8E%B0%E8%B1%A1.html"
-                                        class="badge bg-primary">
+                                        class="badge bg-primary me-2">
                                         社会现象
                                     </a>
                                     
                                         <a href="/tag/%E5%AE%B6%E5%BA%AD%E6%9A%B4%E5%8A%9B.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             家庭暴力
                                         </a>
                                         
                                         <a href="/tag/%E7%94%B7%E6%80%A7%E5%BF%83%E7%90%86.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             男性心理
                                         </a>
                                         
                                         <a href="/tag/%E7%A4%BE%E4%BC%9A%E6%96%87%E5%8C%96.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             社会文化
                                         </a>
                                         
                                         <a href="/tag/%E5%A9%9A%E5%A7%BB%E5%85%B3%E7%B3%BB.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             婚姻关系
                                         </a>
                                         
                                         <a href="/tag/%E6%B3%95%E5%BE%8B%E7%9B%91%E7%AE%A1.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             法律监管
                                         </a>
                                         
@@ -972,54 +1053,55 @@
                         </div>
                         
                         <div class="masonry-grid-item">
-                            <div class="card shadow-sm">
+                            <div class="card article-card shadow-sm">
                                 <div class="card-body">
-                                    <h5 class="card-title">
-                                        <i class="bi bi-file-earmark-text"></i>
+                                    <h5 class="card-title article-title">
+                                        <i class="bi bi-file-earmark-text me-2 text-primary"></i>
                                         <a href="../mdhtml/世界和平真的有可能实现吗？.html"
-                                            class="text-decoration-none">
+                                            class="text-decoration-none text-dark">
                                             世界和平真的有可能实现吗？
                                         </a>
                                     </h5>
                                     
-                                        <p class="card-text">
+                                        <p class="card-text text-muted mb-3">
                                             本文探讨了世界和平的可能性，通过分析历史上的暴力趋势、现代文明中的和平机制以及技术发展和公民社会在全球范围内的积极作用，展示了人类向和平迈进的种种迹象。尽管存在诸多挑战，但随着教育水平的提升、科技的应用及全球合作的加深，和平正逐渐成为现实，而非遥不可及的梦想。
                                         </p>
                                         
+                                        <div class="article-meta">
                                             
-                                                <small class="text-muted">
-                                                    2026-02-11
-                                                </small>
+                                                <i class="bi bi-clock me-1"></i>
+                                                2026-02-11
                                                 
+                                        </div>
                                 </div>
-                                <div class="card-footer text-muted">
+                                <div class="card-footer text-muted bg-white border-top">
                                     <a href="/category/%E7%A4%BE%E4%BC%9A%E7%8E%B0%E8%B1%A1.html"
-                                        class="badge bg-primary">
+                                        class="badge bg-primary me-2">
                                         社会现象
                                     </a>
                                     
                                         <a href="/tag/%E4%B8%96%E7%95%8C%E5%92%8C%E5%B9%B3.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             世界和平
                                         </a>
                                         
                                         <a href="/tag/%E5%8E%86%E5%8F%B2%E6%9A%B4%E5%8A%9B.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             历史暴力
                                         </a>
                                         
                                         <a href="/tag/%E7%8E%B0%E4%BB%A3%E6%96%87%E6%98%8E.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             现代文明
                                         </a>
                                         
                                         <a href="/tag/%E6%8A%80%E6%9C%AF%E5%8F%91%E5%B1%95.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             技术发展
                                         </a>
                                         
                                         <a href="/tag/%E5%85%AC%E6%B0%91%E7%A4%BE%E4%BC%9A.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             公民社会
                                         </a>
                                         
@@ -1030,9 +1112,9 @@
                 </div>
 
                 <!-- 返回按钮 -->
-                <div class="mt-4 text-center">
-                    <a href="分类列表.html" class="btn btn-outline-primary">
-                        <i class="bi bi-arrow-left"></i> 返回分类列表
+                <div class="mt-6 text-center">
+                    <a href="分类列表.html" class="btn btn-outline-primary back-button">
+                        <i class="bi bi-arrow-left me-2"></i> 返回分类列表
                     </a>
                 </div>
             </div>
@@ -1056,7 +1138,7 @@
                         itemSelector: '.masonry-grid-item',
                         columnWidth: '.masonry-grid-item',
                         percentPosition: true,
-                        gutter: 10 // 明确设置 gutter 值为 10px
+                        gutter: 15 // 增加间距，提升视觉效果
                     });
                 });
             </script>

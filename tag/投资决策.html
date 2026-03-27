@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
 
 <head>
   <meta charset="UTF-8">
@@ -9,7 +9,7 @@
   <meta name="description" content="无人自助站的【投资决策】的标签列表页面，汇集了关于【投资决策】标签相关的文章和资讯，方便您快速找到感兴趣的内容。">
   <meta name="keywords" content="无人自助站,投资决策">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>标签文章列表</title>
+  <title>投资决策标签 - 无人自助站</title>
 
   <link rel="icon" href="../logo.svg" type="image/svg+xml">
   <link rel="stylesheet" href="../css/style.css">
@@ -27,6 +27,62 @@
   <!-- 引入Masonry -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/masonry/4.2.2/masonry.pkgd.min.js"></script>
 
+  <style>
+        .tag-header {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            color: white;
+            padding: 2rem;
+            border-radius: 8px;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        .tag-title {
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+        .article-card {
+            transition: all 0.3s ease;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        .article-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+        }
+        .article-title {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            transition: color 0.3s ease;
+        }
+        .article-title:hover {
+            color: #0d6efd;
+        }
+        .article-meta {
+            font-size: 0.85rem;
+            color: #6c757d;
+        }
+        .tag-link {
+            background-color: #e9ecef;
+            color: #495057;
+            transition: all 0.2s ease;
+        }
+        .tag-link:hover {
+            background-color: #dee2e6;
+            color: #212529;
+        }
+        .back-button {
+            transition: all 0.3s ease;
+        }
+        .back-button:hover {
+            transform: translateX(-3px);
+        }
+        .article-count {
+            font-size: 0.9rem;
+            opacity: 0.9;
+        }
+    </style>
 </head>
 
 <body>
@@ -80,7 +136,7 @@
     <main class="container-fluid mt-4">
       <div class="row">
         <div class="col-lg-8 col-md-12 mx-auto">
-          <nav aria-label="breadcrumb">
+          <nav aria-label="breadcrumb" class="mb-4">
             <ol class="breadcrumb">
               <li class="breadcrumb-item"><a href="/html/index.html">首页</a></li>
               <li class="breadcrumb-item"><a href="标签列表.html">标签列表</a></li>
@@ -89,54 +145,64 @@
               </li>
             </ol>
           </nav>
-          <h1 style="font-size: 1.5em; margin: 0.5em 0;">
-            投资决策标签的文章和资讯
-        </h1>
+          
+          <!-- 标签头部 -->
+          <div class="tag-header">
+              <h1 class="tag-title">
+                  <i class="bi bi-tags me-2"></i>
+                  投资决策
+              </h1>
+              <p class="article-count">
+                  共 6 篇文章
+              </p>
+          </div>
+          
           <div class="masonry-grid">
             
               <div class="masonry-grid-item">
-                <div class="card shadow-sm">
+                <div class="card article-card shadow-sm">
                   <div class="card-body">
-                    <h5 class="card-title">
-                      <i class="bi bi-file-earmark-text"></i>
-                      <a href="../mdhtml/AI与财务管理：智能时代的财富管理.html" class="text-decoration-none">
+                    <h5 class="card-title article-title">
+                      <i class="bi bi-file-earmark-text me-2 text-primary"></i>
+                      <a href="../mdhtml/AI与财务管理：智能时代的财富管理.html" class="text-decoration-none text-dark">
                         AI与财务管理：智能时代的财富管理
                       </a>
                     </h5>
                     
-                      <p class="card-text">
+                      <p class="card-text text-muted mb-3">
                         探讨AI如何改变财务管理领域，从智能投顾到风险控制，从支出分析到财务规划，分析AI如何帮助人们更好地管理财富。
                       </p>
                       
-                        
-                          <small class="text-muted">
-                            2026-03-23
-                          </small>
-                          
+                        <div class="article-meta">
+                            
+                                <i class="bi bi-clock me-1"></i>
+                                2026-03-23
+                                
+                        </div>
                   </div>
-                  <div class="card-footer text-muted">
+                  <div class="card-footer text-muted bg-white border-top">
                     <a href="/category/AI%E7%90%86%E8%B4%A2.html"
-                      class="badge bg-primary">
+                      class="badge bg-primary me-2">
                       AI理财
                     </a>
                     
-                      <a href="/tag/AI%E7%90%86%E8%B4%A2.html" class="badge tag-link">
+                      <a href="/tag/AI%E7%90%86%E8%B4%A2.html" class="badge tag-link me-2 mb-1">
                         AI理财
                       </a>
                       
-                      <a href="/tag/%E6%99%BA%E8%83%BD%E6%8A%95%E9%A1%BE.html" class="badge tag-link">
+                      <a href="/tag/%E6%99%BA%E8%83%BD%E6%8A%95%E9%A1%BE.html" class="badge tag-link me-2 mb-1">
                         智能投顾
                       </a>
                       
-                      <a href="/tag/%E9%A3%8E%E9%99%A9%E7%AE%A1%E7%90%86.html" class="badge tag-link">
+                      <a href="/tag/%E9%A3%8E%E9%99%A9%E7%AE%A1%E7%90%86.html" class="badge tag-link me-2 mb-1">
                         风险管理
                       </a>
                       
-                      <a href="/tag/%E8%B4%A2%E5%8A%A1%E8%A7%84%E5%88%92.html" class="badge tag-link">
+                      <a href="/tag/%E8%B4%A2%E5%8A%A1%E8%A7%84%E5%88%92.html" class="badge tag-link me-2 mb-1">
                         财务规划
                       </a>
                       
-                      <a href="/tag/%E6%8A%95%E8%B5%84%E5%86%B3%E7%AD%96.html" class="badge tag-link">
+                      <a href="/tag/%E6%8A%95%E8%B5%84%E5%86%B3%E7%AD%96.html" class="badge tag-link me-2 mb-1">
                         投资决策
                       </a>
                       
@@ -145,84 +211,85 @@
               </div>
               
               <div class="masonry-grid-item">
-                <div class="card shadow-sm">
+                <div class="card article-card shadow-sm">
                   <div class="card-body">
-                    <h5 class="card-title">
-                      <i class="bi bi-file-earmark-text"></i>
-                      <a href="../mdhtml/个人理财的心理学探秘：解锁财富管理的深层密码.html" class="text-decoration-none">
+                    <h5 class="card-title article-title">
+                      <i class="bi bi-file-earmark-text me-2 text-primary"></i>
+                      <a href="../mdhtml/个人理财的心理学探秘：解锁财富管理的深层密码.html" class="text-decoration-none text-dark">
                         个人理财心理学指南：解锁财富管理的深层密码
                       </a>
                     </h5>
                     
-                      <p class="card-text">
+                      <p class="card-text text-muted mb-3">
                         2024年最新个人理财心理学指南，深入剖析认知偏差、情绪因素、自我控制和社会比较等心理因素对理财决策的影响，帮助你运用心理学知识做出更明智的理财决策，实现财务自由。
                       </p>
                       
-                        
-                          <small class="text-muted">
-                            2026-02-25
-                          </small>
-                          
+                        <div class="article-meta">
+                            
+                                <i class="bi bi-clock me-1"></i>
+                                2026-02-25
+                                
+                        </div>
                   </div>
-                  <div class="card-footer text-muted">
+                  <div class="card-footer text-muted bg-white border-top">
                     <a href="/category/%E8%B4%A2%E5%AF%8C%E7%AE%A1%E7%90%86.html"
-                      class="badge bg-primary">
+                      class="badge bg-primary me-2">
                       财富管理
                     </a>
                     
-                      <a href="/tag/%E4%B8%AA%E4%BA%BA%E7%90%86%E8%B4%A2.html" class="badge tag-link">
+                      <a href="/tag/%E4%B8%AA%E4%BA%BA%E7%90%86%E8%B4%A2.html" class="badge tag-link me-2 mb-1">
                         个人理财
                       </a>
                       
-                      <a href="/tag/%E5%BF%83%E7%90%86%E5%AD%A6.html" class="badge tag-link">
+                      <a href="/tag/%E5%BF%83%E7%90%86%E5%AD%A6.html" class="badge tag-link me-2 mb-1">
                         心理学
                       </a>
                       
-                      <a href="/tag/%E8%AE%A4%E7%9F%A5%E5%81%8F%E5%B7%AE.html" class="badge tag-link">
+                      <a href="/tag/%E8%AE%A4%E7%9F%A5%E5%81%8F%E5%B7%AE.html" class="badge tag-link me-2 mb-1">
                         认知偏差
                       </a>
                       
-                      <a href="/tag/%E6%83%85%E7%BB%AA%E5%9B%A0%E7%B4%A0.html" class="badge tag-link">
+                      <a href="/tag/%E6%83%85%E7%BB%AA%E5%9B%A0%E7%B4%A0.html" class="badge tag-link me-2 mb-1">
                         情绪因素
                       </a>
                       
-                      <a href="/tag/%E8%87%AA%E6%88%91%E6%8E%A7%E5%88%B6.html" class="badge tag-link">
+                      <a href="/tag/%E8%87%AA%E6%88%91%E6%8E%A7%E5%88%B6.html" class="badge tag-link me-2 mb-1">
                         自我控制
                       </a>
                       
-                      <a href="/tag/%E8%B4%A2%E5%AF%8C%E7%AE%A1%E7%90%86.html" class="badge tag-link">
+                      <a href="/tag/%E8%B4%A2%E5%AF%8C%E7%AE%A1%E7%90%86.html" class="badge tag-link me-2 mb-1">
                         财富管理
                       </a>
                       
-                      <a href="/tag/%E8%B4%A2%E5%8A%A1%E8%87%AA%E7%94%B1.html" class="badge tag-link">
+                      <a href="/tag/%E8%B4%A2%E5%8A%A1%E8%87%AA%E7%94%B1.html" class="badge tag-link me-2 mb-1">
                         财务自由
                       </a>
                       
-                      <a href="/tag/%E6%8A%95%E8%B5%84%E5%86%B3%E7%AD%96.html" class="badge tag-link">
+                      <a href="/tag/%E6%8A%95%E8%B5%84%E5%86%B3%E7%AD%96.html" class="badge tag-link me-2 mb-1">
                         投资决策
                       </a>
                       
-                      <a href="/tag/%E7%90%86%E8%B4%A2%E4%B9%A0%E6%83%AF.html" class="badge tag-link">
+                      <a href="/tag/%E7%90%86%E8%B4%A2%E4%B9%A0%E6%83%AF.html" class="badge tag-link me-2 mb-1">
                         理财习惯
                       </a>
                       
-                      <a href="/tag/%E6%B6%88%E8%B4%B9%E8%A1%8C%E4%B8%BA.html" class="badge tag-link">
+                      <a href="/tag/%E6%B6%88%E8%B4%B9%E8%A1%8C%E4%B8%BA.html" class="badge tag-link me-2 mb-1">
                         消费行为
                       </a>
                       
-                      <a href="/tag/%E5%BB%B6%E8%BF%9F%E6%BB%A1%E8%B6%B3.html" class="badge tag-link">
+                      <a href="/tag/%E5%BB%B6%E8%BF%9F%E6%BB%A1%E8%B6%B3.html" class="badge tag-link me-2 mb-1">
                         延迟满足
                       </a>
                       
-                      <a href="/tag/%E7%A4%BE%E4%BC%9A%E6%AF%94%E8%BE%83.html" class="badge tag-link">
+                      <a href="/tag/%E7%A4%BE%E4%BC%9A%E6%AF%94%E8%BE%83.html" class="badge tag-link me-2 mb-1">
                         社会比较
                       </a>
                       
-                      <a href="/tag/%E7%90%86%E8%B4%A2%E8%A7%84%E5%88%92.html" class="badge tag-link">
+                      <a href="/tag/%E7%90%86%E8%B4%A2%E8%A7%84%E5%88%92.html" class="badge tag-link me-2 mb-1">
                         理财规划
                       </a>
                       
-                      <a href="/tag/%E9%87%91%E9%92%B1%E5%BF%83%E7%90%86%E5%AD%A6.html" class="badge tag-link">
+                      <a href="/tag/%E9%87%91%E9%92%B1%E5%BF%83%E7%90%86%E5%AD%A6.html" class="badge tag-link me-2 mb-1">
                         金钱心理学
                       </a>
                       
@@ -231,60 +298,61 @@
               </div>
               
               <div class="masonry-grid-item">
-                <div class="card shadow-sm">
+                <div class="card article-card shadow-sm">
                   <div class="card-body">
-                    <h5 class="card-title">
-                      <i class="bi bi-file-earmark-text"></i>
-                      <a href="../mdhtml/项目组合管理：战略对齐与价值最大化的艺术.html" class="text-decoration-none">
+                    <h5 class="card-title article-title">
+                      <i class="bi bi-file-earmark-text me-2 text-primary"></i>
+                      <a href="../mdhtml/项目组合管理：战略对齐与价值最大化的艺术.html" class="text-decoration-none text-dark">
                         项目组合管理：战略对齐与价值最大化的艺术
                       </a>
                     </h5>
                     
-                      <p class="card-text">
+                      <p class="card-text text-muted mb-3">
                         深入探讨项目组合管理的核心概念、原则、流程、实践策略和实施路径，帮助组织建立有效的项目组合管理体系，确保项目与战略对齐，优化资源分配，最大化项目价值，实现组织战略目标。
                       </p>
                       
-                        
-                          <small class="text-muted">
-                            2026-02-24
-                          </small>
-                          
+                        <div class="article-meta">
+                            
+                                <i class="bi bi-clock me-1"></i>
+                                2026-02-24
+                                
+                        </div>
                   </div>
-                  <div class="card-footer text-muted">
+                  <div class="card-footer text-muted bg-white border-top">
                     <a href="/category/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86.html"
-                      class="badge bg-primary">
+                      class="badge bg-primary me-2">
                       项目管理
                     </a>
                     
-                      <a href="/tag/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86.html" class="badge tag-link">
+                      <a href="/tag/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86.html" class="badge tag-link me-2 mb-1">
                         项目管理
                       </a>
                       
-                      <a href="/tag/%E9%A1%B9%E7%9B%AE%E7%BB%84%E5%90%88%E7%AE%A1%E7%90%86.html" class="badge tag-link">
+                      <a href="/tag/%E9%A1%B9%E7%9B%AE%E7%BB%84%E5%90%88%E7%AE%A1%E7%90%86.html" class="badge tag-link me-2 mb-1">
                         项目组合管理
                       </a>
                       
-                      <a href="/tag/%E6%88%98%E7%95%A5%E5%AF%B9%E9%BD%90.html" class="badge tag-link">
+                      <a href="/tag/%E6%88%98%E7%95%A5%E5%AF%B9%E9%BD%90.html" class="badge tag-link me-2 mb-1">
                         战略对齐
                       </a>
                       
-                      <a href="/tag/%E4%BB%B7%E5%80%BC%E6%9C%80%E5%A4%A7%E5%8C%96.html" class="badge tag-link">
+                      <a href="/tag/%E4%BB%B7%E5%80%BC%E6%9C%80%E5%A4%A7%E5%8C%96.html" class="badge tag-link me-2 mb-1">
                         价值最大化
                       </a>
                       
-                      <a href="/tag/%E8%B5%84%E6%BA%90%E4%BC%98%E5%8C%96.html" class="badge tag-link">
+                      <a href="/tag/%E8%B5%84%E6%BA%90%E4%BC%98%E5%8C%96.html" class="badge tag-link me-2 mb-1">
                         资源优化
                       </a>
                       
-                      <a href="/tag/%E9%A3%8E%E9%99%A9%E7%AE%A1%E7%90%86.html" class="badge tag-link">
+                      <a href="/tag/%E9%A3%8E%E9%99%A9%E7%AE%A1%E7%90%86.html" class="badge tag-link me-2 mb-1">
                         风险管理
                       </a>
                       
-                      <a href="/tag/%E6%8A%95%E8%B5%84%E5%86%B3%E7%AD%96.html" class="badge tag-link">
+                      <a href="/tag/%E6%8A%95%E8%B5%84%E5%86%B3%E7%AD%96.html" class="badge tag-link me-2 mb-1">
                         投资决策
                       </a>
                       
-                      <a href="/tag/%E7%BB%84%E5%90%88%E6%B2%BB%E7%90%86.html" class="badge tag-link">
+                      <a href="/tag/%E7%BB%84%E5%90%88%E6%B2%BB%E7%90%86.html" class="badge tag-link me-2 mb-1">
                         组合治理
                       </a>
                       
@@ -293,68 +361,69 @@
               </div>
               
               <div class="masonry-grid-item">
-                <div class="card shadow-sm">
+                <div class="card article-card shadow-sm">
                   <div class="card-body">
-                    <h5 class="card-title">
-                      <i class="bi bi-file-earmark-text"></i>
-                      <a href="../mdhtml/财富管理的心理学：如何克服投资中的心理障碍.html" class="text-decoration-none">
+                    <h5 class="card-title article-title">
+                      <i class="bi bi-file-earmark-text me-2 text-primary"></i>
+                      <a href="../mdhtml/财富管理的心理学：如何克服投资中的心理障碍.html" class="text-decoration-none text-dark">
                         财富管理的心理学：如何克服投资中的心理障碍
                       </a>
                     </h5>
                     
-                      <p class="card-text">
+                      <p class="card-text text-muted mb-3">
                         探讨财富管理中的心理学因素，分析投资者常见的心理障碍，如恐惧、贪婪、过度自信等，并提供克服这些障碍的方法，帮助投资者做出更加理性的投资决策。
                       </p>
                       
-                        
-                          <small class="text-muted">
-                            2026-02-24
-                          </small>
-                          
+                        <div class="article-meta">
+                            
+                                <i class="bi bi-clock me-1"></i>
+                                2026-02-24
+                                
+                        </div>
                   </div>
-                  <div class="card-footer text-muted">
+                  <div class="card-footer text-muted bg-white border-top">
                     <a href="/category/%E8%B4%A2%E5%AF%8C%E7%AE%A1%E7%90%86.html"
-                      class="badge bg-primary">
+                      class="badge bg-primary me-2">
                       财富管理
                     </a>
                     
-                      <a href="/tag/%E6%8A%95%E8%B5%84%E5%BF%83%E7%90%86%E5%AD%A6.html" class="badge tag-link">
+                      <a href="/tag/%E6%8A%95%E8%B5%84%E5%BF%83%E7%90%86%E5%AD%A6.html" class="badge tag-link me-2 mb-1">
                         投资心理学
                       </a>
                       
-                      <a href="/tag/%E8%A1%8C%E4%B8%BA%E9%87%91%E8%9E%8D%E5%AD%A6.html" class="badge tag-link">
+                      <a href="/tag/%E8%A1%8C%E4%B8%BA%E9%87%91%E8%9E%8D%E5%AD%A6.html" class="badge tag-link me-2 mb-1">
                         行为金融学
                       </a>
                       
-                      <a href="/tag/%E5%BF%83%E7%90%86%E9%9A%9C%E7%A2%8D.html" class="badge tag-link">
+                      <a href="/tag/%E5%BF%83%E7%90%86%E9%9A%9C%E7%A2%8D.html" class="badge tag-link me-2 mb-1">
                         心理障碍
                       </a>
                       
-                      <a href="/tag/%E6%8A%95%E8%B5%84%E5%86%B3%E7%AD%96.html" class="badge tag-link">
+                      <a href="/tag/%E6%8A%95%E8%B5%84%E5%86%B3%E7%AD%96.html" class="badge tag-link me-2 mb-1">
                         投资决策
                       </a>
                       
-                      <a href="/tag/%E6%83%85%E7%BB%AA%E7%AE%A1%E7%90%86.html" class="badge tag-link">
+                      <a href="/tag/%E6%83%85%E7%BB%AA%E7%AE%A1%E7%90%86.html" class="badge tag-link me-2 mb-1">
                         情绪管理
                       </a>
                       
-                      <a href="/tag/%E7%90%86%E6%80%A7%E6%8A%95%E8%B5%84.html" class="badge tag-link">
+                      <a href="/tag/%E7%90%86%E6%80%A7%E6%8A%95%E8%B5%84.html" class="badge tag-link me-2 mb-1">
                         理性投资
                       </a>
                       
-                      <a href="/tag/%E8%B4%A2%E5%AF%8C%E7%AE%A1%E7%90%86.html" class="badge tag-link">
+                      <a href="/tag/%E8%B4%A2%E5%AF%8C%E7%AE%A1%E7%90%86.html" class="badge tag-link me-2 mb-1">
                         财富管理
                       </a>
                       
-                      <a href="/tag/%E6%8A%95%E8%B5%84%E7%AD%96%E7%95%A5.html" class="badge tag-link">
+                      <a href="/tag/%E6%8A%95%E8%B5%84%E7%AD%96%E7%95%A5.html" class="badge tag-link me-2 mb-1">
                         投资策略
                       </a>
                       
-                      <a href="/tag/%E9%A3%8E%E9%99%A9%E8%AE%A4%E7%9F%A5.html" class="badge tag-link">
+                      <a href="/tag/%E9%A3%8E%E9%99%A9%E8%AE%A4%E7%9F%A5.html" class="badge tag-link me-2 mb-1">
                         风险认知
                       </a>
                       
-                      <a href="/tag/%E5%86%B3%E7%AD%96%E5%81%8F%E5%B7%AE.html" class="badge tag-link">
+                      <a href="/tag/%E5%86%B3%E7%AD%96%E5%81%8F%E5%B7%AE.html" class="badge tag-link me-2 mb-1">
                         决策偏差
                       </a>
                       
@@ -363,48 +432,49 @@
               </div>
               
               <div class="masonry-grid-item">
-                <div class="card shadow-sm">
+                <div class="card article-card shadow-sm">
                   <div class="card-body">
-                    <h5 class="card-title">
-                      <i class="bi bi-file-earmark-text"></i>
-                      <a href="../mdhtml/数学在生活中的一些作用.html" class="text-decoration-none">
+                    <h5 class="card-title article-title">
+                      <i class="bi bi-file-earmark-text me-2 text-primary"></i>
+                      <a href="../mdhtml/数学在生活中的一些作用.html" class="text-decoration-none text-dark">
                         数学在生活中的一些作用
                       </a>
                     </h5>
                     
-                      <p class="card-text">
+                      <p class="card-text text-muted mb-3">
                         探讨数学在日常生活中的多种作用，包括如何通过数学知识判断他人的教育背景、辅助投资决策、辨别事情真伪以及指导个人言行。特别是在理财、购物及就业分析等方面，数学提供了必要的逻辑分析和数据处理能力，帮助人们做出更加明智的决策。掌握基础的数学技能，不仅能够保护自己免受诈骗，还能更好地理解世界，实现理性生活。
                       </p>
                       
-                        
-                          <small class="text-muted">
-                            2026-02-11
-                          </small>
-                          
+                        <div class="article-meta">
+                            
+                                <i class="bi bi-clock me-1"></i>
+                                2026-02-11
+                                
+                        </div>
                   </div>
-                  <div class="card-footer text-muted">
+                  <div class="card-footer text-muted bg-white border-top">
                     <a href="/category/%E8%87%AA%E7%84%B6%E7%A7%91%E5%AD%A6.html"
-                      class="badge bg-primary">
+                      class="badge bg-primary me-2">
                       自然科学
                     </a>
                     
-                      <a href="/tag/%E6%95%B0%E5%AD%A6%E5%BA%94%E7%94%A8.html" class="badge tag-link">
+                      <a href="/tag/%E6%95%B0%E5%AD%A6%E5%BA%94%E7%94%A8.html" class="badge tag-link me-2 mb-1">
                         数学应用
                       </a>
                       
-                      <a href="/tag/%E6%97%A5%E5%B8%B8%E7%94%9F%E6%B4%BB.html" class="badge tag-link">
+                      <a href="/tag/%E6%97%A5%E5%B8%B8%E7%94%9F%E6%B4%BB.html" class="badge tag-link me-2 mb-1">
                         日常生活
                       </a>
                       
-                      <a href="/tag/%E6%8A%95%E8%B5%84%E5%86%B3%E7%AD%96.html" class="badge tag-link">
+                      <a href="/tag/%E6%8A%95%E8%B5%84%E5%86%B3%E7%AD%96.html" class="badge tag-link me-2 mb-1">
                         投资决策
                       </a>
                       
-                      <a href="/tag/%E9%80%BB%E8%BE%91%E5%88%A4%E6%96%AD.html" class="badge tag-link">
+                      <a href="/tag/%E9%80%BB%E8%BE%91%E5%88%A4%E6%96%AD.html" class="badge tag-link me-2 mb-1">
                         逻辑判断
                       </a>
                       
-                      <a href="/tag/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90.html" class="badge tag-link">
+                      <a href="/tag/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90.html" class="badge tag-link me-2 mb-1">
                         数据分析
                       </a>
                       
@@ -413,48 +483,49 @@
               </div>
               
               <div class="masonry-grid-item">
-                <div class="card shadow-sm">
+                <div class="card article-card shadow-sm">
                   <div class="card-body">
-                    <h5 class="card-title">
-                      <i class="bi bi-file-earmark-text"></i>
-                      <a href="../mdhtml/女性在财富规划中的特殊考量与应对策略.html" class="text-decoration-none">
+                    <h5 class="card-title article-title">
+                      <i class="bi bi-file-earmark-text me-2 text-primary"></i>
+                      <a href="../mdhtml/女性在财富规划中的特殊考量与应对策略.html" class="text-decoration-none text-dark">
                         女性在财富规划中的特殊考量与应对策略
                       </a>
                     </h5>
                     
-                      <p class="card-text">
+                      <p class="card-text text-muted mb-3">
                         深入探讨女性在财富规划中的独特需求和面临的性别差异，提供加强财务知识学习、制定合理理财计划、关注职业发展和培养良好理财习惯等应对策略，助力女性实现财务自由和人生目标。
                       </p>
                       
-                        
-                          <small class="text-muted">
-                            2026-02-11
-                          </small>
-                          
+                        <div class="article-meta">
+                            
+                                <i class="bi bi-clock me-1"></i>
+                                2026-02-11
+                                
+                        </div>
                   </div>
-                  <div class="card-footer text-muted">
+                  <div class="card-footer text-muted bg-white border-top">
                     <a href="/category/%E8%B4%A2%E5%AF%8C%E7%AE%A1%E7%90%86.html"
-                      class="badge bg-primary">
+                      class="badge bg-primary me-2">
                       财富管理
                     </a>
                     
-                      <a href="/tag/%E5%A5%B3%E6%80%A7%E8%B4%A2%E5%AF%8C%E8%A7%84%E5%88%92.html" class="badge tag-link">
+                      <a href="/tag/%E5%A5%B3%E6%80%A7%E8%B4%A2%E5%AF%8C%E8%A7%84%E5%88%92.html" class="badge tag-link me-2 mb-1">
                         女性财富规划
                       </a>
                       
-                      <a href="/tag/%E9%A3%8E%E9%99%A9%E5%81%8F%E5%A5%BD.html" class="badge tag-link">
+                      <a href="/tag/%E9%A3%8E%E9%99%A9%E5%81%8F%E5%A5%BD.html" class="badge tag-link me-2 mb-1">
                         风险偏好
                       </a>
                       
-                      <a href="/tag/%E8%B4%A2%E5%8A%A1%E7%9F%A5%E8%AF%86.html" class="badge tag-link">
+                      <a href="/tag/%E8%B4%A2%E5%8A%A1%E7%9F%A5%E8%AF%86.html" class="badge tag-link me-2 mb-1">
                         财务知识
                       </a>
                       
-                      <a href="/tag/%E6%8A%95%E8%B5%84%E5%86%B3%E7%AD%96.html" class="badge tag-link">
+                      <a href="/tag/%E6%8A%95%E8%B5%84%E5%86%B3%E7%AD%96.html" class="badge tag-link me-2 mb-1">
                         投资决策
                       </a>
                       
-                      <a href="/tag/%E8%81%8C%E4%B8%9A%E5%8F%91%E5%B1%95.html" class="badge tag-link">
+                      <a href="/tag/%E8%81%8C%E4%B8%9A%E5%8F%91%E5%B1%95.html" class="badge tag-link me-2 mb-1">
                         职业发展
                       </a>
                       
@@ -464,8 +535,8 @@
               
           </div>
 
-          <div class="mt-4 text-center">
-            <a href="标签列表.html" class="btn btn-outline-primary"><i class="bi bi-arrow-left"></i> 返回标签列表</a>
+          <div class="mt-6 text-center">
+            <a href="标签列表.html" class="btn btn-outline-primary back-button"><i class="bi bi-arrow-left me-2"></i> 返回标签列表</a>
           </div>
         </div>
       </div>
@@ -489,7 +560,7 @@
             itemSelector: '.masonry-grid-item',
             columnWidth: '.masonry-grid-item',
             percentPosition: true,
-            gutter: 10 // 可选，添加卡片间的间距
+            gutter: 15 // 增加间距，提升视觉效果
           });
         });
       </script>

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
 
 <head>
   <meta charset="UTF-8">
@@ -9,7 +9,7 @@
   <meta name="description" content="无人自助站的【家庭管理】的标签列表页面，汇集了关于【家庭管理】标签相关的文章和资讯，方便您快速找到感兴趣的内容。">
   <meta name="keywords" content="无人自助站,家庭管理">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>标签文章列表</title>
+  <title>家庭管理标签 - 无人自助站</title>
 
   <link rel="icon" href="../logo.svg" type="image/svg+xml">
   <link rel="stylesheet" href="../css/style.css">
@@ -27,6 +27,62 @@
   <!-- 引入Masonry -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/masonry/4.2.2/masonry.pkgd.min.js"></script>
 
+  <style>
+        .tag-header {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            color: white;
+            padding: 2rem;
+            border-radius: 8px;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        .tag-title {
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+        .article-card {
+            transition: all 0.3s ease;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        .article-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+        }
+        .article-title {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            transition: color 0.3s ease;
+        }
+        .article-title:hover {
+            color: #0d6efd;
+        }
+        .article-meta {
+            font-size: 0.85rem;
+            color: #6c757d;
+        }
+        .tag-link {
+            background-color: #e9ecef;
+            color: #495057;
+            transition: all 0.2s ease;
+        }
+        .tag-link:hover {
+            background-color: #dee2e6;
+            color: #212529;
+        }
+        .back-button {
+            transition: all 0.3s ease;
+        }
+        .back-button:hover {
+            transform: translateX(-3px);
+        }
+        .article-count {
+            font-size: 0.9rem;
+            opacity: 0.9;
+        }
+    </style>
 </head>
 
 <body>
@@ -80,7 +136,7 @@
     <main class="container-fluid mt-4">
       <div class="row">
         <div class="col-lg-8 col-md-12 mx-auto">
-          <nav aria-label="breadcrumb">
+          <nav aria-label="breadcrumb" class="mb-4">
             <ol class="breadcrumb">
               <li class="breadcrumb-item"><a href="/html/index.html">首页</a></li>
               <li class="breadcrumb-item"><a href="标签列表.html">标签列表</a></li>
@@ -89,54 +145,64 @@
               </li>
             </ol>
           </nav>
-          <h1 style="font-size: 1.5em; margin: 0.5em 0;">
-            家庭管理标签的文章和资讯
-        </h1>
+          
+          <!-- 标签头部 -->
+          <div class="tag-header">
+              <h1 class="tag-title">
+                  <i class="bi bi-tags me-2"></i>
+                  家庭管理
+              </h1>
+              <p class="article-count">
+                  共 5 篇文章
+              </p>
+          </div>
+          
           <div class="masonry-grid">
             
               <div class="masonry-grid-item">
-                <div class="card shadow-sm">
+                <div class="card article-card shadow-sm">
                   <div class="card-body">
-                    <h5 class="card-title">
-                      <i class="bi bi-file-earmark-text"></i>
-                      <a href="../mdhtml/AI与家庭生活：智能家居带来的变革.html" class="text-decoration-none">
+                    <h5 class="card-title article-title">
+                      <i class="bi bi-file-earmark-text me-2 text-primary"></i>
+                      <a href="../mdhtml/AI与家庭生活：智能家居带来的变革.html" class="text-decoration-none text-dark">
                         AI与家庭生活：智能家居带来的变革
                       </a>
                     </h5>
                     
-                      <p class="card-text">
+                      <p class="card-text text-muted mb-3">
                         探讨AI如何改变家庭生活，从智能家电到家庭安全，从能源管理到家务自动化，分析AI如何让家庭生活更加便捷、舒适和安全。
                       </p>
                       
-                        
-                          <small class="text-muted">
-                            2026-03-23
-                          </small>
-                          
+                        <div class="article-meta">
+                            
+                                <i class="bi bi-clock me-1"></i>
+                                2026-03-23
+                                
+                        </div>
                   </div>
-                  <div class="card-footer text-muted">
+                  <div class="card-footer text-muted bg-white border-top">
                     <a href="/category/AI%E5%AE%B6%E5%B1%85.html"
-                      class="badge bg-primary">
+                      class="badge bg-primary me-2">
                       AI家居
                     </a>
                     
-                      <a href="/tag/AI%E5%AE%B6%E5%B1%85.html" class="badge tag-link">
+                      <a href="/tag/AI%E5%AE%B6%E5%B1%85.html" class="badge tag-link me-2 mb-1">
                         AI家居
                       </a>
                       
-                      <a href="/tag/%E6%99%BA%E8%83%BD%E8%AE%BE%E5%A4%87.html" class="badge tag-link">
+                      <a href="/tag/%E6%99%BA%E8%83%BD%E8%AE%BE%E5%A4%87.html" class="badge tag-link me-2 mb-1">
                         智能设备
                       </a>
                       
-                      <a href="/tag/%E5%AE%B6%E5%BA%AD%E7%AE%A1%E7%90%86.html" class="badge tag-link">
+                      <a href="/tag/%E5%AE%B6%E5%BA%AD%E7%AE%A1%E7%90%86.html" class="badge tag-link me-2 mb-1">
                         家庭管理
                       </a>
                       
-                      <a href="/tag/%E8%83%BD%E6%BA%90%E8%8A%82%E7%BA%A6.html" class="badge tag-link">
+                      <a href="/tag/%E8%83%BD%E6%BA%90%E8%8A%82%E7%BA%A6.html" class="badge tag-link me-2 mb-1">
                         能源节约
                       </a>
                       
-                      <a href="/tag/%E5%AE%89%E5%85%A8%E4%BF%9D%E6%8A%A4.html" class="badge tag-link">
+                      <a href="/tag/%E5%AE%89%E5%85%A8%E4%BF%9D%E6%8A%A4.html" class="badge tag-link me-2 mb-1">
                         安全保护
                       </a>
                       
@@ -145,68 +211,69 @@
               </div>
               
               <div class="masonry-grid-item">
-                <div class="card shadow-sm">
+                <div class="card article-card shadow-sm">
                   <div class="card-body">
-                    <h5 class="card-title">
-                      <i class="bi bi-file-earmark-text"></i>
-                      <a href="../mdhtml/如何成为令人称羡的好妻子.html" class="text-decoration-none">
+                    <h5 class="card-title article-title">
+                      <i class="bi bi-file-earmark-text me-2 text-primary"></i>
+                      <a href="../mdhtml/如何成为令人称羡的好妻子.html" class="text-decoration-none text-dark">
                         如何成为令人称羡的好妻子
                       </a>
                     </h5>
                     
-                      <p class="card-text">
+                      <p class="card-text text-muted mb-3">
                         详细从情感支持、家庭管理、个人成长和人际关系等多个角度探讨如何成为令人称羡的好妻子，为女性在婚姻生活中的角色提供实用指导和深刻见解，包括深度倾听与共情理解、多元爱意表达、公平家务分担、打造独特家庭文化、持续自我提升、全方位支持丈夫事业等方面的具体方法。
                       </p>
                       
-                        
-                          <small class="text-muted">
-                            2026-02-27
-                          </small>
-                          
+                        <div class="article-meta">
+                            
+                                <i class="bi bi-clock me-1"></i>
+                                2026-02-27
+                                
+                        </div>
                   </div>
-                  <div class="card-footer text-muted">
+                  <div class="card-footer text-muted bg-white border-top">
                     <a href="/category/%E5%A9%9A%E5%A7%BB%E6%83%85%E6%84%9F.html"
-                      class="badge bg-primary">
+                      class="badge bg-primary me-2">
                       婚姻情感
                     </a>
                     
-                      <a href="/tag/%E5%A5%BD%E5%A6%BB%E5%AD%90.html" class="badge tag-link">
+                      <a href="/tag/%E5%A5%BD%E5%A6%BB%E5%AD%90.html" class="badge tag-link me-2 mb-1">
                         好妻子
                       </a>
                       
-                      <a href="/tag/%E6%83%85%E6%84%9F%E6%94%AF%E6%8C%81.html" class="badge tag-link">
+                      <a href="/tag/%E6%83%85%E6%84%9F%E6%94%AF%E6%8C%81.html" class="badge tag-link me-2 mb-1">
                         情感支持
                       </a>
                       
-                      <a href="/tag/%E5%AE%B6%E5%BA%AD%E7%AE%A1%E7%90%86.html" class="badge tag-link">
+                      <a href="/tag/%E5%AE%B6%E5%BA%AD%E7%AE%A1%E7%90%86.html" class="badge tag-link me-2 mb-1">
                         家庭管理
                       </a>
                       
-                      <a href="/tag/%E8%87%AA%E6%88%91%E6%8F%90%E5%8D%87.html" class="badge tag-link">
+                      <a href="/tag/%E8%87%AA%E6%88%91%E6%8F%90%E5%8D%87.html" class="badge tag-link me-2 mb-1">
                         自我提升
                       </a>
                       
-                      <a href="/tag/%E4%BA%BA%E9%99%85%E5%85%B3%E7%B3%BB.html" class="badge tag-link">
+                      <a href="/tag/%E4%BA%BA%E9%99%85%E5%85%B3%E7%B3%BB.html" class="badge tag-link me-2 mb-1">
                         人际关系
                       </a>
                       
-                      <a href="/tag/%E5%A9%9A%E5%A7%BB%E5%B9%B8%E7%A6%8F.html" class="badge tag-link">
+                      <a href="/tag/%E5%A9%9A%E5%A7%BB%E5%B9%B8%E7%A6%8F.html" class="badge tag-link me-2 mb-1">
                         婚姻幸福
                       </a>
                       
-                      <a href="/tag/%E5%A4%AB%E5%A6%BB%E5%85%B3%E7%B3%BB.html" class="badge tag-link">
+                      <a href="/tag/%E5%A4%AB%E5%A6%BB%E5%85%B3%E7%B3%BB.html" class="badge tag-link me-2 mb-1">
                         夫妻关系
                       </a>
                       
-                      <a href="/tag/%E5%AE%B6%E5%BA%AD%E6%96%87%E5%8C%96.html" class="badge tag-link">
+                      <a href="/tag/%E5%AE%B6%E5%BA%AD%E6%96%87%E5%8C%96.html" class="badge tag-link me-2 mb-1">
                         家庭文化
                       </a>
                       
-                      <a href="/tag/%E5%AE%B6%E5%8A%A1%E5%88%86%E6%8B%85.html" class="badge tag-link">
+                      <a href="/tag/%E5%AE%B6%E5%8A%A1%E5%88%86%E6%8B%85.html" class="badge tag-link me-2 mb-1">
                         家务分担
                       </a>
                       
-                      <a href="/tag/%E7%88%B1%E6%84%8F%E8%A1%A8%E8%BE%BE.html" class="badge tag-link">
+                      <a href="/tag/%E7%88%B1%E6%84%8F%E8%A1%A8%E8%BE%BE.html" class="badge tag-link me-2 mb-1">
                         爱意表达
                       </a>
                       
@@ -215,48 +282,49 @@
               </div>
               
               <div class="masonry-grid-item">
-                <div class="card shadow-sm">
+                <div class="card article-card shadow-sm">
                   <div class="card-body">
-                    <h5 class="card-title">
-                      <i class="bi bi-file-earmark-text"></i>
-                      <a href="../mdhtml/家庭时间管理实用指南.html" class="text-decoration-none">
+                    <h5 class="card-title article-title">
+                      <i class="bi bi-file-earmark-text me-2 text-primary"></i>
+                      <a href="../mdhtml/家庭时间管理实用指南.html" class="text-decoration-none text-dark">
                         家庭时间管理实用指南
                       </a>
                     </h5>
                     
-                      <p class="card-text">
+                      <p class="card-text text-muted mb-3">
                         本指南详细介绍家庭时间管理的方法和技巧，帮助您合理安排家庭时间，提高生活效率，实现工作与生活的平衡。
                       </p>
                       
-                        
-                          <small class="text-muted">
-                            2026-02-24
-                          </small>
-                          
+                        <div class="article-meta">
+                            
+                                <i class="bi bi-clock me-1"></i>
+                                2026-02-24
+                                
+                        </div>
                   </div>
-                  <div class="card-footer text-muted">
+                  <div class="card-footer text-muted bg-white border-top">
                     <a href="/category/%E7%94%9F%E6%B4%BB%E6%97%A5%E5%B8%B8.html"
-                      class="badge bg-primary">
+                      class="badge bg-primary me-2">
                       生活日常
                     </a>
                     
-                      <a href="/tag/%E6%97%B6%E9%97%B4%E7%AE%A1%E7%90%86.html" class="badge tag-link">
+                      <a href="/tag/%E6%97%B6%E9%97%B4%E7%AE%A1%E7%90%86.html" class="badge tag-link me-2 mb-1">
                         时间管理
                       </a>
                       
-                      <a href="/tag/%E5%AE%B6%E5%BA%AD%E7%AE%A1%E7%90%86.html" class="badge tag-link">
+                      <a href="/tag/%E5%AE%B6%E5%BA%AD%E7%AE%A1%E7%90%86.html" class="badge tag-link me-2 mb-1">
                         家庭管理
                       </a>
                       
-                      <a href="/tag/%E6%95%88%E7%8E%87%E6%8F%90%E5%8D%87.html" class="badge tag-link">
+                      <a href="/tag/%E6%95%88%E7%8E%87%E6%8F%90%E5%8D%87.html" class="badge tag-link me-2 mb-1">
                         效率提升
                       </a>
                       
-                      <a href="/tag/%E7%94%9F%E6%B4%BB%E5%B9%B3%E8%A1%A1.html" class="badge tag-link">
+                      <a href="/tag/%E7%94%9F%E6%B4%BB%E5%B9%B3%E8%A1%A1.html" class="badge tag-link me-2 mb-1">
                         生活平衡
                       </a>
                       
-                      <a href="/tag/%E7%94%9F%E6%B4%BB%E6%8A%80%E5%B7%A7.html" class="badge tag-link">
+                      <a href="/tag/%E7%94%9F%E6%B4%BB%E6%8A%80%E5%B7%A7.html" class="badge tag-link me-2 mb-1">
                         生活技巧
                       </a>
                       
@@ -265,48 +333,49 @@
               </div>
               
               <div class="masonry-grid-item">
-                <div class="card shadow-sm">
+                <div class="card article-card shadow-sm">
                   <div class="card-body">
-                    <h5 class="card-title">
-                      <i class="bi bi-file-earmark-text"></i>
-                      <a href="../mdhtml/家庭收纳整理实用指南.html" class="text-decoration-none">
+                    <h5 class="card-title article-title">
+                      <i class="bi bi-file-earmark-text me-2 text-primary"></i>
+                      <a href="../mdhtml/家庭收纳整理实用指南.html" class="text-decoration-none text-dark">
                         家庭收纳整理实用指南
                       </a>
                     </h5>
                     
-                      <p class="card-text">
+                      <p class="card-text text-muted mb-3">
                         本指南详细介绍家庭各个空间的收纳整理方法，帮助您最大化利用空间，创造整洁有序的居住环境。
                       </p>
                       
-                        
-                          <small class="text-muted">
-                            2026-02-24
-                          </small>
-                          
+                        <div class="article-meta">
+                            
+                                <i class="bi bi-clock me-1"></i>
+                                2026-02-24
+                                
+                        </div>
                   </div>
-                  <div class="card-footer text-muted">
+                  <div class="card-footer text-muted bg-white border-top">
                     <a href="/category/%E7%94%9F%E6%B4%BB%E6%97%A5%E5%B8%B8.html"
-                      class="badge bg-primary">
+                      class="badge bg-primary me-2">
                       生活日常
                     </a>
                     
-                      <a href="/tag/%E6%94%B6%E7%BA%B3%E6%95%B4%E7%90%86.html" class="badge tag-link">
+                      <a href="/tag/%E6%94%B6%E7%BA%B3%E6%95%B4%E7%90%86.html" class="badge tag-link me-2 mb-1">
                         收纳整理
                       </a>
                       
-                      <a href="/tag/%E5%AE%B6%E5%B1%85%E7%94%9F%E6%B4%BB.html" class="badge tag-link">
+                      <a href="/tag/%E5%AE%B6%E5%B1%85%E7%94%9F%E6%B4%BB.html" class="badge tag-link me-2 mb-1">
                         家居生活
                       </a>
                       
-                      <a href="/tag/%E7%A9%BA%E9%97%B4%E5%88%A9%E7%94%A8.html" class="badge tag-link">
+                      <a href="/tag/%E7%A9%BA%E9%97%B4%E5%88%A9%E7%94%A8.html" class="badge tag-link me-2 mb-1">
                         空间利用
                       </a>
                       
-                      <a href="/tag/%E7%94%9F%E6%B4%BB%E6%8A%80%E5%B7%A7.html" class="badge tag-link">
+                      <a href="/tag/%E7%94%9F%E6%B4%BB%E6%8A%80%E5%B7%A7.html" class="badge tag-link me-2 mb-1">
                         生活技巧
                       </a>
                       
-                      <a href="/tag/%E5%AE%B6%E5%BA%AD%E7%AE%A1%E7%90%86.html" class="badge tag-link">
+                      <a href="/tag/%E5%AE%B6%E5%BA%AD%E7%AE%A1%E7%90%86.html" class="badge tag-link me-2 mb-1">
                         家庭管理
                       </a>
                       
@@ -315,48 +384,49 @@
               </div>
               
               <div class="masonry-grid-item">
-                <div class="card shadow-sm">
+                <div class="card article-card shadow-sm">
                   <div class="card-body">
-                    <h5 class="card-title">
-                      <i class="bi bi-file-earmark-text"></i>
-                      <a href="../mdhtml/如何正确处理家庭垃圾分类.html" class="text-decoration-none">
+                    <h5 class="card-title article-title">
+                      <i class="bi bi-file-earmark-text me-2 text-primary"></i>
+                      <a href="../mdhtml/如何正确处理家庭垃圾分类.html" class="text-decoration-none text-dark">
                         如何正确处理家庭垃圾分类
                       </a>
                     </h5>
                     
-                      <p class="card-text">
+                      <p class="card-text text-muted mb-3">
                         本指南详细介绍家庭垃圾的正确分类方法，帮助您轻松应对垃圾分类挑战，为环保贡献一份力量。
                       </p>
                       
-                        
-                          <small class="text-muted">
-                            2026-02-24
-                          </small>
-                          
+                        <div class="article-meta">
+                            
+                                <i class="bi bi-clock me-1"></i>
+                                2026-02-24
+                                
+                        </div>
                   </div>
-                  <div class="card-footer text-muted">
+                  <div class="card-footer text-muted bg-white border-top">
                     <a href="/category/%E7%94%9F%E6%B4%BB%E6%97%A5%E5%B8%B8.html"
-                      class="badge bg-primary">
+                      class="badge bg-primary me-2">
                       生活日常
                     </a>
                     
-                      <a href="/tag/%E5%9E%83%E5%9C%BE%E5%88%86%E7%B1%BB.html" class="badge tag-link">
+                      <a href="/tag/%E5%9E%83%E5%9C%BE%E5%88%86%E7%B1%BB.html" class="badge tag-link me-2 mb-1">
                         垃圾分类
                       </a>
                       
-                      <a href="/tag/%E7%8E%AF%E4%BF%9D%E7%94%9F%E6%B4%BB.html" class="badge tag-link">
+                      <a href="/tag/%E7%8E%AF%E4%BF%9D%E7%94%9F%E6%B4%BB.html" class="badge tag-link me-2 mb-1">
                         环保生活
                       </a>
                       
-                      <a href="/tag/%E5%AE%B6%E5%BA%AD%E7%AE%A1%E7%90%86.html" class="badge tag-link">
+                      <a href="/tag/%E5%AE%B6%E5%BA%AD%E7%AE%A1%E7%90%86.html" class="badge tag-link me-2 mb-1">
                         家庭管理
                       </a>
                       
-                      <a href="/tag/%E5%8F%AF%E6%8C%81%E7%BB%AD%E5%8F%91%E5%B1%95.html" class="badge tag-link">
+                      <a href="/tag/%E5%8F%AF%E6%8C%81%E7%BB%AD%E5%8F%91%E5%B1%95.html" class="badge tag-link me-2 mb-1">
                         可持续发展
                       </a>
                       
-                      <a href="/tag/%E7%94%9F%E6%B4%BB%E6%8A%80%E5%B7%A7.html" class="badge tag-link">
+                      <a href="/tag/%E7%94%9F%E6%B4%BB%E6%8A%80%E5%B7%A7.html" class="badge tag-link me-2 mb-1">
                         生活技巧
                       </a>
                       
@@ -366,8 +436,8 @@
               
           </div>
 
-          <div class="mt-4 text-center">
-            <a href="标签列表.html" class="btn btn-outline-primary"><i class="bi bi-arrow-left"></i> 返回标签列表</a>
+          <div class="mt-6 text-center">
+            <a href="标签列表.html" class="btn btn-outline-primary back-button"><i class="bi bi-arrow-left me-2"></i> 返回标签列表</a>
           </div>
         </div>
       </div>
@@ -391,7 +461,7 @@
             itemSelector: '.masonry-grid-item',
             columnWidth: '.masonry-grid-item',
             percentPosition: true,
-            gutter: 10 // 可选，添加卡片间的间距
+            gutter: 15 // 增加间距，提升视觉效果
           });
         });
       </script>

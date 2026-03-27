@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
 
 <head>
   <meta charset="UTF-8">
@@ -9,7 +9,7 @@
   <meta name="description" content="无人自助站的【自我欺骗】的标签列表页面，汇集了关于【自我欺骗】标签相关的文章和资讯，方便您快速找到感兴趣的内容。">
   <meta name="keywords" content="无人自助站,自我欺骗">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>标签文章列表</title>
+  <title>自我欺骗标签 - 无人自助站</title>
 
   <link rel="icon" href="../logo.svg" type="image/svg+xml">
   <link rel="stylesheet" href="../css/style.css">
@@ -27,6 +27,62 @@
   <!-- 引入Masonry -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/masonry/4.2.2/masonry.pkgd.min.js"></script>
 
+  <style>
+        .tag-header {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            color: white;
+            padding: 2rem;
+            border-radius: 8px;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        .tag-title {
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+        .article-card {
+            transition: all 0.3s ease;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        .article-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+        }
+        .article-title {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            transition: color 0.3s ease;
+        }
+        .article-title:hover {
+            color: #0d6efd;
+        }
+        .article-meta {
+            font-size: 0.85rem;
+            color: #6c757d;
+        }
+        .tag-link {
+            background-color: #e9ecef;
+            color: #495057;
+            transition: all 0.2s ease;
+        }
+        .tag-link:hover {
+            background-color: #dee2e6;
+            color: #212529;
+        }
+        .back-button {
+            transition: all 0.3s ease;
+        }
+        .back-button:hover {
+            transform: translateX(-3px);
+        }
+        .article-count {
+            font-size: 0.9rem;
+            opacity: 0.9;
+        }
+    </style>
 </head>
 
 <body>
@@ -80,7 +136,7 @@
     <main class="container-fluid mt-4">
       <div class="row">
         <div class="col-lg-8 col-md-12 mx-auto">
-          <nav aria-label="breadcrumb">
+          <nav aria-label="breadcrumb" class="mb-4">
             <ol class="breadcrumb">
               <li class="breadcrumb-item"><a href="/html/index.html">首页</a></li>
               <li class="breadcrumb-item"><a href="标签列表.html">标签列表</a></li>
@@ -89,54 +145,64 @@
               </li>
             </ol>
           </nav>
-          <h1 style="font-size: 1.5em; margin: 0.5em 0;">
-            自我欺骗标签的文章和资讯
-        </h1>
+          
+          <!-- 标签头部 -->
+          <div class="tag-header">
+              <h1 class="tag-title">
+                  <i class="bi bi-tags me-2"></i>
+                  自我欺骗
+              </h1>
+              <p class="article-count">
+                  共 3 篇文章
+              </p>
+          </div>
+          
           <div class="masonry-grid">
             
               <div class="masonry-grid-item">
-                <div class="card shadow-sm">
+                <div class="card article-card shadow-sm">
                   <div class="card-body">
-                    <h5 class="card-title">
-                      <i class="bi bi-file-earmark-text"></i>
-                      <a href="../mdhtml/你的借口清单：为什么你还没有开始做你想做的事.html" class="text-decoration-none">
+                    <h5 class="card-title article-title">
+                      <i class="bi bi-file-earmark-text me-2 text-primary"></i>
+                      <a href="../mdhtml/你的借口清单：为什么你还没有开始做你想做的事.html" class="text-decoration-none text-dark">
                         你的借口清单：为什么你还没有开始做你想做的事
                       </a>
                     </h5>
                     
-                      <p class="card-text">
+                      <p class="card-text text-muted mb-3">
                         深度分析阻止你行动的借口。不是时机未到，而是你在逃避。包含打破借口循环的方法。
                       </p>
                       
-                        
-                          <small class="text-muted">
-                            2026-03-26
-                          </small>
-                          
+                        <div class="article-meta">
+                            
+                                <i class="bi bi-clock me-1"></i>
+                                2026-03-26
+                                
+                        </div>
                   </div>
-                  <div class="card-footer text-muted">
+                  <div class="card-footer text-muted bg-white border-top">
                     <a href="/category/%E8%87%AA%E6%88%91%E6%88%90%E9%95%BF.html"
-                      class="badge bg-primary">
+                      class="badge bg-primary me-2">
                       自我成长
                     </a>
                     
-                      <a href="/tag/%E5%80%9F%E5%8F%A3.html" class="badge tag-link">
+                      <a href="/tag/%E5%80%9F%E5%8F%A3.html" class="badge tag-link me-2 mb-1">
                         借口
                       </a>
                       
-                      <a href="/tag/%E8%A1%8C%E5%8A%A8%E5%8A%9B.html" class="badge tag-link">
+                      <a href="/tag/%E8%A1%8C%E5%8A%A8%E5%8A%9B.html" class="badge tag-link me-2 mb-1">
                         行动力
                       </a>
                       
-                      <a href="/tag/%E8%87%AA%E6%88%91%E6%AC%BA%E9%AA%97.html" class="badge tag-link">
+                      <a href="/tag/%E8%87%AA%E6%88%91%E6%AC%BA%E9%AA%97.html" class="badge tag-link me-2 mb-1">
                         自我欺骗
                       </a>
                       
-                      <a href="/tag/%E5%BF%83%E7%90%86%E9%9A%9C%E7%A2%8D.html" class="badge tag-link">
+                      <a href="/tag/%E5%BF%83%E7%90%86%E9%9A%9C%E7%A2%8D.html" class="badge tag-link me-2 mb-1">
                         心理障碍
                       </a>
                       
-                      <a href="/tag/2026%E8%B6%8B%E5%8A%BF.html" class="badge tag-link">
+                      <a href="/tag/2026%E8%B6%8B%E5%8A%BF.html" class="badge tag-link me-2 mb-1">
                         2026趋势
                       </a>
                       
@@ -145,48 +211,49 @@
               </div>
               
               <div class="masonry-grid-item">
-                <div class="card shadow-sm">
+                <div class="card article-card shadow-sm">
                   <div class="card-body">
-                    <h5 class="card-title">
-                      <i class="bi bi-file-earmark-text"></i>
-                      <a href="../mdhtml/自我认知的盲点：我们真的了解自己吗？.html" class="text-decoration-none">
+                    <h5 class="card-title article-title">
+                      <i class="bi bi-file-earmark-text me-2 text-primary"></i>
+                      <a href="../mdhtml/自我认知的盲点：我们真的了解自己吗？.html" class="text-decoration-none text-dark">
                         自我认知的盲点：我们真的了解自己吗？
                       </a>
                     </h5>
                     
-                      <p class="card-text">
+                      <p class="card-text text-muted mb-3">
                         深入探讨自我认知的局限性，分析心理防御机制、自我欺骗、他人的反馈、以及如何获得更真实的自我认知。
                       </p>
                       
-                        
-                          <small class="text-muted">
-                            2026-03-24
-                          </small>
-                          
+                        <div class="article-meta">
+                            
+                                <i class="bi bi-clock me-1"></i>
+                                2026-03-24
+                                
+                        </div>
                   </div>
-                  <div class="card-footer text-muted">
+                  <div class="card-footer text-muted bg-white border-top">
                     <a href="/category/%E8%87%AA%E6%88%91%E8%AE%A4%E8%AF%86.html"
-                      class="badge bg-primary">
+                      class="badge bg-primary me-2">
                       自我认识
                     </a>
                     
-                      <a href="/tag/%E8%87%AA%E6%88%91%E8%AE%A4%E7%9F%A5.html" class="badge tag-link">
+                      <a href="/tag/%E8%87%AA%E6%88%91%E8%AE%A4%E7%9F%A5.html" class="badge tag-link me-2 mb-1">
                         自我认知
                       </a>
                       
-                      <a href="/tag/%E5%BF%83%E7%90%86%E7%9B%B2%E7%82%B9.html" class="badge tag-link">
+                      <a href="/tag/%E5%BF%83%E7%90%86%E7%9B%B2%E7%82%B9.html" class="badge tag-link me-2 mb-1">
                         心理盲点
                       </a>
                       
-                      <a href="/tag/%E8%87%AA%E6%88%91%E6%AC%BA%E9%AA%97.html" class="badge tag-link">
+                      <a href="/tag/%E8%87%AA%E6%88%91%E6%AC%BA%E9%AA%97.html" class="badge tag-link me-2 mb-1">
                         自我欺骗
                       </a>
                       
-                      <a href="/tag/%E7%9C%9F%E5%AE%9E%E8%87%AA%E6%88%91.html" class="badge tag-link">
+                      <a href="/tag/%E7%9C%9F%E5%AE%9E%E8%87%AA%E6%88%91.html" class="badge tag-link me-2 mb-1">
                         真实自我
                       </a>
                       
-                      <a href="/tag/%E4%B8%AA%E4%BA%BA%E6%88%90%E9%95%BF.html" class="badge tag-link">
+                      <a href="/tag/%E4%B8%AA%E4%BA%BA%E6%88%90%E9%95%BF.html" class="badge tag-link me-2 mb-1">
                         个人成长
                       </a>
                       
@@ -195,48 +262,49 @@
               </div>
               
               <div class="masonry-grid-item">
-                <div class="card shadow-sm">
+                <div class="card article-card shadow-sm">
                   <div class="card-body">
-                    <h5 class="card-title">
-                      <i class="bi bi-file-earmark-text"></i>
-                      <a href="../mdhtml/掩耳盗铃：被忽视的自我认知实验.html" class="text-decoration-none">
+                    <h5 class="card-title article-title">
+                      <i class="bi bi-file-earmark-text me-2 text-primary"></i>
+                      <a href="../mdhtml/掩耳盗铃：被忽视的自我认知实验.html" class="text-decoration-none text-dark">
                         掩耳盗铃：被忽视的自我认知实验
                       </a>
                     </h5>
                     
-                      <p class="card-text">
+                      <p class="card-text text-muted mb-3">
                         本文以现代认知心理学视角重新解读经典寓言《掩耳盗铃》，揭示了其中蕴含的自我认知与行为经济学智慧。文章探讨了盗铃者困境的现代映射，分析了自我欺骗的心理机制，并阐述了突破自我认知局限的实践路径。此外，还讨论了掩耳行为的潜在价值以及这一古老寓言对现代社会在自我认知、决策偏差、行为修正等方面的启示。适合对认知心理学、行为经济学、自我提升感兴趣的读者，以及希望改善决策质量的人士。
                       </p>
                       
-                        
-                          <small class="text-muted">
-                            2026-02-24
-                          </small>
-                          
+                        <div class="article-meta">
+                            
+                                <i class="bi bi-clock me-1"></i>
+                                2026-02-24
+                                
+                        </div>
                   </div>
-                  <div class="card-footer text-muted">
+                  <div class="card-footer text-muted bg-white border-top">
                     <a href="/category/%E4%BC%A0%E7%BB%9F%E6%96%87%E5%8C%96.html"
-                      class="badge bg-primary">
+                      class="badge bg-primary me-2">
                       传统文化
                     </a>
                     
-                      <a href="/tag/%E5%AF%93%E8%A8%80%E8%A7%A3%E6%9E%90.html" class="badge tag-link">
+                      <a href="/tag/%E5%AF%93%E8%A8%80%E8%A7%A3%E6%9E%90.html" class="badge tag-link me-2 mb-1">
                         寓言解析
                       </a>
                       
-                      <a href="/tag/%E8%AE%A4%E7%9F%A5%E5%BF%83%E7%90%86%E5%AD%A6.html" class="badge tag-link">
+                      <a href="/tag/%E8%AE%A4%E7%9F%A5%E5%BF%83%E7%90%86%E5%AD%A6.html" class="badge tag-link me-2 mb-1">
                         认知心理学
                       </a>
                       
-                      <a href="/tag/%E8%87%AA%E6%88%91%E6%AC%BA%E9%AA%97.html" class="badge tag-link">
+                      <a href="/tag/%E8%87%AA%E6%88%91%E6%AC%BA%E9%AA%97.html" class="badge tag-link me-2 mb-1">
                         自我欺骗
                       </a>
                       
-                      <a href="/tag/%E8%A1%8C%E4%B8%BA%E7%BB%8F%E6%B5%8E%E5%AD%A6.html" class="badge tag-link">
+                      <a href="/tag/%E8%A1%8C%E4%B8%BA%E7%BB%8F%E6%B5%8E%E5%AD%A6.html" class="badge tag-link me-2 mb-1">
                         行为经济学
                       </a>
                       
-                      <a href="/tag/%E7%8E%B0%E4%BB%A3%E5%90%AF%E7%A4%BA.html" class="badge tag-link">
+                      <a href="/tag/%E7%8E%B0%E4%BB%A3%E5%90%AF%E7%A4%BA.html" class="badge tag-link me-2 mb-1">
                         现代启示
                       </a>
                       
@@ -246,8 +314,8 @@
               
           </div>
 
-          <div class="mt-4 text-center">
-            <a href="标签列表.html" class="btn btn-outline-primary"><i class="bi bi-arrow-left"></i> 返回标签列表</a>
+          <div class="mt-6 text-center">
+            <a href="标签列表.html" class="btn btn-outline-primary back-button"><i class="bi bi-arrow-left me-2"></i> 返回标签列表</a>
           </div>
         </div>
       </div>
@@ -271,7 +339,7 @@
             itemSelector: '.masonry-grid-item',
             columnWidth: '.masonry-grid-item',
             percentPosition: true,
-            gutter: 10 // 可选，添加卡片间的间距
+            gutter: 15 // 增加间距，提升视觉效果
           });
         });
       </script>

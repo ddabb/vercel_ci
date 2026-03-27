@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
 
 <head>
   <meta charset="UTF-8">
@@ -9,7 +9,7 @@
   <meta name="description" content="无人自助站的【学习】的标签列表页面，汇集了关于【学习】标签相关的文章和资讯，方便您快速找到感兴趣的内容。">
   <meta name="keywords" content="无人自助站,学习">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>标签文章列表</title>
+  <title>学习标签 - 无人自助站</title>
 
   <link rel="icon" href="../logo.svg" type="image/svg+xml">
   <link rel="stylesheet" href="../css/style.css">
@@ -27,6 +27,62 @@
   <!-- 引入Masonry -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/masonry/4.2.2/masonry.pkgd.min.js"></script>
 
+  <style>
+        .tag-header {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            color: white;
+            padding: 2rem;
+            border-radius: 8px;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        .tag-title {
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+        .article-card {
+            transition: all 0.3s ease;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        .article-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+        }
+        .article-title {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            transition: color 0.3s ease;
+        }
+        .article-title:hover {
+            color: #0d6efd;
+        }
+        .article-meta {
+            font-size: 0.85rem;
+            color: #6c757d;
+        }
+        .tag-link {
+            background-color: #e9ecef;
+            color: #495057;
+            transition: all 0.2s ease;
+        }
+        .tag-link:hover {
+            background-color: #dee2e6;
+            color: #212529;
+        }
+        .back-button {
+            transition: all 0.3s ease;
+        }
+        .back-button:hover {
+            transform: translateX(-3px);
+        }
+        .article-count {
+            font-size: 0.9rem;
+            opacity: 0.9;
+        }
+    </style>
 </head>
 
 <body>
@@ -80,7 +136,7 @@
     <main class="container-fluid mt-4">
       <div class="row">
         <div class="col-lg-8 col-md-12 mx-auto">
-          <nav aria-label="breadcrumb">
+          <nav aria-label="breadcrumb" class="mb-4">
             <ol class="breadcrumb">
               <li class="breadcrumb-item"><a href="/html/index.html">首页</a></li>
               <li class="breadcrumb-item"><a href="标签列表.html">标签列表</a></li>
@@ -89,54 +145,64 @@
               </li>
             </ol>
           </nav>
-          <h1 style="font-size: 1.5em; margin: 0.5em 0;">
-            学习标签的文章和资讯
-        </h1>
+          
+          <!-- 标签头部 -->
+          <div class="tag-header">
+              <h1 class="tag-title">
+                  <i class="bi bi-tags me-2"></i>
+                  学习
+              </h1>
+              <p class="article-count">
+                  共 3 篇文章
+              </p>
+          </div>
+          
           <div class="masonry-grid">
             
               <div class="masonry-grid-item">
-                <div class="card shadow-sm">
+                <div class="card article-card shadow-sm">
                   <div class="card-body">
-                    <h5 class="card-title">
-                      <i class="bi bi-file-earmark-text"></i>
-                      <a href="../mdhtml/2026年的学习困境：为什么你学了那么多却没有改变，如何真正学以致用.html" class="text-decoration-none">
+                    <h5 class="card-title article-title">
+                      <i class="bi bi-file-earmark-text me-2 text-primary"></i>
+                      <a href="../mdhtml/2026年的学习困境：为什么你学了那么多却没有改变，如何真正学以致用.html" class="text-decoration-none text-dark">
                         你买了100个课程却一无所获：学习的真相
                       </a>
                     </h5>
                     
-                      <p class="card-text">
+                      <p class="card-text text-muted mb-3">
                         深度分析学习失败的根本原因。不是学得不够，而是用得不够。包含真正有效的学习方法。
                       </p>
                       
-                        
-                          <small class="text-muted">
-                            2026-03-26
-                          </small>
-                          
+                        <div class="article-meta">
+                            
+                                <i class="bi bi-clock me-1"></i>
+                                2026-03-26
+                                
+                        </div>
                   </div>
-                  <div class="card-footer text-muted">
+                  <div class="card-footer text-muted bg-white border-top">
                     <a href="/category/%E5%AD%A6%E4%B9%A0%E6%96%B9%E6%B3%95.html"
-                      class="badge bg-primary">
+                      class="badge bg-primary me-2">
                       学习方法
                     </a>
                     
-                      <a href="/tag/%E5%AD%A6%E4%B9%A0.html" class="badge tag-link">
+                      <a href="/tag/%E5%AD%A6%E4%B9%A0.html" class="badge tag-link me-2 mb-1">
                         学习
                       </a>
                       
-                      <a href="/tag/%E7%9F%A5%E8%AF%86%E5%BA%94%E7%94%A8.html" class="badge tag-link">
+                      <a href="/tag/%E7%9F%A5%E8%AF%86%E5%BA%94%E7%94%A8.html" class="badge tag-link me-2 mb-1">
                         知识应用
                       </a>
                       
-                      <a href="/tag/%E8%A1%8C%E4%B8%BA%E6%94%B9%E5%8F%98.html" class="badge tag-link">
+                      <a href="/tag/%E8%A1%8C%E4%B8%BA%E6%94%B9%E5%8F%98.html" class="badge tag-link me-2 mb-1">
                         行为改变
                       </a>
                       
-                      <a href="/tag/%E6%95%99%E8%82%B2.html" class="badge tag-link">
+                      <a href="/tag/%E6%95%99%E8%82%B2.html" class="badge tag-link me-2 mb-1">
                         教育
                       </a>
                       
-                      <a href="/tag/2026%E8%B6%8B%E5%8A%BF.html" class="badge tag-link">
+                      <a href="/tag/2026%E8%B6%8B%E5%8A%BF.html" class="badge tag-link me-2 mb-1">
                         2026趋势
                       </a>
                       
@@ -145,48 +211,49 @@
               </div>
               
               <div class="masonry-grid-item">
-                <div class="card shadow-sm">
+                <div class="card article-card shadow-sm">
                   <div class="card-body">
-                    <h5 class="card-title">
-                      <i class="bi bi-file-earmark-text"></i>
-                      <a href="../mdhtml/为什么现在的大学生都在抄近道.html" class="text-decoration-none">
+                    <h5 class="card-title article-title">
+                      <i class="bi bi-file-earmark-text me-2 text-primary"></i>
+                      <a href="../mdhtml/为什么现在的大学生都在抄近道.html" class="text-decoration-none text-dark">
                         为什么现在的大学生都在抄近道
                       </a>
                     </h5>
                     
-                      <p class="card-text">
+                      <p class="card-text text-muted mb-3">
                         分析大学生寻找捷径的现象，探讨急功近利的心态和影响。
                       </p>
                       
-                        
-                          <small class="text-muted">
-                            2026-03-24
-                          </small>
-                          
+                        <div class="article-meta">
+                            
+                                <i class="bi bi-clock me-1"></i>
+                                2026-03-24
+                                
+                        </div>
                   </div>
-                  <div class="card-footer text-muted">
+                  <div class="card-footer text-muted bg-white border-top">
                     <a href="/category/%E6%95%99%E8%82%B2%E8%A7%82%E5%AF%9F.html"
-                      class="badge bg-primary">
+                      class="badge bg-primary me-2">
                       教育观察
                     </a>
                     
-                      <a href="/tag/%E5%A4%A7%E5%AD%A6%E7%94%9F.html" class="badge tag-link">
+                      <a href="/tag/%E5%A4%A7%E5%AD%A6%E7%94%9F.html" class="badge tag-link me-2 mb-1">
                         大学生
                       </a>
                       
-                      <a href="/tag/%E6%8A%84%E8%BF%91%E9%81%93.html" class="badge tag-link">
+                      <a href="/tag/%E6%8A%84%E8%BF%91%E9%81%93.html" class="badge tag-link me-2 mb-1">
                         抄近道
                       </a>
                       
-                      <a href="/tag/%E6%8D%B7%E5%BE%84.html" class="badge tag-link">
+                      <a href="/tag/%E6%8D%B7%E5%BE%84.html" class="badge tag-link me-2 mb-1">
                         捷径
                       </a>
                       
-                      <a href="/tag/%E5%AD%A6%E4%B9%A0.html" class="badge tag-link">
+                      <a href="/tag/%E5%AD%A6%E4%B9%A0.html" class="badge tag-link me-2 mb-1">
                         学习
                       </a>
                       
-                      <a href="/tag/%E6%88%90%E9%95%BF.html" class="badge tag-link">
+                      <a href="/tag/%E6%88%90%E9%95%BF.html" class="badge tag-link me-2 mb-1">
                         成长
                       </a>
                       
@@ -195,48 +262,49 @@
               </div>
               
               <div class="masonry-grid-item">
-                <div class="card shadow-sm">
+                <div class="card article-card shadow-sm">
                   <div class="card-body">
-                    <h5 class="card-title">
-                      <i class="bi bi-file-earmark-text"></i>
-                      <a href="../mdhtml/教育的失败：学校如何摧毁了学习的热情.html" class="text-decoration-none">
+                    <h5 class="card-title article-title">
+                      <i class="bi bi-file-earmark-text me-2 text-primary"></i>
+                      <a href="../mdhtml/教育的失败：学校如何摧毁了学习的热情.html" class="text-decoration-none text-dark">
                         教育的失败：学校如何摧毁了学习的热情
                       </a>
                     </h5>
                     
-                      <p class="card-text">
+                      <p class="card-text text-muted mb-3">
                         深入分析教育系统的问题，探讨标准化教育的危害、创意的压制、学习热情的丧失、以及如何改革教育。
                       </p>
                       
-                        
-                          <small class="text-muted">
-                            2026-03-24
-                          </small>
-                          
+                        <div class="article-meta">
+                            
+                                <i class="bi bi-clock me-1"></i>
+                                2026-03-24
+                                
+                        </div>
                   </div>
-                  <div class="card-footer text-muted">
+                  <div class="card-footer text-muted bg-white border-top">
                     <a href="/category/%E6%95%99%E8%82%B2%E8%A7%82%E5%AF%9F.html"
-                      class="badge bg-primary">
+                      class="badge bg-primary me-2">
                       教育观察
                     </a>
                     
-                      <a href="/tag/%E6%95%99%E8%82%B2.html" class="badge tag-link">
+                      <a href="/tag/%E6%95%99%E8%82%B2.html" class="badge tag-link me-2 mb-1">
                         教育
                       </a>
                       
-                      <a href="/tag/%E5%AD%A6%E6%A0%A1.html" class="badge tag-link">
+                      <a href="/tag/%E5%AD%A6%E6%A0%A1.html" class="badge tag-link me-2 mb-1">
                         学校
                       </a>
                       
-                      <a href="/tag/%E5%AD%A6%E4%B9%A0.html" class="badge tag-link">
+                      <a href="/tag/%E5%AD%A6%E4%B9%A0.html" class="badge tag-link me-2 mb-1">
                         学习
                       </a>
                       
-                      <a href="/tag/%E5%88%9B%E6%84%8F.html" class="badge tag-link">
+                      <a href="/tag/%E5%88%9B%E6%84%8F.html" class="badge tag-link me-2 mb-1">
                         创意
                       </a>
                       
-                      <a href="/tag/%E6%A0%87%E5%87%86%E5%8C%96.html" class="badge tag-link">
+                      <a href="/tag/%E6%A0%87%E5%87%86%E5%8C%96.html" class="badge tag-link me-2 mb-1">
                         标准化
                       </a>
                       
@@ -246,8 +314,8 @@
               
           </div>
 
-          <div class="mt-4 text-center">
-            <a href="标签列表.html" class="btn btn-outline-primary"><i class="bi bi-arrow-left"></i> 返回标签列表</a>
+          <div class="mt-6 text-center">
+            <a href="标签列表.html" class="btn btn-outline-primary back-button"><i class="bi bi-arrow-left me-2"></i> 返回标签列表</a>
           </div>
         </div>
       </div>
@@ -271,7 +339,7 @@
             itemSelector: '.masonry-grid-item',
             columnWidth: '.masonry-grid-item',
             percentPosition: true,
-            gutter: 10 // 可选，添加卡片间的间距
+            gutter: 15 // 增加间距，提升视觉效果
           });
         });
       </script>

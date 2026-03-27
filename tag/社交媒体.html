@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
 
 <head>
   <meta charset="UTF-8">
@@ -9,7 +9,7 @@
   <meta name="description" content="无人自助站的【社交媒体】的标签列表页面，汇集了关于【社交媒体】标签相关的文章和资讯，方便您快速找到感兴趣的内容。">
   <meta name="keywords" content="无人自助站,社交媒体">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>标签文章列表</title>
+  <title>社交媒体标签 - 无人自助站</title>
 
   <link rel="icon" href="../logo.svg" type="image/svg+xml">
   <link rel="stylesheet" href="../css/style.css">
@@ -27,6 +27,62 @@
   <!-- 引入Masonry -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/masonry/4.2.2/masonry.pkgd.min.js"></script>
 
+  <style>
+        .tag-header {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            color: white;
+            padding: 2rem;
+            border-radius: 8px;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        .tag-title {
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+        .article-card {
+            transition: all 0.3s ease;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        .article-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+        }
+        .article-title {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            transition: color 0.3s ease;
+        }
+        .article-title:hover {
+            color: #0d6efd;
+        }
+        .article-meta {
+            font-size: 0.85rem;
+            color: #6c757d;
+        }
+        .tag-link {
+            background-color: #e9ecef;
+            color: #495057;
+            transition: all 0.2s ease;
+        }
+        .tag-link:hover {
+            background-color: #dee2e6;
+            color: #212529;
+        }
+        .back-button {
+            transition: all 0.3s ease;
+        }
+        .back-button:hover {
+            transform: translateX(-3px);
+        }
+        .article-count {
+            font-size: 0.9rem;
+            opacity: 0.9;
+        }
+    </style>
 </head>
 
 <body>
@@ -80,7 +136,7 @@
     <main class="container-fluid mt-4">
       <div class="row">
         <div class="col-lg-8 col-md-12 mx-auto">
-          <nav aria-label="breadcrumb">
+          <nav aria-label="breadcrumb" class="mb-4">
             <ol class="breadcrumb">
               <li class="breadcrumb-item"><a href="/html/index.html">首页</a></li>
               <li class="breadcrumb-item"><a href="标签列表.html">标签列表</a></li>
@@ -89,54 +145,64 @@
               </li>
             </ol>
           </nav>
-          <h1 style="font-size: 1.5em; margin: 0.5em 0;">
-            社交媒体标签的文章和资讯
-        </h1>
+          
+          <!-- 标签头部 -->
+          <div class="tag-header">
+              <h1 class="tag-title">
+                  <i class="bi bi-tags me-2"></i>
+                  社交媒体
+              </h1>
+              <p class="article-count">
+                  共 12 篇文章
+              </p>
+          </div>
+          
           <div class="masonry-grid">
             
               <div class="masonry-grid-item">
-                <div class="card shadow-sm">
+                <div class="card article-card shadow-sm">
                   <div class="card-body">
-                    <h5 class="card-title">
-                      <i class="bi bi-file-earmark-text"></i>
-                      <a href="../mdhtml/你在社交媒体上的人设正在毁掉真实的你.html" class="text-decoration-none">
+                    <h5 class="card-title article-title">
+                      <i class="bi bi-file-earmark-text me-2 text-primary"></i>
+                      <a href="../mdhtml/你在社交媒体上的人设正在毁掉真实的你.html" class="text-decoration-none text-dark">
                         你在社交媒体上的人设正在毁掉真实的你
                       </a>
                     </h5>
                     
-                      <p class="card-text">
+                      <p class="card-text text-muted mb-3">
                         深度分析为什么你在社交媒体上的人设在伤害你。不是展示最好的自己，而是在失去真实的自己。包含重建真实自我的方法。
                       </p>
                       
-                        
-                          <small class="text-muted">
-                            2026-03-26
-                          </small>
-                          
+                        <div class="article-meta">
+                            
+                                <i class="bi bi-clock me-1"></i>
+                                2026-03-26
+                                
+                        </div>
                   </div>
-                  <div class="card-footer text-muted">
+                  <div class="card-footer text-muted bg-white border-top">
                     <a href="/category/%E6%95%B0%E5%AD%97%E7%94%9F%E6%B4%BB.html"
-                      class="badge bg-primary">
+                      class="badge bg-primary me-2">
                       数字生活
                     </a>
                     
-                      <a href="/tag/%E7%A4%BE%E4%BA%A4%E5%AA%92%E4%BD%93.html" class="badge tag-link">
+                      <a href="/tag/%E7%A4%BE%E4%BA%A4%E5%AA%92%E4%BD%93.html" class="badge tag-link me-2 mb-1">
                         社交媒体
                       </a>
                       
-                      <a href="/tag/%E7%9C%9F%E5%AE%9E%E8%87%AA%E6%88%91.html" class="badge tag-link">
+                      <a href="/tag/%E7%9C%9F%E5%AE%9E%E8%87%AA%E6%88%91.html" class="badge tag-link me-2 mb-1">
                         真实自我
                       </a>
                       
-                      <a href="/tag/%E4%BA%BA%E8%AE%BE.html" class="badge tag-link">
+                      <a href="/tag/%E4%BA%BA%E8%AE%BE.html" class="badge tag-link me-2 mb-1">
                         人设
                       </a>
                       
-                      <a href="/tag/%E6%95%B0%E5%AD%97%E8%BA%AB%E4%BB%BD.html" class="badge tag-link">
+                      <a href="/tag/%E6%95%B0%E5%AD%97%E8%BA%AB%E4%BB%BD.html" class="badge tag-link me-2 mb-1">
                         数字身份
                       </a>
                       
-                      <a href="/tag/2026%E8%B6%8B%E5%8A%BF.html" class="badge tag-link">
+                      <a href="/tag/2026%E8%B6%8B%E5%8A%BF.html" class="badge tag-link me-2 mb-1">
                         2026趋势
                       </a>
                       
@@ -145,48 +211,49 @@
               </div>
               
               <div class="masonry-grid-item">
-                <div class="card shadow-sm">
+                <div class="card article-card shadow-sm">
                   <div class="card-body">
-                    <h5 class="card-title">
-                      <i class="bi bi-file-earmark-text"></i>
-                      <a href="../mdhtml/为什么现在的年轻人都不爱发朋友圈了.html" class="text-decoration-none">
+                    <h5 class="card-title article-title">
+                      <i class="bi bi-file-earmark-text me-2 text-primary"></i>
+                      <a href="../mdhtml/为什么现在的年轻人都不爱发朋友圈了.html" class="text-decoration-none text-dark">
                         为什么现在的年轻人都不爱发朋友圈了
                       </a>
                     </h5>
                     
-                      <p class="card-text">
+                      <p class="card-text text-muted mb-3">
                         分析年轻人不发朋友圈的原因，探讨社交习惯的变化。
                       </p>
                       
-                        
-                          <small class="text-muted">
-                            2026-03-24
-                          </small>
-                          
+                        <div class="article-meta">
+                            
+                                <i class="bi bi-clock me-1"></i>
+                                2026-03-24
+                                
+                        </div>
                   </div>
-                  <div class="card-footer text-muted">
+                  <div class="card-footer text-muted bg-white border-top">
                     <a href="/category/%E6%95%B0%E5%AD%97%E7%94%9F%E6%B4%BB.html"
-                      class="badge bg-primary">
+                      class="badge bg-primary me-2">
                       数字生活
                     </a>
                     
-                      <a href="/tag/%E6%9C%8B%E5%8F%8B%E5%9C%88.html" class="badge tag-link">
+                      <a href="/tag/%E6%9C%8B%E5%8F%8B%E5%9C%88.html" class="badge tag-link me-2 mb-1">
                         朋友圈
                       </a>
                       
-                      <a href="/tag/%E7%A4%BE%E4%BA%A4%E5%AA%92%E4%BD%93.html" class="badge tag-link">
+                      <a href="/tag/%E7%A4%BE%E4%BA%A4%E5%AA%92%E4%BD%93.html" class="badge tag-link me-2 mb-1">
                         社交媒体
                       </a>
                       
-                      <a href="/tag/%E5%B9%B4%E8%BD%BB%E4%BA%BA.html" class="badge tag-link">
+                      <a href="/tag/%E5%B9%B4%E8%BD%BB%E4%BA%BA.html" class="badge tag-link me-2 mb-1">
                         年轻人
                       </a>
                       
-                      <a href="/tag/%E9%9A%90%E7%A7%81.html" class="badge tag-link">
+                      <a href="/tag/%E9%9A%90%E7%A7%81.html" class="badge tag-link me-2 mb-1">
                         隐私
                       </a>
                       
-                      <a href="/tag/%E7%A4%BE%E4%BA%A4.html" class="badge tag-link">
+                      <a href="/tag/%E7%A4%BE%E4%BA%A4.html" class="badge tag-link me-2 mb-1">
                         社交
                       </a>
                       
@@ -195,48 +262,49 @@
               </div>
               
               <div class="masonry-grid-item">
-                <div class="card shadow-sm">
+                <div class="card article-card shadow-sm">
                   <div class="card-body">
-                    <h5 class="card-title">
-                      <i class="bi bi-file-earmark-text"></i>
-                      <a href="../mdhtml/为什么现在的年轻人都不爱换头像了.html" class="text-decoration-none">
+                    <h5 class="card-title article-title">
+                      <i class="bi bi-file-earmark-text me-2 text-primary"></i>
+                      <a href="../mdhtml/为什么现在的年轻人都不爱换头像了.html" class="text-decoration-none text-dark">
                         为什么现在的年轻人都不爱换头像了
                       </a>
                     </h5>
                     
-                      <p class="card-text">
+                      <p class="card-text text-muted mb-3">
                         探讨年轻人不换头像的现象，分析背后的心理原因和社会变化。
                       </p>
                       
-                        
-                          <small class="text-muted">
-                            2026-03-24
-                          </small>
-                          
+                        <div class="article-meta">
+                            
+                                <i class="bi bi-clock me-1"></i>
+                                2026-03-24
+                                
+                        </div>
                   </div>
-                  <div class="card-footer text-muted">
+                  <div class="card-footer text-muted bg-white border-top">
                     <a href="/category/%E6%95%B0%E5%AD%97%E7%94%9F%E6%B4%BB.html"
-                      class="badge bg-primary">
+                      class="badge bg-primary me-2">
                       数字生活
                     </a>
                     
-                      <a href="/tag/%E5%A4%B4%E5%83%8F.html" class="badge tag-link">
+                      <a href="/tag/%E5%A4%B4%E5%83%8F.html" class="badge tag-link me-2 mb-1">
                         头像
                       </a>
                       
-                      <a href="/tag/%E5%B9%B4%E8%BD%BB%E4%BA%BA.html" class="badge tag-link">
+                      <a href="/tag/%E5%B9%B4%E8%BD%BB%E4%BA%BA.html" class="badge tag-link me-2 mb-1">
                         年轻人
                       </a>
                       
-                      <a href="/tag/%E7%A4%BE%E4%BA%A4.html" class="badge tag-link">
+                      <a href="/tag/%E7%A4%BE%E4%BA%A4.html" class="badge tag-link me-2 mb-1">
                         社交
                       </a>
                       
-                      <a href="/tag/%E5%BF%83%E7%90%86.html" class="badge tag-link">
+                      <a href="/tag/%E5%BF%83%E7%90%86.html" class="badge tag-link me-2 mb-1">
                         心理
                       </a>
                       
-                      <a href="/tag/%E7%A4%BE%E4%BA%A4%E5%AA%92%E4%BD%93.html" class="badge tag-link">
+                      <a href="/tag/%E7%A4%BE%E4%BA%A4%E5%AA%92%E4%BD%93.html" class="badge tag-link me-2 mb-1">
                         社交媒体
                       </a>
                       
@@ -245,48 +313,49 @@
               </div>
               
               <div class="masonry-grid-item">
-                <div class="card shadow-sm">
+                <div class="card article-card shadow-sm">
                   <div class="card-body">
-                    <h5 class="card-title">
-                      <i class="bi bi-file-earmark-text"></i>
-                      <a href="../mdhtml/社交媒体的衰落与去中心化社交的兴起.html" class="text-decoration-none">
+                    <h5 class="card-title article-title">
+                      <i class="bi bi-file-earmark-text me-2 text-primary"></i>
+                      <a href="../mdhtml/社交媒体的衰落与去中心化社交的兴起.html" class="text-decoration-none text-dark">
                         社交媒体的衰落与去中心化社交的兴起
                       </a>
                     </h5>
                     
-                      <p class="card-text">
+                      <p class="card-text text-muted mb-3">
                         分析传统社交媒体面临的危机，探讨去中心化社交平台的崛起、用户隐私保护、社区自治、以及社交网络的未来形态。
                       </p>
                       
-                        
-                          <small class="text-muted">
-                            2026-03-24
-                          </small>
-                          
+                        <div class="article-meta">
+                            
+                                <i class="bi bi-clock me-1"></i>
+                                2026-03-24
+                                
+                        </div>
                   </div>
-                  <div class="card-footer text-muted">
+                  <div class="card-footer text-muted bg-white border-top">
                     <a href="/category/%E7%A4%BE%E4%BA%A4%E7%BD%91%E7%BB%9C.html"
-                      class="badge bg-primary">
+                      class="badge bg-primary me-2">
                       社交网络
                     </a>
                     
-                      <a href="/tag/%E7%A4%BE%E4%BA%A4%E5%AA%92%E4%BD%93.html" class="badge tag-link">
+                      <a href="/tag/%E7%A4%BE%E4%BA%A4%E5%AA%92%E4%BD%93.html" class="badge tag-link me-2 mb-1">
                         社交媒体
                       </a>
                       
-                      <a href="/tag/%E5%8E%BB%E4%B8%AD%E5%BF%83%E5%8C%96.html" class="badge tag-link">
+                      <a href="/tag/%E5%8E%BB%E4%B8%AD%E5%BF%83%E5%8C%96.html" class="badge tag-link me-2 mb-1">
                         去中心化
                       </a>
                       
-                      <a href="/tag/Web3%E7%A4%BE%E4%BA%A4.html" class="badge tag-link">
+                      <a href="/tag/Web3%E7%A4%BE%E4%BA%A4.html" class="badge tag-link me-2 mb-1">
                         Web3社交
                       </a>
                       
-                      <a href="/tag/%E9%9A%90%E7%A7%81%E4%BF%9D%E6%8A%A4.html" class="badge tag-link">
+                      <a href="/tag/%E9%9A%90%E7%A7%81%E4%BF%9D%E6%8A%A4.html" class="badge tag-link me-2 mb-1">
                         隐私保护
                       </a>
                       
-                      <a href="/tag/%E7%A4%BE%E5%8C%BA%E6%B2%BB%E7%90%86.html" class="badge tag-link">
+                      <a href="/tag/%E7%A4%BE%E5%8C%BA%E6%B2%BB%E7%90%86.html" class="badge tag-link me-2 mb-1">
                         社区治理
                       </a>
                       
@@ -295,48 +364,49 @@
               </div>
               
               <div class="masonry-grid-item">
-                <div class="card shadow-sm">
+                <div class="card article-card shadow-sm">
                   <div class="card-body">
-                    <h5 class="card-title">
-                      <i class="bi bi-file-earmark-text"></i>
-                      <a href="../mdhtml/AI与社交互动：人际关系的重塑.html" class="text-decoration-none">
+                    <h5 class="card-title article-title">
+                      <i class="bi bi-file-earmark-text me-2 text-primary"></i>
+                      <a href="../mdhtml/AI与社交互动：人际关系的重塑.html" class="text-decoration-none text-dark">
                         AI与社交互动：人际关系的重塑
                       </a>
                     </h5>
                     
-                      <p class="card-text">
+                      <p class="card-text text-muted mb-3">
                         探讨AI如何改变人们的社交方式，从社交媒体的AI推荐到虚拟朋友，从线上互动到社交焦虑，分析AI时代人际关系的变迁。
                       </p>
                       
-                        
-                          <small class="text-muted">
-                            2026-03-23
-                          </small>
-                          
+                        <div class="article-meta">
+                            
+                                <i class="bi bi-clock me-1"></i>
+                                2026-03-23
+                                
+                        </div>
                   </div>
-                  <div class="card-footer text-muted">
+                  <div class="card-footer text-muted bg-white border-top">
                     <a href="/category/AI%E7%A4%BE%E4%BA%A4.html"
-                      class="badge bg-primary">
+                      class="badge bg-primary me-2">
                       AI社交
                     </a>
                     
-                      <a href="/tag/AI%E7%A4%BE%E4%BA%A4.html" class="badge tag-link">
+                      <a href="/tag/AI%E7%A4%BE%E4%BA%A4.html" class="badge tag-link me-2 mb-1">
                         AI社交
                       </a>
                       
-                      <a href="/tag/%E7%A4%BE%E4%BA%A4%E5%AA%92%E4%BD%93.html" class="badge tag-link">
+                      <a href="/tag/%E7%A4%BE%E4%BA%A4%E5%AA%92%E4%BD%93.html" class="badge tag-link me-2 mb-1">
                         社交媒体
                       </a>
                       
-                      <a href="/tag/%E8%99%9A%E6%8B%9F%E5%85%B3%E7%B3%BB.html" class="badge tag-link">
+                      <a href="/tag/%E8%99%9A%E6%8B%9F%E5%85%B3%E7%B3%BB.html" class="badge tag-link me-2 mb-1">
                         虚拟关系
                       </a>
                       
-                      <a href="/tag/%E7%A4%BE%E4%BA%A4%E7%84%A6%E8%99%91.html" class="badge tag-link">
+                      <a href="/tag/%E7%A4%BE%E4%BA%A4%E7%84%A6%E8%99%91.html" class="badge tag-link me-2 mb-1">
                         社交焦虑
                       </a>
                       
-                      <a href="/tag/%E4%BA%BA%E9%99%85%E8%BF%9E%E6%8E%A5.html" class="badge tag-link">
+                      <a href="/tag/%E4%BA%BA%E9%99%85%E8%BF%9E%E6%8E%A5.html" class="badge tag-link me-2 mb-1">
                         人际连接
                       </a>
                       
@@ -345,48 +415,49 @@
               </div>
               
               <div class="masonry-grid-item">
-                <div class="card shadow-sm">
+                <div class="card article-card shadow-sm">
                   <div class="card-body">
-                    <h5 class="card-title">
-                      <i class="bi bi-file-earmark-text"></i>
-                      <a href="../mdhtml/文案生图：一键将文字变成精美图片的微信小程序工具.html" class="text-decoration-none">
+                    <h5 class="card-title article-title">
+                      <i class="bi bi-file-earmark-text me-2 text-primary"></i>
+                      <a href="../mdhtml/文案生图：一键将文字变成精美图片的微信小程序工具.html" class="text-decoration-none text-dark">
                         文案生图：一键将文字变成精美图片的微信小程序工具
                       </a>
                     </h5>
                     
-                      <p class="card-text">
+                      <p class="card-text text-muted mb-3">
                         还在为朋友圈文案配图发愁？文案生图小程序帮你一键将文字变成精美图片，支持自定义二维码、出处信息，轻松打造朋友圈高赞内容！
                       </p>
                       
-                        
-                          <small class="text-muted">
-                            2026-03-23
-                          </small>
-                          
+                        <div class="article-meta">
+                            
+                                <i class="bi bi-clock me-1"></i>
+                                2026-03-23
+                                
+                        </div>
                   </div>
-                  <div class="card-footer text-muted">
+                  <div class="card-footer text-muted bg-white border-top">
                     <a href="/category/%E5%B7%A5%E5%85%B7%E6%8E%A8%E8%8D%90.html"
-                      class="badge bg-primary">
+                      class="badge bg-primary me-2">
                       工具推荐
                     </a>
                     
-                      <a href="/tag/%E6%96%87%E6%A1%88%E7%94%9F%E5%9B%BE.html" class="badge tag-link">
+                      <a href="/tag/%E6%96%87%E6%A1%88%E7%94%9F%E5%9B%BE.html" class="badge tag-link me-2 mb-1">
                         文案生图
                       </a>
                       
-                      <a href="/tag/%E6%96%87%E5%AD%97%E8%BD%AC%E5%9B%BE%E7%89%87.html" class="badge tag-link">
+                      <a href="/tag/%E6%96%87%E5%AD%97%E8%BD%AC%E5%9B%BE%E7%89%87.html" class="badge tag-link me-2 mb-1">
                         文字转图片
                       </a>
                       
-                      <a href="/tag/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F.html" class="badge tag-link">
+                      <a href="/tag/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F.html" class="badge tag-link me-2 mb-1">
                         微信小程序
                       </a>
                       
-                      <a href="/tag/%E5%9B%BE%E7%89%87%E7%94%9F%E6%88%90.html" class="badge tag-link">
+                      <a href="/tag/%E5%9B%BE%E7%89%87%E7%94%9F%E6%88%90.html" class="badge tag-link me-2 mb-1">
                         图片生成
                       </a>
                       
-                      <a href="/tag/%E7%A4%BE%E4%BA%A4%E5%AA%92%E4%BD%93.html" class="badge tag-link">
+                      <a href="/tag/%E7%A4%BE%E4%BA%A4%E5%AA%92%E4%BD%93.html" class="badge tag-link me-2 mb-1">
                         社交媒体
                       </a>
                       
@@ -395,48 +466,49 @@
               </div>
               
               <div class="masonry-grid-item">
-                <div class="card shadow-sm">
+                <div class="card article-card shadow-sm">
                   <div class="card-body">
-                    <h5 class="card-title">
-                      <i class="bi bi-file-earmark-text"></i>
-                      <a href="../mdhtml/个人品牌建设：2026年如何在社交媒体建立专业影响力.html" class="text-decoration-none">
+                    <h5 class="card-title article-title">
+                      <i class="bi bi-file-earmark-text me-2 text-primary"></i>
+                      <a href="../mdhtml/个人品牌建设：2026年如何在社交媒体建立专业影响力.html" class="text-decoration-none text-dark">
                         个人品牌建设：2026年如何在社交媒体建立专业影响力
                       </a>
                     </h5>
                     
-                      <p class="card-text">
+                      <p class="card-text text-muted mb-3">
                         针对当前职场人士需求，聚焦社交媒体策略，帮助职场人士在2026年建立专业影响力
                       </p>
                       
-                        
-                          <small class="text-muted">
-                            2026-02-28
-                          </small>
-                          
+                        <div class="article-meta">
+                            
+                                <i class="bi bi-clock me-1"></i>
+                                2026-02-28
+                                
+                        </div>
                   </div>
-                  <div class="card-footer text-muted">
+                  <div class="card-footer text-muted bg-white border-top">
                     <a href="/category/%E8%81%8C%E4%B8%9A%E5%8F%91%E5%B1%95.html"
-                      class="badge bg-primary">
+                      class="badge bg-primary me-2">
                       职业发展
                     </a>
                     
-                      <a href="/tag/%E4%B8%AA%E4%BA%BA%E5%93%81%E7%89%8C.html" class="badge tag-link">
+                      <a href="/tag/%E4%B8%AA%E4%BA%BA%E5%93%81%E7%89%8C.html" class="badge tag-link me-2 mb-1">
                         个人品牌
                       </a>
                       
-                      <a href="/tag/%E7%A4%BE%E4%BA%A4%E5%AA%92%E4%BD%93.html" class="badge tag-link">
+                      <a href="/tag/%E7%A4%BE%E4%BA%A4%E5%AA%92%E4%BD%93.html" class="badge tag-link me-2 mb-1">
                         社交媒体
                       </a>
                       
-                      <a href="/tag/%E4%B8%93%E4%B8%9A%E5%BD%B1%E5%93%8D%E5%8A%9B.html" class="badge tag-link">
+                      <a href="/tag/%E4%B8%93%E4%B8%9A%E5%BD%B1%E5%93%8D%E5%8A%9B.html" class="badge tag-link me-2 mb-1">
                         专业影响力
                       </a>
                       
-                      <a href="/tag/2026.html" class="badge tag-link">
+                      <a href="/tag/2026.html" class="badge tag-link me-2 mb-1">
                         2026
                       </a>
                       
-                      <a href="/tag/%E8%81%8C%E5%9C%BA%E7%AD%96%E7%95%A5.html" class="badge tag-link">
+                      <a href="/tag/%E8%81%8C%E5%9C%BA%E7%AD%96%E7%95%A5.html" class="badge tag-link me-2 mb-1">
                         职场策略
                       </a>
                       
@@ -445,48 +517,49 @@
               </div>
               
               <div class="masonry-grid-item">
-                <div class="card shadow-sm">
+                <div class="card article-card shadow-sm">
                   <div class="card-body">
-                    <h5 class="card-title">
-                      <i class="bi bi-file-earmark-text"></i>
-                      <a href="../mdhtml/如何应对社交媒体上的负面评论.html" class="text-decoration-none">
+                    <h5 class="card-title article-title">
+                      <i class="bi bi-file-earmark-text me-2 text-primary"></i>
+                      <a href="../mdhtml/如何应对社交媒体上的负面评论.html" class="text-decoration-none text-dark">
                         如何应对社交媒体上的负面评论
                       </a>
                     </h5>
                     
-                      <p class="card-text">
+                      <p class="card-text text-muted mb-3">
                         探讨如何应对社交媒体上的负面评论，包括心态调整、应对策略、平台规则利用等方面的实用建议。
                       </p>
                       
-                        
-                          <small class="text-muted">
-                            2026-02-28
-                          </small>
-                          
+                        <div class="article-meta">
+                            
+                                <i class="bi bi-clock me-1"></i>
+                                2026-02-28
+                                
+                        </div>
                   </div>
-                  <div class="card-footer text-muted">
+                  <div class="card-footer text-muted bg-white border-top">
                     <a href="/category/%E8%87%AA%E6%88%91%E6%8F%90%E5%8D%87.html"
-                      class="badge bg-primary">
+                      class="badge bg-primary me-2">
                       自我提升
                     </a>
                     
-                      <a href="/tag/%E7%A4%BE%E4%BA%A4%E5%AA%92%E4%BD%93.html" class="badge tag-link">
+                      <a href="/tag/%E7%A4%BE%E4%BA%A4%E5%AA%92%E4%BD%93.html" class="badge tag-link me-2 mb-1">
                         社交媒体
                       </a>
                       
-                      <a href="/tag/%E8%B4%9F%E9%9D%A2%E8%AF%84%E8%AE%BA.html" class="badge tag-link">
+                      <a href="/tag/%E8%B4%9F%E9%9D%A2%E8%AF%84%E8%AE%BA.html" class="badge tag-link me-2 mb-1">
                         负面评论
                       </a>
                       
-                      <a href="/tag/%E6%83%85%E7%BB%AA%E7%AE%A1%E7%90%86.html" class="badge tag-link">
+                      <a href="/tag/%E6%83%85%E7%BB%AA%E7%AE%A1%E7%90%86.html" class="badge tag-link me-2 mb-1">
                         情绪管理
                       </a>
                       
-                      <a href="/tag/%E7%BD%91%E7%BB%9C%E7%B4%A0%E5%85%BB.html" class="badge tag-link">
+                      <a href="/tag/%E7%BD%91%E7%BB%9C%E7%B4%A0%E5%85%BB.html" class="badge tag-link me-2 mb-1">
                         网络素养
                       </a>
                       
-                      <a href="/tag/%E6%B2%9F%E9%80%9A%E6%8A%80%E5%B7%A7.html" class="badge tag-link">
+                      <a href="/tag/%E6%B2%9F%E9%80%9A%E6%8A%80%E5%B7%A7.html" class="badge tag-link me-2 mb-1">
                         沟通技巧
                       </a>
                       
@@ -495,48 +568,49 @@
               </div>
               
               <div class="masonry-grid-item">
-                <div class="card shadow-sm">
+                <div class="card article-card shadow-sm">
                   <div class="card-body">
-                    <h5 class="card-title">
-                      <i class="bi bi-file-earmark-text"></i>
-                      <a href="../mdhtml/如何在社交媒体时代保持心理健康.html" class="text-decoration-none">
+                    <h5 class="card-title article-title">
+                      <i class="bi bi-file-earmark-text me-2 text-primary"></i>
+                      <a href="../mdhtml/如何在社交媒体时代保持心理健康.html" class="text-decoration-none text-dark">
                         如何在社交媒体时代保持心理健康
                       </a>
                     </h5>
                     
-                      <p class="card-text">
+                      <p class="card-text text-muted mb-3">
                         探讨在社交媒体普及的时代如何保持心理健康，提供实用的应对策略和自我调节方法。
                       </p>
                       
-                        
-                          <small class="text-muted">
-                            2026-02-27
-                          </small>
-                          
+                        <div class="article-meta">
+                            
+                                <i class="bi bi-clock me-1"></i>
+                                2026-02-27
+                                
+                        </div>
                   </div>
-                  <div class="card-footer text-muted">
+                  <div class="card-footer text-muted bg-white border-top">
                     <a href="/category/%E8%BA%AB%E5%BF%83%E5%81%A5%E5%BA%B7.html"
-                      class="badge bg-primary">
+                      class="badge bg-primary me-2">
                       身心健康
                     </a>
                     
-                      <a href="/tag/%E7%A4%BE%E4%BA%A4%E5%AA%92%E4%BD%93.html" class="badge tag-link">
+                      <a href="/tag/%E7%A4%BE%E4%BA%A4%E5%AA%92%E4%BD%93.html" class="badge tag-link me-2 mb-1">
                         社交媒体
                       </a>
                       
-                      <a href="/tag/%E5%BF%83%E7%90%86%E5%81%A5%E5%BA%B7.html" class="badge tag-link">
+                      <a href="/tag/%E5%BF%83%E7%90%86%E5%81%A5%E5%BA%B7.html" class="badge tag-link me-2 mb-1">
                         心理健康
                       </a>
                       
-                      <a href="/tag/%E6%95%B0%E5%AD%97%E6%8E%92%E6%AF%92.html" class="badge tag-link">
+                      <a href="/tag/%E6%95%B0%E5%AD%97%E6%8E%92%E6%AF%92.html" class="badge tag-link me-2 mb-1">
                         数字排毒
                       </a>
                       
-                      <a href="/tag/%E8%87%AA%E6%88%91%E5%85%B3%E7%88%B1.html" class="badge tag-link">
+                      <a href="/tag/%E8%87%AA%E6%88%91%E5%85%B3%E7%88%B1.html" class="badge tag-link me-2 mb-1">
                         自我关爱
                       </a>
                       
-                      <a href="/tag/%E4%BF%A1%E6%81%AF%E8%BF%87%E8%BD%BD.html" class="badge tag-link">
+                      <a href="/tag/%E4%BF%A1%E6%81%AF%E8%BF%87%E8%BD%BD.html" class="badge tag-link me-2 mb-1">
                         信息过载
                       </a>
                       
@@ -545,52 +619,53 @@
               </div>
               
               <div class="masonry-grid-item">
-                <div class="card shadow-sm">
+                <div class="card article-card shadow-sm">
                   <div class="card-body">
-                    <h5 class="card-title">
-                      <i class="bi bi-file-earmark-text"></i>
-                      <a href="../mdhtml/数字围城下的生存法则：普通人的隐私自卫指南.html" class="text-decoration-none">
+                    <h5 class="card-title article-title">
+                      <i class="bi bi-file-earmark-text me-2 text-primary"></i>
+                      <a href="../mdhtml/数字围城下的生存法则：普通人的隐私自卫指南.html" class="text-decoration-none text-dark">
                         数字围城下的生存法则：普通人的隐私自卫指南
                       </a>
                     </h5>
                     
-                      <p class="card-text">
+                      <p class="card-text text-muted mb-3">
                         文章提供了全面的隐私保护指南，涵盖密码管理、社交平台使用、手机应用权限控制、公共空间安全防范及信息泄露应急措施等方面，旨在帮助普通用户在数字时代有效保护个人隐私，确保生活主动权。
                       </p>
                       
-                        
-                          <small class="text-muted">
-                            2026-02-24
-                          </small>
-                          
+                        <div class="article-meta">
+                            
+                                <i class="bi bi-clock me-1"></i>
+                                2026-02-24
+                                
+                        </div>
                   </div>
-                  <div class="card-footer text-muted">
+                  <div class="card-footer text-muted bg-white border-top">
                     <a href="/category/%E7%A7%91%E6%8A%80%E5%89%8D%E6%B2%BF.html"
-                      class="badge bg-primary">
+                      class="badge bg-primary me-2">
                       科技前沿
                     </a>
                     
-                      <a href="/tag/%E9%9A%90%E7%A7%81%E4%BF%9D%E6%8A%A4.html" class="badge tag-link">
+                      <a href="/tag/%E9%9A%90%E7%A7%81%E4%BF%9D%E6%8A%A4.html" class="badge tag-link me-2 mb-1">
                         隐私保护
                       </a>
                       
-                      <a href="/tag/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8.html" class="badge tag-link">
+                      <a href="/tag/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8.html" class="badge tag-link me-2 mb-1">
                         网络安全
                       </a>
                       
-                      <a href="/tag/%E7%A4%BE%E4%BA%A4%E5%AA%92%E4%BD%93.html" class="badge tag-link">
+                      <a href="/tag/%E7%A4%BE%E4%BA%A4%E5%AA%92%E4%BD%93.html" class="badge tag-link me-2 mb-1">
                         社交媒体
                       </a>
                       
-                      <a href="/tag/%E5%BA%94%E7%94%A8%E6%9D%83%E9%99%90.html" class="badge tag-link">
+                      <a href="/tag/%E5%BA%94%E7%94%A8%E6%9D%83%E9%99%90.html" class="badge tag-link me-2 mb-1">
                         应用权限
                       </a>
                       
-                      <a href="/tag/%E5%85%AC%E5%85%B1WiFi.html" class="badge tag-link">
+                      <a href="/tag/%E5%85%AC%E5%85%B1WiFi.html" class="badge tag-link me-2 mb-1">
                         公共WiFi
                       </a>
                       
-                      <a href="/tag/%E4%B8%AA%E4%BA%BA%E4%BF%A1%E6%81%AF%E7%AE%A1%E7%90%86.html" class="badge tag-link">
+                      <a href="/tag/%E4%B8%AA%E4%BA%BA%E4%BF%A1%E6%81%AF%E7%AE%A1%E7%90%86.html" class="badge tag-link me-2 mb-1">
                         个人信息管理
                       </a>
                       
@@ -599,48 +674,49 @@
               </div>
               
               <div class="masonry-grid-item">
-                <div class="card shadow-sm">
+                <div class="card article-card shadow-sm">
                   <div class="card-body">
-                    <h5 class="card-title">
-                      <i class="bi bi-file-earmark-text"></i>
-                      <a href="../mdhtml/我们如何在享受科技成果的同时，保持人性的温暖和尊严？.html" class="text-decoration-none">
+                    <h5 class="card-title article-title">
+                      <i class="bi bi-file-earmark-text me-2 text-primary"></i>
+                      <a href="../mdhtml/我们如何在享受科技成果的同时，保持人性的温暖和尊严？.html" class="text-decoration-none text-dark">
                         我们如何在享受科技成果的同时，保持人性的温暖和尊严？
                       </a>
                     </h5>
                     
-                      <p class="card-text">
+                      <p class="card-text text-muted mb-3">
                         在享受科技带来的便利时，我们面临着人际关系疏远和人性温暖缺失的挑战。本文探讨了如何在科技进步的同时保持人性的温度与尊严，包括有意识地控制科技使用、重新定义科技的价值观以及通过教育培养下一代的人文关怀。实现科技与人性的和谐共生，需要我们在技术发展与人文价值间找到平衡，确保社会既高效又充满温情。
                       </p>
                       
-                        
-                          <small class="text-muted">
-                            2026-02-11
-                          </small>
-                          
+                        <div class="article-meta">
+                            
+                                <i class="bi bi-clock me-1"></i>
+                                2026-02-11
+                                
+                        </div>
                   </div>
-                  <div class="card-footer text-muted">
+                  <div class="card-footer text-muted bg-white border-top">
                     <a href="/category/%E8%87%AA%E7%84%B6%E7%A7%91%E5%AD%A6.html"
-                      class="badge bg-primary">
+                      class="badge bg-primary me-2">
                       自然科学
                     </a>
                     
-                      <a href="/tag/%E7%A7%91%E6%8A%80%E4%B8%8E%E4%BA%BA%E6%96%87%E4%BB%B7%E5%80%BC.html" class="badge tag-link">
+                      <a href="/tag/%E7%A7%91%E6%8A%80%E4%B8%8E%E4%BA%BA%E6%96%87%E4%BB%B7%E5%80%BC.html" class="badge tag-link me-2 mb-1">
                         科技与人文价值
                       </a>
                       
-                      <a href="/tag/%E4%BA%BA%E6%80%A7%E6%B8%A9%E6%9A%96.html" class="badge tag-link">
+                      <a href="/tag/%E4%BA%BA%E6%80%A7%E6%B8%A9%E6%9A%96.html" class="badge tag-link me-2 mb-1">
                         人性温暖
                       </a>
                       
-                      <a href="/tag/%E7%A4%BE%E4%BA%A4%E5%AA%92%E4%BD%93.html" class="badge tag-link">
+                      <a href="/tag/%E7%A4%BE%E4%BA%A4%E5%AA%92%E4%BD%93.html" class="badge tag-link me-2 mb-1">
                         社交媒体
                       </a>
                       
-                      <a href="/tag/%E7%A7%91%E6%8A%80%E4%B8%8E%E4%BA%BA%E6%96%87%E4%BB%B7%E5%80%BC.html" class="badge tag-link">
+                      <a href="/tag/%E7%A7%91%E6%8A%80%E4%B8%8E%E4%BA%BA%E6%96%87%E4%BB%B7%E5%80%BC.html" class="badge tag-link me-2 mb-1">
                         科技与人文价值
                       </a>
                       
-                      <a href="/tag/%E6%95%99%E8%82%B2%E8%B7%AF%E5%BE%84.html" class="badge tag-link">
+                      <a href="/tag/%E6%95%99%E8%82%B2%E8%B7%AF%E5%BE%84.html" class="badge tag-link me-2 mb-1">
                         教育路径
                       </a>
                       
@@ -649,48 +725,49 @@
               </div>
               
               <div class="masonry-grid-item">
-                <div class="card shadow-sm">
+                <div class="card article-card shadow-sm">
                   <div class="card-body">
-                    <h5 class="card-title">
-                      <i class="bi bi-file-earmark-text"></i>
-                      <a href="../mdhtml/如果手机能直接读取你的心思，我们还会发朋友圈吗？.html" class="text-decoration-none">
+                    <h5 class="card-title article-title">
+                      <i class="bi bi-file-earmark-text me-2 text-primary"></i>
+                      <a href="../mdhtml/如果手机能直接读取你的心思，我们还会发朋友圈吗？.html" class="text-decoration-none text-dark">
                         如果手机能直接读取你的心思，我们还会发朋友圈吗？
                       </a>
                     </h5>
                     
-                      <p class="card-text">
+                      <p class="card-text text-muted mb-3">
                         探讨当手机能直接读取心思时，将会对社交媒体、人际关系和个人隐私产生的深远影响，以及我们是否还会继续发朋友圈。
                       </p>
                       
-                        
-                          <small class="text-muted">
-                            2026-02-11
-                          </small>
-                          
+                        <div class="article-meta">
+                            
+                                <i class="bi bi-clock me-1"></i>
+                                2026-02-11
+                                
+                        </div>
                   </div>
-                  <div class="card-footer text-muted">
+                  <div class="card-footer text-muted bg-white border-top">
                     <a href="/category/%E8%84%91%E6%B4%9E%E5%A4%A7%E5%BC%80.html"
-                      class="badge bg-primary">
+                      class="badge bg-primary me-2">
                       脑洞大开
                     </a>
                     
-                      <a href="/tag/%E6%89%8B%E6%9C%BA%E8%AF%BB%E5%BF%83.html" class="badge tag-link">
+                      <a href="/tag/%E6%89%8B%E6%9C%BA%E8%AF%BB%E5%BF%83.html" class="badge tag-link me-2 mb-1">
                         手机读心
                       </a>
                       
-                      <a href="/tag/%E6%9C%8B%E5%8F%8B%E5%9C%88.html" class="badge tag-link">
+                      <a href="/tag/%E6%9C%8B%E5%8F%8B%E5%9C%88.html" class="badge tag-link me-2 mb-1">
                         朋友圈
                       </a>
                       
-                      <a href="/tag/%E7%A4%BE%E4%BA%A4%E5%AA%92%E4%BD%93.html" class="badge tag-link">
+                      <a href="/tag/%E7%A4%BE%E4%BA%A4%E5%AA%92%E4%BD%93.html" class="badge tag-link me-2 mb-1">
                         社交媒体
                       </a>
                       
-                      <a href="/tag/%E9%9A%90%E7%A7%81.html" class="badge tag-link">
+                      <a href="/tag/%E9%9A%90%E7%A7%81.html" class="badge tag-link me-2 mb-1">
                         隐私
                       </a>
                       
-                      <a href="/tag/%E4%BA%BA%E9%99%85%E5%85%B3%E7%B3%BB.html" class="badge tag-link">
+                      <a href="/tag/%E4%BA%BA%E9%99%85%E5%85%B3%E7%B3%BB.html" class="badge tag-link me-2 mb-1">
                         人际关系
                       </a>
                       
@@ -700,8 +777,8 @@
               
           </div>
 
-          <div class="mt-4 text-center">
-            <a href="标签列表.html" class="btn btn-outline-primary"><i class="bi bi-arrow-left"></i> 返回标签列表</a>
+          <div class="mt-6 text-center">
+            <a href="标签列表.html" class="btn btn-outline-primary back-button"><i class="bi bi-arrow-left me-2"></i> 返回标签列表</a>
           </div>
         </div>
       </div>
@@ -725,7 +802,7 @@
             itemSelector: '.masonry-grid-item',
             columnWidth: '.masonry-grid-item',
             percentPosition: true,
-            gutter: 10 // 可选，添加卡片间的间距
+            gutter: 15 // 增加间距，提升视觉效果
           });
         });
       </script>

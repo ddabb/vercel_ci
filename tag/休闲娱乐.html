@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
 
 <head>
   <meta charset="UTF-8">
@@ -9,7 +9,7 @@
   <meta name="description" content="无人自助站的【休闲娱乐】的标签列表页面，汇集了关于【休闲娱乐】标签相关的文章和资讯，方便您快速找到感兴趣的内容。">
   <meta name="keywords" content="无人自助站,休闲娱乐">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>标签文章列表</title>
+  <title>休闲娱乐标签 - 无人自助站</title>
 
   <link rel="icon" href="../logo.svg" type="image/svg+xml">
   <link rel="stylesheet" href="../css/style.css">
@@ -27,6 +27,62 @@
   <!-- 引入Masonry -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/masonry/4.2.2/masonry.pkgd.min.js"></script>
 
+  <style>
+        .tag-header {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            color: white;
+            padding: 2rem;
+            border-radius: 8px;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        .tag-title {
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+        .article-card {
+            transition: all 0.3s ease;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        .article-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+        }
+        .article-title {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            transition: color 0.3s ease;
+        }
+        .article-title:hover {
+            color: #0d6efd;
+        }
+        .article-meta {
+            font-size: 0.85rem;
+            color: #6c757d;
+        }
+        .tag-link {
+            background-color: #e9ecef;
+            color: #495057;
+            transition: all 0.2s ease;
+        }
+        .tag-link:hover {
+            background-color: #dee2e6;
+            color: #212529;
+        }
+        .back-button {
+            transition: all 0.3s ease;
+        }
+        .back-button:hover {
+            transform: translateX(-3px);
+        }
+        .article-count {
+            font-size: 0.9rem;
+            opacity: 0.9;
+        }
+    </style>
 </head>
 
 <body>
@@ -80,7 +136,7 @@
     <main class="container-fluid mt-4">
       <div class="row">
         <div class="col-lg-8 col-md-12 mx-auto">
-          <nav aria-label="breadcrumb">
+          <nav aria-label="breadcrumb" class="mb-4">
             <ol class="breadcrumb">
               <li class="breadcrumb-item"><a href="/html/index.html">首页</a></li>
               <li class="breadcrumb-item"><a href="标签列表.html">标签列表</a></li>
@@ -89,54 +145,64 @@
               </li>
             </ol>
           </nav>
-          <h1 style="font-size: 1.5em; margin: 0.5em 0;">
-            休闲娱乐标签的文章和资讯
-        </h1>
+          
+          <!-- 标签头部 -->
+          <div class="tag-header">
+              <h1 class="tag-title">
+                  <i class="bi bi-tags me-2"></i>
+                  休闲娱乐
+              </h1>
+              <p class="article-count">
+                  共 2 篇文章
+              </p>
+          </div>
+          
           <div class="masonry-grid">
             
               <div class="masonry-grid-item">
-                <div class="card shadow-sm">
+                <div class="card article-card shadow-sm">
                   <div class="card-body">
-                    <h5 class="card-title">
-                      <i class="bi bi-file-earmark-text"></i>
-                      <a href="../mdhtml/人到中年但工作经常要出差，适合差旅办公的物品推荐.html" class="text-decoration-none">
+                    <h5 class="card-title article-title">
+                      <i class="bi bi-file-earmark-text me-2 text-primary"></i>
+                      <a href="../mdhtml/人到中年但工作经常要出差，适合差旅办公的物品推荐.html" class="text-decoration-none text-dark">
                         人到中年但工作经常要出差，适合差旅办公的物品推荐
                       </a>
                     </h5>
                     
-                      <p class="card-text">
+                      <p class="card-text text-muted mb-3">
                         为中年到中年经常出差的朋友推荐适合差旅办公的各类物品，涵盖办公设备、用品、生活便利、健康护理和休闲娱乐等方面，助您出差更轻松高效。
                       </p>
                       
-                        
-                          <small class="text-muted">
-                            2026-02-24
-                          </small>
-                          
+                        <div class="article-meta">
+                            
+                                <i class="bi bi-clock me-1"></i>
+                                2026-02-24
+                                
+                        </div>
                   </div>
-                  <div class="card-footer text-muted">
+                  <div class="card-footer text-muted bg-white border-top">
                     <a href="/category/%E7%94%9F%E6%B4%BB%E6%97%A5%E5%B8%B8.html"
-                      class="badge bg-primary">
+                      class="badge bg-primary me-2">
                       生活日常
                     </a>
                     
-                      <a href="/tag/%E4%B8%AD%E5%B9%B4%E5%87%BA%E5%B7%AE.html" class="badge tag-link">
+                      <a href="/tag/%E4%B8%AD%E5%B9%B4%E5%87%BA%E5%B7%AE.html" class="badge tag-link me-2 mb-1">
                         中年出差
                       </a>
                       
-                      <a href="/tag/%E5%8A%9E%E5%85%AC%E8%AE%BE%E5%A4%87.html" class="badge tag-link">
+                      <a href="/tag/%E5%8A%9E%E5%85%AC%E8%AE%BE%E5%A4%87.html" class="badge tag-link me-2 mb-1">
                         办公设备
                       </a>
                       
-                      <a href="/tag/%E7%94%9F%E6%B4%BB%E4%BE%BF%E5%88%A9.html" class="badge tag-link">
+                      <a href="/tag/%E7%94%9F%E6%B4%BB%E4%BE%BF%E5%88%A9.html" class="badge tag-link me-2 mb-1">
                         生活便利
                       </a>
                       
-                      <a href="/tag/%E5%81%A5%E5%BA%B7%E6%8A%A4%E7%90%86.html" class="badge tag-link">
+                      <a href="/tag/%E5%81%A5%E5%BA%B7%E6%8A%A4%E7%90%86.html" class="badge tag-link me-2 mb-1">
                         健康护理
                       </a>
                       
-                      <a href="/tag/%E4%BC%91%E9%97%B2%E5%A8%B1%E4%B9%90.html" class="badge tag-link">
+                      <a href="/tag/%E4%BC%91%E9%97%B2%E5%A8%B1%E4%B9%90.html" class="badge tag-link me-2 mb-1">
                         休闲娱乐
                       </a>
                       
@@ -145,48 +211,49 @@
               </div>
               
               <div class="masonry-grid-item">
-                <div class="card shadow-sm">
+                <div class="card article-card shadow-sm">
                   <div class="card-body">
-                    <h5 class="card-title">
-                      <i class="bi bi-file-earmark-text"></i>
-                      <a href="../mdhtml/五千元月收入的生活日常：平凡中的充实与意义.html" class="text-decoration-none">
+                    <h5 class="card-title article-title">
+                      <i class="bi bi-file-earmark-text me-2 text-primary"></i>
+                      <a href="../mdhtml/五千元月收入的生活日常：平凡中的充实与意义.html" class="text-decoration-none text-dark">
                         五千元月收入的生活日常：平凡中的充实与意义
                       </a>
                     </h5>
                     
-                      <p class="card-text">
+                      <p class="card-text text-muted mb-3">
                         讲述月收入五千元普通人的生活日常，展现如何在有限收入下通过合理安排让生活充实且有意义，包括工作、学习、家庭、休闲等多方面的生活点滴。
                       </p>
                       
-                        
-                          <small class="text-muted">
-                            2026-02-11
-                          </small>
-                          
+                        <div class="article-meta">
+                            
+                                <i class="bi bi-clock me-1"></i>
+                                2026-02-11
+                                
+                        </div>
                   </div>
-                  <div class="card-footer text-muted">
+                  <div class="card-footer text-muted bg-white border-top">
                     <a href="/category/%E7%94%9F%E6%B4%BB%E6%97%A5%E5%B8%B8.html"
-                      class="badge bg-primary">
+                      class="badge bg-primary me-2">
                       生活日常
                     </a>
                     
-                      <a href="/tag/%E6%9C%88%E6%94%B6%E5%85%A5.html" class="badge tag-link">
+                      <a href="/tag/%E6%9C%88%E6%94%B6%E5%85%A5.html" class="badge tag-link me-2 mb-1">
                         月收入
                       </a>
                       
-                      <a href="/tag/%E7%94%9F%E6%B4%BB%E6%97%A5%E5%B8%B8.html" class="badge tag-link">
+                      <a href="/tag/%E7%94%9F%E6%B4%BB%E6%97%A5%E5%B8%B8.html" class="badge tag-link me-2 mb-1">
                         生活日常
                       </a>
                       
-                      <a href="/tag/%E8%87%AA%E6%88%91%E6%8F%90%E5%8D%87.html" class="badge tag-link">
+                      <a href="/tag/%E8%87%AA%E6%88%91%E6%8F%90%E5%8D%87.html" class="badge tag-link me-2 mb-1">
                         自我提升
                       </a>
                       
-                      <a href="/tag/%E5%AE%B6%E5%BA%AD%E6%97%B6%E5%85%89.html" class="badge tag-link">
+                      <a href="/tag/%E5%AE%B6%E5%BA%AD%E6%97%B6%E5%85%89.html" class="badge tag-link me-2 mb-1">
                         家庭时光
                       </a>
                       
-                      <a href="/tag/%E4%BC%91%E9%97%B2%E5%A8%B1%E4%B9%90.html" class="badge tag-link">
+                      <a href="/tag/%E4%BC%91%E9%97%B2%E5%A8%B1%E4%B9%90.html" class="badge tag-link me-2 mb-1">
                         休闲娱乐
                       </a>
                       
@@ -196,8 +263,8 @@
               
           </div>
 
-          <div class="mt-4 text-center">
-            <a href="标签列表.html" class="btn btn-outline-primary"><i class="bi bi-arrow-left"></i> 返回标签列表</a>
+          <div class="mt-6 text-center">
+            <a href="标签列表.html" class="btn btn-outline-primary back-button"><i class="bi bi-arrow-left me-2"></i> 返回标签列表</a>
           </div>
         </div>
       </div>
@@ -221,7 +288,7 @@
             itemSelector: '.masonry-grid-item',
             columnWidth: '.masonry-grid-item',
             percentPosition: true,
-            gutter: 10 // 可选，添加卡片间的间距
+            gutter: 15 // 增加间距，提升视觉效果
           });
         });
       </script>

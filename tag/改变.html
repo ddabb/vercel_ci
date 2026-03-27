@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
 
 <head>
   <meta charset="UTF-8">
@@ -9,7 +9,7 @@
   <meta name="description" content="无人自助站的【改变】的标签列表页面，汇集了关于【改变】标签相关的文章和资讯，方便您快速找到感兴趣的内容。">
   <meta name="keywords" content="无人自助站,改变">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>标签文章列表</title>
+  <title>改变标签 - 无人自助站</title>
 
   <link rel="icon" href="../logo.svg" type="image/svg+xml">
   <link rel="stylesheet" href="../css/style.css">
@@ -27,6 +27,62 @@
   <!-- 引入Masonry -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/masonry/4.2.2/masonry.pkgd.min.js"></script>
 
+  <style>
+        .tag-header {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            color: white;
+            padding: 2rem;
+            border-radius: 8px;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        .tag-title {
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+        .article-card {
+            transition: all 0.3s ease;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        .article-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+        }
+        .article-title {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            transition: color 0.3s ease;
+        }
+        .article-title:hover {
+            color: #0d6efd;
+        }
+        .article-meta {
+            font-size: 0.85rem;
+            color: #6c757d;
+        }
+        .tag-link {
+            background-color: #e9ecef;
+            color: #495057;
+            transition: all 0.2s ease;
+        }
+        .tag-link:hover {
+            background-color: #dee2e6;
+            color: #212529;
+        }
+        .back-button {
+            transition: all 0.3s ease;
+        }
+        .back-button:hover {
+            transform: translateX(-3px);
+        }
+        .article-count {
+            font-size: 0.9rem;
+            opacity: 0.9;
+        }
+    </style>
 </head>
 
 <body>
@@ -80,7 +136,7 @@
     <main class="container-fluid mt-4">
       <div class="row">
         <div class="col-lg-8 col-md-12 mx-auto">
-          <nav aria-label="breadcrumb">
+          <nav aria-label="breadcrumb" class="mb-4">
             <ol class="breadcrumb">
               <li class="breadcrumb-item"><a href="/html/index.html">首页</a></li>
               <li class="breadcrumb-item"><a href="标签列表.html">标签列表</a></li>
@@ -89,54 +145,64 @@
               </li>
             </ol>
           </nav>
-          <h1 style="font-size: 1.5em; margin: 0.5em 0;">
-            改变标签的文章和资讯
-        </h1>
+          
+          <!-- 标签头部 -->
+          <div class="tag-header">
+              <h1 class="tag-title">
+                  <i class="bi bi-tags me-2"></i>
+                  改变
+              </h1>
+              <p class="article-count">
+                  共 6 篇文章
+              </p>
+          </div>
+          
           <div class="masonry-grid">
             
               <div class="masonry-grid-item">
-                <div class="card shadow-sm">
+                <div class="card article-card shadow-sm">
                   <div class="card-body">
-                    <h5 class="card-title">
-                      <i class="bi bi-file-earmark-text"></i>
-                      <a href="../mdhtml/成功的秘密：不是天赋，而是习惯.html" class="text-decoration-none">
+                    <h5 class="card-title article-title">
+                      <i class="bi bi-file-earmark-text me-2 text-primary"></i>
+                      <a href="../mdhtml/成功的秘密：不是天赋，而是习惯.html" class="text-decoration-none text-dark">
                         成功的秘密：不是天赋，而是习惯
                       </a>
                     </h5>
                     
-                      <p class="card-text">
+                      <p class="card-text text-muted mb-3">
                         深入探讨成功的真正秘密，分析习惯的力量、小步骤的重要性、一致性的价值、以及如何通过习惯实现成功。
                       </p>
                       
-                        
-                          <small class="text-muted">
-                            2026-03-24
-                          </small>
-                          
+                        <div class="article-meta">
+                            
+                                <i class="bi bi-clock me-1"></i>
+                                2026-03-24
+                                
+                        </div>
                   </div>
-                  <div class="card-footer text-muted">
+                  <div class="card-footer text-muted bg-white border-top">
                     <a href="/category/%E4%BA%BA%E7%94%9F%E6%88%90%E9%95%BF.html"
-                      class="badge bg-primary">
+                      class="badge bg-primary me-2">
                       人生成长
                     </a>
                     
-                      <a href="/tag/%E6%88%90%E5%8A%9F.html" class="badge tag-link">
+                      <a href="/tag/%E6%88%90%E5%8A%9F.html" class="badge tag-link me-2 mb-1">
                         成功
                       </a>
                       
-                      <a href="/tag/%E4%B9%A0%E6%83%AF.html" class="badge tag-link">
+                      <a href="/tag/%E4%B9%A0%E6%83%AF.html" class="badge tag-link me-2 mb-1">
                         习惯
                       </a>
                       
-                      <a href="/tag/%E5%9D%9A%E6%8C%81.html" class="badge tag-link">
+                      <a href="/tag/%E5%9D%9A%E6%8C%81.html" class="badge tag-link me-2 mb-1">
                         坚持
                       </a>
                       
-                      <a href="/tag/%E5%B0%8F%E6%AD%A5%E9%AA%A4.html" class="badge tag-link">
+                      <a href="/tag/%E5%B0%8F%E6%AD%A5%E9%AA%A4.html" class="badge tag-link me-2 mb-1">
                         小步骤
                       </a>
                       
-                      <a href="/tag/%E6%94%B9%E5%8F%98.html" class="badge tag-link">
+                      <a href="/tag/%E6%94%B9%E5%8F%98.html" class="badge tag-link me-2 mb-1">
                         改变
                       </a>
                       
@@ -145,48 +211,49 @@
               </div>
               
               <div class="masonry-grid-item">
-                <div class="card shadow-sm">
+                <div class="card article-card shadow-sm">
                   <div class="card-body">
-                    <h5 class="card-title">
-                      <i class="bi bi-file-earmark-text"></i>
-                      <a href="../mdhtml/同情的力量：如何通过理解改变世界.html" class="text-decoration-none">
+                    <h5 class="card-title article-title">
+                      <i class="bi bi-file-earmark-text me-2 text-primary"></i>
+                      <a href="../mdhtml/同情的力量：如何通过理解改变世界.html" class="text-decoration-none text-dark">
                         同情的力量：如何通过理解改变世界
                       </a>
                     </h5>
                     
-                      <p class="card-text">
+                      <p class="card-text text-muted mb-3">
                         深入探讨同情的力量，分析同情如何改变关系、同情的益处、同情的挑战、以及如何培养同情心。
                       </p>
                       
-                        
-                          <small class="text-muted">
-                            2026-03-24
-                          </small>
-                          
+                        <div class="article-meta">
+                            
+                                <i class="bi bi-clock me-1"></i>
+                                2026-03-24
+                                
+                        </div>
                   </div>
-                  <div class="card-footer text-muted">
+                  <div class="card-footer text-muted bg-white border-top">
                     <a href="/category/%E4%BA%BA%E7%94%9F%E5%93%B2%E5%AD%A6.html"
-                      class="badge bg-primary">
+                      class="badge bg-primary me-2">
                       人生哲学
                     </a>
                     
-                      <a href="/tag/%E5%90%8C%E6%83%85.html" class="badge tag-link">
+                      <a href="/tag/%E5%90%8C%E6%83%85.html" class="badge tag-link me-2 mb-1">
                         同情
                       </a>
                       
-                      <a href="/tag/%E7%90%86%E8%A7%A3.html" class="badge tag-link">
+                      <a href="/tag/%E7%90%86%E8%A7%A3.html" class="badge tag-link me-2 mb-1">
                         理解
                       </a>
                       
-                      <a href="/tag/%E8%BF%9E%E6%8E%A5.html" class="badge tag-link">
+                      <a href="/tag/%E8%BF%9E%E6%8E%A5.html" class="badge tag-link me-2 mb-1">
                         连接
                       </a>
                       
-                      <a href="/tag/%E6%94%B9%E5%8F%98.html" class="badge tag-link">
+                      <a href="/tag/%E6%94%B9%E5%8F%98.html" class="badge tag-link me-2 mb-1">
                         改变
                       </a>
                       
-                      <a href="/tag/%E4%BA%BA%E6%80%A7.html" class="badge tag-link">
+                      <a href="/tag/%E4%BA%BA%E6%80%A7.html" class="badge tag-link me-2 mb-1">
                         人性
                       </a>
                       
@@ -195,48 +262,49 @@
               </div>
               
               <div class="masonry-grid-item">
-                <div class="card shadow-sm">
+                <div class="card article-card shadow-sm">
                   <div class="card-body">
-                    <h5 class="card-title">
-                      <i class="bi bi-file-earmark-text"></i>
-                      <a href="../mdhtml/勇气的故事：普通人如何做出非凡的事情.html" class="text-decoration-none">
+                    <h5 class="card-title article-title">
+                      <i class="bi bi-file-earmark-text me-2 text-primary"></i>
+                      <a href="../mdhtml/勇气的故事：普通人如何做出非凡的事情.html" class="text-decoration-none text-dark">
                         勇气的故事：普通人如何做出非凡的事情
                       </a>
                     </h5>
                     
-                      <p class="card-text">
+                      <p class="card-text text-muted mb-3">
                         深入探讨勇气的本质，分析勇气如何驱动改变、普通人的非凡故事、勇气的来源、以及如何培养勇气。
                       </p>
                       
-                        
-                          <small class="text-muted">
-                            2026-03-24
-                          </small>
-                          
+                        <div class="article-meta">
+                            
+                                <i class="bi bi-clock me-1"></i>
+                                2026-03-24
+                                
+                        </div>
                   </div>
-                  <div class="card-footer text-muted">
+                  <div class="card-footer text-muted bg-white border-top">
                     <a href="/category/%E4%BA%BA%E7%94%9F%E5%90%AF%E7%A4%BA.html"
-                      class="badge bg-primary">
+                      class="badge bg-primary me-2">
                       人生启示
                     </a>
                     
-                      <a href="/tag/%E5%8B%87%E6%B0%94.html" class="badge tag-link">
+                      <a href="/tag/%E5%8B%87%E6%B0%94.html" class="badge tag-link me-2 mb-1">
                         勇气
                       </a>
                       
-                      <a href="/tag/%E8%A1%8C%E5%8A%A8.html" class="badge tag-link">
+                      <a href="/tag/%E8%A1%8C%E5%8A%A8.html" class="badge tag-link me-2 mb-1">
                         行动
                       </a>
                       
-                      <a href="/tag/%E6%94%B9%E5%8F%98.html" class="badge tag-link">
+                      <a href="/tag/%E6%94%B9%E5%8F%98.html" class="badge tag-link me-2 mb-1">
                         改变
                       </a>
                       
-                      <a href="/tag/%E8%8B%B1%E9%9B%84.html" class="badge tag-link">
+                      <a href="/tag/%E8%8B%B1%E9%9B%84.html" class="badge tag-link me-2 mb-1">
                         英雄
                       </a>
                       
-                      <a href="/tag/%E6%99%AE%E9%80%9A%E4%BA%BA.html" class="badge tag-link">
+                      <a href="/tag/%E6%99%AE%E9%80%9A%E4%BA%BA.html" class="badge tag-link me-2 mb-1">
                         普通人
                       </a>
                       
@@ -245,48 +313,49 @@
               </div>
               
               <div class="masonry-grid-item">
-                <div class="card shadow-sm">
+                <div class="card article-card shadow-sm">
                   <div class="card-body">
-                    <h5 class="card-title">
-                      <i class="bi bi-file-earmark-text"></i>
-                      <a href="../mdhtml/爱的本质：为什么爱是我们最大的力量.html" class="text-decoration-none">
+                    <h5 class="card-title article-title">
+                      <i class="bi bi-file-earmark-text me-2 text-primary"></i>
+                      <a href="../mdhtml/爱的本质：为什么爱是我们最大的力量.html" class="text-decoration-none text-dark">
                         爱的本质：为什么爱是我们最大的力量
                       </a>
                     </h5>
                     
-                      <p class="card-text">
+                      <p class="card-text text-muted mb-3">
                         深入探讨爱的力量，分析爱如何改变世界、爱的多种形式、爱的挑战、以及如何在生活中表达爱。
                       </p>
                       
-                        
-                          <small class="text-muted">
-                            2026-03-24
-                          </small>
-                          
+                        <div class="article-meta">
+                            
+                                <i class="bi bi-clock me-1"></i>
+                                2026-03-24
+                                
+                        </div>
                   </div>
-                  <div class="card-footer text-muted">
+                  <div class="card-footer text-muted bg-white border-top">
                     <a href="/category/%E4%BA%BA%E7%94%9F%E5%93%B2%E5%AD%A6.html"
-                      class="badge bg-primary">
+                      class="badge bg-primary me-2">
                       人生哲学
                     </a>
                     
-                      <a href="/tag/%E7%88%B1.html" class="badge tag-link">
+                      <a href="/tag/%E7%88%B1.html" class="badge tag-link me-2 mb-1">
                         爱
                       </a>
                       
-                      <a href="/tag/%E8%BF%9E%E6%8E%A5.html" class="badge tag-link">
+                      <a href="/tag/%E8%BF%9E%E6%8E%A5.html" class="badge tag-link me-2 mb-1">
                         连接
                       </a>
                       
-                      <a href="/tag/%E4%BA%BA%E6%80%A7.html" class="badge tag-link">
+                      <a href="/tag/%E4%BA%BA%E6%80%A7.html" class="badge tag-link me-2 mb-1">
                         人性
                       </a>
                       
-                      <a href="/tag/%E5%90%8C%E6%83%85.html" class="badge tag-link">
+                      <a href="/tag/%E5%90%8C%E6%83%85.html" class="badge tag-link me-2 mb-1">
                         同情
                       </a>
                       
-                      <a href="/tag/%E6%94%B9%E5%8F%98.html" class="badge tag-link">
+                      <a href="/tag/%E6%94%B9%E5%8F%98.html" class="badge tag-link me-2 mb-1">
                         改变
                       </a>
                       
@@ -295,48 +364,49 @@
               </div>
               
               <div class="masonry-grid-item">
-                <div class="card shadow-sm">
+                <div class="card article-card shadow-sm">
                   <div class="card-body">
-                    <h5 class="card-title">
-                      <i class="bi bi-file-earmark-text"></i>
-                      <a href="../mdhtml/希望的力量：为什么我们需要相信美好的未来.html" class="text-decoration-none">
+                    <h5 class="card-title article-title">
+                      <i class="bi bi-file-earmark-text me-2 text-primary"></i>
+                      <a href="../mdhtml/希望的力量：为什么我们需要相信美好的未来.html" class="text-decoration-none text-dark">
                         希望的力量：为什么我们需要相信美好的未来
                       </a>
                     </h5>
                     
-                      <p class="card-text">
+                      <p class="card-text text-muted mb-3">
                         深入探讨希望的力量，分析希望如何驱动改变、乐观的益处、绝望的危害、以及如何在困难中保持希望。
                       </p>
                       
-                        
-                          <small class="text-muted">
-                            2026-03-24
-                          </small>
-                          
+                        <div class="article-meta">
+                            
+                                <i class="bi bi-clock me-1"></i>
+                                2026-03-24
+                                
+                        </div>
                   </div>
-                  <div class="card-footer text-muted">
+                  <div class="card-footer text-muted bg-white border-top">
                     <a href="/category/%E4%BA%BA%E7%94%9F%E5%93%B2%E5%AD%A6.html"
-                      class="badge bg-primary">
+                      class="badge bg-primary me-2">
                       人生哲学
                     </a>
                     
-                      <a href="/tag/%E5%B8%8C%E6%9C%9B.html" class="badge tag-link">
+                      <a href="/tag/%E5%B8%8C%E6%9C%9B.html" class="badge tag-link me-2 mb-1">
                         希望
                       </a>
                       
-                      <a href="/tag/%E4%B9%90%E8%A7%82.html" class="badge tag-link">
+                      <a href="/tag/%E4%B9%90%E8%A7%82.html" class="badge tag-link me-2 mb-1">
                         乐观
                       </a>
                       
-                      <a href="/tag/%E6%9C%AA%E6%9D%A5.html" class="badge tag-link">
+                      <a href="/tag/%E6%9C%AA%E6%9D%A5.html" class="badge tag-link me-2 mb-1">
                         未来
                       </a>
                       
-                      <a href="/tag/%E7%A7%AF%E6%9E%81%E5%BF%83%E6%80%81.html" class="badge tag-link">
+                      <a href="/tag/%E7%A7%AF%E6%9E%81%E5%BF%83%E6%80%81.html" class="badge tag-link me-2 mb-1">
                         积极心态
                       </a>
                       
-                      <a href="/tag/%E6%94%B9%E5%8F%98.html" class="badge tag-link">
+                      <a href="/tag/%E6%94%B9%E5%8F%98.html" class="badge tag-link me-2 mb-1">
                         改变
                       </a>
                       
@@ -345,48 +415,49 @@
               </div>
               
               <div class="masonry-grid-item">
-                <div class="card shadow-sm">
+                <div class="card article-card shadow-sm">
                   <div class="card-body">
-                    <h5 class="card-title">
-                      <i class="bi bi-file-earmark-text"></i>
-                      <a href="../mdhtml/成长的痛苦：为什么改变总是那么困难？.html" class="text-decoration-none">
+                    <h5 class="card-title article-title">
+                      <i class="bi bi-file-earmark-text me-2 text-primary"></i>
+                      <a href="../mdhtml/成长的痛苦：为什么改变总是那么困难？.html" class="text-decoration-none text-dark">
                         成长的痛苦：为什么改变总是那么困难？
                       </a>
                     </h5>
                     
-                      <p class="card-text">
+                      <p class="card-text text-muted mb-3">
                         深入探讨个人成长的困难，分析舒适区的陷阱、改变的阻力、失败的恐惧、以及如何克服成长的痛苦。
                       </p>
                       
-                        
-                          <small class="text-muted">
-                            2026-03-24
-                          </small>
-                          
+                        <div class="article-meta">
+                            
+                                <i class="bi bi-clock me-1"></i>
+                                2026-03-24
+                                
+                        </div>
                   </div>
-                  <div class="card-footer text-muted">
+                  <div class="card-footer text-muted bg-white border-top">
                     <a href="/category/%E4%B8%AA%E4%BA%BA%E5%8F%91%E5%B1%95.html"
-                      class="badge bg-primary">
+                      class="badge bg-primary me-2">
                       个人发展
                     </a>
                     
-                      <a href="/tag/%E4%B8%AA%E4%BA%BA%E6%88%90%E9%95%BF.html" class="badge tag-link">
+                      <a href="/tag/%E4%B8%AA%E4%BA%BA%E6%88%90%E9%95%BF.html" class="badge tag-link me-2 mb-1">
                         个人成长
                       </a>
                       
-                      <a href="/tag/%E6%94%B9%E5%8F%98.html" class="badge tag-link">
+                      <a href="/tag/%E6%94%B9%E5%8F%98.html" class="badge tag-link me-2 mb-1">
                         改变
                       </a>
                       
-                      <a href="/tag/%E8%88%92%E9%80%82%E5%8C%BA.html" class="badge tag-link">
+                      <a href="/tag/%E8%88%92%E9%80%82%E5%8C%BA.html" class="badge tag-link me-2 mb-1">
                         舒适区
                       </a>
                       
-                      <a href="/tag/%E5%BF%83%E7%90%86%E9%98%BB%E5%8A%9B.html" class="badge tag-link">
+                      <a href="/tag/%E5%BF%83%E7%90%86%E9%98%BB%E5%8A%9B.html" class="badge tag-link me-2 mb-1">
                         心理阻力
                       </a>
                       
-                      <a href="/tag/%E8%BD%AC%E5%8F%98.html" class="badge tag-link">
+                      <a href="/tag/%E8%BD%AC%E5%8F%98.html" class="badge tag-link me-2 mb-1">
                         转变
                       </a>
                       
@@ -396,8 +467,8 @@
               
           </div>
 
-          <div class="mt-4 text-center">
-            <a href="标签列表.html" class="btn btn-outline-primary"><i class="bi bi-arrow-left"></i> 返回标签列表</a>
+          <div class="mt-6 text-center">
+            <a href="标签列表.html" class="btn btn-outline-primary back-button"><i class="bi bi-arrow-left me-2"></i> 返回标签列表</a>
           </div>
         </div>
       </div>
@@ -421,7 +492,7 @@
             itemSelector: '.masonry-grid-item',
             columnWidth: '.masonry-grid-item',
             percentPosition: true,
-            gutter: 10 // 可选，添加卡片间的间距
+            gutter: 15 // 增加间距，提升视觉效果
           });
         });
       </script>

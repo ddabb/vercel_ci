@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
 
 <head>
   <meta charset="UTF-8">
@@ -9,7 +9,7 @@
   <meta name="description" content="无人自助站的【人际冲突解决】的标签列表页面，汇集了关于【人际冲突解决】标签相关的文章和资讯，方便您快速找到感兴趣的内容。">
   <meta name="keywords" content="无人自助站,人际冲突解决">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>标签文章列表</title>
+  <title>人际冲突解决标签 - 无人自助站</title>
 
   <link rel="icon" href="../logo.svg" type="image/svg+xml">
   <link rel="stylesheet" href="../css/style.css">
@@ -27,6 +27,62 @@
   <!-- 引入Masonry -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/masonry/4.2.2/masonry.pkgd.min.js"></script>
 
+  <style>
+        .tag-header {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            color: white;
+            padding: 2rem;
+            border-radius: 8px;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        .tag-title {
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+        .article-card {
+            transition: all 0.3s ease;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        .article-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+        }
+        .article-title {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            transition: color 0.3s ease;
+        }
+        .article-title:hover {
+            color: #0d6efd;
+        }
+        .article-meta {
+            font-size: 0.85rem;
+            color: #6c757d;
+        }
+        .tag-link {
+            background-color: #e9ecef;
+            color: #495057;
+            transition: all 0.2s ease;
+        }
+        .tag-link:hover {
+            background-color: #dee2e6;
+            color: #212529;
+        }
+        .back-button {
+            transition: all 0.3s ease;
+        }
+        .back-button:hover {
+            transform: translateX(-3px);
+        }
+        .article-count {
+            font-size: 0.9rem;
+            opacity: 0.9;
+        }
+    </style>
 </head>
 
 <body>
@@ -80,7 +136,7 @@
     <main class="container-fluid mt-4">
       <div class="row">
         <div class="col-lg-8 col-md-12 mx-auto">
-          <nav aria-label="breadcrumb">
+          <nav aria-label="breadcrumb" class="mb-4">
             <ol class="breadcrumb">
               <li class="breadcrumb-item"><a href="/html/index.html">首页</a></li>
               <li class="breadcrumb-item"><a href="标签列表.html">标签列表</a></li>
@@ -89,98 +145,108 @@
               </li>
             </ol>
           </nav>
-          <h1 style="font-size: 1.5em; margin: 0.5em 0;">
-            人际冲突解决标签的文章和资讯
-        </h1>
+          
+          <!-- 标签头部 -->
+          <div class="tag-header">
+              <h1 class="tag-title">
+                  <i class="bi bi-tags me-2"></i>
+                  人际冲突解决
+              </h1>
+              <p class="article-count">
+                  共 1 篇文章
+              </p>
+          </div>
+          
           <div class="masonry-grid">
             
               <div class="masonry-grid-item">
-                <div class="card shadow-sm">
+                <div class="card article-card shadow-sm">
                   <div class="card-body">
-                    <h5 class="card-title">
-                      <i class="bi bi-file-earmark-text"></i>
-                      <a href="../mdhtml/为什么人际关系总是这么复杂？.html" class="text-decoration-none">
+                    <h5 class="card-title article-title">
+                      <i class="bi bi-file-earmark-text me-2 text-primary"></i>
+                      <a href="../mdhtml/为什么人际关系总是这么复杂？.html" class="text-decoration-none text-dark">
                         为什么人际关系总是这么复杂？
                       </a>
                     </h5>
                     
-                      <p class="card-text">
+                      <p class="card-text text-muted mb-3">
                         深入解析人际关系复杂性的科学原因，提供5套实用工具帮助你改善沟通、管理情绪、平衡权力关系，建立健康高效的人际网络。基于社会神经科学最新研究，破解社交迷局，提升社交健康度，让复杂的人际关系变得简单可控。
                       </p>
                       
-                        
-                          <small class="text-muted">
-                            2026-02-11
-                          </small>
-                          
+                        <div class="article-meta">
+                            
+                                <i class="bi bi-clock me-1"></i>
+                                2026-02-11
+                                
+                        </div>
                   </div>
-                  <div class="card-footer text-muted">
+                  <div class="card-footer text-muted bg-white border-top">
                     <a href="/category/%E4%BA%BA%E9%99%85%E7%9B%B8%E5%A4%84.html"
-                      class="badge bg-primary">
+                      class="badge bg-primary me-2">
                       人际相处
                     </a>
                     
-                      <a href="/tag/%E4%BA%BA%E9%99%85%E5%85%B3%E7%B3%BB%E5%A4%8D%E6%9D%82%E6%80%A7.html" class="badge tag-link">
+                      <a href="/tag/%E4%BA%BA%E9%99%85%E5%85%B3%E7%B3%BB%E5%A4%8D%E6%9D%82%E6%80%A7.html" class="badge tag-link me-2 mb-1">
                         人际关系复杂性
                       </a>
                       
-                      <a href="/tag/%E7%A4%BE%E4%BA%A4%E6%B2%9F%E9%80%9A%E6%8A%80%E5%B7%A7.html" class="badge tag-link">
+                      <a href="/tag/%E7%A4%BE%E4%BA%A4%E6%B2%9F%E9%80%9A%E6%8A%80%E5%B7%A7.html" class="badge tag-link me-2 mb-1">
                         社交沟通技巧
                       </a>
                       
-                      <a href="/tag/%E6%83%85%E7%BB%AA%E7%AE%A1%E7%90%86%E6%96%B9%E6%B3%95.html" class="badge tag-link">
+                      <a href="/tag/%E6%83%85%E7%BB%AA%E7%AE%A1%E7%90%86%E6%96%B9%E6%B3%95.html" class="badge tag-link me-2 mb-1">
                         情绪管理方法
                       </a>
                       
-                      <a href="/tag/%E4%BA%BA%E9%99%85%E5%86%B2%E7%AA%81%E8%A7%A3%E5%86%B3.html" class="badge tag-link">
+                      <a href="/tag/%E4%BA%BA%E9%99%85%E5%86%B2%E7%AA%81%E8%A7%A3%E5%86%B3.html" class="badge tag-link me-2 mb-1">
                         人际冲突解决
                       </a>
                       
-                      <a href="/tag/%E7%A4%BE%E4%BA%A4%E5%81%A5%E5%BA%B7.html" class="badge tag-link">
+                      <a href="/tag/%E7%A4%BE%E4%BA%A4%E5%81%A5%E5%BA%B7.html" class="badge tag-link me-2 mb-1">
                         社交健康
                       </a>
                       
-                      <a href="/tag/%E4%BA%BA%E9%99%85%E5%85%B3%E7%B3%BB%E5%A4%84%E7%90%86%E6%8A%80%E5%B7%A7.html" class="badge tag-link">
+                      <a href="/tag/%E4%BA%BA%E9%99%85%E5%85%B3%E7%B3%BB%E5%A4%84%E7%90%86%E6%8A%80%E5%B7%A7.html" class="badge tag-link me-2 mb-1">
                         人际关系处理技巧
                       </a>
                       
-                      <a href="/tag/%E7%A4%BE%E4%BA%A4%E8%83%BD%E5%8A%9B%E6%8F%90%E5%8D%87.html" class="badge tag-link">
+                      <a href="/tag/%E7%A4%BE%E4%BA%A4%E8%83%BD%E5%8A%9B%E6%8F%90%E5%8D%87.html" class="badge tag-link me-2 mb-1">
                         社交能力提升
                       </a>
                       
-                      <a href="/tag/%E6%9C%89%E6%95%88%E6%B2%9F%E9%80%9A%E6%96%B9%E6%B3%95.html" class="badge tag-link">
+                      <a href="/tag/%E6%9C%89%E6%95%88%E6%B2%9F%E9%80%9A%E6%96%B9%E6%B3%95.html" class="badge tag-link me-2 mb-1">
                         有效沟通方法
                       </a>
                       
-                      <a href="/tag/%E6%83%85%E7%BB%AA%E8%B0%83%E8%8A%82%E7%AD%96%E7%95%A5.html" class="badge tag-link">
+                      <a href="/tag/%E6%83%85%E7%BB%AA%E8%B0%83%E8%8A%82%E7%AD%96%E7%95%A5.html" class="badge tag-link me-2 mb-1">
                         情绪调节策略
                       </a>
                       
-                      <a href="/tag/%E4%BA%BA%E9%99%85%E5%85%B3%E7%B3%BB%E6%94%B9%E5%96%84.html" class="badge tag-link">
+                      <a href="/tag/%E4%BA%BA%E9%99%85%E5%85%B3%E7%B3%BB%E6%94%B9%E5%96%84.html" class="badge tag-link me-2 mb-1">
                         人际关系改善
                       </a>
                       
-                      <a href="/tag/%E7%A4%BE%E4%BA%A4%E6%99%BA%E6%85%A7.html" class="badge tag-link">
+                      <a href="/tag/%E7%A4%BE%E4%BA%A4%E6%99%BA%E6%85%A7.html" class="badge tag-link me-2 mb-1">
                         社交智慧
                       </a>
                       
-                      <a href="/tag/%E4%BA%BA%E9%99%85%E8%BE%B9%E7%95%8C%E8%AE%BE%E7%BD%AE.html" class="badge tag-link">
+                      <a href="/tag/%E4%BA%BA%E9%99%85%E8%BE%B9%E7%95%8C%E8%AE%BE%E7%BD%AE.html" class="badge tag-link me-2 mb-1">
                         人际边界设置
                       </a>
                       
-                      <a href="/tag/%E7%A4%BE%E4%BA%A4%E7%84%A6%E8%99%91%E7%BC%93%E8%A7%A3.html" class="badge tag-link">
+                      <a href="/tag/%E7%A4%BE%E4%BA%A4%E7%84%A6%E8%99%91%E7%BC%93%E8%A7%A3.html" class="badge tag-link me-2 mb-1">
                         社交焦虑缓解
                       </a>
                       
-                      <a href="/tag/%E4%BA%BA%E9%99%85%E5%85%B3%E7%B3%BB%E4%BB%B7%E5%80%BC%E8%AF%84%E4%BC%B0.html" class="badge tag-link">
+                      <a href="/tag/%E4%BA%BA%E9%99%85%E5%85%B3%E7%B3%BB%E4%BB%B7%E5%80%BC%E8%AF%84%E4%BC%B0.html" class="badge tag-link me-2 mb-1">
                         人际关系价值评估
                       </a>
                       
-                      <a href="/tag/%E7%A4%BE%E4%BA%A4%E8%83%BD%E9%87%8F%E7%AE%A1%E7%90%86.html" class="badge tag-link">
+                      <a href="/tag/%E7%A4%BE%E4%BA%A4%E8%83%BD%E9%87%8F%E7%AE%A1%E7%90%86.html" class="badge tag-link me-2 mb-1">
                         社交能量管理
                       </a>
                       
-                      <a href="/tag/%E6%B2%9F%E9%80%9A%E6%95%88%E7%8E%87%E6%8F%90%E5%8D%87.html" class="badge tag-link">
+                      <a href="/tag/%E6%B2%9F%E9%80%9A%E6%95%88%E7%8E%87%E6%8F%90%E5%8D%87.html" class="badge tag-link me-2 mb-1">
                         沟通效率提升
                       </a>
                       
@@ -190,8 +256,8 @@
               
           </div>
 
-          <div class="mt-4 text-center">
-            <a href="标签列表.html" class="btn btn-outline-primary"><i class="bi bi-arrow-left"></i> 返回标签列表</a>
+          <div class="mt-6 text-center">
+            <a href="标签列表.html" class="btn btn-outline-primary back-button"><i class="bi bi-arrow-left me-2"></i> 返回标签列表</a>
           </div>
         </div>
       </div>
@@ -215,7 +281,7 @@
             itemSelector: '.masonry-grid-item',
             columnWidth: '.masonry-grid-item',
             percentPosition: true,
-            gutter: 10 // 可选，添加卡片间的间距
+            gutter: 15 // 增加间距，提升视觉效果
           });
         });
       </script>

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
 
 <head>
     <meta charset="UTF-8">
@@ -9,7 +9,7 @@
     <meta name="description" content="无人自助站的【理财观察】分类列表页面，汇集了关于【理财观察】分类的文章和资讯，方便您快速找到感兴趣的内容。">
     <meta name="keywords" content="无人自助站,理财观察">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>分类列表</title>
+    <title>理财观察分类 - 无人自助站</title>
     <link rel="icon" href="../logo.svg" type="image/svg+xml">
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/footer.css">
@@ -27,6 +27,62 @@
     <!-- 引入Masonry -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/masonry/4.2.2/masonry.pkgd.min.js"></script>
 
+    <style>
+        .category-header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 2rem;
+            border-radius: 8px;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        .category-title {
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+        .article-card {
+            transition: all 0.3s ease;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        .article-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+        }
+        .article-title {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            transition: color 0.3s ease;
+        }
+        .article-title:hover {
+            color: #0d6efd;
+        }
+        .article-meta {
+            font-size: 0.85rem;
+            color: #6c757d;
+        }
+        .tag-link {
+            background-color: #e9ecef;
+            color: #495057;
+            transition: all 0.2s ease;
+        }
+        .tag-link:hover {
+            background-color: #dee2e6;
+            color: #212529;
+        }
+        .back-button {
+            transition: all 0.3s ease;
+        }
+        .back-button:hover {
+            transform: translateX(-3px);
+        }
+        .article-count {
+            font-size: 0.9rem;
+            opacity: 0.9;
+        }
+    </style>
 </head>
 
 <body>
@@ -80,7 +136,7 @@
         <main class="container-fluid mt-4">
             <div class="col-lg-8 col-md-12 mx-auto">
                 <!-- 面包屑导航 -->
-                <nav aria-label="breadcrumb">
+                <nav aria-label="breadcrumb" class="mb-4">
                     <ol class="breadcrumb">
                         <li class="breadcrumb-item"><a href="/html/index.html">首页</a></li>
                         <li class="breadcrumb-item"><a href="分类列表.html">分类列表</a></li>
@@ -89,61 +145,71 @@
                         </li>
                     </ol>
                 </nav>
-                <h1 style="font-size: 1.5em; margin: 0.5em 0;">
-                    理财观察分类的文章和资讯
-                </h1>
+                
+                <!-- 分类头部 -->
+                <div class="category-header">
+                    <h1 class="category-title">
+                        <i class="bi bi-folder2 me-2"></i>
+                        理财观察
+                    </h1>
+                    <p class="article-count">
+                        共 7 篇文章
+                    </p>
+                </div>
+                
                 <!-- 分类内容卡片 使用 Masonry 布局 -->
                 <div class="masonry-grid">
                     
                         <div class="masonry-grid-item">
-                            <div class="card shadow-sm">
+                            <div class="card article-card shadow-sm">
                                 <div class="card-body">
-                                    <h5 class="card-title">
-                                        <i class="bi bi-file-earmark-text"></i>
+                                    <h5 class="card-title article-title">
+                                        <i class="bi bi-file-earmark-text me-2 text-primary"></i>
                                         <a href="../mdhtml/为什么现在的有钱人都开始买寿险了.html"
-                                            class="text-decoration-none">
+                                            class="text-decoration-none text-dark">
                                             为什么现在的有钱人都开始买寿险了
                                         </a>
                                     </h5>
                                     
-                                        <p class="card-text">
+                                        <p class="card-text text-muted mb-3">
                                             分析有钱人购买寿险的现象。
                                         </p>
                                         
+                                        <div class="article-meta">
                                             
-                                                <small class="text-muted">
-                                                    2026-03-24
-                                                </small>
+                                                <i class="bi bi-clock me-1"></i>
+                                                2026-03-24
                                                 
+                                        </div>
                                 </div>
-                                <div class="card-footer text-muted">
+                                <div class="card-footer text-muted bg-white border-top">
                                     <a href="/category/%E7%90%86%E8%B4%A2%E8%A7%82%E5%AF%9F.html"
-                                        class="badge bg-primary">
+                                        class="badge bg-primary me-2">
                                         理财观察
                                     </a>
                                     
                                         <a href="/tag/%E5%AF%BF%E9%99%A9.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             寿险
                                         </a>
                                         
                                         <a href="/tag/%E4%BF%9D%E9%99%A9.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             保险
                                         </a>
                                         
                                         <a href="/tag/%E6%9C%89%E9%92%B1%E4%BA%BA.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             有钱人
                                         </a>
                                         
                                         <a href="/tag/%E4%BF%9D%E9%9A%9C.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             保障
                                         </a>
                                         
                                         <a href="/tag/%E4%BC%A0%E6%89%BF.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             传承
                                         </a>
                                         
@@ -152,54 +218,55 @@
                         </div>
                         
                         <div class="masonry-grid-item">
-                            <div class="card shadow-sm">
+                            <div class="card article-card shadow-sm">
                                 <div class="card-body">
-                                    <h5 class="card-title">
-                                        <i class="bi bi-file-earmark-text"></i>
+                                    <h5 class="card-title article-title">
+                                        <i class="bi bi-file-earmark-text me-2 text-primary"></i>
                                         <a href="../mdhtml/为什么现在的年轻人都开始存黄金了.html"
-                                            class="text-decoration-none">
+                                            class="text-decoration-none text-dark">
                                             为什么现在的年轻人都开始存黄金了
                                         </a>
                                     </h5>
                                     
-                                        <p class="card-text">
+                                        <p class="card-text text-muted mb-3">
                                             分析年轻人购买和存储黄金的现象。
                                         </p>
                                         
+                                        <div class="article-meta">
                                             
-                                                <small class="text-muted">
-                                                    2026-03-24
-                                                </small>
+                                                <i class="bi bi-clock me-1"></i>
+                                                2026-03-24
                                                 
+                                        </div>
                                 </div>
-                                <div class="card-footer text-muted">
+                                <div class="card-footer text-muted bg-white border-top">
                                     <a href="/category/%E7%90%86%E8%B4%A2%E8%A7%82%E5%AF%9F.html"
-                                        class="badge bg-primary">
+                                        class="badge bg-primary me-2">
                                         理财观察
                                     </a>
                                     
                                         <a href="/tag/%E9%BB%84%E9%87%91.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             黄金
                                         </a>
                                         
                                         <a href="/tag/%E5%AD%98%E9%92%B1.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             存钱
                                         </a>
                                         
                                         <a href="/tag/%E5%B9%B4%E8%BD%BB%E4%BA%BA.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             年轻人
                                         </a>
                                         
                                         <a href="/tag/%E4%BF%9D%E5%80%BC.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             保值
                                         </a>
                                         
                                         <a href="/tag/%E6%8A%95%E8%B5%84.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             投资
                                         </a>
                                         
@@ -208,54 +275,55 @@
                         </div>
                         
                         <div class="masonry-grid-item">
-                            <div class="card shadow-sm">
+                            <div class="card article-card shadow-sm">
                                 <div class="card-body">
-                                    <h5 class="card-title">
-                                        <i class="bi bi-file-earmark-text"></i>
+                                    <h5 class="card-title article-title">
+                                        <i class="bi bi-file-earmark-text me-2 text-primary"></i>
                                         <a href="../mdhtml/为什么现在的有钱人都开始买黄金了.html"
-                                            class="text-decoration-none">
+                                            class="text-decoration-none text-dark">
                                             为什么现在的有钱人都开始买黄金了
                                         </a>
                                     </h5>
                                     
-                                        <p class="card-text">
+                                        <p class="card-text text-muted mb-3">
                                             分析有钱人购买黄金的原因，探讨黄金投资趋势。
                                         </p>
                                         
+                                        <div class="article-meta">
                                             
-                                                <small class="text-muted">
-                                                    2026-03-24
-                                                </small>
+                                                <i class="bi bi-clock me-1"></i>
+                                                2026-03-24
                                                 
+                                        </div>
                                 </div>
-                                <div class="card-footer text-muted">
+                                <div class="card-footer text-muted bg-white border-top">
                                     <a href="/category/%E7%90%86%E8%B4%A2%E8%A7%82%E5%AF%9F.html"
-                                        class="badge bg-primary">
+                                        class="badge bg-primary me-2">
                                         理财观察
                                     </a>
                                     
                                         <a href="/tag/%E9%BB%84%E9%87%91.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             黄金
                                         </a>
                                         
                                         <a href="/tag/%E6%8A%95%E8%B5%84.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             投资
                                         </a>
                                         
                                         <a href="/tag/%E6%9C%89%E9%92%B1%E4%BA%BA.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             有钱人
                                         </a>
                                         
                                         <a href="/tag/%E4%BF%9D%E5%80%BC.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             保值
                                         </a>
                                         
                                         <a href="/tag/%E9%81%BF%E9%99%A9.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             避险
                                         </a>
                                         
@@ -264,54 +332,55 @@
                         </div>
                         
                         <div class="masonry-grid-item">
-                            <div class="card shadow-sm">
+                            <div class="card article-card shadow-sm">
                                 <div class="card-body">
-                                    <h5 class="card-title">
-                                        <i class="bi bi-file-earmark-text"></i>
+                                    <h5 class="card-title article-title">
+                                        <i class="bi bi-file-earmark-text me-2 text-primary"></i>
                                         <a href="../mdhtml/为什么现在的年轻人都开始存定期了.html"
-                                            class="text-decoration-none">
+                                            class="text-decoration-none text-dark">
                                             为什么现在的年轻人都开始存定期了
                                         </a>
                                     </h5>
                                     
-                                        <p class="card-text">
+                                        <p class="card-text text-muted mb-3">
                                             分析年轻人存定期的现象，探讨理财观念的变化。
                                         </p>
                                         
+                                        <div class="article-meta">
                                             
-                                                <small class="text-muted">
-                                                    2026-03-24
-                                                </small>
+                                                <i class="bi bi-clock me-1"></i>
+                                                2026-03-24
                                                 
+                                        </div>
                                 </div>
-                                <div class="card-footer text-muted">
+                                <div class="card-footer text-muted bg-white border-top">
                                     <a href="/category/%E7%90%86%E8%B4%A2%E8%A7%82%E5%AF%9F.html"
-                                        class="badge bg-primary">
+                                        class="badge bg-primary me-2">
                                         理财观察
                                     </a>
                                     
                                         <a href="/tag/%E5%AD%98%E9%92%B1.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             存钱
                                         </a>
                                         
                                         <a href="/tag/%E5%AE%9A%E6%9C%9F.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             定期
                                         </a>
                                         
                                         <a href="/tag/%E5%B9%B4%E8%BD%BB%E4%BA%BA.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             年轻人
                                         </a>
                                         
                                         <a href="/tag/%E7%90%86%E8%B4%A2.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             理财
                                         </a>
                                         
                                         <a href="/tag/%E5%82%A8%E8%93%84.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             储蓄
                                         </a>
                                         
@@ -320,54 +389,55 @@
                         </div>
                         
                         <div class="masonry-grid-item">
-                            <div class="card shadow-sm">
+                            <div class="card article-card shadow-sm">
                                 <div class="card-body">
-                                    <h5 class="card-title">
-                                        <i class="bi bi-file-earmark-text"></i>
+                                    <h5 class="card-title article-title">
+                                        <i class="bi bi-file-earmark-text me-2 text-primary"></i>
                                         <a href="../mdhtml/为什么现在的有钱人都开始买国债了.html"
-                                            class="text-decoration-none">
+                                            class="text-decoration-none text-dark">
                                             为什么现在的有钱人都开始买国债了
                                         </a>
                                     </h5>
                                     
-                                        <p class="card-text">
+                                        <p class="card-text text-muted mb-3">
                                             分析有钱人购买国债的现象，探讨投资趋势变化。
                                         </p>
                                         
+                                        <div class="article-meta">
                                             
-                                                <small class="text-muted">
-                                                    2026-03-24
-                                                </small>
+                                                <i class="bi bi-clock me-1"></i>
+                                                2026-03-24
                                                 
+                                        </div>
                                 </div>
-                                <div class="card-footer text-muted">
+                                <div class="card-footer text-muted bg-white border-top">
                                     <a href="/category/%E7%90%86%E8%B4%A2%E8%A7%82%E5%AF%9F.html"
-                                        class="badge bg-primary">
+                                        class="badge bg-primary me-2">
                                         理财观察
                                     </a>
                                     
                                         <a href="/tag/%E5%9B%BD%E5%80%BA.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             国债
                                         </a>
                                         
                                         <a href="/tag/%E7%90%86%E8%B4%A2.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             理财
                                         </a>
                                         
                                         <a href="/tag/%E6%9C%89%E9%92%B1%E4%BA%BA.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             有钱人
                                         </a>
                                         
                                         <a href="/tag/%E6%8A%95%E8%B5%84.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             投资
                                         </a>
                                         
                                         <a href="/tag/%E5%AE%89%E5%85%A8.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             安全
                                         </a>
                                         
@@ -376,54 +446,55 @@
                         </div>
                         
                         <div class="masonry-grid-item">
-                            <div class="card shadow-sm">
+                            <div class="card article-card shadow-sm">
                                 <div class="card-body">
-                                    <h5 class="card-title">
-                                        <i class="bi bi-file-earmark-text"></i>
+                                    <h5 class="card-title article-title">
+                                        <i class="bi bi-file-earmark-text me-2 text-primary"></i>
                                         <a href="../mdhtml/为什么现在的年轻人都开始买基金了.html"
-                                            class="text-decoration-none">
+                                            class="text-decoration-none text-dark">
                                             为什么现在的年轻人都开始买基金了
                                         </a>
                                     </h5>
                                     
-                                        <p class="card-text">
+                                        <p class="card-text text-muted mb-3">
                                             分析年轻人投资基金的现象，探讨理财观念的普及。
                                         </p>
                                         
+                                        <div class="article-meta">
                                             
-                                                <small class="text-muted">
-                                                    2026-03-24
-                                                </small>
+                                                <i class="bi bi-clock me-1"></i>
+                                                2026-03-24
                                                 
+                                        </div>
                                 </div>
-                                <div class="card-footer text-muted">
+                                <div class="card-footer text-muted bg-white border-top">
                                     <a href="/category/%E7%90%86%E8%B4%A2%E8%A7%82%E5%AF%9F.html"
-                                        class="badge bg-primary">
+                                        class="badge bg-primary me-2">
                                         理财观察
                                     </a>
                                     
                                         <a href="/tag/%E5%9F%BA%E9%87%91.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             基金
                                         </a>
                                         
                                         <a href="/tag/%E7%90%86%E8%B4%A2.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             理财
                                         </a>
                                         
                                         <a href="/tag/%E5%B9%B4%E8%BD%BB%E4%BA%BA.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             年轻人
                                         </a>
                                         
                                         <a href="/tag/%E6%8A%95%E8%B5%84.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             投资
                                         </a>
                                         
                                         <a href="/tag/%E8%B4%A2%E5%AF%8C.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             财富
                                         </a>
                                         
@@ -432,54 +503,55 @@
                         </div>
                         
                         <div class="masonry-grid-item">
-                            <div class="card shadow-sm">
+                            <div class="card article-card shadow-sm">
                                 <div class="card-body">
-                                    <h5 class="card-title">
-                                        <i class="bi bi-file-earmark-text"></i>
+                                    <h5 class="card-title article-title">
+                                        <i class="bi bi-file-earmark-text me-2 text-primary"></i>
                                         <a href="../mdhtml/为什么现在的年轻人都开始攒黄金了.html"
-                                            class="text-decoration-none">
+                                            class="text-decoration-none text-dark">
                                             为什么现在的年轻人都开始攒黄金了
                                         </a>
                                     </h5>
                                     
-                                        <p class="card-text">
+                                        <p class="card-text text-muted mb-3">
                                             分析年轻人热衷购买黄金的原因，探讨黄金投资的优势和风险，以及年轻人应该如何理性投资。
                                         </p>
                                         
+                                        <div class="article-meta">
                                             
-                                                <small class="text-muted">
-                                                    2026-03-24
-                                                </small>
+                                                <i class="bi bi-clock me-1"></i>
+                                                2026-03-24
                                                 
+                                        </div>
                                 </div>
-                                <div class="card-footer text-muted">
+                                <div class="card-footer text-muted bg-white border-top">
                                     <a href="/category/%E7%90%86%E8%B4%A2%E8%A7%82%E5%AF%9F.html"
-                                        class="badge bg-primary">
+                                        class="badge bg-primary me-2">
                                         理财观察
                                     </a>
                                     
                                         <a href="/tag/%E9%BB%84%E9%87%91.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             黄金
                                         </a>
                                         
                                         <a href="/tag/%E6%8A%95%E8%B5%84.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             投资
                                         </a>
                                         
                                         <a href="/tag/%E5%B9%B4%E8%BD%BB%E4%BA%BA.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             年轻人
                                         </a>
                                         
                                         <a href="/tag/%E7%90%86%E8%B4%A2.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             理财
                                         </a>
                                         
                                         <a href="/tag/%E4%BF%9D%E5%80%BC.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             保值
                                         </a>
                                         
@@ -490,9 +562,9 @@
                 </div>
 
                 <!-- 返回按钮 -->
-                <div class="mt-4 text-center">
-                    <a href="分类列表.html" class="btn btn-outline-primary">
-                        <i class="bi bi-arrow-left"></i> 返回分类列表
+                <div class="mt-6 text-center">
+                    <a href="分类列表.html" class="btn btn-outline-primary back-button">
+                        <i class="bi bi-arrow-left me-2"></i> 返回分类列表
                     </a>
                 </div>
             </div>
@@ -516,7 +588,7 @@
                         itemSelector: '.masonry-grid-item',
                         columnWidth: '.masonry-grid-item',
                         percentPosition: true,
-                        gutter: 10 // 明确设置 gutter 值为 10px
+                        gutter: 15 // 增加间距，提升视觉效果
                     });
                 });
             </script>

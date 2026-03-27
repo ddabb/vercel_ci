@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
 
 <head>
   <meta charset="UTF-8">
@@ -9,7 +9,7 @@
   <meta name="description" content="无人自助站的【哲学思考】的标签列表页面，汇集了关于【哲学思考】标签相关的文章和资讯，方便您快速找到感兴趣的内容。">
   <meta name="keywords" content="无人自助站,哲学思考">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>标签文章列表</title>
+  <title>哲学思考标签 - 无人自助站</title>
 
   <link rel="icon" href="../logo.svg" type="image/svg+xml">
   <link rel="stylesheet" href="../css/style.css">
@@ -27,6 +27,62 @@
   <!-- 引入Masonry -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/masonry/4.2.2/masonry.pkgd.min.js"></script>
 
+  <style>
+        .tag-header {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            color: white;
+            padding: 2rem;
+            border-radius: 8px;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        .tag-title {
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+        .article-card {
+            transition: all 0.3s ease;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        .article-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+        }
+        .article-title {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            transition: color 0.3s ease;
+        }
+        .article-title:hover {
+            color: #0d6efd;
+        }
+        .article-meta {
+            font-size: 0.85rem;
+            color: #6c757d;
+        }
+        .tag-link {
+            background-color: #e9ecef;
+            color: #495057;
+            transition: all 0.2s ease;
+        }
+        .tag-link:hover {
+            background-color: #dee2e6;
+            color: #212529;
+        }
+        .back-button {
+            transition: all 0.3s ease;
+        }
+        .back-button:hover {
+            transform: translateX(-3px);
+        }
+        .article-count {
+            font-size: 0.9rem;
+            opacity: 0.9;
+        }
+    </style>
 </head>
 
 <body>
@@ -80,7 +136,7 @@
     <main class="container-fluid mt-4">
       <div class="row">
         <div class="col-lg-8 col-md-12 mx-auto">
-          <nav aria-label="breadcrumb">
+          <nav aria-label="breadcrumb" class="mb-4">
             <ol class="breadcrumb">
               <li class="breadcrumb-item"><a href="/html/index.html">首页</a></li>
               <li class="breadcrumb-item"><a href="标签列表.html">标签列表</a></li>
@@ -89,58 +145,68 @@
               </li>
             </ol>
           </nav>
-          <h1 style="font-size: 1.5em; margin: 0.5em 0;">
-            哲学思考标签的文章和资讯
-        </h1>
+          
+          <!-- 标签头部 -->
+          <div class="tag-header">
+              <h1 class="tag-title">
+                  <i class="bi bi-tags me-2"></i>
+                  哲学思考
+              </h1>
+              <p class="article-count">
+                  共 20 篇文章
+              </p>
+          </div>
+          
           <div class="masonry-grid">
             
               <div class="masonry-grid-item">
-                <div class="card shadow-sm">
+                <div class="card article-card shadow-sm">
                   <div class="card-body">
-                    <h5 class="card-title">
-                      <i class="bi bi-file-earmark-text"></i>
-                      <a href="../mdhtml/道德的本质：客观准则还是主观约定.html" class="text-decoration-none">
+                    <h5 class="card-title article-title">
+                      <i class="bi bi-file-earmark-text me-2 text-primary"></i>
+                      <a href="../mdhtml/道德的本质：客观准则还是主观约定.html" class="text-decoration-none text-dark">
                         道德的本质：客观准则还是主观约定
                       </a>
                     </h5>
                     
-                      <p class="card-text">
+                      <p class="card-text text-muted mb-3">
                         本文探讨了道德的本质，分析了客观主义与相对主义的伦理争论。通过伦理学、心理学和文化人类学的多角度分析，揭示了道德现象的复杂性，最终提出了在道德实践中寻找平衡的生活智慧。
                       </p>
                       
-                        
-                          <small class="text-muted">
-                            2026-02-24
-                          </small>
-                          
+                        <div class="article-meta">
+                            
+                                <i class="bi bi-clock me-1"></i>
+                                2026-02-24
+                                
+                        </div>
                   </div>
-                  <div class="card-footer text-muted">
+                  <div class="card-footer text-muted bg-white border-top">
                     <a href="/category/%E5%93%B2%E5%AD%A6%E6%80%9D%E8%80%83.html"
-                      class="badge bg-primary">
+                      class="badge bg-primary me-2">
                       哲学思考
                     </a>
                     
-                      <a href="/tag/%E9%81%93%E5%BE%B7%E6%9C%AC%E8%B4%A8.html" class="badge tag-link">
+                      <a href="/tag/%E9%81%93%E5%BE%B7%E6%9C%AC%E8%B4%A8.html" class="badge tag-link me-2 mb-1">
                         道德本质
                       </a>
                       
-                      <a href="/tag/%E5%93%B2%E5%AD%A6%E6%80%9D%E8%80%83.html" class="badge tag-link">
+                      <a href="/tag/%E5%93%B2%E5%AD%A6%E6%80%9D%E8%80%83.html" class="badge tag-link me-2 mb-1">
                         哲学思考
                       </a>
                       
-                      <a href="/tag/%E4%BC%A6%E7%90%86%E5%AD%A6.html" class="badge tag-link">
+                      <a href="/tag/%E4%BC%A6%E7%90%86%E5%AD%A6.html" class="badge tag-link me-2 mb-1">
                         伦理学
                       </a>
                       
-                      <a href="/tag/%E7%9B%B8%E5%AF%B9%E4%B8%BB%E4%B9%89.html" class="badge tag-link">
+                      <a href="/tag/%E7%9B%B8%E5%AF%B9%E4%B8%BB%E4%B9%89.html" class="badge tag-link me-2 mb-1">
                         相对主义
                       </a>
                       
-                      <a href="/tag/%E7%BB%9D%E5%AF%B9%E4%B8%BB%E4%B9%89.html" class="badge tag-link">
+                      <a href="/tag/%E7%BB%9D%E5%AF%B9%E4%B8%BB%E4%B9%89.html" class="badge tag-link me-2 mb-1">
                         绝对主义
                       </a>
                       
-                      <a href="/tag/%E5%8A%9F%E5%88%A9%E4%B8%BB%E4%B9%89.html" class="badge tag-link">
+                      <a href="/tag/%E5%8A%9F%E5%88%A9%E4%B8%BB%E4%B9%89.html" class="badge tag-link me-2 mb-1">
                         功利主义
                       </a>
                       
@@ -149,52 +215,53 @@
               </div>
               
               <div class="masonry-grid-item">
-                <div class="card shadow-sm">
+                <div class="card article-card shadow-sm">
                   <div class="card-body">
-                    <h5 class="card-title">
-                      <i class="bi bi-file-earmark-text"></i>
-                      <a href="../mdhtml/语言与现实：反映还是建构.html" class="text-decoration-none">
+                    <h5 class="card-title article-title">
+                      <i class="bi bi-file-earmark-text me-2 text-primary"></i>
+                      <a href="../mdhtml/语言与现实：反映还是建构.html" class="text-decoration-none text-dark">
                         语言与现实：反映还是建构
                       </a>
                     </h5>
                     
-                      <p class="card-text">
+                      <p class="card-text text-muted mb-3">
                         本文探讨了语言与现实的关系，分析了反映论与建构主义的哲学争论。通过哲学、语言学和认知科学的多角度分析，揭示了语言现象的复杂性，最终提出了在语言使用中寻找平衡的生活智慧。
                       </p>
                       
-                        
-                          <small class="text-muted">
-                            2026-02-24
-                          </small>
-                          
+                        <div class="article-meta">
+                            
+                                <i class="bi bi-clock me-1"></i>
+                                2026-02-24
+                                
+                        </div>
                   </div>
-                  <div class="card-footer text-muted">
+                  <div class="card-footer text-muted bg-white border-top">
                     <a href="/category/%E5%93%B2%E5%AD%A6%E6%80%9D%E8%80%83.html"
-                      class="badge bg-primary">
+                      class="badge bg-primary me-2">
                       哲学思考
                     </a>
                     
-                      <a href="/tag/%E8%AF%AD%E8%A8%80%E5%93%B2%E5%AD%A6.html" class="badge tag-link">
+                      <a href="/tag/%E8%AF%AD%E8%A8%80%E5%93%B2%E5%AD%A6.html" class="badge tag-link me-2 mb-1">
                         语言哲学
                       </a>
                       
-                      <a href="/tag/%E5%93%B2%E5%AD%A6%E6%80%9D%E8%80%83.html" class="badge tag-link">
+                      <a href="/tag/%E5%93%B2%E5%AD%A6%E6%80%9D%E8%80%83.html" class="badge tag-link me-2 mb-1">
                         哲学思考
                       </a>
                       
-                      <a href="/tag/%E8%AF%AD%E4%B9%89%E5%AD%A6.html" class="badge tag-link">
+                      <a href="/tag/%E8%AF%AD%E4%B9%89%E5%AD%A6.html" class="badge tag-link me-2 mb-1">
                         语义学
                       </a>
                       
-                      <a href="/tag/%E5%BB%BA%E6%9E%84%E4%B8%BB%E4%B9%89.html" class="badge tag-link">
+                      <a href="/tag/%E5%BB%BA%E6%9E%84%E4%B8%BB%E4%B9%89.html" class="badge tag-link me-2 mb-1">
                         建构主义
                       </a>
                       
-                      <a href="/tag/%E5%8F%8D%E6%98%A0%E8%AE%BA.html" class="badge tag-link">
+                      <a href="/tag/%E5%8F%8D%E6%98%A0%E8%AE%BA.html" class="badge tag-link me-2 mb-1">
                         反映论
                       </a>
                       
-                      <a href="/tag/%E5%90%8E%E7%8E%B0%E4%BB%A3%E4%B8%BB%E4%B9%89.html" class="badge tag-link">
+                      <a href="/tag/%E5%90%8E%E7%8E%B0%E4%BB%A3%E4%B8%BB%E4%B9%89.html" class="badge tag-link me-2 mb-1">
                         后现代主义
                       </a>
                       
@@ -203,52 +270,53 @@
               </div>
               
               <div class="masonry-grid-item">
-                <div class="card shadow-sm">
+                <div class="card article-card shadow-sm">
                   <div class="card-body">
-                    <h5 class="card-title">
-                      <i class="bi bi-file-earmark-text"></i>
-                      <a href="../mdhtml/自我的本质：固定实体还是动态建构.html" class="text-decoration-none">
+                    <h5 class="card-title article-title">
+                      <i class="bi bi-file-earmark-text me-2 text-primary"></i>
+                      <a href="../mdhtml/自我的本质：固定实体还是动态建构.html" class="text-decoration-none text-dark">
                         自我的本质：固定实体还是动态建构
                       </a>
                     </h5>
                     
-                      <p class="card-text">
+                      <p class="card-text text-muted mb-3">
                         本文探讨了自我的本质，分析了本质主义与建构主义的哲学争论。通过哲学、心理学和神经科学的多角度分析，揭示了自我概念的复杂性，最终提出了在自我认知中寻找平衡的生活智慧。
                       </p>
                       
-                        
-                          <small class="text-muted">
-                            2026-02-24
-                          </small>
-                          
+                        <div class="article-meta">
+                            
+                                <i class="bi bi-clock me-1"></i>
+                                2026-02-24
+                                
+                        </div>
                   </div>
-                  <div class="card-footer text-muted">
+                  <div class="card-footer text-muted bg-white border-top">
                     <a href="/category/%E5%93%B2%E5%AD%A6%E6%80%9D%E8%80%83.html"
-                      class="badge bg-primary">
+                      class="badge bg-primary me-2">
                       哲学思考
                     </a>
                     
-                      <a href="/tag/%E8%87%AA%E6%88%91%E6%9C%AC%E8%B4%A8.html" class="badge tag-link">
+                      <a href="/tag/%E8%87%AA%E6%88%91%E6%9C%AC%E8%B4%A8.html" class="badge tag-link me-2 mb-1">
                         自我本质
                       </a>
                       
-                      <a href="/tag/%E5%93%B2%E5%AD%A6%E6%80%9D%E8%80%83.html" class="badge tag-link">
+                      <a href="/tag/%E5%93%B2%E5%AD%A6%E6%80%9D%E8%80%83.html" class="badge tag-link me-2 mb-1">
                         哲学思考
                       </a>
                       
-                      <a href="/tag/%E5%AD%98%E5%9C%A8%E4%B8%BB%E4%B9%89.html" class="badge tag-link">
+                      <a href="/tag/%E5%AD%98%E5%9C%A8%E4%B8%BB%E4%B9%89.html" class="badge tag-link me-2 mb-1">
                         存在主义
                       </a>
                       
-                      <a href="/tag/%E5%BF%83%E7%90%86%E5%AD%A6.html" class="badge tag-link">
+                      <a href="/tag/%E5%BF%83%E7%90%86%E5%AD%A6.html" class="badge tag-link me-2 mb-1">
                         心理学
                       </a>
                       
-                      <a href="/tag/%E7%A5%9E%E7%BB%8F%E7%A7%91%E5%AD%A6.html" class="badge tag-link">
+                      <a href="/tag/%E7%A5%9E%E7%BB%8F%E7%A7%91%E5%AD%A6.html" class="badge tag-link me-2 mb-1">
                         神经科学
                       </a>
                       
-                      <a href="/tag/%E4%BD%9B%E5%AD%A6.html" class="badge tag-link">
+                      <a href="/tag/%E4%BD%9B%E5%AD%A6.html" class="badge tag-link me-2 mb-1">
                         佛学
                       </a>
                       
@@ -257,52 +325,53 @@
               </div>
               
               <div class="masonry-grid-item">
-                <div class="card shadow-sm">
+                <div class="card article-card shadow-sm">
                   <div class="card-body">
-                    <h5 class="card-title">
-                      <i class="bi bi-file-earmark-text"></i>
-                      <a href="../mdhtml/自由意志与决定论：我们是否真正拥有选择的自由.html" class="text-decoration-none">
+                    <h5 class="card-title article-title">
+                      <i class="bi bi-file-earmark-text me-2 text-primary"></i>
+                      <a href="../mdhtml/自由意志与决定论：我们是否真正拥有选择的自由.html" class="text-decoration-none text-dark">
                         自由意志与决定论：我们是否真正拥有选择的自由
                       </a>
                     </h5>
                     
-                      <p class="card-text">
+                      <p class="card-text text-muted mb-3">
                         本文探讨了自由意志与决定论的哲学争论，分析了两者的核心观点及其在现实生活中的体现。通过科学视角和哲学思辨，揭示了人类选择的复杂性，最终提出了在必然与自由之间寻找平衡的生活智慧。
                       </p>
                       
-                        
-                          <small class="text-muted">
-                            2026-02-24
-                          </small>
-                          
+                        <div class="article-meta">
+                            
+                                <i class="bi bi-clock me-1"></i>
+                                2026-02-24
+                                
+                        </div>
                   </div>
-                  <div class="card-footer text-muted">
+                  <div class="card-footer text-muted bg-white border-top">
                     <a href="/category/%E5%93%B2%E5%AD%A6%E6%80%9D%E8%80%83.html"
-                      class="badge bg-primary">
+                      class="badge bg-primary me-2">
                       哲学思考
                     </a>
                     
-                      <a href="/tag/%E8%87%AA%E7%94%B1%E6%84%8F%E5%BF%97.html" class="badge tag-link">
+                      <a href="/tag/%E8%87%AA%E7%94%B1%E6%84%8F%E5%BF%97.html" class="badge tag-link me-2 mb-1">
                         自由意志
                       </a>
                       
-                      <a href="/tag/%E5%86%B3%E5%AE%9A%E8%AE%BA.html" class="badge tag-link">
+                      <a href="/tag/%E5%86%B3%E5%AE%9A%E8%AE%BA.html" class="badge tag-link me-2 mb-1">
                         决定论
                       </a>
                       
-                      <a href="/tag/%E5%93%B2%E5%AD%A6%E6%80%9D%E8%80%83.html" class="badge tag-link">
+                      <a href="/tag/%E5%93%B2%E5%AD%A6%E6%80%9D%E8%80%83.html" class="badge tag-link me-2 mb-1">
                         哲学思考
                       </a>
                       
-                      <a href="/tag/%E4%BA%BA%E7%B1%BB%E8%A1%8C%E4%B8%BA.html" class="badge tag-link">
+                      <a href="/tag/%E4%BA%BA%E7%B1%BB%E8%A1%8C%E4%B8%BA.html" class="badge tag-link me-2 mb-1">
                         人类行为
                       </a>
                       
-                      <a href="/tag/%E5%9B%A0%E6%9E%9C%E5%85%B3%E7%B3%BB.html" class="badge tag-link">
+                      <a href="/tag/%E5%9B%A0%E6%9E%9C%E5%85%B3%E7%B3%BB.html" class="badge tag-link me-2 mb-1">
                         因果关系
                       </a>
                       
-                      <a href="/tag/%E5%AD%98%E5%9C%A8%E4%B8%BB%E4%B9%89.html" class="badge tag-link">
+                      <a href="/tag/%E5%AD%98%E5%9C%A8%E4%B8%BB%E4%B9%89.html" class="badge tag-link me-2 mb-1">
                         存在主义
                       </a>
                       
@@ -311,52 +380,53 @@
               </div>
               
               <div class="masonry-grid-item">
-                <div class="card shadow-sm">
+                <div class="card article-card shadow-sm">
                   <div class="card-body">
-                    <h5 class="card-title">
-                      <i class="bi bi-file-earmark-text"></i>
-                      <a href="../mdhtml/美的本质：客观属性还是主观体验.html" class="text-decoration-none">
+                    <h5 class="card-title article-title">
+                      <i class="bi bi-file-earmark-text me-2 text-primary"></i>
+                      <a href="../mdhtml/美的本质：客观属性还是主观体验.html" class="text-decoration-none text-dark">
                         美的本质：客观属性还是主观体验
                       </a>
                     </h5>
                     
-                      <p class="card-text">
+                      <p class="card-text text-muted mb-3">
                         本文探讨了美的本质，分析了客观主义与主观主义的美学争论。通过哲学、心理学和艺术理论的多角度分析，揭示了审美体验的复杂性，最终提出了在审美中寻找意义的生活智慧。
                       </p>
                       
-                        
-                          <small class="text-muted">
-                            2026-02-24
-                          </small>
-                          
+                        <div class="article-meta">
+                            
+                                <i class="bi bi-clock me-1"></i>
+                                2026-02-24
+                                
+                        </div>
                   </div>
-                  <div class="card-footer text-muted">
+                  <div class="card-footer text-muted bg-white border-top">
                     <a href="/category/%E5%93%B2%E5%AD%A6%E6%80%9D%E8%80%83.html"
-                      class="badge bg-primary">
+                      class="badge bg-primary me-2">
                       哲学思考
                     </a>
                     
-                      <a href="/tag/%E7%BE%8E%E7%9A%84%E6%9C%AC%E8%B4%A8.html" class="badge tag-link">
+                      <a href="/tag/%E7%BE%8E%E7%9A%84%E6%9C%AC%E8%B4%A8.html" class="badge tag-link me-2 mb-1">
                         美的本质
                       </a>
                       
-                      <a href="/tag/%E5%93%B2%E5%AD%A6%E6%80%9D%E8%80%83.html" class="badge tag-link">
+                      <a href="/tag/%E5%93%B2%E5%AD%A6%E6%80%9D%E8%80%83.html" class="badge tag-link me-2 mb-1">
                         哲学思考
                       </a>
                       
-                      <a href="/tag/%E7%BE%8E%E5%AD%A6.html" class="badge tag-link">
+                      <a href="/tag/%E7%BE%8E%E5%AD%A6.html" class="badge tag-link me-2 mb-1">
                         美学
                       </a>
                       
-                      <a href="/tag/%E5%AE%A2%E8%A7%82%E4%B8%BB%E4%B9%89.html" class="badge tag-link">
+                      <a href="/tag/%E5%AE%A2%E8%A7%82%E4%B8%BB%E4%B9%89.html" class="badge tag-link me-2 mb-1">
                         客观主义
                       </a>
                       
-                      <a href="/tag/%E4%B8%BB%E8%A7%82%E4%B8%BB%E4%B9%89.html" class="badge tag-link">
+                      <a href="/tag/%E4%B8%BB%E8%A7%82%E4%B8%BB%E4%B9%89.html" class="badge tag-link me-2 mb-1">
                         主观主义
                       </a>
                       
-                      <a href="/tag/%E8%89%BA%E6%9C%AF%E5%93%B2%E5%AD%A6.html" class="badge tag-link">
+                      <a href="/tag/%E8%89%BA%E6%9C%AF%E5%93%B2%E5%AD%A6.html" class="badge tag-link me-2 mb-1">
                         艺术哲学
                       </a>
                       
@@ -365,52 +435,53 @@
               </div>
               
               <div class="masonry-grid-item">
-                <div class="card shadow-sm">
+                <div class="card article-card shadow-sm">
                   <div class="card-body">
-                    <h5 class="card-title">
-                      <i class="bi bi-file-earmark-text"></i>
-                      <a href="../mdhtml/知识的本质：客观真理还是主观建构.html" class="text-decoration-none">
+                    <h5 class="card-title article-title">
+                      <i class="bi bi-file-earmark-text me-2 text-primary"></i>
+                      <a href="../mdhtml/知识的本质：客观真理还是主观建构.html" class="text-decoration-none text-dark">
                         知识的本质：客观真理还是主观建构
                       </a>
                     </h5>
                     
-                      <p class="card-text">
+                      <p class="card-text text-muted mb-3">
                         本文探讨了知识的本质，分析了客观主义与主观主义的认识论争论。通过哲学、科学哲学和认知科学的多角度分析，揭示了知识现象的复杂性，最终提出了在知识追求中寻找平衡的生活智慧。
                       </p>
                       
-                        
-                          <small class="text-muted">
-                            2026-02-24
-                          </small>
-                          
+                        <div class="article-meta">
+                            
+                                <i class="bi bi-clock me-1"></i>
+                                2026-02-24
+                                
+                        </div>
                   </div>
-                  <div class="card-footer text-muted">
+                  <div class="card-footer text-muted bg-white border-top">
                     <a href="/category/%E5%93%B2%E5%AD%A6%E6%80%9D%E8%80%83.html"
-                      class="badge bg-primary">
+                      class="badge bg-primary me-2">
                       哲学思考
                     </a>
                     
-                      <a href="/tag/%E7%9F%A5%E8%AF%86%E6%9C%AC%E8%B4%A8.html" class="badge tag-link">
+                      <a href="/tag/%E7%9F%A5%E8%AF%86%E6%9C%AC%E8%B4%A8.html" class="badge tag-link me-2 mb-1">
                         知识本质
                       </a>
                       
-                      <a href="/tag/%E5%93%B2%E5%AD%A6%E6%80%9D%E8%80%83.html" class="badge tag-link">
+                      <a href="/tag/%E5%93%B2%E5%AD%A6%E6%80%9D%E8%80%83.html" class="badge tag-link me-2 mb-1">
                         哲学思考
                       </a>
                       
-                      <a href="/tag/%E8%AE%A4%E8%AF%86%E8%AE%BA.html" class="badge tag-link">
+                      <a href="/tag/%E8%AE%A4%E8%AF%86%E8%AE%BA.html" class="badge tag-link me-2 mb-1">
                         认识论
                       </a>
                       
-                      <a href="/tag/%E5%AE%A2%E8%A7%82%E4%B8%BB%E4%B9%89.html" class="badge tag-link">
+                      <a href="/tag/%E5%AE%A2%E8%A7%82%E4%B8%BB%E4%B9%89.html" class="badge tag-link me-2 mb-1">
                         客观主义
                       </a>
                       
-                      <a href="/tag/%E4%B8%BB%E8%A7%82%E4%B8%BB%E4%B9%89.html" class="badge tag-link">
+                      <a href="/tag/%E4%B8%BB%E8%A7%82%E4%B8%BB%E4%B9%89.html" class="badge tag-link me-2 mb-1">
                         主观主义
                       </a>
                       
-                      <a href="/tag/%E7%A7%91%E5%AD%A6%E5%93%B2%E5%AD%A6.html" class="badge tag-link">
+                      <a href="/tag/%E7%A7%91%E5%AD%A6%E5%93%B2%E5%AD%A6.html" class="badge tag-link me-2 mb-1">
                         科学哲学
                       </a>
                       
@@ -419,52 +490,53 @@
               </div>
               
               <div class="masonry-grid-item">
-                <div class="card shadow-sm">
+                <div class="card article-card shadow-sm">
                   <div class="card-body">
-                    <h5 class="card-title">
-                      <i class="bi bi-file-earmark-text"></i>
-                      <a href="../mdhtml/真理的本质：客观存在还是主观建构.html" class="text-decoration-none">
+                    <h5 class="card-title article-title">
+                      <i class="bi bi-file-earmark-text me-2 text-primary"></i>
+                      <a href="../mdhtml/真理的本质：客观存在还是主观建构.html" class="text-decoration-none text-dark">
                         真理的本质：客观存在还是主观建构
                       </a>
                     </h5>
                     
-                      <p class="card-text">
+                      <p class="card-text text-muted mb-3">
                         本文探讨了真理的本质，分析了客观主义与相对主义的哲学争论。通过认识论、科学哲学和日常经验的多角度分析，揭示了真理概念的复杂性，最终提出了在追求真理中寻找智慧的生活态度。
                       </p>
                       
-                        
-                          <small class="text-muted">
-                            2026-02-24
-                          </small>
-                          
+                        <div class="article-meta">
+                            
+                                <i class="bi bi-clock me-1"></i>
+                                2026-02-24
+                                
+                        </div>
                   </div>
-                  <div class="card-footer text-muted">
+                  <div class="card-footer text-muted bg-white border-top">
                     <a href="/category/%E5%93%B2%E5%AD%A6%E6%80%9D%E8%80%83.html"
-                      class="badge bg-primary">
+                      class="badge bg-primary me-2">
                       哲学思考
                     </a>
                     
-                      <a href="/tag/%E7%9C%9F%E7%90%86%E6%9C%AC%E8%B4%A8.html" class="badge tag-link">
+                      <a href="/tag/%E7%9C%9F%E7%90%86%E6%9C%AC%E8%B4%A8.html" class="badge tag-link me-2 mb-1">
                         真理本质
                       </a>
                       
-                      <a href="/tag/%E5%93%B2%E5%AD%A6%E6%80%9D%E8%80%83.html" class="badge tag-link">
+                      <a href="/tag/%E5%93%B2%E5%AD%A6%E6%80%9D%E8%80%83.html" class="badge tag-link me-2 mb-1">
                         哲学思考
                       </a>
                       
-                      <a href="/tag/%E8%AE%A4%E8%AF%86%E8%AE%BA.html" class="badge tag-link">
+                      <a href="/tag/%E8%AE%A4%E8%AF%86%E8%AE%BA.html" class="badge tag-link me-2 mb-1">
                         认识论
                       </a>
                       
-                      <a href="/tag/%E7%9B%B8%E5%AF%B9%E4%B8%BB%E4%B9%89.html" class="badge tag-link">
+                      <a href="/tag/%E7%9B%B8%E5%AF%B9%E4%B8%BB%E4%B9%89.html" class="badge tag-link me-2 mb-1">
                         相对主义
                       </a>
                       
-                      <a href="/tag/%E7%BB%9D%E5%AF%B9%E4%B8%BB%E4%B9%89.html" class="badge tag-link">
+                      <a href="/tag/%E7%BB%9D%E5%AF%B9%E4%B8%BB%E4%B9%89.html" class="badge tag-link me-2 mb-1">
                         绝对主义
                       </a>
                       
-                      <a href="/tag/%E7%A7%91%E5%AD%A6%E6%96%B9%E6%B3%95.html" class="badge tag-link">
+                      <a href="/tag/%E7%A7%91%E5%AD%A6%E6%96%B9%E6%B3%95.html" class="badge tag-link me-2 mb-1">
                         科学方法
                       </a>
                       
@@ -473,52 +545,53 @@
               </div>
               
               <div class="masonry-grid-item">
-                <div class="card shadow-sm">
+                <div class="card article-card shadow-sm">
                   <div class="card-body">
-                    <h5 class="card-title">
-                      <i class="bi bi-file-earmark-text"></i>
-                      <a href="../mdhtml/死亡的意义：生命的终结还是新的开始.html" class="text-decoration-none">
+                    <h5 class="card-title article-title">
+                      <i class="bi bi-file-earmark-text me-2 text-primary"></i>
+                      <a href="../mdhtml/死亡的意义：生命的终结还是新的开始.html" class="text-decoration-none text-dark">
                         死亡的意义：生命的终结还是新的开始
                       </a>
                     </h5>
                     
-                      <p class="card-text">
+                      <p class="card-text text-muted mb-3">
                         本文探讨了死亡的意义，分析了死亡是生命终结还是新的开始的哲学争论。通过哲学、宗教和心理学的多角度分析，揭示了死亡现象的复杂性，最终提出了在面对死亡中寻找生命意义的生活智慧。
                       </p>
                       
-                        
-                          <small class="text-muted">
-                            2026-02-24
-                          </small>
-                          
+                        <div class="article-meta">
+                            
+                                <i class="bi bi-clock me-1"></i>
+                                2026-02-24
+                                
+                        </div>
                   </div>
-                  <div class="card-footer text-muted">
+                  <div class="card-footer text-muted bg-white border-top">
                     <a href="/category/%E5%93%B2%E5%AD%A6%E6%80%9D%E8%80%83.html"
-                      class="badge bg-primary">
+                      class="badge bg-primary me-2">
                       哲学思考
                     </a>
                     
-                      <a href="/tag/%E6%AD%BB%E4%BA%A1%E6%84%8F%E4%B9%89.html" class="badge tag-link">
+                      <a href="/tag/%E6%AD%BB%E4%BA%A1%E6%84%8F%E4%B9%89.html" class="badge tag-link me-2 mb-1">
                         死亡意义
                       </a>
                       
-                      <a href="/tag/%E5%93%B2%E5%AD%A6%E6%80%9D%E8%80%83.html" class="badge tag-link">
+                      <a href="/tag/%E5%93%B2%E5%AD%A6%E6%80%9D%E8%80%83.html" class="badge tag-link me-2 mb-1">
                         哲学思考
                       </a>
                       
-                      <a href="/tag/%E5%AD%98%E5%9C%A8%E4%B8%BB%E4%B9%89.html" class="badge tag-link">
+                      <a href="/tag/%E5%AD%98%E5%9C%A8%E4%B8%BB%E4%B9%89.html" class="badge tag-link me-2 mb-1">
                         存在主义
                       </a>
                       
-                      <a href="/tag/%E5%AE%97%E6%95%99%E5%93%B2%E5%AD%A6.html" class="badge tag-link">
+                      <a href="/tag/%E5%AE%97%E6%95%99%E5%93%B2%E5%AD%A6.html" class="badge tag-link me-2 mb-1">
                         宗教哲学
                       </a>
                       
-                      <a href="/tag/%E7%94%9F%E5%91%BD%E6%84%8F%E4%B9%89.html" class="badge tag-link">
+                      <a href="/tag/%E7%94%9F%E5%91%BD%E6%84%8F%E4%B9%89.html" class="badge tag-link me-2 mb-1">
                         生命意义
                       </a>
                       
-                      <a href="/tag/%E6%AD%BB%E4%BA%A1%E5%93%B2%E5%AD%A6.html" class="badge tag-link">
+                      <a href="/tag/%E6%AD%BB%E4%BA%A1%E5%93%B2%E5%AD%A6.html" class="badge tag-link me-2 mb-1">
                         死亡哲学
                       </a>
                       
@@ -527,52 +600,53 @@
               </div>
               
               <div class="masonry-grid-item">
-                <div class="card shadow-sm">
+                <div class="card article-card shadow-sm">
                   <div class="card-body">
-                    <h5 class="card-title">
-                      <i class="bi bi-file-earmark-text"></i>
-                      <a href="../mdhtml/正义的本质：客观原则还是主观判断.html" class="text-decoration-none">
+                    <h5 class="card-title article-title">
+                      <i class="bi bi-file-earmark-text me-2 text-primary"></i>
+                      <a href="../mdhtml/正义的本质：客观原则还是主观判断.html" class="text-decoration-none text-dark">
                         正义的本质：客观原则还是主观判断
                       </a>
                     </h5>
                     
-                      <p class="card-text">
+                      <p class="card-text text-muted mb-3">
                         本文探讨了正义的本质，分析了客观主义与主观主义的正义观争论。通过哲学、政治学和伦理学的多角度分析，揭示了正义现象的复杂性，最终提出了在追求正义中寻找平衡的生活智慧。
                       </p>
                       
-                        
-                          <small class="text-muted">
-                            2026-02-24
-                          </small>
-                          
+                        <div class="article-meta">
+                            
+                                <i class="bi bi-clock me-1"></i>
+                                2026-02-24
+                                
+                        </div>
                   </div>
-                  <div class="card-footer text-muted">
+                  <div class="card-footer text-muted bg-white border-top">
                     <a href="/category/%E5%93%B2%E5%AD%A6%E6%80%9D%E8%80%83.html"
-                      class="badge bg-primary">
+                      class="badge bg-primary me-2">
                       哲学思考
                     </a>
                     
-                      <a href="/tag/%E6%AD%A3%E4%B9%89%E6%9C%AC%E8%B4%A8.html" class="badge tag-link">
+                      <a href="/tag/%E6%AD%A3%E4%B9%89%E6%9C%AC%E8%B4%A8.html" class="badge tag-link me-2 mb-1">
                         正义本质
                       </a>
                       
-                      <a href="/tag/%E5%93%B2%E5%AD%A6%E6%80%9D%E8%80%83.html" class="badge tag-link">
+                      <a href="/tag/%E5%93%B2%E5%AD%A6%E6%80%9D%E8%80%83.html" class="badge tag-link me-2 mb-1">
                         哲学思考
                       </a>
                       
-                      <a href="/tag/%E4%BC%A6%E7%90%86%E5%AD%A6.html" class="badge tag-link">
+                      <a href="/tag/%E4%BC%A6%E7%90%86%E5%AD%A6.html" class="badge tag-link me-2 mb-1">
                         伦理学
                       </a>
                       
-                      <a href="/tag/%E6%94%BF%E6%B2%BB%E5%93%B2%E5%AD%A6.html" class="badge tag-link">
+                      <a href="/tag/%E6%94%BF%E6%B2%BB%E5%93%B2%E5%AD%A6.html" class="badge tag-link me-2 mb-1">
                         政治哲学
                       </a>
                       
-                      <a href="/tag/%E5%8A%9F%E5%88%A9%E4%B8%BB%E4%B9%89.html" class="badge tag-link">
+                      <a href="/tag/%E5%8A%9F%E5%88%A9%E4%B8%BB%E4%B9%89.html" class="badge tag-link me-2 mb-1">
                         功利主义
                       </a>
                       
-                      <a href="/tag/%E4%B9%89%E5%8A%A1%E8%AE%BA.html" class="badge tag-link">
+                      <a href="/tag/%E4%B9%89%E5%8A%A1%E8%AE%BA.html" class="badge tag-link me-2 mb-1">
                         义务论
                       </a>
                       
@@ -581,52 +655,53 @@
               </div>
               
               <div class="masonry-grid-item">
-                <div class="card shadow-sm">
+                <div class="card article-card shadow-sm">
                   <div class="card-body">
-                    <h5 class="card-title">
-                      <i class="bi bi-file-earmark-text"></i>
-                      <a href="../mdhtml/时间的本质：线性流动还是永恒当下.html" class="text-decoration-none">
+                    <h5 class="card-title article-title">
+                      <i class="bi bi-file-earmark-text me-2 text-primary"></i>
+                      <a href="../mdhtml/时间的本质：线性流动还是永恒当下.html" class="text-decoration-none text-dark">
                         时间的本质：线性流动还是永恒当下
                       </a>
                     </h5>
                     
-                      <p class="card-text">
+                      <p class="card-text text-muted mb-3">
                         本文探讨了时间的本质，分析了线性时间观与永恒当下的哲学争论。通过物理学、心理学和哲学的多角度分析，揭示了时间体验的复杂性，最终提出了在时间中寻找意义的生活智慧。
                       </p>
                       
-                        
-                          <small class="text-muted">
-                            2026-02-24
-                          </small>
-                          
+                        <div class="article-meta">
+                            
+                                <i class="bi bi-clock me-1"></i>
+                                2026-02-24
+                                
+                        </div>
                   </div>
-                  <div class="card-footer text-muted">
+                  <div class="card-footer text-muted bg-white border-top">
                     <a href="/category/%E5%93%B2%E5%AD%A6%E6%80%9D%E8%80%83.html"
-                      class="badge bg-primary">
+                      class="badge bg-primary me-2">
                       哲学思考
                     </a>
                     
-                      <a href="/tag/%E6%97%B6%E9%97%B4%E6%9C%AC%E8%B4%A8.html" class="badge tag-link">
+                      <a href="/tag/%E6%97%B6%E9%97%B4%E6%9C%AC%E8%B4%A8.html" class="badge tag-link me-2 mb-1">
                         时间本质
                       </a>
                       
-                      <a href="/tag/%E5%93%B2%E5%AD%A6%E6%80%9D%E8%80%83.html" class="badge tag-link">
+                      <a href="/tag/%E5%93%B2%E5%AD%A6%E6%80%9D%E8%80%83.html" class="badge tag-link me-2 mb-1">
                         哲学思考
                       </a>
                       
-                      <a href="/tag/%E7%89%A9%E7%90%86%E5%AD%A6.html" class="badge tag-link">
+                      <a href="/tag/%E7%89%A9%E7%90%86%E5%AD%A6.html" class="badge tag-link me-2 mb-1">
                         物理学
                       </a>
                       
-                      <a href="/tag/%E5%BF%83%E7%90%86%E5%AD%A6.html" class="badge tag-link">
+                      <a href="/tag/%E5%BF%83%E7%90%86%E5%AD%A6.html" class="badge tag-link me-2 mb-1">
                         心理学
                       </a>
                       
-                      <a href="/tag/%E5%AD%98%E5%9C%A8%E4%B8%BB%E4%B9%89.html" class="badge tag-link">
+                      <a href="/tag/%E5%AD%98%E5%9C%A8%E4%B8%BB%E4%B9%89.html" class="badge tag-link me-2 mb-1">
                         存在主义
                       </a>
                       
-                      <a href="/tag/%E7%9B%B8%E5%AF%B9%E8%AE%BA.html" class="badge tag-link">
+                      <a href="/tag/%E7%9B%B8%E5%AF%B9%E8%AE%BA.html" class="badge tag-link me-2 mb-1">
                         相对论
                       </a>
                       
@@ -635,52 +710,53 @@
               </div>
               
               <div class="masonry-grid-item">
-                <div class="card shadow-sm">
+                <div class="card article-card shadow-sm">
                   <div class="card-body">
-                    <h5 class="card-title">
-                      <i class="bi bi-file-earmark-text"></i>
-                      <a href="../mdhtml/意识的本质：大脑的产物还是独立存在.html" class="text-decoration-none">
+                    <h5 class="card-title article-title">
+                      <i class="bi bi-file-earmark-text me-2 text-primary"></i>
+                      <a href="../mdhtml/意识的本质：大脑的产物还是独立存在.html" class="text-decoration-none text-dark">
                         意识的本质：大脑的产物还是独立存在
                       </a>
                     </h5>
                     
-                      <p class="card-text">
+                      <p class="card-text text-muted mb-3">
                         本文探讨了意识的本质，分析了物理主义与二元论的哲学争论。通过神经科学、认知科学和哲学的多角度分析，揭示了意识现象的复杂性，最终提出了在意识中寻找自我的生活智慧。
                       </p>
                       
-                        
-                          <small class="text-muted">
-                            2026-02-24
-                          </small>
-                          
+                        <div class="article-meta">
+                            
+                                <i class="bi bi-clock me-1"></i>
+                                2026-02-24
+                                
+                        </div>
                   </div>
-                  <div class="card-footer text-muted">
+                  <div class="card-footer text-muted bg-white border-top">
                     <a href="/category/%E5%93%B2%E5%AD%A6%E6%80%9D%E8%80%83.html"
-                      class="badge bg-primary">
+                      class="badge bg-primary me-2">
                       哲学思考
                     </a>
                     
-                      <a href="/tag/%E6%84%8F%E8%AF%86%E6%9C%AC%E8%B4%A8.html" class="badge tag-link">
+                      <a href="/tag/%E6%84%8F%E8%AF%86%E6%9C%AC%E8%B4%A8.html" class="badge tag-link me-2 mb-1">
                         意识本质
                       </a>
                       
-                      <a href="/tag/%E5%93%B2%E5%AD%A6%E6%80%9D%E8%80%83.html" class="badge tag-link">
+                      <a href="/tag/%E5%93%B2%E5%AD%A6%E6%80%9D%E8%80%83.html" class="badge tag-link me-2 mb-1">
                         哲学思考
                       </a>
                       
-                      <a href="/tag/%E7%A5%9E%E7%BB%8F%E7%A7%91%E5%AD%A6.html" class="badge tag-link">
+                      <a href="/tag/%E7%A5%9E%E7%BB%8F%E7%A7%91%E5%AD%A6.html" class="badge tag-link me-2 mb-1">
                         神经科学
                       </a>
                       
-                      <a href="/tag/%E8%AE%A4%E7%9F%A5%E7%A7%91%E5%AD%A6.html" class="badge tag-link">
+                      <a href="/tag/%E8%AE%A4%E7%9F%A5%E7%A7%91%E5%AD%A6.html" class="badge tag-link me-2 mb-1">
                         认知科学
                       </a>
                       
-                      <a href="/tag/%E4%BA%8C%E5%85%83%E8%AE%BA.html" class="badge tag-link">
+                      <a href="/tag/%E4%BA%8C%E5%85%83%E8%AE%BA.html" class="badge tag-link me-2 mb-1">
                         二元论
                       </a>
                       
-                      <a href="/tag/%E7%89%A9%E7%90%86%E4%B8%BB%E4%B9%89.html" class="badge tag-link">
+                      <a href="/tag/%E7%89%A9%E7%90%86%E4%B8%BB%E4%B9%89.html" class="badge tag-link me-2 mb-1">
                         物理主义
                       </a>
                       
@@ -689,52 +765,53 @@
               </div>
               
               <div class="masonry-grid-item">
-                <div class="card shadow-sm">
+                <div class="card article-card shadow-sm">
                   <div class="card-body">
-                    <h5 class="card-title">
-                      <i class="bi bi-file-earmark-text"></i>
-                      <a href="../mdhtml/幸福的本质：客观条件还是主观体验.html" class="text-decoration-none">
+                    <h5 class="card-title article-title">
+                      <i class="bi bi-file-earmark-text me-2 text-primary"></i>
+                      <a href="../mdhtml/幸福的本质：客观条件还是主观体验.html" class="text-decoration-none text-dark">
                         幸福的本质：客观条件还是主观体验
                       </a>
                     </h5>
                     
-                      <p class="card-text">
+                      <p class="card-text text-muted mb-3">
                         本文探讨了幸福的本质，分析了客观主义与主观主义的幸福观争论。通过哲学、心理学和伦理学的多角度分析，揭示了幸福现象的复杂性，最终提出了在追求幸福中寻找平衡的生活智慧。
                       </p>
                       
-                        
-                          <small class="text-muted">
-                            2026-02-24
-                          </small>
-                          
+                        <div class="article-meta">
+                            
+                                <i class="bi bi-clock me-1"></i>
+                                2026-02-24
+                                
+                        </div>
                   </div>
-                  <div class="card-footer text-muted">
+                  <div class="card-footer text-muted bg-white border-top">
                     <a href="/category/%E5%93%B2%E5%AD%A6%E6%80%9D%E8%80%83.html"
-                      class="badge bg-primary">
+                      class="badge bg-primary me-2">
                       哲学思考
                     </a>
                     
-                      <a href="/tag/%E5%B9%B8%E7%A6%8F%E6%9C%AC%E8%B4%A8.html" class="badge tag-link">
+                      <a href="/tag/%E5%B9%B8%E7%A6%8F%E6%9C%AC%E8%B4%A8.html" class="badge tag-link me-2 mb-1">
                         幸福本质
                       </a>
                       
-                      <a href="/tag/%E5%93%B2%E5%AD%A6%E6%80%9D%E8%80%83.html" class="badge tag-link">
+                      <a href="/tag/%E5%93%B2%E5%AD%A6%E6%80%9D%E8%80%83.html" class="badge tag-link me-2 mb-1">
                         哲学思考
                       </a>
                       
-                      <a href="/tag/%E4%BC%A6%E7%90%86%E5%AD%A6.html" class="badge tag-link">
+                      <a href="/tag/%E4%BC%A6%E7%90%86%E5%AD%A6.html" class="badge tag-link me-2 mb-1">
                         伦理学
                       </a>
                       
-                      <a href="/tag/%E5%BF%83%E7%90%86%E5%AD%A6.html" class="badge tag-link">
+                      <a href="/tag/%E5%BF%83%E7%90%86%E5%AD%A6.html" class="badge tag-link me-2 mb-1">
                         心理学
                       </a>
                       
-                      <a href="/tag/%E5%8A%9F%E5%88%A9%E4%B8%BB%E4%B9%89.html" class="badge tag-link">
+                      <a href="/tag/%E5%8A%9F%E5%88%A9%E4%B8%BB%E4%B9%89.html" class="badge tag-link me-2 mb-1">
                         功利主义
                       </a>
                       
-                      <a href="/tag/%E5%AD%98%E5%9C%A8%E4%B8%BB%E4%B9%89.html" class="badge tag-link">
+                      <a href="/tag/%E5%AD%98%E5%9C%A8%E4%B8%BB%E4%B9%89.html" class="badge tag-link me-2 mb-1">
                         存在主义
                       </a>
                       
@@ -743,48 +820,49 @@
               </div>
               
               <div class="masonry-grid-item">
-                <div class="card shadow-sm">
+                <div class="card article-card shadow-sm">
                   <div class="card-body">
-                    <h5 class="card-title">
-                      <i class="bi bi-file-earmark-text"></i>
-                      <a href="../mdhtml/宇宙边界：探索宇宙的终极奥秘.html" class="text-decoration-none">
+                    <h5 class="card-title article-title">
+                      <i class="bi bi-file-earmark-text me-2 text-primary"></i>
+                      <a href="../mdhtml/宇宙边界：探索宇宙的终极奥秘.html" class="text-decoration-none text-dark">
                         宇宙边界：探索宇宙的终极奥秘
                       </a>
                     </h5>
                     
-                      <p class="card-text">
+                      <p class="card-text text-muted mb-3">
                         深入探讨宇宙边界的概念、理论模型与科学探索，分析不同宇宙学理论对宇宙边界的解释，以及人类对宇宙终极命运的思考，带领读者踏上一场跨越时空的宇宙探索之旅。
                       </p>
                       
-                        
-                          <small class="text-muted">
-                            2026-02-24
-                          </small>
-                          
+                        <div class="article-meta">
+                            
+                                <i class="bi bi-clock me-1"></i>
+                                2026-02-24
+                                
+                        </div>
                   </div>
-                  <div class="card-footer text-muted">
+                  <div class="card-footer text-muted bg-white border-top">
                     <a href="/category/%E8%84%91%E6%B4%9E%E5%A4%A7%E5%BC%80.html"
-                      class="badge bg-primary">
+                      class="badge bg-primary me-2">
                       脑洞大开
                     </a>
                     
-                      <a href="/tag/%E5%AE%87%E5%AE%99%E8%BE%B9%E7%95%8C.html" class="badge tag-link">
+                      <a href="/tag/%E5%AE%87%E5%AE%99%E8%BE%B9%E7%95%8C.html" class="badge tag-link me-2 mb-1">
                         宇宙边界
                       </a>
                       
-                      <a href="/tag/%E8%84%91%E6%B4%9E%E5%A4%A7%E5%BC%80.html" class="badge tag-link">
+                      <a href="/tag/%E8%84%91%E6%B4%9E%E5%A4%A7%E5%BC%80.html" class="badge tag-link me-2 mb-1">
                         脑洞大开
                       </a>
                       
-                      <a href="/tag/%E5%A4%A9%E6%96%87%E5%AD%A6.html" class="badge tag-link">
+                      <a href="/tag/%E5%A4%A9%E6%96%87%E5%AD%A6.html" class="badge tag-link me-2 mb-1">
                         天文学
                       </a>
                       
-                      <a href="/tag/%E7%89%A9%E7%90%86%E5%AD%A6.html" class="badge tag-link">
+                      <a href="/tag/%E7%89%A9%E7%90%86%E5%AD%A6.html" class="badge tag-link me-2 mb-1">
                         物理学
                       </a>
                       
-                      <a href="/tag/%E5%93%B2%E5%AD%A6%E6%80%9D%E8%80%83.html" class="badge tag-link">
+                      <a href="/tag/%E5%93%B2%E5%AD%A6%E6%80%9D%E8%80%83.html" class="badge tag-link me-2 mb-1">
                         哲学思考
                       </a>
                       
@@ -793,48 +871,49 @@
               </div>
               
               <div class="masonry-grid-item">
-                <div class="card shadow-sm">
+                <div class="card article-card shadow-sm">
                   <div class="card-body">
-                    <h5 class="card-title">
-                      <i class="bi bi-file-earmark-text"></i>
-                      <a href="../mdhtml/我们做出的每一个选择是否都是必然的，还是存在着真正的自由意志？.html" class="text-decoration-none">
+                    <h5 class="card-title article-title">
+                      <i class="bi bi-file-earmark-text me-2 text-primary"></i>
+                      <a href="../mdhtml/我们做出的每一个选择是否都是必然的，还是存在着真正的自由意志？.html" class="text-decoration-none text-dark">
                         我们做出的每一个选择是否都是必然的，还是存在着真正的自由意志？
                       </a>
                     </h5>
                     
-                      <p class="card-text">
+                      <p class="card-text text-muted mb-3">
                         本文探讨了决定论与自由意志的概念及其在日常生活中的体现。决定论认为所有选择都由先前状态决定，而支持自由意志的观点则强调人类意识的独特性和自我反思的重要性。通过分析两者，文章提出了如何在生活中找到必然与自由间的平衡，以充分利用选择机会创造有意义人生的方法。适合对哲学思考、人类行为感兴趣的读者。关键词涵盖：决定论、自由意志、人类意识、日常选择。
                       </p>
                       
-                        
-                          <small class="text-muted">
-                            2026-02-11
-                          </small>
-                          
+                        <div class="article-meta">
+                            
+                                <i class="bi bi-clock me-1"></i>
+                                2026-02-11
+                                
+                        </div>
                   </div>
-                  <div class="card-footer text-muted">
+                  <div class="card-footer text-muted bg-white border-top">
                     <a href="/category/%E8%87%AA%E7%84%B6%E7%A7%91%E5%AD%A6.html"
-                      class="badge bg-primary">
+                      class="badge bg-primary me-2">
                       自然科学
                     </a>
                     
-                      <a href="/tag/%E5%86%B3%E5%AE%9A%E8%AE%BA.html" class="badge tag-link">
+                      <a href="/tag/%E5%86%B3%E5%AE%9A%E8%AE%BA.html" class="badge tag-link me-2 mb-1">
                         决定论
                       </a>
                       
-                      <a href="/tag/%E8%87%AA%E7%94%B1%E6%84%8F%E5%BF%97.html" class="badge tag-link">
+                      <a href="/tag/%E8%87%AA%E7%94%B1%E6%84%8F%E5%BF%97.html" class="badge tag-link me-2 mb-1">
                         自由意志
                       </a>
                       
-                      <a href="/tag/%E4%BA%BA%E7%B1%BB%E6%84%8F%E8%AF%86.html" class="badge tag-link">
+                      <a href="/tag/%E4%BA%BA%E7%B1%BB%E6%84%8F%E8%AF%86.html" class="badge tag-link me-2 mb-1">
                         人类意识
                       </a>
                       
-                      <a href="/tag/%E6%97%A5%E5%B8%B8%E9%80%89%E6%8B%A9.html" class="badge tag-link">
+                      <a href="/tag/%E6%97%A5%E5%B8%B8%E9%80%89%E6%8B%A9.html" class="badge tag-link me-2 mb-1">
                         日常选择
                       </a>
                       
-                      <a href="/tag/%E5%93%B2%E5%AD%A6%E6%80%9D%E8%80%83.html" class="badge tag-link">
+                      <a href="/tag/%E5%93%B2%E5%AD%A6%E6%80%9D%E8%80%83.html" class="badge tag-link me-2 mb-1">
                         哲学思考
                       </a>
                       
@@ -843,48 +922,49 @@
               </div>
               
               <div class="masonry-grid-item">
-                <div class="card shadow-sm">
+                <div class="card article-card shadow-sm">
                   <div class="card-body">
-                    <h5 class="card-title">
-                      <i class="bi bi-file-earmark-text"></i>
-                      <a href="../mdhtml/宇宙到底有没有边界.html" class="text-decoration-none">
+                    <h5 class="card-title article-title">
+                      <i class="bi bi-file-earmark-text me-2 text-primary"></i>
+                      <a href="../mdhtml/宇宙到底有没有边界.html" class="text-decoration-none text-dark">
                         宇宙到底有没有边界
                       </a>
                     </h5>
                     
-                      <p class="card-text">
+                      <p class="card-text text-muted mb-3">
                         宇宙是否有边界是一个涉及物理学、哲学和宗教的复杂问题。科学上，基于宇宙大爆炸理论和膨胀模型，宇宙可能是无限且没有明确边界的，但这也取决于对宇宙本质的理解和假设。哲学与宗教则从有限与无限的辩证关系及宇宙的神圣性等角度提出不同见解。尽管人类受限于观测技术和认知能力，对宇宙边界的探索依然无止境。
                       </p>
                       
-                        
-                          <small class="text-muted">
-                            2026-02-11
-                          </small>
-                          
+                        <div class="article-meta">
+                            
+                                <i class="bi bi-clock me-1"></i>
+                                2026-02-11
+                                
+                        </div>
                   </div>
-                  <div class="card-footer text-muted">
+                  <div class="card-footer text-muted bg-white border-top">
                     <a href="/category/%E8%87%AA%E7%84%B6%E7%A7%91%E5%AD%A6.html"
-                      class="badge bg-primary">
+                      class="badge bg-primary me-2">
                       自然科学
                     </a>
                     
-                      <a href="/tag/%E5%AE%87%E5%AE%99%E8%BE%B9%E7%95%8C.html" class="badge tag-link">
+                      <a href="/tag/%E5%AE%87%E5%AE%99%E8%BE%B9%E7%95%8C.html" class="badge tag-link me-2 mb-1">
                         宇宙边界
                       </a>
                       
-                      <a href="/tag/%E7%A7%91%E5%AD%A6%E6%8E%A2%E7%B4%A2.html" class="badge tag-link">
+                      <a href="/tag/%E7%A7%91%E5%AD%A6%E6%8E%A2%E7%B4%A2.html" class="badge tag-link me-2 mb-1">
                         科学探索
                       </a>
                       
-                      <a href="/tag/%E5%93%B2%E5%AD%A6%E6%80%9D%E8%80%83.html" class="badge tag-link">
+                      <a href="/tag/%E5%93%B2%E5%AD%A6%E6%80%9D%E8%80%83.html" class="badge tag-link me-2 mb-1">
                         哲学思考
                       </a>
                       
-                      <a href="/tag/%E5%AE%97%E6%95%99%E8%A7%82%E7%82%B9.html" class="badge tag-link">
+                      <a href="/tag/%E5%AE%97%E6%95%99%E8%A7%82%E7%82%B9.html" class="badge tag-link me-2 mb-1">
                         宗教观点
                       </a>
                       
-                      <a href="/tag/%E4%BA%BA%E7%B1%BB%E8%AE%A4%E7%9F%A5.html" class="badge tag-link">
+                      <a href="/tag/%E4%BA%BA%E7%B1%BB%E8%AE%A4%E7%9F%A5.html" class="badge tag-link me-2 mb-1">
                         人类认知
                       </a>
                       
@@ -893,52 +973,53 @@
               </div>
               
               <div class="masonry-grid-item">
-                <div class="card shadow-sm">
+                <div class="card article-card shadow-sm">
                   <div class="card-body">
-                    <h5 class="card-title">
-                      <i class="bi bi-file-earmark-text"></i>
-                      <a href="../mdhtml/命运是由自己掌握的还是注定的.html" class="text-decoration-none">
+                    <h5 class="card-title article-title">
+                      <i class="bi bi-file-earmark-text me-2 text-primary"></i>
+                      <a href="../mdhtml/命运是由自己掌握的还是注定的.html" class="text-decoration-none text-dark">
                         命运是由自己掌握的还是注定的
                       </a>
                     </h5>
                     
-                      <p class="card-text">
+                      <p class="card-text text-muted mb-3">
                         本文探讨了命运是由自己掌握还是注定这一古老而深邃的话题，从历史视角到现代科学的不同角度进行了分析。通过回顾古希腊和中国古代对命运的思考，引用现代科学研究如量子物理和神经科学的发现，揭示了人类行为与选择背后的复杂性。文章还列举了王阳明和稻盛和夫等真实案例，展示了个人如何通过认知革命和积极思维模式改写命运。最后，提出了超越传统宿命论的新思维，强调了在遵循客观规律的同时，通过主观选择创造新的可能性的重要性。适合对探索人生意义、自由意志与命运关系感兴趣的读者阅读。命运既不是完全注定也不是绝对自由，而是两者的微妙结合。
                       </p>
                       
-                        
-                          <small class="text-muted">
-                            2026-02-11
-                          </small>
-                          
+                        <div class="article-meta">
+                            
+                                <i class="bi bi-clock me-1"></i>
+                                2026-02-11
+                                
+                        </div>
                   </div>
-                  <div class="card-footer text-muted">
+                  <div class="card-footer text-muted bg-white border-top">
                     <a href="/category/%E7%A4%BE%E4%BC%9A%E6%8E%A2%E7%A9%B6.html"
-                      class="badge bg-primary">
+                      class="badge bg-primary me-2">
                       社会探究
                     </a>
                     
-                      <a href="/tag/%E5%91%BD%E8%BF%90%E6%8E%A2%E8%AE%A8.html" class="badge tag-link">
+                      <a href="/tag/%E5%91%BD%E8%BF%90%E6%8E%A2%E8%AE%A8.html" class="badge tag-link me-2 mb-1">
                         命运探讨
                       </a>
                       
-                      <a href="/tag/%E5%8E%86%E5%8F%B2%E8%A7%86%E8%A7%92.html" class="badge tag-link">
+                      <a href="/tag/%E5%8E%86%E5%8F%B2%E8%A7%86%E8%A7%92.html" class="badge tag-link me-2 mb-1">
                         历史视角
                       </a>
                       
-                      <a href="/tag/%E5%93%B2%E5%AD%A6%E6%80%9D%E8%80%83.html" class="badge tag-link">
+                      <a href="/tag/%E5%93%B2%E5%AD%A6%E6%80%9D%E8%80%83.html" class="badge tag-link me-2 mb-1">
                         哲学思考
                       </a>
                       
-                      <a href="/tag/%E8%87%AA%E6%88%91%E5%AE%9E%E7%8E%B0.html" class="badge tag-link">
+                      <a href="/tag/%E8%87%AA%E6%88%91%E5%AE%9E%E7%8E%B0.html" class="badge tag-link me-2 mb-1">
                         自我实现
                       </a>
                       
-                      <a href="/tag/%E5%AE%BF%E5%91%BD%E8%AE%BA.html" class="badge tag-link">
+                      <a href="/tag/%E5%AE%BF%E5%91%BD%E8%AE%BA.html" class="badge tag-link me-2 mb-1">
                         宿命论
                       </a>
                       
-                      <a href="/tag/%E6%96%B0%E6%80%9D%E7%BB%B4.html" class="badge tag-link">
+                      <a href="/tag/%E6%96%B0%E6%80%9D%E7%BB%B4.html" class="badge tag-link me-2 mb-1">
                         新思维
                       </a>
                       
@@ -947,44 +1028,45 @@
               </div>
               
               <div class="masonry-grid-item">
-                <div class="card shadow-sm">
+                <div class="card article-card shadow-sm">
                   <div class="card-body">
-                    <h5 class="card-title">
-                      <i class="bi bi-file-earmark-text"></i>
-                      <a href="../mdhtml/削足适履：被误解千年的生存智慧.html" class="text-decoration-none">
+                    <h5 class="card-title article-title">
+                      <i class="bi bi-file-earmark-text me-2 text-primary"></i>
+                      <a href="../mdhtml/削足适履：被误解千年的生存智慧.html" class="text-decoration-none text-dark">
                         削足适履：被误解千年的生存智慧
                       </a>
                     </h5>
                     
-                      <p class="card-text">
+                      <p class="card-text text-muted mb-3">
                         本文重新审视“削足适履”的含义，探讨其在规则与自由间的深层生存哲学。从医学视角看，“削足”如同治疗手段，通过短期痛苦换取长期适应；文化隐喻中，“适履”揭示了规则应为需求服务的真相，鼓励用创新重构规则；反向思维中，“削足”象征打破认知茧房，触发进化。结语强调适应不是终点而是蜕变的开始，呼吁尊重那些敢于在规则边缘探索的人。
                       </p>
                       
-                        
-                          <small class="text-muted">
-                            2026-02-11
-                          </small>
-                          
+                        <div class="article-meta">
+                            
+                                <i class="bi bi-clock me-1"></i>
+                                2026-02-11
+                                
+                        </div>
                   </div>
-                  <div class="card-footer text-muted">
+                  <div class="card-footer text-muted bg-white border-top">
                     <a href="/category/%E4%BC%A0%E7%BB%9F%E6%96%87%E5%8C%96.html"
-                      class="badge bg-primary">
+                      class="badge bg-primary me-2">
                       传统文化
                     </a>
                     
-                      <a href="/tag/%E7%94%9F%E5%AD%98%E7%AD%96%E7%95%A5.html" class="badge tag-link">
+                      <a href="/tag/%E7%94%9F%E5%AD%98%E7%AD%96%E7%95%A5.html" class="badge tag-link me-2 mb-1">
                         生存策略
                       </a>
                       
-                      <a href="/tag/%E8%A7%84%E5%88%99%E9%80%82%E5%BA%94.html" class="badge tag-link">
+                      <a href="/tag/%E8%A7%84%E5%88%99%E9%80%82%E5%BA%94.html" class="badge tag-link me-2 mb-1">
                         规则适应
                       </a>
                       
-                      <a href="/tag/%E6%96%87%E5%8C%96%E9%87%8D%E6%9E%84.html" class="badge tag-link">
+                      <a href="/tag/%E6%96%87%E5%8C%96%E9%87%8D%E6%9E%84.html" class="badge tag-link me-2 mb-1">
                         文化重构
                       </a>
                       
-                      <a href="/tag/%E5%93%B2%E5%AD%A6%E6%80%9D%E8%80%83.html" class="badge tag-link">
+                      <a href="/tag/%E5%93%B2%E5%AD%A6%E6%80%9D%E8%80%83.html" class="badge tag-link me-2 mb-1">
                         哲学思考
                       </a>
                       
@@ -993,48 +1075,49 @@
               </div>
               
               <div class="masonry-grid-item">
-                <div class="card shadow-sm">
+                <div class="card article-card shadow-sm">
                   <div class="card-body">
-                    <h5 class="card-title">
-                      <i class="bi bi-file-earmark-text"></i>
-                      <a href="../mdhtml/倒立的时候是不是举起了地球？.html" class="text-decoration-none">
+                    <h5 class="card-title article-title">
+                      <i class="bi bi-file-earmark-text me-2 text-primary"></i>
+                      <a href="../mdhtml/倒立的时候是不是举起了地球？.html" class="text-decoration-none text-dark">
                         倒立的时候是不是举起了地球？
                       </a>
                     </h5>
                     
-                      <p class="card-text">
+                      <p class="card-text text-muted mb-3">
                         探讨倒立这一动作背后的科学原理，包括地球引力、人体力学等方面，同时从哲学角度思考倒立与地球的关系，以及其在科学与艺术领域的跨界之美。
                       </p>
                       
-                        
-                          <small class="text-muted">
-                            2026-02-11
-                          </small>
-                          
+                        <div class="article-meta">
+                            
+                                <i class="bi bi-clock me-1"></i>
+                                2026-02-11
+                                
+                        </div>
                   </div>
-                  <div class="card-footer text-muted">
+                  <div class="card-footer text-muted bg-white border-top">
                     <a href="/category/%E7%A7%91%E5%AD%A6%E6%8E%A2%E7%B4%A2.html"
-                      class="badge bg-primary">
+                      class="badge bg-primary me-2">
                       科学探索
                     </a>
                     
-                      <a href="/tag/%E5%9C%B0%E7%90%83%E5%BC%95%E5%8A%9B.html" class="badge tag-link">
+                      <a href="/tag/%E5%9C%B0%E7%90%83%E5%BC%95%E5%8A%9B.html" class="badge tag-link me-2 mb-1">
                         地球引力
                       </a>
                       
-                      <a href="/tag/%E4%BA%BA%E4%BD%93%E5%8A%9B%E5%AD%A6.html" class="badge tag-link">
+                      <a href="/tag/%E4%BA%BA%E4%BD%93%E5%8A%9B%E5%AD%A6.html" class="badge tag-link me-2 mb-1">
                         人体力学
                       </a>
                       
-                      <a href="/tag/%E5%80%92%E7%AB%8B.html" class="badge tag-link">
+                      <a href="/tag/%E5%80%92%E7%AB%8B.html" class="badge tag-link me-2 mb-1">
                         倒立
                       </a>
                       
-                      <a href="/tag/%E7%A7%91%E5%AD%A6%E4%B8%8E%E8%89%BA%E6%9C%AF.html" class="badge tag-link">
+                      <a href="/tag/%E7%A7%91%E5%AD%A6%E4%B8%8E%E8%89%BA%E6%9C%AF.html" class="badge tag-link me-2 mb-1">
                         科学与艺术
                       </a>
                       
-                      <a href="/tag/%E5%93%B2%E5%AD%A6%E6%80%9D%E8%80%83.html" class="badge tag-link">
+                      <a href="/tag/%E5%93%B2%E5%AD%A6%E6%80%9D%E8%80%83.html" class="badge tag-link me-2 mb-1">
                         哲学思考
                       </a>
                       
@@ -1043,48 +1126,49 @@
               </div>
               
               <div class="masonry-grid-item">
-                <div class="card shadow-sm">
+                <div class="card article-card shadow-sm">
                   <div class="card-body">
-                    <h5 class="card-title">
-                      <i class="bi bi-file-earmark-text"></i>
-                      <a href="../mdhtml/人类存在的终极意义是什么？.html" class="text-decoration-none">
+                    <h5 class="card-title article-title">
+                      <i class="bi bi-file-earmark-text me-2 text-primary"></i>
+                      <a href="../mdhtml/人类存在的终极意义是什么？.html" class="text-decoration-none text-dark">
                         人类存在的终极意义是什么？
                       </a>
                     </h5>
                     
-                      <p class="card-text">
+                      <p class="card-text text-muted mb-3">
                         文章探讨了人类存在的终极意义，通过分析生命意志在物质和精神层面的表现，指出尽管人类不断追求满足，但这种满足感是短暂的，新的渴望会不断出现。文章提出，生命的意义可能不在于找到一个永恒的答案，而在于追寻意义的过程本身，鼓励人们学会与不确定性共处，接受存在的荒诞性，在这个过程中安放自己的灵魂并创造个人价值。
                       </p>
                       
-                        
-                          <small class="text-muted">
-                            2026-02-11
-                          </small>
-                          
+                        <div class="article-meta">
+                            
+                                <i class="bi bi-clock me-1"></i>
+                                2026-02-11
+                                
+                        </div>
                   </div>
-                  <div class="card-footer text-muted">
+                  <div class="card-footer text-muted bg-white border-top">
                     <a href="/category/%E7%A4%BE%E4%BC%9A%E6%8E%A2%E7%A9%B6.html"
-                      class="badge bg-primary">
+                      class="badge bg-primary me-2">
                       社会探究
                     </a>
                     
-                      <a href="/tag/%E7%94%9F%E5%91%BD%E6%84%8F%E5%BF%97.html" class="badge tag-link">
+                      <a href="/tag/%E7%94%9F%E5%91%BD%E6%84%8F%E5%BF%97.html" class="badge tag-link me-2 mb-1">
                         生命意志
                       </a>
                       
-                      <a href="/tag/%E5%AD%98%E5%9C%A8%E6%84%8F%E4%B9%89.html" class="badge tag-link">
+                      <a href="/tag/%E5%AD%98%E5%9C%A8%E6%84%8F%E4%B9%89.html" class="badge tag-link me-2 mb-1">
                         存在意义
                       </a>
                       
-                      <a href="/tag/%E5%93%B2%E5%AD%A6%E6%80%9D%E8%80%83.html" class="badge tag-link">
+                      <a href="/tag/%E5%93%B2%E5%AD%A6%E6%80%9D%E8%80%83.html" class="badge tag-link me-2 mb-1">
                         哲学思考
                       </a>
                       
-                      <a href="/tag/%E4%BA%BA%E7%B1%BB%E6%96%87%E6%98%8E.html" class="badge tag-link">
+                      <a href="/tag/%E4%BA%BA%E7%B1%BB%E6%96%87%E6%98%8E.html" class="badge tag-link me-2 mb-1">
                         人类文明
                       </a>
                       
-                      <a href="/tag/%E5%BF%83%E7%81%B5%E6%8E%A2%E7%B4%A2.html" class="badge tag-link">
+                      <a href="/tag/%E5%BF%83%E7%81%B5%E6%8E%A2%E7%B4%A2.html" class="badge tag-link me-2 mb-1">
                         心灵探索
                       </a>
                       
@@ -1093,48 +1177,49 @@
               </div>
               
               <div class="masonry-grid-item">
-                <div class="card shadow-sm">
+                <div class="card article-card shadow-sm">
                   <div class="card-body">
-                    <h5 class="card-title">
-                      <i class="bi bi-file-earmark-text"></i>
-                      <a href="../mdhtml/上帝能否创造一块自己搬不动的石头？.html" class="text-decoration-none">
+                    <h5 class="card-title article-title">
+                      <i class="bi bi-file-earmark-text me-2 text-primary"></i>
+                      <a href="../mdhtml/上帝能否创造一块自己搬不动的石头？.html" class="text-decoration-none text-dark">
                         上帝能否创造一块自己搬不动的石头？
                       </a>
                     </h5>
                     
-                      <p class="card-text">
+                      <p class="card-text text-muted mb-3">
                         深度探讨“上帝能否创造一块自己搬不动的石头”这一经典问题，剖析其在逻辑、宗教、哲学层面的内涵，揭示对人类认知边界的启示，带你领略信仰与哲学交织的深邃世界。
                       </p>
                       
-                        
-                          <small class="text-muted">
-                            2026-02-11
-                          </small>
-                          
+                        <div class="article-meta">
+                            
+                                <i class="bi bi-clock me-1"></i>
+                                2026-02-11
+                                
+                        </div>
                   </div>
-                  <div class="card-footer text-muted">
+                  <div class="card-footer text-muted bg-white border-top">
                     <a href="/category/%E8%84%91%E6%B4%9E%E5%A4%A7%E5%BC%80.html"
-                      class="badge bg-primary">
+                      class="badge bg-primary me-2">
                       脑洞大开
                     </a>
                     
-                      <a href="/tag/%E7%A5%9E%E5%AD%A6%E9%80%BB%E8%BE%91.html" class="badge tag-link">
+                      <a href="/tag/%E7%A5%9E%E5%AD%A6%E9%80%BB%E8%BE%91.html" class="badge tag-link me-2 mb-1">
                         神学逻辑
                       </a>
                       
-                      <a href="/tag/%E9%80%BB%E8%BE%91%E6%82%96%E8%AE%BA.html" class="badge tag-link">
+                      <a href="/tag/%E9%80%BB%E8%BE%91%E6%82%96%E8%AE%BA.html" class="badge tag-link me-2 mb-1">
                         逻辑悖论
                       </a>
                       
-                      <a href="/tag/%E5%AE%97%E6%95%99%E8%A7%A3%E8%AF%BB.html" class="badge tag-link">
+                      <a href="/tag/%E5%AE%97%E6%95%99%E8%A7%A3%E8%AF%BB.html" class="badge tag-link me-2 mb-1">
                         宗教解读
                       </a>
                       
-                      <a href="/tag/%E5%93%B2%E5%AD%A6%E6%80%9D%E8%80%83.html" class="badge tag-link">
+                      <a href="/tag/%E5%93%B2%E5%AD%A6%E6%80%9D%E8%80%83.html" class="badge tag-link me-2 mb-1">
                         哲学思考
                       </a>
                       
-                      <a href="/tag/%E4%BA%BA%E7%B1%BB%E8%AE%A4%E7%9F%A5.html" class="badge tag-link">
+                      <a href="/tag/%E4%BA%BA%E7%B1%BB%E8%AE%A4%E7%9F%A5.html" class="badge tag-link me-2 mb-1">
                         人类认知
                       </a>
                       
@@ -1144,8 +1229,8 @@
               
           </div>
 
-          <div class="mt-4 text-center">
-            <a href="标签列表.html" class="btn btn-outline-primary"><i class="bi bi-arrow-left"></i> 返回标签列表</a>
+          <div class="mt-6 text-center">
+            <a href="标签列表.html" class="btn btn-outline-primary back-button"><i class="bi bi-arrow-left me-2"></i> 返回标签列表</a>
           </div>
         </div>
       </div>
@@ -1169,7 +1254,7 @@
             itemSelector: '.masonry-grid-item',
             columnWidth: '.masonry-grid-item',
             percentPosition: true,
-            gutter: 10 // 可选，添加卡片间的间距
+            gutter: 15 // 增加间距，提升视觉效果
           });
         });
       </script>

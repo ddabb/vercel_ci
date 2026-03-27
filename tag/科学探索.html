@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
 
 <head>
   <meta charset="UTF-8">
@@ -9,7 +9,7 @@
   <meta name="description" content="无人自助站的【科学探索】的标签列表页面，汇集了关于【科学探索】标签相关的文章和资讯，方便您快速找到感兴趣的内容。">
   <meta name="keywords" content="无人自助站,科学探索">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>标签文章列表</title>
+  <title>科学探索标签 - 无人自助站</title>
 
   <link rel="icon" href="../logo.svg" type="image/svg+xml">
   <link rel="stylesheet" href="../css/style.css">
@@ -27,6 +27,62 @@
   <!-- 引入Masonry -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/masonry/4.2.2/masonry.pkgd.min.js"></script>
 
+  <style>
+        .tag-header {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            color: white;
+            padding: 2rem;
+            border-radius: 8px;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        .tag-title {
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+        .article-card {
+            transition: all 0.3s ease;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        .article-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+        }
+        .article-title {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            transition: color 0.3s ease;
+        }
+        .article-title:hover {
+            color: #0d6efd;
+        }
+        .article-meta {
+            font-size: 0.85rem;
+            color: #6c757d;
+        }
+        .tag-link {
+            background-color: #e9ecef;
+            color: #495057;
+            transition: all 0.2s ease;
+        }
+        .tag-link:hover {
+            background-color: #dee2e6;
+            color: #212529;
+        }
+        .back-button {
+            transition: all 0.3s ease;
+        }
+        .back-button:hover {
+            transform: translateX(-3px);
+        }
+        .article-count {
+            font-size: 0.9rem;
+            opacity: 0.9;
+        }
+    </style>
 </head>
 
 <body>
@@ -80,7 +136,7 @@
     <main class="container-fluid mt-4">
       <div class="row">
         <div class="col-lg-8 col-md-12 mx-auto">
-          <nav aria-label="breadcrumb">
+          <nav aria-label="breadcrumb" class="mb-4">
             <ol class="breadcrumb">
               <li class="breadcrumb-item"><a href="/html/index.html">首页</a></li>
               <li class="breadcrumb-item"><a href="标签列表.html">标签列表</a></li>
@@ -89,78 +145,88 @@
               </li>
             </ol>
           </nav>
-          <h1 style="font-size: 1.5em; margin: 0.5em 0;">
-            科学探索标签的文章和资讯
-        </h1>
+          
+          <!-- 标签头部 -->
+          <div class="tag-header">
+              <h1 class="tag-title">
+                  <i class="bi bi-tags me-2"></i>
+                  科学探索
+              </h1>
+              <p class="article-count">
+                  共 8 篇文章
+              </p>
+          </div>
+          
           <div class="masonry-grid">
             
               <div class="masonry-grid-item">
-                <div class="card shadow-sm">
+                <div class="card article-card shadow-sm">
                   <div class="card-body">
-                    <h5 class="card-title">
-                      <i class="bi bi-file-earmark-text"></i>
-                      <a href="../mdhtml/科学探索：解锁自然奥秘之旅.html" class="text-decoration-none">
+                    <h5 class="card-title article-title">
+                      <i class="bi bi-file-earmark-text me-2 text-primary"></i>
+                      <a href="../mdhtml/科学探索：解锁自然奥秘之旅.html" class="text-decoration-none text-dark">
                         科学探索：解锁自然奥秘的奇妙旅程
                       </a>
                     </h5>
                     
-                      <p class="card-text">
+                      <p class="card-text text-muted mb-3">
                         全面梳理科学探索的核心概念与方法，从微观粒子到宏观宇宙的完整探索路径。深入分析物理学、化学、生物学和地球科学等领域的关键发现，讲述科学家的探索故事，探讨科学方法的应用，为读者构建从科学史到前沿研究的全方位认知体系。
                       </p>
                       
-                        
-                          <small class="text-muted">
-                            2026-02-24
-                          </small>
-                          
+                        <div class="article-meta">
+                            
+                                <i class="bi bi-clock me-1"></i>
+                                2026-02-24
+                                
+                        </div>
                   </div>
-                  <div class="card-footer text-muted">
+                  <div class="card-footer text-muted bg-white border-top">
                     <a href="/category/%E7%A7%91%E5%AD%A6%E6%8E%A2%E7%B4%A2.html"
-                      class="badge bg-primary">
+                      class="badge bg-primary me-2">
                       科学探索
                     </a>
                     
-                      <a href="/tag/%E7%A7%91%E5%AD%A6%E6%8E%A2%E7%B4%A2.html" class="badge tag-link">
+                      <a href="/tag/%E7%A7%91%E5%AD%A6%E6%8E%A2%E7%B4%A2.html" class="badge tag-link me-2 mb-1">
                         科学探索
                       </a>
                       
-                      <a href="/tag/%E8%87%AA%E7%84%B6%E7%A7%91%E5%AD%A6.html" class="badge tag-link">
+                      <a href="/tag/%E8%87%AA%E7%84%B6%E7%A7%91%E5%AD%A6.html" class="badge tag-link me-2 mb-1">
                         自然科学
                       </a>
                       
-                      <a href="/tag/%E7%89%A9%E7%90%86%E4%B8%96%E7%95%8C.html" class="badge tag-link">
+                      <a href="/tag/%E7%89%A9%E7%90%86%E4%B8%96%E7%95%8C.html" class="badge tag-link me-2 mb-1">
                         物理世界
                       </a>
                       
-                      <a href="/tag/%E5%8C%96%E5%AD%A6%E5%A5%A5%E7%A7%98.html" class="badge tag-link">
+                      <a href="/tag/%E5%8C%96%E5%AD%A6%E5%A5%A5%E7%A7%98.html" class="badge tag-link me-2 mb-1">
                         化学奥秘
                       </a>
                       
-                      <a href="/tag/%E7%94%9F%E7%89%A9%E8%BF%9B%E5%8C%96.html" class="badge tag-link">
+                      <a href="/tag/%E7%94%9F%E7%89%A9%E8%BF%9B%E5%8C%96.html" class="badge tag-link me-2 mb-1">
                         生物进化
                       </a>
                       
-                      <a href="/tag/%E5%AE%87%E5%AE%99%E8%B5%B7%E6%BA%90.html" class="badge tag-link">
+                      <a href="/tag/%E5%AE%87%E5%AE%99%E8%B5%B7%E6%BA%90.html" class="badge tag-link me-2 mb-1">
                         宇宙起源
                       </a>
                       
-                      <a href="/tag/%E5%9C%B0%E7%90%83%E7%A7%91%E5%AD%A6.html" class="badge tag-link">
+                      <a href="/tag/%E5%9C%B0%E7%90%83%E7%A7%91%E5%AD%A6.html" class="badge tag-link me-2 mb-1">
                         地球科学
                       </a>
                       
-                      <a href="/tag/%E7%A7%91%E5%AD%A6%E6%96%B9%E6%B3%95.html" class="badge tag-link">
+                      <a href="/tag/%E7%A7%91%E5%AD%A6%E6%96%B9%E6%B3%95.html" class="badge tag-link me-2 mb-1">
                         科学方法
                       </a>
                       
-                      <a href="/tag/%E7%A7%91%E5%AD%A6%E5%8F%91%E7%8E%B0.html" class="badge tag-link">
+                      <a href="/tag/%E7%A7%91%E5%AD%A6%E5%8F%91%E7%8E%B0.html" class="badge tag-link me-2 mb-1">
                         科学发现
                       </a>
                       
-                      <a href="/tag/%E7%A7%91%E5%AD%A6%E7%B2%BE%E7%A5%9E.html" class="badge tag-link">
+                      <a href="/tag/%E7%A7%91%E5%AD%A6%E7%B2%BE%E7%A5%9E.html" class="badge tag-link me-2 mb-1">
                         科学精神
                       </a>
                       
-                      <a href="/tag/%E5%89%8D%E6%B2%BF%E7%A7%91%E6%8A%80.html" class="badge tag-link">
+                      <a href="/tag/%E5%89%8D%E6%B2%BF%E7%A7%91%E6%8A%80.html" class="badge tag-link me-2 mb-1">
                         前沿科技
                       </a>
                       
@@ -169,68 +235,69 @@
               </div>
               
               <div class="masonry-grid-item">
-                <div class="card shadow-sm">
+                <div class="card article-card shadow-sm">
                   <div class="card-body">
-                    <h5 class="card-title">
-                      <i class="bi bi-file-earmark-text"></i>
-                      <a href="../mdhtml/科学探索：从微观粒子到宏观宇宙.html" class="text-decoration-none">
+                    <h5 class="card-title article-title">
+                      <i class="bi bi-file-earmark-text me-2 text-primary"></i>
+                      <a href="../mdhtml/科学探索：从微观粒子到宏观宇宙.html" class="text-decoration-none text-dark">
                         科学探索：从微观粒子到宏观宇宙
                       </a>
                     </h5>
                     
-                      <p class="card-text">
+                      <p class="card-text text-muted mb-3">
                         详细介绍科学探索的历程与前沿，从微观粒子世界到宏观宇宙尺度的完整科学图景。深入分析量子力学的奇异现象、相对论的时空观和宇宙大爆炸理论等核心科学概念，探讨科学家如何通过观察、实验和理论构建来理解自然规律，展现科学探索的魅力与意义，为读者提供从基础到前沿的科学知识全景。
                       </p>
                       
-                        
-                          <small class="text-muted">
-                            2026-02-24
-                          </small>
-                          
+                        <div class="article-meta">
+                            
+                                <i class="bi bi-clock me-1"></i>
+                                2026-02-24
+                                
+                        </div>
                   </div>
-                  <div class="card-footer text-muted">
+                  <div class="card-footer text-muted bg-white border-top">
                     <a href="/category/%E7%A7%91%E5%AD%A6%E6%8E%A2%E7%B4%A2.html"
-                      class="badge bg-primary">
+                      class="badge bg-primary me-2">
                       科学探索
                     </a>
                     
-                      <a href="/tag/%E7%A7%91%E5%AD%A6%E6%8E%A2%E7%B4%A2.html" class="badge tag-link">
+                      <a href="/tag/%E7%A7%91%E5%AD%A6%E6%8E%A2%E7%B4%A2.html" class="badge tag-link me-2 mb-1">
                         科学探索
                       </a>
                       
-                      <a href="/tag/%E9%87%8F%E5%AD%90%E5%8A%9B%E5%AD%A6.html" class="badge tag-link">
+                      <a href="/tag/%E9%87%8F%E5%AD%90%E5%8A%9B%E5%AD%A6.html" class="badge tag-link me-2 mb-1">
                         量子力学
                       </a>
                       
-                      <a href="/tag/%E5%AE%87%E5%AE%99%E5%AD%A6.html" class="badge tag-link">
+                      <a href="/tag/%E5%AE%87%E5%AE%99%E5%AD%A6.html" class="badge tag-link me-2 mb-1">
                         宇宙学
                       </a>
                       
-                      <a href="/tag/%E7%9B%B8%E5%AF%B9%E8%AE%BA.html" class="badge tag-link">
+                      <a href="/tag/%E7%9B%B8%E5%AF%B9%E8%AE%BA.html" class="badge tag-link me-2 mb-1">
                         相对论
                       </a>
                       
-                      <a href="/tag/%E7%B2%92%E5%AD%90%E7%89%A9%E7%90%86.html" class="badge tag-link">
+                      <a href="/tag/%E7%B2%92%E5%AD%90%E7%89%A9%E7%90%86.html" class="badge tag-link me-2 mb-1">
                         粒子物理
                       </a>
                       
-                      <a href="/tag/%E5%A4%A9%E6%96%87%E5%AD%A6.html" class="badge tag-link">
+                      <a href="/tag/%E5%A4%A9%E6%96%87%E5%AD%A6.html" class="badge tag-link me-2 mb-1">
                         天文学
                       </a>
                       
-                      <a href="/tag/%E7%A7%91%E5%AD%A6%E5%8F%91%E7%8E%B0.html" class="badge tag-link">
+                      <a href="/tag/%E7%A7%91%E5%AD%A6%E5%8F%91%E7%8E%B0.html" class="badge tag-link me-2 mb-1">
                         科学发现
                       </a>
                       
-                      <a href="/tag/%E7%A7%91%E5%AD%A6%E6%96%B9%E6%B3%95.html" class="badge tag-link">
+                      <a href="/tag/%E7%A7%91%E5%AD%A6%E6%96%B9%E6%B3%95.html" class="badge tag-link me-2 mb-1">
                         科学方法
                       </a>
                       
-                      <a href="/tag/%E7%A7%91%E5%AD%A6%E5%8F%B2.html" class="badge tag-link">
+                      <a href="/tag/%E7%A7%91%E5%AD%A6%E5%8F%B2.html" class="badge tag-link me-2 mb-1">
                         科学史
                       </a>
                       
-                      <a href="/tag/%E7%A7%91%E5%AD%A6%E5%93%B2%E5%AD%A6.html" class="badge tag-link">
+                      <a href="/tag/%E7%A7%91%E5%AD%A6%E5%93%B2%E5%AD%A6.html" class="badge tag-link me-2 mb-1">
                         科学哲学
                       </a>
                       
@@ -239,48 +306,49 @@
               </div>
               
               <div class="masonry-grid-item">
-                <div class="card shadow-sm">
+                <div class="card article-card shadow-sm">
                   <div class="card-body">
-                    <h5 class="card-title">
-                      <i class="bi bi-file-earmark-text"></i>
-                      <a href="../mdhtml/死亡是终点还是新的开始？.html" class="text-decoration-none">
+                    <h5 class="card-title article-title">
+                      <i class="bi bi-file-earmark-text me-2 text-primary"></i>
+                      <a href="../mdhtml/死亡是终点还是新的开始？.html" class="text-decoration-none text-dark">
                         死亡是终点还是新的开始？
                       </a>
                     </h5>
                     
-                      <p class="card-text">
+                      <p class="card-text text-muted mb-3">
                         本文探讨了从古至今对死亡的不同理解。古代文明如埃及和中国通过葬礼仪式表达对死后世界的信仰；哲学家们则在灵魂不朽与虚无之间辩论。现代科学尝试解释濒死体验，探索生死界限；而现代社会中，数字纪念和虚拟存在正重新定义死亡的意义。无论是期待轮回还是相信意识上传，人类持续探索将死亡的终点转化为新起点的可能性。
                       </p>
                       
-                        
-                          <small class="text-muted">
-                            2026-02-11
-                          </small>
-                          
+                        <div class="article-meta">
+                            
+                                <i class="bi bi-clock me-1"></i>
+                                2026-02-11
+                                
+                        </div>
                   </div>
-                  <div class="card-footer text-muted">
+                  <div class="card-footer text-muted bg-white border-top">
                     <a href="/category/%E7%A4%BE%E4%BC%9A%E6%8E%A2%E7%A9%B6.html"
-                      class="badge bg-primary">
+                      class="badge bg-primary me-2">
                       社会探究
                     </a>
                     
-                      <a href="/tag/%E6%AD%BB%E4%BA%A1%E5%93%B2%E5%AD%A6.html" class="badge tag-link">
+                      <a href="/tag/%E6%AD%BB%E4%BA%A1%E5%93%B2%E5%AD%A6.html" class="badge tag-link me-2 mb-1">
                         死亡哲学
                       </a>
                       
-                      <a href="/tag/%E7%94%9F%E6%AD%BB%E8%AE%A4%E7%9F%A5.html" class="badge tag-link">
+                      <a href="/tag/%E7%94%9F%E6%AD%BB%E8%AE%A4%E7%9F%A5.html" class="badge tag-link me-2 mb-1">
                         生死认知
                       </a>
                       
-                      <a href="/tag/%E7%A7%91%E5%AD%A6%E6%8E%A2%E7%B4%A2.html" class="badge tag-link">
+                      <a href="/tag/%E7%A7%91%E5%AD%A6%E6%8E%A2%E7%B4%A2.html" class="badge tag-link me-2 mb-1">
                         科学探索
                       </a>
                       
-                      <a href="/tag/%E6%96%87%E5%8C%96%E4%BB%AA%E5%BC%8F.html" class="badge tag-link">
+                      <a href="/tag/%E6%96%87%E5%8C%96%E4%BB%AA%E5%BC%8F.html" class="badge tag-link me-2 mb-1">
                         文化仪式
                       </a>
                       
-                      <a href="/tag/%E7%B2%BE%E7%A5%9E%E8%BF%BD%E6%B1%82.html" class="badge tag-link">
+                      <a href="/tag/%E7%B2%BE%E7%A5%9E%E8%BF%BD%E6%B1%82.html" class="badge tag-link me-2 mb-1">
                         精神追求
                       </a>
                       
@@ -289,48 +357,49 @@
               </div>
               
               <div class="masonry-grid-item">
-                <div class="card shadow-sm">
+                <div class="card article-card shadow-sm">
                   <div class="card-body">
-                    <h5 class="card-title">
-                      <i class="bi bi-file-earmark-text"></i>
-                      <a href="../mdhtml/探索发电机与永动机的奥秘：连接发电机能否创造永动机？.html" class="text-decoration-none">
+                    <h5 class="card-title article-title">
+                      <i class="bi bi-file-earmark-text me-2 text-primary"></i>
+                      <a href="../mdhtml/探索发电机与永动机的奥秘：连接发电机能否创造永动机？.html" class="text-decoration-none text-dark">
                         探索发电机与永动机的奥秘：连接发电机能否创造永动机？
                       </a>
                     </h5>
                     
-                      <p class="card-text">
+                      <p class="card-text text-muted mb-3">
                         深入剖析连接发电机能否创造永动机这一问题，解读发电机工作原理、永动机定义分类，阐述因能量损耗和能量守恒定律限制无法实现，同时讲述永动机探索带来的启示。
                       </p>
                       
-                        
-                          <small class="text-muted">
-                            2026-02-11
-                          </small>
-                          
+                        <div class="article-meta">
+                            
+                                <i class="bi bi-clock me-1"></i>
+                                2026-02-11
+                                
+                        </div>
                   </div>
-                  <div class="card-footer text-muted">
+                  <div class="card-footer text-muted bg-white border-top">
                     <a href="/category/%E7%A7%91%E5%AD%A6%E6%8E%A2%E7%B4%A2.html"
-                      class="badge bg-primary">
+                      class="badge bg-primary me-2">
                       科学探索
                     </a>
                     
-                      <a href="/tag/%E5%8F%91%E7%94%B5%E6%9C%BA%E5%8E%9F%E7%90%86.html" class="badge tag-link">
+                      <a href="/tag/%E5%8F%91%E7%94%B5%E6%9C%BA%E5%8E%9F%E7%90%86.html" class="badge tag-link me-2 mb-1">
                         发电机原理
                       </a>
                       
-                      <a href="/tag/%E6%B0%B8%E5%8A%A8%E6%9C%BA%E6%A6%82%E5%BF%B5.html" class="badge tag-link">
+                      <a href="/tag/%E6%B0%B8%E5%8A%A8%E6%9C%BA%E6%A6%82%E5%BF%B5.html" class="badge tag-link me-2 mb-1">
                         永动机概念
                       </a>
                       
-                      <a href="/tag/%E8%83%BD%E9%87%8F%E5%AE%88%E6%81%92%E5%AE%9A%E5%BE%8B.html" class="badge tag-link">
+                      <a href="/tag/%E8%83%BD%E9%87%8F%E5%AE%88%E6%81%92%E5%AE%9A%E5%BE%8B.html" class="badge tag-link me-2 mb-1">
                         能量守恒定律
                       </a>
                       
-                      <a href="/tag/%E8%83%BD%E9%87%8F%E6%8D%9F%E8%80%97.html" class="badge tag-link">
+                      <a href="/tag/%E8%83%BD%E9%87%8F%E6%8D%9F%E8%80%97.html" class="badge tag-link me-2 mb-1">
                         能量损耗
                       </a>
                       
-                      <a href="/tag/%E7%A7%91%E5%AD%A6%E6%8E%A2%E7%B4%A2.html" class="badge tag-link">
+                      <a href="/tag/%E7%A7%91%E5%AD%A6%E6%8E%A2%E7%B4%A2.html" class="badge tag-link me-2 mb-1">
                         科学探索
                       </a>
                       
@@ -339,48 +408,49 @@
               </div>
               
               <div class="masonry-grid-item">
-                <div class="card shadow-sm">
+                <div class="card article-card shadow-sm">
                   <div class="card-body">
-                    <h5 class="card-title">
-                      <i class="bi bi-file-earmark-text"></i>
-                      <a href="../mdhtml/宇宙到底有没有边界.html" class="text-decoration-none">
+                    <h5 class="card-title article-title">
+                      <i class="bi bi-file-earmark-text me-2 text-primary"></i>
+                      <a href="../mdhtml/宇宙到底有没有边界.html" class="text-decoration-none text-dark">
                         宇宙到底有没有边界
                       </a>
                     </h5>
                     
-                      <p class="card-text">
+                      <p class="card-text text-muted mb-3">
                         宇宙是否有边界是一个涉及物理学、哲学和宗教的复杂问题。科学上，基于宇宙大爆炸理论和膨胀模型，宇宙可能是无限且没有明确边界的，但这也取决于对宇宙本质的理解和假设。哲学与宗教则从有限与无限的辩证关系及宇宙的神圣性等角度提出不同见解。尽管人类受限于观测技术和认知能力，对宇宙边界的探索依然无止境。
                       </p>
                       
-                        
-                          <small class="text-muted">
-                            2026-02-11
-                          </small>
-                          
+                        <div class="article-meta">
+                            
+                                <i class="bi bi-clock me-1"></i>
+                                2026-02-11
+                                
+                        </div>
                   </div>
-                  <div class="card-footer text-muted">
+                  <div class="card-footer text-muted bg-white border-top">
                     <a href="/category/%E8%87%AA%E7%84%B6%E7%A7%91%E5%AD%A6.html"
-                      class="badge bg-primary">
+                      class="badge bg-primary me-2">
                       自然科学
                     </a>
                     
-                      <a href="/tag/%E5%AE%87%E5%AE%99%E8%BE%B9%E7%95%8C.html" class="badge tag-link">
+                      <a href="/tag/%E5%AE%87%E5%AE%99%E8%BE%B9%E7%95%8C.html" class="badge tag-link me-2 mb-1">
                         宇宙边界
                       </a>
                       
-                      <a href="/tag/%E7%A7%91%E5%AD%A6%E6%8E%A2%E7%B4%A2.html" class="badge tag-link">
+                      <a href="/tag/%E7%A7%91%E5%AD%A6%E6%8E%A2%E7%B4%A2.html" class="badge tag-link me-2 mb-1">
                         科学探索
                       </a>
                       
-                      <a href="/tag/%E5%93%B2%E5%AD%A6%E6%80%9D%E8%80%83.html" class="badge tag-link">
+                      <a href="/tag/%E5%93%B2%E5%AD%A6%E6%80%9D%E8%80%83.html" class="badge tag-link me-2 mb-1">
                         哲学思考
                       </a>
                       
-                      <a href="/tag/%E5%AE%97%E6%95%99%E8%A7%82%E7%82%B9.html" class="badge tag-link">
+                      <a href="/tag/%E5%AE%97%E6%95%99%E8%A7%82%E7%82%B9.html" class="badge tag-link me-2 mb-1">
                         宗教观点
                       </a>
                       
-                      <a href="/tag/%E4%BA%BA%E7%B1%BB%E8%AE%A4%E7%9F%A5.html" class="badge tag-link">
+                      <a href="/tag/%E4%BA%BA%E7%B1%BB%E8%AE%A4%E7%9F%A5.html" class="badge tag-link me-2 mb-1">
                         人类认知
                       </a>
                       
@@ -389,48 +459,49 @@
               </div>
               
               <div class="masonry-grid-item">
-                <div class="card shadow-sm">
+                <div class="card article-card shadow-sm">
                   <div class="card-body">
-                    <h5 class="card-title">
-                      <i class="bi bi-file-earmark-text"></i>
-                      <a href="../mdhtml/外星文明为何至今未与人类接触：深度剖析.html" class="text-decoration-none">
+                    <h5 class="card-title article-title">
+                      <i class="bi bi-file-earmark-text me-2 text-primary"></i>
+                      <a href="../mdhtml/外星文明为何至今未与人类接触：深度剖析.html" class="text-decoration-none text-dark">
                         外星文明为何至今未与人类接触：深度剖析
                       </a>
                     </h5>
                     
-                      <p class="card-text">
+                      <p class="card-text text-muted mb-3">
                         深入探讨外星文明若存在却未与人类接触的原因，涵盖宇宙尺度、文明差异等多方面因素，同时介绍科学探索进展与未来展望。
                       </p>
                       
-                        
-                          <small class="text-muted">
-                            2026-02-11
-                          </small>
-                          
+                        <div class="article-meta">
+                            
+                                <i class="bi bi-clock me-1"></i>
+                                2026-02-11
+                                
+                        </div>
                   </div>
-                  <div class="card-footer text-muted">
+                  <div class="card-footer text-muted bg-white border-top">
                     <a href="/category/%E7%A7%91%E5%AD%A6%E6%8E%A2%E7%B4%A2.html"
-                      class="badge bg-primary">
+                      class="badge bg-primary me-2">
                       科学探索
                     </a>
                     
-                      <a href="/tag/%E5%A4%96%E6%98%9F%E6%96%87%E6%98%8E.html" class="badge tag-link">
+                      <a href="/tag/%E5%A4%96%E6%98%9F%E6%96%87%E6%98%8E.html" class="badge tag-link me-2 mb-1">
                         外星文明
                       </a>
                       
-                      <a href="/tag/%E5%AE%87%E5%AE%99%E6%8E%A2%E7%B4%A2.html" class="badge tag-link">
+                      <a href="/tag/%E5%AE%87%E5%AE%99%E6%8E%A2%E7%B4%A2.html" class="badge tag-link me-2 mb-1">
                         宇宙探索
                       </a>
                       
-                      <a href="/tag/%E6%98%9F%E9%99%85%E6%8E%A5%E8%A7%A6.html" class="badge tag-link">
+                      <a href="/tag/%E6%98%9F%E9%99%85%E6%8E%A5%E8%A7%A6.html" class="badge tag-link me-2 mb-1">
                         星际接触
                       </a>
                       
-                      <a href="/tag/%E6%96%87%E6%98%8E%E5%B7%AE%E5%BC%82.html" class="badge tag-link">
+                      <a href="/tag/%E6%96%87%E6%98%8E%E5%B7%AE%E5%BC%82.html" class="badge tag-link me-2 mb-1">
                         文明差异
                       </a>
                       
-                      <a href="/tag/%E7%A7%91%E5%AD%A6%E6%8E%A2%E7%B4%A2.html" class="badge tag-link">
+                      <a href="/tag/%E7%A7%91%E5%AD%A6%E6%8E%A2%E7%B4%A2.html" class="badge tag-link me-2 mb-1">
                         科学探索
                       </a>
                       
@@ -439,44 +510,45 @@
               </div>
               
               <div class="masonry-grid-item">
-                <div class="card shadow-sm">
+                <div class="card article-card shadow-sm">
                   <div class="card-body">
-                    <h5 class="card-title">
-                      <i class="bi bi-file-earmark-text"></i>
-                      <a href="../mdhtml/在探索未知的过程中，我们会遇到哪些无法逾越的障碍？.html" class="text-decoration-none">
+                    <h5 class="card-title article-title">
+                      <i class="bi bi-file-earmark-text me-2 text-primary"></i>
+                      <a href="../mdhtml/在探索未知的过程中，我们会遇到哪些无法逾越的障碍？.html" class="text-decoration-none text-dark">
                         在探索未知的过程中，我们会遇到哪些无法逾越的障碍？
                       </a>
                     </h5>
                     
-                      <p class="card-text">
+                      <p class="card-text text-muted mb-3">
                         探讨在探索未知过程中遇到的无法逾越的障碍，包括物理极限如光速限制、量子现象的理解与控制以及热力学定律揭示的熵增原理；生物进化中的自然选择压力和生态系统的复杂相互依赖性限制了生命形式的多样性发展；认知边界方面，人类使用的语言和逻辑工具本身的局限性，科学方法论的突破难度，以及哲学上的认识论问题都构成了对更深层次理解的挑战。这些障碍不仅考验人类智慧，也推动科学技术不断进步，并提醒我们在追求知识时应保持谦逊态度。
                       </p>
                       
-                        
-                          <small class="text-muted">
-                            2026-02-11
-                          </small>
-                          
+                        <div class="article-meta">
+                            
+                                <i class="bi bi-clock me-1"></i>
+                                2026-02-11
+                                
+                        </div>
                   </div>
-                  <div class="card-footer text-muted">
+                  <div class="card-footer text-muted bg-white border-top">
                     <a href="/category/%E8%87%AA%E7%84%B6%E7%A7%91%E5%AD%A6.html"
-                      class="badge bg-primary">
+                      class="badge bg-primary me-2">
                       自然科学
                     </a>
                     
-                      <a href="/tag/%E7%89%A9%E7%90%86%E6%9E%81%E9%99%90.html" class="badge tag-link">
+                      <a href="/tag/%E7%89%A9%E7%90%86%E6%9E%81%E9%99%90.html" class="badge tag-link me-2 mb-1">
                         物理极限
                       </a>
                       
-                      <a href="/tag/%E7%94%9F%E7%89%A9%E8%BF%9B%E5%8C%96.html" class="badge tag-link">
+                      <a href="/tag/%E7%94%9F%E7%89%A9%E8%BF%9B%E5%8C%96.html" class="badge tag-link me-2 mb-1">
                         生物进化
                       </a>
                       
-                      <a href="/tag/%E8%AE%A4%E7%9F%A5%E8%BE%B9%E7%95%8C.html" class="badge tag-link">
+                      <a href="/tag/%E8%AE%A4%E7%9F%A5%E8%BE%B9%E7%95%8C.html" class="badge tag-link me-2 mb-1">
                         认知边界
                       </a>
                       
-                      <a href="/tag/%E7%A7%91%E5%AD%A6%E6%8E%A2%E7%B4%A2.html" class="badge tag-link">
+                      <a href="/tag/%E7%A7%91%E5%AD%A6%E6%8E%A2%E7%B4%A2.html" class="badge tag-link me-2 mb-1">
                         科学探索
                       </a>
                       
@@ -485,48 +557,49 @@
               </div>
               
               <div class="masonry-grid-item">
-                <div class="card shadow-sm">
+                <div class="card article-card shadow-sm">
                   <div class="card-body">
-                    <h5 class="card-title">
-                      <i class="bi bi-file-earmark-text"></i>
-                      <a href="../mdhtml/吃下一朵云是什么体验？.html" class="text-decoration-none">
+                    <h5 class="card-title article-title">
+                      <i class="bi bi-file-earmark-text me-2 text-primary"></i>
+                      <a href="../mdhtml/吃下一朵云是什么体验？.html" class="text-decoration-none text-dark">
                         吃下一朵云是什么体验？
                       </a>
                     </h5>
                     
-                      <p class="card-text">
+                      <p class="card-text text-muted mb-3">
                         深入探索“吃下一朵云”这一奇幻概念，从科学、文化、心理和艺术等多维度剖析其背后蕴含的奥秘与意义，带你领略充满想象力的奇妙世界。
                       </p>
                       
-                        
-                          <small class="text-muted">
-                            2026-02-11
-                          </small>
-                          
+                        <div class="article-meta">
+                            
+                                <i class="bi bi-clock me-1"></i>
+                                2026-02-11
+                                
+                        </div>
                   </div>
-                  <div class="card-footer text-muted">
+                  <div class="card-footer text-muted bg-white border-top">
                     <a href="/category/%E8%84%91%E6%B4%9E%E5%A4%A7%E5%BC%80.html"
-                      class="badge bg-primary">
+                      class="badge bg-primary me-2">
                       脑洞大开
                     </a>
                     
-                      <a href="/tag/%E5%A5%87%E5%B9%BB%E6%83%B3%E8%B1%A1.html" class="badge tag-link">
+                      <a href="/tag/%E5%A5%87%E5%B9%BB%E6%83%B3%E8%B1%A1.html" class="badge tag-link me-2 mb-1">
                         奇幻想象
                       </a>
                       
-                      <a href="/tag/%E7%A7%91%E5%AD%A6%E6%8E%A2%E7%B4%A2.html" class="badge tag-link">
+                      <a href="/tag/%E7%A7%91%E5%AD%A6%E6%8E%A2%E7%B4%A2.html" class="badge tag-link me-2 mb-1">
                         科学探索
                       </a>
                       
-                      <a href="/tag/%E6%96%87%E5%8C%96%E6%84%8F%E8%B1%A1.html" class="badge tag-link">
+                      <a href="/tag/%E6%96%87%E5%8C%96%E6%84%8F%E8%B1%A1.html" class="badge tag-link me-2 mb-1">
                         文化意象
                       </a>
                       
-                      <a href="/tag/%E5%BF%83%E7%90%86%E4%BD%93%E9%AA%8C.html" class="badge tag-link">
+                      <a href="/tag/%E5%BF%83%E7%90%86%E4%BD%93%E9%AA%8C.html" class="badge tag-link me-2 mb-1">
                         心理体验
                       </a>
                       
-                      <a href="/tag/%E8%89%BA%E6%9C%AF%E5%91%88%E7%8E%B0.html" class="badge tag-link">
+                      <a href="/tag/%E8%89%BA%E6%9C%AF%E5%91%88%E7%8E%B0.html" class="badge tag-link me-2 mb-1">
                         艺术呈现
                       </a>
                       
@@ -536,8 +609,8 @@
               
           </div>
 
-          <div class="mt-4 text-center">
-            <a href="标签列表.html" class="btn btn-outline-primary"><i class="bi bi-arrow-left"></i> 返回标签列表</a>
+          <div class="mt-6 text-center">
+            <a href="标签列表.html" class="btn btn-outline-primary back-button"><i class="bi bi-arrow-left me-2"></i> 返回标签列表</a>
           </div>
         </div>
       </div>
@@ -561,7 +634,7 @@
             itemSelector: '.masonry-grid-item',
             columnWidth: '.masonry-grid-item',
             percentPosition: true,
-            gutter: 10 // 可选，添加卡片间的间距
+            gutter: 15 // 增加间距，提升视觉效果
           });
         });
       </script>

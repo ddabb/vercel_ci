@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
 
 <head>
     <meta charset="UTF-8">
@@ -9,7 +9,7 @@
     <meta name="description" content="无人自助站的【消费观察】分类列表页面，汇集了关于【消费观察】分类的文章和资讯，方便您快速找到感兴趣的内容。">
     <meta name="keywords" content="无人自助站,消费观察">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>分类列表</title>
+    <title>消费观察分类 - 无人自助站</title>
     <link rel="icon" href="../logo.svg" type="image/svg+xml">
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/footer.css">
@@ -27,6 +27,62 @@
     <!-- 引入Masonry -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/masonry/4.2.2/masonry.pkgd.min.js"></script>
 
+    <style>
+        .category-header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 2rem;
+            border-radius: 8px;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        .category-title {
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+        .article-card {
+            transition: all 0.3s ease;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        .article-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+        }
+        .article-title {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            transition: color 0.3s ease;
+        }
+        .article-title:hover {
+            color: #0d6efd;
+        }
+        .article-meta {
+            font-size: 0.85rem;
+            color: #6c757d;
+        }
+        .tag-link {
+            background-color: #e9ecef;
+            color: #495057;
+            transition: all 0.2s ease;
+        }
+        .tag-link:hover {
+            background-color: #dee2e6;
+            color: #212529;
+        }
+        .back-button {
+            transition: all 0.3s ease;
+        }
+        .back-button:hover {
+            transform: translateX(-3px);
+        }
+        .article-count {
+            font-size: 0.9rem;
+            opacity: 0.9;
+        }
+    </style>
 </head>
 
 <body>
@@ -80,7 +136,7 @@
         <main class="container-fluid mt-4">
             <div class="col-lg-8 col-md-12 mx-auto">
                 <!-- 面包屑导航 -->
-                <nav aria-label="breadcrumb">
+                <nav aria-label="breadcrumb" class="mb-4">
                     <ol class="breadcrumb">
                         <li class="breadcrumb-item"><a href="/html/index.html">首页</a></li>
                         <li class="breadcrumb-item"><a href="分类列表.html">分类列表</a></li>
@@ -89,61 +145,71 @@
                         </li>
                     </ol>
                 </nav>
-                <h1 style="font-size: 1.5em; margin: 0.5em 0;">
-                    消费观察分类的文章和资讯
-                </h1>
+                
+                <!-- 分类头部 -->
+                <div class="category-header">
+                    <h1 class="category-title">
+                        <i class="bi bi-folder2 me-2"></i>
+                        消费观察
+                    </h1>
+                    <p class="article-count">
+                        共 8 篇文章
+                    </p>
+                </div>
+                
                 <!-- 分类内容卡片 使用 Masonry 布局 -->
                 <div class="masonry-grid">
                     
                         <div class="masonry-grid-item">
-                            <div class="card shadow-sm">
+                            <div class="card article-card shadow-sm">
                                 <div class="card-body">
-                                    <h5 class="card-title">
-                                        <i class="bi bi-file-earmark-text"></i>
+                                    <h5 class="card-title article-title">
+                                        <i class="bi bi-file-earmark-text me-2 text-primary"></i>
                                         <a href="../mdhtml/为什么现在的大学生都爱买奢侈品了.html"
-                                            class="text-decoration-none">
+                                            class="text-decoration-none text-dark">
                                             为什么现在的大学生都爱买奢侈品了
                                         </a>
                                     </h5>
                                     
-                                        <p class="card-text">
+                                        <p class="card-text text-muted mb-3">
                                             分析大学生购买奢侈品的现象。
                                         </p>
                                         
+                                        <div class="article-meta">
                                             
-                                                <small class="text-muted">
-                                                    2026-03-24
-                                                </small>
+                                                <i class="bi bi-clock me-1"></i>
+                                                2026-03-24
                                                 
+                                        </div>
                                 </div>
-                                <div class="card-footer text-muted">
+                                <div class="card-footer text-muted bg-white border-top">
                                     <a href="/category/%E6%B6%88%E8%B4%B9%E8%A7%82%E5%AF%9F.html"
-                                        class="badge bg-primary">
+                                        class="badge bg-primary me-2">
                                         消费观察
                                     </a>
                                     
                                         <a href="/tag/%E5%A5%A2%E4%BE%88%E5%93%81.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             奢侈品
                                         </a>
                                         
                                         <a href="/tag/%E5%A4%A7%E5%AD%A6%E7%94%9F.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             大学生
                                         </a>
                                         
                                         <a href="/tag/%E6%B6%88%E8%B4%B9.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             消费
                                         </a>
                                         
                                         <a href="/tag/%E6%94%80%E6%AF%94.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             攀比
                                         </a>
                                         
                                         <a href="/tag/%E7%8E%B0%E8%B1%A1.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             现象
                                         </a>
                                         
@@ -152,54 +218,55 @@
                         </div>
                         
                         <div class="masonry-grid-item">
-                            <div class="card shadow-sm">
+                            <div class="card article-card shadow-sm">
                                 <div class="card-body">
-                                    <h5 class="card-title">
-                                        <i class="bi bi-file-earmark-text"></i>
+                                    <h5 class="card-title article-title">
+                                        <i class="bi bi-file-earmark-text me-2 text-primary"></i>
                                         <a href="../mdhtml/为什么现在的人都喜欢用现金了.html"
-                                            class="text-decoration-none">
+                                            class="text-decoration-none text-dark">
                                             为什么现在的人都喜欢用现金了
                                         </a>
                                     </h5>
                                     
-                                        <p class="card-text">
+                                        <p class="card-text text-muted mb-3">
                                             分析现金使用回潮的现象。
                                         </p>
                                         
+                                        <div class="article-meta">
                                             
-                                                <small class="text-muted">
-                                                    2026-03-24
-                                                </small>
+                                                <i class="bi bi-clock me-1"></i>
+                                                2026-03-24
                                                 
+                                        </div>
                                 </div>
-                                <div class="card-footer text-muted">
+                                <div class="card-footer text-muted bg-white border-top">
                                     <a href="/category/%E6%B6%88%E8%B4%B9%E8%A7%82%E5%AF%9F.html"
-                                        class="badge bg-primary">
+                                        class="badge bg-primary me-2">
                                         消费观察
                                     </a>
                                     
                                         <a href="/tag/%E7%8E%B0%E9%87%91.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             现金
                                         </a>
                                         
                                         <a href="/tag/%E6%94%AF%E4%BB%98.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             支付
                                         </a>
                                         
                                         <a href="/tag/%E5%A4%8D%E5%8F%A4.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             复古
                                         </a>
                                         
                                         <a href="/tag/%E6%8E%A7%E5%88%B6%E6%B6%88%E8%B4%B9.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             控制消费
                                         </a>
                                         
                                         <a href="/tag/%E9%9A%90%E7%A7%81.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             隐私
                                         </a>
                                         
@@ -208,54 +275,55 @@
                         </div>
                         
                         <div class="masonry-grid-item">
-                            <div class="card shadow-sm">
+                            <div class="card article-card shadow-sm">
                                 <div class="card-body">
-                                    <h5 class="card-title">
-                                        <i class="bi bi-file-earmark-text"></i>
+                                    <h5 class="card-title article-title">
+                                        <i class="bi bi-file-earmark-text me-2 text-primary"></i>
                                         <a href="../mdhtml/为什么现在的人都喜欢买二手东西了.html"
-                                            class="text-decoration-none">
+                                            class="text-decoration-none text-dark">
                                             为什么现在的人都喜欢买二手东西了
                                         </a>
                                     </h5>
                                     
-                                        <p class="card-text">
+                                        <p class="card-text text-muted mb-3">
                                             分析二手消费流行的现象。
                                         </p>
                                         
+                                        <div class="article-meta">
                                             
-                                                <small class="text-muted">
-                                                    2026-03-24
-                                                </small>
+                                                <i class="bi bi-clock me-1"></i>
+                                                2026-03-24
                                                 
+                                        </div>
                                 </div>
-                                <div class="card-footer text-muted">
+                                <div class="card-footer text-muted bg-white border-top">
                                     <a href="/category/%E6%B6%88%E8%B4%B9%E8%A7%82%E5%AF%9F.html"
-                                        class="badge bg-primary">
+                                        class="badge bg-primary me-2">
                                         消费观察
                                     </a>
                                     
                                         <a href="/tag/%E4%BA%8C%E6%89%8B.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             二手
                                         </a>
                                         
                                         <a href="/tag/%E6%B6%88%E8%B4%B9.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             消费
                                         </a>
                                         
                                         <a href="/tag/%E7%9C%81%E9%92%B1.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             省钱
                                         </a>
                                         
                                         <a href="/tag/%E7%8E%AF%E4%BF%9D.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             环保
                                         </a>
                                         
                                         <a href="/tag/%E8%B6%8B%E5%8A%BF.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             趋势
                                         </a>
                                         
@@ -264,54 +332,55 @@
                         </div>
                         
                         <div class="masonry-grid-item">
-                            <div class="card shadow-sm">
+                            <div class="card article-card shadow-sm">
                                 <div class="card-body">
-                                    <h5 class="card-title">
-                                        <i class="bi bi-file-earmark-text"></i>
+                                    <h5 class="card-title article-title">
+                                        <i class="bi bi-file-earmark-text me-2 text-primary"></i>
                                         <a href="../mdhtml/为什么现在的00后都不爱用信用卡了.html"
-                                            class="text-decoration-none">
+                                            class="text-decoration-none text-dark">
                                             为什么现在的00后都不爱用信用卡了
                                         </a>
                                     </h5>
                                     
-                                        <p class="card-text">
+                                        <p class="card-text text-muted mb-3">
                                             分析00后不爱用信用卡的现象。
                                         </p>
                                         
+                                        <div class="article-meta">
                                             
-                                                <small class="text-muted">
-                                                    2026-03-24
-                                                </small>
+                                                <i class="bi bi-clock me-1"></i>
+                                                2026-03-24
                                                 
+                                        </div>
                                 </div>
-                                <div class="card-footer text-muted">
+                                <div class="card-footer text-muted bg-white border-top">
                                     <a href="/category/%E6%B6%88%E8%B4%B9%E8%A7%82%E5%AF%9F.html"
-                                        class="badge bg-primary">
+                                        class="badge bg-primary me-2">
                                         消费观察
                                     </a>
                                     
                                         <a href="/tag/%E4%BF%A1%E7%94%A8%E5%8D%A1.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             信用卡
                                         </a>
                                         
                                         <a href="/tag/00%E5%90%8E.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             00后
                                         </a>
                                         
                                         <a href="/tag/%E6%B6%88%E8%B4%B9.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             消费
                                         </a>
                                         
                                         <a href="/tag/%E7%90%86%E6%80%A7.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             理性
                                         </a>
                                         
                                         <a href="/tag/%E7%90%86%E8%B4%A2.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             理财
                                         </a>
                                         
@@ -320,54 +389,55 @@
                         </div>
                         
                         <div class="masonry-grid-item">
-                            <div class="card shadow-sm">
+                            <div class="card article-card shadow-sm">
                                 <div class="card-body">
-                                    <h5 class="card-title">
-                                        <i class="bi bi-file-earmark-text"></i>
+                                    <h5 class="card-title article-title">
+                                        <i class="bi bi-file-earmark-text me-2 text-primary"></i>
                                         <a href="../mdhtml/为什么现在的00后都爱用现金了.html"
-                                            class="text-decoration-none">
+                                            class="text-decoration-none text-dark">
                                             为什么现在的00后都爱用现金了
                                         </a>
                                     </h5>
                                     
-                                        <p class="card-text">
+                                        <p class="card-text text-muted mb-3">
                                             分析00后使用现金的现象，探讨消费观念变化。
                                         </p>
                                         
+                                        <div class="article-meta">
                                             
-                                                <small class="text-muted">
-                                                    2026-03-24
-                                                </small>
+                                                <i class="bi bi-clock me-1"></i>
+                                                2026-03-24
                                                 
+                                        </div>
                                 </div>
-                                <div class="card-footer text-muted">
+                                <div class="card-footer text-muted bg-white border-top">
                                     <a href="/category/%E6%B6%88%E8%B4%B9%E8%A7%82%E5%AF%9F.html"
-                                        class="badge bg-primary">
+                                        class="badge bg-primary me-2">
                                         消费观察
                                     </a>
                                     
                                         <a href="/tag/%E7%8E%B0%E9%87%91.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             现金
                                         </a>
                                         
                                         <a href="/tag/%E6%94%AF%E4%BB%98.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             支付
                                         </a>
                                         
                                         <a href="/tag/00%E5%90%8E.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             00后
                                         </a>
                                         
                                         <a href="/tag/%E6%B6%88%E8%B4%B9.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             消费
                                         </a>
                                         
                                         <a href="/tag/%E5%A4%8D%E5%8F%A4.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             复古
                                         </a>
                                         
@@ -376,54 +446,55 @@
                         </div>
                         
                         <div class="masonry-grid-item">
-                            <div class="card shadow-sm">
+                            <div class="card article-card shadow-sm">
                                 <div class="card-body">
-                                    <h5 class="card-title">
-                                        <i class="bi bi-file-earmark-text"></i>
+                                    <h5 class="card-title article-title">
+                                        <i class="bi bi-file-earmark-text me-2 text-primary"></i>
                                         <a href="../mdhtml/为什么现在的年轻人都开始反向消费了.html"
-                                            class="text-decoration-none">
+                                            class="text-decoration-none text-dark">
                                             为什么现在的年轻人都开始反向消费了
                                         </a>
                                     </h5>
                                     
-                                        <p class="card-text">
+                                        <p class="card-text text-muted mb-3">
                                             分析年轻人反向消费的现象，探讨理性消费观念的回归。
                                         </p>
                                         
+                                        <div class="article-meta">
                                             
-                                                <small class="text-muted">
-                                                    2026-03-24
-                                                </small>
+                                                <i class="bi bi-clock me-1"></i>
+                                                2026-03-24
                                                 
+                                        </div>
                                 </div>
-                                <div class="card-footer text-muted">
+                                <div class="card-footer text-muted bg-white border-top">
                                     <a href="/category/%E6%B6%88%E8%B4%B9%E8%A7%82%E5%AF%9F.html"
-                                        class="badge bg-primary">
+                                        class="badge bg-primary me-2">
                                         消费观察
                                     </a>
                                     
                                         <a href="/tag/%E5%8F%8D%E5%90%91%E6%B6%88%E8%B4%B9.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             反向消费
                                         </a>
                                         
                                         <a href="/tag/%E5%B9%B4%E8%BD%BB%E4%BA%BA.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             年轻人
                                         </a>
                                         
                                         <a href="/tag/%E6%B6%88%E8%B4%B9%E8%A7%82.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             消费观
                                         </a>
                                         
                                         <a href="/tag/%E7%90%86%E6%80%A7.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             理性
                                         </a>
                                         
                                         <a href="/tag/%E7%9C%81%E9%92%B1.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             省钱
                                         </a>
                                         
@@ -432,54 +503,55 @@
                         </div>
                         
                         <div class="masonry-grid-item">
-                            <div class="card shadow-sm">
+                            <div class="card article-card shadow-sm">
                                 <div class="card-body">
-                                    <h5 class="card-title">
-                                        <i class="bi bi-file-earmark-text"></i>
+                                    <h5 class="card-title article-title">
+                                        <i class="bi bi-file-earmark-text me-2 text-primary"></i>
                                         <a href="../mdhtml/为什么现在的年轻人都不爱用信用卡了.html"
-                                            class="text-decoration-none">
+                                            class="text-decoration-none text-dark">
                                             为什么现在的年轻人都不爱用信用卡了
                                         </a>
                                     </h5>
                                     
-                                        <p class="card-text">
+                                        <p class="card-text text-muted mb-3">
                                             分析年轻人抛弃信用卡的原因，探讨理性消费观念的回归。
                                         </p>
                                         
+                                        <div class="article-meta">
                                             
-                                                <small class="text-muted">
-                                                    2026-03-24
-                                                </small>
+                                                <i class="bi bi-clock me-1"></i>
+                                                2026-03-24
                                                 
+                                        </div>
                                 </div>
-                                <div class="card-footer text-muted">
+                                <div class="card-footer text-muted bg-white border-top">
                                     <a href="/category/%E6%B6%88%E8%B4%B9%E8%A7%82%E5%AF%9F.html"
-                                        class="badge bg-primary">
+                                        class="badge bg-primary me-2">
                                         消费观察
                                     </a>
                                     
                                         <a href="/tag/%E4%BF%A1%E7%94%A8%E5%8D%A1.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             信用卡
                                         </a>
                                         
                                         <a href="/tag/%E6%B6%88%E8%B4%B9.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             消费
                                         </a>
                                         
                                         <a href="/tag/%E5%B9%B4%E8%BD%BB%E4%BA%BA.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             年轻人
                                         </a>
                                         
                                         <a href="/tag/%E7%90%86%E6%80%A7%E6%B6%88%E8%B4%B9.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             理性消费
                                         </a>
                                         
                                         <a href="/tag/%E8%B4%A2%E5%8A%A1.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             财务
                                         </a>
                                         
@@ -488,54 +560,55 @@
                         </div>
                         
                         <div class="masonry-grid-item">
-                            <div class="card shadow-sm">
+                            <div class="card article-card shadow-sm">
                                 <div class="card-body">
-                                    <h5 class="card-title">
-                                        <i class="bi bi-file-earmark-text"></i>
+                                    <h5 class="card-title article-title">
+                                        <i class="bi bi-file-earmark-text me-2 text-primary"></i>
                                         <a href="../mdhtml/2026年消费趋势的变化：从物质消费到体验消费.html"
-                                            class="text-decoration-none">
+                                            class="text-decoration-none text-dark">
                                             2026年消费趋势的变化：从物质消费到体验消费
                                         </a>
                                     </h5>
                                     
-                                        <p class="card-text">
+                                        <p class="card-text text-muted mb-3">
                                             分析2026年消费趋势的深刻变化，从物质消费向体验消费转变，从大众消费向个性化消费演进，探讨新一代消费者的消费理念。
                                         </p>
                                         
+                                        <div class="article-meta">
                                             
-                                                <small class="text-muted">
-                                                    2026-03-23
-                                                </small>
+                                                <i class="bi bi-clock me-1"></i>
+                                                2026-03-23
                                                 
+                                        </div>
                                 </div>
-                                <div class="card-footer text-muted">
+                                <div class="card-footer text-muted bg-white border-top">
                                     <a href="/category/%E6%B6%88%E8%B4%B9%E8%A7%82%E5%AF%9F.html"
-                                        class="badge bg-primary">
+                                        class="badge bg-primary me-2">
                                         消费观察
                                     </a>
                                     
                                         <a href="/tag/%E6%B6%88%E8%B4%B9%E8%B6%8B%E5%8A%BF.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             消费趋势
                                         </a>
                                         
                                         <a href="/tag/%E4%BD%93%E9%AA%8C%E7%BB%8F%E6%B5%8E.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             体验经济
                                         </a>
                                         
                                         <a href="/tag/%E5%8F%AF%E6%8C%81%E7%BB%AD%E6%B6%88%E8%B4%B9.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             可持续消费
                                         </a>
                                         
                                         <a href="/tag/%E7%A4%BE%E4%BA%A4%E6%B6%88%E8%B4%B9.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             社交消费
                                         </a>
                                         
                                         <a href="/tag/%E4%B8%AA%E6%80%A7%E5%8C%96.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             个性化
                                         </a>
                                         
@@ -546,9 +619,9 @@
                 </div>
 
                 <!-- 返回按钮 -->
-                <div class="mt-4 text-center">
-                    <a href="分类列表.html" class="btn btn-outline-primary">
-                        <i class="bi bi-arrow-left"></i> 返回分类列表
+                <div class="mt-6 text-center">
+                    <a href="分类列表.html" class="btn btn-outline-primary back-button">
+                        <i class="bi bi-arrow-left me-2"></i> 返回分类列表
                     </a>
                 </div>
             </div>
@@ -572,7 +645,7 @@
                         itemSelector: '.masonry-grid-item',
                         columnWidth: '.masonry-grid-item',
                         percentPosition: true,
-                        gutter: 10 // 明确设置 gutter 值为 10px
+                        gutter: 15 // 增加间距，提升视觉效果
                     });
                 });
             </script>

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
 
 <head>
   <meta charset="UTF-8">
@@ -9,7 +9,7 @@
   <meta name="description" content="无人自助站的【地缘政治】的标签列表页面，汇集了关于【地缘政治】标签相关的文章和资讯，方便您快速找到感兴趣的内容。">
   <meta name="keywords" content="无人自助站,地缘政治">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>标签文章列表</title>
+  <title>地缘政治标签 - 无人自助站</title>
 
   <link rel="icon" href="../logo.svg" type="image/svg+xml">
   <link rel="stylesheet" href="../css/style.css">
@@ -27,6 +27,62 @@
   <!-- 引入Masonry -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/masonry/4.2.2/masonry.pkgd.min.js"></script>
 
+  <style>
+        .tag-header {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            color: white;
+            padding: 2rem;
+            border-radius: 8px;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        .tag-title {
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+        .article-card {
+            transition: all 0.3s ease;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        .article-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+        }
+        .article-title {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            transition: color 0.3s ease;
+        }
+        .article-title:hover {
+            color: #0d6efd;
+        }
+        .article-meta {
+            font-size: 0.85rem;
+            color: #6c757d;
+        }
+        .tag-link {
+            background-color: #e9ecef;
+            color: #495057;
+            transition: all 0.2s ease;
+        }
+        .tag-link:hover {
+            background-color: #dee2e6;
+            color: #212529;
+        }
+        .back-button {
+            transition: all 0.3s ease;
+        }
+        .back-button:hover {
+            transform: translateX(-3px);
+        }
+        .article-count {
+            font-size: 0.9rem;
+            opacity: 0.9;
+        }
+    </style>
 </head>
 
 <body>
@@ -80,7 +136,7 @@
     <main class="container-fluid mt-4">
       <div class="row">
         <div class="col-lg-8 col-md-12 mx-auto">
-          <nav aria-label="breadcrumb">
+          <nav aria-label="breadcrumb" class="mb-4">
             <ol class="breadcrumb">
               <li class="breadcrumb-item"><a href="/html/index.html">首页</a></li>
               <li class="breadcrumb-item"><a href="标签列表.html">标签列表</a></li>
@@ -89,54 +145,64 @@
               </li>
             </ol>
           </nav>
-          <h1 style="font-size: 1.5em; margin: 0.5em 0;">
-            地缘政治标签的文章和资讯
-        </h1>
+          
+          <!-- 标签头部 -->
+          <div class="tag-header">
+              <h1 class="tag-title">
+                  <i class="bi bi-tags me-2"></i>
+                  地缘政治
+              </h1>
+              <p class="article-count">
+                  共 2 篇文章
+              </p>
+          </div>
+          
           <div class="masonry-grid">
             
               <div class="masonry-grid-item">
-                <div class="card shadow-sm">
+                <div class="card article-card shadow-sm">
                   <div class="card-body">
-                    <h5 class="card-title">
-                      <i class="bi bi-file-earmark-text"></i>
-                      <a href="../mdhtml/气候难民的时代：环境灾难与人类迁移.html" class="text-decoration-none">
+                    <h5 class="card-title article-title">
+                      <i class="bi bi-file-earmark-text me-2 text-primary"></i>
+                      <a href="../mdhtml/气候难民的时代：环境灾难与人类迁移.html" class="text-decoration-none text-dark">
                         气候难民的时代：环境灾难与人类迁移
                       </a>
                     </h5>
                     
-                      <p class="card-text">
+                      <p class="card-text text-muted mb-3">
                         深入分析气候变化导致的人口迁移，探讨气候难民的规模、国际冲突、难民权利、以及如何应对这个全球性的人道主义危机。
                       </p>
                       
-                        
-                          <small class="text-muted">
-                            2026-03-24
-                          </small>
-                          
+                        <div class="article-meta">
+                            
+                                <i class="bi bi-clock me-1"></i>
+                                2026-03-24
+                                
+                        </div>
                   </div>
-                  <div class="card-footer text-muted">
+                  <div class="card-footer text-muted bg-white border-top">
                     <a href="/category/%E6%B0%94%E5%80%99%E5%8F%98%E5%8C%96.html"
-                      class="badge bg-primary">
+                      class="badge bg-primary me-2">
                       气候变化
                     </a>
                     
-                      <a href="/tag/%E6%B0%94%E5%80%99%E9%9A%BE%E6%B0%91.html" class="badge tag-link">
+                      <a href="/tag/%E6%B0%94%E5%80%99%E9%9A%BE%E6%B0%91.html" class="badge tag-link me-2 mb-1">
                         气候难民
                       </a>
                       
-                      <a href="/tag/%E7%8E%AF%E4%BF%9D%E5%8D%B1%E6%9C%BA.html" class="badge tag-link">
+                      <a href="/tag/%E7%8E%AF%E4%BF%9D%E5%8D%B1%E6%9C%BA.html" class="badge tag-link me-2 mb-1">
                         环保危机
                       </a>
                       
-                      <a href="/tag/%E4%BA%BA%E5%8F%A3%E8%BF%81%E7%A7%BB.html" class="badge tag-link">
+                      <a href="/tag/%E4%BA%BA%E5%8F%A3%E8%BF%81%E7%A7%BB.html" class="badge tag-link me-2 mb-1">
                         人口迁移
                       </a>
                       
-                      <a href="/tag/%E5%9C%B0%E7%BC%98%E6%94%BF%E6%B2%BB.html" class="badge tag-link">
+                      <a href="/tag/%E5%9C%B0%E7%BC%98%E6%94%BF%E6%B2%BB.html" class="badge tag-link me-2 mb-1">
                         地缘政治
                       </a>
                       
-                      <a href="/tag/%E4%BA%BA%E9%81%93%E4%B8%BB%E4%B9%89.html" class="badge tag-link">
+                      <a href="/tag/%E4%BA%BA%E9%81%93%E4%B8%BB%E4%B9%89.html" class="badge tag-link me-2 mb-1">
                         人道主义
                       </a>
                       
@@ -145,48 +211,49 @@
               </div>
               
               <div class="masonry-grid-item">
-                <div class="card shadow-sm">
+                <div class="card article-card shadow-sm">
                   <div class="card-body">
-                    <h5 class="card-title">
-                      <i class="bi bi-file-earmark-text"></i>
-                      <a href="../mdhtml/2026年国际关系的新格局：多极化与合作的平衡.html" class="text-decoration-none">
+                    <h5 class="card-title article-title">
+                      <i class="bi bi-file-earmark-text me-2 text-primary"></i>
+                      <a href="../mdhtml/2026年国际关系的新格局：多极化与合作的平衡.html" class="text-decoration-none text-dark">
                         2026年国际关系的新格局：多极化与合作的平衡
                       </a>
                     </h5>
                     
-                      <p class="card-text">
+                      <p class="card-text text-muted mb-3">
                         分析2026年国际关系的新格局，从美国霸权的相对衰落到多极化的加强，从地缘政治冲突到国际合作，探讨全球治理的新方向。
                       </p>
                       
-                        
-                          <small class="text-muted">
-                            2026-03-23
-                          </small>
-                          
+                        <div class="article-meta">
+                            
+                                <i class="bi bi-clock me-1"></i>
+                                2026-03-23
+                                
+                        </div>
                   </div>
-                  <div class="card-footer text-muted">
+                  <div class="card-footer text-muted bg-white border-top">
                     <a href="/category/%E5%9B%BD%E9%99%85%E6%94%BF%E6%B2%BB.html"
-                      class="badge bg-primary">
+                      class="badge bg-primary me-2">
                       国际政治
                     </a>
                     
-                      <a href="/tag/%E5%9B%BD%E9%99%85%E5%85%B3%E7%B3%BB.html" class="badge tag-link">
+                      <a href="/tag/%E5%9B%BD%E9%99%85%E5%85%B3%E7%B3%BB.html" class="badge tag-link me-2 mb-1">
                         国际关系
                       </a>
                       
-                      <a href="/tag/%E5%A4%9A%E6%9E%81%E5%8C%96.html" class="badge tag-link">
+                      <a href="/tag/%E5%A4%9A%E6%9E%81%E5%8C%96.html" class="badge tag-link me-2 mb-1">
                         多极化
                       </a>
                       
-                      <a href="/tag/%E5%9C%B0%E7%BC%98%E6%94%BF%E6%B2%BB.html" class="badge tag-link">
+                      <a href="/tag/%E5%9C%B0%E7%BC%98%E6%94%BF%E6%B2%BB.html" class="badge tag-link me-2 mb-1">
                         地缘政治
                       </a>
                       
-                      <a href="/tag/%E5%9B%BD%E9%99%85%E5%90%88%E4%BD%9C.html" class="badge tag-link">
+                      <a href="/tag/%E5%9B%BD%E9%99%85%E5%90%88%E4%BD%9C.html" class="badge tag-link me-2 mb-1">
                         国际合作
                       </a>
                       
-                      <a href="/tag/%E5%85%A8%E7%90%83%E6%B2%BB%E7%90%86.html" class="badge tag-link">
+                      <a href="/tag/%E5%85%A8%E7%90%83%E6%B2%BB%E7%90%86.html" class="badge tag-link me-2 mb-1">
                         全球治理
                       </a>
                       
@@ -196,8 +263,8 @@
               
           </div>
 
-          <div class="mt-4 text-center">
-            <a href="标签列表.html" class="btn btn-outline-primary"><i class="bi bi-arrow-left"></i> 返回标签列表</a>
+          <div class="mt-6 text-center">
+            <a href="标签列表.html" class="btn btn-outline-primary back-button"><i class="bi bi-arrow-left me-2"></i> 返回标签列表</a>
           </div>
         </div>
       </div>
@@ -221,7 +288,7 @@
             itemSelector: '.masonry-grid-item',
             columnWidth: '.masonry-grid-item',
             percentPosition: true,
-            gutter: 10 // 可选，添加卡片间的间距
+            gutter: 15 // 增加间距，提升视觉效果
           });
         });
       </script>

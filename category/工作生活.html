@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
 
 <head>
     <meta charset="UTF-8">
@@ -9,7 +9,7 @@
     <meta name="description" content="无人自助站的【工作生活】分类列表页面，汇集了关于【工作生活】分类的文章和资讯，方便您快速找到感兴趣的内容。">
     <meta name="keywords" content="无人自助站,工作生活">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>分类列表</title>
+    <title>工作生活分类 - 无人自助站</title>
     <link rel="icon" href="../logo.svg" type="image/svg+xml">
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/footer.css">
@@ -27,6 +27,62 @@
     <!-- 引入Masonry -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/masonry/4.2.2/masonry.pkgd.min.js"></script>
 
+    <style>
+        .category-header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 2rem;
+            border-radius: 8px;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        .category-title {
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+        .article-card {
+            transition: all 0.3s ease;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        .article-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+        }
+        .article-title {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            transition: color 0.3s ease;
+        }
+        .article-title:hover {
+            color: #0d6efd;
+        }
+        .article-meta {
+            font-size: 0.85rem;
+            color: #6c757d;
+        }
+        .tag-link {
+            background-color: #e9ecef;
+            color: #495057;
+            transition: all 0.2s ease;
+        }
+        .tag-link:hover {
+            background-color: #dee2e6;
+            color: #212529;
+        }
+        .back-button {
+            transition: all 0.3s ease;
+        }
+        .back-button:hover {
+            transform: translateX(-3px);
+        }
+        .article-count {
+            font-size: 0.9rem;
+            opacity: 0.9;
+        }
+    </style>
 </head>
 
 <body>
@@ -80,7 +136,7 @@
         <main class="container-fluid mt-4">
             <div class="col-lg-8 col-md-12 mx-auto">
                 <!-- 面包屑导航 -->
-                <nav aria-label="breadcrumb">
+                <nav aria-label="breadcrumb" class="mb-4">
                     <ol class="breadcrumb">
                         <li class="breadcrumb-item"><a href="/html/index.html">首页</a></li>
                         <li class="breadcrumb-item"><a href="分类列表.html">分类列表</a></li>
@@ -89,61 +145,71 @@
                         </li>
                     </ol>
                 </nav>
-                <h1 style="font-size: 1.5em; margin: 0.5em 0;">
-                    工作生活分类的文章和资讯
-                </h1>
+                
+                <!-- 分类头部 -->
+                <div class="category-header">
+                    <h1 class="category-title">
+                        <i class="bi bi-folder2 me-2"></i>
+                        工作生活
+                    </h1>
+                    <p class="article-count">
+                        共 3 篇文章
+                    </p>
+                </div>
+                
                 <!-- 分类内容卡片 使用 Masonry 布局 -->
                 <div class="masonry-grid">
                     
                         <div class="masonry-grid-item">
-                            <div class="card shadow-sm">
+                            <div class="card article-card shadow-sm">
                                 <div class="card-body">
-                                    <h5 class="card-title">
-                                        <i class="bi bi-file-earmark-text"></i>
+                                    <h5 class="card-title article-title">
+                                        <i class="bi bi-file-earmark-text me-2 text-primary"></i>
                                         <a href="../mdhtml/工作的异化：我们如何变成了机器.html"
-                                            class="text-decoration-none">
+                                            class="text-decoration-none text-dark">
                                             工作的异化：我们如何变成了机器
                                         </a>
                                     </h5>
                                     
-                                        <p class="card-text">
+                                        <p class="card-text text-muted mb-3">
                                             深入分析现代工作的问题，探讨工作的异化、意义的缺失、人性的丧失、以及如何找到有意义的工作。
                                         </p>
                                         
+                                        <div class="article-meta">
                                             
-                                                <small class="text-muted">
-                                                    2026-03-24
-                                                </small>
+                                                <i class="bi bi-clock me-1"></i>
+                                                2026-03-24
                                                 
+                                        </div>
                                 </div>
-                                <div class="card-footer text-muted">
+                                <div class="card-footer text-muted bg-white border-top">
                                     <a href="/category/%E5%B7%A5%E4%BD%9C%E7%94%9F%E6%B4%BB.html"
-                                        class="badge bg-primary">
+                                        class="badge bg-primary me-2">
                                         工作生活
                                     </a>
                                     
                                         <a href="/tag/%E5%B7%A5%E4%BD%9C.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             工作
                                         </a>
                                         
                                         <a href="/tag/%E5%BC%82%E5%8C%96.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             异化
                                         </a>
                                         
                                         <a href="/tag/%E6%84%8F%E4%B9%89.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             意义
                                         </a>
                                         
                                         <a href="/tag/%E8%81%8C%E4%B8%9A.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             职业
                                         </a>
                                         
                                         <a href="/tag/%E4%BA%BA%E6%80%A7.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             人性
                                         </a>
                                         
@@ -152,54 +218,55 @@
                         </div>
                         
                         <div class="masonry-grid-item">
-                            <div class="card shadow-sm">
+                            <div class="card article-card shadow-sm">
                                 <div class="card-body">
-                                    <h5 class="card-title">
-                                        <i class="bi bi-file-earmark-text"></i>
+                                    <h5 class="card-title article-title">
+                                        <i class="bi bi-file-earmark-text me-2 text-primary"></i>
                                         <a href="../mdhtml/远程工作的常态化：工作方式的永久性改变.html"
-                                            class="text-decoration-none">
+                                            class="text-decoration-none text-dark">
                                             远程工作的常态化：工作方式的永久性改变
                                         </a>
                                     </h5>
                                     
-                                        <p class="card-text">
+                                        <p class="card-text text-muted mb-3">
                                             分析远程工作从疫情应急措施演变为常态化工作方式，探讨其对生产力、员工福祉、企业文化、城市发展的影响，以及混合工作模式的最佳实践。
                                         </p>
                                         
+                                        <div class="article-meta">
                                             
-                                                <small class="text-muted">
-                                                    2026-03-24
-                                                </small>
+                                                <i class="bi bi-clock me-1"></i>
+                                                2026-03-24
                                                 
+                                        </div>
                                 </div>
-                                <div class="card-footer text-muted">
+                                <div class="card-footer text-muted bg-white border-top">
                                     <a href="/category/%E5%B7%A5%E4%BD%9C%E7%94%9F%E6%B4%BB.html"
-                                        class="badge bg-primary">
+                                        class="badge bg-primary me-2">
                                         工作生活
                                     </a>
                                     
                                         <a href="/tag/%E8%BF%9C%E7%A8%8B%E5%B7%A5%E4%BD%9C.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             远程工作
                                         </a>
                                         
                                         <a href="/tag/%E5%B7%A5%E4%BD%9C%E6%96%B9%E5%BC%8F.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             工作方式
                                         </a>
                                         
                                         <a href="/tag/%E7%94%9F%E4%BA%A7%E5%8A%9B.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             生产力
                                         </a>
                                         
                                         <a href="/tag/%E5%B7%A5%E4%BD%9C%E7%94%9F%E6%B4%BB%E5%B9%B3%E8%A1%A1.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             工作生活平衡
                                         </a>
                                         
                                         <a href="/tag/%E8%81%8C%E5%9C%BA%E6%96%87%E5%8C%96.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             职场文化
                                         </a>
                                         
@@ -208,54 +275,55 @@
                         </div>
                         
                         <div class="masonry-grid-item">
-                            <div class="card shadow-sm">
+                            <div class="card article-card shadow-sm">
                                 <div class="card-body">
-                                    <h5 class="card-title">
-                                        <i class="bi bi-file-earmark-text"></i>
+                                    <h5 class="card-title article-title">
+                                        <i class="bi bi-file-earmark-text me-2 text-primary"></i>
                                         <a href="../mdhtml/2026年工作方式的演变：远程工作与混合办公的新常态.html"
-                                            class="text-decoration-none">
+                                            class="text-decoration-none text-dark">
                                             2026年工作方式的演变：远程工作与混合办公的新常态
                                         </a>
                                     </h5>
                                     
-                                        <p class="card-text">
+                                        <p class="card-text text-muted mb-3">
                                             分析2026年工作方式的深刻变化，从远程工作到混合办公，从工作地点的灵活性到工作时间的弹性，探讨新工作方式对企业和员工的影响。
                                         </p>
                                         
+                                        <div class="article-meta">
                                             
-                                                <small class="text-muted">
-                                                    2026-03-23
-                                                </small>
+                                                <i class="bi bi-clock me-1"></i>
+                                                2026-03-23
                                                 
+                                        </div>
                                 </div>
-                                <div class="card-footer text-muted">
+                                <div class="card-footer text-muted bg-white border-top">
                                     <a href="/category/%E5%B7%A5%E4%BD%9C%E7%94%9F%E6%B4%BB.html"
-                                        class="badge bg-primary">
+                                        class="badge bg-primary me-2">
                                         工作生活
                                     </a>
                                     
                                         <a href="/tag/%E8%BF%9C%E7%A8%8B%E5%B7%A5%E4%BD%9C.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             远程工作
                                         </a>
                                         
                                         <a href="/tag/%E6%B7%B7%E5%90%88%E5%8A%9E%E5%85%AC.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             混合办公
                                         </a>
                                         
                                         <a href="/tag/%E5%B7%A5%E4%BD%9C%E6%95%88%E7%8E%87.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             工作效率
                                         </a>
                                         
                                         <a href="/tag/%E5%91%98%E5%B7%A5%E7%A6%8F%E5%88%A9.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             员工福利
                                         </a>
                                         
                                         <a href="/tag/%E4%BC%81%E4%B8%9A%E6%96%87%E5%8C%96.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             企业文化
                                         </a>
                                         
@@ -266,9 +334,9 @@
                 </div>
 
                 <!-- 返回按钮 -->
-                <div class="mt-4 text-center">
-                    <a href="分类列表.html" class="btn btn-outline-primary">
-                        <i class="bi bi-arrow-left"></i> 返回分类列表
+                <div class="mt-6 text-center">
+                    <a href="分类列表.html" class="btn btn-outline-primary back-button">
+                        <i class="bi bi-arrow-left me-2"></i> 返回分类列表
                     </a>
                 </div>
             </div>
@@ -292,7 +360,7 @@
                         itemSelector: '.masonry-grid-item',
                         columnWidth: '.masonry-grid-item',
                         percentPosition: true,
-                        gutter: 10 // 明确设置 gutter 值为 10px
+                        gutter: 15 // 增加间距，提升视觉效果
                     });
                 });
             </script>

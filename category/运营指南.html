@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
 
 <head>
     <meta charset="UTF-8">
@@ -9,7 +9,7 @@
     <meta name="description" content="无人自助站的【运营指南】分类列表页面，汇集了关于【运营指南】分类的文章和资讯，方便您快速找到感兴趣的内容。">
     <meta name="keywords" content="无人自助站,运营指南">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>分类列表</title>
+    <title>运营指南分类 - 无人自助站</title>
     <link rel="icon" href="../logo.svg" type="image/svg+xml">
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/footer.css">
@@ -27,6 +27,62 @@
     <!-- 引入Masonry -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/masonry/4.2.2/masonry.pkgd.min.js"></script>
 
+    <style>
+        .category-header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 2rem;
+            border-radius: 8px;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        .category-title {
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+        .article-card {
+            transition: all 0.3s ease;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        .article-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+        }
+        .article-title {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            transition: color 0.3s ease;
+        }
+        .article-title:hover {
+            color: #0d6efd;
+        }
+        .article-meta {
+            font-size: 0.85rem;
+            color: #6c757d;
+        }
+        .tag-link {
+            background-color: #e9ecef;
+            color: #495057;
+            transition: all 0.2s ease;
+        }
+        .tag-link:hover {
+            background-color: #dee2e6;
+            color: #212529;
+        }
+        .back-button {
+            transition: all 0.3s ease;
+        }
+        .back-button:hover {
+            transform: translateX(-3px);
+        }
+        .article-count {
+            font-size: 0.9rem;
+            opacity: 0.9;
+        }
+    </style>
 </head>
 
 <body>
@@ -80,7 +136,7 @@
         <main class="container-fluid mt-4">
             <div class="col-lg-8 col-md-12 mx-auto">
                 <!-- 面包屑导航 -->
-                <nav aria-label="breadcrumb">
+                <nav aria-label="breadcrumb" class="mb-4">
                     <ol class="breadcrumb">
                         <li class="breadcrumb-item"><a href="/html/index.html">首页</a></li>
                         <li class="breadcrumb-item"><a href="分类列表.html">分类列表</a></li>
@@ -89,71 +145,81 @@
                         </li>
                     </ol>
                 </nav>
-                <h1 style="font-size: 1.5em; margin: 0.5em 0;">
-                    运营指南分类的文章和资讯
-                </h1>
+                
+                <!-- 分类头部 -->
+                <div class="category-header">
+                    <h1 class="category-title">
+                        <i class="bi bi-folder2 me-2"></i>
+                        运营指南
+                    </h1>
+                    <p class="article-count">
+                        共 22 篇文章
+                    </p>
+                </div>
+                
                 <!-- 分类内容卡片 使用 Masonry 布局 -->
                 <div class="masonry-grid">
                     
                         <div class="masonry-grid-item">
-                            <div class="card shadow-sm">
+                            <div class="card article-card shadow-sm">
                                 <div class="card-body">
-                                    <h5 class="card-title">
-                                        <i class="bi bi-file-earmark-text"></i>
+                                    <h5 class="card-title article-title">
+                                        <i class="bi bi-file-earmark-text me-2 text-primary"></i>
                                         <a href="../mdhtml/2026公众号终极形态：个人化智能体时代的内容创作革命.html"
-                                            class="text-decoration-none">
+                                            class="text-decoration-none text-dark">
                                             2026公众号终极形态：个人化智能体时代的内容创作革命
                                         </a>
                                     </h5>
                                     
-                                        <p class="card-text">
+                                        <p class="card-text text-muted mb-3">
                                             深度探讨2026年公众号的终极形态——个人化智能体对内容创作的影响，分析公开发表文章的意义变化，以及内容创作者如何调整战略适应这一趋势
                                         </p>
                                         
+                                        <div class="article-meta">
                                             
-                                                <small class="text-muted">
-                                                    2026-02-28
-                                                </small>
+                                                <i class="bi bi-clock me-1"></i>
+                                                2026-02-28
                                                 
+                                        </div>
                                 </div>
-                                <div class="card-footer text-muted">
+                                <div class="card-footer text-muted bg-white border-top">
                                     <a href="/category/%E8%BF%90%E8%90%A5%E6%8C%87%E5%8D%97.html"
-                                        class="badge bg-primary">
+                                        class="badge bg-primary me-2">
                                         运营指南
                                     </a>
                                     
                                         <a href="/tag/%E4%B8%AA%E4%BA%BA%E5%8C%96%E6%99%BA%E8%83%BD%E4%BD%93.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             个人化智能体
                                         </a>
                                         
                                         <a href="/tag/%E5%86%85%E5%AE%B9%E5%88%9B%E4%BD%9C.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             内容创作
                                         </a>
                                         
                                         <a href="/tag/%E5%85%AC%E4%BC%97%E5%8F%B7.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             公众号
                                         </a>
                                         
                                         <a href="/tag/%E5%AA%92%E4%BB%8B%E6%BC%94%E5%8F%98.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             媒介演变
                                         </a>
                                         
                                         <a href="/tag/%E6%9C%AA%E6%9D%A5%E8%B6%8B%E5%8A%BF.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             未来趋势
                                         </a>
                                         
                                         <a href="/tag/2026.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             2026
                                         </a>
                                         
                                         <a href="/tag/AI%E6%8A%80%E6%9C%AF.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             AI技术
                                         </a>
                                         
@@ -162,69 +228,70 @@
                         </div>
                         
                         <div class="masonry-grid-item">
-                            <div class="card shadow-sm">
+                            <div class="card article-card shadow-sm">
                                 <div class="card-body">
-                                    <h5 class="card-title">
-                                        <i class="bi bi-file-earmark-text"></i>
+                                    <h5 class="card-title article-title">
+                                        <i class="bi bi-file-earmark-text me-2 text-primary"></i>
                                         <a href="../mdhtml/2026今日头条爆款内容创作指南 - 深度图文黄金时代的实用秘籍.html"
-                                            class="text-decoration-none">
+                                            class="text-decoration-none text-dark">
                                             2026今日头条爆款内容创作指南 - 深度图文黄金时代的实用秘籍
                                         </a>
                                     </h5>
                                     
-                                        <p class="card-text">
+                                        <p class="card-text text-muted mb-3">
                                             深度解析2025-2026年今日头条爆款内容创作技巧，涵盖选题、标题、内容创作、结构排版以及互动推广等方面，助力创作者在深度图文黄金时代产出有吸引力和影响力的爆款内容。
                                         </p>
                                         
+                                        <div class="article-meta">
                                             
-                                                <small class="text-muted">
-                                                    2026-02-28
-                                                </small>
+                                                <i class="bi bi-clock me-1"></i>
+                                                2026-02-28
                                                 
+                                        </div>
                                 </div>
-                                <div class="card-footer text-muted">
+                                <div class="card-footer text-muted bg-white border-top">
                                     <a href="/category/%E8%BF%90%E8%90%A5%E6%8C%87%E5%8D%97.html"
-                                        class="badge bg-primary">
+                                        class="badge bg-primary me-2">
                                         运营指南
                                     </a>
                                     
                                         <a href="/tag/%E4%BB%8A%E6%97%A5%E5%A4%B4%E6%9D%A1.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             今日头条
                                         </a>
                                         
                                         <a href="/tag/%E7%88%86%E6%AC%BE%E5%86%85%E5%AE%B9.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             爆款内容
                                         </a>
                                         
                                         <a href="/tag/%E9%80%89%E9%A2%98%E6%8A%80%E5%B7%A7.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             选题技巧
                                         </a>
                                         
                                         <a href="/tag/%E6%A0%87%E9%A2%98%E5%88%B6%E4%BD%9C.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             标题制作
                                         </a>
                                         
                                         <a href="/tag/%E5%86%85%E5%AE%B9%E5%88%9B%E4%BD%9C.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             内容创作
                                         </a>
                                         
                                         <a href="/tag/%E4%BA%92%E5%8A%A8%E6%8E%A8%E5%B9%BF.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             互动推广
                                         </a>
                                         
                                         <a href="/tag/%E6%B7%B1%E5%BA%A6%E5%9B%BE%E6%96%87.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             深度图文
                                         </a>
                                         
                                         <a href="/tag/2026%E8%B6%8B%E5%8A%BF.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             2026趋势
                                         </a>
                                         
@@ -233,54 +300,55 @@
                         </div>
                         
                         <div class="masonry-grid-item">
-                            <div class="card shadow-sm">
+                            <div class="card article-card shadow-sm">
                                 <div class="card-body">
-                                    <h5 class="card-title">
-                                        <i class="bi bi-file-earmark-text"></i>
+                                    <h5 class="card-title article-title">
+                                        <i class="bi bi-file-earmark-text me-2 text-primary"></i>
                                         <a href="../mdhtml/跨时空对话：与已注销百度账号的违规内容对话.html"
-                                            class="text-decoration-none">
+                                            class="text-decoration-none text-dark">
                                             跨时空对话：与已注销百度账号的违规内容对话
                                         </a>
                                     </h5>
                                     
-                                        <p class="card-text">
+                                        <p class="card-text text-muted mb-3">
                                             探讨如果下一篇文章必须与已注销的百度账号中的某一篇&#34;违规内容&#34;进行跨时空对话，会选择哪篇内容，以及对话的主题和意义。
                                         </p>
                                         
+                                        <div class="article-meta">
                                             
-                                                <small class="text-muted">
-                                                    2026-02-24
-                                                </small>
+                                                <i class="bi bi-clock me-1"></i>
+                                                2026-02-24
                                                 
+                                        </div>
                                 </div>
-                                <div class="card-footer text-muted">
+                                <div class="card-footer text-muted bg-white border-top">
                                     <a href="/category/%E8%BF%90%E8%90%A5%E6%8C%87%E5%8D%97.html"
-                                        class="badge bg-primary">
+                                        class="badge bg-primary me-2">
                                         运营指南
                                     </a>
                                     
                                         <a href="/tag/%E8%B7%A8%E6%97%B6%E7%A9%BA%E5%AF%B9%E8%AF%9D.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             跨时空对话
                                         </a>
                                         
                                         <a href="/tag/%E7%99%BE%E5%BA%A6%E8%B4%A6%E5%8F%B7.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             百度账号
                                         </a>
                                         
                                         <a href="/tag/%E8%BF%9D%E8%A7%84%E5%86%85%E5%AE%B9.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             违规内容
                                         </a>
                                         
                                         <a href="/tag/%E5%88%9B%E6%84%8F%E5%86%99%E4%BD%9C.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             创意写作
                                         </a>
                                         
                                         <a href="/tag/%E6%95%B0%E5%AD%97%E9%81%97%E4%BA%A7.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             数字遗产
                                         </a>
                                         
@@ -289,54 +357,55 @@
                         </div>
                         
                         <div class="masonry-grid-item">
-                            <div class="card shadow-sm">
+                            <div class="card article-card shadow-sm">
                                 <div class="card-body">
-                                    <h5 class="card-title">
-                                        <i class="bi bi-file-earmark-text"></i>
+                                    <h5 class="card-title article-title">
+                                        <i class="bi bi-file-earmark-text me-2 text-primary"></i>
                                         <a href="../mdhtml/解锁式文章：核心论点隐藏与项目管理任务解锁.html"
-                                            class="text-decoration-none">
+                                            class="text-decoration-none text-dark">
                                             解锁式文章：核心论点隐藏与项目管理任务解锁
                                         </a>
                                     </h5>
                                     
-                                        <p class="card-text">
+                                        <p class="card-text text-muted mb-3">
                                             探讨借鉴&#34;点击查看答案&#34;的SVG交互，设计一种全新的文章形式，其中&#34;核心论点&#34;被隐藏，读者必须通过完成一个项目管理任务来解锁，描述这个任务的设计和实施。
                                         </p>
                                         
+                                        <div class="article-meta">
                                             
-                                                <small class="text-muted">
-                                                    2026-02-24
-                                                </small>
+                                                <i class="bi bi-clock me-1"></i>
+                                                2026-02-24
                                                 
+                                        </div>
                                 </div>
-                                <div class="card-footer text-muted">
+                                <div class="card-footer text-muted bg-white border-top">
                                     <a href="/category/%E8%BF%90%E8%90%A5%E6%8C%87%E5%8D%97.html"
-                                        class="badge bg-primary">
+                                        class="badge bg-primary me-2">
                                         运营指南
                                     </a>
                                     
                                         <a href="/tag/%E8%A7%A3%E9%94%81%E5%BC%8F%E6%96%87%E7%AB%A0.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             解锁式文章
                                         </a>
                                         
                                         <a href="/tag/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86%E4%BB%BB%E5%8A%A1.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             项目管理任务
                                         </a>
                                         
                                         <a href="/tag/%E4%BA%A4%E4%BA%92%E5%BC%8F%E5%86%85%E5%AE%B9.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             交互式内容
                                         </a>
                                         
                                         <a href="/tag/%E5%88%9B%E6%84%8F%E5%86%99%E4%BD%9C.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             创意写作
                                         </a>
                                         
                                         <a href="/tag/%E7%94%A8%E6%88%B7%E5%8F%82%E4%B8%8E.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             用户参与
                                         </a>
                                         
@@ -345,64 +414,65 @@
                         </div>
                         
                         <div class="masonry-grid-item">
-                            <div class="card shadow-sm">
+                            <div class="card article-card shadow-sm">
                                 <div class="card-body">
-                                    <h5 class="card-title">
-                                        <i class="bi bi-file-earmark-text"></i>
+                                    <h5 class="card-title article-title">
+                                        <i class="bi bi-file-earmark-text me-2 text-primary"></i>
                                         <a href="../mdhtml/网红减肥训练营运营模式分析：项目管理三角的应用与用户依赖形成.html"
-                                            class="text-decoration-none">
+                                            class="text-decoration-none text-dark">
                                             网红减肥训练营运营模式分析：项目管理三角的应用与用户依赖形成
                                         </a>
                                     </h5>
                                     
-                                        <p class="card-text">
+                                        <p class="card-text text-muted mb-3">
                                             分析网红减肥训练营如何运用项目管理的范围、时间、成本三角来制造用户依赖，揭示其运营模式的核心逻辑和商业本质。
                                         </p>
                                         
+                                        <div class="article-meta">
                                             
-                                                <small class="text-muted">
-                                                    2026-02-24
-                                                </small>
+                                                <i class="bi bi-clock me-1"></i>
+                                                2026-02-24
                                                 
+                                        </div>
                                 </div>
-                                <div class="card-footer text-muted">
+                                <div class="card-footer text-muted bg-white border-top">
                                     <a href="/category/%E8%BF%90%E8%90%A5%E6%8C%87%E5%8D%97.html"
-                                        class="badge bg-primary">
+                                        class="badge bg-primary me-2">
                                         运营指南
                                     </a>
                                     
                                         <a href="/tag/%E7%BD%91%E7%BA%A2%E5%87%8F%E8%82%A5%E8%AE%AD%E7%BB%83%E8%90%A5.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             网红减肥训练营
                                         </a>
                                         
                                         <a href="/tag/%E8%BF%90%E8%90%A5%E6%A8%A1%E5%BC%8F.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             运营模式
                                         </a>
                                         
                                         <a href="/tag/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             项目管理
                                         </a>
                                         
                                         <a href="/tag/%E7%94%A8%E6%88%B7%E4%BE%9D%E8%B5%96.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             用户依赖
                                         </a>
                                         
                                         <a href="/tag/%E8%8C%83%E5%9B%B4%E7%AE%A1%E7%90%86.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             范围管理
                                         </a>
                                         
                                         <a href="/tag/%E6%97%B6%E9%97%B4%E7%AE%A1%E7%90%86.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             时间管理
                                         </a>
                                         
                                         <a href="/tag/%E6%88%90%E6%9C%AC%E7%AE%A1%E7%90%86.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             成本管理
                                         </a>
                                         
@@ -411,54 +481,55 @@
                         </div>
                         
                         <div class="masonry-grid-item">
-                            <div class="card shadow-sm">
+                            <div class="card article-card shadow-sm">
                                 <div class="card-body">
-                                    <h5 class="card-title">
-                                        <i class="bi bi-file-earmark-text"></i>
+                                    <h5 class="card-title article-title">
+                                        <i class="bi bi-file-earmark-text me-2 text-primary"></i>
                                         <a href="../mdhtml/碎片时间写作法：利用通勤时间完成一本书的创作.html"
-                                            class="text-decoration-none">
+                                            class="text-decoration-none text-dark">
                                             碎片时间写作法：利用通勤时间完成一本书的创作
                                         </a>
                                     </h5>
                                     
-                                        <p class="card-text">
+                                        <p class="card-text text-muted mb-3">
                                             介绍碎片时间写作法，重点讲述如何利用通勤时间进行写作，包括准备工作、计划制定、环境选择、应用利用等，分享成功案例及保持写作动力的方法，助你实现写作梦想。
                                         </p>
                                         
+                                        <div class="article-meta">
                                             
-                                                <small class="text-muted">
-                                                    2026-02-24
-                                                </small>
+                                                <i class="bi bi-clock me-1"></i>
+                                                2026-02-24
                                                 
+                                        </div>
                                 </div>
-                                <div class="card-footer text-muted">
+                                <div class="card-footer text-muted bg-white border-top">
                                     <a href="/category/%E8%BF%90%E8%90%A5%E6%8C%87%E5%8D%97.html"
-                                        class="badge bg-primary">
+                                        class="badge bg-primary me-2">
                                         运营指南
                                     </a>
                                     
                                         <a href="/tag/%E7%A2%8E%E7%89%87%E6%97%B6%E9%97%B4%E5%86%99%E4%BD%9C.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             碎片时间写作
                                         </a>
                                         
                                         <a href="/tag/%E9%80%9A%E5%8B%A4%E5%86%99%E4%BD%9C.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             通勤写作
                                         </a>
                                         
                                         <a href="/tag/%E5%86%99%E4%BD%9C%E8%AE%A1%E5%88%92.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             写作计划
                                         </a>
                                         
                                         <a href="/tag/%E5%86%99%E4%BD%9C%E5%8A%A8%E5%8A%9B.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             写作动力
                                         </a>
                                         
                                         <a href="/tag/%E5%86%99%E4%BD%9C%E5%BA%94%E7%94%A8.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             写作应用
                                         </a>
                                         
@@ -467,54 +538,55 @@
                         </div>
                         
                         <div class="masonry-grid-item">
-                            <div class="card shadow-sm">
+                            <div class="card article-card shadow-sm">
                                 <div class="card-body">
-                                    <h5 class="card-title">
-                                        <i class="bi bi-file-earmark-text"></i>
+                                    <h5 class="card-title article-title">
+                                        <i class="bi bi-file-earmark-text me-2 text-primary"></i>
                                         <a href="../mdhtml/极端换位思考：与最讨厌的人交换思维模式运营公众号.html"
-                                            class="text-decoration-none">
+                                            class="text-decoration-none text-dark">
                                             极端换位思考：与最讨厌的人交换思维模式运营公众号
                                         </a>
                                     </h5>
                                     
-                                        <p class="card-text">
+                                        <p class="card-text text-muted mb-3">
                                             探讨将换位思考极端化的情景：如果必须永久性地与最讨厌的一类人交换思维模式来运营公众号，核心价值主张会变成什么，以及这种极端思维交换带来的启示。
                                         </p>
                                         
+                                        <div class="article-meta">
                                             
-                                                <small class="text-muted">
-                                                    2026-02-24
-                                                </small>
+                                                <i class="bi bi-clock me-1"></i>
+                                                2026-02-24
                                                 
+                                        </div>
                                 </div>
-                                <div class="card-footer text-muted">
+                                <div class="card-footer text-muted bg-white border-top">
                                     <a href="/category/%E8%BF%90%E8%90%A5%E6%8C%87%E5%8D%97.html"
-                                        class="badge bg-primary">
+                                        class="badge bg-primary me-2">
                                         运营指南
                                     </a>
                                     
                                         <a href="/tag/%E6%8D%A2%E4%BD%8D%E6%80%9D%E8%80%83.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             换位思考
                                         </a>
                                         
                                         <a href="/tag/%E6%9E%81%E7%AB%AF%E6%80%9D%E7%BB%B4.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             极端思维
                                         </a>
                                         
                                         <a href="/tag/%E5%85%AC%E4%BC%97%E5%8F%B7%E8%BF%90%E8%90%A5.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             公众号运营
                                         </a>
                                         
                                         <a href="/tag/%E4%BB%B7%E5%80%BC%E4%B8%BB%E5%BC%A0.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             价值主张
                                         </a>
                                         
                                         <a href="/tag/%E5%88%9B%E6%84%8F%E7%AD%96%E7%95%A5.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             创意策略
                                         </a>
                                         
@@ -523,59 +595,60 @@
                         </div>
                         
                         <div class="masonry-grid-item">
-                            <div class="card shadow-sm">
+                            <div class="card article-card shadow-sm">
                                 <div class="card-body">
-                                    <h5 class="card-title">
-                                        <i class="bi bi-file-earmark-text"></i>
+                                    <h5 class="card-title article-title">
+                                        <i class="bi bi-file-earmark-text me-2 text-primary"></i>
                                         <a href="../mdhtml/手冲咖啡与精品公众号：从0到1打造的耐心、变量控制与仪式感.html"
-                                            class="text-decoration-none">
+                                            class="text-decoration-none text-dark">
                                             手冲咖啡与精品公众号：从0到1打造的耐心、变量控制与仪式感
                                         </a>
                                     </h5>
                                     
-                                        <p class="card-text">
+                                        <p class="card-text text-muted mb-3">
                                             分析手冲咖啡的全流程，探讨如何用生活美学诠释从0到1打造一个精品公众号所需的耐心、变量控制与仪式感，为内容创作者提供新的视角和方法。
                                         </p>
                                         
+                                        <div class="article-meta">
                                             
-                                                <small class="text-muted">
-                                                    2026-02-24
-                                                </small>
+                                                <i class="bi bi-clock me-1"></i>
+                                                2026-02-24
                                                 
+                                        </div>
                                 </div>
-                                <div class="card-footer text-muted">
+                                <div class="card-footer text-muted bg-white border-top">
                                     <a href="/category/%E8%BF%90%E8%90%A5%E6%8C%87%E5%8D%97.html"
-                                        class="badge bg-primary">
+                                        class="badge bg-primary me-2">
                                         运营指南
                                     </a>
                                     
                                         <a href="/tag/%E6%89%8B%E5%86%B2%E5%92%96%E5%95%A1.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             手冲咖啡
                                         </a>
                                         
                                         <a href="/tag/%E7%B2%BE%E5%93%81%E5%85%AC%E4%BC%97%E5%8F%B7.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             精品公众号
                                         </a>
                                         
                                         <a href="/tag/%E5%86%85%E5%AE%B9%E5%88%9B%E4%BD%9C.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             内容创作
                                         </a>
                                         
                                         <a href="/tag/%E5%8F%98%E9%87%8F%E6%8E%A7%E5%88%B6.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             变量控制
                                         </a>
                                         
                                         <a href="/tag/%E4%BB%AA%E5%BC%8F%E6%84%9F.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             仪式感
                                         </a>
                                         
                                         <a href="/tag/%E8%80%90%E5%BF%83%E5%9D%9A%E6%8C%81.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             耐心坚持
                                         </a>
                                         
@@ -584,49 +657,50 @@
                         </div>
                         
                         <div class="masonry-grid-item">
-                            <div class="card shadow-sm">
+                            <div class="card article-card shadow-sm">
                                 <div class="card-body">
-                                    <h5 class="card-title">
-                                        <i class="bi bi-file-earmark-text"></i>
+                                    <h5 class="card-title article-title">
+                                        <i class="bi bi-file-earmark-text me-2 text-primary"></i>
                                         <a href="../mdhtml/情绪识别AI与真诚记录：当创作变成可量化的表演.html"
-                                            class="text-decoration-none">
+                                            class="text-decoration-none text-dark">
                                             情绪识别AI与真诚记录：当创作变成可量化的表演
                                         </a>
                                     </h5>
                                     
-                                        <p class="card-text">
+                                        <p class="card-text text-muted mb-3">
                                             探讨情绪识别AI对创作的影响，如何在数据驱动的时代保持创作的真诚性，以及如何平衡技术工具与直觉创作的关系。
                                         </p>
                                         
+                                        <div class="article-meta">
                                             
-                                                <small class="text-muted">
-                                                    2026-02-24
-                                                </small>
+                                                <i class="bi bi-clock me-1"></i>
+                                                2026-02-24
                                                 
+                                        </div>
                                 </div>
-                                <div class="card-footer text-muted">
+                                <div class="card-footer text-muted bg-white border-top">
                                     <a href="/category/%E8%BF%90%E8%90%A5%E6%8C%87%E5%8D%97.html"
-                                        class="badge bg-primary">
+                                        class="badge bg-primary me-2">
                                         运营指南
                                     </a>
                                     
                                         <a href="/tag/%E6%83%85%E7%BB%AA%E8%AF%86%E5%88%AB.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             情绪识别
                                         </a>
                                         
                                         <a href="/tag/AI.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             AI
                                         </a>
                                         
                                         <a href="/tag/%E7%9C%9F%E8%AF%9A%E8%AE%B0%E5%BD%95.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             真诚记录
                                         </a>
                                         
                                         <a href="/tag/%E5%88%9B%E4%BD%9C.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             创作
                                         </a>
                                         
@@ -635,54 +709,55 @@
                         </div>
                         
                         <div class="masonry-grid-item">
-                            <div class="card shadow-sm">
+                            <div class="card article-card shadow-sm">
                                 <div class="card-body">
-                                    <h5 class="card-title">
-                                        <i class="bi bi-file-earmark-text"></i>
+                                    <h5 class="card-title article-title">
+                                        <i class="bi bi-file-earmark-text me-2 text-primary"></i>
                                         <a href="../mdhtml/公众号号主的心理成长阶段与认知偏差：从冷启动到稳定增长.html"
-                                            class="text-decoration-none">
+                                            class="text-decoration-none text-dark">
                                             公众号号主的心理成长阶段与认知偏差：从冷启动到稳定增长
                                         </a>
                                     </h5>
                                     
-                                        <p class="card-text">
+                                        <p class="card-text text-muted mb-3">
                                             探讨公众号号主从冷启动到稳定增长的心理成长阶段，以及每个阶段容易陷入的认知偏差和应对策略。
                                         </p>
                                         
+                                        <div class="article-meta">
                                             
-                                                <small class="text-muted">
-                                                    2026-02-24
-                                                </small>
+                                                <i class="bi bi-clock me-1"></i>
+                                                2026-02-24
                                                 
+                                        </div>
                                 </div>
-                                <div class="card-footer text-muted">
+                                <div class="card-footer text-muted bg-white border-top">
                                     <a href="/category/%E8%BF%90%E8%90%A5%E6%8C%87%E5%8D%97.html"
-                                        class="badge bg-primary">
+                                        class="badge bg-primary me-2">
                                         运营指南
                                     </a>
                                     
                                         <a href="/tag/%E5%85%AC%E4%BC%97%E5%8F%B7.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             公众号
                                         </a>
                                         
                                         <a href="/tag/%E5%BF%83%E7%90%86%E6%88%90%E9%95%BF.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             心理成长
                                         </a>
                                         
                                         <a href="/tag/%E8%AE%A4%E7%9F%A5%E5%81%8F%E5%B7%AE.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             认知偏差
                                         </a>
                                         
                                         <a href="/tag/%E5%86%B7%E5%90%AF%E5%8A%A8.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             冷启动
                                         </a>
                                         
                                         <a href="/tag/%E7%A8%B3%E5%AE%9A%E5%A2%9E%E9%95%BF.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             稳定增长
                                         </a>
                                         
@@ -691,54 +766,55 @@
                         </div>
                         
                         <div class="masonry-grid-item">
-                            <div class="card shadow-sm">
+                            <div class="card article-card shadow-sm">
                                 <div class="card-body">
-                                    <h5 class="card-title">
-                                        <i class="bi bi-file-earmark-text"></i>
+                                    <h5 class="card-title article-title">
+                                        <i class="bi bi-file-earmark-text me-2 text-primary"></i>
                                         <a href="../mdhtml/公众号冷启动的行为艺术：SIPOC系统的创意推广.html"
-                                            class="text-decoration-none">
+                                            class="text-decoration-none text-dark">
                                             公众号冷启动的行为艺术：SIPOC系统的创意推广
                                         </a>
                                     </h5>
                                     
-                                        <p class="card-text">
+                                        <p class="card-text text-muted mb-3">
                                             探讨为公众号冷启动阶段设计一个行为艺术式的推广方案，该方案本身就是一个完整的SIPOC系统，且其输出(O)不是粉丝，而是一种社会情绪。
                                         </p>
                                         
+                                        <div class="article-meta">
                                             
-                                                <small class="text-muted">
-                                                    2026-02-24
-                                                </small>
+                                                <i class="bi bi-clock me-1"></i>
+                                                2026-02-24
                                                 
+                                        </div>
                                 </div>
-                                <div class="card-footer text-muted">
+                                <div class="card-footer text-muted bg-white border-top">
                                     <a href="/category/%E8%BF%90%E8%90%A5%E6%8C%87%E5%8D%97.html"
-                                        class="badge bg-primary">
+                                        class="badge bg-primary me-2">
                                         运营指南
                                     </a>
                                     
                                         <a href="/tag/%E5%85%AC%E4%BC%97%E5%8F%B7%E5%86%B7%E5%90%AF%E5%8A%A8.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             公众号冷启动
                                         </a>
                                         
                                         <a href="/tag/%E8%A1%8C%E4%B8%BA%E8%89%BA%E6%9C%AF.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             行为艺术
                                         </a>
                                         
                                         <a href="/tag/SIPOC%E7%B3%BB%E7%BB%9F.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             SIPOC系统
                                         </a>
                                         
                                         <a href="/tag/%E5%88%9B%E6%84%8F%E6%8E%A8%E5%B9%BF.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             创意推广
                                         </a>
                                         
                                         <a href="/tag/%E7%A4%BE%E4%BC%9A%E6%83%85%E7%BB%AA.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             社会情绪
                                         </a>
                                         
@@ -747,54 +823,55 @@
                         </div>
                         
                         <div class="masonry-grid-item">
-                            <div class="card shadow-sm">
+                            <div class="card article-card shadow-sm">
                                 <div class="card-body">
-                                    <h5 class="card-title">
-                                        <i class="bi bi-file-earmark-text"></i>
+                                    <h5 class="card-title article-title">
+                                        <i class="bi bi-file-earmark-text me-2 text-primary"></i>
                                         <a href="../mdhtml/元内容实验：递归性畸变与AI生成教程.html"
-                                            class="text-decoration-none">
+                                            class="text-decoration-none text-dark">
                                             元内容实验：递归性畸变与AI生成教程
                                         </a>
                                     </h5>
                                     
-                                        <p class="card-text">
+                                        <p class="card-text text-muted mb-3">
                                             设计一个元内容实验，写一篇关于如何写一篇关于如何构建公众号智能体的文章的文章，并预测AI学习后生成教程类文章的递归性畸变。分析元内容的概念与特点，递归性畸变的机制，以及元内容实验的设计和实施建议。
                                         </p>
                                         
+                                        <div class="article-meta">
                                             
-                                                <small class="text-muted">
-                                                    2026-02-24
-                                                </small>
+                                                <i class="bi bi-clock me-1"></i>
+                                                2026-02-24
                                                 
+                                        </div>
                                 </div>
-                                <div class="card-footer text-muted">
+                                <div class="card-footer text-muted bg-white border-top">
                                     <a href="/category/%E8%BF%90%E8%90%A5%E6%8C%87%E5%8D%97.html"
-                                        class="badge bg-primary">
+                                        class="badge bg-primary me-2">
                                         运营指南
                                     </a>
                                     
                                         <a href="/tag/%E5%85%83%E5%86%85%E5%AE%B9.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             元内容
                                         </a>
                                         
                                         <a href="/tag/AI%E7%94%9F%E6%88%90.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             AI生成
                                         </a>
                                         
                                         <a href="/tag/%E9%80%92%E5%BD%92%E6%80%A7%E7%95%B8%E5%8F%98.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             递归性畸变
                                         </a>
                                         
                                         <a href="/tag/%E6%95%99%E7%A8%8B.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             教程
                                         </a>
                                         
                                         <a href="/tag/%E5%86%85%E5%AE%B9%E5%88%9B%E4%BD%9C.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             内容创作
                                         </a>
                                         
@@ -803,164 +880,165 @@
                         </div>
                         
                         <div class="masonry-grid-item">
-                            <div class="card shadow-sm">
+                            <div class="card article-card shadow-sm">
                                 <div class="card-body">
-                                    <h5 class="card-title">
-                                        <i class="bi bi-file-earmark-text"></i>
+                                    <h5 class="card-title article-title">
+                                        <i class="bi bi-file-earmark-text me-2 text-primary"></i>
                                         <a href="../mdhtml/SEO内容生成新范式：DeepSeek关键词策略与语义匹配实战.html"
-                                            class="text-decoration-none">
+                                            class="text-decoration-none text-dark">
                                             SEO内容生成新范式：DeepSeek关键词策略与语义匹配实战
                                         </a>
                                     </h5>
                                     
-                                        <p class="card-text">
+                                        <p class="card-text text-muted mb-3">
                                             详细介绍DeepSeek关键词策略与语义匹配在SEO内容生成中的应用方法，通过深度挖掘用户需求和利用长尾关键词精准定位目标受众。解析语义搜索和自然语言处理技术如何提升内容相关性和可读性，分享电商网站流量提升40%及内容平台用户粘性增强的实际案例，展望数据驱动的持续优化和人工智能与SEO的深度融合，为SEO内容生成提供全新范式。
                                         </p>
                                         
+                                        <div class="article-meta">
                                             
-                                                <small class="text-muted">
-                                                    2026-02-24
-                                                </small>
+                                                <i class="bi bi-clock me-1"></i>
+                                                2026-02-24
                                                 
+                                        </div>
                                 </div>
-                                <div class="card-footer text-muted">
+                                <div class="card-footer text-muted bg-white border-top">
                                     <a href="/category/%E8%BF%90%E8%90%A5%E6%8C%87%E5%8D%97.html"
-                                        class="badge bg-primary">
+                                        class="badge bg-primary me-2">
                                         运营指南
                                     </a>
                                     
                                         <a href="/tag/DeepSeek.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             DeepSeek
                                         </a>
                                         
                                         <a href="/tag/%E6%90%9C%E7%B4%A2%E5%BC%95%E6%93%8E%E4%BC%98%E5%8C%96.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             搜索引擎优化
                                         </a>
                                         
                                         <a href="/tag/%E5%85%B3%E9%94%AE%E8%AF%8D%E7%AD%96%E7%95%A5.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             关键词策略
                                         </a>
                                         
                                         <a href="/tag/%E8%AF%AD%E4%B9%89%E5%8C%B9%E9%85%8D.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             语义匹配
                                         </a>
                                         
                                         <a href="/tag/SEO%E4%BC%98%E5%8C%96.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             SEO优化
                                         </a>
                                         
                                         <a href="/tag/%E5%86%85%E5%AE%B9%E7%94%9F%E6%88%90.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             内容生成
                                         </a>
                                         
                                         <a href="/tag/%E7%94%A8%E6%88%B7%E9%9C%80%E6%B1%82.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             用户需求
                                         </a>
                                         
                                         <a href="/tag/%E9%95%BF%E5%B0%BE%E5%85%B3%E9%94%AE%E8%AF%8D.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             长尾关键词
                                         </a>
                                         
                                         <a href="/tag/%E8%AF%AD%E4%B9%89%E6%90%9C%E7%B4%A2.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             语义搜索
                                         </a>
                                         
                                         <a href="/tag/%E8%87%AA%E7%84%B6%E8%AF%AD%E8%A8%80%E5%A4%84%E7%90%86.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             自然语言处理
                                         </a>
                                         
                                         <a href="/tag/%E5%86%85%E5%AE%B9%E8%90%A5%E9%94%80.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             内容营销
                                         </a>
                                         
                                         <a href="/tag/%E6%B5%81%E9%87%8F%E6%8F%90%E5%8D%87.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             流量提升
                                         </a>
                                         
                                         <a href="/tag/%E7%94%A8%E6%88%B7%E6%84%8F%E5%9B%BE.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             用户意图
                                         </a>
                                         
                                         <a href="/tag/%E5%86%85%E5%AE%B9%E7%9B%B8%E5%85%B3%E6%80%A7.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             内容相关性
                                         </a>
                                         
                                         <a href="/tag/NLP%E6%8A%80%E6%9C%AF.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             NLP技术
                                         </a>
                                         
                                         <a href="/tag/%E6%95%B0%E6%8D%AE%E9%A9%B1%E5%8A%A8%E4%BC%98%E5%8C%96.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             数据驱动优化
                                         </a>
                                         
                                         <a href="/tag/AI%E4%B8%8ESEO%E8%9E%8D%E5%90%88.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             AI与SEO融合
                                         </a>
                                         
                                         <a href="/tag/%E7%94%B5%E5%95%86SEO.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             电商SEO
                                         </a>
                                         
                                         <a href="/tag/%E5%86%85%E5%AE%B9%E5%B9%B3%E5%8F%B0%E4%BC%98%E5%8C%96.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             内容平台优化
                                         </a>
                                         
                                         <a href="/tag/%E6%9C%89%E6%9C%BA%E6%B5%81%E9%87%8F.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             有机流量
                                         </a>
                                         
                                         <a href="/tag/%E8%BD%AC%E5%8C%96%E7%8E%87%E6%8F%90%E5%8D%87.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             转化率提升
                                         </a>
                                         
                                         <a href="/tag/%E6%90%9C%E7%B4%A2%E6%84%8F%E5%9B%BE%E5%88%86%E6%9E%90.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             搜索意图分析
                                         </a>
                                         
                                         <a href="/tag/%E5%86%85%E5%AE%B9%E7%BB%93%E6%9E%84%E4%BC%98%E5%8C%96.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             内容结构优化
                                         </a>
                                         
                                         <a href="/tag/%E5%85%B3%E9%94%AE%E8%AF%8D%E7%A0%94%E7%A9%B6.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             关键词研究
                                         </a>
                                         
                                         <a href="/tag/%E7%AB%9E%E4%BA%89%E5%88%86%E6%9E%90.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             竞争分析
                                         </a>
                                         
                                         <a href="/tag/SEO%E5%86%85%E5%AE%B9%E7%AD%96%E7%95%A5.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             SEO内容策略
                                         </a>
                                         
                                         <a href="/tag/%E8%AF%AD%E4%B9%89SEO.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             语义SEO
                                         </a>
                                         
@@ -969,54 +1047,55 @@
                         </div>
                         
                         <div class="masonry-grid-item">
-                            <div class="card shadow-sm">
+                            <div class="card article-card shadow-sm">
                                 <div class="card-body">
-                                    <h5 class="card-title">
-                                        <i class="bi bi-file-earmark-text"></i>
+                                    <h5 class="card-title article-title">
+                                        <i class="bi bi-file-earmark-text me-2 text-primary"></i>
                                         <a href="../mdhtml/运营自媒体和搭建个人网站的优劣势分析.html"
-                                            class="text-decoration-none">
+                                            class="text-decoration-none text-dark">
                                             运营自媒体和搭建个人网站的优劣势分析
                                         </a>
                                     </h5>
                                     
-                                        <p class="card-text">
+                                        <p class="card-text text-muted mb-3">
                                             深入剖析运营自媒体和搭建个人网站的优劣势，助力你精准抉择契合自身的发展路径，在数字化时代实现个人品牌与商业目标的双丰收。
                                         </p>
                                         
+                                        <div class="article-meta">
                                             
-                                                <small class="text-muted">
-                                                    2026-02-11
-                                                </small>
+                                                <i class="bi bi-clock me-1"></i>
+                                                2026-02-11
                                                 
+                                        </div>
                                 </div>
-                                <div class="card-footer text-muted">
+                                <div class="card-footer text-muted bg-white border-top">
                                     <a href="/category/%E8%BF%90%E8%90%A5%E6%8C%87%E5%8D%97.html"
-                                        class="badge bg-primary">
+                                        class="badge bg-primary me-2">
                                         运营指南
                                     </a>
                                     
                                         <a href="/tag/%E8%87%AA%E5%AA%92%E4%BD%93.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             自媒体
                                         </a>
                                         
                                         <a href="/tag/%E4%B8%AA%E4%BA%BA%E7%BD%91%E7%AB%99.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             个人网站
                                         </a>
                                         
                                         <a href="/tag/%E4%BC%98%E5%8A%A3%E5%8A%BF.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             优劣势
                                         </a>
                                         
                                         <a href="/tag/%E6%95%B0%E5%AD%97%E5%8C%96%E5%8F%91%E5%B1%95.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             数字化发展
                                         </a>
                                         
                                         <a href="/tag/%E7%9B%88%E5%88%A9%E6%A8%A1%E5%BC%8F.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             盈利模式
                                         </a>
                                         
@@ -1025,54 +1104,55 @@
                         </div>
                         
                         <div class="masonry-grid-item">
-                            <div class="card shadow-sm">
+                            <div class="card article-card shadow-sm">
                                 <div class="card-body">
-                                    <h5 class="card-title">
-                                        <i class="bi bi-file-earmark-text"></i>
+                                    <h5 class="card-title article-title">
+                                        <i class="bi bi-file-earmark-text me-2 text-primary"></i>
                                         <a href="../mdhtml/短视频爆款公式：普通人低成本涨粉秘籍.html"
-                                            class="text-decoration-none">
+                                            class="text-decoration-none text-dark">
                                             短视频爆款公式：普通人低成本涨粉秘籍
                                         </a>
                                     </h5>
                                     
-                                        <p class="card-text">
+                                        <p class="card-text text-muted mb-3">
                                             揭示普通人低成本涨粉的短视频爆款公式，涵盖精准定位账号、雕琢优质内容、选对平台与发布策略以及巧用推广技巧等内容，助力打造爆款短视频。
                                         </p>
                                         
+                                        <div class="article-meta">
                                             
-                                                <small class="text-muted">
-                                                    2026-02-11
-                                                </small>
+                                                <i class="bi bi-clock me-1"></i>
+                                                2026-02-11
                                                 
+                                        </div>
                                 </div>
-                                <div class="card-footer text-muted">
+                                <div class="card-footer text-muted bg-white border-top">
                                     <a href="/category/%E8%BF%90%E8%90%A5%E6%8C%87%E5%8D%97.html"
-                                        class="badge bg-primary">
+                                        class="badge bg-primary me-2">
                                         运营指南
                                     </a>
                                     
                                         <a href="/tag/%E7%9F%AD%E8%A7%86%E9%A2%91.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             短视频
                                         </a>
                                         
                                         <a href="/tag/%E6%B6%A8%E7%B2%89.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             涨粉
                                         </a>
                                         
                                         <a href="/tag/%E7%88%86%E6%AC%BE%E5%85%AC%E5%BC%8F.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             爆款公式
                                         </a>
                                         
                                         <a href="/tag/%E8%B4%A6%E5%8F%B7%E5%AE%9A%E4%BD%8D.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             账号定位
                                         </a>
                                         
                                         <a href="/tag/%E5%86%85%E5%AE%B9%E5%88%9B%E4%BD%9C.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             内容创作
                                         </a>
                                         
@@ -1081,54 +1161,55 @@
                         </div>
                         
                         <div class="masonry-grid-item">
-                            <div class="card shadow-sm">
+                            <div class="card article-card shadow-sm">
                                 <div class="card-body">
-                                    <h5 class="card-title">
-                                        <i class="bi bi-file-earmark-text"></i>
+                                    <h5 class="card-title article-title">
+                                        <i class="bi bi-file-earmark-text me-2 text-primary"></i>
                                         <a href="../mdhtml/短篇小说畅销秘籍：全方位创作指南.html"
-                                            class="text-decoration-none">
+                                            class="text-decoration-none text-dark">
                                             短篇小说畅销秘籍：全方位创作指南
                                         </a>
                                     </h5>
                                     
-                                        <p class="card-text">
+                                        <p class="card-text text-muted mb-3">
                                             本文详细介绍了短篇小说畅销的秘籍，涵盖从挖掘主题、塑造人物、构建情节、运用语言技巧到注重细节与结尾等多方面的全方位创作指南，助力创作者打造出能在市场上畅销的短篇小说。
                                         </p>
                                         
+                                        <div class="article-meta">
                                             
-                                                <small class="text-muted">
-                                                    2026-02-11
-                                                </small>
+                                                <i class="bi bi-clock me-1"></i>
+                                                2026-02-11
                                                 
+                                        </div>
                                 </div>
-                                <div class="card-footer text-muted">
+                                <div class="card-footer text-muted bg-white border-top">
                                     <a href="/category/%E8%BF%90%E8%90%A5%E6%8C%87%E5%8D%97.html"
-                                        class="badge bg-primary">
+                                        class="badge bg-primary me-2">
                                         运营指南
                                     </a>
                                     
                                         <a href="/tag/%E7%9F%AD%E7%AF%87%E5%B0%8F%E8%AF%B4.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             短篇小说
                                         </a>
                                         
                                         <a href="/tag/%E5%88%9B%E4%BD%9C%E6%8A%80%E5%B7%A7.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             创作技巧
                                         </a>
                                         
                                         <a href="/tag/%E4%B8%BB%E9%A2%98%E6%8C%96%E6%8E%98.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             主题挖掘
                                         </a>
                                         
                                         <a href="/tag/%E4%BA%BA%E7%89%A9%E5%A1%91%E9%80%A0.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             人物塑造
                                         </a>
                                         
                                         <a href="/tag/%E6%83%85%E8%8A%82%E6%9E%84%E5%BB%BA.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             情节构建
                                         </a>
                                         
@@ -1137,59 +1218,60 @@
                         </div>
                         
                         <div class="masonry-grid-item">
-                            <div class="card shadow-sm">
+                            <div class="card article-card shadow-sm">
                                 <div class="card-body">
-                                    <h5 class="card-title">
-                                        <i class="bi bi-file-earmark-text"></i>
+                                    <h5 class="card-title article-title">
+                                        <i class="bi bi-file-earmark-text me-2 text-primary"></i>
                                         <a href="../mdhtml/畅销长篇小说创作秘籍全解析.html"
-                                            class="text-decoration-none">
+                                            class="text-decoration-none text-dark">
                                             畅销长篇小说创作秘籍全解析
                                         </a>
                                     </h5>
                                     
-                                        <p class="card-text">
+                                        <p class="card-text text-muted mb-3">
                                             本文深入剖析畅销长篇小说创作的关键要素，涵盖选题、人物塑造、情节设计、写作风格以及市场定位等方面，为怀揣文学梦想的作家提供实用的创作指导，助力创作出深受读者喜爱的优秀作品。
                                         </p>
                                         
+                                        <div class="article-meta">
                                             
-                                                <small class="text-muted">
-                                                    2026-02-11
-                                                </small>
+                                                <i class="bi bi-clock me-1"></i>
+                                                2026-02-11
                                                 
+                                        </div>
                                 </div>
-                                <div class="card-footer text-muted">
+                                <div class="card-footer text-muted bg-white border-top">
                                     <a href="/category/%E8%BF%90%E8%90%A5%E6%8C%87%E5%8D%97.html"
-                                        class="badge bg-primary">
+                                        class="badge bg-primary me-2">
                                         运营指南
                                     </a>
                                     
                                         <a href="/tag/%E7%95%85%E9%94%80%E5%B0%8F%E8%AF%B4.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             畅销小说
                                         </a>
                                         
                                         <a href="/tag/%E9%80%89%E9%A2%98%E6%8A%80%E5%B7%A7.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             选题技巧
                                         </a>
                                         
                                         <a href="/tag/%E4%BA%BA%E7%89%A9%E5%A1%91%E9%80%A0.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             人物塑造
                                         </a>
                                         
                                         <a href="/tag/%E6%83%85%E8%8A%82%E8%AE%BE%E8%AE%A1.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             情节设计
                                         </a>
                                         
                                         <a href="/tag/%E5%86%99%E4%BD%9C%E9%A3%8E%E6%A0%BC.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             写作风格
                                         </a>
                                         
                                         <a href="/tag/%E5%B8%82%E5%9C%BA%E5%AE%9A%E4%BD%8D.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             市场定位
                                         </a>
                                         
@@ -1198,54 +1280,55 @@
                         </div>
                         
                         <div class="masonry-grid-item">
-                            <div class="card shadow-sm">
+                            <div class="card article-card shadow-sm">
                                 <div class="card-body">
-                                    <h5 class="card-title">
-                                        <i class="bi bi-file-earmark-text"></i>
+                                    <h5 class="card-title article-title">
+                                        <i class="bi bi-file-earmark-text me-2 text-primary"></i>
                                         <a href="../mdhtml/抖音爆款内容打造全攻略.html"
-                                            class="text-decoration-none">
+                                            class="text-decoration-none text-dark">
                                             抖音爆款内容打造全攻略
                                         </a>
                                     </h5>
                                     
-                                        <p class="card-text">
+                                        <p class="card-text text-muted mb-3">
                                             本文详细介绍了在抖音平台上打造爆款内容的全面攻略，涵盖深挖平台规则与算法、精准锁定目标受众、选题策划、内容创作、标题和封面优化以及发布和推广等方面，助力创作者创作出吸引用户的爆款内容。
                                         </p>
                                         
+                                        <div class="article-meta">
                                             
-                                                <small class="text-muted">
-                                                    2026-02-11
-                                                </small>
+                                                <i class="bi bi-clock me-1"></i>
+                                                2026-02-11
                                                 
+                                        </div>
                                 </div>
-                                <div class="card-footer text-muted">
+                                <div class="card-footer text-muted bg-white border-top">
                                     <a href="/category/%E8%BF%90%E8%90%A5%E6%8C%87%E5%8D%97.html"
-                                        class="badge bg-primary">
+                                        class="badge bg-primary me-2">
                                         运营指南
                                     </a>
                                     
                                         <a href="/tag/%E6%8A%96%E9%9F%B3%E7%88%86%E6%AC%BE.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             抖音爆款
                                         </a>
                                         
                                         <a href="/tag/%E5%86%85%E5%AE%B9%E5%88%9B%E4%BD%9C.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             内容创作
                                         </a>
                                         
                                         <a href="/tag/%E7%AE%97%E6%B3%95%E6%9C%BA%E5%88%B6.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             算法机制
                                         </a>
                                         
                                         <a href="/tag/%E7%9B%AE%E6%A0%87%E5%8F%97%E4%BC%97.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             目标受众
                                         </a>
                                         
                                         <a href="/tag/%E6%A0%87%E9%A2%98%E5%B0%81%E9%9D%A2.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             标题封面
                                         </a>
                                         
@@ -1254,54 +1337,55 @@
                         </div>
                         
                         <div class="masonry-grid-item">
-                            <div class="card shadow-sm">
+                            <div class="card article-card shadow-sm">
                                 <div class="card-body">
-                                    <h5 class="card-title">
-                                        <i class="bi bi-file-earmark-text"></i>
+                                    <h5 class="card-title article-title">
+                                        <i class="bi bi-file-earmark-text me-2 text-primary"></i>
                                         <a href="../mdhtml/打造知乎爆款内容的实用秘籍.html"
-                                            class="text-decoration-none">
+                                            class="text-decoration-none text-dark">
                                             打造知乎爆款内容的实用秘籍
                                         </a>
                                     </h5>
                                     
-                                        <p class="card-text">
+                                        <p class="card-text text-muted mb-3">
                                             本文分享了在知乎平台上打造爆款内容的实用秘籍，涵盖精准选题、有价值的内容创作、吸睛的写作风格以及有效的互动推广策略，助你在知乎收获广泛关注与互动。
                                         </p>
                                         
+                                        <div class="article-meta">
                                             
-                                                <small class="text-muted">
-                                                    2026-02-11
-                                                </small>
+                                                <i class="bi bi-clock me-1"></i>
+                                                2026-02-11
                                                 
+                                        </div>
                                 </div>
-                                <div class="card-footer text-muted">
+                                <div class="card-footer text-muted bg-white border-top">
                                     <a href="/category/%E8%BF%90%E8%90%A5%E6%8C%87%E5%8D%97.html"
-                                        class="badge bg-primary">
+                                        class="badge bg-primary me-2">
                                         运营指南
                                     </a>
                                     
                                         <a href="/tag/%E7%9F%A5%E4%B9%8E%E7%88%86%E6%AC%BE.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             知乎爆款
                                         </a>
                                         
                                         <a href="/tag/%E5%86%85%E5%AE%B9%E5%88%9B%E4%BD%9C.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             内容创作
                                         </a>
                                         
                                         <a href="/tag/%E9%80%89%E9%A2%98%E6%8A%80%E5%B7%A7.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             选题技巧
                                         </a>
                                         
                                         <a href="/tag/%E5%86%99%E4%BD%9C%E9%A3%8E%E6%A0%BC.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             写作风格
                                         </a>
                                         
                                         <a href="/tag/%E4%BA%92%E5%8A%A8%E6%8E%A8%E5%B9%BF.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             互动推广
                                         </a>
                                         
@@ -1310,54 +1394,55 @@
                         </div>
                         
                         <div class="masonry-grid-item">
-                            <div class="card shadow-sm">
+                            <div class="card article-card shadow-sm">
                                 <div class="card-body">
-                                    <h5 class="card-title">
-                                        <i class="bi bi-file-earmark-text"></i>
+                                    <h5 class="card-title article-title">
+                                        <i class="bi bi-file-earmark-text me-2 text-primary"></i>
                                         <a href="../mdhtml/打造百家号爆款内容的实用秘籍.html"
-                                            class="text-decoration-none">
+                                            class="text-decoration-none text-dark">
                                             打造百家号爆款内容的实用秘籍
                                         </a>
                                     </h5>
                                     
-                                        <p class="card-text">
+                                        <p class="card-text text-muted mb-3">
                                             本文分享了在百家号上打造爆款内容的实用秘籍，涵盖深入了解平台规则与用户需求、选题策划、内容创作、优化标题和封面以及推广与互动等方面，助力创作者吸引流量与关注。
                                         </p>
                                         
+                                        <div class="article-meta">
                                             
-                                                <small class="text-muted">
-                                                    2026-02-11
-                                                </small>
+                                                <i class="bi bi-clock me-1"></i>
+                                                2026-02-11
                                                 
+                                        </div>
                                 </div>
-                                <div class="card-footer text-muted">
+                                <div class="card-footer text-muted bg-white border-top">
                                     <a href="/category/%E8%BF%90%E8%90%A5%E6%8C%87%E5%8D%97.html"
-                                        class="badge bg-primary">
+                                        class="badge bg-primary me-2">
                                         运营指南
                                     </a>
                                     
                                         <a href="/tag/%E7%99%BE%E5%AE%B6%E5%8F%B7.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             百家号
                                         </a>
                                         
                                         <a href="/tag/%E7%88%86%E6%AC%BE%E5%86%85%E5%AE%B9.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             爆款内容
                                         </a>
                                         
                                         <a href="/tag/%E5%86%85%E5%AE%B9%E5%88%9B%E4%BD%9C.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             内容创作
                                         </a>
                                         
                                         <a href="/tag/%E6%A0%87%E9%A2%98%E4%BC%98%E5%8C%96.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             标题优化
                                         </a>
                                         
                                         <a href="/tag/%E7%94%A8%E6%88%B7%E4%BA%92%E5%8A%A8.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             用户互动
                                         </a>
                                         
@@ -1366,54 +1451,55 @@
                         </div>
                         
                         <div class="masonry-grid-item">
-                            <div class="card shadow-sm">
+                            <div class="card article-card shadow-sm">
                                 <div class="card-body">
-                                    <h5 class="card-title">
-                                        <i class="bi bi-file-earmark-text"></i>
+                                    <h5 class="card-title article-title">
+                                        <i class="bi bi-file-earmark-text me-2 text-primary"></i>
                                         <a href="../mdhtml/微信公众号爆款文章打造全攻略.html"
-                                            class="text-decoration-none">
+                                            class="text-decoration-none text-dark">
                                             微信公众号爆款文章打造全攻略
                                         </a>
                                     </h5>
                                     
-                                        <p class="card-text">
+                                        <p class="card-text text-muted mb-3">
                                             本文详细介绍了打造微信公众号爆款文章的全攻略，涵盖选题、标题、内容、结构、互动、推广和排版等关键环节，助力提升文章阅读量和影响力。
                                         </p>
                                         
+                                        <div class="article-meta">
                                             
-                                                <small class="text-muted">
-                                                    2026-02-11
-                                                </small>
+                                                <i class="bi bi-clock me-1"></i>
+                                                2026-02-11
                                                 
+                                        </div>
                                 </div>
-                                <div class="card-footer text-muted">
+                                <div class="card-footer text-muted bg-white border-top">
                                     <a href="/category/%E8%BF%90%E8%90%A5%E6%8C%87%E5%8D%97.html"
-                                        class="badge bg-primary">
+                                        class="badge bg-primary me-2">
                                         运营指南
                                     </a>
                                     
                                         <a href="/tag/%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             微信公众号
                                         </a>
                                         
                                         <a href="/tag/%E7%88%86%E6%AC%BE%E6%96%87%E7%AB%A0.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             爆款文章
                                         </a>
                                         
                                         <a href="/tag/%E9%80%89%E9%A2%98%E6%8A%80%E5%B7%A7.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             选题技巧
                                         </a>
                                         
                                         <a href="/tag/%E5%86%85%E5%AE%B9%E5%88%9B%E4%BD%9C.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             内容创作
                                         </a>
                                         
                                         <a href="/tag/%E6%8E%A8%E5%B9%BF%E7%AD%96%E7%95%A5.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             推广策略
                                         </a>
                                         
@@ -1422,54 +1508,55 @@
                         </div>
                         
                         <div class="masonry-grid-item">
-                            <div class="card shadow-sm">
+                            <div class="card article-card shadow-sm">
                                 <div class="card-body">
-                                    <h5 class="card-title">
-                                        <i class="bi bi-file-earmark-text"></i>
+                                    <h5 class="card-title article-title">
+                                        <i class="bi bi-file-earmark-text me-2 text-primary"></i>
                                         <a href="../mdhtml/小红书爆款内容打造全攻略.html"
-                                            class="text-decoration-none">
+                                            class="text-decoration-none text-dark">
                                             小红书爆款内容打造全攻略
                                         </a>
                                     </h5>
                                     
-                                        <p class="card-text">
+                                        <p class="card-text text-muted mb-3">
                                             深入剖析小红书爆款内容打造的全攻略，涵盖平台规则、选题策略、内容创作、发布推广及持续优化等方面，助你在小红书平台上脱颖而出。
                                         </p>
                                         
+                                        <div class="article-meta">
                                             
-                                                <small class="text-muted">
-                                                    2026-02-11
-                                                </small>
+                                                <i class="bi bi-clock me-1"></i>
+                                                2026-02-11
                                                 
+                                        </div>
                                 </div>
-                                <div class="card-footer text-muted">
+                                <div class="card-footer text-muted bg-white border-top">
                                     <a href="/category/%E8%BF%90%E8%90%A5%E6%8C%87%E5%8D%97.html"
-                                        class="badge bg-primary">
+                                        class="badge bg-primary me-2">
                                         运营指南
                                     </a>
                                     
                                         <a href="/tag/%E5%B0%8F%E7%BA%A2%E4%B9%A6.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             小红书
                                         </a>
                                         
                                         <a href="/tag/%E7%88%86%E6%AC%BE%E5%86%85%E5%AE%B9.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             爆款内容
                                         </a>
                                         
                                         <a href="/tag/%E5%86%85%E5%AE%B9%E5%88%9B%E4%BD%9C.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             内容创作
                                         </a>
                                         
                                         <a href="/tag/%E7%A4%BE%E4%BA%A4%E5%AA%92%E4%BD%93%E6%8E%A8%E5%B9%BF.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             社交媒体推广
                                         </a>
                                         
                                         <a href="/tag/%E7%94%A8%E6%88%B7%E4%BA%92%E5%8A%A8.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             用户互动
                                         </a>
                                         
@@ -1480,9 +1567,9 @@
                 </div>
 
                 <!-- 返回按钮 -->
-                <div class="mt-4 text-center">
-                    <a href="分类列表.html" class="btn btn-outline-primary">
-                        <i class="bi bi-arrow-left"></i> 返回分类列表
+                <div class="mt-6 text-center">
+                    <a href="分类列表.html" class="btn btn-outline-primary back-button">
+                        <i class="bi bi-arrow-left me-2"></i> 返回分类列表
                     </a>
                 </div>
             </div>
@@ -1506,7 +1593,7 @@
                         itemSelector: '.masonry-grid-item',
                         columnWidth: '.masonry-grid-item',
                         percentPosition: true,
-                        gutter: 10 // 明确设置 gutter 值为 10px
+                        gutter: 15 // 增加间距，提升视觉效果
                     });
                 });
             </script>

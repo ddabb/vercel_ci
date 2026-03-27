@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
 
 <head>
   <meta charset="UTF-8">
@@ -9,7 +9,7 @@
   <meta name="description" content="无人自助站的【心理咨询】的标签列表页面，汇集了关于【心理咨询】标签相关的文章和资讯，方便您快速找到感兴趣的内容。">
   <meta name="keywords" content="无人自助站,心理咨询">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>标签文章列表</title>
+  <title>心理咨询标签 - 无人自助站</title>
 
   <link rel="icon" href="../logo.svg" type="image/svg+xml">
   <link rel="stylesheet" href="../css/style.css">
@@ -27,6 +27,62 @@
   <!-- 引入Masonry -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/masonry/4.2.2/masonry.pkgd.min.js"></script>
 
+  <style>
+        .tag-header {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            color: white;
+            padding: 2rem;
+            border-radius: 8px;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        .tag-title {
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+        .article-card {
+            transition: all 0.3s ease;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        .article-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+        }
+        .article-title {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            transition: color 0.3s ease;
+        }
+        .article-title:hover {
+            color: #0d6efd;
+        }
+        .article-meta {
+            font-size: 0.85rem;
+            color: #6c757d;
+        }
+        .tag-link {
+            background-color: #e9ecef;
+            color: #495057;
+            transition: all 0.2s ease;
+        }
+        .tag-link:hover {
+            background-color: #dee2e6;
+            color: #212529;
+        }
+        .back-button {
+            transition: all 0.3s ease;
+        }
+        .back-button:hover {
+            transform: translateX(-3px);
+        }
+        .article-count {
+            font-size: 0.9rem;
+            opacity: 0.9;
+        }
+    </style>
 </head>
 
 <body>
@@ -80,7 +136,7 @@
     <main class="container-fluid mt-4">
       <div class="row">
         <div class="col-lg-8 col-md-12 mx-auto">
-          <nav aria-label="breadcrumb">
+          <nav aria-label="breadcrumb" class="mb-4">
             <ol class="breadcrumb">
               <li class="breadcrumb-item"><a href="/html/index.html">首页</a></li>
               <li class="breadcrumb-item"><a href="标签列表.html">标签列表</a></li>
@@ -89,54 +145,64 @@
               </li>
             </ol>
           </nav>
-          <h1 style="font-size: 1.5em; margin: 0.5em 0;">
-            心理咨询标签的文章和资讯
-        </h1>
+          
+          <!-- 标签头部 -->
+          <div class="tag-header">
+              <h1 class="tag-title">
+                  <i class="bi bi-tags me-2"></i>
+                  心理咨询
+              </h1>
+              <p class="article-count">
+                  共 5 篇文章
+              </p>
+          </div>
+          
           <div class="masonry-grid">
             
               <div class="masonry-grid-item">
-                <div class="card shadow-sm">
+                <div class="card article-card shadow-sm">
                   <div class="card-body">
-                    <h5 class="card-title">
-                      <i class="bi bi-file-earmark-text"></i>
-                      <a href="../mdhtml/2026年心理健康的重视：从个人到社会的关注.html" class="text-decoration-none">
+                    <h5 class="card-title article-title">
+                      <i class="bi bi-file-earmark-text me-2 text-primary"></i>
+                      <a href="../mdhtml/2026年心理健康的重视：从个人到社会的关注.html" class="text-decoration-none text-dark">
                         2026年心理健康的重视：从个人到社会的关注
                       </a>
                     </h5>
                     
-                      <p class="card-text">
+                      <p class="card-text text-muted mb-3">
                         分析2026年心理健康受到的重视，从个人心理健康到社会心理援助，从心理咨询的普及到心理健康的预防，探讨如何建立更加健康的社会。
                       </p>
                       
-                        
-                          <small class="text-muted">
-                            2026-03-23
-                          </small>
-                          
+                        <div class="article-meta">
+                            
+                                <i class="bi bi-clock me-1"></i>
+                                2026-03-23
+                                
+                        </div>
                   </div>
-                  <div class="card-footer text-muted">
+                  <div class="card-footer text-muted bg-white border-top">
                     <a href="/category/%E5%BF%83%E7%90%86%E5%81%A5%E5%BA%B7.html"
-                      class="badge bg-primary">
+                      class="badge bg-primary me-2">
                       心理健康
                     </a>
                     
-                      <a href="/tag/%E5%BF%83%E7%90%86%E5%81%A5%E5%BA%B7.html" class="badge tag-link">
+                      <a href="/tag/%E5%BF%83%E7%90%86%E5%81%A5%E5%BA%B7.html" class="badge tag-link me-2 mb-1">
                         心理健康
                       </a>
                       
-                      <a href="/tag/%E5%BF%83%E7%90%86%E5%92%A8%E8%AF%A2.html" class="badge tag-link">
+                      <a href="/tag/%E5%BF%83%E7%90%86%E5%92%A8%E8%AF%A2.html" class="badge tag-link me-2 mb-1">
                         心理咨询
                       </a>
                       
-                      <a href="/tag/%E5%BF%83%E7%90%86%E6%8F%B4%E5%8A%A9.html" class="badge tag-link">
+                      <a href="/tag/%E5%BF%83%E7%90%86%E6%8F%B4%E5%8A%A9.html" class="badge tag-link me-2 mb-1">
                         心理援助
                       </a>
                       
-                      <a href="/tag/%E5%B7%A5%E4%BD%9C%E5%8E%8B%E5%8A%9B.html" class="badge tag-link">
+                      <a href="/tag/%E5%B7%A5%E4%BD%9C%E5%8E%8B%E5%8A%9B.html" class="badge tag-link me-2 mb-1">
                         工作压力
                       </a>
                       
-                      <a href="/tag/%E7%A4%BE%E4%BC%9A%E6%94%AF%E6%8C%81.html" class="badge tag-link">
+                      <a href="/tag/%E7%A4%BE%E4%BC%9A%E6%94%AF%E6%8C%81.html" class="badge tag-link me-2 mb-1">
                         社会支持
                       </a>
                       
@@ -145,48 +211,49 @@
               </div>
               
               <div class="masonry-grid-item">
-                <div class="card shadow-sm">
+                <div class="card article-card shadow-sm">
                   <div class="card-body">
-                    <h5 class="card-title">
-                      <i class="bi bi-file-earmark-text"></i>
-                      <a href="../mdhtml/心理咨询：个人成长的隐形翅膀.html" class="text-decoration-none">
+                    <h5 class="card-title article-title">
+                      <i class="bi bi-file-earmark-text me-2 text-primary"></i>
+                      <a href="../mdhtml/心理咨询：个人成长的隐形翅膀.html" class="text-decoration-none text-dark">
                         心理咨询：个人成长的隐形翅膀
                       </a>
                     </h5>
                     
-                      <p class="card-text">
+                      <p class="card-text text-muted mb-3">
                         阐述心理咨询在个人成长各方面的重要作用，包括深入内心探索、情绪管理、人际关系发展、职业发展等，强调其在当下社会助力个人成长的意义。
                       </p>
                       
-                        
-                          <small class="text-muted">
-                            2026-02-27
-                          </small>
-                          
+                        <div class="article-meta">
+                            
+                                <i class="bi bi-clock me-1"></i>
+                                2026-02-27
+                                
+                        </div>
                   </div>
-                  <div class="card-footer text-muted">
+                  <div class="card-footer text-muted bg-white border-top">
                     <a href="/category/%E8%BA%AB%E5%BF%83%E5%81%A5%E5%BA%B7.html"
-                      class="badge bg-primary">
+                      class="badge bg-primary me-2">
                       身心健康
                     </a>
                     
-                      <a href="/tag/%E5%BF%83%E7%90%86%E5%92%A8%E8%AF%A2.html" class="badge tag-link">
+                      <a href="/tag/%E5%BF%83%E7%90%86%E5%92%A8%E8%AF%A2.html" class="badge tag-link me-2 mb-1">
                         心理咨询
                       </a>
                       
-                      <a href="/tag/%E8%87%AA%E6%88%91%E6%8F%90%E5%8D%87.html" class="badge tag-link">
+                      <a href="/tag/%E8%87%AA%E6%88%91%E6%8F%90%E5%8D%87.html" class="badge tag-link me-2 mb-1">
                         自我提升
                       </a>
                       
-                      <a href="/tag/%E6%83%85%E7%BB%AA%E7%AE%A1%E7%90%86.html" class="badge tag-link">
+                      <a href="/tag/%E6%83%85%E7%BB%AA%E7%AE%A1%E7%90%86.html" class="badge tag-link me-2 mb-1">
                         情绪管理
                       </a>
                       
-                      <a href="/tag/%E4%BA%BA%E9%99%85%E5%85%B3%E7%B3%BB.html" class="badge tag-link">
+                      <a href="/tag/%E4%BA%BA%E9%99%85%E5%85%B3%E7%B3%BB.html" class="badge tag-link me-2 mb-1">
                         人际关系
                       </a>
                       
-                      <a href="/tag/%E8%81%8C%E4%B8%9A%E5%8F%91%E5%B1%95.html" class="badge tag-link">
+                      <a href="/tag/%E8%81%8C%E4%B8%9A%E5%8F%91%E5%B1%95.html" class="badge tag-link me-2 mb-1">
                         职业发展
                       </a>
                       
@@ -195,68 +262,69 @@
               </div>
               
               <div class="masonry-grid-item">
-                <div class="card shadow-sm">
+                <div class="card article-card shadow-sm">
                   <div class="card-body">
-                    <h5 class="card-title">
-                      <i class="bi bi-file-earmark-text"></i>
-                      <a href="../mdhtml/心理健康：从预防到干预的全周期守护指南.html" class="text-decoration-none">
+                    <h5 class="card-title article-title">
+                      <i class="bi bi-file-earmark-text me-2 text-primary"></i>
+                      <a href="../mdhtml/心理健康：从预防到干预的全周期守护指南.html" class="text-decoration-none text-dark">
                         心理健康：从预防到干预的全周期守护指南
                       </a>
                     </h5>
                     
-                      <p class="card-text">
+                      <p class="card-text text-muted mb-3">
                         全面解析心理健康的预防与干预策略。深入分析心理健康的重要性，提供从日常预防、自我调节到专业干预的完整体系，帮助读者建立心理韧性，应对生活挑战，守护心理健康。
                       </p>
                       
-                        
-                          <small class="text-muted">
-                            2026-02-27
-                          </small>
-                          
+                        <div class="article-meta">
+                            
+                                <i class="bi bi-clock me-1"></i>
+                                2026-02-27
+                                
+                        </div>
                   </div>
-                  <div class="card-footer text-muted">
+                  <div class="card-footer text-muted bg-white border-top">
                     <a href="/category/%E8%BA%AB%E5%BF%83%E5%81%A5%E5%BA%B7.html"
-                      class="badge bg-primary">
+                      class="badge bg-primary me-2">
                       身心健康
                     </a>
                     
-                      <a href="/tag/%E5%BF%83%E7%90%86%E5%81%A5%E5%BA%B7.html" class="badge tag-link">
+                      <a href="/tag/%E5%BF%83%E7%90%86%E5%81%A5%E5%BA%B7.html" class="badge tag-link me-2 mb-1">
                         心理健康
                       </a>
                       
-                      <a href="/tag/%E5%BF%83%E7%90%86%E9%A2%84%E9%98%B2.html" class="badge tag-link">
+                      <a href="/tag/%E5%BF%83%E7%90%86%E9%A2%84%E9%98%B2.html" class="badge tag-link me-2 mb-1">
                         心理预防
                       </a>
                       
-                      <a href="/tag/%E5%BF%83%E7%90%86%E5%B9%B2%E9%A2%84.html" class="badge tag-link">
+                      <a href="/tag/%E5%BF%83%E7%90%86%E5%B9%B2%E9%A2%84.html" class="badge tag-link me-2 mb-1">
                         心理干预
                       </a>
                       
-                      <a href="/tag/%E6%83%85%E7%BB%AA%E7%AE%A1%E7%90%86.html" class="badge tag-link">
+                      <a href="/tag/%E6%83%85%E7%BB%AA%E7%AE%A1%E7%90%86.html" class="badge tag-link me-2 mb-1">
                         情绪管理
                       </a>
                       
-                      <a href="/tag/%E5%BF%83%E7%90%86%E9%9F%A7%E6%80%A7.html" class="badge tag-link">
+                      <a href="/tag/%E5%BF%83%E7%90%86%E9%9F%A7%E6%80%A7.html" class="badge tag-link me-2 mb-1">
                         心理韧性
                       </a>
                       
-                      <a href="/tag/%E5%8E%8B%E5%8A%9B%E7%AE%A1%E7%90%86.html" class="badge tag-link">
+                      <a href="/tag/%E5%8E%8B%E5%8A%9B%E7%AE%A1%E7%90%86.html" class="badge tag-link me-2 mb-1">
                         压力管理
                       </a>
                       
-                      <a href="/tag/%E8%87%AA%E6%88%91%E5%85%B3%E6%80%80.html" class="badge tag-link">
+                      <a href="/tag/%E8%87%AA%E6%88%91%E5%85%B3%E6%80%80.html" class="badge tag-link me-2 mb-1">
                         自我关怀
                       </a>
                       
-                      <a href="/tag/%E5%BF%83%E7%90%86%E5%92%A8%E8%AF%A2.html" class="badge tag-link">
+                      <a href="/tag/%E5%BF%83%E7%90%86%E5%92%A8%E8%AF%A2.html" class="badge tag-link me-2 mb-1">
                         心理咨询
                       </a>
                       
-                      <a href="/tag/%E5%BF%83%E7%90%86%E5%81%A5%E5%BA%B7%E6%95%99%E8%82%B2.html" class="badge tag-link">
+                      <a href="/tag/%E5%BF%83%E7%90%86%E5%81%A5%E5%BA%B7%E6%95%99%E8%82%B2.html" class="badge tag-link me-2 mb-1">
                         心理健康教育
                       </a>
                       
-                      <a href="/tag/%E5%BF%83%E7%90%86%E5%8D%B1%E6%9C%BA.html" class="badge tag-link">
+                      <a href="/tag/%E5%BF%83%E7%90%86%E5%8D%B1%E6%9C%BA.html" class="badge tag-link me-2 mb-1">
                         心理危机
                       </a>
                       
@@ -265,48 +333,49 @@
               </div>
               
               <div class="masonry-grid-item">
-                <div class="card shadow-sm">
+                <div class="card article-card shadow-sm">
                   <div class="card-body">
-                    <h5 class="card-title">
-                      <i class="bi bi-file-earmark-text"></i>
-                      <a href="../mdhtml/心理咨询入门：如何选择合适的心理咨询师.html" class="text-decoration-none">
+                    <h5 class="card-title article-title">
+                      <i class="bi bi-file-earmark-text me-2 text-primary"></i>
+                      <a href="../mdhtml/心理咨询入门：如何选择合适的心理咨询师.html" class="text-decoration-none text-dark">
                         心理咨询入门：挑选契合的心理咨询师的方法
                       </a>
                     </h5>
                     
-                      <p class="card-text">
+                      <p class="card-text text-muted mb-3">
                         本文为初次涉足心理咨询领域的人提供挑选契合心理咨询师的实用建议，涵盖咨询师的资质认证、咨询风格与方法、沟通能力与人际关系、费用和时间安排以及探寻途径等方面，助力大家找到合适的咨询师开启心理健康之旅。
                       </p>
                       
-                        
-                          <small class="text-muted">
-                            2026-02-11
-                          </small>
-                          
+                        <div class="article-meta">
+                            
+                                <i class="bi bi-clock me-1"></i>
+                                2026-02-11
+                                
+                        </div>
                   </div>
-                  <div class="card-footer text-muted">
+                  <div class="card-footer text-muted bg-white border-top">
                     <a href="/category/%E8%BA%AB%E5%BF%83%E5%81%A5%E5%BA%B7.html"
-                      class="badge bg-primary">
+                      class="badge bg-primary me-2">
                       身心健康
                     </a>
                     
-                      <a href="/tag/%E5%BF%83%E7%90%86%E5%92%A8%E8%AF%A2.html" class="badge tag-link">
+                      <a href="/tag/%E5%BF%83%E7%90%86%E5%92%A8%E8%AF%A2.html" class="badge tag-link me-2 mb-1">
                         心理咨询
                       </a>
                       
-                      <a href="/tag/%E5%92%A8%E8%AF%A2%E5%B8%88%E9%80%89%E6%8B%A9.html" class="badge tag-link">
+                      <a href="/tag/%E5%92%A8%E8%AF%A2%E5%B8%88%E9%80%89%E6%8B%A9.html" class="badge tag-link me-2 mb-1">
                         咨询师选择
                       </a>
                       
-                      <a href="/tag/%E8%B5%84%E8%B4%A8%E8%AE%A4%E8%AF%81.html" class="badge tag-link">
+                      <a href="/tag/%E8%B5%84%E8%B4%A8%E8%AE%A4%E8%AF%81.html" class="badge tag-link me-2 mb-1">
                         资质认证
                       </a>
                       
-                      <a href="/tag/%E5%92%A8%E8%AF%A2%E9%A3%8E%E6%A0%BC.html" class="badge tag-link">
+                      <a href="/tag/%E5%92%A8%E8%AF%A2%E9%A3%8E%E6%A0%BC.html" class="badge tag-link me-2 mb-1">
                         咨询风格
                       </a>
                       
-                      <a href="/tag/%E8%B4%B9%E7%94%A8%E5%AE%89%E6%8E%92.html" class="badge tag-link">
+                      <a href="/tag/%E8%B4%B9%E7%94%A8%E5%AE%89%E6%8E%92.html" class="badge tag-link me-2 mb-1">
                         费用安排
                       </a>
                       
@@ -315,48 +384,49 @@
               </div>
               
               <div class="masonry-grid-item">
-                <div class="card shadow-sm">
+                <div class="card article-card shadow-sm">
                   <div class="card-body">
-                    <h5 class="card-title">
-                      <i class="bi bi-file-earmark-text"></i>
-                      <a href="../mdhtml/如何找到自己的人生方向？.html" class="text-decoration-none">
+                    <h5 class="card-title article-title">
+                      <i class="bi bi-file-earmark-text me-2 text-primary"></i>
+                      <a href="../mdhtml/如何找到自己的人生方向？.html" class="text-decoration-none text-dark">
                         如何找到自己的人生方向？
                       </a>
                     </h5>
                     
-                      <p class="card-text">
+                      <p class="card-text text-muted mb-3">
                         在不确定的时代，找到人生方向至关重要。本文提供方法来解构认知陷阱、建立自我认知，并通过实际行动校准方向。利用‘能量日记’、‘痛苦图谱’和‘可能性清单’进行探索，采用‘100天实验法’和每周‘可能性时间’促进行动。学会与不确定性共处，培养弹性方向感，享受探索过程，让生活中的迷雾转化为指引前路的星光。
                       </p>
                       
-                        
-                          <small class="text-muted">
-                            2026-02-11
-                          </small>
-                          
+                        <div class="article-meta">
+                            
+                                <i class="bi bi-clock me-1"></i>
+                                2026-02-11
+                                
+                        </div>
                   </div>
-                  <div class="card-footer text-muted">
+                  <div class="card-footer text-muted bg-white border-top">
                     <a href="/category/%E8%81%8C%E4%B8%9A%E5%8F%91%E5%B1%95.html"
-                      class="badge bg-primary">
+                      class="badge bg-primary me-2">
                       职业发展
                     </a>
                     
-                      <a href="/tag/%E4%BA%BA%E7%94%9F%E6%96%B9%E5%90%91.html" class="badge tag-link">
+                      <a href="/tag/%E4%BA%BA%E7%94%9F%E6%96%B9%E5%90%91.html" class="badge tag-link me-2 mb-1">
                         人生方向
                       </a>
                       
-                      <a href="/tag/%E8%87%AA%E6%88%91%E8%AE%A4%E7%9F%A5.html" class="badge tag-link">
+                      <a href="/tag/%E8%87%AA%E6%88%91%E8%AE%A4%E7%9F%A5.html" class="badge tag-link me-2 mb-1">
                         自我认知
                       </a>
                       
-                      <a href="/tag/%E4%B8%8D%E7%A1%AE%E5%AE%9A%E6%80%A7.html" class="badge tag-link">
+                      <a href="/tag/%E4%B8%8D%E7%A1%AE%E5%AE%9A%E6%80%A7.html" class="badge tag-link me-2 mb-1">
                         不确定性
                       </a>
                       
-                      <a href="/tag/%E8%A1%8C%E5%8A%A8%E6%8C%87%E5%8D%97.html" class="badge tag-link">
+                      <a href="/tag/%E8%A1%8C%E5%8A%A8%E6%8C%87%E5%8D%97.html" class="badge tag-link me-2 mb-1">
                         行动指南
                       </a>
                       
-                      <a href="/tag/%E5%BF%83%E7%90%86%E5%92%A8%E8%AF%A2.html" class="badge tag-link">
+                      <a href="/tag/%E5%BF%83%E7%90%86%E5%92%A8%E8%AF%A2.html" class="badge tag-link me-2 mb-1">
                         心理咨询
                       </a>
                       
@@ -366,8 +436,8 @@
               
           </div>
 
-          <div class="mt-4 text-center">
-            <a href="标签列表.html" class="btn btn-outline-primary"><i class="bi bi-arrow-left"></i> 返回标签列表</a>
+          <div class="mt-6 text-center">
+            <a href="标签列表.html" class="btn btn-outline-primary back-button"><i class="bi bi-arrow-left me-2"></i> 返回标签列表</a>
           </div>
         </div>
       </div>
@@ -391,7 +461,7 @@
             itemSelector: '.masonry-grid-item',
             columnWidth: '.masonry-grid-item',
             percentPosition: true,
-            gutter: 10 // 可选，添加卡片间的间距
+            gutter: 15 // 增加间距，提升视觉效果
           });
         });
       </script>

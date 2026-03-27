@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
 
 <head>
     <meta charset="UTF-8">
@@ -9,7 +9,7 @@
     <meta name="description" content="无人自助站的【环保可持续】分类列表页面，汇集了关于【环保可持续】分类的文章和资讯，方便您快速找到感兴趣的内容。">
     <meta name="keywords" content="无人自助站,环保可持续">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>分类列表</title>
+    <title>环保可持续分类 - 无人自助站</title>
     <link rel="icon" href="../logo.svg" type="image/svg+xml">
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/footer.css">
@@ -27,6 +27,62 @@
     <!-- 引入Masonry -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/masonry/4.2.2/masonry.pkgd.min.js"></script>
 
+    <style>
+        .category-header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 2rem;
+            border-radius: 8px;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        .category-title {
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+        .article-card {
+            transition: all 0.3s ease;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        .article-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+        }
+        .article-title {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            transition: color 0.3s ease;
+        }
+        .article-title:hover {
+            color: #0d6efd;
+        }
+        .article-meta {
+            font-size: 0.85rem;
+            color: #6c757d;
+        }
+        .tag-link {
+            background-color: #e9ecef;
+            color: #495057;
+            transition: all 0.2s ease;
+        }
+        .tag-link:hover {
+            background-color: #dee2e6;
+            color: #212529;
+        }
+        .back-button {
+            transition: all 0.3s ease;
+        }
+        .back-button:hover {
+            transform: translateX(-3px);
+        }
+        .article-count {
+            font-size: 0.9rem;
+            opacity: 0.9;
+        }
+    </style>
 </head>
 
 <body>
@@ -80,7 +136,7 @@
         <main class="container-fluid mt-4">
             <div class="col-lg-8 col-md-12 mx-auto">
                 <!-- 面包屑导航 -->
-                <nav aria-label="breadcrumb">
+                <nav aria-label="breadcrumb" class="mb-4">
                     <ol class="breadcrumb">
                         <li class="breadcrumb-item"><a href="/html/index.html">首页</a></li>
                         <li class="breadcrumb-item"><a href="分类列表.html">分类列表</a></li>
@@ -89,61 +145,71 @@
                         </li>
                     </ol>
                 </nav>
-                <h1 style="font-size: 1.5em; margin: 0.5em 0;">
-                    环保可持续分类的文章和资讯
-                </h1>
+                
+                <!-- 分类头部 -->
+                <div class="category-header">
+                    <h1 class="category-title">
+                        <i class="bi bi-folder2 me-2"></i>
+                        环保可持续
+                    </h1>
+                    <p class="article-count">
+                        共 15 篇文章
+                    </p>
+                </div>
+                
                 <!-- 分类内容卡片 使用 Masonry 布局 -->
                 <div class="masonry-grid">
                     
                         <div class="masonry-grid-item">
-                            <div class="card shadow-sm">
+                            <div class="card article-card shadow-sm">
                                 <div class="card-body">
-                                    <h5 class="card-title">
-                                        <i class="bi bi-file-earmark-text"></i>
+                                    <h5 class="card-title article-title">
+                                        <i class="bi bi-file-earmark-text me-2 text-primary"></i>
                                         <a href="../mdhtml/如何应对气候变化和环保生活.html"
-                                            class="text-decoration-none">
+                                            class="text-decoration-none text-dark">
                                             如何应对气候变化和环保生活
                                         </a>
                                     </h5>
                                     
-                                        <p class="card-text">
+                                        <p class="card-text text-muted mb-3">
                                             探讨如何应对气候变化和实践环保生活，提供实用的环保策略和方法，帮助个人为环境保护做出贡献。
                                         </p>
                                         
+                                        <div class="article-meta">
                                             
-                                                <small class="text-muted">
-                                                    2026-02-27
-                                                </small>
+                                                <i class="bi bi-clock me-1"></i>
+                                                2026-02-27
                                                 
+                                        </div>
                                 </div>
-                                <div class="card-footer text-muted">
+                                <div class="card-footer text-muted bg-white border-top">
                                     <a href="/category/%E7%8E%AF%E4%BF%9D%E5%8F%AF%E6%8C%81%E7%BB%AD.html"
-                                        class="badge bg-primary">
+                                        class="badge bg-primary me-2">
                                         环保可持续
                                     </a>
                                     
                                         <a href="/tag/%E6%B0%94%E5%80%99%E5%8F%98%E5%8C%96.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             气候变化
                                         </a>
                                         
                                         <a href="/tag/%E7%8E%AF%E4%BF%9D%E7%94%9F%E6%B4%BB.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             环保生活
                                         </a>
                                         
                                         <a href="/tag/%E5%8F%AF%E6%8C%81%E7%BB%AD%E5%8F%91%E5%B1%95.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             可持续发展
                                         </a>
                                         
                                         <a href="/tag/%E4%BD%8E%E7%A2%B3%E7%94%9F%E6%B4%BB.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             低碳生活
                                         </a>
                                         
                                         <a href="/tag/%E7%8E%AF%E5%A2%83%E4%BF%9D%E6%8A%A4.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             环境保护
                                         </a>
                                         
@@ -152,54 +218,55 @@
                         </div>
                         
                         <div class="masonry-grid-item">
-                            <div class="card shadow-sm">
+                            <div class="card article-card shadow-sm">
                                 <div class="card-body">
-                                    <h5 class="card-title">
-                                        <i class="bi bi-file-earmark-text"></i>
+                                    <h5 class="card-title article-title">
+                                        <i class="bi bi-file-earmark-text me-2 text-primary"></i>
                                         <a href="../mdhtml/如何减少家庭能源消耗.html"
-                                            class="text-decoration-none">
+                                            class="text-decoration-none text-dark">
                                             如何减少家庭能源消耗
                                         </a>
                                     </h5>
                                     
-                                        <p class="card-text">
+                                        <p class="card-text text-muted mb-3">
                                             针对家庭能源消耗的问题，提供详细的节能方法和技巧，帮助家庭减少能源消耗，降低能源费用，同时为环境保护做出贡献。
                                         </p>
                                         
+                                        <div class="article-meta">
                                             
-                                                <small class="text-muted">
-                                                    2026-02-27
-                                                </small>
+                                                <i class="bi bi-clock me-1"></i>
+                                                2026-02-27
                                                 
+                                        </div>
                                 </div>
-                                <div class="card-footer text-muted">
+                                <div class="card-footer text-muted bg-white border-top">
                                     <a href="/category/%E7%8E%AF%E4%BF%9D%E5%8F%AF%E6%8C%81%E7%BB%AD.html"
-                                        class="badge bg-primary">
+                                        class="badge bg-primary me-2">
                                         环保可持续
                                     </a>
                                     
                                         <a href="/tag/%E8%83%BD%E6%BA%90%E6%B6%88%E8%80%97.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             能源消耗
                                         </a>
                                         
                                         <a href="/tag/%E5%AE%B6%E5%BA%AD%E8%8A%82%E8%83%BD.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             家庭节能
                                         </a>
                                         
                                         <a href="/tag/%E7%8E%AF%E4%BF%9D%E7%94%9F%E6%B4%BB.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             环保生活
                                         </a>
                                         
                                         <a href="/tag/%E7%9C%81%E9%92%B1%E6%8A%80%E5%B7%A7.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             省钱技巧
                                         </a>
                                         
                                         <a href="/tag/%E5%8F%AF%E6%8C%81%E7%BB%AD%E5%8F%91%E5%B1%95.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             可持续发展
                                         </a>
                                         
@@ -208,54 +275,55 @@
                         </div>
                         
                         <div class="masonry-grid-item">
-                            <div class="card shadow-sm">
+                            <div class="card article-card shadow-sm">
                                 <div class="card-body">
-                                    <h5 class="card-title">
-                                        <i class="bi bi-file-earmark-text"></i>
+                                    <h5 class="card-title article-title">
+                                        <i class="bi bi-file-earmark-text me-2 text-primary"></i>
                                         <a href="../mdhtml/家庭垃圾分类实用指南.html"
-                                            class="text-decoration-none">
+                                            class="text-decoration-none text-dark">
                                             家庭垃圾分类实用指南
                                         </a>
                                     </h5>
                                     
-                                        <p class="card-text">
+                                        <p class="card-text text-muted mb-3">
                                             针对家庭垃圾分类的需求，提供实用的分类指南和操作方法，帮助你正确进行垃圾分类，为环境保护贡献一份力量。
                                         </p>
                                         
+                                        <div class="article-meta">
                                             
-                                                <small class="text-muted">
-                                                    2026-02-27
-                                                </small>
+                                                <i class="bi bi-clock me-1"></i>
+                                                2026-02-27
                                                 
+                                        </div>
                                 </div>
-                                <div class="card-footer text-muted">
+                                <div class="card-footer text-muted bg-white border-top">
                                     <a href="/category/%E7%8E%AF%E4%BF%9D%E5%8F%AF%E6%8C%81%E7%BB%AD.html"
-                                        class="badge bg-primary">
+                                        class="badge bg-primary me-2">
                                         环保可持续
                                     </a>
                                     
                                         <a href="/tag/%E5%9E%83%E5%9C%BE%E5%88%86%E7%B1%BB.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             垃圾分类
                                         </a>
                                         
                                         <a href="/tag/%E7%8E%AF%E4%BF%9D%E7%94%9F%E6%B4%BB.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             环保生活
                                         </a>
                                         
                                         <a href="/tag/%E8%B5%84%E6%BA%90%E5%9B%9E%E6%94%B6.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             资源回收
                                         </a>
                                         
                                         <a href="/tag/%E5%AE%B6%E5%BA%AD%E7%8E%AF%E4%BF%9D.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             家庭环保
                                         </a>
                                         
                                         <a href="/tag/%E5%8F%AF%E6%8C%81%E7%BB%AD%E5%8F%91%E5%B1%95.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             可持续发展
                                         </a>
                                         
@@ -264,54 +332,55 @@
                         </div>
                         
                         <div class="masonry-grid-item">
-                            <div class="card shadow-sm">
+                            <div class="card article-card shadow-sm">
                                 <div class="card-body">
-                                    <h5 class="card-title">
-                                        <i class="bi bi-file-earmark-text"></i>
+                                    <h5 class="card-title article-title">
+                                        <i class="bi bi-file-earmark-text me-2 text-primary"></i>
                                         <a href="../mdhtml/家庭节能和环保实用指南.html"
-                                            class="text-decoration-none">
+                                            class="text-decoration-none text-dark">
                                             家庭节能和环保实用指南
                                         </a>
                                     </h5>
                                     
-                                        <p class="card-text">
+                                        <p class="card-text text-muted mb-3">
                                             本指南详细介绍家庭节能和环保的实用方法，帮助您减少能源消耗，降低碳排放，为环境保护贡献一份力量。
                                         </p>
                                         
+                                        <div class="article-meta">
                                             
-                                                <small class="text-muted">
-                                                    2026-02-24
-                                                </small>
+                                                <i class="bi bi-clock me-1"></i>
+                                                2026-02-24
                                                 
+                                        </div>
                                 </div>
-                                <div class="card-footer text-muted">
+                                <div class="card-footer text-muted bg-white border-top">
                                     <a href="/category/%E7%8E%AF%E4%BF%9D%E5%8F%AF%E6%8C%81%E7%BB%AD.html"
-                                        class="badge bg-primary">
+                                        class="badge bg-primary me-2">
                                         环保可持续
                                     </a>
                                     
                                         <a href="/tag/%E5%AE%B6%E5%BA%AD%E8%8A%82%E8%83%BD.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             家庭节能
                                         </a>
                                         
                                         <a href="/tag/%E7%8E%AF%E4%BF%9D%E7%94%9F%E6%B4%BB.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             环保生活
                                         </a>
                                         
                                         <a href="/tag/%E5%8F%AF%E6%8C%81%E7%BB%AD%E5%8F%91%E5%B1%95.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             可持续发展
                                         </a>
                                         
                                         <a href="/tag/%E8%8A%82%E8%83%BD%E5%87%8F%E6%8E%92.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             节能减排
                                         </a>
                                         
                                         <a href="/tag/%E7%94%9F%E6%B4%BB%E6%8A%80%E5%B7%A7.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             生活技巧
                                         </a>
                                         
@@ -320,84 +389,85 @@
                         </div>
                         
                         <div class="masonry-grid-item">
-                            <div class="card shadow-sm">
+                            <div class="card article-card shadow-sm">
                                 <div class="card-body">
-                                    <h5 class="card-title">
-                                        <i class="bi bi-file-earmark-text"></i>
+                                    <h5 class="card-title article-title">
+                                        <i class="bi bi-file-earmark-text me-2 text-primary"></i>
                                         <a href="../mdhtml/环保可持续：让生活更美好的绿色选择.html"
-                                            class="text-decoration-none">
+                                            class="text-decoration-none text-dark">
                                             环保可持续：让生活更美好的绿色选择
                                         </a>
                                     </h5>
                                     
-                                        <p class="card-text">
+                                        <p class="card-text text-muted mb-3">
                                             全面梳理环保可持续的核心概念与实践方法，从个人日常行动到全球系统变革的完整路径。深入分析一次性塑料污染、食物浪费和碳排放等环境挑战，提出零浪费生活、低碳出行和可持续消费等具体解决方案，探讨企业和政府在推动可持续发展中的角色，为读者构建从理念到行动的全方位指南。
                                         </p>
                                         
+                                        <div class="article-meta">
                                             
-                                                <small class="text-muted">
-                                                    2026-02-24
-                                                </small>
+                                                <i class="bi bi-clock me-1"></i>
+                                                2026-02-24
                                                 
+                                        </div>
                                 </div>
-                                <div class="card-footer text-muted">
+                                <div class="card-footer text-muted bg-white border-top">
                                     <a href="/category/%E7%8E%AF%E4%BF%9D%E5%8F%AF%E6%8C%81%E7%BB%AD.html"
-                                        class="badge bg-primary">
+                                        class="badge bg-primary me-2">
                                         环保可持续
                                     </a>
                                     
                                         <a href="/tag/%E7%8E%AF%E4%BF%9D%E5%8F%AF%E6%8C%81%E7%BB%AD.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             环保可持续
                                         </a>
                                         
                                         <a href="/tag/%E9%9B%B6%E6%B5%AA%E8%B4%B9%E7%94%9F%E6%B4%BB.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             零浪费生活
                                         </a>
                                         
                                         <a href="/tag/%E4%BD%8E%E7%A2%B3%E5%87%BA%E8%A1%8C.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             低碳出行
                                         </a>
                                         
                                         <a href="/tag/%E5%BE%AA%E7%8E%AF%E7%BB%8F%E6%B5%8E.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             循环经济
                                         </a>
                                         
                                         <a href="/tag/%E5%8F%AF%E6%8C%81%E7%BB%AD%E6%B6%88%E8%B4%B9.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             可持续消费
                                         </a>
                                         
                                         <a href="/tag/%E7%94%9F%E6%80%81%E4%BF%9D%E6%8A%A4.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             生态保护
                                         </a>
                                         
                                         <a href="/tag/%E6%B0%94%E5%80%99%E5%8F%98%E5%8C%96.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             气候变化
                                         </a>
                                         
                                         <a href="/tag/%E7%BB%BF%E8%89%B2%E7%94%9F%E6%B4%BB.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             绿色生活
                                         </a>
                                         
                                         <a href="/tag/%E7%8E%AF%E4%BF%9D%E6%84%8F%E8%AF%86.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             环保意识
                                         </a>
                                         
                                         <a href="/tag/%E7%8E%AF%E5%A2%83%E8%B4%A3%E4%BB%BB.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             环境责任
                                         </a>
                                         
                                         <a href="/tag/%E5%8F%AF%E6%8C%81%E7%BB%AD%E5%8F%91%E5%B1%95.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             可持续发展
                                         </a>
                                         
@@ -406,54 +476,55 @@
                         </div>
                         
                         <div class="masonry-grid-item">
-                            <div class="card shadow-sm">
+                            <div class="card article-card shadow-sm">
                                 <div class="card-body">
-                                    <h5 class="card-title">
-                                        <i class="bi bi-file-earmark-text"></i>
+                                    <h5 class="card-title article-title">
+                                        <i class="bi bi-file-earmark-text me-2 text-primary"></i>
                                         <a href="../mdhtml/可持续发展：构建人类与自然的和谐未来.html"
-                                            class="text-decoration-none">
+                                            class="text-decoration-none text-dark">
                                             可持续发展：构建人类与自然的和谐未来
                                         </a>
                                     </h5>
                                     
-                                        <p class="card-text">
+                                        <p class="card-text text-muted mb-3">
                                             深入探讨可持续发展的概念、重要性、实践案例以及它将如何引领人类走向与自然和谐共生的未来，实现经济、社会与环境的平衡发展。
                                         </p>
                                         
+                                        <div class="article-meta">
                                             
-                                                <small class="text-muted">
-                                                    2026-02-24
-                                                </small>
+                                                <i class="bi bi-clock me-1"></i>
+                                                2026-02-24
                                                 
+                                        </div>
                                 </div>
-                                <div class="card-footer text-muted">
+                                <div class="card-footer text-muted bg-white border-top">
                                     <a href="/category/%E7%8E%AF%E4%BF%9D%E5%8F%AF%E6%8C%81%E7%BB%AD.html"
-                                        class="badge bg-primary">
+                                        class="badge bg-primary me-2">
                                         环保可持续
                                     </a>
                                     
                                         <a href="/tag/%E5%8F%AF%E6%8C%81%E7%BB%AD%E5%8F%91%E5%B1%95.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             可持续发展
                                         </a>
                                         
                                         <a href="/tag/%E7%8E%AF%E5%A2%83%E4%BF%9D%E6%8A%A4.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             环境保护
                                         </a>
                                         
                                         <a href="/tag/%E5%BE%AA%E7%8E%AF%E7%BB%8F%E6%B5%8E.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             循环经济
                                         </a>
                                         
                                         <a href="/tag/%E7%BB%BF%E8%89%B2%E7%94%9F%E6%B4%BB.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             绿色生活
                                         </a>
                                         
                                         <a href="/tag/%E7%8E%AF%E4%BF%9D%E5%8F%AF%E6%8C%81%E7%BB%AD.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             环保可持续
                                         </a>
                                         
@@ -462,79 +533,80 @@
                         </div>
                         
                         <div class="masonry-grid-item">
-                            <div class="card shadow-sm">
+                            <div class="card article-card shadow-sm">
                                 <div class="card-body">
-                                    <h5 class="card-title">
-                                        <i class="bi bi-file-earmark-text"></i>
+                                    <h5 class="card-title article-title">
+                                        <i class="bi bi-file-earmark-text me-2 text-primary"></i>
                                         <a href="../mdhtml/可持续时尚：从快时尚到循环经济的绿色转型.html"
-                                            class="text-decoration-none">
+                                            class="text-decoration-none text-dark">
                                             可持续时尚：从快时尚到循环经济的绿色转型
                                         </a>
                                     </h5>
                                     
-                                        <p class="card-text">
+                                        <p class="card-text text-muted mb-3">
                                             全面解析可持续时尚的核心概念与实践方法。深入分析快时尚的环境危害，提供从服装选择、消费习惯到 wardrobe 管理的具体策略，帮助读者构建环保时尚的生活方式，在追求美的同时减少环境足迹，推动时尚产业向循环经济转型。
                                         </p>
                                         
+                                        <div class="article-meta">
                                             
-                                                <small class="text-muted">
-                                                    2026-02-24
-                                                </small>
+                                                <i class="bi bi-clock me-1"></i>
+                                                2026-02-24
                                                 
+                                        </div>
                                 </div>
-                                <div class="card-footer text-muted">
+                                <div class="card-footer text-muted bg-white border-top">
                                     <a href="/category/%E7%8E%AF%E4%BF%9D%E5%8F%AF%E6%8C%81%E7%BB%AD.html"
-                                        class="badge bg-primary">
+                                        class="badge bg-primary me-2">
                                         环保可持续
                                     </a>
                                     
                                         <a href="/tag/%E5%8F%AF%E6%8C%81%E7%BB%AD%E6%97%B6%E5%B0%9A.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             可持续时尚
                                         </a>
                                         
                                         <a href="/tag/%E7%8E%AF%E4%BF%9D%E6%B6%88%E8%B4%B9.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             环保消费
                                         </a>
                                         
                                         <a href="/tag/%E5%BE%AA%E7%8E%AF%E7%BB%8F%E6%B5%8E.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             循环经济
                                         </a>
                                         
                                         <a href="/tag/%E5%BF%AB%E6%97%B6%E5%B0%9A.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             快时尚
                                         </a>
                                         
                                         <a href="/tag/%E6%97%B6%E5%B0%9A%E4%BA%A7%E4%B8%9A.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             时尚产业
                                         </a>
                                         
                                         <a href="/tag/%E7%BB%BF%E8%89%B2%E7%94%9F%E6%B4%BB.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             绿色生活
                                         </a>
                                         
                                         <a href="/tag/%E5%8F%AF%E6%8C%81%E7%BB%AD%E5%8F%91%E5%B1%95.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             可持续发展
                                         </a>
                                         
                                         <a href="/tag/%E6%97%B6%E5%B0%9A%E9%80%89%E6%8B%A9.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             时尚选择
                                         </a>
                                         
                                         <a href="/tag/%E7%8E%AF%E4%BF%9D%E6%84%8F%E8%AF%86.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             环保意识
                                         </a>
                                         
                                         <a href="/tag/%E7%A4%BE%E4%BC%9A%E8%B4%A3%E4%BB%BB.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             社会责任
                                         </a>
                                         
@@ -543,54 +615,55 @@
                         </div>
                         
                         <div class="masonry-grid-item">
-                            <div class="card shadow-sm">
+                            <div class="card article-card shadow-sm">
                                 <div class="card-body">
-                                    <h5 class="card-title">
-                                        <i class="bi bi-file-earmark-text"></i>
+                                    <h5 class="card-title article-title">
+                                        <i class="bi bi-file-earmark-text me-2 text-primary"></i>
                                         <a href="../mdhtml/全球变暖还能逆转吗？科学分析与应对策略.html"
-                                            class="text-decoration-none">
+                                            class="text-decoration-none text-dark">
                                             全球变暖还能逆转吗？科学分析与应对策略
                                         </a>
                                     </h5>
                                     
-                                        <p class="card-text">
+                                        <p class="card-text text-muted mb-3">
                                             深入分析全球变暖的现状、原因与影响，探讨其是否可以逆转，以及人类应该采取的应对策略。
                                         </p>
                                         
+                                        <div class="article-meta">
                                             
-                                                <small class="text-muted">
-                                                    2026-02-24
-                                                </small>
+                                                <i class="bi bi-clock me-1"></i>
+                                                2026-02-24
                                                 
+                                        </div>
                                 </div>
-                                <div class="card-footer text-muted">
+                                <div class="card-footer text-muted bg-white border-top">
                                     <a href="/category/%E7%8E%AF%E4%BF%9D%E5%8F%AF%E6%8C%81%E7%BB%AD.html"
-                                        class="badge bg-primary">
+                                        class="badge bg-primary me-2">
                                         环保可持续
                                     </a>
                                     
                                         <a href="/tag/%E5%85%A8%E7%90%83%E5%8F%98%E6%9A%96.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             全球变暖
                                         </a>
                                         
                                         <a href="/tag/%E6%B0%94%E5%80%99%E5%8F%98%E5%8C%96.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             气候变化
                                         </a>
                                         
                                         <a href="/tag/%E5%8F%AF%E6%8C%81%E7%BB%AD%E5%8F%91%E5%B1%95.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             可持续发展
                                         </a>
                                         
                                         <a href="/tag/%E7%8E%AF%E4%BF%9D%E6%94%BF%E7%AD%96.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             环保政策
                                         </a>
                                         
                                         <a href="/tag/%E7%A2%B3%E4%B8%AD%E5%92%8C.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             碳中和
                                         </a>
                                         
@@ -599,54 +672,55 @@
                         </div>
                         
                         <div class="masonry-grid-item">
-                            <div class="card shadow-sm">
+                            <div class="card article-card shadow-sm">
                                 <div class="card-body">
-                                    <h5 class="card-title">
-                                        <i class="bi bi-file-earmark-text"></i>
+                                    <h5 class="card-title article-title">
+                                        <i class="bi bi-file-earmark-text me-2 text-primary"></i>
                                         <a href="../mdhtml/碳中和社区实践指南：从个人到邻里的环保协同.html"
-                                            class="text-decoration-none">
+                                            class="text-decoration-none text-dark">
                                             碳中和社区实践指南：从个人到邻里的环保协同
                                         </a>
                                     </h5>
                                     
-                                        <p class="card-text">
+                                        <p class="card-text text-muted mb-3">
                                             探讨如何从个人行动延伸至社区层面，构建碳中和社区的实践指南，包括社区协作模式、邻里环保活动组织、共享资源利用等方面的具体策略。
                                         </p>
                                         
+                                        <div class="article-meta">
                                             
-                                                <small class="text-muted">
-                                                    2026-02-11
-                                                </small>
+                                                <i class="bi bi-clock me-1"></i>
+                                                2026-02-11
                                                 
+                                        </div>
                                 </div>
-                                <div class="card-footer text-muted">
+                                <div class="card-footer text-muted bg-white border-top">
                                     <a href="/category/%E7%8E%AF%E4%BF%9D%E5%8F%AF%E6%8C%81%E7%BB%AD.html"
-                                        class="badge bg-primary">
+                                        class="badge bg-primary me-2">
                                         环保可持续
                                     </a>
                                     
                                         <a href="/tag/%E7%A2%B3%E4%B8%AD%E5%92%8C.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             碳中和
                                         </a>
                                         
                                         <a href="/tag/%E7%A4%BE%E5%8C%BA%E5%AE%9E%E8%B7%B5.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             社区实践
                                         </a>
                                         
                                         <a href="/tag/%E7%8E%AF%E4%BF%9D%E5%8D%8F%E5%90%8C.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             环保协同
                                         </a>
                                         
                                         <a href="/tag/%E9%82%BB%E9%87%8C%E5%85%B3%E7%B3%BB.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             邻里关系
                                         </a>
                                         
                                         <a href="/tag/%E5%8F%AF%E6%8C%81%E7%BB%AD%E5%8F%91%E5%B1%95.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             可持续发展
                                         </a>
                                         
@@ -655,54 +729,55 @@
                         </div>
                         
                         <div class="masonry-grid-item">
-                            <div class="card shadow-sm">
+                            <div class="card article-card shadow-sm">
                                 <div class="card-body">
-                                    <h5 class="card-title">
-                                        <i class="bi bi-file-earmark-text"></i>
+                                    <h5 class="card-title article-title">
+                                        <i class="bi bi-file-earmark-text me-2 text-primary"></i>
                                         <a href="../mdhtml/气候变化与植树造林：守护地球的绿色希望.html"
-                                            class="text-decoration-none">
+                                            class="text-decoration-none text-dark">
                                             气候变化与植树造林：守护地球的绿色希望
                                         </a>
                                     </h5>
                                     
-                                        <p class="card-text">
+                                        <p class="card-text text-muted mb-3">
                                             阐述气候变化带来的严峻挑战，强调植树造林在应对气候变化中的关键作用，包括生态意义和社会发展方面的好处，呼吁个人、企业和政府共同参与植树造林，守护地球。
                                         </p>
                                         
+                                        <div class="article-meta">
                                             
-                                                <small class="text-muted">
-                                                    2026-02-11
-                                                </small>
+                                                <i class="bi bi-clock me-1"></i>
+                                                2026-02-11
                                                 
+                                        </div>
                                 </div>
-                                <div class="card-footer text-muted">
+                                <div class="card-footer text-muted bg-white border-top">
                                     <a href="/category/%E7%8E%AF%E4%BF%9D%E5%8F%AF%E6%8C%81%E7%BB%AD.html"
-                                        class="badge bg-primary">
+                                        class="badge bg-primary me-2">
                                         环保可持续
                                     </a>
                                     
                                         <a href="/tag/%E6%B0%94%E5%80%99%E5%8F%98%E5%8C%96.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             气候变化
                                         </a>
                                         
                                         <a href="/tag/%E6%A4%8D%E6%A0%91%E9%80%A0%E6%9E%97.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             植树造林
                                         </a>
                                         
                                         <a href="/tag/%E7%94%9F%E6%80%81%E4%BF%9D%E6%8A%A4.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             生态保护
                                         </a>
                                         
                                         <a href="/tag/%E7%A4%BE%E4%BC%9A%E5%8F%91%E5%B1%95.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             社会发展
                                         </a>
                                         
                                         <a href="/tag/%E7%8E%AF%E4%BF%9D%E8%A1%8C%E5%8A%A8.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             环保行动
                                         </a>
                                         
@@ -711,54 +786,55 @@
                         </div>
                         
                         <div class="masonry-grid-item">
-                            <div class="card shadow-sm">
+                            <div class="card article-card shadow-sm">
                                 <div class="card-body">
-                                    <h5 class="card-title">
-                                        <i class="bi bi-file-earmark-text"></i>
+                                    <h5 class="card-title article-title">
+                                        <i class="bi bi-file-earmark-text me-2 text-primary"></i>
                                         <a href="../mdhtml/植树的意义：为地球增添生机与希望.html"
-                                            class="text-decoration-none">
+                                            class="text-decoration-none text-dark">
                                             植树的意义：为地球增添生机与希望
                                         </a>
                                     </h5>
                                     
-                                        <p class="card-text">
+                                        <p class="card-text text-muted mb-3">
                                             阐述植树造林在改善生态环境、保护生物多样性、促进经济发展以及滋养个人心灵等多方面的重要意义，呼吁人们积极参与植树行动，为地球增添生机与希望。
                                         </p>
                                         
+                                        <div class="article-meta">
                                             
-                                                <small class="text-muted">
-                                                    2026-02-11
-                                                </small>
+                                                <i class="bi bi-clock me-1"></i>
+                                                2026-02-11
                                                 
+                                        </div>
                                 </div>
-                                <div class="card-footer text-muted">
+                                <div class="card-footer text-muted bg-white border-top">
                                     <a href="/category/%E7%8E%AF%E4%BF%9D%E5%8F%AF%E6%8C%81%E7%BB%AD.html"
-                                        class="badge bg-primary">
+                                        class="badge bg-primary me-2">
                                         环保可持续
                                     </a>
                                     
                                         <a href="/tag/%E6%A4%8D%E6%A0%91%E9%80%A0%E6%9E%97.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             植树造林
                                         </a>
                                         
                                         <a href="/tag/%E7%94%9F%E6%80%81%E7%8E%AF%E5%A2%83.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             生态环境
                                         </a>
                                         
                                         <a href="/tag/%E7%94%9F%E7%89%A9%E5%A4%9A%E6%A0%B7%E6%80%A7.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             生物多样性
                                         </a>
                                         
                                         <a href="/tag/%E7%BB%8F%E6%B5%8E%E5%8F%91%E5%B1%95.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             经济发展
                                         </a>
                                         
                                         <a href="/tag/%E5%BF%83%E7%81%B5%E6%BB%8B%E5%85%BB.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             心灵滋养
                                         </a>
                                         
@@ -767,54 +843,55 @@
                         </div>
                         
                         <div class="masonry-grid-item">
-                            <div class="card shadow-sm">
+                            <div class="card article-card shadow-sm">
                                 <div class="card-body">
-                                    <h5 class="card-title">
-                                        <i class="bi bi-file-earmark-text"></i>
+                                    <h5 class="card-title article-title">
+                                        <i class="bi bi-file-earmark-text me-2 text-primary"></i>
                                         <a href="../mdhtml/城市微生态系统建设：从社区到家庭的可持续实践.html"
-                                            class="text-decoration-none">
+                                            class="text-decoration-none text-dark">
                                             城市微生态系统建设：从社区到家庭的可持续实践
                                         </a>
                                     </h5>
                                     
-                                        <p class="card-text">
+                                        <p class="card-text text-muted mb-3">
                                             探讨如何在城市环境中构建从社区到家庭的微生态系统，通过系统性的规划和实践，实现城市的可持续发展目标。
                                         </p>
                                         
+                                        <div class="article-meta">
                                             
-                                                <small class="text-muted">
-                                                    2026-02-11
-                                                </small>
+                                                <i class="bi bi-clock me-1"></i>
+                                                2026-02-11
                                                 
+                                        </div>
                                 </div>
-                                <div class="card-footer text-muted">
+                                <div class="card-footer text-muted bg-white border-top">
                                     <a href="/category/%E7%8E%AF%E4%BF%9D%E5%8F%AF%E6%8C%81%E7%BB%AD.html"
-                                        class="badge bg-primary">
+                                        class="badge bg-primary me-2">
                                         环保可持续
                                     </a>
                                     
                                         <a href="/tag/%E5%BE%AE%E7%94%9F%E6%80%81%E7%B3%BB%E7%BB%9F.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             微生态系统
                                         </a>
                                         
                                         <a href="/tag/%E5%8F%AF%E6%8C%81%E7%BB%AD%E5%8F%91%E5%B1%95.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             可持续发展
                                         </a>
                                         
                                         <a href="/tag/%E7%A4%BE%E5%8C%BA%E5%BB%BA%E8%AE%BE.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             社区建设
                                         </a>
                                         
                                         <a href="/tag/%E5%AE%B6%E5%BA%AD%E5%AE%9E%E8%B7%B5.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             家庭实践
                                         </a>
                                         
                                         <a href="/tag/%E5%9F%8E%E5%B8%82%E7%8E%AF%E4%BF%9D.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             城市环保
                                         </a>
                                         
@@ -823,54 +900,55 @@
                         </div>
                         
                         <div class="masonry-grid-item">
-                            <div class="card shadow-sm">
+                            <div class="card article-card shadow-sm">
                                 <div class="card-body">
-                                    <h5 class="card-title">
-                                        <i class="bi bi-file-earmark-text"></i>
+                                    <h5 class="card-title article-title">
+                                        <i class="bi bi-file-earmark-text me-2 text-primary"></i>
                                         <a href="../mdhtml/可持续消费：从认知到实践的转变路径.html"
-                                            class="text-decoration-none">
+                                            class="text-decoration-none text-dark">
                                             可持续消费：从认知到实践的转变路径
                                         </a>
                                     </h5>
                                     
-                                        <p class="card-text">
+                                        <p class="card-text text-muted mb-3">
                                             探讨如何实现从传统消费模式向可持续消费模式的转变，通过认知升级、行为改变和系统支持，构建可持续的消费生态。
                                         </p>
                                         
+                                        <div class="article-meta">
                                             
-                                                <small class="text-muted">
-                                                    2026-02-11
-                                                </small>
+                                                <i class="bi bi-clock me-1"></i>
+                                                2026-02-11
                                                 
+                                        </div>
                                 </div>
-                                <div class="card-footer text-muted">
+                                <div class="card-footer text-muted bg-white border-top">
                                     <a href="/category/%E7%8E%AF%E4%BF%9D%E5%8F%AF%E6%8C%81%E7%BB%AD.html"
-                                        class="badge bg-primary">
+                                        class="badge bg-primary me-2">
                                         环保可持续
                                     </a>
                                     
                                         <a href="/tag/%E5%8F%AF%E6%8C%81%E7%BB%AD%E6%B6%88%E8%B4%B9.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             可持续消费
                                         </a>
                                         
                                         <a href="/tag/%E7%BB%BF%E8%89%B2%E7%94%9F%E6%B4%BB.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             绿色生活
                                         </a>
                                         
                                         <a href="/tag/%E6%B6%88%E8%B4%B9%E8%A1%8C%E4%B8%BA.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             消费行为
                                         </a>
                                         
                                         <a href="/tag/%E7%8E%AF%E4%BF%9D%E6%84%8F%E8%AF%86.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             环保意识
                                         </a>
                                         
                                         <a href="/tag/%E5%BE%AA%E7%8E%AF%E7%BB%8F%E6%B5%8E.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             循环经济
                                         </a>
                                         
@@ -879,54 +957,55 @@
                         </div>
                         
                         <div class="masonry-grid-item">
-                            <div class="card shadow-sm">
+                            <div class="card article-card shadow-sm">
                                 <div class="card-body">
-                                    <h5 class="card-title">
-                                        <i class="bi bi-file-earmark-text"></i>
+                                    <h5 class="card-title article-title">
+                                        <i class="bi bi-file-earmark-text me-2 text-primary"></i>
                                         <a href="../mdhtml/可再生能源的家庭应用：从技术选择到系统集成.html"
-                                            class="text-decoration-none">
+                                            class="text-decoration-none text-dark">
                                             可再生能源的家庭应用：从技术选择到系统集成
                                         </a>
                                     </h5>
                                     
-                                        <p class="card-text">
+                                        <p class="card-text text-muted mb-3">
                                             探讨如何在家庭层面应用可再生能源技术，通过科学的技术选择和系统集成，实现家庭能源的自给自足和可持续发展。
                                         </p>
                                         
+                                        <div class="article-meta">
                                             
-                                                <small class="text-muted">
-                                                    2026-02-11
-                                                </small>
+                                                <i class="bi bi-clock me-1"></i>
+                                                2026-02-11
                                                 
+                                        </div>
                                 </div>
-                                <div class="card-footer text-muted">
+                                <div class="card-footer text-muted bg-white border-top">
                                     <a href="/category/%E7%8E%AF%E4%BF%9D%E5%8F%AF%E6%8C%81%E7%BB%AD.html"
-                                        class="badge bg-primary">
+                                        class="badge bg-primary me-2">
                                         环保可持续
                                     </a>
                                     
                                         <a href="/tag/%E5%8F%AF%E5%86%8D%E7%94%9F%E8%83%BD%E6%BA%90.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             可再生能源
                                         </a>
                                         
                                         <a href="/tag/%E5%AE%B6%E5%BA%AD%E5%BA%94%E7%94%A8.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             家庭应用
                                         </a>
                                         
                                         <a href="/tag/%E6%8A%80%E6%9C%AF%E9%80%89%E6%8B%A9.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             技术选择
                                         </a>
                                         
                                         <a href="/tag/%E7%B3%BB%E7%BB%9F%E9%9B%86%E6%88%90.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             系统集成
                                         </a>
                                         
                                         <a href="/tag/%E6%B8%85%E6%B4%81%E8%83%BD%E6%BA%90.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             清洁能源
                                         </a>
                                         
@@ -935,54 +1014,55 @@
                         </div>
                         
                         <div class="masonry-grid-item">
-                            <div class="card shadow-sm">
+                            <div class="card article-card shadow-sm">
                                 <div class="card-body">
-                                    <h5 class="card-title">
-                                        <i class="bi bi-file-earmark-text"></i>
+                                    <h5 class="card-title article-title">
+                                        <i class="bi bi-file-earmark-text me-2 text-primary"></i>
                                         <a href="../mdhtml/个人碳中和项目管理：从规划到追踪.html"
-                                            class="text-decoration-none">
+                                            class="text-decoration-none text-dark">
                                             个人碳中和项目管理：从规划到追踪
                                         </a>
                                     </h5>
                                     
-                                        <p class="card-text">
+                                        <p class="card-text text-muted mb-3">
                                             探讨气候危机下的个人碳中和项目如何管理，以及如何为自己设定碳减排的WBS（工作分解结构）并追踪交付成果。
                                         </p>
                                         
+                                        <div class="article-meta">
                                             
-                                                <small class="text-muted">
-                                                    2026-02-11
-                                                </small>
+                                                <i class="bi bi-clock me-1"></i>
+                                                2026-02-11
                                                 
+                                        </div>
                                 </div>
-                                <div class="card-footer text-muted">
+                                <div class="card-footer text-muted bg-white border-top">
                                     <a href="/category/%E7%8E%AF%E4%BF%9D%E5%8F%AF%E6%8C%81%E7%BB%AD.html"
-                                        class="badge bg-primary">
+                                        class="badge bg-primary me-2">
                                         环保可持续
                                     </a>
                                     
                                         <a href="/tag/%E7%A2%B3%E4%B8%AD%E5%92%8C.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             碳中和
                                         </a>
                                         
                                         <a href="/tag/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             项目管理
                                         </a>
                                         
                                         <a href="/tag/%E8%A7%84%E5%88%92.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             规划
                                         </a>
                                         
                                         <a href="/tag/%E8%BF%BD%E8%B8%AA.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             追踪
                                         </a>
                                         
                                         <a href="/tag/%E7%8E%AF%E4%BF%9D.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             环保
                                         </a>
                                         
@@ -993,9 +1073,9 @@
                 </div>
 
                 <!-- 返回按钮 -->
-                <div class="mt-4 text-center">
-                    <a href="分类列表.html" class="btn btn-outline-primary">
-                        <i class="bi bi-arrow-left"></i> 返回分类列表
+                <div class="mt-6 text-center">
+                    <a href="分类列表.html" class="btn btn-outline-primary back-button">
+                        <i class="bi bi-arrow-left me-2"></i> 返回分类列表
                     </a>
                 </div>
             </div>
@@ -1019,7 +1099,7 @@
                         itemSelector: '.masonry-grid-item',
                         columnWidth: '.masonry-grid-item',
                         percentPosition: true,
-                        gutter: 10 // 明确设置 gutter 值为 10px
+                        gutter: 15 // 增加间距，提升视觉效果
                     });
                 });
             </script>

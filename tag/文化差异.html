@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
 
 <head>
   <meta charset="UTF-8">
@@ -9,7 +9,7 @@
   <meta name="description" content="无人自助站的【文化差异】的标签列表页面，汇集了关于【文化差异】标签相关的文章和资讯，方便您快速找到感兴趣的内容。">
   <meta name="keywords" content="无人自助站,文化差异">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>标签文章列表</title>
+  <title>文化差异标签 - 无人自助站</title>
 
   <link rel="icon" href="../logo.svg" type="image/svg+xml">
   <link rel="stylesheet" href="../css/style.css">
@@ -27,6 +27,62 @@
   <!-- 引入Masonry -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/masonry/4.2.2/masonry.pkgd.min.js"></script>
 
+  <style>
+        .tag-header {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            color: white;
+            padding: 2rem;
+            border-radius: 8px;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        .tag-title {
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+        .article-card {
+            transition: all 0.3s ease;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        .article-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+        }
+        .article-title {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            transition: color 0.3s ease;
+        }
+        .article-title:hover {
+            color: #0d6efd;
+        }
+        .article-meta {
+            font-size: 0.85rem;
+            color: #6c757d;
+        }
+        .tag-link {
+            background-color: #e9ecef;
+            color: #495057;
+            transition: all 0.2s ease;
+        }
+        .tag-link:hover {
+            background-color: #dee2e6;
+            color: #212529;
+        }
+        .back-button {
+            transition: all 0.3s ease;
+        }
+        .back-button:hover {
+            transform: translateX(-3px);
+        }
+        .article-count {
+            font-size: 0.9rem;
+            opacity: 0.9;
+        }
+    </style>
 </head>
 
 <body>
@@ -80,7 +136,7 @@
     <main class="container-fluid mt-4">
       <div class="row">
         <div class="col-lg-8 col-md-12 mx-auto">
-          <nav aria-label="breadcrumb">
+          <nav aria-label="breadcrumb" class="mb-4">
             <ol class="breadcrumb">
               <li class="breadcrumb-item"><a href="/html/index.html">首页</a></li>
               <li class="breadcrumb-item"><a href="标签列表.html">标签列表</a></li>
@@ -89,54 +145,64 @@
               </li>
             </ol>
           </nav>
-          <h1 style="font-size: 1.5em; margin: 0.5em 0;">
-            文化差异标签的文章和资讯
-        </h1>
+          
+          <!-- 标签头部 -->
+          <div class="tag-header">
+              <h1 class="tag-title">
+                  <i class="bi bi-tags me-2"></i>
+                  文化差异
+              </h1>
+              <p class="article-count">
+                  共 12 篇文章
+              </p>
+          </div>
+          
           <div class="masonry-grid">
             
               <div class="masonry-grid-item">
-                <div class="card shadow-sm">
+                <div class="card article-card shadow-sm">
                   <div class="card-body">
-                    <h5 class="card-title">
-                      <i class="bi bi-file-earmark-text"></i>
-                      <a href="../mdhtml/代际冲突的根源：为什么我们无法理解彼此？.html" class="text-decoration-none">
+                    <h5 class="card-title article-title">
+                      <i class="bi bi-file-earmark-text me-2 text-primary"></i>
+                      <a href="../mdhtml/代际冲突的根源：为什么我们无法理解彼此？.html" class="text-decoration-none text-dark">
                         代际冲突的根源：为什么我们无法理解彼此？
                       </a>
                     </h5>
                     
-                      <p class="card-text">
+                      <p class="card-text text-muted mb-3">
                         深入分析代际之间的冲突，探讨价值观的差异、沟通的障碍、技术的影响、以及如何跨越代际鸿沟。
                       </p>
                       
-                        
-                          <small class="text-muted">
-                            2026-03-24
-                          </small>
-                          
+                        <div class="article-meta">
+                            
+                                <i class="bi bi-clock me-1"></i>
+                                2026-03-24
+                                
+                        </div>
                   </div>
-                  <div class="card-footer text-muted">
+                  <div class="card-footer text-muted bg-white border-top">
                     <a href="/category/%E7%A4%BE%E4%BC%9A%E8%A7%82%E5%AF%9F.html"
-                      class="badge bg-primary">
+                      class="badge bg-primary me-2">
                       社会观察
                     </a>
                     
-                      <a href="/tag/%E4%BB%A3%E9%99%85%E5%B7%AE%E5%BC%82.html" class="badge tag-link">
+                      <a href="/tag/%E4%BB%A3%E9%99%85%E5%B7%AE%E5%BC%82.html" class="badge tag-link me-2 mb-1">
                         代际差异
                       </a>
                       
-                      <a href="/tag/%E4%BB%B7%E5%80%BC%E8%A7%82%E5%86%B2%E7%AA%81.html" class="badge tag-link">
+                      <a href="/tag/%E4%BB%B7%E5%80%BC%E8%A7%82%E5%86%B2%E7%AA%81.html" class="badge tag-link me-2 mb-1">
                         价值观冲突
                       </a>
                       
-                      <a href="/tag/%E6%B2%9F%E9%80%9A%E9%9A%9C%E7%A2%8D.html" class="badge tag-link">
+                      <a href="/tag/%E6%B2%9F%E9%80%9A%E9%9A%9C%E7%A2%8D.html" class="badge tag-link me-2 mb-1">
                         沟通障碍
                       </a>
                       
-                      <a href="/tag/%E6%96%87%E5%8C%96%E5%B7%AE%E5%BC%82.html" class="badge tag-link">
+                      <a href="/tag/%E6%96%87%E5%8C%96%E5%B7%AE%E5%BC%82.html" class="badge tag-link me-2 mb-1">
                         文化差异
                       </a>
                       
-                      <a href="/tag/%E7%90%86%E8%A7%A3%E4%B8%8E%E5%8C%85%E5%AE%B9.html" class="badge tag-link">
+                      <a href="/tag/%E7%90%86%E8%A7%A3%E4%B8%8E%E5%8C%85%E5%AE%B9.html" class="badge tag-link me-2 mb-1">
                         理解与包容
                       </a>
                       
@@ -145,40 +211,41 @@
               </div>
               
               <div class="masonry-grid-item">
-                <div class="card shadow-sm">
+                <div class="card article-card shadow-sm">
                   <div class="card-body">
-                    <h5 class="card-title">
-                      <i class="bi bi-file-earmark-text"></i>
-                      <a href="../mdhtml/台球运动在不同文化背景下的特色玩法.html" class="text-decoration-none">
+                    <h5 class="card-title article-title">
+                      <i class="bi bi-file-earmark-text me-2 text-primary"></i>
+                      <a href="../mdhtml/台球运动在不同文化背景下的特色玩法.html" class="text-decoration-none text-dark">
                         台球运动在不同文化背景下的特色玩法
                       </a>
                     </h5>
                     
-                      <p class="card-text">
+                      <p class="card-text text-muted mb-3">
                         本文深入探讨了台球运动在不同文化背景下的特色玩法，包括欧美文化中的美式台球和英式台球、亚洲文化中的中式台球和斯诺克台球，以及非洲文化中的独特台球玩法，分析了它们各自的规则与特色，并阐述了不同文化背景下台球玩法的交流与融合，展现了台球运动的多元魅力。
                       </p>
                       
-                        
-                          <small class="text-muted">
-                            2026-02-27
-                          </small>
-                          
+                        <div class="article-meta">
+                            
+                                <i class="bi bi-clock me-1"></i>
+                                2026-02-27
+                                
+                        </div>
                   </div>
-                  <div class="card-footer text-muted">
+                  <div class="card-footer text-muted bg-white border-top">
                     <a href="/category/%E5%8F%B0%E7%90%83%E5%A4%A9%E5%9C%B0.html"
-                      class="badge bg-primary">
+                      class="badge bg-primary me-2">
                       台球天地
                     </a>
                     
-                      <a href="/tag/%E5%8F%B0%E7%90%83.html" class="badge tag-link">
+                      <a href="/tag/%E5%8F%B0%E7%90%83.html" class="badge tag-link me-2 mb-1">
                         台球
                       </a>
                       
-                      <a href="/tag/%E6%96%87%E5%8C%96%E5%B7%AE%E5%BC%82.html" class="badge tag-link">
+                      <a href="/tag/%E6%96%87%E5%8C%96%E5%B7%AE%E5%BC%82.html" class="badge tag-link me-2 mb-1">
                         文化差异
                       </a>
                       
-                      <a href="/tag/%E6%96%87%E5%8C%96%E4%BA%A4%E6%B5%81.html" class="badge tag-link">
+                      <a href="/tag/%E6%96%87%E5%8C%96%E4%BA%A4%E6%B5%81.html" class="badge tag-link me-2 mb-1">
                         文化交流
                       </a>
                       
@@ -187,48 +254,49 @@
               </div>
               
               <div class="masonry-grid-item">
-                <div class="card shadow-sm">
+                <div class="card article-card shadow-sm">
                   <div class="card-body">
-                    <h5 class="card-title">
-                      <i class="bi bi-file-earmark-text"></i>
-                      <a href="../mdhtml/探寻色彩认知：黑人会称黑色为“肉色”吗？.html" class="text-decoration-none">
+                    <h5 class="card-title article-title">
+                      <i class="bi bi-file-earmark-text me-2 text-primary"></i>
+                      <a href="../mdhtml/探寻色彩认知：黑人会称黑色为“肉色”吗？.html" class="text-decoration-none text-dark">
                         探寻色彩认知：黑人会称黑色为“肉色”吗？
                       </a>
                     </h5>
                     
-                      <p class="card-text">
+                      <p class="card-text text-muted mb-3">
                         深入探讨在全球化背景下，不同文化中色彩认知的差异，聚焦黑人是否会将黑色称为“肉色”这一有趣话题，剖析背后文化、社交等因素的影响，促进跨文化理解。
                       </p>
                       
-                        
-                          <small class="text-muted">
-                            2026-02-24
-                          </small>
-                          
+                        <div class="article-meta">
+                            
+                                <i class="bi bi-clock me-1"></i>
+                                2026-02-24
+                                
+                        </div>
                   </div>
-                  <div class="card-footer text-muted">
+                  <div class="card-footer text-muted bg-white border-top">
                     <a href="/category/%E4%BC%A0%E7%BB%9F%E6%96%87%E5%8C%96.html"
-                      class="badge bg-primary">
+                      class="badge bg-primary me-2">
                       传统文化
                     </a>
                     
-                      <a href="/tag/%E8%89%B2%E5%BD%A9%E8%AE%A4%E7%9F%A5.html" class="badge tag-link">
+                      <a href="/tag/%E8%89%B2%E5%BD%A9%E8%AE%A4%E7%9F%A5.html" class="badge tag-link me-2 mb-1">
                         色彩认知
                       </a>
                       
-                      <a href="/tag/%E6%96%87%E5%8C%96%E5%B7%AE%E5%BC%82.html" class="badge tag-link">
+                      <a href="/tag/%E6%96%87%E5%8C%96%E5%B7%AE%E5%BC%82.html" class="badge tag-link me-2 mb-1">
                         文化差异
                       </a>
                       
-                      <a href="/tag/%E9%BB%91%E4%BA%BA%E7%A4%BE%E5%8C%BA.html" class="badge tag-link">
+                      <a href="/tag/%E9%BB%91%E4%BA%BA%E7%A4%BE%E5%8C%BA.html" class="badge tag-link me-2 mb-1">
                         黑人社区
                       </a>
                       
-                      <a href="/tag/%E8%B7%A8%E6%96%87%E5%8C%96%E7%90%86%E8%A7%A3.html" class="badge tag-link">
+                      <a href="/tag/%E8%B7%A8%E6%96%87%E5%8C%96%E7%90%86%E8%A7%A3.html" class="badge tag-link me-2 mb-1">
                         跨文化理解
                       </a>
                       
-                      <a href="/tag/%E8%82%A4%E8%89%B2%E7%A7%B0%E5%91%BC.html" class="badge tag-link">
+                      <a href="/tag/%E8%82%A4%E8%89%B2%E7%A7%B0%E5%91%BC.html" class="badge tag-link me-2 mb-1">
                         肤色称呼
                       </a>
                       
@@ -237,48 +305,49 @@
               </div>
               
               <div class="masonry-grid-item">
-                <div class="card shadow-sm">
+                <div class="card article-card shadow-sm">
                   <div class="card-body">
-                    <h5 class="card-title">
-                      <i class="bi bi-file-earmark-text"></i>
-                      <a href="../mdhtml/国际化项目管理：跨文化协作与全球成功的实践指南.html" class="text-decoration-none">
+                    <h5 class="card-title article-title">
+                      <i class="bi bi-file-earmark-text me-2 text-primary"></i>
+                      <a href="../mdhtml/国际化项目管理：跨文化协作与全球成功的实践指南.html" class="text-decoration-none text-dark">
                         国际化项目管理：跨文化协作与全球成功的实践指南
                       </a>
                     </h5>
                     
-                      <p class="card-text">
+                      <p class="card-text text-muted mb-3">
                         深入探讨国际化项目管理的挑战、跨文化协作策略、全球团队管理和最佳实践，帮助从业者在全球环境中取得项目成功。
                       </p>
                       
-                        
-                          <small class="text-muted">
-                            2026-02-24
-                          </small>
-                          
+                        <div class="article-meta">
+                            
+                                <i class="bi bi-clock me-1"></i>
+                                2026-02-24
+                                
+                        </div>
                   </div>
-                  <div class="card-footer text-muted">
+                  <div class="card-footer text-muted bg-white border-top">
                     <a href="/category/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86.html"
-                      class="badge bg-primary">
+                      class="badge bg-primary me-2">
                       项目管理
                     </a>
                     
-                      <a href="/tag/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86.html" class="badge tag-link">
+                      <a href="/tag/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86.html" class="badge tag-link me-2 mb-1">
                         项目管理
                       </a>
                       
-                      <a href="/tag/%E5%9B%BD%E9%99%85%E5%8C%96.html" class="badge tag-link">
+                      <a href="/tag/%E5%9B%BD%E9%99%85%E5%8C%96.html" class="badge tag-link me-2 mb-1">
                         国际化
                       </a>
                       
-                      <a href="/tag/%E8%B7%A8%E6%96%87%E5%8C%96%E5%8D%8F%E4%BD%9C.html" class="badge tag-link">
+                      <a href="/tag/%E8%B7%A8%E6%96%87%E5%8C%96%E5%8D%8F%E4%BD%9C.html" class="badge tag-link me-2 mb-1">
                         跨文化协作
                       </a>
                       
-                      <a href="/tag/%E5%85%A8%E7%90%83%E5%9B%A2%E9%98%9F.html" class="badge tag-link">
+                      <a href="/tag/%E5%85%A8%E7%90%83%E5%9B%A2%E9%98%9F.html" class="badge tag-link me-2 mb-1">
                         全球团队
                       </a>
                       
-                      <a href="/tag/%E6%96%87%E5%8C%96%E5%B7%AE%E5%BC%82.html" class="badge tag-link">
+                      <a href="/tag/%E6%96%87%E5%8C%96%E5%B7%AE%E5%BC%82.html" class="badge tag-link me-2 mb-1">
                         文化差异
                       </a>
                       
@@ -287,48 +356,49 @@
               </div>
               
               <div class="masonry-grid-item">
-                <div class="card shadow-sm">
+                <div class="card article-card shadow-sm">
                   <div class="card-body">
-                    <h5 class="card-title">
-                      <i class="bi bi-file-earmark-text"></i>
-                      <a href="../mdhtml/为何人类的记忆如此因人而异？.html" class="text-decoration-none">
+                    <h5 class="card-title article-title">
+                      <i class="bi bi-file-earmark-text me-2 text-primary"></i>
+                      <a href="../mdhtml/为何人类的记忆如此因人而异？.html" class="text-decoration-none text-dark">
                         为何人类的记忆如此因人而异？
                       </a>
                     </h5>
                     
-                      <p class="card-text">
+                      <p class="card-text text-muted mb-3">
                         深入剖析人类记忆因人而异的原因，涵盖大脑机制、环境因素、个人特质以及文化差异等方面，揭示记忆背后的科学原理和影响因素，助你更好地理解和提升自己的记忆力。
                       </p>
                       
-                        
-                          <small class="text-muted">
-                            2026-02-24
-                          </small>
-                          
+                        <div class="article-meta">
+                            
+                                <i class="bi bi-clock me-1"></i>
+                                2026-02-24
+                                
+                        </div>
                   </div>
-                  <div class="card-footer text-muted">
+                  <div class="card-footer text-muted bg-white border-top">
                     <a href="/category/%E7%94%9F%E6%B4%BB%E6%84%9F%E6%82%9F.html"
-                      class="badge bg-primary">
+                      class="badge bg-primary me-2">
                       生活感悟
                     </a>
                     
-                      <a href="/tag/%E8%AE%B0%E5%BF%86.html" class="badge tag-link">
+                      <a href="/tag/%E8%AE%B0%E5%BF%86.html" class="badge tag-link me-2 mb-1">
                         记忆
                       </a>
                       
-                      <a href="/tag/%E5%A4%A7%E8%84%91%E6%9C%BA%E5%88%B6.html" class="badge tag-link">
+                      <a href="/tag/%E5%A4%A7%E8%84%91%E6%9C%BA%E5%88%B6.html" class="badge tag-link me-2 mb-1">
                         大脑机制
                       </a>
                       
-                      <a href="/tag/%E7%8E%AF%E5%A2%83%E5%9B%A0%E7%B4%A0.html" class="badge tag-link">
+                      <a href="/tag/%E7%8E%AF%E5%A2%83%E5%9B%A0%E7%B4%A0.html" class="badge tag-link me-2 mb-1">
                         环境因素
                       </a>
                       
-                      <a href="/tag/%E4%B8%AA%E4%BA%BA%E7%89%B9%E8%B4%A8.html" class="badge tag-link">
+                      <a href="/tag/%E4%B8%AA%E4%BA%BA%E7%89%B9%E8%B4%A8.html" class="badge tag-link me-2 mb-1">
                         个人特质
                       </a>
                       
-                      <a href="/tag/%E6%96%87%E5%8C%96%E5%B7%AE%E5%BC%82.html" class="badge tag-link">
+                      <a href="/tag/%E6%96%87%E5%8C%96%E5%B7%AE%E5%BC%82.html" class="badge tag-link me-2 mb-1">
                         文化差异
                       </a>
                       
@@ -337,48 +407,49 @@
               </div>
               
               <div class="masonry-grid-item">
-                <div class="card shadow-sm">
+                <div class="card article-card shadow-sm">
                   <div class="card-body">
-                    <h5 class="card-title">
-                      <i class="bi bi-file-earmark-text"></i>
-                      <a href="../mdhtml/为何人类的情绪表达方式如此大相径庭？.html" class="text-decoration-none">
+                    <h5 class="card-title article-title">
+                      <i class="bi bi-file-earmark-text me-2 text-primary"></i>
+                      <a href="../mdhtml/为何人类的情绪表达方式如此大相径庭？.html" class="text-decoration-none text-dark">
                         为何人类的情绪表达方式如此大相径庭？
                       </a>
                     </h5>
                     
-                      <p class="card-text">
+                      <p class="card-text text-muted mb-3">
                         深入剖析人类情绪表达方式大相径庭的原因，涵盖文化差异、个人特质、社会环境以及大脑机制等方面，揭示情绪表达背后的科学原理和影响因素，助你更好地理解和应对不同的情绪表达方式。
                       </p>
                       
-                        
-                          <small class="text-muted">
-                            2026-02-24
-                          </small>
-                          
+                        <div class="article-meta">
+                            
+                                <i class="bi bi-clock me-1"></i>
+                                2026-02-24
+                                
+                        </div>
                   </div>
-                  <div class="card-footer text-muted">
+                  <div class="card-footer text-muted bg-white border-top">
                     <a href="/category/%E7%94%9F%E6%B4%BB%E6%84%9F%E6%82%9F.html"
-                      class="badge bg-primary">
+                      class="badge bg-primary me-2">
                       生活感悟
                     </a>
                     
-                      <a href="/tag/%E6%83%85%E7%BB%AA%E8%A1%A8%E8%BE%BE.html" class="badge tag-link">
+                      <a href="/tag/%E6%83%85%E7%BB%AA%E8%A1%A8%E8%BE%BE.html" class="badge tag-link me-2 mb-1">
                         情绪表达
                       </a>
                       
-                      <a href="/tag/%E6%96%87%E5%8C%96%E5%B7%AE%E5%BC%82.html" class="badge tag-link">
+                      <a href="/tag/%E6%96%87%E5%8C%96%E5%B7%AE%E5%BC%82.html" class="badge tag-link me-2 mb-1">
                         文化差异
                       </a>
                       
-                      <a href="/tag/%E4%B8%AA%E4%BA%BA%E7%89%B9%E8%B4%A8.html" class="badge tag-link">
+                      <a href="/tag/%E4%B8%AA%E4%BA%BA%E7%89%B9%E8%B4%A8.html" class="badge tag-link me-2 mb-1">
                         个人特质
                       </a>
                       
-                      <a href="/tag/%E7%A4%BE%E4%BC%9A%E7%8E%AF%E5%A2%83.html" class="badge tag-link">
+                      <a href="/tag/%E7%A4%BE%E4%BC%9A%E7%8E%AF%E5%A2%83.html" class="badge tag-link me-2 mb-1">
                         社会环境
                       </a>
                       
-                      <a href="/tag/%E5%A4%A7%E8%84%91%E6%9C%BA%E5%88%B6.html" class="badge tag-link">
+                      <a href="/tag/%E5%A4%A7%E8%84%91%E6%9C%BA%E5%88%B6.html" class="badge tag-link me-2 mb-1">
                         大脑机制
                       </a>
                       
@@ -387,48 +458,49 @@
               </div>
               
               <div class="masonry-grid-item">
-                <div class="card shadow-sm">
+                <div class="card article-card shadow-sm">
                   <div class="card-body">
-                    <h5 class="card-title">
-                      <i class="bi bi-file-earmark-text"></i>
-                      <a href="../mdhtml/为何人类的幸福感如此千差万别？.html" class="text-decoration-none">
+                    <h5 class="card-title article-title">
+                      <i class="bi bi-file-earmark-text me-2 text-primary"></i>
+                      <a href="../mdhtml/为何人类的幸福感如此千差万别？.html" class="text-decoration-none text-dark">
                         为何人类的幸福感如此千差万别？
                       </a>
                     </h5>
                     
-                      <p class="card-text">
+                      <p class="card-text text-muted mb-3">
                         深入剖析人类幸福感千差万别的原因，涵盖心理因素、社会环境、个人特质以及文化差异等方面，揭示幸福感背后的科学原理和影响因素，助你更好地理解和提升自己的幸福感。
                       </p>
                       
-                        
-                          <small class="text-muted">
-                            2026-02-24
-                          </small>
-                          
+                        <div class="article-meta">
+                            
+                                <i class="bi bi-clock me-1"></i>
+                                2026-02-24
+                                
+                        </div>
                   </div>
-                  <div class="card-footer text-muted">
+                  <div class="card-footer text-muted bg-white border-top">
                     <a href="/category/%E7%94%9F%E6%B4%BB%E6%84%9F%E6%82%9F.html"
-                      class="badge bg-primary">
+                      class="badge bg-primary me-2">
                       生活感悟
                     </a>
                     
-                      <a href="/tag/%E5%B9%B8%E7%A6%8F%E6%84%9F.html" class="badge tag-link">
+                      <a href="/tag/%E5%B9%B8%E7%A6%8F%E6%84%9F.html" class="badge tag-link me-2 mb-1">
                         幸福感
                       </a>
                       
-                      <a href="/tag/%E5%BF%83%E7%90%86%E5%9B%A0%E7%B4%A0.html" class="badge tag-link">
+                      <a href="/tag/%E5%BF%83%E7%90%86%E5%9B%A0%E7%B4%A0.html" class="badge tag-link me-2 mb-1">
                         心理因素
                       </a>
                       
-                      <a href="/tag/%E7%A4%BE%E4%BC%9A%E7%8E%AF%E5%A2%83.html" class="badge tag-link">
+                      <a href="/tag/%E7%A4%BE%E4%BC%9A%E7%8E%AF%E5%A2%83.html" class="badge tag-link me-2 mb-1">
                         社会环境
                       </a>
                       
-                      <a href="/tag/%E4%B8%AA%E4%BA%BA%E7%89%B9%E8%B4%A8.html" class="badge tag-link">
+                      <a href="/tag/%E4%B8%AA%E4%BA%BA%E7%89%B9%E8%B4%A8.html" class="badge tag-link me-2 mb-1">
                         个人特质
                       </a>
                       
-                      <a href="/tag/%E6%96%87%E5%8C%96%E5%B7%AE%E5%BC%82.html" class="badge tag-link">
+                      <a href="/tag/%E6%96%87%E5%8C%96%E5%B7%AE%E5%BC%82.html" class="badge tag-link me-2 mb-1">
                         文化差异
                       </a>
                       
@@ -437,48 +509,49 @@
               </div>
               
               <div class="masonry-grid-item">
-                <div class="card shadow-sm">
+                <div class="card article-card shadow-sm">
                   <div class="card-body">
-                    <h5 class="card-title">
-                      <i class="bi bi-file-earmark-text"></i>
-                      <a href="../mdhtml/为何人类的学习能力如此参差不齐？.html" class="text-decoration-none">
+                    <h5 class="card-title article-title">
+                      <i class="bi bi-file-earmark-text me-2 text-primary"></i>
+                      <a href="../mdhtml/为何人类的学习能力如此参差不齐？.html" class="text-decoration-none text-dark">
                         为何人类的学习能力如此参差不齐？
                       </a>
                     </h5>
                     
-                      <p class="card-text">
+                      <p class="card-text text-muted mb-3">
                         深入剖析人类学习能力参差不齐的原因，涵盖大脑机制、环境因素、个人特质以及文化差异等方面，揭示学习能力背后的科学原理和影响因素，助你更好地理解和提升自己的学习能力。
                       </p>
                       
-                        
-                          <small class="text-muted">
-                            2026-02-24
-                          </small>
-                          
+                        <div class="article-meta">
+                            
+                                <i class="bi bi-clock me-1"></i>
+                                2026-02-24
+                                
+                        </div>
                   </div>
-                  <div class="card-footer text-muted">
+                  <div class="card-footer text-muted bg-white border-top">
                     <a href="/category/%E7%94%9F%E6%B4%BB%E6%84%9F%E6%82%9F.html"
-                      class="badge bg-primary">
+                      class="badge bg-primary me-2">
                       生活感悟
                     </a>
                     
-                      <a href="/tag/%E5%AD%A6%E4%B9%A0%E8%83%BD%E5%8A%9B.html" class="badge tag-link">
+                      <a href="/tag/%E5%AD%A6%E4%B9%A0%E8%83%BD%E5%8A%9B.html" class="badge tag-link me-2 mb-1">
                         学习能力
                       </a>
                       
-                      <a href="/tag/%E5%A4%A7%E8%84%91%E6%9C%BA%E5%88%B6.html" class="badge tag-link">
+                      <a href="/tag/%E5%A4%A7%E8%84%91%E6%9C%BA%E5%88%B6.html" class="badge tag-link me-2 mb-1">
                         大脑机制
                       </a>
                       
-                      <a href="/tag/%E7%8E%AF%E5%A2%83%E5%9B%A0%E7%B4%A0.html" class="badge tag-link">
+                      <a href="/tag/%E7%8E%AF%E5%A2%83%E5%9B%A0%E7%B4%A0.html" class="badge tag-link me-2 mb-1">
                         环境因素
                       </a>
                       
-                      <a href="/tag/%E4%B8%AA%E4%BA%BA%E7%89%B9%E8%B4%A8.html" class="badge tag-link">
+                      <a href="/tag/%E4%B8%AA%E4%BA%BA%E7%89%B9%E8%B4%A8.html" class="badge tag-link me-2 mb-1">
                         个人特质
                       </a>
                       
-                      <a href="/tag/%E6%96%87%E5%8C%96%E5%B7%AE%E5%BC%82.html" class="badge tag-link">
+                      <a href="/tag/%E6%96%87%E5%8C%96%E5%B7%AE%E5%BC%82.html" class="badge tag-link me-2 mb-1">
                         文化差异
                       </a>
                       
@@ -487,48 +560,49 @@
               </div>
               
               <div class="masonry-grid-item">
-                <div class="card shadow-sm">
+                <div class="card article-card shadow-sm">
                   <div class="card-body">
-                    <h5 class="card-title">
-                      <i class="bi bi-file-earmark-text"></i>
-                      <a href="../mdhtml/为何人类的审美标准如此千差万别？.html" class="text-decoration-none">
+                    <h5 class="card-title article-title">
+                      <i class="bi bi-file-earmark-text me-2 text-primary"></i>
+                      <a href="../mdhtml/为何人类的审美标准如此千差万别？.html" class="text-decoration-none text-dark">
                         为何人类的审美标准如此千差万别？
                       </a>
                     </h5>
                     
-                      <p class="card-text">
+                      <p class="card-text text-muted mb-3">
                         深入剖析人类审美标准千差万别的原因，涵盖文化差异、个人经历、社会环境以及进化心理学等方面，揭示审美标准背后的形成机制和影响因素，助你更好地理解和尊重不同的审美观点。
                       </p>
                       
-                        
-                          <small class="text-muted">
-                            2026-02-24
-                          </small>
-                          
+                        <div class="article-meta">
+                            
+                                <i class="bi bi-clock me-1"></i>
+                                2026-02-24
+                                
+                        </div>
                   </div>
-                  <div class="card-footer text-muted">
+                  <div class="card-footer text-muted bg-white border-top">
                     <a href="/category/%E7%94%9F%E6%B4%BB%E6%84%9F%E6%82%9F.html"
-                      class="badge bg-primary">
+                      class="badge bg-primary me-2">
                       生活感悟
                     </a>
                     
-                      <a href="/tag/%E5%AE%A1%E7%BE%8E%E6%A0%87%E5%87%86.html" class="badge tag-link">
+                      <a href="/tag/%E5%AE%A1%E7%BE%8E%E6%A0%87%E5%87%86.html" class="badge tag-link me-2 mb-1">
                         审美标准
                       </a>
                       
-                      <a href="/tag/%E6%96%87%E5%8C%96%E5%B7%AE%E5%BC%82.html" class="badge tag-link">
+                      <a href="/tag/%E6%96%87%E5%8C%96%E5%B7%AE%E5%BC%82.html" class="badge tag-link me-2 mb-1">
                         文化差异
                       </a>
                       
-                      <a href="/tag/%E4%B8%AA%E4%BA%BA%E7%BB%8F%E5%8E%86.html" class="badge tag-link">
+                      <a href="/tag/%E4%B8%AA%E4%BA%BA%E7%BB%8F%E5%8E%86.html" class="badge tag-link me-2 mb-1">
                         个人经历
                       </a>
                       
-                      <a href="/tag/%E7%A4%BE%E4%BC%9A%E7%8E%AF%E5%A2%83.html" class="badge tag-link">
+                      <a href="/tag/%E7%A4%BE%E4%BC%9A%E7%8E%AF%E5%A2%83.html" class="badge tag-link me-2 mb-1">
                         社会环境
                       </a>
                       
-                      <a href="/tag/%E8%BF%9B%E5%8C%96%E5%BF%83%E7%90%86%E5%AD%A6.html" class="badge tag-link">
+                      <a href="/tag/%E8%BF%9B%E5%8C%96%E5%BF%83%E7%90%86%E5%AD%A6.html" class="badge tag-link me-2 mb-1">
                         进化心理学
                       </a>
                       
@@ -537,48 +611,49 @@
               </div>
               
               <div class="masonry-grid-item">
-                <div class="card shadow-sm">
+                <div class="card article-card shadow-sm">
                   <div class="card-body">
-                    <h5 class="card-title">
-                      <i class="bi bi-file-earmark-text"></i>
-                      <a href="../mdhtml/为何人类的价值观如此天差地别？.html" class="text-decoration-none">
+                    <h5 class="card-title article-title">
+                      <i class="bi bi-file-earmark-text me-2 text-primary"></i>
+                      <a href="../mdhtml/为何人类的价值观如此天差地别？.html" class="text-decoration-none text-dark">
                         为何人类的价值观如此天差地别？
                       </a>
                     </h5>
                     
-                      <p class="card-text">
+                      <p class="card-text text-muted mb-3">
                         深入剖析人类价值观天差地别的原因，涵盖文化差异、个人经历、社会环境以及进化心理学等方面，揭示价值观背后的形成机制和影响因素，助你更好地理解和尊重不同的价值观。
                       </p>
                       
-                        
-                          <small class="text-muted">
-                            2026-02-24
-                          </small>
-                          
+                        <div class="article-meta">
+                            
+                                <i class="bi bi-clock me-1"></i>
+                                2026-02-24
+                                
+                        </div>
                   </div>
-                  <div class="card-footer text-muted">
+                  <div class="card-footer text-muted bg-white border-top">
                     <a href="/category/%E7%94%9F%E6%B4%BB%E6%84%9F%E6%82%9F.html"
-                      class="badge bg-primary">
+                      class="badge bg-primary me-2">
                       生活感悟
                     </a>
                     
-                      <a href="/tag/%E4%BB%B7%E5%80%BC%E8%A7%82.html" class="badge tag-link">
+                      <a href="/tag/%E4%BB%B7%E5%80%BC%E8%A7%82.html" class="badge tag-link me-2 mb-1">
                         价值观
                       </a>
                       
-                      <a href="/tag/%E6%96%87%E5%8C%96%E5%B7%AE%E5%BC%82.html" class="badge tag-link">
+                      <a href="/tag/%E6%96%87%E5%8C%96%E5%B7%AE%E5%BC%82.html" class="badge tag-link me-2 mb-1">
                         文化差异
                       </a>
                       
-                      <a href="/tag/%E4%B8%AA%E4%BA%BA%E7%BB%8F%E5%8E%86.html" class="badge tag-link">
+                      <a href="/tag/%E4%B8%AA%E4%BA%BA%E7%BB%8F%E5%8E%86.html" class="badge tag-link me-2 mb-1">
                         个人经历
                       </a>
                       
-                      <a href="/tag/%E7%A4%BE%E4%BC%9A%E7%8E%AF%E5%A2%83.html" class="badge tag-link">
+                      <a href="/tag/%E7%A4%BE%E4%BC%9A%E7%8E%AF%E5%A2%83.html" class="badge tag-link me-2 mb-1">
                         社会环境
                       </a>
                       
-                      <a href="/tag/%E8%BF%9B%E5%8C%96%E5%BF%83%E7%90%86%E5%AD%A6.html" class="badge tag-link">
+                      <a href="/tag/%E8%BF%9B%E5%8C%96%E5%BF%83%E7%90%86%E5%AD%A6.html" class="badge tag-link me-2 mb-1">
                         进化心理学
                       </a>
                       
@@ -587,48 +662,49 @@
               </div>
               
               <div class="masonry-grid-item">
-                <div class="card shadow-sm">
+                <div class="card article-card shadow-sm">
                   <div class="card-body">
-                    <h5 class="card-title">
-                      <i class="bi bi-file-earmark-text"></i>
-                      <a href="../mdhtml/跨国恋情中的文化碰撞与交融：谱写爱的新乐章.html" class="text-decoration-none">
+                    <h5 class="card-title article-title">
+                      <i class="bi bi-file-earmark-text me-2 text-primary"></i>
+                      <a href="../mdhtml/跨国恋情中的文化碰撞与交融：谱写爱的新乐章.html" class="text-decoration-none text-dark">
                         跨国恋情中的文化碰撞与交融：谱写爱的新乐章
                       </a>
                     </h5>
                     
-                      <p class="card-text">
+                      <p class="card-text text-muted mb-3">
                         探讨在全球化背景下跨国恋情中文化碰撞与交融的现象，分析其中的价值观、生活方式和沟通方式等方面的冲突，并分享成功案例，为处于或即将步入跨国恋情的人提供启发，助力他们谱写爱的新乐章。
                       </p>
                       
-                        
-                          <small class="text-muted">
-                            2026-02-11
-                          </small>
-                          
+                        <div class="article-meta">
+                            
+                                <i class="bi bi-clock me-1"></i>
+                                2026-02-11
+                                
+                        </div>
                   </div>
-                  <div class="card-footer text-muted">
+                  <div class="card-footer text-muted bg-white border-top">
                     <a href="/category/%E4%BA%BA%E9%99%85%E7%9B%B8%E5%A4%84.html"
-                      class="badge bg-primary">
+                      class="badge bg-primary me-2">
                       人际相处
                     </a>
                     
-                      <a href="/tag/%E8%B7%A8%E5%9B%BD%E6%81%8B%E6%83%85.html" class="badge tag-link">
+                      <a href="/tag/%E8%B7%A8%E5%9B%BD%E6%81%8B%E6%83%85.html" class="badge tag-link me-2 mb-1">
                         跨国恋情
                       </a>
                       
-                      <a href="/tag/%E6%96%87%E5%8C%96%E5%86%B2%E7%AA%81.html" class="badge tag-link">
+                      <a href="/tag/%E6%96%87%E5%8C%96%E5%86%B2%E7%AA%81.html" class="badge tag-link me-2 mb-1">
                         文化冲突
                       </a>
                       
-                      <a href="/tag/%E6%96%87%E5%8C%96%E8%9E%8D%E5%90%88.html" class="badge tag-link">
+                      <a href="/tag/%E6%96%87%E5%8C%96%E8%9E%8D%E5%90%88.html" class="badge tag-link me-2 mb-1">
                         文化融合
                       </a>
                       
-                      <a href="/tag/%E6%81%8B%E7%88%B1%E7%9B%B8%E5%A4%84.html" class="badge tag-link">
+                      <a href="/tag/%E6%81%8B%E7%88%B1%E7%9B%B8%E5%A4%84.html" class="badge tag-link me-2 mb-1">
                         恋爱相处
                       </a>
                       
-                      <a href="/tag/%E6%96%87%E5%8C%96%E5%B7%AE%E5%BC%82.html" class="badge tag-link">
+                      <a href="/tag/%E6%96%87%E5%8C%96%E5%B7%AE%E5%BC%82.html" class="badge tag-link me-2 mb-1">
                         文化差异
                       </a>
                       
@@ -637,48 +713,49 @@
               </div>
               
               <div class="masonry-grid-item">
-                <div class="card shadow-sm">
+                <div class="card article-card shadow-sm">
                   <div class="card-body">
-                    <h5 class="card-title">
-                      <i class="bi bi-file-earmark-text"></i>
-                      <a href="../mdhtml/孔融让梨：被误读千年的社交智慧与人性博弈.html" class="text-decoration-none">
+                    <h5 class="card-title article-title">
+                      <i class="bi bi-file-earmark-text me-2 text-primary"></i>
+                      <a href="../mdhtml/孔融让梨：被误读千年的社交智慧与人性博弈.html" class="text-decoration-none text-dark">
                         孔融让梨：被误读千年的社交智慧与人性博弈
                       </a>
                     </h5>
                     
-                      <p class="card-text">
+                      <p class="card-text text-muted mb-3">
                         本文重新解读了“孔融让梨”这一经典故事，揭示了其背后复杂的社交智慧和资源博弈策略。孔融选择小梨并非单纯出于谦让美德，而是对家族权力结构的适应及早期情商的展现。文章分析了让梨行为在资源分配、语言艺术和预期管理方面的微妙作用，并对比了东西方文化差异下的不同理解。现代职场中的应用进一步展示了通过适度退让建立信用、赢得支持的重要性。心理学研究指出儿童谦让行为中存在策略性，强调了谦让作为社会化生存策略的本质。最终，文章提出真正的生存之道在于掌握何时该分配资源、何时该争取利益的动态平衡能力。
                       </p>
                       
-                        
-                          <small class="text-muted">
-                            2026-02-11
-                          </small>
-                          
+                        <div class="article-meta">
+                            
+                                <i class="bi bi-clock me-1"></i>
+                                2026-02-11
+                                
+                        </div>
                   </div>
-                  <div class="card-footer text-muted">
+                  <div class="card-footer text-muted bg-white border-top">
                     <a href="/category/%E7%A4%BE%E4%BC%9A%E6%8E%A2%E7%A9%B6.html"
-                      class="badge bg-primary">
+                      class="badge bg-primary me-2">
                       社会探究
                     </a>
                     
-                      <a href="/tag/%E7%A4%BE%E4%BA%A4%E6%99%BA%E6%85%A7.html" class="badge tag-link">
+                      <a href="/tag/%E7%A4%BE%E4%BA%A4%E6%99%BA%E6%85%A7.html" class="badge tag-link me-2 mb-1">
                         社交智慧
                       </a>
                       
-                      <a href="/tag/%E8%B5%84%E6%BA%90%E5%8D%9A%E5%BC%88.html" class="badge tag-link">
+                      <a href="/tag/%E8%B5%84%E6%BA%90%E5%8D%9A%E5%BC%88.html" class="badge tag-link me-2 mb-1">
                         资源博弈
                       </a>
                       
-                      <a href="/tag/%E6%83%85%E5%95%86%E5%90%AF%E8%92%99.html" class="badge tag-link">
+                      <a href="/tag/%E6%83%85%E5%95%86%E5%90%AF%E8%92%99.html" class="badge tag-link me-2 mb-1">
                         情商启蒙
                       </a>
                       
-                      <a href="/tag/%E6%96%87%E5%8C%96%E5%B7%AE%E5%BC%82.html" class="badge tag-link">
+                      <a href="/tag/%E6%96%87%E5%8C%96%E5%B7%AE%E5%BC%82.html" class="badge tag-link me-2 mb-1">
                         文化差异
                       </a>
                       
-                      <a href="/tag/%E7%94%9F%E5%AD%98%E7%AD%96%E7%95%A5.html" class="badge tag-link">
+                      <a href="/tag/%E7%94%9F%E5%AD%98%E7%AD%96%E7%95%A5.html" class="badge tag-link me-2 mb-1">
                         生存策略
                       </a>
                       
@@ -688,8 +765,8 @@
               
           </div>
 
-          <div class="mt-4 text-center">
-            <a href="标签列表.html" class="btn btn-outline-primary"><i class="bi bi-arrow-left"></i> 返回标签列表</a>
+          <div class="mt-6 text-center">
+            <a href="标签列表.html" class="btn btn-outline-primary back-button"><i class="bi bi-arrow-left me-2"></i> 返回标签列表</a>
           </div>
         </div>
       </div>
@@ -713,7 +790,7 @@
             itemSelector: '.masonry-grid-item',
             columnWidth: '.masonry-grid-item',
             percentPosition: true,
-            gutter: 10 // 可选，添加卡片间的间距
+            gutter: 15 // 增加间距，提升视觉效果
           });
         });
       </script>

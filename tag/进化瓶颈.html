@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
 
 <head>
   <meta charset="UTF-8">
@@ -9,7 +9,7 @@
   <meta name="description" content="无人自助站的【进化瓶颈】的标签列表页面，汇集了关于【进化瓶颈】标签相关的文章和资讯，方便您快速找到感兴趣的内容。">
   <meta name="keywords" content="无人自助站,进化瓶颈">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>标签文章列表</title>
+  <title>进化瓶颈标签 - 无人自助站</title>
 
   <link rel="icon" href="../logo.svg" type="image/svg+xml">
   <link rel="stylesheet" href="../css/style.css">
@@ -27,6 +27,62 @@
   <!-- 引入Masonry -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/masonry/4.2.2/masonry.pkgd.min.js"></script>
 
+  <style>
+        .tag-header {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            color: white;
+            padding: 2rem;
+            border-radius: 8px;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        .tag-title {
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+        .article-card {
+            transition: all 0.3s ease;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        .article-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+        }
+        .article-title {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            transition: color 0.3s ease;
+        }
+        .article-title:hover {
+            color: #0d6efd;
+        }
+        .article-meta {
+            font-size: 0.85rem;
+            color: #6c757d;
+        }
+        .tag-link {
+            background-color: #e9ecef;
+            color: #495057;
+            transition: all 0.2s ease;
+        }
+        .tag-link:hover {
+            background-color: #dee2e6;
+            color: #212529;
+        }
+        .back-button {
+            transition: all 0.3s ease;
+        }
+        .back-button:hover {
+            transform: translateX(-3px);
+        }
+        .article-count {
+            font-size: 0.9rem;
+            opacity: 0.9;
+        }
+    </style>
 </head>
 
 <body>
@@ -80,7 +136,7 @@
     <main class="container-fluid mt-4">
       <div class="row">
         <div class="col-lg-8 col-md-12 mx-auto">
-          <nav aria-label="breadcrumb">
+          <nav aria-label="breadcrumb" class="mb-4">
             <ol class="breadcrumb">
               <li class="breadcrumb-item"><a href="/html/index.html">首页</a></li>
               <li class="breadcrumb-item"><a href="标签列表.html">标签列表</a></li>
@@ -89,62 +145,72 @@
               </li>
             </ol>
           </nav>
-          <h1 style="font-size: 1.5em; margin: 0.5em 0;">
-            进化瓶颈标签的文章和资讯
-        </h1>
+          
+          <!-- 标签头部 -->
+          <div class="tag-header">
+              <h1 class="tag-title">
+                  <i class="bi bi-tags me-2"></i>
+                  进化瓶颈
+              </h1>
+              <p class="article-count">
+                  共 1 篇文章
+              </p>
+          </div>
+          
           <div class="masonry-grid">
             
               <div class="masonry-grid-item">
-                <div class="card shadow-sm">
+                <div class="card article-card shadow-sm">
                   <div class="card-body">
-                    <h5 class="card-title">
-                      <i class="bi bi-file-earmark-text"></i>
-                      <a href="../mdhtml/恐龙为什么会突然灭绝？.html" class="text-decoration-none">
+                    <h5 class="card-title article-title">
+                      <i class="bi bi-file-earmark-text me-2 text-primary"></i>
+                      <a href="../mdhtml/恐龙为什么会突然灭绝？.html" class="text-decoration-none text-dark">
                         恐龙为什么会突然灭绝？
                       </a>
                     </h5>
                     
-                      <p class="card-text">
+                      <p class="card-text text-muted mb-3">
                         恐龙在约6600万年前的白垩纪末期突然灭绝，主要原因是环境剧变，尤其是Chicxulub小行星撞击地球引发的一系列灾难如地震、海啸、尘埃遮蔽天空等导致生态系统崩溃。此外，疾病爆发、食物链断裂及进化瓶颈也是重要因素。尽管小行星撞击是主要原因，火山活动和气候变化等“非撞击”假说也为恐龙灭绝提供了多元解释。恐龙灭绝提醒我们关注生态系统的脆弱性和环境保护的重要性。
                       </p>
                       
-                        
-                          <small class="text-muted">
-                            2026-02-11
-                          </small>
-                          
+                        <div class="article-meta">
+                            
+                                <i class="bi bi-clock me-1"></i>
+                                2026-02-11
+                                
+                        </div>
                   </div>
-                  <div class="card-footer text-muted">
+                  <div class="card-footer text-muted bg-white border-top">
                     <a href="/category/%E8%87%AA%E7%84%B6%E7%A7%91%E5%AD%A6.html"
-                      class="badge bg-primary">
+                      class="badge bg-primary me-2">
                       自然科学
                     </a>
                     
-                      <a href="/tag/%E6%81%90%E9%BE%99%E7%81%AD%E7%BB%9D.html" class="badge tag-link">
+                      <a href="/tag/%E6%81%90%E9%BE%99%E7%81%AD%E7%BB%9D.html" class="badge tag-link me-2 mb-1">
                         恐龙灭绝
                       </a>
                       
-                      <a href="/tag/%E7%99%BD%E5%9E%A9%E7%BA%AA%E6%9C%AB%E6%9C%9F.html" class="badge tag-link">
+                      <a href="/tag/%E7%99%BD%E5%9E%A9%E7%BA%AA%E6%9C%AB%E6%9C%9F.html" class="badge tag-link me-2 mb-1">
                         白垩纪末期
                       </a>
                       
-                      <a href="/tag/%E5%B0%8F%E8%A1%8C%E6%98%9F%E6%92%9E%E5%87%BB.html" class="badge tag-link">
+                      <a href="/tag/%E5%B0%8F%E8%A1%8C%E6%98%9F%E6%92%9E%E5%87%BB.html" class="badge tag-link me-2 mb-1">
                         小行星撞击
                       </a>
                       
-                      <a href="/tag/%E7%8E%AF%E5%A2%83%E5%89%A7%E5%8F%98.html" class="badge tag-link">
+                      <a href="/tag/%E7%8E%AF%E5%A2%83%E5%89%A7%E5%8F%98.html" class="badge tag-link me-2 mb-1">
                         环境剧变
                       </a>
                       
-                      <a href="/tag/%E7%94%9F%E6%80%81%E7%B3%BB%E7%BB%9F%E5%B4%A9%E6%BA%83.html" class="badge tag-link">
+                      <a href="/tag/%E7%94%9F%E6%80%81%E7%B3%BB%E7%BB%9F%E5%B4%A9%E6%BA%83.html" class="badge tag-link me-2 mb-1">
                         生态系统崩溃
                       </a>
                       
-                      <a href="/tag/%E8%BF%9B%E5%8C%96%E7%93%B6%E9%A2%88.html" class="badge tag-link">
+                      <a href="/tag/%E8%BF%9B%E5%8C%96%E7%93%B6%E9%A2%88.html" class="badge tag-link me-2 mb-1">
                         进化瓶颈
                       </a>
                       
-                      <a href="/tag/%E9%9D%9E%E6%92%9E%E5%87%BB%E5%81%87%E8%AF%B4.html" class="badge tag-link">
+                      <a href="/tag/%E9%9D%9E%E6%92%9E%E5%87%BB%E5%81%87%E8%AF%B4.html" class="badge tag-link me-2 mb-1">
                         非撞击假说
                       </a>
                       
@@ -154,8 +220,8 @@
               
           </div>
 
-          <div class="mt-4 text-center">
-            <a href="标签列表.html" class="btn btn-outline-primary"><i class="bi bi-arrow-left"></i> 返回标签列表</a>
+          <div class="mt-6 text-center">
+            <a href="标签列表.html" class="btn btn-outline-primary back-button"><i class="bi bi-arrow-left me-2"></i> 返回标签列表</a>
           </div>
         </div>
       </div>
@@ -179,7 +245,7 @@
             itemSelector: '.masonry-grid-item',
             columnWidth: '.masonry-grid-item',
             percentPosition: true,
-            gutter: 10 // 可选，添加卡片间的间距
+            gutter: 15 // 增加间距，提升视觉效果
           });
         });
       </script>

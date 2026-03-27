@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
 
 <head>
   <meta charset="UTF-8">
@@ -9,7 +9,7 @@
   <meta name="description" content="无人自助站的【伦理挑战】的标签列表页面，汇集了关于【伦理挑战】标签相关的文章和资讯，方便您快速找到感兴趣的内容。">
   <meta name="keywords" content="无人自助站,伦理挑战">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>标签文章列表</title>
+  <title>伦理挑战标签 - 无人自助站</title>
 
   <link rel="icon" href="../logo.svg" type="image/svg+xml">
   <link rel="stylesheet" href="../css/style.css">
@@ -27,6 +27,62 @@
   <!-- 引入Masonry -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/masonry/4.2.2/masonry.pkgd.min.js"></script>
 
+  <style>
+        .tag-header {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            color: white;
+            padding: 2rem;
+            border-radius: 8px;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        .tag-title {
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+        .article-card {
+            transition: all 0.3s ease;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        .article-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+        }
+        .article-title {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            transition: color 0.3s ease;
+        }
+        .article-title:hover {
+            color: #0d6efd;
+        }
+        .article-meta {
+            font-size: 0.85rem;
+            color: #6c757d;
+        }
+        .tag-link {
+            background-color: #e9ecef;
+            color: #495057;
+            transition: all 0.2s ease;
+        }
+        .tag-link:hover {
+            background-color: #dee2e6;
+            color: #212529;
+        }
+        .back-button {
+            transition: all 0.3s ease;
+        }
+        .back-button:hover {
+            transform: translateX(-3px);
+        }
+        .article-count {
+            font-size: 0.9rem;
+            opacity: 0.9;
+        }
+    </style>
 </head>
 
 <body>
@@ -80,7 +136,7 @@
     <main class="container-fluid mt-4">
       <div class="row">
         <div class="col-lg-8 col-md-12 mx-auto">
-          <nav aria-label="breadcrumb">
+          <nav aria-label="breadcrumb" class="mb-4">
             <ol class="breadcrumb">
               <li class="breadcrumb-item"><a href="/html/index.html">首页</a></li>
               <li class="breadcrumb-item"><a href="标签列表.html">标签列表</a></li>
@@ -89,66 +145,76 @@
               </li>
             </ol>
           </nav>
-          <h1 style="font-size: 1.5em; margin: 0.5em 0;">
-            伦理挑战标签的文章和资讯
-        </h1>
+          
+          <!-- 标签头部 -->
+          <div class="tag-header">
+              <h1 class="tag-title">
+                  <i class="bi bi-tags me-2"></i>
+                  伦理挑战
+              </h1>
+              <p class="article-count">
+                  共 3 篇文章
+              </p>
+          </div>
+          
           <div class="masonry-grid">
             
               <div class="masonry-grid-item">
-                <div class="card shadow-sm">
+                <div class="card article-card shadow-sm">
                   <div class="card-body">
-                    <h5 class="card-title">
-                      <i class="bi bi-file-earmark-text"></i>
-                      <a href="../mdhtml/科学家发现人类DNA中隐藏的外星文明激活码.html" class="text-decoration-none">
+                    <h5 class="card-title article-title">
+                      <i class="bi bi-file-earmark-text me-2 text-primary"></i>
+                      <a href="../mdhtml/科学家发现人类DNA中隐藏的外星文明激活码.html" class="text-decoration-none text-dark">
                         科学家发现人类DNA中隐藏的外星文明激活码
                       </a>
                     </h5>
                     
-                      <p class="card-text">
+                      <p class="card-text text-muted mb-3">
                         探讨科学家在人类DNA中发现外星文明激活码后，人类社会面临的科学、伦理、哲学和存在主义挑战，以及如何应对这一重大发现带来的影响，包括技术研究、伦理框架、社会适应和人类未来的重新思考。
                       </p>
                       
-                        
-                          <small class="text-muted">
-                            2026-02-24
-                          </small>
-                          
+                        <div class="article-meta">
+                            
+                                <i class="bi bi-clock me-1"></i>
+                                2026-02-24
+                                
+                        </div>
                   </div>
-                  <div class="card-footer text-muted">
+                  <div class="card-footer text-muted bg-white border-top">
                     <a href="/category/%E7%A7%91%E6%8A%80%E5%89%8D%E6%B2%BF.html"
-                      class="badge bg-primary">
+                      class="badge bg-primary me-2">
                       科技前沿
                     </a>
                     
-                      <a href="/tag/DNA%E6%BF%80%E6%B4%BB%E7%A0%81.html" class="badge tag-link">
+                      <a href="/tag/DNA%E6%BF%80%E6%B4%BB%E7%A0%81.html" class="badge tag-link me-2 mb-1">
                         DNA激活码
                       </a>
                       
-                      <a href="/tag/%E5%A4%96%E6%98%9F%E6%96%87%E6%98%8E.html" class="badge tag-link">
+                      <a href="/tag/%E5%A4%96%E6%98%9F%E6%96%87%E6%98%8E.html" class="badge tag-link me-2 mb-1">
                         外星文明
                       </a>
                       
-                      <a href="/tag/%E4%BA%BA%E7%B1%BB%E8%B5%B7%E6%BA%90.html" class="badge tag-link">
+                      <a href="/tag/%E4%BA%BA%E7%B1%BB%E8%B5%B7%E6%BA%90.html" class="badge tag-link me-2 mb-1">
                         人类起源
                       </a>
                       
-                      <a href="/tag/%E7%A7%91%E5%AD%A6%E7%AA%81%E7%A0%B4.html" class="badge tag-link">
+                      <a href="/tag/%E7%A7%91%E5%AD%A6%E7%AA%81%E7%A0%B4.html" class="badge tag-link me-2 mb-1">
                         科学突破
                       </a>
                       
-                      <a href="/tag/%E4%BC%A6%E7%90%86%E6%8C%91%E6%88%98.html" class="badge tag-link">
+                      <a href="/tag/%E4%BC%A6%E7%90%86%E6%8C%91%E6%88%98.html" class="badge tag-link me-2 mb-1">
                         伦理挑战
                       </a>
                       
-                      <a href="/tag/%E5%93%B2%E5%AD%A6%E5%8F%8D%E6%80%9D.html" class="badge tag-link">
+                      <a href="/tag/%E5%93%B2%E5%AD%A6%E5%8F%8D%E6%80%9D.html" class="badge tag-link me-2 mb-1">
                         哲学反思
                       </a>
                       
-                      <a href="/tag/%E5%AD%98%E5%9C%A8%E4%B8%BB%E4%B9%89.html" class="badge tag-link">
+                      <a href="/tag/%E5%AD%98%E5%9C%A8%E4%B8%BB%E4%B9%89.html" class="badge tag-link me-2 mb-1">
                         存在主义
                       </a>
                       
-                      <a href="/tag/%E4%BA%BA%E7%B1%BB%E6%9C%AA%E6%9D%A5.html" class="badge tag-link">
+                      <a href="/tag/%E4%BA%BA%E7%B1%BB%E6%9C%AA%E6%9D%A5.html" class="badge tag-link me-2 mb-1">
                         人类未来
                       </a>
                       
@@ -157,48 +223,49 @@
               </div>
               
               <div class="masonry-grid-item">
-                <div class="card shadow-sm">
+                <div class="card article-card shadow-sm">
                   <div class="card-body">
-                    <h5 class="card-title">
-                      <i class="bi bi-file-earmark-text"></i>
-                      <a href="../mdhtml/太空技术的伦理与社会影响：探索与责任的平衡.html" class="text-decoration-none">
+                    <h5 class="card-title article-title">
+                      <i class="bi bi-file-earmark-text me-2 text-primary"></i>
+                      <a href="../mdhtml/太空技术的伦理与社会影响：探索与责任的平衡.html" class="text-decoration-none text-dark">
                         太空技术的伦理与社会影响：探索与责任的平衡
                       </a>
                     </h5>
                     
-                      <p class="card-text">
+                      <p class="card-text text-muted mb-3">
                         探讨太空技术的发展及其对社会的影响，分析其在探索、资源利用、殖民等方面的伦理挑战，以及未来的发展方向
                       </p>
                       
-                        
-                          <small class="text-muted">
-                            2026-02-24
-                          </small>
-                          
+                        <div class="article-meta">
+                            
+                                <i class="bi bi-clock me-1"></i>
+                                2026-02-24
+                                
+                        </div>
                   </div>
-                  <div class="card-footer text-muted">
+                  <div class="card-footer text-muted bg-white border-top">
                     <a href="/category/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD.html"
-                      class="badge bg-primary">
+                      class="badge bg-primary me-2">
                       人工智能
                     </a>
                     
-                      <a href="/tag/%E5%A4%AA%E7%A9%BA%E6%8A%80%E6%9C%AF.html" class="badge tag-link">
+                      <a href="/tag/%E5%A4%AA%E7%A9%BA%E6%8A%80%E6%9C%AF.html" class="badge tag-link me-2 mb-1">
                         太空技术
                       </a>
                       
-                      <a href="/tag/%E4%BC%A6%E7%90%86%E6%8C%91%E6%88%98.html" class="badge tag-link">
+                      <a href="/tag/%E4%BC%A6%E7%90%86%E6%8C%91%E6%88%98.html" class="badge tag-link me-2 mb-1">
                         伦理挑战
                       </a>
                       
-                      <a href="/tag/%E7%A4%BE%E4%BC%9A%E5%BD%B1%E5%93%8D.html" class="badge tag-link">
+                      <a href="/tag/%E7%A4%BE%E4%BC%9A%E5%BD%B1%E5%93%8D.html" class="badge tag-link me-2 mb-1">
                         社会影响
                       </a>
                       
-                      <a href="/tag/%E5%A4%AA%E7%A9%BA%E6%8E%A2%E7%B4%A2.html" class="badge tag-link">
+                      <a href="/tag/%E5%A4%AA%E7%A9%BA%E6%8E%A2%E7%B4%A2.html" class="badge tag-link me-2 mb-1">
                         太空探索
                       </a>
                       
-                      <a href="/tag/%E5%A4%AA%E7%A9%BA%E6%AE%96%E6%B0%91.html" class="badge tag-link">
+                      <a href="/tag/%E5%A4%AA%E7%A9%BA%E6%AE%96%E6%B0%91.html" class="badge tag-link me-2 mb-1">
                         太空殖民
                       </a>
                       
@@ -207,48 +274,49 @@
               </div>
               
               <div class="masonry-grid-item">
-                <div class="card shadow-sm">
+                <div class="card article-card shadow-sm">
                   <div class="card-body">
-                    <h5 class="card-title">
-                      <i class="bi bi-file-earmark-text"></i>
-                      <a href="../mdhtml/合成生物学的应用与伦理挑战：设计生命的边界.html" class="text-decoration-none">
+                    <h5 class="card-title article-title">
+                      <i class="bi bi-file-earmark-text me-2 text-primary"></i>
+                      <a href="../mdhtml/合成生物学的应用与伦理挑战：设计生命的边界.html" class="text-decoration-none text-dark">
                         合成生物学的应用与伦理挑战：设计生命的边界
                       </a>
                     </h5>
                     
-                      <p class="card-text">
+                      <p class="card-text text-muted mb-3">
                         探讨合成生物学的应用场景，分析其在医药、能源、环境等领域的潜力和伦理挑战，以及未来的发展方向
                       </p>
                       
-                        
-                          <small class="text-muted">
-                            2026-02-24
-                          </small>
-                          
+                        <div class="article-meta">
+                            
+                                <i class="bi bi-clock me-1"></i>
+                                2026-02-24
+                                
+                        </div>
                   </div>
-                  <div class="card-footer text-muted">
+                  <div class="card-footer text-muted bg-white border-top">
                     <a href="/category/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD.html"
-                      class="badge bg-primary">
+                      class="badge bg-primary me-2">
                       人工智能
                     </a>
                     
-                      <a href="/tag/%E5%90%88%E6%88%90%E7%94%9F%E7%89%A9%E5%AD%A6.html" class="badge tag-link">
+                      <a href="/tag/%E5%90%88%E6%88%90%E7%94%9F%E7%89%A9%E5%AD%A6.html" class="badge tag-link me-2 mb-1">
                         合成生物学
                       </a>
                       
-                      <a href="/tag/%E5%9F%BA%E5%9B%A0%E7%BC%96%E8%BE%91.html" class="badge tag-link">
+                      <a href="/tag/%E5%9F%BA%E5%9B%A0%E7%BC%96%E8%BE%91.html" class="badge tag-link me-2 mb-1">
                         基因编辑
                       </a>
                       
-                      <a href="/tag/%E7%94%9F%E7%89%A9%E5%B7%A5%E7%A8%8B.html" class="badge tag-link">
+                      <a href="/tag/%E7%94%9F%E7%89%A9%E5%B7%A5%E7%A8%8B.html" class="badge tag-link me-2 mb-1">
                         生物工程
                       </a>
                       
-                      <a href="/tag/%E4%BC%A6%E7%90%86%E6%8C%91%E6%88%98.html" class="badge tag-link">
+                      <a href="/tag/%E4%BC%A6%E7%90%86%E6%8C%91%E6%88%98.html" class="badge tag-link me-2 mb-1">
                         伦理挑战
                       </a>
                       
-                      <a href="/tag/%E7%94%9F%E7%89%A9%E5%8C%BB%E8%8D%AF.html" class="badge tag-link">
+                      <a href="/tag/%E7%94%9F%E7%89%A9%E5%8C%BB%E8%8D%AF.html" class="badge tag-link me-2 mb-1">
                         生物医药
                       </a>
                       
@@ -258,8 +326,8 @@
               
           </div>
 
-          <div class="mt-4 text-center">
-            <a href="标签列表.html" class="btn btn-outline-primary"><i class="bi bi-arrow-left"></i> 返回标签列表</a>
+          <div class="mt-6 text-center">
+            <a href="标签列表.html" class="btn btn-outline-primary back-button"><i class="bi bi-arrow-left me-2"></i> 返回标签列表</a>
           </div>
         </div>
       </div>
@@ -283,7 +351,7 @@
             itemSelector: '.masonry-grid-item',
             columnWidth: '.masonry-grid-item',
             percentPosition: true,
-            gutter: 10 // 可选，添加卡片间的间距
+            gutter: 15 // 增加间距，提升视觉效果
           });
         });
       </script>

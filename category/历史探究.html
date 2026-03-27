@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
 
 <head>
     <meta charset="UTF-8">
@@ -9,7 +9,7 @@
     <meta name="description" content="无人自助站的【历史探究】分类列表页面，汇集了关于【历史探究】分类的文章和资讯，方便您快速找到感兴趣的内容。">
     <meta name="keywords" content="无人自助站,历史探究">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>分类列表</title>
+    <title>历史探究分类 - 无人自助站</title>
     <link rel="icon" href="../logo.svg" type="image/svg+xml">
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/footer.css">
@@ -27,6 +27,62 @@
     <!-- 引入Masonry -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/masonry/4.2.2/masonry.pkgd.min.js"></script>
 
+    <style>
+        .category-header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 2rem;
+            border-radius: 8px;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        .category-title {
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+        .article-card {
+            transition: all 0.3s ease;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        .article-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+        }
+        .article-title {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            transition: color 0.3s ease;
+        }
+        .article-title:hover {
+            color: #0d6efd;
+        }
+        .article-meta {
+            font-size: 0.85rem;
+            color: #6c757d;
+        }
+        .tag-link {
+            background-color: #e9ecef;
+            color: #495057;
+            transition: all 0.2s ease;
+        }
+        .tag-link:hover {
+            background-color: #dee2e6;
+            color: #212529;
+        }
+        .back-button {
+            transition: all 0.3s ease;
+        }
+        .back-button:hover {
+            transform: translateX(-3px);
+        }
+        .article-count {
+            font-size: 0.9rem;
+            opacity: 0.9;
+        }
+    </style>
 </head>
 
 <body>
@@ -80,7 +136,7 @@
         <main class="container-fluid mt-4">
             <div class="col-lg-8 col-md-12 mx-auto">
                 <!-- 面包屑导航 -->
-                <nav aria-label="breadcrumb">
+                <nav aria-label="breadcrumb" class="mb-4">
                     <ol class="breadcrumb">
                         <li class="breadcrumb-item"><a href="/html/index.html">首页</a></li>
                         <li class="breadcrumb-item"><a href="分类列表.html">分类列表</a></li>
@@ -89,61 +145,71 @@
                         </li>
                     </ol>
                 </nav>
-                <h1 style="font-size: 1.5em; margin: 0.5em 0;">
-                    历史探究分类的文章和资讯
-                </h1>
+                
+                <!-- 分类头部 -->
+                <div class="category-header">
+                    <h1 class="category-title">
+                        <i class="bi bi-folder2 me-2"></i>
+                        历史探究
+                    </h1>
+                    <p class="article-count">
+                        共 6 篇文章
+                    </p>
+                </div>
+                
                 <!-- 分类内容卡片 使用 Masonry 布局 -->
                 <div class="masonry-grid">
                     
                         <div class="masonry-grid-item">
-                            <div class="card shadow-sm">
+                            <div class="card article-card shadow-sm">
                                 <div class="card-body">
-                                    <h5 class="card-title">
-                                        <i class="bi bi-file-earmark-text"></i>
+                                    <h5 class="card-title article-title">
+                                        <i class="bi bi-file-earmark-text me-2 text-primary"></i>
                                         <a href="../mdhtml/谋士为何难成一把手？.html"
-                                            class="text-decoration-none">
+                                            class="text-decoration-none text-dark">
                                             谋士为何难成一把手？
                                         </a>
                                     </h5>
                                     
-                                        <p class="card-text">
+                                        <p class="card-text text-muted mb-3">
                                             深入剖析谋士难以登上权力巅峰成为一把手的原因，涵盖角色定位局限、性格思维差异以及政治环境和人际关系复杂性等方面，探寻这一历史现象背后的奥秘。
                                         </p>
                                         
+                                        <div class="article-meta">
                                             
-                                                <small class="text-muted">
-                                                    2026-02-27
-                                                </small>
+                                                <i class="bi bi-clock me-1"></i>
+                                                2026-02-27
                                                 
+                                        </div>
                                 </div>
-                                <div class="card-footer text-muted">
+                                <div class="card-footer text-muted bg-white border-top">
                                     <a href="/category/%E5%8E%86%E5%8F%B2%E6%8E%A2%E7%A9%B6.html"
-                                        class="badge bg-primary">
+                                        class="badge bg-primary me-2">
                                         历史探究
                                     </a>
                                     
                                         <a href="/tag/%E8%B0%8B%E5%A3%AB.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             谋士
                                         </a>
                                         
                                         <a href="/tag/%E4%B8%80%E6%8A%8A%E6%89%8B.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             一把手
                                         </a>
                                         
                                         <a href="/tag/%E8%A7%92%E8%89%B2%E5%AE%9A%E4%BD%8D.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             角色定位
                                         </a>
                                         
                                         <a href="/tag/%E8%81%8C%E4%B8%9A%E5%8F%91%E5%B1%95.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             职业发展
                                         </a>
                                         
                                         <a href="/tag/%E6%94%BF%E6%B2%BB%E7%8E%AF%E5%A2%83.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             政治环境
                                         </a>
                                         
@@ -152,54 +218,55 @@
                         </div>
                         
                         <div class="masonry-grid-item">
-                            <div class="card shadow-sm">
+                            <div class="card article-card shadow-sm">
                                 <div class="card-body">
-                                    <h5 class="card-title">
-                                        <i class="bi bi-file-earmark-text"></i>
+                                    <h5 class="card-title article-title">
+                                        <i class="bi bi-file-earmark-text me-2 text-primary"></i>
                                         <a href="../mdhtml/历史事件对当今社会和个人有哪些启示？.html"
-                                            class="text-decoration-none">
+                                            class="text-decoration-none text-dark">
                                             历史事件对当今社会和个人有哪些启示？
                                         </a>
                                     </h5>
                                     
-                                        <p class="card-text">
+                                        <p class="card-text text-muted mb-3">
                                             文章探讨了历史事件对当今社会和个人的启示，强调通过研究历史可以发现社会发展规律、避免重复错误，并为个人成长提供宝贵教训和精神力量，以史为鉴，照亮未来发展方向。
                                         </p>
                                         
+                                        <div class="article-meta">
                                             
-                                                <small class="text-muted">
-                                                    2026-02-27
-                                                </small>
+                                                <i class="bi bi-clock me-1"></i>
+                                                2026-02-27
                                                 
+                                        </div>
                                 </div>
-                                <div class="card-footer text-muted">
+                                <div class="card-footer text-muted bg-white border-top">
                                     <a href="/category/%E5%8E%86%E5%8F%B2%E6%8E%A2%E7%A9%B6.html"
-                                        class="badge bg-primary">
+                                        class="badge bg-primary me-2">
                                         历史探究
                                     </a>
                                     
                                         <a href="/tag/%E5%8E%86%E5%8F%B2%E4%BA%8B%E4%BB%B6.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             历史事件
                                         </a>
                                         
                                         <a href="/tag/%E7%A4%BE%E4%BC%9A%E5%BD%B1%E5%93%8D.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             社会影响
                                         </a>
                                         
                                         <a href="/tag/%E8%87%AA%E6%88%91%E6%8F%90%E5%8D%87.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             自我提升
                                         </a>
                                         
                                         <a href="/tag/%E7%BB%8F%E9%AA%8C%E6%95%99%E8%AE%AD.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             经验教训
                                         </a>
                                         
                                         <a href="/tag/%E6%9C%AA%E6%9D%A5%E5%AF%BC%E5%90%91.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             未来导向
                                         </a>
                                         
@@ -208,84 +275,85 @@
                         </div>
                         
                         <div class="masonry-grid-item">
-                            <div class="card shadow-sm">
+                            <div class="card article-card shadow-sm">
                                 <div class="card-body">
-                                    <h5 class="card-title">
-                                        <i class="bi bi-file-earmark-text"></i>
+                                    <h5 class="card-title article-title">
+                                        <i class="bi bi-file-earmark-text me-2 text-primary"></i>
                                         <a href="../mdhtml/历史探究：穿越时空的智慧之旅.html"
-                                            class="text-decoration-none">
+                                            class="text-decoration-none text-dark">
                                             历史探究：穿越时空的智慧指南
                                         </a>
                                     </h5>
                                     
-                                        <p class="card-text">
+                                        <p class="card-text text-muted mb-3">
                                             全面梳理历史探究的核心概念与方法，从古代文明到现代社会的完整历史脉络。深入分析重大历史事件、重要历史人物和关键历史时期，探讨历史对现实的深刻启示，为读者构建从历史知识到历史思维的全方位认知体系。
                                         </p>
                                         
+                                        <div class="article-meta">
                                             
-                                                <small class="text-muted">
-                                                    2026-02-24
-                                                </small>
+                                                <i class="bi bi-clock me-1"></i>
+                                                2026-02-24
                                                 
+                                        </div>
                                 </div>
-                                <div class="card-footer text-muted">
+                                <div class="card-footer text-muted bg-white border-top">
                                     <a href="/category/%E5%8E%86%E5%8F%B2%E6%8E%A2%E7%A9%B6.html"
-                                        class="badge bg-primary">
+                                        class="badge bg-primary me-2">
                                         历史探究
                                     </a>
                                     
                                         <a href="/tag/%E5%8E%86%E5%8F%B2%E6%8E%A2%E7%A9%B6.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             历史探究
                                         </a>
                                         
                                         <a href="/tag/%E5%8F%A4%E4%BB%A3%E6%96%87%E6%98%8E.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             古代文明
                                         </a>
                                         
                                         <a href="/tag/%E5%8E%86%E5%8F%B2%E4%BA%8B%E4%BB%B6.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             历史事件
                                         </a>
                                         
                                         <a href="/tag/%E5%8E%86%E5%8F%B2%E4%BA%BA%E7%89%A9.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             历史人物
                                         </a>
                                         
                                         <a href="/tag/%E6%96%87%E5%8C%96%E4%BC%A0%E6%89%BF.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             文化传承
                                         </a>
                                         
                                         <a href="/tag/%E5%8E%86%E5%8F%B2%E6%95%99%E8%AE%AD.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             历史教训
                                         </a>
                                         
                                         <a href="/tag/%E5%8E%86%E5%8F%B2%E8%B0%9C%E5%9B%A2.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             历史谜团
                                         </a>
                                         
                                         <a href="/tag/%E5%8E%86%E5%8F%B2%E5%BD%B1%E5%93%8D.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             历史影响
                                         </a>
                                         
                                         <a href="/tag/%E5%8E%86%E5%8F%B2%E8%A7%86%E8%A7%92.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             历史视角
                                         </a>
                                         
                                         <a href="/tag/%E5%8E%86%E5%8F%B2%E6%96%B9%E6%B3%95.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             历史方法
                                         </a>
                                         
                                         <a href="/tag/%E5%8E%86%E5%8F%B2%E6%80%9D%E7%BB%B4.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             历史思维
                                         </a>
                                         
@@ -294,54 +362,55 @@
                         </div>
                         
                         <div class="masonry-grid-item">
-                            <div class="card shadow-sm">
+                            <div class="card article-card shadow-sm">
                                 <div class="card-body">
-                                    <h5 class="card-title">
-                                        <i class="bi bi-file-earmark-text"></i>
+                                    <h5 class="card-title article-title">
+                                        <i class="bi bi-file-earmark-text me-2 text-primary"></i>
                                         <a href="../mdhtml/马镫未发明时，骑兵如何作战？.html"
-                                            class="text-decoration-none">
+                                            class="text-decoration-none text-dark">
                                             马镫未发明时，骑兵如何作战？
                                         </a>
                                     </h5>
                                     
-                                        <p class="card-text">
+                                        <p class="card-text text-muted mb-3">
                                             深入探究在马镫未被发明的时代，骑兵如何在战场上凭借骑射战术、冲锋战术、近身搏斗及战术配合等方式奋勇杀敌，揭开古代骑兵作战的神秘面纱。
                                         </p>
                                         
+                                        <div class="article-meta">
                                             
-                                                <small class="text-muted">
-                                                    2026-02-11
-                                                </small>
+                                                <i class="bi bi-clock me-1"></i>
+                                                2026-02-11
                                                 
+                                        </div>
                                 </div>
-                                <div class="card-footer text-muted">
+                                <div class="card-footer text-muted bg-white border-top">
                                     <a href="/category/%E5%8E%86%E5%8F%B2%E6%8E%A2%E7%A9%B6.html"
-                                        class="badge bg-primary">
+                                        class="badge bg-primary me-2">
                                         历史探究
                                     </a>
                                     
                                         <a href="/tag/%E9%AA%91%E5%85%B5.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             骑兵
                                         </a>
                                         
                                         <a href="/tag/%E9%A9%AC%E9%95%AB.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             马镫
                                         </a>
                                         
                                         <a href="/tag/%E9%AA%91%E5%B0%84%E6%88%98%E6%9C%AF.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             骑射战术
                                         </a>
                                         
                                         <a href="/tag/%E5%86%B2%E9%94%8B%E6%88%98%E6%9C%AF.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             冲锋战术
                                         </a>
                                         
                                         <a href="/tag/%E8%BF%91%E8%BA%AB%E6%90%8F%E6%96%97.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             近身搏斗
                                         </a>
                                         
@@ -350,54 +419,55 @@
                         </div>
                         
                         <div class="masonry-grid-item">
-                            <div class="card shadow-sm">
+                            <div class="card article-card shadow-sm">
                                 <div class="card-body">
-                                    <h5 class="card-title">
-                                        <i class="bi bi-file-earmark-text"></i>
+                                    <h5 class="card-title article-title">
+                                        <i class="bi bi-file-earmark-text me-2 text-primary"></i>
                                         <a href="../mdhtml/探秘：第一个喝牛奶的人对牛做了什么？.html"
-                                            class="text-decoration-none">
+                                            class="text-decoration-none text-dark">
                                             探秘：第一个喝牛奶的人对牛做了什么？
                                         </a>
                                     </h5>
                                     
-                                        <p class="card-text">
+                                        <p class="card-text text-muted mb-3">
                                             深入探究人类历史上第一个喝牛奶的人对牛做了什么，全面解析牛奶的起源、早期利用、与牛的关系、社会文化意义以及现代产业发展，带你领略牛奶背后的深厚历史与文化内涵。
                                         </p>
                                         
+                                        <div class="article-meta">
                                             
-                                                <small class="text-muted">
-                                                    2026-02-11
-                                                </small>
+                                                <i class="bi bi-clock me-1"></i>
+                                                2026-02-11
                                                 
+                                        </div>
                                 </div>
-                                <div class="card-footer text-muted">
+                                <div class="card-footer text-muted bg-white border-top">
                                     <a href="/category/%E5%8E%86%E5%8F%B2%E6%8E%A2%E7%A9%B6.html"
-                                        class="badge bg-primary">
+                                        class="badge bg-primary me-2">
                                         历史探究
                                     </a>
                                     
                                         <a href="/tag/%E7%89%9B%E5%A5%B6%E8%B5%B7%E6%BA%90.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             牛奶起源
                                         </a>
                                         
                                         <a href="/tag/%E7%89%9B%E7%9A%84%E9%A9%AF%E5%8C%96.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             牛的驯化
                                         </a>
                                         
                                         <a href="/tag/%E7%89%9B%E5%A5%B6%E5%88%A9%E7%94%A8.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             牛奶利用
                                         </a>
                                         
                                         <a href="/tag/%E7%89%9B%E5%A5%B6%E6%96%87%E5%8C%96.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             牛奶文化
                                         </a>
                                         
                                         <a href="/tag/%E7%89%9B%E5%A5%B6%E4%BA%A7%E4%B8%9A.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             牛奶产业
                                         </a>
                                         
@@ -406,54 +476,55 @@
                         </div>
                         
                         <div class="masonry-grid-item">
-                            <div class="card shadow-sm">
+                            <div class="card article-card shadow-sm">
                                 <div class="card-body">
-                                    <h5 class="card-title">
-                                        <i class="bi bi-file-earmark-text"></i>
+                                    <h5 class="card-title article-title">
+                                        <i class="bi bi-file-earmark-text me-2 text-primary"></i>
                                         <a href="../mdhtml/我们能否从历史中吸取教训，避免重蹈覆辙？.html"
-                                            class="text-decoration-none">
+                                            class="text-decoration-none text-dark">
                                             我们能否从历史中吸取教训，避免重蹈覆辙？
                                         </a>
                                     </h5>
                                     
-                                        <p class="card-text">
+                                        <p class="card-text text-muted mb-3">
                                             探讨人类能否从历史中吸取教训以避免重蹈覆辙，分析了人性弱点如记忆有限和傲慢自大导致的重复错误，并提出系统性学习、反思机制及历史教育等方法论来更好地应用历史经验。文中还列举了日本战后重建和中东冲突的历史案例，强调开放学习与理性面对现实的重要性，以期照亮未来道路。
                                         </p>
                                         
+                                        <div class="article-meta">
                                             
-                                                <small class="text-muted">
-                                                    2026-02-11
-                                                </small>
+                                                <i class="bi bi-clock me-1"></i>
+                                                2026-02-11
                                                 
+                                        </div>
                                 </div>
-                                <div class="card-footer text-muted">
+                                <div class="card-footer text-muted bg-white border-top">
                                     <a href="/category/%E5%8E%86%E5%8F%B2%E6%8E%A2%E7%A9%B6.html"
-                                        class="badge bg-primary">
+                                        class="badge bg-primary me-2">
                                         历史探究
                                     </a>
                                     
                                         <a href="/tag/%E5%8E%86%E5%8F%B2%E5%AD%A6%E4%B9%A0.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             历史学习
                                         </a>
                                         
                                         <a href="/tag/%E4%BA%BA%E6%80%A7%E5%BC%B1%E7%82%B9.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             人性弱点
                                         </a>
                                         
                                         <a href="/tag/%E6%96%B9%E6%B3%95%E8%AE%BA.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             方法论
                                         </a>
                                         
                                         <a href="/tag/%E6%88%90%E5%8A%9F%E6%A1%88%E4%BE%8B.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             成功案例
                                         </a>
                                         
                                         <a href="/tag/%E5%8E%86%E5%8F%B2%E5%8F%8D%E6%80%9D.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             历史反思
                                         </a>
                                         
@@ -464,9 +535,9 @@
                 </div>
 
                 <!-- 返回按钮 -->
-                <div class="mt-4 text-center">
-                    <a href="分类列表.html" class="btn btn-outline-primary">
-                        <i class="bi bi-arrow-left"></i> 返回分类列表
+                <div class="mt-6 text-center">
+                    <a href="分类列表.html" class="btn btn-outline-primary back-button">
+                        <i class="bi bi-arrow-left me-2"></i> 返回分类列表
                     </a>
                 </div>
             </div>
@@ -490,7 +561,7 @@
                         itemSelector: '.masonry-grid-item',
                         columnWidth: '.masonry-grid-item',
                         percentPosition: true,
-                        gutter: 10 // 明确设置 gutter 值为 10px
+                        gutter: 15 // 增加间距，提升视觉效果
                     });
                 });
             </script>

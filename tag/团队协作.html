@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
 
 <head>
   <meta charset="UTF-8">
@@ -9,7 +9,7 @@
   <meta name="description" content="无人自助站的【团队协作】的标签列表页面，汇集了关于【团队协作】标签相关的文章和资讯，方便您快速找到感兴趣的内容。">
   <meta name="keywords" content="无人自助站,团队协作">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>标签文章列表</title>
+  <title>团队协作标签 - 无人自助站</title>
 
   <link rel="icon" href="../logo.svg" type="image/svg+xml">
   <link rel="stylesheet" href="../css/style.css">
@@ -27,6 +27,62 @@
   <!-- 引入Masonry -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/masonry/4.2.2/masonry.pkgd.min.js"></script>
 
+  <style>
+        .tag-header {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            color: white;
+            padding: 2rem;
+            border-radius: 8px;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        .tag-title {
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+        .article-card {
+            transition: all 0.3s ease;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        .article-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+        }
+        .article-title {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            transition: color 0.3s ease;
+        }
+        .article-title:hover {
+            color: #0d6efd;
+        }
+        .article-meta {
+            font-size: 0.85rem;
+            color: #6c757d;
+        }
+        .tag-link {
+            background-color: #e9ecef;
+            color: #495057;
+            transition: all 0.2s ease;
+        }
+        .tag-link:hover {
+            background-color: #dee2e6;
+            color: #212529;
+        }
+        .back-button {
+            transition: all 0.3s ease;
+        }
+        .back-button:hover {
+            transform: translateX(-3px);
+        }
+        .article-count {
+            font-size: 0.9rem;
+            opacity: 0.9;
+        }
+    </style>
 </head>
 
 <body>
@@ -80,7 +136,7 @@
     <main class="container-fluid mt-4">
       <div class="row">
         <div class="col-lg-8 col-md-12 mx-auto">
-          <nav aria-label="breadcrumb">
+          <nav aria-label="breadcrumb" class="mb-4">
             <ol class="breadcrumb">
               <li class="breadcrumb-item"><a href="/html/index.html">首页</a></li>
               <li class="breadcrumb-item"><a href="标签列表.html">标签列表</a></li>
@@ -89,54 +145,64 @@
               </li>
             </ol>
           </nav>
-          <h1 style="font-size: 1.5em; margin: 0.5em 0;">
-            团队协作标签的文章和资讯
-        </h1>
+          
+          <!-- 标签头部 -->
+          <div class="tag-header">
+              <h1 class="tag-title">
+                  <i class="bi bi-tags me-2"></i>
+                  团队协作
+              </h1>
+              <p class="article-count">
+                  共 14 篇文章
+              </p>
+          </div>
+          
           <div class="masonry-grid">
             
               <div class="masonry-grid-item">
-                <div class="card shadow-sm">
+                <div class="card article-card shadow-sm">
                   <div class="card-body">
-                    <h5 class="card-title">
-                      <i class="bi bi-file-earmark-text"></i>
-                      <a href="../mdhtml/元宇宙办公新纪元：2026年虚拟办公室如何提升团队协作.html" class="text-decoration-none">
+                    <h5 class="card-title article-title">
+                      <i class="bi bi-file-earmark-text me-2 text-primary"></i>
+                      <a href="../mdhtml/元宇宙办公新纪元：2026年虚拟办公室如何提升团队协作.html" class="text-decoration-none text-dark">
                         元宇宙办公新纪元：2026年虚拟办公室如何提升团队协作
                       </a>
                     </h5>
                     
-                      <p class="card-text">
+                      <p class="card-text text-muted mb-3">
                         聚焦元宇宙办公的具体应用场景，区别于一般测评，探讨2026年虚拟办公室如何提升团队协作
                       </p>
                       
-                        
-                          <small class="text-muted">
-                            2026-02-28
-                          </small>
-                          
+                        <div class="article-meta">
+                            
+                                <i class="bi bi-clock me-1"></i>
+                                2026-02-28
+                                
+                        </div>
                   </div>
-                  <div class="card-footer text-muted">
+                  <div class="card-footer text-muted bg-white border-top">
                     <a href="/category/%E5%8A%9E%E5%85%AC%E7%A7%91%E6%8A%80.html"
-                      class="badge bg-primary">
+                      class="badge bg-primary me-2">
                       办公科技
                     </a>
                     
-                      <a href="/tag/%E5%85%83%E5%AE%87%E5%AE%99.html" class="badge tag-link">
+                      <a href="/tag/%E5%85%83%E5%AE%87%E5%AE%99.html" class="badge tag-link me-2 mb-1">
                         元宇宙
                       </a>
                       
-                      <a href="/tag/%E8%99%9A%E6%8B%9F%E5%8A%9E%E5%85%AC%E5%AE%A4.html" class="badge tag-link">
+                      <a href="/tag/%E8%99%9A%E6%8B%9F%E5%8A%9E%E5%85%AC%E5%AE%A4.html" class="badge tag-link me-2 mb-1">
                         虚拟办公室
                       </a>
                       
-                      <a href="/tag/%E5%9B%A2%E9%98%9F%E5%8D%8F%E4%BD%9C.html" class="badge tag-link">
+                      <a href="/tag/%E5%9B%A2%E9%98%9F%E5%8D%8F%E4%BD%9C.html" class="badge tag-link me-2 mb-1">
                         团队协作
                       </a>
                       
-                      <a href="/tag/2026.html" class="badge tag-link">
+                      <a href="/tag/2026.html" class="badge tag-link me-2 mb-1">
                         2026
                       </a>
                       
-                      <a href="/tag/%E5%8A%9E%E5%85%AC%E6%95%88%E7%8E%87.html" class="badge tag-link">
+                      <a href="/tag/%E5%8A%9E%E5%85%AC%E6%95%88%E7%8E%87.html" class="badge tag-link me-2 mb-1">
                         办公效率
                       </a>
                       
@@ -145,48 +211,49 @@
               </div>
               
               <div class="masonry-grid-item">
-                <div class="card shadow-sm">
+                <div class="card article-card shadow-sm">
                   <div class="card-body">
-                    <h5 class="card-title">
-                      <i class="bi bi-file-earmark-text"></i>
-                      <a href="../mdhtml/重新审视“一个好汉三个帮”：合作互助的新内涵与新意义.html" class="text-decoration-none">
+                    <h5 class="card-title article-title">
+                      <i class="bi bi-file-earmark-text me-2 text-primary"></i>
+                      <a href="../mdhtml/重新审视“一个好汉三个帮”：合作互助的新内涵与新意义.html" class="text-decoration-none text-dark">
                         重新审视“一个好汉三个帮”：合作互助的新内涵与新意义
                       </a>
                     </h5>
                     
-                      <p class="card-text">
+                      <p class="card-text text-muted mb-3">
                         深入剖析“一个好汉三个帮”在个人成长与社会发展中的新内涵与新意义，探讨如何通过合作互助实现个人与团队的共同成长，推动社会进步。
                       </p>
                       
-                        
-                          <small class="text-muted">
-                            2026-02-27
-                          </small>
-                          
+                        <div class="article-meta">
+                            
+                                <i class="bi bi-clock me-1"></i>
+                                2026-02-27
+                                
+                        </div>
                   </div>
-                  <div class="card-footer text-muted">
+                  <div class="card-footer text-muted bg-white border-top">
                     <a href="/category/%E8%87%AA%E6%88%91%E6%8F%90%E5%8D%87.html"
-                      class="badge bg-primary">
+                      class="badge bg-primary me-2">
                       自我提升
                     </a>
                     
-                      <a href="/tag/%E5%90%88%E4%BD%9C%E4%BA%92%E5%8A%A9.html" class="badge tag-link">
+                      <a href="/tag/%E5%90%88%E4%BD%9C%E4%BA%92%E5%8A%A9.html" class="badge tag-link me-2 mb-1">
                         合作互助
                       </a>
                       
-                      <a href="/tag/%E8%87%AA%E6%88%91%E6%8F%90%E5%8D%87.html" class="badge tag-link">
+                      <a href="/tag/%E8%87%AA%E6%88%91%E6%8F%90%E5%8D%87.html" class="badge tag-link me-2 mb-1">
                         自我提升
                       </a>
                       
-                      <a href="/tag/%E5%9B%A2%E9%98%9F%E5%8D%8F%E4%BD%9C.html" class="badge tag-link">
+                      <a href="/tag/%E5%9B%A2%E9%98%9F%E5%8D%8F%E4%BD%9C.html" class="badge tag-link me-2 mb-1">
                         团队协作
                       </a>
                       
-                      <a href="/tag/%E7%A4%BE%E4%BC%9A%E8%BF%9B%E6%AD%A5.html" class="badge tag-link">
+                      <a href="/tag/%E7%A4%BE%E4%BC%9A%E8%BF%9B%E6%AD%A5.html" class="badge tag-link me-2 mb-1">
                         社会进步
                       </a>
                       
-                      <a href="/tag/%E6%8A%80%E8%83%BD%E4%BA%92%E8%A1%A5.html" class="badge tag-link">
+                      <a href="/tag/%E6%8A%80%E8%83%BD%E4%BA%92%E8%A1%A5.html" class="badge tag-link me-2 mb-1">
                         技能互补
                       </a>
                       
@@ -195,80 +262,81 @@
               </div>
               
               <div class="masonry-grid-item">
-                <div class="card shadow-sm">
+                <div class="card article-card shadow-sm">
                   <div class="card-body">
-                    <h5 class="card-title">
-                      <i class="bi bi-file-earmark-text"></i>
-                      <a href="../mdhtml/远程工作的高效管理：打造灵活且富有成效的工作模式.html" class="text-decoration-none">
+                    <h5 class="card-title article-title">
+                      <i class="bi bi-file-earmark-text me-2 text-primary"></i>
+                      <a href="../mdhtml/远程工作的高效管理：打造灵活且富有成效的工作模式.html" class="text-decoration-none text-dark">
                         远程工作高效管理指南：打造灵活且富有成效的工作模式
                       </a>
                     </h5>
                     
-                      <p class="card-text">
+                      <p class="card-text text-muted mb-3">
                         2024年最新远程工作高效管理指南，从时间管理、团队协作、沟通技巧到工作环境优化，全方位解析远程工作的管理策略，帮助你打造灵活且富有成效的工作模式。
                       </p>
                       
-                        
-                          <small class="text-muted">
-                            2026-02-27
-                          </small>
-                          
+                        <div class="article-meta">
+                            
+                                <i class="bi bi-clock me-1"></i>
+                                2026-02-27
+                                
+                        </div>
                   </div>
-                  <div class="card-footer text-muted">
+                  <div class="card-footer text-muted bg-white border-top">
                     <a href="/category/%E8%81%8C%E4%B8%9A%E5%8F%91%E5%B1%95.html"
-                      class="badge bg-primary">
+                      class="badge bg-primary me-2">
                       职业发展
                     </a>
                     
-                      <a href="/tag/%E8%BF%9C%E7%A8%8B%E5%B7%A5%E4%BD%9C.html" class="badge tag-link">
+                      <a href="/tag/%E8%BF%9C%E7%A8%8B%E5%B7%A5%E4%BD%9C.html" class="badge tag-link me-2 mb-1">
                         远程工作
                       </a>
                       
-                      <a href="/tag/%E9%AB%98%E6%95%88%E7%AE%A1%E7%90%86.html" class="badge tag-link">
+                      <a href="/tag/%E9%AB%98%E6%95%88%E7%AE%A1%E7%90%86.html" class="badge tag-link me-2 mb-1">
                         高效管理
                       </a>
                       
-                      <a href="/tag/%E7%81%B5%E6%B4%BB%E5%B7%A5%E4%BD%9C.html" class="badge tag-link">
+                      <a href="/tag/%E7%81%B5%E6%B4%BB%E5%B7%A5%E4%BD%9C.html" class="badge tag-link me-2 mb-1">
                         灵活工作
                       </a>
                       
-                      <a href="/tag/%E5%B7%A5%E4%BD%9C%E6%A8%A1%E5%BC%8F.html" class="badge tag-link">
+                      <a href="/tag/%E5%B7%A5%E4%BD%9C%E6%A8%A1%E5%BC%8F.html" class="badge tag-link me-2 mb-1">
                         工作模式
                       </a>
                       
-                      <a href="/tag/%E6%97%B6%E9%97%B4%E7%AE%A1%E7%90%86.html" class="badge tag-link">
+                      <a href="/tag/%E6%97%B6%E9%97%B4%E7%AE%A1%E7%90%86.html" class="badge tag-link me-2 mb-1">
                         时间管理
                       </a>
                       
-                      <a href="/tag/%E5%9B%A2%E9%98%9F%E5%8D%8F%E4%BD%9C.html" class="badge tag-link">
+                      <a href="/tag/%E5%9B%A2%E9%98%9F%E5%8D%8F%E4%BD%9C.html" class="badge tag-link me-2 mb-1">
                         团队协作
                       </a>
                       
-                      <a href="/tag/%E6%B2%9F%E9%80%9A%E6%8A%80%E5%B7%A7.html" class="badge tag-link">
+                      <a href="/tag/%E6%B2%9F%E9%80%9A%E6%8A%80%E5%B7%A7.html" class="badge tag-link me-2 mb-1">
                         沟通技巧
                       </a>
                       
-                      <a href="/tag/%E5%B7%A5%E4%BD%9C%E6%95%88%E7%8E%87.html" class="badge tag-link">
+                      <a href="/tag/%E5%B7%A5%E4%BD%9C%E6%95%88%E7%8E%87.html" class="badge tag-link me-2 mb-1">
                         工作效率
                       </a>
                       
-                      <a href="/tag/%E8%BF%9C%E7%A8%8B%E5%9B%A2%E9%98%9F.html" class="badge tag-link">
+                      <a href="/tag/%E8%BF%9C%E7%A8%8B%E5%9B%A2%E9%98%9F.html" class="badge tag-link me-2 mb-1">
                         远程团队
                       </a>
                       
-                      <a href="/tag/%E6%95%B0%E5%AD%97%E5%B7%A5%E5%85%B7.html" class="badge tag-link">
+                      <a href="/tag/%E6%95%B0%E5%AD%97%E5%B7%A5%E5%85%B7.html" class="badge tag-link me-2 mb-1">
                         数字工具
                       </a>
                       
-                      <a href="/tag/%E6%B7%B7%E5%90%88%E5%B7%A5%E4%BD%9C.html" class="badge tag-link">
+                      <a href="/tag/%E6%B7%B7%E5%90%88%E5%B7%A5%E4%BD%9C.html" class="badge tag-link me-2 mb-1">
                         混合工作
                       </a>
                       
-                      <a href="/tag/%E6%95%B0%E5%AD%97%E6%B8%B8%E6%B0%91.html" class="badge tag-link">
+                      <a href="/tag/%E6%95%B0%E5%AD%97%E6%B8%B8%E6%B0%91.html" class="badge tag-link me-2 mb-1">
                         数字游民
                       </a>
                       
-                      <a href="/tag/%E7%94%9F%E6%B4%BB%E5%B9%B3%E8%A1%A1.html" class="badge tag-link">
+                      <a href="/tag/%E7%94%9F%E6%B4%BB%E5%B9%B3%E8%A1%A1.html" class="badge tag-link me-2 mb-1">
                         生活平衡
                       </a>
                       
@@ -277,76 +345,77 @@
               </div>
               
               <div class="masonry-grid-item">
-                <div class="card shadow-sm">
+                <div class="card article-card shadow-sm">
                   <div class="card-body">
-                    <h5 class="card-title">
-                      <i class="bi bi-file-earmark-text"></i>
-                      <a href="../mdhtml/远程工作的高效管理：从工具到文化的构建.html" class="text-decoration-none">
+                    <h5 class="card-title article-title">
+                      <i class="bi bi-file-earmark-text me-2 text-primary"></i>
+                      <a href="../mdhtml/远程工作的高效管理：从工具到文化的构建.html" class="text-decoration-none text-dark">
                         远程工作高效管理指南：从工具选择到文化构建的全面方案
                       </a>
                     </h5>
                     
-                      <p class="card-text">
+                      <p class="card-text text-muted mb-3">
                         2024年最新远程工作高效管理指南，从工具选择、流程优化到文化构建，全方位解析远程工作的管理策略与实践，帮助企业和员工实现高效、灵活、满意的远程工作环境。
                       </p>
                       
-                        
-                          <small class="text-muted">
-                            2026-02-27
-                          </small>
-                          
+                        <div class="article-meta">
+                            
+                                <i class="bi bi-clock me-1"></i>
+                                2026-02-27
+                                
+                        </div>
                   </div>
-                  <div class="card-footer text-muted">
+                  <div class="card-footer text-muted bg-white border-top">
                     <a href="/category/%E8%81%8C%E4%B8%9A%E5%8F%91%E5%B1%95.html"
-                      class="badge bg-primary">
+                      class="badge bg-primary me-2">
                       职业发展
                     </a>
                     
-                      <a href="/tag/%E8%BF%9C%E7%A8%8B%E5%B7%A5%E4%BD%9C.html" class="badge tag-link">
+                      <a href="/tag/%E8%BF%9C%E7%A8%8B%E5%B7%A5%E4%BD%9C.html" class="badge tag-link me-2 mb-1">
                         远程工作
                       </a>
                       
-                      <a href="/tag/%E9%AB%98%E6%95%88%E7%AE%A1%E7%90%86.html" class="badge tag-link">
+                      <a href="/tag/%E9%AB%98%E6%95%88%E7%AE%A1%E7%90%86.html" class="badge tag-link me-2 mb-1">
                         高效管理
                       </a>
                       
-                      <a href="/tag/%E5%B7%A5%E5%85%B7%E9%80%89%E6%8B%A9.html" class="badge tag-link">
+                      <a href="/tag/%E5%B7%A5%E5%85%B7%E9%80%89%E6%8B%A9.html" class="badge tag-link me-2 mb-1">
                         工具选择
                       </a>
                       
-                      <a href="/tag/%E4%BC%81%E4%B8%9A%E6%96%87%E5%8C%96.html" class="badge tag-link">
+                      <a href="/tag/%E4%BC%81%E4%B8%9A%E6%96%87%E5%8C%96.html" class="badge tag-link me-2 mb-1">
                         企业文化
                       </a>
                       
-                      <a href="/tag/%E7%94%9F%E6%B4%BB%E5%B9%B3%E8%A1%A1.html" class="badge tag-link">
+                      <a href="/tag/%E7%94%9F%E6%B4%BB%E5%B9%B3%E8%A1%A1.html" class="badge tag-link me-2 mb-1">
                         生活平衡
                       </a>
                       
-                      <a href="/tag/%E5%9B%A2%E9%98%9F%E5%8D%8F%E4%BD%9C.html" class="badge tag-link">
+                      <a href="/tag/%E5%9B%A2%E9%98%9F%E5%8D%8F%E4%BD%9C.html" class="badge tag-link me-2 mb-1">
                         团队协作
                       </a>
                       
-                      <a href="/tag/%E6%B5%81%E7%A8%8B%E4%BC%98%E5%8C%96.html" class="badge tag-link">
+                      <a href="/tag/%E6%B5%81%E7%A8%8B%E4%BC%98%E5%8C%96.html" class="badge tag-link me-2 mb-1">
                         流程优化
                       </a>
                       
-                      <a href="/tag/%E5%91%98%E5%B7%A5%E6%94%AF%E6%8C%81.html" class="badge tag-link">
+                      <a href="/tag/%E5%91%98%E5%B7%A5%E6%94%AF%E6%8C%81.html" class="badge tag-link me-2 mb-1">
                         员工支持
                       </a>
                       
-                      <a href="/tag/%E6%9C%AA%E6%9D%A5%E5%B7%A5%E4%BD%9C.html" class="badge tag-link">
+                      <a href="/tag/%E6%9C%AA%E6%9D%A5%E5%B7%A5%E4%BD%9C.html" class="badge tag-link me-2 mb-1">
                         未来工作
                       </a>
                       
-                      <a href="/tag/%E6%B7%B7%E5%90%88%E5%B7%A5%E4%BD%9C.html" class="badge tag-link">
+                      <a href="/tag/%E6%B7%B7%E5%90%88%E5%B7%A5%E4%BD%9C.html" class="badge tag-link me-2 mb-1">
                         混合工作
                       </a>
                       
-                      <a href="/tag/%E6%95%B0%E5%AD%97%E5%B7%A5%E5%85%B7.html" class="badge tag-link">
+                      <a href="/tag/%E6%95%B0%E5%AD%97%E5%B7%A5%E5%85%B7.html" class="badge tag-link me-2 mb-1">
                         数字工具
                       </a>
                       
-                      <a href="/tag/%E4%BF%A1%E4%BB%BB%E6%96%87%E5%8C%96.html" class="badge tag-link">
+                      <a href="/tag/%E4%BF%A1%E4%BB%BB%E6%96%87%E5%8C%96.html" class="badge tag-link me-2 mb-1">
                         信任文化
                       </a>
                       
@@ -355,64 +424,65 @@
               </div>
               
               <div class="masonry-grid-item">
-                <div class="card shadow-sm">
+                <div class="card article-card shadow-sm">
                   <div class="card-body">
-                    <h5 class="card-title">
-                      <i class="bi bi-file-earmark-text"></i>
-                      <a href="../mdhtml/职场中的「心理契约」：如何建立互信的工作关系.html" class="text-decoration-none">
+                    <h5 class="card-title article-title">
+                      <i class="bi bi-file-earmark-text me-2 text-primary"></i>
+                      <a href="../mdhtml/职场中的「心理契约」：如何建立互信的工作关系.html" class="text-decoration-none text-dark">
                         职场中的「心理契约」：如何建立互信的工作关系
                       </a>
                     </h5>
                     
-                      <p class="card-text">
+                      <p class="card-text text-muted mb-3">
                         探索职场中「心理契约」的概念、重要性以及如何建立和维护健康的心理契约，从而构建互信、高效的工作关系。
                       </p>
                       
-                        
-                          <small class="text-muted">
-                            2026-02-27
-                          </small>
-                          
+                        <div class="article-meta">
+                            
+                                <i class="bi bi-clock me-1"></i>
+                                2026-02-27
+                                
+                        </div>
                   </div>
-                  <div class="card-footer text-muted">
+                  <div class="card-footer text-muted bg-white border-top">
                     <a href="/category/%E8%81%8C%E4%B8%9A%E5%8F%91%E5%B1%95.html"
-                      class="badge bg-primary">
+                      class="badge bg-primary me-2">
                       职业发展
                     </a>
                     
-                      <a href="/tag/%E5%BF%83%E7%90%86%E5%A5%91%E7%BA%A6.html" class="badge tag-link">
+                      <a href="/tag/%E5%BF%83%E7%90%86%E5%A5%91%E7%BA%A6.html" class="badge tag-link me-2 mb-1">
                         心理契约
                       </a>
                       
-                      <a href="/tag/%E8%81%8C%E5%9C%BA.html" class="badge tag-link">
+                      <a href="/tag/%E8%81%8C%E5%9C%BA.html" class="badge tag-link me-2 mb-1">
                         职场
                       </a>
                       
-                      <a href="/tag/%E4%BF%A1%E4%BB%BB%E5%BB%BA%E7%AB%8B.html" class="badge tag-link">
+                      <a href="/tag/%E4%BF%A1%E4%BB%BB%E5%BB%BA%E7%AB%8B.html" class="badge tag-link me-2 mb-1">
                         信任建立
                       </a>
                       
-                      <a href="/tag/%E6%B2%9F%E9%80%9A%E6%8A%80%E5%B7%A7.html" class="badge tag-link">
+                      <a href="/tag/%E6%B2%9F%E9%80%9A%E6%8A%80%E5%B7%A7.html" class="badge tag-link me-2 mb-1">
                         沟通技巧
                       </a>
                       
-                      <a href="/tag/%E8%81%8C%E4%B8%9A%E5%8F%91%E5%B1%95.html" class="badge tag-link">
+                      <a href="/tag/%E8%81%8C%E4%B8%9A%E5%8F%91%E5%B1%95.html" class="badge tag-link me-2 mb-1">
                         职业发展
                       </a>
                       
-                      <a href="/tag/%E5%9B%A2%E9%98%9F%E5%8D%8F%E4%BD%9C.html" class="badge tag-link">
+                      <a href="/tag/%E5%9B%A2%E9%98%9F%E5%8D%8F%E4%BD%9C.html" class="badge tag-link me-2 mb-1">
                         团队协作
                       </a>
                       
-                      <a href="/tag/%E9%A2%86%E5%AF%BC%E5%8A%9B.html" class="badge tag-link">
+                      <a href="/tag/%E9%A2%86%E5%AF%BC%E5%8A%9B.html" class="badge tag-link me-2 mb-1">
                         领导力
                       </a>
                       
-                      <a href="/tag/%E5%B7%A5%E4%BD%9C%E6%BB%A1%E6%84%8F%E5%BA%A6.html" class="badge tag-link">
+                      <a href="/tag/%E5%B7%A5%E4%BD%9C%E6%BB%A1%E6%84%8F%E5%BA%A6.html" class="badge tag-link me-2 mb-1">
                         工作满意度
                       </a>
                       
-                      <a href="/tag/%E5%BF%83%E7%90%86%E5%81%A5%E5%BA%B7.html" class="badge tag-link">
+                      <a href="/tag/%E5%BF%83%E7%90%86%E5%81%A5%E5%BA%B7.html" class="badge tag-link me-2 mb-1">
                         心理健康
                       </a>
                       
@@ -421,68 +491,69 @@
               </div>
               
               <div class="masonry-grid-item">
-                <div class="card shadow-sm">
+                <div class="card article-card shadow-sm">
                   <div class="card-body">
-                    <h5 class="card-title">
-                      <i class="bi bi-file-earmark-text"></i>
-                      <a href="../mdhtml/如何应对职场中的办公室政治？实用策略指南.html" class="text-decoration-none">
+                    <h5 class="card-title article-title">
+                      <i class="bi bi-file-earmark-text me-2 text-primary"></i>
+                      <a href="../mdhtml/如何应对职场中的办公室政治？实用策略指南.html" class="text-decoration-none text-dark">
                         办公室政治生存指南：从被动应对到主动掌控
                       </a>
                     </h5>
                     
-                      <p class="card-text">
+                      <p class="card-text text-muted mb-3">
                         全面解析办公室政治的本质与应对策略，从识别政治行为模式到构建个人影响力网络，提供具体的沟通技巧、联盟建立方法和危机处理策略，帮助职场人士在复杂的组织环境中实现职业目标，同时保持个人价值观。
                       </p>
                       
-                        
-                          <small class="text-muted">
-                            2026-02-24
-                          </small>
-                          
+                        <div class="article-meta">
+                            
+                                <i class="bi bi-clock me-1"></i>
+                                2026-02-24
+                                
+                        </div>
                   </div>
-                  <div class="card-footer text-muted">
+                  <div class="card-footer text-muted bg-white border-top">
                     <a href="/category/%E8%81%8C%E4%B8%9A%E5%8F%91%E5%B1%95.html"
-                      class="badge bg-primary">
+                      class="badge bg-primary me-2">
                       职业发展
                     </a>
                     
-                      <a href="/tag/%E5%8A%9E%E5%85%AC%E5%AE%A4%E6%94%BF%E6%B2%BB.html" class="badge tag-link">
+                      <a href="/tag/%E5%8A%9E%E5%85%AC%E5%AE%A4%E6%94%BF%E6%B2%BB.html" class="badge tag-link me-2 mb-1">
                         办公室政治
                       </a>
                       
-                      <a href="/tag/%E8%81%8C%E5%9C%BA%E7%94%9F%E5%AD%98.html" class="badge tag-link">
+                      <a href="/tag/%E8%81%8C%E5%9C%BA%E7%94%9F%E5%AD%98.html" class="badge tag-link me-2 mb-1">
                         职场生存
                       </a>
                       
-                      <a href="/tag/%E4%BA%BA%E9%99%85%E5%85%B3%E7%B3%BB.html" class="badge tag-link">
+                      <a href="/tag/%E4%BA%BA%E9%99%85%E5%85%B3%E7%B3%BB.html" class="badge tag-link me-2 mb-1">
                         人际关系
                       </a>
                       
-                      <a href="/tag/%E8%81%8C%E5%9C%BA%E7%AD%96%E7%95%A5.html" class="badge tag-link">
+                      <a href="/tag/%E8%81%8C%E5%9C%BA%E7%AD%96%E7%95%A5.html" class="badge tag-link me-2 mb-1">
                         职场策略
                       </a>
                       
-                      <a href="/tag/%E6%B2%9F%E9%80%9A%E6%8A%80%E5%B7%A7.html" class="badge tag-link">
+                      <a href="/tag/%E6%B2%9F%E9%80%9A%E6%8A%80%E5%B7%A7.html" class="badge tag-link me-2 mb-1">
                         沟通技巧
                       </a>
                       
-                      <a href="/tag/%E8%81%8C%E5%9C%BA%E6%99%8B%E5%8D%87.html" class="badge tag-link">
+                      <a href="/tag/%E8%81%8C%E5%9C%BA%E6%99%8B%E5%8D%87.html" class="badge tag-link me-2 mb-1">
                         职场晋升
                       </a>
                       
-                      <a href="/tag/%E5%9B%A2%E9%98%9F%E5%8D%8F%E4%BD%9C.html" class="badge tag-link">
+                      <a href="/tag/%E5%9B%A2%E9%98%9F%E5%8D%8F%E4%BD%9C.html" class="badge tag-link me-2 mb-1">
                         团队协作
                       </a>
                       
-                      <a href="/tag/%E8%81%8C%E5%9C%BA%E5%BF%83%E7%90%86.html" class="badge tag-link">
+                      <a href="/tag/%E8%81%8C%E5%9C%BA%E5%BF%83%E7%90%86.html" class="badge tag-link me-2 mb-1">
                         职场心理
                       </a>
                       
-                      <a href="/tag/%E8%81%8C%E5%9C%BA%E6%96%87%E5%8C%96.html" class="badge tag-link">
+                      <a href="/tag/%E8%81%8C%E5%9C%BA%E6%96%87%E5%8C%96.html" class="badge tag-link me-2 mb-1">
                         职场文化
                       </a>
                       
-                      <a href="/tag/%E8%81%8C%E5%9C%BA%E6%99%BA%E6%85%A7.html" class="badge tag-link">
+                      <a href="/tag/%E8%81%8C%E5%9C%BA%E6%99%BA%E6%85%A7.html" class="badge tag-link me-2 mb-1">
                         职场智慧
                       </a>
                       
@@ -491,48 +562,49 @@
               </div>
               
               <div class="masonry-grid-item">
-                <div class="card shadow-sm">
+                <div class="card article-card shadow-sm">
                   <div class="card-body">
-                    <h5 class="card-title">
-                      <i class="bi bi-file-earmark-text"></i>
-                      <a href="../mdhtml/项目管理中的软技能：超越技术的成功关键.html" class="text-decoration-none">
+                    <h5 class="card-title article-title">
+                      <i class="bi bi-file-earmark-text me-2 text-primary"></i>
+                      <a href="../mdhtml/项目管理中的软技能：超越技术的成功关键.html" class="text-decoration-none text-dark">
                         项目管理中的软技能：超越技术的成功关键
                       </a>
                     </h5>
                     
-                      <p class="card-text">
+                      <p class="card-text text-muted mb-3">
                         深入探讨项目管理中的核心软技能、培养方法和应用场景，帮助从业者提升领导力、沟通能力和团队协作能力。
                       </p>
                       
-                        
-                          <small class="text-muted">
-                            2026-02-24
-                          </small>
-                          
+                        <div class="article-meta">
+                            
+                                <i class="bi bi-clock me-1"></i>
+                                2026-02-24
+                                
+                        </div>
                   </div>
-                  <div class="card-footer text-muted">
+                  <div class="card-footer text-muted bg-white border-top">
                     <a href="/category/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86.html"
-                      class="badge bg-primary">
+                      class="badge bg-primary me-2">
                       项目管理
                     </a>
                     
-                      <a href="/tag/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86.html" class="badge tag-link">
+                      <a href="/tag/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86.html" class="badge tag-link me-2 mb-1">
                         项目管理
                       </a>
                       
-                      <a href="/tag/%E8%BD%AF%E6%8A%80%E8%83%BD.html" class="badge tag-link">
+                      <a href="/tag/%E8%BD%AF%E6%8A%80%E8%83%BD.html" class="badge tag-link me-2 mb-1">
                         软技能
                       </a>
                       
-                      <a href="/tag/%E9%A2%86%E5%AF%BC%E5%8A%9B.html" class="badge tag-link">
+                      <a href="/tag/%E9%A2%86%E5%AF%BC%E5%8A%9B.html" class="badge tag-link me-2 mb-1">
                         领导力
                       </a>
                       
-                      <a href="/tag/%E6%B2%9F%E9%80%9A%E8%83%BD%E5%8A%9B.html" class="badge tag-link">
+                      <a href="/tag/%E6%B2%9F%E9%80%9A%E8%83%BD%E5%8A%9B.html" class="badge tag-link me-2 mb-1">
                         沟通能力
                       </a>
                       
-                      <a href="/tag/%E5%9B%A2%E9%98%9F%E5%8D%8F%E4%BD%9C.html" class="badge tag-link">
+                      <a href="/tag/%E5%9B%A2%E9%98%9F%E5%8D%8F%E4%BD%9C.html" class="badge tag-link me-2 mb-1">
                         团队协作
                       </a>
                       
@@ -541,68 +613,69 @@
               </div>
               
               <div class="masonry-grid-item">
-                <div class="card shadow-sm">
+                <div class="card article-card shadow-sm">
                   <div class="card-body">
-                    <h5 class="card-title">
-                      <i class="bi bi-file-earmark-text"></i>
-                      <a href="../mdhtml/职场软技能：从职场生存到职业突破的核心竞争力.html" class="text-decoration-none">
+                    <h5 class="card-title article-title">
+                      <i class="bi bi-file-earmark-text me-2 text-primary"></i>
+                      <a href="../mdhtml/职场软技能：从职场生存到职业突破的核心竞争力.html" class="text-decoration-none text-dark">
                         职场软技能：从职场生存到职业突破的核心竞争力
                       </a>
                     </h5>
                     
-                      <p class="card-text">
+                      <p class="card-text text-muted mb-3">
                         全面解析职场软技能的核心要素与提升策略。深入分析沟通、团队协作、领导力、情商等关键软技能的重要性，提供从自我认知到实战应用的具体方法，帮助职场人士从基础生存到职业突破，成为团队中不可替代的核心资产。
                       </p>
                       
-                        
-                          <small class="text-muted">
-                            2026-02-24
-                          </small>
-                          
+                        <div class="article-meta">
+                            
+                                <i class="bi bi-clock me-1"></i>
+                                2026-02-24
+                                
+                        </div>
                   </div>
-                  <div class="card-footer text-muted">
+                  <div class="card-footer text-muted bg-white border-top">
                     <a href="/category/%E8%81%8C%E4%B8%9A%E5%8F%91%E5%B1%95.html"
-                      class="badge bg-primary">
+                      class="badge bg-primary me-2">
                       职业发展
                     </a>
                     
-                      <a href="/tag/%E8%81%8C%E5%9C%BA%E8%BD%AF%E6%8A%80%E8%83%BD.html" class="badge tag-link">
+                      <a href="/tag/%E8%81%8C%E5%9C%BA%E8%BD%AF%E6%8A%80%E8%83%BD.html" class="badge tag-link me-2 mb-1">
                         职场软技能
                       </a>
                       
-                      <a href="/tag/%E6%B2%9F%E9%80%9A%E6%8A%80%E5%B7%A7.html" class="badge tag-link">
+                      <a href="/tag/%E6%B2%9F%E9%80%9A%E6%8A%80%E5%B7%A7.html" class="badge tag-link me-2 mb-1">
                         沟通技巧
                       </a>
                       
-                      <a href="/tag/%E5%9B%A2%E9%98%9F%E5%8D%8F%E4%BD%9C.html" class="badge tag-link">
+                      <a href="/tag/%E5%9B%A2%E9%98%9F%E5%8D%8F%E4%BD%9C.html" class="badge tag-link me-2 mb-1">
                         团队协作
                       </a>
                       
-                      <a href="/tag/%E9%A2%86%E5%AF%BC%E5%8A%9B.html" class="badge tag-link">
+                      <a href="/tag/%E9%A2%86%E5%AF%BC%E5%8A%9B.html" class="badge tag-link me-2 mb-1">
                         领导力
                       </a>
                       
-                      <a href="/tag/%E6%83%85%E5%95%86.html" class="badge tag-link">
+                      <a href="/tag/%E6%83%85%E5%95%86.html" class="badge tag-link me-2 mb-1">
                         情商
                       </a>
                       
-                      <a href="/tag/%E8%81%8C%E4%B8%9A%E5%8F%91%E5%B1%95.html" class="badge tag-link">
+                      <a href="/tag/%E8%81%8C%E4%B8%9A%E5%8F%91%E5%B1%95.html" class="badge tag-link me-2 mb-1">
                         职业发展
                       </a>
                       
-                      <a href="/tag/%E4%BA%BA%E9%99%85%E5%85%B3%E7%B3%BB.html" class="badge tag-link">
+                      <a href="/tag/%E4%BA%BA%E9%99%85%E5%85%B3%E7%B3%BB.html" class="badge tag-link me-2 mb-1">
                         人际关系
                       </a>
                       
-                      <a href="/tag/%E8%81%8C%E5%9C%BA%E6%88%90%E5%8A%9F.html" class="badge tag-link">
+                      <a href="/tag/%E8%81%8C%E5%9C%BA%E6%88%90%E5%8A%9F.html" class="badge tag-link me-2 mb-1">
                         职场成功
                       </a>
                       
-                      <a href="/tag/%E8%87%AA%E6%88%91%E6%8F%90%E5%8D%87.html" class="badge tag-link">
+                      <a href="/tag/%E8%87%AA%E6%88%91%E6%8F%90%E5%8D%87.html" class="badge tag-link me-2 mb-1">
                         自我提升
                       </a>
                       
-                      <a href="/tag/%E8%81%8C%E5%9C%BA%E7%94%9F%E5%AD%98.html" class="badge tag-link">
+                      <a href="/tag/%E8%81%8C%E5%9C%BA%E7%94%9F%E5%AD%98.html" class="badge tag-link me-2 mb-1">
                         职场生存
                       </a>
                       
@@ -611,68 +684,69 @@
               </div>
               
               <div class="masonry-grid-item">
-                <div class="card shadow-sm">
+                <div class="card article-card shadow-sm">
                   <div class="card-body">
-                    <h5 class="card-title">
-                      <i class="bi bi-file-earmark-text"></i>
-                      <a href="../mdhtml/职场沟通的艺术：如何有效表达和倾听.html" class="text-decoration-none">
+                    <h5 class="card-title article-title">
+                      <i class="bi bi-file-earmark-text me-2 text-primary"></i>
+                      <a href="../mdhtml/职场沟通的艺术：如何有效表达和倾听.html" class="text-decoration-none text-dark">
                         职场沟通的艺术：如何有效表达和倾听
                       </a>
                     </h5>
                     
-                      <p class="card-text">
+                      <p class="card-text text-muted mb-3">
                         深入探讨职场沟通的重要性，提供有效表达和积极倾听的具体方法，帮助你在工作中建立良好的人际关系，提升团队协作效率，实现职场成功。
                       </p>
                       
-                        
-                          <small class="text-muted">
-                            2026-02-24
-                          </small>
-                          
+                        <div class="article-meta">
+                            
+                                <i class="bi bi-clock me-1"></i>
+                                2026-02-24
+                                
+                        </div>
                   </div>
-                  <div class="card-footer text-muted">
+                  <div class="card-footer text-muted bg-white border-top">
                     <a href="/category/%E8%81%8C%E4%B8%9A%E5%8F%91%E5%B1%95.html"
-                      class="badge bg-primary">
+                      class="badge bg-primary me-2">
                       职业发展
                     </a>
                     
-                      <a href="/tag/%E8%81%8C%E5%9C%BA%E6%B2%9F%E9%80%9A.html" class="badge tag-link">
+                      <a href="/tag/%E8%81%8C%E5%9C%BA%E6%B2%9F%E9%80%9A.html" class="badge tag-link me-2 mb-1">
                         职场沟通
                       </a>
                       
-                      <a href="/tag/%E6%9C%89%E6%95%88%E8%A1%A8%E8%BE%BE.html" class="badge tag-link">
+                      <a href="/tag/%E6%9C%89%E6%95%88%E8%A1%A8%E8%BE%BE.html" class="badge tag-link me-2 mb-1">
                         有效表达
                       </a>
                       
-                      <a href="/tag/%E7%A7%AF%E6%9E%81%E5%80%BE%E5%90%AC.html" class="badge tag-link">
+                      <a href="/tag/%E7%A7%AF%E6%9E%81%E5%80%BE%E5%90%AC.html" class="badge tag-link me-2 mb-1">
                         积极倾听
                       </a>
                       
-                      <a href="/tag/%E6%B2%9F%E9%80%9A%E6%8A%80%E5%B7%A7.html" class="badge tag-link">
+                      <a href="/tag/%E6%B2%9F%E9%80%9A%E6%8A%80%E5%B7%A7.html" class="badge tag-link me-2 mb-1">
                         沟通技巧
                       </a>
                       
-                      <a href="/tag/%E4%BA%BA%E9%99%85%E5%85%B3%E7%B3%BB.html" class="badge tag-link">
+                      <a href="/tag/%E4%BA%BA%E9%99%85%E5%85%B3%E7%B3%BB.html" class="badge tag-link me-2 mb-1">
                         人际关系
                       </a>
                       
-                      <a href="/tag/%E5%9B%A2%E9%98%9F%E5%8D%8F%E4%BD%9C.html" class="badge tag-link">
+                      <a href="/tag/%E5%9B%A2%E9%98%9F%E5%8D%8F%E4%BD%9C.html" class="badge tag-link me-2 mb-1">
                         团队协作
                       </a>
                       
-                      <a href="/tag/%E5%86%B2%E7%AA%81%E8%A7%A3%E5%86%B3.html" class="badge tag-link">
+                      <a href="/tag/%E5%86%B2%E7%AA%81%E8%A7%A3%E5%86%B3.html" class="badge tag-link me-2 mb-1">
                         冲突解决
                       </a>
                       
-                      <a href="/tag/%E9%9D%9E%E8%AF%AD%E8%A8%80%E6%B2%9F%E9%80%9A.html" class="badge tag-link">
+                      <a href="/tag/%E9%9D%9E%E8%AF%AD%E8%A8%80%E6%B2%9F%E9%80%9A.html" class="badge tag-link me-2 mb-1">
                         非语言沟通
                       </a>
                       
-                      <a href="/tag/%E5%8F%8D%E9%A6%88%E6%8A%80%E5%B7%A7.html" class="badge tag-link">
+                      <a href="/tag/%E5%8F%8D%E9%A6%88%E6%8A%80%E5%B7%A7.html" class="badge tag-link me-2 mb-1">
                         反馈技巧
                       </a>
                       
-                      <a href="/tag/%E8%81%8C%E5%9C%BA%E6%88%90%E5%8A%9F.html" class="badge tag-link">
+                      <a href="/tag/%E8%81%8C%E5%9C%BA%E6%88%90%E5%8A%9F.html" class="badge tag-link me-2 mb-1">
                         职场成功
                       </a>
                       
@@ -681,48 +755,49 @@
               </div>
               
               <div class="masonry-grid-item">
-                <div class="card shadow-sm">
+                <div class="card article-card shadow-sm">
                   <div class="card-body">
-                    <h5 class="card-title">
-                      <i class="bi bi-file-earmark-text"></i>
-                      <a href="../mdhtml/滥竽充数：被误读的团队协作智慧.html" class="text-decoration-none">
+                    <h5 class="card-title article-title">
+                      <i class="bi bi-file-earmark-text me-2 text-primary"></i>
+                      <a href="../mdhtml/滥竽充数：被误读的团队协作智慧.html" class="text-decoration-none text-dark">
                         滥竽充数：被误读的团队协作智慧
                       </a>
                     </h5>
                     
-                      <p class="card-text">
+                      <p class="card-text text-muted mb-3">
                         本文以现代团队协作视角重新解读经典寓言《滥竽充数》，揭示了其中蕴含的团队管理与个人能力发展智慧。文章探讨了南郭先生困境的现代映射，分析了团队中的能力评估偏差，并阐述了高效团队建设的实践框架。此外，还讨论了南郭先生行为的潜在价值以及这一古老寓言对现代社会在团队管理、个人发展、组织文化等方面的启示。适合对团队管理、能力评估、组织发展感兴趣的读者，以及希望提升团队效能的人士。
                       </p>
                       
-                        
-                          <small class="text-muted">
-                            2026-02-24
-                          </small>
-                          
+                        <div class="article-meta">
+                            
+                                <i class="bi bi-clock me-1"></i>
+                                2026-02-24
+                                
+                        </div>
                   </div>
-                  <div class="card-footer text-muted">
+                  <div class="card-footer text-muted bg-white border-top">
                     <a href="/category/%E4%BC%A0%E7%BB%9F%E6%96%87%E5%8C%96.html"
-                      class="badge bg-primary">
+                      class="badge bg-primary me-2">
                       传统文化
                     </a>
                     
-                      <a href="/tag/%E5%AF%93%E8%A8%80%E8%A7%A3%E6%9E%90.html" class="badge tag-link">
+                      <a href="/tag/%E5%AF%93%E8%A8%80%E8%A7%A3%E6%9E%90.html" class="badge tag-link me-2 mb-1">
                         寓言解析
                       </a>
                       
-                      <a href="/tag/%E5%9B%A2%E9%98%9F%E5%8D%8F%E4%BD%9C.html" class="badge tag-link">
+                      <a href="/tag/%E5%9B%A2%E9%98%9F%E5%8D%8F%E4%BD%9C.html" class="badge tag-link me-2 mb-1">
                         团队协作
                       </a>
                       
-                      <a href="/tag/%E8%83%BD%E5%8A%9B%E8%AF%84%E4%BC%B0.html" class="badge tag-link">
+                      <a href="/tag/%E8%83%BD%E5%8A%9B%E8%AF%84%E4%BC%B0.html" class="badge tag-link me-2 mb-1">
                         能力评估
                       </a>
                       
-                      <a href="/tag/%E7%BB%84%E7%BB%87%E7%AE%A1%E7%90%86.html" class="badge tag-link">
+                      <a href="/tag/%E7%BB%84%E7%BB%87%E7%AE%A1%E7%90%86.html" class="badge tag-link me-2 mb-1">
                         组织管理
                       </a>
                       
-                      <a href="/tag/%E7%8E%B0%E4%BB%A3%E5%90%AF%E7%A4%BA.html" class="badge tag-link">
+                      <a href="/tag/%E7%8E%B0%E4%BB%A3%E5%90%AF%E7%A4%BA.html" class="badge tag-link me-2 mb-1">
                         现代启示
                       </a>
                       
@@ -731,60 +806,61 @@
               </div>
               
               <div class="masonry-grid-item">
-                <div class="card shadow-sm">
+                <div class="card article-card shadow-sm">
                   <div class="card-body">
-                    <h5 class="card-title">
-                      <i class="bi bi-file-earmark-text"></i>
-                      <a href="../mdhtml/混合项目管理：结合传统与敏捷的最佳实践.html" class="text-decoration-none">
+                    <h5 class="card-title article-title">
+                      <i class="bi bi-file-earmark-text me-2 text-primary"></i>
+                      <a href="../mdhtml/混合项目管理：结合传统与敏捷的最佳实践.html" class="text-decoration-none text-dark">
                         混合项目管理：结合传统与敏捷的最佳实践
                       </a>
                     </h5>
                     
-                      <p class="card-text">
+                      <p class="card-text text-muted mb-3">
                         深入探讨混合项目管理的核心概念、原则、方法、实践策略和实施路径，帮助组织和项目经理结合传统与敏捷方法的优势，灵活应对复杂项目环境，提高项目成功率和价值交付能力。
                       </p>
                       
-                        
-                          <small class="text-muted">
-                            2026-02-24
-                          </small>
-                          
+                        <div class="article-meta">
+                            
+                                <i class="bi bi-clock me-1"></i>
+                                2026-02-24
+                                
+                        </div>
                   </div>
-                  <div class="card-footer text-muted">
+                  <div class="card-footer text-muted bg-white border-top">
                     <a href="/category/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86.html"
-                      class="badge bg-primary">
+                      class="badge bg-primary me-2">
                       项目管理
                     </a>
                     
-                      <a href="/tag/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86.html" class="badge tag-link">
+                      <a href="/tag/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86.html" class="badge tag-link me-2 mb-1">
                         项目管理
                       </a>
                       
-                      <a href="/tag/%E6%B7%B7%E5%90%88%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86.html" class="badge tag-link">
+                      <a href="/tag/%E6%B7%B7%E5%90%88%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86.html" class="badge tag-link me-2 mb-1">
                         混合项目管理
                       </a>
                       
-                      <a href="/tag/%E7%80%91%E5%B8%83%E6%A8%A1%E5%9E%8B.html" class="badge tag-link">
+                      <a href="/tag/%E7%80%91%E5%B8%83%E6%A8%A1%E5%9E%8B.html" class="badge tag-link me-2 mb-1">
                         瀑布模型
                       </a>
                       
-                      <a href="/tag/%E6%95%8F%E6%8D%B7%E6%96%B9%E6%B3%95.html" class="badge tag-link">
+                      <a href="/tag/%E6%95%8F%E6%8D%B7%E6%96%B9%E6%B3%95.html" class="badge tag-link me-2 mb-1">
                         敏捷方法
                       </a>
                       
-                      <a href="/tag/%E9%A1%B9%E7%9B%AE%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F.html" class="badge tag-link">
+                      <a href="/tag/%E9%A1%B9%E7%9B%AE%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F.html" class="badge tag-link me-2 mb-1">
                         项目生命周期
                       </a>
                       
-                      <a href="/tag/%E9%A3%8E%E9%99%A9%E7%AE%A1%E7%90%86.html" class="badge tag-link">
+                      <a href="/tag/%E9%A3%8E%E9%99%A9%E7%AE%A1%E7%90%86.html" class="badge tag-link me-2 mb-1">
                         风险管理
                       </a>
                       
-                      <a href="/tag/%E5%9B%A2%E9%98%9F%E5%8D%8F%E4%BD%9C.html" class="badge tag-link">
+                      <a href="/tag/%E5%9B%A2%E9%98%9F%E5%8D%8F%E4%BD%9C.html" class="badge tag-link me-2 mb-1">
                         团队协作
                       </a>
                       
-                      <a href="/tag/%E6%B7%B7%E5%90%88%E6%96%B9%E6%B3%95%E8%AE%BA.html" class="badge tag-link">
+                      <a href="/tag/%E6%B7%B7%E5%90%88%E6%96%B9%E6%B3%95%E8%AE%BA.html" class="badge tag-link me-2 mb-1">
                         混合方法论
                       </a>
                       
@@ -793,60 +869,61 @@
               </div>
               
               <div class="masonry-grid-item">
-                <div class="card shadow-sm">
+                <div class="card article-card shadow-sm">
                   <div class="card-body">
-                    <h5 class="card-title">
-                      <i class="bi bi-file-earmark-text"></i>
-                      <a href="../mdhtml/敏捷项目管理：灵活应对变化的高效方法.html" class="text-decoration-none">
+                    <h5 class="card-title article-title">
+                      <i class="bi bi-file-earmark-text me-2 text-primary"></i>
+                      <a href="../mdhtml/敏捷项目管理：灵活应对变化的高效方法.html" class="text-decoration-none text-dark">
                         敏捷项目管理：灵活应对变化的高效方法
                       </a>
                     </h5>
                     
-                      <p class="card-text">
+                      <p class="card-text text-muted mb-3">
                         深入探讨敏捷项目管理的核心概念、原则、方法、实践策略和转型路径，帮助组织和项目经理掌握敏捷方法，灵活应对变化，提高项目成功率和价值交付能力。
                       </p>
                       
-                        
-                          <small class="text-muted">
-                            2026-02-24
-                          </small>
-                          
+                        <div class="article-meta">
+                            
+                                <i class="bi bi-clock me-1"></i>
+                                2026-02-24
+                                
+                        </div>
                   </div>
-                  <div class="card-footer text-muted">
+                  <div class="card-footer text-muted bg-white border-top">
                     <a href="/category/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86.html"
-                      class="badge bg-primary">
+                      class="badge bg-primary me-2">
                       项目管理
                     </a>
                     
-                      <a href="/tag/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86.html" class="badge tag-link">
+                      <a href="/tag/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86.html" class="badge tag-link me-2 mb-1">
                         项目管理
                       </a>
                       
-                      <a href="/tag/%E6%95%8F%E6%8D%B7%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86.html" class="badge tag-link">
+                      <a href="/tag/%E6%95%8F%E6%8D%B7%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86.html" class="badge tag-link me-2 mb-1">
                         敏捷项目管理
                       </a>
                       
-                      <a href="/tag/Scrum.html" class="badge tag-link">
+                      <a href="/tag/Scrum.html" class="badge tag-link me-2 mb-1">
                         Scrum
                       </a>
                       
-                      <a href="/tag/Kanban.html" class="badge tag-link">
+                      <a href="/tag/Kanban.html" class="badge tag-link me-2 mb-1">
                         Kanban
                       </a>
                       
-                      <a href="/tag/%E8%BF%AD%E4%BB%A3%E5%BC%80%E5%8F%91.html" class="badge tag-link">
+                      <a href="/tag/%E8%BF%AD%E4%BB%A3%E5%BC%80%E5%8F%91.html" class="badge tag-link me-2 mb-1">
                         迭代开发
                       </a>
                       
-                      <a href="/tag/%E6%8C%81%E7%BB%AD%E4%BA%A4%E4%BB%98.html" class="badge tag-link">
+                      <a href="/tag/%E6%8C%81%E7%BB%AD%E4%BA%A4%E4%BB%98.html" class="badge tag-link me-2 mb-1">
                         持续交付
                       </a>
                       
-                      <a href="/tag/%E5%9B%A2%E9%98%9F%E5%8D%8F%E4%BD%9C.html" class="badge tag-link">
+                      <a href="/tag/%E5%9B%A2%E9%98%9F%E5%8D%8F%E4%BD%9C.html" class="badge tag-link me-2 mb-1">
                         团队协作
                       </a>
                       
-                      <a href="/tag/%E6%95%8F%E6%8D%B7%E8%BD%AC%E5%9E%8B.html" class="badge tag-link">
+                      <a href="/tag/%E6%95%8F%E6%8D%B7%E8%BD%AC%E5%9E%8B.html" class="badge tag-link me-2 mb-1">
                         敏捷转型
                       </a>
                       
@@ -855,56 +932,57 @@
               </div>
               
               <div class="masonry-grid-item">
-                <div class="card shadow-sm">
+                <div class="card article-card shadow-sm">
                   <div class="card-body">
-                    <h5 class="card-title">
-                      <i class="bi bi-file-earmark-text"></i>
-                      <a href="../mdhtml/职场晋升攻略：能力与人际关系的双翼齐飞.html" class="text-decoration-none">
+                    <h5 class="card-title article-title">
+                      <i class="bi bi-file-earmark-text me-2 text-primary"></i>
+                      <a href="../mdhtml/职场晋升攻略：能力与人际关系的双翼齐飞.html" class="text-decoration-none text-dark">
                         职场晋升攻略：能力与人际关系的双翼齐飞
                       </a>
                     </h5>
                     
-                      <p class="card-text">
+                      <p class="card-text text-muted mb-3">
                         本文深入剖析了职场晋升的两大关键因素——能力提升与人际关系处理，提供了实用的策略和建议，助你在职场中稳步前行，实现职业高峰。
                       </p>
                       
-                        
-                          <small class="text-muted">
-                            2026-02-11
-                          </small>
-                          
+                        <div class="article-meta">
+                            
+                                <i class="bi bi-clock me-1"></i>
+                                2026-02-11
+                                
+                        </div>
                   </div>
-                  <div class="card-footer text-muted">
+                  <div class="card-footer text-muted bg-white border-top">
                     <a href="/category/%E8%81%8C%E4%B8%9A%E5%8F%91%E5%B1%95.html"
-                      class="badge bg-primary">
+                      class="badge bg-primary me-2">
                       职业发展
                     </a>
                     
-                      <a href="/tag/%E8%81%8C%E5%9C%BA%E6%99%8B%E5%8D%87.html" class="badge tag-link">
+                      <a href="/tag/%E8%81%8C%E5%9C%BA%E6%99%8B%E5%8D%87.html" class="badge tag-link me-2 mb-1">
                         职场晋升
                       </a>
                       
-                      <a href="/tag/%E8%83%BD%E5%8A%9B%E6%8F%90%E5%8D%87.html" class="badge tag-link">
+                      <a href="/tag/%E8%83%BD%E5%8A%9B%E6%8F%90%E5%8D%87.html" class="badge tag-link me-2 mb-1">
                         能力提升
                       </a>
                       
-                      <a href="/tag/%E4%BA%BA%E9%99%85%E5%85%B3%E7%B3%BB.html" class="badge tag-link">
+                      <a href="/tag/%E4%BA%BA%E9%99%85%E5%85%B3%E7%B3%BB.html" class="badge tag-link me-2 mb-1">
                         人际关系
                       </a>
                       
-                      <a href="/tag/%E8%81%8C%E5%9C%BA%E6%B2%9F%E9%80%9A.html" class="badge tag-link">
+                      <a href="/tag/%E8%81%8C%E5%9C%BA%E6%B2%9F%E9%80%9A.html" class="badge tag-link me-2 mb-1">
                         职场沟通
                       </a>
                       
-                      <a href="/tag/%E5%9B%A2%E9%98%9F%E5%8D%8F%E4%BD%9C.html" class="badge tag-link">
+                      <a href="/tag/%E5%9B%A2%E9%98%9F%E5%8D%8F%E4%BD%9C.html" class="badge tag-link me-2 mb-1">
                         团队协作
                       </a>
                       
-                      <a href="/tag/%E8%81%8C%E4%B8%9A%E8%A7%84%E5%88%92.html" class="badge tag-link">
+                      <a href="/tag/%E8%81%8C%E4%B8%9A%E8%A7%84%E5%88%92.html" class="badge tag-link me-2 mb-1">
                         职业规划
                       </a>
                       
-                      <a href="/tag/%E8%81%8C%E5%9C%BA%E6%8A%80%E5%B7%A7.html" class="badge tag-link">
+                      <a href="/tag/%E8%81%8C%E5%9C%BA%E6%8A%80%E5%B7%A7.html" class="badge tag-link me-2 mb-1">
                         职场技巧
                       </a>
                       
@@ -913,48 +991,49 @@
               </div>
               
               <div class="masonry-grid-item">
-                <div class="card shadow-sm">
+                <div class="card article-card shadow-sm">
                   <div class="card-body">
-                    <h5 class="card-title">
-                      <i class="bi bi-file-earmark-text"></i>
-                      <a href="../mdhtml/职场沟通秘籍：点燃团队协作的高效引擎.html" class="text-decoration-none">
+                    <h5 class="card-title article-title">
+                      <i class="bi bi-file-earmark-text me-2 text-primary"></i>
+                      <a href="../mdhtml/职场沟通秘籍：点燃团队协作的高效引擎.html" class="text-decoration-none text-dark">
                         职场沟通秘籍：点燃团队协作的高效引擎
                       </a>
                     </h5>
                     
-                      <p class="card-text">
+                      <p class="card-text text-muted mb-3">
                         本文深入剖析了提升团队协作效率的职场沟通技巧，涵盖清晰明确的表达、积极倾听与反馈、良好沟通氛围的建立、有效沟通方式的运用以及冲突解决等方面，助力打造高效协作的团队。
                       </p>
                       
-                        
-                          <small class="text-muted">
-                            2026-02-11
-                          </small>
-                          
+                        <div class="article-meta">
+                            
+                                <i class="bi bi-clock me-1"></i>
+                                2026-02-11
+                                
+                        </div>
                   </div>
-                  <div class="card-footer text-muted">
+                  <div class="card-footer text-muted bg-white border-top">
                     <a href="/category/%E8%81%8C%E4%B8%9A%E5%8F%91%E5%B1%95.html"
-                      class="badge bg-primary">
+                      class="badge bg-primary me-2">
                       职业发展
                     </a>
                     
-                      <a href="/tag/%E8%81%8C%E5%9C%BA%E6%B2%9F%E9%80%9A.html" class="badge tag-link">
+                      <a href="/tag/%E8%81%8C%E5%9C%BA%E6%B2%9F%E9%80%9A.html" class="badge tag-link me-2 mb-1">
                         职场沟通
                       </a>
                       
-                      <a href="/tag/%E5%9B%A2%E9%98%9F%E5%8D%8F%E4%BD%9C.html" class="badge tag-link">
+                      <a href="/tag/%E5%9B%A2%E9%98%9F%E5%8D%8F%E4%BD%9C.html" class="badge tag-link me-2 mb-1">
                         团队协作
                       </a>
                       
-                      <a href="/tag/%E6%B2%9F%E9%80%9A%E6%8A%80%E5%B7%A7.html" class="badge tag-link">
+                      <a href="/tag/%E6%B2%9F%E9%80%9A%E6%8A%80%E5%B7%A7.html" class="badge tag-link me-2 mb-1">
                         沟通技巧
                       </a>
                       
-                      <a href="/tag/%E9%AB%98%E6%95%88%E5%9B%A2%E9%98%9F.html" class="badge tag-link">
+                      <a href="/tag/%E9%AB%98%E6%95%88%E5%9B%A2%E9%98%9F.html" class="badge tag-link me-2 mb-1">
                         高效团队
                       </a>
                       
-                      <a href="/tag/%E8%81%8C%E5%9C%BA%E7%A7%98%E7%B1%8D.html" class="badge tag-link">
+                      <a href="/tag/%E8%81%8C%E5%9C%BA%E7%A7%98%E7%B1%8D.html" class="badge tag-link me-2 mb-1">
                         职场秘籍
                       </a>
                       
@@ -964,8 +1043,8 @@
               
           </div>
 
-          <div class="mt-4 text-center">
-            <a href="标签列表.html" class="btn btn-outline-primary"><i class="bi bi-arrow-left"></i> 返回标签列表</a>
+          <div class="mt-6 text-center">
+            <a href="标签列表.html" class="btn btn-outline-primary back-button"><i class="bi bi-arrow-left me-2"></i> 返回标签列表</a>
           </div>
         </div>
       </div>
@@ -989,7 +1068,7 @@
             itemSelector: '.masonry-grid-item',
             columnWidth: '.masonry-grid-item',
             percentPosition: true,
-            gutter: 10 // 可选，添加卡片间的间距
+            gutter: 15 // 增加间距，提升视觉效果
           });
         });
       </script>

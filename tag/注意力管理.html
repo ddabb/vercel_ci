@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
 
 <head>
   <meta charset="UTF-8">
@@ -9,7 +9,7 @@
   <meta name="description" content="无人自助站的【注意力管理】的标签列表页面，汇集了关于【注意力管理】标签相关的文章和资讯，方便您快速找到感兴趣的内容。">
   <meta name="keywords" content="无人自助站,注意力管理">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>标签文章列表</title>
+  <title>注意力管理标签 - 无人自助站</title>
 
   <link rel="icon" href="../logo.svg" type="image/svg+xml">
   <link rel="stylesheet" href="../css/style.css">
@@ -27,6 +27,62 @@
   <!-- 引入Masonry -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/masonry/4.2.2/masonry.pkgd.min.js"></script>
 
+  <style>
+        .tag-header {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            color: white;
+            padding: 2rem;
+            border-radius: 8px;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        .tag-title {
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+        .article-card {
+            transition: all 0.3s ease;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        .article-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+        }
+        .article-title {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            transition: color 0.3s ease;
+        }
+        .article-title:hover {
+            color: #0d6efd;
+        }
+        .article-meta {
+            font-size: 0.85rem;
+            color: #6c757d;
+        }
+        .tag-link {
+            background-color: #e9ecef;
+            color: #495057;
+            transition: all 0.2s ease;
+        }
+        .tag-link:hover {
+            background-color: #dee2e6;
+            color: #212529;
+        }
+        .back-button {
+            transition: all 0.3s ease;
+        }
+        .back-button:hover {
+            transform: translateX(-3px);
+        }
+        .article-count {
+            font-size: 0.9rem;
+            opacity: 0.9;
+        }
+    </style>
 </head>
 
 <body>
@@ -80,7 +136,7 @@
     <main class="container-fluid mt-4">
       <div class="row">
         <div class="col-lg-8 col-md-12 mx-auto">
-          <nav aria-label="breadcrumb">
+          <nav aria-label="breadcrumb" class="mb-4">
             <ol class="breadcrumb">
               <li class="breadcrumb-item"><a href="/html/index.html">首页</a></li>
               <li class="breadcrumb-item"><a href="标签列表.html">标签列表</a></li>
@@ -89,54 +145,64 @@
               </li>
             </ol>
           </nav>
-          <h1 style="font-size: 1.5em; margin: 0.5em 0;">
-            注意力管理标签的文章和资讯
-        </h1>
+          
+          <!-- 标签头部 -->
+          <div class="tag-header">
+              <h1 class="tag-title">
+                  <i class="bi bi-tags me-2"></i>
+                  注意力管理
+              </h1>
+              <p class="article-count">
+                  共 10 篇文章
+              </p>
+          </div>
+          
           <div class="masonry-grid">
             
               <div class="masonry-grid-item">
-                <div class="card shadow-sm">
+                <div class="card article-card shadow-sm">
                   <div class="card-body">
-                    <h5 class="card-title">
-                      <i class="bi bi-file-earmark-text"></i>
-                      <a href="../mdhtml/如何在数字化时代保持专注力.html" class="text-decoration-none">
+                    <h5 class="card-title article-title">
+                      <i class="bi bi-file-earmark-text me-2 text-primary"></i>
+                      <a href="../mdhtml/如何在数字化时代保持专注力.html" class="text-decoration-none text-dark">
                         如何在数字化时代保持专注力
                       </a>
                     </h5>
                     
-                      <p class="card-text">
+                      <p class="card-text text-muted mb-3">
                         探讨如何在数字化时代保持专注力，提供实用的方法和策略，帮助个人在信息爆炸的时代保持专注，提高工作和学习效率。
                       </p>
                       
-                        
-                          <small class="text-muted">
-                            2026-02-28
-                          </small>
-                          
+                        <div class="article-meta">
+                            
+                                <i class="bi bi-clock me-1"></i>
+                                2026-02-28
+                                
+                        </div>
                   </div>
-                  <div class="card-footer text-muted">
+                  <div class="card-footer text-muted bg-white border-top">
                     <a href="/category/%E8%87%AA%E6%88%91%E6%8F%90%E5%8D%87.html"
-                      class="badge bg-primary">
+                      class="badge bg-primary me-2">
                       自我提升
                     </a>
                     
-                      <a href="/tag/%E4%B8%93%E6%B3%A8%E5%8A%9B.html" class="badge tag-link">
+                      <a href="/tag/%E4%B8%93%E6%B3%A8%E5%8A%9B.html" class="badge tag-link me-2 mb-1">
                         专注力
                       </a>
                       
-                      <a href="/tag/%E6%95%B0%E5%AD%97%E6%97%B6%E4%BB%A3.html" class="badge tag-link">
+                      <a href="/tag/%E6%95%B0%E5%AD%97%E6%97%B6%E4%BB%A3.html" class="badge tag-link me-2 mb-1">
                         数字时代
                       </a>
                       
-                      <a href="/tag/%E6%B3%A8%E6%84%8F%E5%8A%9B%E7%AE%A1%E7%90%86.html" class="badge tag-link">
+                      <a href="/tag/%E6%B3%A8%E6%84%8F%E5%8A%9B%E7%AE%A1%E7%90%86.html" class="badge tag-link me-2 mb-1">
                         注意力管理
                       </a>
                       
-                      <a href="/tag/%E8%87%AA%E6%88%91%E7%AE%A1%E7%90%86.html" class="badge tag-link">
+                      <a href="/tag/%E8%87%AA%E6%88%91%E7%AE%A1%E7%90%86.html" class="badge tag-link me-2 mb-1">
                         自我管理
                       </a>
                       
-                      <a href="/tag/%E6%95%88%E7%8E%87%E6%8F%90%E5%8D%87.html" class="badge tag-link">
+                      <a href="/tag/%E6%95%88%E7%8E%87%E6%8F%90%E5%8D%87.html" class="badge tag-link me-2 mb-1">
                         效率提升
                       </a>
                       
@@ -145,48 +211,49 @@
               </div>
               
               <div class="masonry-grid-item">
-                <div class="card shadow-sm">
+                <div class="card article-card shadow-sm">
                   <div class="card-body">
-                    <h5 class="card-title">
-                      <i class="bi bi-file-earmark-text"></i>
-                      <a href="../mdhtml/注意力战略：将个人注意力作为稀缺资源的投资组合管理.html" class="text-decoration-none">
+                    <h5 class="card-title article-title">
+                      <i class="bi bi-file-earmark-text me-2 text-primary"></i>
+                      <a href="../mdhtml/注意力战略：将个人注意力作为稀缺资源的投资组合管理.html" class="text-decoration-none text-dark">
                         注意力战略：将个人注意力作为稀缺资源的投资组合管理
                       </a>
                     </h5>
                     
-                      <p class="card-text">
+                      <p class="card-text text-muted mb-3">
                         探讨如何将注意力视为个人公司最稀缺的战略资源，通过投资组合管理的方法来优化注意力分配，同时建立风险管控和退出机制。
                       </p>
                       
-                        
-                          <small class="text-muted">
-                            2026-02-27
-                          </small>
-                          
+                        <div class="article-meta">
+                            
+                                <i class="bi bi-clock me-1"></i>
+                                2026-02-27
+                                
+                        </div>
                   </div>
-                  <div class="card-footer text-muted">
+                  <div class="card-footer text-muted bg-white border-top">
                     <a href="/category/%E8%87%AA%E6%88%91%E6%8F%90%E5%8D%87.html"
-                      class="badge bg-primary">
+                      class="badge bg-primary me-2">
                       自我提升
                     </a>
                     
-                      <a href="/tag/%E6%B3%A8%E6%84%8F%E5%8A%9B%E7%AE%A1%E7%90%86.html" class="badge tag-link">
+                      <a href="/tag/%E6%B3%A8%E6%84%8F%E5%8A%9B%E7%AE%A1%E7%90%86.html" class="badge tag-link me-2 mb-1">
                         注意力管理
                       </a>
                       
-                      <a href="/tag/%E6%88%98%E7%95%A5%E8%B5%84%E6%BA%90.html" class="badge tag-link">
+                      <a href="/tag/%E6%88%98%E7%95%A5%E8%B5%84%E6%BA%90.html" class="badge tag-link me-2 mb-1">
                         战略资源
                       </a>
                       
-                      <a href="/tag/%E6%8A%95%E8%B5%84%E7%BB%84%E5%90%88.html" class="badge tag-link">
+                      <a href="/tag/%E6%8A%95%E8%B5%84%E7%BB%84%E5%90%88.html" class="badge tag-link me-2 mb-1">
                         投资组合
                       </a>
                       
-                      <a href="/tag/%E9%A3%8E%E9%99%A9%E7%AE%A1%E6%8E%A7.html" class="badge tag-link">
+                      <a href="/tag/%E9%A3%8E%E9%99%A9%E7%AE%A1%E6%8E%A7.html" class="badge tag-link me-2 mb-1">
                         风险管控
                       </a>
                       
-                      <a href="/tag/%E9%80%80%E5%87%BA%E6%9C%BA%E5%88%B6.html" class="badge tag-link">
+                      <a href="/tag/%E9%80%80%E5%87%BA%E6%9C%BA%E5%88%B6.html" class="badge tag-link me-2 mb-1">
                         退出机制
                       </a>
                       
@@ -195,68 +262,69 @@
               </div>
               
               <div class="masonry-grid-item">
-                <div class="card shadow-sm">
+                <div class="card article-card shadow-sm">
                   <div class="card-body">
-                    <h5 class="card-title">
-                      <i class="bi bi-file-earmark-text"></i>
-                      <a href="../mdhtml/信息爆炸时代如何保持专注力？实用策略.html" class="text-decoration-none">
+                    <h5 class="card-title article-title">
+                      <i class="bi bi-file-earmark-text me-2 text-primary"></i>
+                      <a href="../mdhtml/信息爆炸时代如何保持专注力？实用策略.html" class="text-decoration-none text-dark">
                         信息时代的专注力革命：从分心到深度的转变
                       </a>
                     </h5>
                     
-                      <p class="card-text">
+                      <p class="card-text text-muted mb-3">
                         全面解析信息爆炸时代的专注力挑战与应对策略，从认知科学角度分析分心机制，提供具体的专注力训练方法、环境优化技巧和数字极简策略，帮助个人在信息过载的环境中保持深度专注，提高工作效率和生活质量。
                       </p>
                       
-                        
-                          <small class="text-muted">
-                            2026-02-24
-                          </small>
-                          
+                        <div class="article-meta">
+                            
+                                <i class="bi bi-clock me-1"></i>
+                                2026-02-24
+                                
+                        </div>
                   </div>
-                  <div class="card-footer text-muted">
+                  <div class="card-footer text-muted bg-white border-top">
                     <a href="/category/%E8%87%AA%E6%88%91%E6%8F%90%E5%8D%87.html"
-                      class="badge bg-primary">
+                      class="badge bg-primary me-2">
                       自我提升
                     </a>
                     
-                      <a href="/tag/%E4%B8%93%E6%B3%A8%E5%8A%9B.html" class="badge tag-link">
+                      <a href="/tag/%E4%B8%93%E6%B3%A8%E5%8A%9B.html" class="badge tag-link me-2 mb-1">
                         专注力
                       </a>
                       
-                      <a href="/tag/%E6%B3%A8%E6%84%8F%E5%8A%9B%E7%AE%A1%E7%90%86.html" class="badge tag-link">
+                      <a href="/tag/%E6%B3%A8%E6%84%8F%E5%8A%9B%E7%AE%A1%E7%90%86.html" class="badge tag-link me-2 mb-1">
                         注意力管理
                       </a>
                       
-                      <a href="/tag/%E4%BF%A1%E6%81%AF%E7%88%86%E7%82%B8.html" class="badge tag-link">
+                      <a href="/tag/%E4%BF%A1%E6%81%AF%E7%88%86%E7%82%B8.html" class="badge tag-link me-2 mb-1">
                         信息爆炸
                       </a>
                       
-                      <a href="/tag/%E6%B7%B1%E5%BA%A6%E5%B7%A5%E4%BD%9C.html" class="badge tag-link">
+                      <a href="/tag/%E6%B7%B1%E5%BA%A6%E5%B7%A5%E4%BD%9C.html" class="badge tag-link me-2 mb-1">
                         深度工作
                       </a>
                       
-                      <a href="/tag/%E5%88%86%E5%BF%83.html" class="badge tag-link">
+                      <a href="/tag/%E5%88%86%E5%BF%83.html" class="badge tag-link me-2 mb-1">
                         分心
                       </a>
                       
-                      <a href="/tag/%E6%97%B6%E9%97%B4%E7%AE%A1%E7%90%86.html" class="badge tag-link">
+                      <a href="/tag/%E6%97%B6%E9%97%B4%E7%AE%A1%E7%90%86.html" class="badge tag-link me-2 mb-1">
                         时间管理
                       </a>
                       
-                      <a href="/tag/%E6%95%88%E7%8E%87%E6%8F%90%E5%8D%87.html" class="badge tag-link">
+                      <a href="/tag/%E6%95%88%E7%8E%87%E6%8F%90%E5%8D%87.html" class="badge tag-link me-2 mb-1">
                         效率提升
                       </a>
                       
-                      <a href="/tag/%E6%95%B0%E5%AD%97%E6%9E%81%E7%AE%80.html" class="badge tag-link">
+                      <a href="/tag/%E6%95%B0%E5%AD%97%E6%9E%81%E7%AE%80.html" class="badge tag-link me-2 mb-1">
                         数字极简
                       </a>
                       
-                      <a href="/tag/%E4%B8%93%E6%B3%A8%E5%8A%9B%E8%AE%AD%E7%BB%83.html" class="badge tag-link">
+                      <a href="/tag/%E4%B8%93%E6%B3%A8%E5%8A%9B%E8%AE%AD%E7%BB%83.html" class="badge tag-link me-2 mb-1">
                         专注力训练
                       </a>
                       
-                      <a href="/tag/%E8%AE%A4%E7%9F%A5%E7%A7%91%E5%AD%A6.html" class="badge tag-link">
+                      <a href="/tag/%E8%AE%A4%E7%9F%A5%E7%A7%91%E5%AD%A6.html" class="badge tag-link me-2 mb-1">
                         认知科学
                       </a>
                       
@@ -265,68 +333,69 @@
               </div>
               
               <div class="masonry-grid-item">
-                <div class="card shadow-sm">
+                <div class="card article-card shadow-sm">
                   <div class="card-body">
-                    <h5 class="card-title">
-                      <i class="bi bi-file-earmark-text"></i>
-                      <a href="../mdhtml/数字时代的「阅读仪式感」：如何在碎片化时代深度阅读.html" class="text-decoration-none">
+                    <h5 class="card-title article-title">
+                      <i class="bi bi-file-earmark-text me-2 text-primary"></i>
+                      <a href="../mdhtml/数字时代的「阅读仪式感」：如何在碎片化时代深度阅读.html" class="text-decoration-none text-dark">
                         数字时代的「阅读仪式感」：如何在碎片化时代深度阅读
                       </a>
                     </h5>
                     
-                      <p class="card-text">
+                      <p class="card-text text-muted mb-3">
                         探索数字时代阅读的挑战，解析「阅读仪式感」的概念和重要性，提供实用的方法和技巧，帮助你在碎片化时代培养深度阅读的习惯，提升阅读质量和体验。
                       </p>
                       
-                        
-                          <small class="text-muted">
-                            2026-02-24
-                          </small>
-                          
+                        <div class="article-meta">
+                            
+                                <i class="bi bi-clock me-1"></i>
+                                2026-02-24
+                                
+                        </div>
                   </div>
-                  <div class="card-footer text-muted">
+                  <div class="card-footer text-muted bg-white border-top">
                     <a href="/category/%E8%87%AA%E6%88%91%E6%8F%90%E5%8D%87.html"
-                      class="badge bg-primary">
+                      class="badge bg-primary me-2">
                       自我提升
                     </a>
                     
-                      <a href="/tag/%E9%98%85%E8%AF%BB%E4%BB%AA%E5%BC%8F%E6%84%9F.html" class="badge tag-link">
+                      <a href="/tag/%E9%98%85%E8%AF%BB%E4%BB%AA%E5%BC%8F%E6%84%9F.html" class="badge tag-link me-2 mb-1">
                         阅读仪式感
                       </a>
                       
-                      <a href="/tag/%E6%B7%B1%E5%BA%A6%E9%98%85%E8%AF%BB.html" class="badge tag-link">
+                      <a href="/tag/%E6%B7%B1%E5%BA%A6%E9%98%85%E8%AF%BB.html" class="badge tag-link me-2 mb-1">
                         深度阅读
                       </a>
                       
-                      <a href="/tag/%E7%A2%8E%E7%89%87%E5%8C%96%E6%97%B6%E4%BB%A3.html" class="badge tag-link">
+                      <a href="/tag/%E7%A2%8E%E7%89%87%E5%8C%96%E6%97%B6%E4%BB%A3.html" class="badge tag-link me-2 mb-1">
                         碎片化时代
                       </a>
                       
-                      <a href="/tag/%E6%B3%A8%E6%84%8F%E5%8A%9B%E7%AE%A1%E7%90%86.html" class="badge tag-link">
+                      <a href="/tag/%E6%B3%A8%E6%84%8F%E5%8A%9B%E7%AE%A1%E7%90%86.html" class="badge tag-link me-2 mb-1">
                         注意力管理
                       </a>
                       
-                      <a href="/tag/%E9%98%85%E8%AF%BB%E4%B9%A0%E6%83%AF.html" class="badge tag-link">
+                      <a href="/tag/%E9%98%85%E8%AF%BB%E4%B9%A0%E6%83%AF.html" class="badge tag-link me-2 mb-1">
                         阅读习惯
                       </a>
                       
-                      <a href="/tag/%E6%95%B0%E5%AD%97%E9%98%85%E8%AF%BB.html" class="badge tag-link">
+                      <a href="/tag/%E6%95%B0%E5%AD%97%E9%98%85%E8%AF%BB.html" class="badge tag-link me-2 mb-1">
                         数字阅读
                       </a>
                       
-                      <a href="/tag/%E9%98%85%E8%AF%BB%E6%8A%80%E5%B7%A7.html" class="badge tag-link">
+                      <a href="/tag/%E9%98%85%E8%AF%BB%E6%8A%80%E5%B7%A7.html" class="badge tag-link me-2 mb-1">
                         阅读技巧
                       </a>
                       
-                      <a href="/tag/%E4%B8%93%E6%B3%A8%E5%8A%9B.html" class="badge tag-link">
+                      <a href="/tag/%E4%B8%93%E6%B3%A8%E5%8A%9B.html" class="badge tag-link me-2 mb-1">
                         专注力
                       </a>
                       
-                      <a href="/tag/%E7%9F%A5%E8%AF%86%E5%90%B8%E6%94%B6.html" class="badge tag-link">
+                      <a href="/tag/%E7%9F%A5%E8%AF%86%E5%90%B8%E6%94%B6.html" class="badge tag-link me-2 mb-1">
                         知识吸收
                       </a>
                       
-                      <a href="/tag/%E5%BF%83%E6%99%BA%E6%88%90%E9%95%BF.html" class="badge tag-link">
+                      <a href="/tag/%E5%BF%83%E6%99%BA%E6%88%90%E9%95%BF.html" class="badge tag-link me-2 mb-1">
                         心智成长
                       </a>
                       
@@ -335,68 +404,69 @@
               </div>
               
               <div class="masonry-grid-item">
-                <div class="card shadow-sm">
+                <div class="card article-card shadow-sm">
                   <div class="card-body">
-                    <h5 class="card-title">
-                      <i class="bi bi-file-earmark-text"></i>
-                      <a href="../mdhtml/数字时代的专注力提升：如何在信息爆炸中保持深度工作.html" class="text-decoration-none">
+                    <h5 class="card-title article-title">
+                      <i class="bi bi-file-earmark-text me-2 text-primary"></i>
+                      <a href="../mdhtml/数字时代的专注力提升：如何在信息爆炸中保持深度工作.html" class="text-decoration-none text-dark">
                         数字时代的专注力提升：如何在信息爆炸中保持深度工作
                       </a>
                     </h5>
                     
-                      <p class="card-text">
+                      <p class="card-text text-muted mb-3">
                         深入探讨数字时代专注力缺失的原因，提供实用的专注力提升策略和深度工作方法，帮助你在信息爆炸的环境中保持高效工作状态。
                       </p>
                       
-                        
-                          <small class="text-muted">
-                            2026-02-11
-                          </small>
-                          
+                        <div class="article-meta">
+                            
+                                <i class="bi bi-clock me-1"></i>
+                                2026-02-11
+                                
+                        </div>
                   </div>
-                  <div class="card-footer text-muted">
+                  <div class="card-footer text-muted bg-white border-top">
                     <a href="/category/%E8%87%AA%E6%88%91%E6%8F%90%E5%8D%87.html"
-                      class="badge bg-primary">
+                      class="badge bg-primary me-2">
                       自我提升
                     </a>
                     
-                      <a href="/tag/%E4%B8%93%E6%B3%A8%E5%8A%9B.html" class="badge tag-link">
+                      <a href="/tag/%E4%B8%93%E6%B3%A8%E5%8A%9B.html" class="badge tag-link me-2 mb-1">
                         专注力
                       </a>
                       
-                      <a href="/tag/%E6%B7%B1%E5%BA%A6%E5%B7%A5%E4%BD%9C.html" class="badge tag-link">
+                      <a href="/tag/%E6%B7%B1%E5%BA%A6%E5%B7%A5%E4%BD%9C.html" class="badge tag-link me-2 mb-1">
                         深度工作
                       </a>
                       
-                      <a href="/tag/%E4%BF%A1%E6%81%AF%E7%88%86%E7%82%B8.html" class="badge tag-link">
+                      <a href="/tag/%E4%BF%A1%E6%81%AF%E7%88%86%E7%82%B8.html" class="badge tag-link me-2 mb-1">
                         信息爆炸
                       </a>
                       
-                      <a href="/tag/%E6%95%B0%E5%AD%97%E6%97%B6%E4%BB%A3.html" class="badge tag-link">
+                      <a href="/tag/%E6%95%B0%E5%AD%97%E6%97%B6%E4%BB%A3.html" class="badge tag-link me-2 mb-1">
                         数字时代
                       </a>
                       
-                      <a href="/tag/%E6%97%B6%E9%97%B4%E7%AE%A1%E7%90%86.html" class="badge tag-link">
+                      <a href="/tag/%E6%97%B6%E9%97%B4%E7%AE%A1%E7%90%86.html" class="badge tag-link me-2 mb-1">
                         时间管理
                       </a>
                       
-                      <a href="/tag/%E6%95%88%E7%8E%87%E6%8F%90%E5%8D%87.html" class="badge tag-link">
+                      <a href="/tag/%E6%95%88%E7%8E%87%E6%8F%90%E5%8D%87.html" class="badge tag-link me-2 mb-1">
                         效率提升
                       </a>
                       
-                      <a href="/tag/%E6%B3%A8%E6%84%8F%E5%8A%9B%E7%AE%A1%E7%90%86.html" class="badge tag-link">
+                      <a href="/tag/%E6%B3%A8%E6%84%8F%E5%8A%9B%E7%AE%A1%E7%90%86.html" class="badge tag-link me-2 mb-1">
                         注意力管理
                       </a>
                       
-                      <a href="/tag/%E5%B7%A5%E4%BD%9C%E4%B9%A0%E6%83%AF.html" class="badge tag-link">
+                      <a href="/tag/%E5%B7%A5%E4%BD%9C%E4%B9%A0%E6%83%AF.html" class="badge tag-link me-2 mb-1">
                         工作习惯
                       </a>
                       
-                      <a href="/tag/%E5%BF%83%E6%B5%81%E7%8A%B6%E6%80%81.html" class="badge tag-link">
+                      <a href="/tag/%E5%BF%83%E6%B5%81%E7%8A%B6%E6%80%81.html" class="badge tag-link me-2 mb-1">
                         心流状态
                       </a>
                       
-                      <a href="/tag/%E5%B9%B2%E6%89%B0%E6%B6%88%E9%99%A4.html" class="badge tag-link">
+                      <a href="/tag/%E5%B9%B2%E6%89%B0%E6%B6%88%E9%99%A4.html" class="badge tag-link me-2 mb-1">
                         干扰消除
                       </a>
                       
@@ -405,44 +475,45 @@
               </div>
               
               <div class="masonry-grid-item">
-                <div class="card shadow-sm">
+                <div class="card article-card shadow-sm">
                   <div class="card-body">
-                    <h5 class="card-title">
-                      <i class="bi bi-file-earmark-text"></i>
-                      <a href="../mdhtml/脑机接口时代的注意力管理：挑战与防御.html" class="text-decoration-none">
+                    <h5 class="card-title article-title">
+                      <i class="bi bi-file-earmark-text me-2 text-primary"></i>
+                      <a href="../mdhtml/脑机接口时代的注意力管理：挑战与防御.html" class="text-decoration-none text-dark">
                         脑机接口时代的注意力管理：挑战与防御
                       </a>
                     </h5>
                     
-                      <p class="card-text">
+                      <p class="card-text text-muted mb-3">
                         探讨脑机接口技术普及后个人的注意力管理将面临何种颠覆性挑战，以及我们现在可以提前培养哪些防御性思维习惯。
                       </p>
                       
-                        
-                          <small class="text-muted">
-                            2026-02-11
-                          </small>
-                          
+                        <div class="article-meta">
+                            
+                                <i class="bi bi-clock me-1"></i>
+                                2026-02-11
+                                
+                        </div>
                   </div>
-                  <div class="card-footer text-muted">
+                  <div class="card-footer text-muted bg-white border-top">
                     <a href="/category/%E7%A7%91%E6%8A%80%E5%89%8D%E6%B2%BF.html"
-                      class="badge bg-primary">
+                      class="badge bg-primary me-2">
                       科技前沿
                     </a>
                     
-                      <a href="/tag/%E8%84%91%E6%9C%BA%E6%8E%A5%E5%8F%A3.html" class="badge tag-link">
+                      <a href="/tag/%E8%84%91%E6%9C%BA%E6%8E%A5%E5%8F%A3.html" class="badge tag-link me-2 mb-1">
                         脑机接口
                       </a>
                       
-                      <a href="/tag/%E6%B3%A8%E6%84%8F%E5%8A%9B%E7%AE%A1%E7%90%86.html" class="badge tag-link">
+                      <a href="/tag/%E6%B3%A8%E6%84%8F%E5%8A%9B%E7%AE%A1%E7%90%86.html" class="badge tag-link me-2 mb-1">
                         注意力管理
                       </a>
                       
-                      <a href="/tag/%E9%98%B2%E5%BE%A1%E6%80%A7%E6%80%9D%E7%BB%B4.html" class="badge tag-link">
+                      <a href="/tag/%E9%98%B2%E5%BE%A1%E6%80%A7%E6%80%9D%E7%BB%B4.html" class="badge tag-link me-2 mb-1">
                         防御性思维
                       </a>
                       
-                      <a href="/tag/%E6%8A%80%E6%9C%AF%E6%8C%91%E6%88%98.html" class="badge tag-link">
+                      <a href="/tag/%E6%8A%80%E6%9C%AF%E6%8C%91%E6%88%98.html" class="badge tag-link me-2 mb-1">
                         技术挑战
                       </a>
                       
@@ -451,48 +522,49 @@
               </div>
               
               <div class="masonry-grid-item">
-                <div class="card shadow-sm">
+                <div class="card article-card shadow-sm">
                   <div class="card-body">
-                    <h5 class="card-title">
-                      <i class="bi bi-file-earmark-text"></i>
-                      <a href="../mdhtml/注意力的负向SIPOC模型：识别毒性供应商.html" class="text-decoration-none">
+                    <h5 class="card-title article-title">
+                      <i class="bi bi-file-earmark-text me-2 text-primary"></i>
+                      <a href="../mdhtml/注意力的负向SIPOC模型：识别毒性供应商.html" class="text-decoration-none text-dark">
                         注意力的负向SIPOC模型：识别毒性供应商
                       </a>
                     </h5>
                     
-                      <p class="card-text">
+                      <p class="card-text text-muted mb-3">
                         运用SIPOC框架为注意力消耗建立负向模型，分析注意力是如何被消耗的，并识别出最需要被优化的毒性供应商，为注意力管理提供全新视角。
                       </p>
                       
-                        
-                          <small class="text-muted">
-                            2026-02-11
-                          </small>
-                          
+                        <div class="article-meta">
+                            
+                                <i class="bi bi-clock me-1"></i>
+                                2026-02-11
+                                
+                        </div>
                   </div>
-                  <div class="card-footer text-muted">
+                  <div class="card-footer text-muted bg-white border-top">
                     <a href="/category/%E4%BA%BA%E7%94%9F%E7%AE%A1%E7%90%86.html"
-                      class="badge bg-primary">
+                      class="badge bg-primary me-2">
                       人生管理
                     </a>
                     
-                      <a href="/tag/%E6%B3%A8%E6%84%8F%E5%8A%9B%E7%AE%A1%E7%90%86.html" class="badge tag-link">
+                      <a href="/tag/%E6%B3%A8%E6%84%8F%E5%8A%9B%E7%AE%A1%E7%90%86.html" class="badge tag-link me-2 mb-1">
                         注意力管理
                       </a>
                       
-                      <a href="/tag/SIPOC%E6%A8%A1%E5%9E%8B.html" class="badge tag-link">
+                      <a href="/tag/SIPOC%E6%A8%A1%E5%9E%8B.html" class="badge tag-link me-2 mb-1">
                         SIPOC模型
                       </a>
                       
-                      <a href="/tag/%E8%B4%9F%E5%90%91%E7%B3%BB%E7%BB%9F.html" class="badge tag-link">
+                      <a href="/tag/%E8%B4%9F%E5%90%91%E7%B3%BB%E7%BB%9F.html" class="badge tag-link me-2 mb-1">
                         负向系统
                       </a>
                       
-                      <a href="/tag/%E6%AF%92%E6%80%A7%E4%BE%9B%E5%BA%94%E5%95%86.html" class="badge tag-link">
+                      <a href="/tag/%E6%AF%92%E6%80%A7%E4%BE%9B%E5%BA%94%E5%95%86.html" class="badge tag-link me-2 mb-1">
                         毒性供应商
                       </a>
                       
-                      <a href="/tag/%E8%87%AA%E6%88%91%E4%BC%98%E5%8C%96.html" class="badge tag-link">
+                      <a href="/tag/%E8%87%AA%E6%88%91%E4%BC%98%E5%8C%96.html" class="badge tag-link me-2 mb-1">
                         自我优化
                       </a>
                       
@@ -501,48 +573,49 @@
               </div>
               
               <div class="masonry-grid-item">
-                <div class="card shadow-sm">
+                <div class="card article-card shadow-sm">
                   <div class="card-body">
-                    <h5 class="card-title">
-                      <i class="bi bi-file-earmark-text"></i>
-                      <a href="../mdhtml/数字时代的注意力管理：从信息过载到专注创造.html" class="text-decoration-none">
+                    <h5 class="card-title article-title">
+                      <i class="bi bi-file-earmark-text me-2 text-primary"></i>
+                      <a href="../mdhtml/数字时代的注意力管理：从信息过载到专注创造.html" class="text-decoration-none text-dark">
                         数字时代的注意力管理：从信息过载到专注创造
                       </a>
                     </h5>
                     
-                      <p class="card-text">
+                      <p class="card-text text-muted mb-3">
                         探讨数字时代的注意力管理挑战与解决方案，提出从信息过载到专注创造的实践策略，包括注意力保护、专注训练、数字断舍离等方面的具体方法。
                       </p>
                       
-                        
-                          <small class="text-muted">
-                            2026-02-11
-                          </small>
-                          
+                        <div class="article-meta">
+                            
+                                <i class="bi bi-clock me-1"></i>
+                                2026-02-11
+                                
+                        </div>
                   </div>
-                  <div class="card-footer text-muted">
+                  <div class="card-footer text-muted bg-white border-top">
                     <a href="/category/%E8%87%AA%E6%88%91%E6%8F%90%E5%8D%87.html"
-                      class="badge bg-primary">
+                      class="badge bg-primary me-2">
                       自我提升
                     </a>
                     
-                      <a href="/tag/%E6%B3%A8%E6%84%8F%E5%8A%9B%E7%AE%A1%E7%90%86.html" class="badge tag-link">
+                      <a href="/tag/%E6%B3%A8%E6%84%8F%E5%8A%9B%E7%AE%A1%E7%90%86.html" class="badge tag-link me-2 mb-1">
                         注意力管理
                       </a>
                       
-                      <a href="/tag/%E4%BF%A1%E6%81%AF%E8%BF%87%E8%BD%BD.html" class="badge tag-link">
+                      <a href="/tag/%E4%BF%A1%E6%81%AF%E8%BF%87%E8%BD%BD.html" class="badge tag-link me-2 mb-1">
                         信息过载
                       </a>
                       
-                      <a href="/tag/%E6%95%B0%E5%AD%97%E6%97%B6%E4%BB%A3.html" class="badge tag-link">
+                      <a href="/tag/%E6%95%B0%E5%AD%97%E6%97%B6%E4%BB%A3.html" class="badge tag-link me-2 mb-1">
                         数字时代
                       </a>
                       
-                      <a href="/tag/%E4%B8%93%E6%B3%A8%E5%88%9B%E9%80%A0.html" class="badge tag-link">
+                      <a href="/tag/%E4%B8%93%E6%B3%A8%E5%88%9B%E9%80%A0.html" class="badge tag-link me-2 mb-1">
                         专注创造
                       </a>
                       
-                      <a href="/tag/%E8%87%AA%E6%88%91%E7%AE%A1%E7%90%86.html" class="badge tag-link">
+                      <a href="/tag/%E8%87%AA%E6%88%91%E7%AE%A1%E7%90%86.html" class="badge tag-link me-2 mb-1">
                         自我管理
                       </a>
                       
@@ -551,48 +624,49 @@
               </div>
               
               <div class="masonry-grid-item">
-                <div class="card shadow-sm">
+                <div class="card article-card shadow-sm">
                   <div class="card-body">
-                    <h5 class="card-title">
-                      <i class="bi bi-file-earmark-text"></i>
-                      <a href="../mdhtml/数字时代的注意力分层：从碎片到深度的认知管理.html" class="text-decoration-none">
+                    <h5 class="card-title article-title">
+                      <i class="bi bi-file-earmark-text me-2 text-primary"></i>
+                      <a href="../mdhtml/数字时代的注意力分层：从碎片到深度的认知管理.html" class="text-decoration-none text-dark">
                         数字时代的注意力分层：从碎片到深度的认知管理
                       </a>
                     </h5>
                     
-                      <p class="card-text">
+                      <p class="card-text text-muted mb-3">
                         探讨数字时代注意力的分层现象，分析碎片化注意力与深度注意力的特点，以及如何在信息过载环境中实现有效的认知管理
                       </p>
                       
-                        
-                          <small class="text-muted">
-                            2026-02-11
-                          </small>
-                          
+                        <div class="article-meta">
+                            
+                                <i class="bi bi-clock me-1"></i>
+                                2026-02-11
+                                
+                        </div>
                   </div>
-                  <div class="card-footer text-muted">
+                  <div class="card-footer text-muted bg-white border-top">
                     <a href="/category/%E8%87%AA%E6%88%91%E6%8F%90%E5%8D%87.html"
-                      class="badge bg-primary">
+                      class="badge bg-primary me-2">
                       自我提升
                     </a>
                     
-                      <a href="/tag/%E6%B3%A8%E6%84%8F%E5%8A%9B%E7%AE%A1%E7%90%86.html" class="badge tag-link">
+                      <a href="/tag/%E6%B3%A8%E6%84%8F%E5%8A%9B%E7%AE%A1%E7%90%86.html" class="badge tag-link me-2 mb-1">
                         注意力管理
                       </a>
                       
-                      <a href="/tag/%E6%95%B0%E5%AD%97%E6%97%B6%E4%BB%A3.html" class="badge tag-link">
+                      <a href="/tag/%E6%95%B0%E5%AD%97%E6%97%B6%E4%BB%A3.html" class="badge tag-link me-2 mb-1">
                         数字时代
                       </a>
                       
-                      <a href="/tag/%E8%AE%A4%E7%9F%A5%E5%88%86%E5%B1%82.html" class="badge tag-link">
+                      <a href="/tag/%E8%AE%A4%E7%9F%A5%E5%88%86%E5%B1%82.html" class="badge tag-link me-2 mb-1">
                         认知分层
                       </a>
                       
-                      <a href="/tag/%E6%B7%B1%E5%BA%A6%E5%B7%A5%E4%BD%9C.html" class="badge tag-link">
+                      <a href="/tag/%E6%B7%B1%E5%BA%A6%E5%B7%A5%E4%BD%9C.html" class="badge tag-link me-2 mb-1">
                         深度工作
                       </a>
                       
-                      <a href="/tag/%E4%BF%A1%E6%81%AF%E8%BF%87%E8%BD%BD.html" class="badge tag-link">
+                      <a href="/tag/%E4%BF%A1%E6%81%AF%E8%BF%87%E8%BD%BD.html" class="badge tag-link me-2 mb-1">
                         信息过载
                       </a>
                       
@@ -601,48 +675,49 @@
               </div>
               
               <div class="masonry-grid-item">
-                <div class="card shadow-sm">
+                <div class="card article-card shadow-sm">
                   <div class="card-body">
-                    <h5 class="card-title">
-                      <i class="bi bi-file-earmark-text"></i>
-                      <a href="../mdhtml/数字化时代的自我管理：掌控生活与工作的新策略.html" class="text-decoration-none">
+                    <h5 class="card-title article-title">
+                      <i class="bi bi-file-earmark-text me-2 text-primary"></i>
+                      <a href="../mdhtml/数字化时代的自我管理：掌控生活与工作的新策略.html" class="text-decoration-none text-dark">
                         数字化时代的自我管理：掌控生活与工作的新策略
                       </a>
                     </h5>
                     
-                      <p class="card-text">
+                      <p class="card-text text-muted mb-3">
                         阐述数字化时代自我管理面临的挑战与重要性，介绍时间、信息、注意力管理策略并给出实践案例，强调其在掌控生活与工作中的关键作用。
                       </p>
                       
-                        
-                          <small class="text-muted">
-                            2026-02-11
-                          </small>
-                          
+                        <div class="article-meta">
+                            
+                                <i class="bi bi-clock me-1"></i>
+                                2026-02-11
+                                
+                        </div>
                   </div>
-                  <div class="card-footer text-muted">
+                  <div class="card-footer text-muted bg-white border-top">
                     <a href="/category/%E8%87%AA%E6%88%91%E6%8F%90%E5%8D%87.html"
-                      class="badge bg-primary">
+                      class="badge bg-primary me-2">
                       自我提升
                     </a>
                     
-                      <a href="/tag/%E6%95%B0%E5%AD%97%E5%8C%96%E6%97%B6%E4%BB%A3.html" class="badge tag-link">
+                      <a href="/tag/%E6%95%B0%E5%AD%97%E5%8C%96%E6%97%B6%E4%BB%A3.html" class="badge tag-link me-2 mb-1">
                         数字化时代
                       </a>
                       
-                      <a href="/tag/%E8%87%AA%E6%88%91%E7%AE%A1%E7%90%86.html" class="badge tag-link">
+                      <a href="/tag/%E8%87%AA%E6%88%91%E7%AE%A1%E7%90%86.html" class="badge tag-link me-2 mb-1">
                         自我管理
                       </a>
                       
-                      <a href="/tag/%E6%97%B6%E9%97%B4%E7%AE%A1%E7%90%86.html" class="badge tag-link">
+                      <a href="/tag/%E6%97%B6%E9%97%B4%E7%AE%A1%E7%90%86.html" class="badge tag-link me-2 mb-1">
                         时间管理
                       </a>
                       
-                      <a href="/tag/%E4%BF%A1%E6%81%AF%E7%AE%A1%E7%90%86.html" class="badge tag-link">
+                      <a href="/tag/%E4%BF%A1%E6%81%AF%E7%AE%A1%E7%90%86.html" class="badge tag-link me-2 mb-1">
                         信息管理
                       </a>
                       
-                      <a href="/tag/%E6%B3%A8%E6%84%8F%E5%8A%9B%E7%AE%A1%E7%90%86.html" class="badge tag-link">
+                      <a href="/tag/%E6%B3%A8%E6%84%8F%E5%8A%9B%E7%AE%A1%E7%90%86.html" class="badge tag-link me-2 mb-1">
                         注意力管理
                       </a>
                       
@@ -652,8 +727,8 @@
               
           </div>
 
-          <div class="mt-4 text-center">
-            <a href="标签列表.html" class="btn btn-outline-primary"><i class="bi bi-arrow-left"></i> 返回标签列表</a>
+          <div class="mt-6 text-center">
+            <a href="标签列表.html" class="btn btn-outline-primary back-button"><i class="bi bi-arrow-left me-2"></i> 返回标签列表</a>
           </div>
         </div>
       </div>
@@ -677,7 +752,7 @@
             itemSelector: '.masonry-grid-item',
             columnWidth: '.masonry-grid-item',
             percentPosition: true,
-            gutter: 10 // 可选，添加卡片间的间距
+            gutter: 15 // 增加间距，提升视觉效果
           });
         });
       </script>

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
 
 <head>
   <meta charset="UTF-8">
@@ -9,7 +9,7 @@
   <meta name="description" content="无人自助站的【健康】的标签列表页面，汇集了关于【健康】标签相关的文章和资讯，方便您快速找到感兴趣的内容。">
   <meta name="keywords" content="无人自助站,健康">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>标签文章列表</title>
+  <title>健康标签 - 无人自助站</title>
 
   <link rel="icon" href="../logo.svg" type="image/svg+xml">
   <link rel="stylesheet" href="../css/style.css">
@@ -27,6 +27,62 @@
   <!-- 引入Masonry -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/masonry/4.2.2/masonry.pkgd.min.js"></script>
 
+  <style>
+        .tag-header {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            color: white;
+            padding: 2rem;
+            border-radius: 8px;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        .tag-title {
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+        .article-card {
+            transition: all 0.3s ease;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        .article-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+        }
+        .article-title {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            transition: color 0.3s ease;
+        }
+        .article-title:hover {
+            color: #0d6efd;
+        }
+        .article-meta {
+            font-size: 0.85rem;
+            color: #6c757d;
+        }
+        .tag-link {
+            background-color: #e9ecef;
+            color: #495057;
+            transition: all 0.2s ease;
+        }
+        .tag-link:hover {
+            background-color: #dee2e6;
+            color: #212529;
+        }
+        .back-button {
+            transition: all 0.3s ease;
+        }
+        .back-button:hover {
+            transform: translateX(-3px);
+        }
+        .article-count {
+            font-size: 0.9rem;
+            opacity: 0.9;
+        }
+    </style>
 </head>
 
 <body>
@@ -80,7 +136,7 @@
     <main class="container-fluid mt-4">
       <div class="row">
         <div class="col-lg-8 col-md-12 mx-auto">
-          <nav aria-label="breadcrumb">
+          <nav aria-label="breadcrumb" class="mb-4">
             <ol class="breadcrumb">
               <li class="breadcrumb-item"><a href="/html/index.html">首页</a></li>
               <li class="breadcrumb-item"><a href="标签列表.html">标签列表</a></li>
@@ -89,54 +145,64 @@
               </li>
             </ol>
           </nav>
-          <h1 style="font-size: 1.5em; margin: 0.5em 0;">
-            健康标签的文章和资讯
-        </h1>
+          
+          <!-- 标签头部 -->
+          <div class="tag-header">
+              <h1 class="tag-title">
+                  <i class="bi bi-tags me-2"></i>
+                  健康
+              </h1>
+              <p class="article-count">
+                  共 28 篇文章
+              </p>
+          </div>
+          
           <div class="masonry-grid">
             
               <div class="masonry-grid-item">
-                <div class="card shadow-sm">
+                <div class="card article-card shadow-sm">
                   <div class="card-body">
-                    <h5 class="card-title">
-                      <i class="bi bi-file-earmark-text"></i>
-                      <a href="../mdhtml/你每天睡6小时就是在自杀：睡眠债务的惊人真相.html" class="text-decoration-none">
+                    <h5 class="card-title article-title">
+                      <i class="bi bi-file-earmark-text me-2 text-primary"></i>
+                      <a href="../mdhtml/你每天睡6小时就是在自杀：睡眠债务的惊人真相.html" class="text-decoration-none text-dark">
                         你每天睡6小时就是在自杀：睡眠债务的惊人真相
                       </a>
                     </h5>
                     
-                      <p class="card-text">
+                      <p class="card-text text-muted mb-3">
                         深度分析睡眠不足的危害。不是努力不够，而是睡眠不够。包含科学的睡眠优化方法。
                       </p>
                       
-                        
-                          <small class="text-muted">
-                            2026-03-26
-                          </small>
-                          
+                        <div class="article-meta">
+                            
+                                <i class="bi bi-clock me-1"></i>
+                                2026-03-26
+                                
+                        </div>
                   </div>
-                  <div class="card-footer text-muted">
+                  <div class="card-footer text-muted bg-white border-top">
                     <a href="/category/%E5%81%A5%E5%BA%B7%E7%94%9F%E6%B4%BB.html"
-                      class="badge bg-primary">
+                      class="badge bg-primary me-2">
                       健康生活
                     </a>
                     
-                      <a href="/tag/%E7%9D%A1%E7%9C%A0.html" class="badge tag-link">
+                      <a href="/tag/%E7%9D%A1%E7%9C%A0.html" class="badge tag-link me-2 mb-1">
                         睡眠
                       </a>
                       
-                      <a href="/tag/%E5%81%A5%E5%BA%B7.html" class="badge tag-link">
+                      <a href="/tag/%E5%81%A5%E5%BA%B7.html" class="badge tag-link me-2 mb-1">
                         健康
                       </a>
                       
-                      <a href="/tag/%E6%85%A2%E6%80%A7%E7%97%85.html" class="badge tag-link">
+                      <a href="/tag/%E6%85%A2%E6%80%A7%E7%97%85.html" class="badge tag-link me-2 mb-1">
                         慢性病
                       </a>
                       
-                      <a href="/tag/%E7%B2%BE%E5%8A%9B%E7%AE%A1%E7%90%86.html" class="badge tag-link">
+                      <a href="/tag/%E7%B2%BE%E5%8A%9B%E7%AE%A1%E7%90%86.html" class="badge tag-link me-2 mb-1">
                         精力管理
                       </a>
                       
-                      <a href="/tag/2026%E8%B6%8B%E5%8A%BF.html" class="badge tag-link">
+                      <a href="/tag/2026%E8%B6%8B%E5%8A%BF.html" class="badge tag-link me-2 mb-1">
                         2026趋势
                       </a>
                       
@@ -145,48 +211,49 @@
               </div>
               
               <div class="masonry-grid-item">
-                <div class="card shadow-sm">
+                <div class="card article-card shadow-sm">
                   <div class="card-body">
-                    <h5 class="card-title">
-                      <i class="bi bi-file-earmark-text"></i>
-                      <a href="../mdhtml/2026年的身体健康危机：为什么越来越多人患上慢性病，如何从根本上改变.html" class="text-decoration-none">
+                    <h5 class="card-title article-title">
+                      <i class="bi bi-file-earmark-text me-2 text-primary"></i>
+                      <a href="../mdhtml/2026年的身体健康危机：为什么越来越多人患上慢性病，如何从根本上改变.html" class="text-decoration-none text-dark">
                         你的身体在衰老：90%的慢性病其实可以预防
                       </a>
                     </h5>
                     
-                      <p class="card-text">
+                      <p class="card-text text-muted mb-3">
                         深度分析现代健康危机的根本原因。不是基因问题，而是生活方式问题。包含科学的健康改变方法。
                       </p>
                       
-                        
-                          <small class="text-muted">
-                            2026-03-26
-                          </small>
-                          
+                        <div class="article-meta">
+                            
+                                <i class="bi bi-clock me-1"></i>
+                                2026-03-26
+                                
+                        </div>
                   </div>
-                  <div class="card-footer text-muted">
+                  <div class="card-footer text-muted bg-white border-top">
                     <a href="/category/%E5%81%A5%E5%BA%B7%E7%94%9F%E6%B4%BB.html"
-                      class="badge bg-primary">
+                      class="badge bg-primary me-2">
                       健康生活
                     </a>
                     
-                      <a href="/tag/%E5%81%A5%E5%BA%B7.html" class="badge tag-link">
+                      <a href="/tag/%E5%81%A5%E5%BA%B7.html" class="badge tag-link me-2 mb-1">
                         健康
                       </a>
                       
-                      <a href="/tag/%E6%85%A2%E6%80%A7%E7%97%85.html" class="badge tag-link">
+                      <a href="/tag/%E6%85%A2%E6%80%A7%E7%97%85.html" class="badge tag-link me-2 mb-1">
                         慢性病
                       </a>
                       
-                      <a href="/tag/%E7%94%9F%E6%B4%BB%E6%96%B9%E5%BC%8F.html" class="badge tag-link">
+                      <a href="/tag/%E7%94%9F%E6%B4%BB%E6%96%B9%E5%BC%8F.html" class="badge tag-link me-2 mb-1">
                         生活方式
                       </a>
                       
-                      <a href="/tag/%E9%A2%84%E9%98%B2%E5%8C%BB%E5%AD%A6.html" class="badge tag-link">
+                      <a href="/tag/%E9%A2%84%E9%98%B2%E5%8C%BB%E5%AD%A6.html" class="badge tag-link me-2 mb-1">
                         预防医学
                       </a>
                       
-                      <a href="/tag/2026%E8%B6%8B%E5%8A%BF.html" class="badge tag-link">
+                      <a href="/tag/2026%E8%B6%8B%E5%8A%BF.html" class="badge tag-link me-2 mb-1">
                         2026趋势
                       </a>
                       
@@ -195,44 +262,45 @@
               </div>
               
               <div class="masonry-grid-item">
-                <div class="card shadow-sm">
+                <div class="card article-card shadow-sm">
                   <div class="card-body">
-                    <h5 class="card-title">
-                      <i class="bi bi-file-earmark-text"></i>
-                      <a href="../mdhtml/这3个时间段不能喝酒.html" class="text-decoration-none">
+                    <h5 class="card-title article-title">
+                      <i class="bi bi-file-earmark-text me-2 text-primary"></i>
+                      <a href="../mdhtml/这3个时间段不能喝酒.html" class="text-decoration-none text-dark">
                         这3个时间段不能喝酒
                       </a>
                     </h5>
                     
-                      <p class="card-text">
+                      <p class="card-text text-muted mb-3">
                         分析不能喝酒的时间段。
                       </p>
                       
-                        
-                          <small class="text-muted">
-                            2026-03-24
-                          </small>
-                          
+                        <div class="article-meta">
+                            
+                                <i class="bi bi-clock me-1"></i>
+                                2026-03-24
+                                
+                        </div>
                   </div>
-                  <div class="card-footer text-muted">
+                  <div class="card-footer text-muted bg-white border-top">
                     <a href="/category/%E5%81%A5%E5%BA%B7%E7%94%9F%E6%B4%BB.html"
-                      class="badge bg-primary">
+                      class="badge bg-primary me-2">
                       健康生活
                     </a>
                     
-                      <a href="/tag/%E5%96%9D%E9%85%92.html" class="badge tag-link">
+                      <a href="/tag/%E5%96%9D%E9%85%92.html" class="badge tag-link me-2 mb-1">
                         喝酒
                       </a>
                       
-                      <a href="/tag/%E5%81%A5%E5%BA%B7.html" class="badge tag-link">
+                      <a href="/tag/%E5%81%A5%E5%BA%B7.html" class="badge tag-link me-2 mb-1">
                         健康
                       </a>
                       
-                      <a href="/tag/%E6%97%B6%E9%97%B4.html" class="badge tag-link">
+                      <a href="/tag/%E6%97%B6%E9%97%B4.html" class="badge tag-link me-2 mb-1">
                         时间
                       </a>
                       
-                      <a href="/tag/%E7%A6%81%E5%BF%8C.html" class="badge tag-link">
+                      <a href="/tag/%E7%A6%81%E5%BF%8C.html" class="badge tag-link me-2 mb-1">
                         禁忌
                       </a>
                       
@@ -241,48 +309,49 @@
               </div>
               
               <div class="masonry-grid-item">
-                <div class="card shadow-sm">
+                <div class="card article-card shadow-sm">
                   <div class="card-body">
-                    <h5 class="card-title">
-                      <i class="bi bi-file-earmark-text"></i>
-                      <a href="../mdhtml/这3个年龄是变老转折点.html" class="text-decoration-none">
+                    <h5 class="card-title article-title">
+                      <i class="bi bi-file-earmark-text me-2 text-primary"></i>
+                      <a href="../mdhtml/这3个年龄是变老转折点.html" class="text-decoration-none text-dark">
                         这3个年龄是变老转折点
                       </a>
                     </h5>
                     
-                      <p class="card-text">
+                      <p class="card-text text-muted mb-3">
                         分析人变老的年龄转折点。
                       </p>
                       
-                        
-                          <small class="text-muted">
-                            2026-03-24
-                          </small>
-                          
+                        <div class="article-meta">
+                            
+                                <i class="bi bi-clock me-1"></i>
+                                2026-03-24
+                                
+                        </div>
                   </div>
-                  <div class="card-footer text-muted">
+                  <div class="card-footer text-muted bg-white border-top">
                     <a href="/category/%E6%8A%97%E8%A1%B0%E8%80%81.html"
-                      class="badge bg-primary">
+                      class="badge bg-primary me-2">
                       抗衰老
                     </a>
                     
-                      <a href="/tag/%E5%8F%98%E8%80%81.html" class="badge tag-link">
+                      <a href="/tag/%E5%8F%98%E8%80%81.html" class="badge tag-link me-2 mb-1">
                         变老
                       </a>
                       
-                      <a href="/tag/%E5%B9%B4%E9%BE%84.html" class="badge tag-link">
+                      <a href="/tag/%E5%B9%B4%E9%BE%84.html" class="badge tag-link me-2 mb-1">
                         年龄
                       </a>
                       
-                      <a href="/tag/%E8%BD%AC%E6%8A%98%E7%82%B9.html" class="badge tag-link">
+                      <a href="/tag/%E8%BD%AC%E6%8A%98%E7%82%B9.html" class="badge tag-link me-2 mb-1">
                         转折点
                       </a>
                       
-                      <a href="/tag/%E6%8A%97%E8%A1%B0%E8%80%81.html" class="badge tag-link">
+                      <a href="/tag/%E6%8A%97%E8%A1%B0%E8%80%81.html" class="badge tag-link me-2 mb-1">
                         抗衰老
                       </a>
                       
-                      <a href="/tag/%E5%81%A5%E5%BA%B7.html" class="badge tag-link">
+                      <a href="/tag/%E5%81%A5%E5%BA%B7.html" class="badge tag-link me-2 mb-1">
                         健康
                       </a>
                       
@@ -291,48 +360,49 @@
               </div>
               
               <div class="masonry-grid-item">
-                <div class="card shadow-sm">
+                <div class="card article-card shadow-sm">
                   <div class="card-body">
-                    <h5 class="card-title">
-                      <i class="bi bi-file-earmark-text"></i>
-                      <a href="../mdhtml/这4种性格的人容易长寿.html" class="text-decoration-none">
+                    <h5 class="card-title article-title">
+                      <i class="bi bi-file-earmark-text me-2 text-primary"></i>
+                      <a href="../mdhtml/这4种性格的人容易长寿.html" class="text-decoration-none text-dark">
                         这4种性格的人容易长寿
                       </a>
                     </h5>
                     
-                      <p class="card-text">
+                      <p class="card-text text-muted mb-3">
                         分析容易长寿的性格特征。
                       </p>
                       
-                        
-                          <small class="text-muted">
-                            2026-03-24
-                          </small>
-                          
+                        <div class="article-meta">
+                            
+                                <i class="bi bi-clock me-1"></i>
+                                2026-03-24
+                                
+                        </div>
                   </div>
-                  <div class="card-footer text-muted">
+                  <div class="card-footer text-muted bg-white border-top">
                     <a href="/category/%E5%81%A5%E5%BA%B7%E8%A7%82%E5%AF%9F.html"
-                      class="badge bg-primary">
+                      class="badge bg-primary me-2">
                       健康观察
                     </a>
                     
-                      <a href="/tag/%E9%95%BF%E5%AF%BF.html" class="badge tag-link">
+                      <a href="/tag/%E9%95%BF%E5%AF%BF.html" class="badge tag-link me-2 mb-1">
                         长寿
                       </a>
                       
-                      <a href="/tag/%E6%80%A7%E6%A0%BC.html" class="badge tag-link">
+                      <a href="/tag/%E6%80%A7%E6%A0%BC.html" class="badge tag-link me-2 mb-1">
                         性格
                       </a>
                       
-                      <a href="/tag/%E5%81%A5%E5%BA%B7.html" class="badge tag-link">
+                      <a href="/tag/%E5%81%A5%E5%BA%B7.html" class="badge tag-link me-2 mb-1">
                         健康
                       </a>
                       
-                      <a href="/tag/%E5%85%BB%E7%94%9F.html" class="badge tag-link">
+                      <a href="/tag/%E5%85%BB%E7%94%9F.html" class="badge tag-link me-2 mb-1">
                         养生
                       </a>
                       
-                      <a href="/tag/%E5%BF%83%E7%90%86.html" class="badge tag-link">
+                      <a href="/tag/%E5%BF%83%E7%90%86.html" class="badge tag-link me-2 mb-1">
                         心理
                       </a>
                       
@@ -341,48 +411,49 @@
               </div>
               
               <div class="masonry-grid-item">
-                <div class="card shadow-sm">
+                <div class="card article-card shadow-sm">
                   <div class="card-body">
-                    <h5 class="card-title">
-                      <i class="bi bi-file-earmark-text"></i>
-                      <a href="../mdhtml/这3个年龄段不能吃避孕药.html" class="text-decoration-none">
+                    <h5 class="card-title article-title">
+                      <i class="bi bi-file-earmark-text me-2 text-primary"></i>
+                      <a href="../mdhtml/这3个年龄段不能吃避孕药.html" class="text-decoration-none text-dark">
                         这3个年龄段不能吃避孕药
                       </a>
                     </h5>
                     
-                      <p class="card-text">
+                      <p class="card-text text-muted mb-3">
                         揭示不能吃避孕药的年龄段。
                       </p>
                       
-                        
-                          <small class="text-muted">
-                            2026-03-24
-                          </small>
-                          
+                        <div class="article-meta">
+                            
+                                <i class="bi bi-clock me-1"></i>
+                                2026-03-24
+                                
+                        </div>
                   </div>
-                  <div class="card-footer text-muted">
+                  <div class="card-footer text-muted bg-white border-top">
                     <a href="/category/%E5%81%A5%E5%BA%B7%E7%94%9F%E6%B4%BB.html"
-                      class="badge bg-primary">
+                      class="badge bg-primary me-2">
                       健康生活
                     </a>
                     
-                      <a href="/tag/%E9%81%BF%E5%AD%95%E8%8D%AF.html" class="badge tag-link">
+                      <a href="/tag/%E9%81%BF%E5%AD%95%E8%8D%AF.html" class="badge tag-link me-2 mb-1">
                         避孕药
                       </a>
                       
-                      <a href="/tag/%E5%81%A5%E5%BA%B7.html" class="badge tag-link">
+                      <a href="/tag/%E5%81%A5%E5%BA%B7.html" class="badge tag-link me-2 mb-1">
                         健康
                       </a>
                       
-                      <a href="/tag/%E5%B9%B4%E9%BE%84.html" class="badge tag-link">
+                      <a href="/tag/%E5%B9%B4%E9%BE%84.html" class="badge tag-link me-2 mb-1">
                         年龄
                       </a>
                       
-                      <a href="/tag/%E7%A6%81%E5%BF%8C.html" class="badge tag-link">
+                      <a href="/tag/%E7%A6%81%E5%BF%8C.html" class="badge tag-link me-2 mb-1">
                         禁忌
                       </a>
                       
-                      <a href="/tag/%E5%8C%BB%E5%AD%A6.html" class="badge tag-link">
+                      <a href="/tag/%E5%8C%BB%E5%AD%A6.html" class="badge tag-link me-2 mb-1">
                         医学
                       </a>
                       
@@ -391,48 +462,49 @@
               </div>
               
               <div class="masonry-grid-item">
-                <div class="card shadow-sm">
+                <div class="card article-card shadow-sm">
                   <div class="card-body">
-                    <h5 class="card-title">
-                      <i class="bi bi-file-earmark-text"></i>
-                      <a href="../mdhtml/这4个时间段喝水等于喝毒药.html" class="text-decoration-none">
+                    <h5 class="card-title article-title">
+                      <i class="bi bi-file-earmark-text me-2 text-primary"></i>
+                      <a href="../mdhtml/这4个时间段喝水等于喝毒药.html" class="text-decoration-none text-dark">
                         这4个时间段喝水等于喝毒药
                       </a>
                     </h5>
                     
-                      <p class="card-text">
+                      <p class="card-text text-muted mb-3">
                         分析不适合喝水的时间段，提供健康饮水建议。
                       </p>
                       
-                        
-                          <small class="text-muted">
-                            2026-03-24
-                          </small>
-                          
+                        <div class="article-meta">
+                            
+                                <i class="bi bi-clock me-1"></i>
+                                2026-03-24
+                                
+                        </div>
                   </div>
-                  <div class="card-footer text-muted">
+                  <div class="card-footer text-muted bg-white border-top">
                     <a href="/category/%E5%81%A5%E5%BA%B7%E7%94%9F%E6%B4%BB.html"
-                      class="badge bg-primary">
+                      class="badge bg-primary me-2">
                       健康生活
                     </a>
                     
-                      <a href="/tag/%E5%96%9D%E6%B0%B4.html" class="badge tag-link">
+                      <a href="/tag/%E5%96%9D%E6%B0%B4.html" class="badge tag-link me-2 mb-1">
                         喝水
                       </a>
                       
-                      <a href="/tag/%E5%81%A5%E5%BA%B7.html" class="badge tag-link">
+                      <a href="/tag/%E5%81%A5%E5%BA%B7.html" class="badge tag-link me-2 mb-1">
                         健康
                       </a>
                       
-                      <a href="/tag/%E6%97%B6%E9%97%B4.html" class="badge tag-link">
+                      <a href="/tag/%E6%97%B6%E9%97%B4.html" class="badge tag-link me-2 mb-1">
                         时间
                       </a>
                       
-                      <a href="/tag/%E5%85%BB%E7%94%9F.html" class="badge tag-link">
+                      <a href="/tag/%E5%85%BB%E7%94%9F.html" class="badge tag-link me-2 mb-1">
                         养生
                       </a>
                       
-                      <a href="/tag/%E4%B9%A0%E6%83%AF.html" class="badge tag-link">
+                      <a href="/tag/%E4%B9%A0%E6%83%AF.html" class="badge tag-link me-2 mb-1">
                         习惯
                       </a>
                       
@@ -441,48 +513,49 @@
               </div>
               
               <div class="masonry-grid-item">
-                <div class="card shadow-sm">
+                <div class="card article-card shadow-sm">
                   <div class="card-body">
-                    <h5 class="card-title">
-                      <i class="bi bi-file-earmark-text"></i>
-                      <a href="../mdhtml/这5个表现说明你内分泌失调.html" class="text-decoration-none">
+                    <h5 class="card-title article-title">
+                      <i class="bi bi-file-earmark-text me-2 text-primary"></i>
+                      <a href="../mdhtml/这5个表现说明你内分泌失调.html" class="text-decoration-none text-dark">
                         这5个表现说明你内分泌失调
                       </a>
                     </h5>
                     
-                      <p class="card-text">
+                      <p class="card-text text-muted mb-3">
                         揭示内分泌失调的表现，提供调理建议。
                       </p>
                       
-                        
-                          <small class="text-muted">
-                            2026-03-24
-                          </small>
-                          
+                        <div class="article-meta">
+                            
+                                <i class="bi bi-clock me-1"></i>
+                                2026-03-24
+                                
+                        </div>
                   </div>
-                  <div class="card-footer text-muted">
+                  <div class="card-footer text-muted bg-white border-top">
                     <a href="/category/%E5%81%A5%E5%BA%B7%E7%94%9F%E6%B4%BB.html"
-                      class="badge bg-primary">
+                      class="badge bg-primary me-2">
                       健康生活
                     </a>
                     
-                      <a href="/tag/%E5%86%85%E5%88%86%E6%B3%8C.html" class="badge tag-link">
+                      <a href="/tag/%E5%86%85%E5%88%86%E6%B3%8C.html" class="badge tag-link me-2 mb-1">
                         内分泌
                       </a>
                       
-                      <a href="/tag/%E5%81%A5%E5%BA%B7.html" class="badge tag-link">
+                      <a href="/tag/%E5%81%A5%E5%BA%B7.html" class="badge tag-link me-2 mb-1">
                         健康
                       </a>
                       
-                      <a href="/tag/%E5%A4%B1%E8%B0%83.html" class="badge tag-link">
+                      <a href="/tag/%E5%A4%B1%E8%B0%83.html" class="badge tag-link me-2 mb-1">
                         失调
                       </a>
                       
-                      <a href="/tag/%E7%97%87%E7%8A%B6.html" class="badge tag-link">
+                      <a href="/tag/%E7%97%87%E7%8A%B6.html" class="badge tag-link me-2 mb-1">
                         症状
                       </a>
                       
-                      <a href="/tag/%E5%85%BB%E7%94%9F.html" class="badge tag-link">
+                      <a href="/tag/%E5%85%BB%E7%94%9F.html" class="badge tag-link me-2 mb-1">
                         养生
                       </a>
                       
@@ -491,48 +564,49 @@
               </div>
               
               <div class="masonry-grid-item">
-                <div class="card shadow-sm">
+                <div class="card article-card shadow-sm">
                   <div class="card-body">
-                    <h5 class="card-title">
-                      <i class="bi bi-file-earmark-text"></i>
-                      <a href="../mdhtml/这4个习惯会毁掉你的胃，第2个很多人天天在做.html" class="text-decoration-none">
+                    <h5 class="card-title article-title">
+                      <i class="bi bi-file-earmark-text me-2 text-primary"></i>
+                      <a href="../mdhtml/这4个习惯会毁掉你的胃，第2个很多人天天在做.html" class="text-decoration-none text-dark">
                         这4个习惯会毁掉你的胃，第2个很多人天天在做
                       </a>
                     </h5>
                     
-                      <p class="card-text">
+                      <p class="card-text text-muted mb-3">
                         揭示伤胃的坏习惯，提供养胃建议。
                       </p>
                       
-                        
-                          <small class="text-muted">
-                            2026-03-24
-                          </small>
-                          
+                        <div class="article-meta">
+                            
+                                <i class="bi bi-clock me-1"></i>
+                                2026-03-24
+                                
+                        </div>
                   </div>
-                  <div class="card-footer text-muted">
+                  <div class="card-footer text-muted bg-white border-top">
                     <a href="/category/%E5%81%A5%E5%BA%B7%E7%94%9F%E6%B4%BB.html"
-                      class="badge bg-primary">
+                      class="badge bg-primary me-2">
                       健康生活
                     </a>
                     
-                      <a href="/tag/%E8%83%83.html" class="badge tag-link">
+                      <a href="/tag/%E8%83%83.html" class="badge tag-link me-2 mb-1">
                         胃
                       </a>
                       
-                      <a href="/tag/%E5%81%A5%E5%BA%B7.html" class="badge tag-link">
+                      <a href="/tag/%E5%81%A5%E5%BA%B7.html" class="badge tag-link me-2 mb-1">
                         健康
                       </a>
                       
-                      <a href="/tag/%E4%B9%A0%E6%83%AF.html" class="badge tag-link">
+                      <a href="/tag/%E4%B9%A0%E6%83%AF.html" class="badge tag-link me-2 mb-1">
                         习惯
                       </a>
                       
-                      <a href="/tag/%E5%85%BB%E8%83%83.html" class="badge tag-link">
+                      <a href="/tag/%E5%85%BB%E8%83%83.html" class="badge tag-link me-2 mb-1">
                         养胃
                       </a>
                       
-                      <a href="/tag/%E9%A5%AE%E9%A3%9F.html" class="badge tag-link">
+                      <a href="/tag/%E9%A5%AE%E9%A3%9F.html" class="badge tag-link me-2 mb-1">
                         饮食
                       </a>
                       
@@ -541,48 +615,49 @@
               </div>
               
               <div class="masonry-grid-item">
-                <div class="card shadow-sm">
+                <div class="card article-card shadow-sm">
                   <div class="card-body">
-                    <h5 class="card-title">
-                      <i class="bi bi-file-earmark-text"></i>
-                      <a href="../mdhtml/这3种肉是致癌物，第2种经常在吃.html" class="text-decoration-none">
+                    <h5 class="card-title article-title">
+                      <i class="bi bi-file-earmark-text me-2 text-primary"></i>
+                      <a href="../mdhtml/这3种肉是致癌物，第2种经常在吃.html" class="text-decoration-none text-dark">
                         这3种肉是致癌物，第2种经常在吃
                       </a>
                     </h5>
                     
-                      <p class="card-text">
+                      <p class="card-text text-muted mb-3">
                         揭示致癌肉类食品，提供健康饮食建议。
                       </p>
                       
-                        
-                          <small class="text-muted">
-                            2026-03-24
-                          </small>
-                          
+                        <div class="article-meta">
+                            
+                                <i class="bi bi-clock me-1"></i>
+                                2026-03-24
+                                
+                        </div>
                   </div>
-                  <div class="card-footer text-muted">
+                  <div class="card-footer text-muted bg-white border-top">
                     <a href="/category/%E5%81%A5%E5%BA%B7%E7%94%9F%E6%B4%BB.html"
-                      class="badge bg-primary">
+                      class="badge bg-primary me-2">
                       健康生活
                     </a>
                     
-                      <a href="/tag/%E8%87%B4%E7%99%8C.html" class="badge tag-link">
+                      <a href="/tag/%E8%87%B4%E7%99%8C.html" class="badge tag-link me-2 mb-1">
                         致癌
                       </a>
                       
-                      <a href="/tag/%E8%82%89%E7%B1%BB.html" class="badge tag-link">
+                      <a href="/tag/%E8%82%89%E7%B1%BB.html" class="badge tag-link me-2 mb-1">
                         肉类
                       </a>
                       
-                      <a href="/tag/%E9%A3%9F%E5%93%81%E5%AE%89%E5%85%A8.html" class="badge tag-link">
+                      <a href="/tag/%E9%A3%9F%E5%93%81%E5%AE%89%E5%85%A8.html" class="badge tag-link me-2 mb-1">
                         食品安全
                       </a>
                       
-                      <a href="/tag/%E5%81%A5%E5%BA%B7.html" class="badge tag-link">
+                      <a href="/tag/%E5%81%A5%E5%BA%B7.html" class="badge tag-link me-2 mb-1">
                         健康
                       </a>
                       
-                      <a href="/tag/%E9%A5%AE%E9%A3%9F.html" class="badge tag-link">
+                      <a href="/tag/%E9%A5%AE%E9%A3%9F.html" class="badge tag-link me-2 mb-1">
                         饮食
                       </a>
                       
@@ -591,48 +666,49 @@
               </div>
               
               <div class="masonry-grid-item">
-                <div class="card shadow-sm">
+                <div class="card article-card shadow-sm">
                   <div class="card-body">
-                    <h5 class="card-title">
-                      <i class="bi bi-file-earmark-text"></i>
-                      <a href="../mdhtml/这5个信号是大病前兆，第2个最容易被忽视.html" class="text-decoration-none">
+                    <h5 class="card-title article-title">
+                      <i class="bi bi-file-earmark-text me-2 text-primary"></i>
+                      <a href="../mdhtml/这5个信号是大病前兆，第2个最容易被忽视.html" class="text-decoration-none text-dark">
                         这5个信号是大病前兆，第2个最容易被忽视
                       </a>
                     </h5>
                     
-                      <p class="card-text">
+                      <p class="card-text text-muted mb-3">
                         揭示大病前的预警信号，提供健康建议。
                       </p>
                       
-                        
-                          <small class="text-muted">
-                            2026-03-24
-                          </small>
-                          
+                        <div class="article-meta">
+                            
+                                <i class="bi bi-clock me-1"></i>
+                                2026-03-24
+                                
+                        </div>
                   </div>
-                  <div class="card-footer text-muted">
+                  <div class="card-footer text-muted bg-white border-top">
                     <a href="/category/%E5%81%A5%E5%BA%B7%E7%94%9F%E6%B4%BB.html"
-                      class="badge bg-primary">
+                      class="badge bg-primary me-2">
                       健康生活
                     </a>
                     
-                      <a href="/tag/%E5%A4%A7%E7%97%85.html" class="badge tag-link">
+                      <a href="/tag/%E5%A4%A7%E7%97%85.html" class="badge tag-link me-2 mb-1">
                         大病
                       </a>
                       
-                      <a href="/tag/%E4%BF%A1%E5%8F%B7.html" class="badge tag-link">
+                      <a href="/tag/%E4%BF%A1%E5%8F%B7.html" class="badge tag-link me-2 mb-1">
                         信号
                       </a>
                       
-                      <a href="/tag/%E9%A2%84%E8%AD%A6.html" class="badge tag-link">
+                      <a href="/tag/%E9%A2%84%E8%AD%A6.html" class="badge tag-link me-2 mb-1">
                         预警
                       </a>
                       
-                      <a href="/tag/%E5%81%A5%E5%BA%B7.html" class="badge tag-link">
+                      <a href="/tag/%E5%81%A5%E5%BA%B7.html" class="badge tag-link me-2 mb-1">
                         健康
                       </a>
                       
-                      <a href="/tag/%E7%96%BE%E7%97%85.html" class="badge tag-link">
+                      <a href="/tag/%E7%96%BE%E7%97%85.html" class="badge tag-link me-2 mb-1">
                         疾病
                       </a>
                       
@@ -641,48 +717,49 @@
               </div>
               
               <div class="masonry-grid-item">
-                <div class="card shadow-sm">
+                <div class="card article-card shadow-sm">
                   <div class="card-body">
-                    <h5 class="card-title">
-                      <i class="bi bi-file-earmark-text"></i>
-                      <a href="../mdhtml/这4种人最容易得糖尿病，看看有没有你.html" class="text-decoration-none">
+                    <h5 class="card-title article-title">
+                      <i class="bi bi-file-earmark-text me-2 text-primary"></i>
+                      <a href="../mdhtml/这4种人最容易得糖尿病，看看有没有你.html" class="text-decoration-none text-dark">
                         这4种人最容易得糖尿病，看看有没有你
                       </a>
                     </h5>
                     
-                      <p class="card-text">
+                      <p class="card-text text-muted mb-3">
                         分析糖尿病的高危人群，提供预防建议。
                       </p>
                       
-                        
-                          <small class="text-muted">
-                            2026-03-24
-                          </small>
-                          
+                        <div class="article-meta">
+                            
+                                <i class="bi bi-clock me-1"></i>
+                                2026-03-24
+                                
+                        </div>
                   </div>
-                  <div class="card-footer text-muted">
+                  <div class="card-footer text-muted bg-white border-top">
                     <a href="/category/%E5%81%A5%E5%BA%B7%E7%94%9F%E6%B4%BB.html"
-                      class="badge bg-primary">
+                      class="badge bg-primary me-2">
                       健康生活
                     </a>
                     
-                      <a href="/tag/%E7%B3%96%E5%B0%BF%E7%97%85.html" class="badge tag-link">
+                      <a href="/tag/%E7%B3%96%E5%B0%BF%E7%97%85.html" class="badge tag-link me-2 mb-1">
                         糖尿病
                       </a>
                       
-                      <a href="/tag/%E5%81%A5%E5%BA%B7.html" class="badge tag-link">
+                      <a href="/tag/%E5%81%A5%E5%BA%B7.html" class="badge tag-link me-2 mb-1">
                         健康
                       </a>
                       
-                      <a href="/tag/%E9%A2%84%E9%98%B2.html" class="badge tag-link">
+                      <a href="/tag/%E9%A2%84%E9%98%B2.html" class="badge tag-link me-2 mb-1">
                         预防
                       </a>
                       
-                      <a href="/tag/%E7%96%BE%E7%97%85.html" class="badge tag-link">
+                      <a href="/tag/%E7%96%BE%E7%97%85.html" class="badge tag-link me-2 mb-1">
                         疾病
                       </a>
                       
-                      <a href="/tag/%E7%94%9F%E6%B4%BB%E4%B9%A0%E6%83%AF.html" class="badge tag-link">
+                      <a href="/tag/%E7%94%9F%E6%B4%BB%E4%B9%A0%E6%83%AF.html" class="badge tag-link me-2 mb-1">
                         生活习惯
                       </a>
                       
@@ -691,48 +768,49 @@
               </div>
               
               <div class="masonry-grid-item">
-                <div class="card shadow-sm">
+                <div class="card article-card shadow-sm">
                   <div class="card-body">
-                    <h5 class="card-title">
-                      <i class="bi bi-file-earmark-text"></i>
-                      <a href="../mdhtml/这5个信号是心脏在求救，第3个最危险.html" class="text-decoration-none">
+                    <h5 class="card-title article-title">
+                      <i class="bi bi-file-earmark-text me-2 text-primary"></i>
+                      <a href="../mdhtml/这5个信号是心脏在求救，第3个最危险.html" class="text-decoration-none text-dark">
                         这5个信号是心脏在求救，第3个最危险
                       </a>
                     </h5>
                     
-                      <p class="card-text">
+                      <p class="card-text text-muted mb-3">
                         揭示心脏疾病的预警信号，提供保护心脏的建议。
                       </p>
                       
-                        
-                          <small class="text-muted">
-                            2026-03-24
-                          </small>
-                          
+                        <div class="article-meta">
+                            
+                                <i class="bi bi-clock me-1"></i>
+                                2026-03-24
+                                
+                        </div>
                   </div>
-                  <div class="card-footer text-muted">
+                  <div class="card-footer text-muted bg-white border-top">
                     <a href="/category/%E5%81%A5%E5%BA%B7%E7%94%9F%E6%B4%BB.html"
-                      class="badge bg-primary">
+                      class="badge bg-primary me-2">
                       健康生活
                     </a>
                     
-                      <a href="/tag/%E5%BF%83%E8%84%8F.html" class="badge tag-link">
+                      <a href="/tag/%E5%BF%83%E8%84%8F.html" class="badge tag-link me-2 mb-1">
                         心脏
                       </a>
                       
-                      <a href="/tag/%E5%81%A5%E5%BA%B7.html" class="badge tag-link">
+                      <a href="/tag/%E5%81%A5%E5%BA%B7.html" class="badge tag-link me-2 mb-1">
                         健康
                       </a>
                       
-                      <a href="/tag/%E5%BF%83%E8%84%8F%E7%97%85.html" class="badge tag-link">
+                      <a href="/tag/%E5%BF%83%E8%84%8F%E7%97%85.html" class="badge tag-link me-2 mb-1">
                         心脏病
                       </a>
                       
-                      <a href="/tag/%E4%BF%A1%E5%8F%B7.html" class="badge tag-link">
+                      <a href="/tag/%E4%BF%A1%E5%8F%B7.html" class="badge tag-link me-2 mb-1">
                         信号
                       </a>
                       
-                      <a href="/tag/%E6%80%A5%E6%95%91.html" class="badge tag-link">
+                      <a href="/tag/%E6%80%A5%E6%95%91.html" class="badge tag-link me-2 mb-1">
                         急救
                       </a>
                       
@@ -741,48 +819,49 @@
               </div>
               
               <div class="masonry-grid-item">
-                <div class="card shadow-sm">
+                <div class="card article-card shadow-sm">
                   <div class="card-body">
-                    <h5 class="card-title">
-                      <i class="bi bi-file-earmark-text"></i>
-                      <a href="../mdhtml/这3个时间点洗澡等于慢性自杀.html" class="text-decoration-none">
+                    <h5 class="card-title article-title">
+                      <i class="bi bi-file-earmark-text me-2 text-primary"></i>
+                      <a href="../mdhtml/这3个时间点洗澡等于慢性自杀.html" class="text-decoration-none text-dark">
                         这3个时间点洗澡等于慢性自杀
                       </a>
                     </h5>
                     
-                      <p class="card-text">
+                      <p class="card-text text-muted mb-3">
                         分析不适合洗澡的时间段，提供健康洗澡建议。
                       </p>
                       
-                        
-                          <small class="text-muted">
-                            2026-03-24
-                          </small>
-                          
+                        <div class="article-meta">
+                            
+                                <i class="bi bi-clock me-1"></i>
+                                2026-03-24
+                                
+                        </div>
                   </div>
-                  <div class="card-footer text-muted">
+                  <div class="card-footer text-muted bg-white border-top">
                     <a href="/category/%E5%81%A5%E5%BA%B7%E7%94%9F%E6%B4%BB.html"
-                      class="badge bg-primary">
+                      class="badge bg-primary me-2">
                       健康生活
                     </a>
                     
-                      <a href="/tag/%E6%B4%97%E6%BE%A1.html" class="badge tag-link">
+                      <a href="/tag/%E6%B4%97%E6%BE%A1.html" class="badge tag-link me-2 mb-1">
                         洗澡
                       </a>
                       
-                      <a href="/tag/%E5%81%A5%E5%BA%B7.html" class="badge tag-link">
+                      <a href="/tag/%E5%81%A5%E5%BA%B7.html" class="badge tag-link me-2 mb-1">
                         健康
                       </a>
                       
-                      <a href="/tag/%E6%97%B6%E9%97%B4.html" class="badge tag-link">
+                      <a href="/tag/%E6%97%B6%E9%97%B4.html" class="badge tag-link me-2 mb-1">
                         时间
                       </a>
                       
-                      <a href="/tag/%E5%85%BB%E7%94%9F.html" class="badge tag-link">
+                      <a href="/tag/%E5%85%BB%E7%94%9F.html" class="badge tag-link me-2 mb-1">
                         养生
                       </a>
                       
-                      <a href="/tag/%E7%94%9F%E6%B4%BB%E4%B9%A0%E6%83%AF.html" class="badge tag-link">
+                      <a href="/tag/%E7%94%9F%E6%B4%BB%E4%B9%A0%E6%83%AF.html" class="badge tag-link me-2 mb-1">
                         生活习惯
                       </a>
                       
@@ -791,48 +870,49 @@
               </div>
               
               <div class="masonry-grid-item">
-                <div class="card shadow-sm">
+                <div class="card article-card shadow-sm">
                   <div class="card-body">
-                    <h5 class="card-title">
-                      <i class="bi bi-file-earmark-text"></i>
-                      <a href="../mdhtml/这4个习惯不改掉，癌症找上门.html" class="text-decoration-none">
+                    <h5 class="card-title article-title">
+                      <i class="bi bi-file-earmark-text me-2 text-primary"></i>
+                      <a href="../mdhtml/这4个习惯不改掉，癌症找上门.html" class="text-decoration-none text-dark">
                         这4个习惯不改掉，癌症找上门
                       </a>
                     </h5>
                     
-                      <p class="card-text">
+                      <p class="card-text text-muted mb-3">
                         揭示导致癌症的坏习惯，提供预防建议，关爱身体健康。
                       </p>
                       
-                        
-                          <small class="text-muted">
-                            2026-03-24
-                          </small>
-                          
+                        <div class="article-meta">
+                            
+                                <i class="bi bi-clock me-1"></i>
+                                2026-03-24
+                                
+                        </div>
                   </div>
-                  <div class="card-footer text-muted">
+                  <div class="card-footer text-muted bg-white border-top">
                     <a href="/category/%E5%81%A5%E5%BA%B7%E7%94%9F%E6%B4%BB.html"
-                      class="badge bg-primary">
+                      class="badge bg-primary me-2">
                       健康生活
                     </a>
                     
-                      <a href="/tag/%E7%99%8C%E7%97%87.html" class="badge tag-link">
+                      <a href="/tag/%E7%99%8C%E7%97%87.html" class="badge tag-link me-2 mb-1">
                         癌症
                       </a>
                       
-                      <a href="/tag/%E5%81%A5%E5%BA%B7.html" class="badge tag-link">
+                      <a href="/tag/%E5%81%A5%E5%BA%B7.html" class="badge tag-link me-2 mb-1">
                         健康
                       </a>
                       
-                      <a href="/tag/%E4%B9%A0%E6%83%AF.html" class="badge tag-link">
+                      <a href="/tag/%E4%B9%A0%E6%83%AF.html" class="badge tag-link me-2 mb-1">
                         习惯
                       </a>
                       
-                      <a href="/tag/%E9%A2%84%E9%98%B2.html" class="badge tag-link">
+                      <a href="/tag/%E9%A2%84%E9%98%B2.html" class="badge tag-link me-2 mb-1">
                         预防
                       </a>
                       
-                      <a href="/tag/%E5%85%BB%E7%94%9F.html" class="badge tag-link">
+                      <a href="/tag/%E5%85%BB%E7%94%9F.html" class="badge tag-link me-2 mb-1">
                         养生
                       </a>
                       
@@ -841,48 +921,49 @@
               </div>
               
               <div class="masonry-grid-item">
-                <div class="card shadow-sm">
+                <div class="card article-card shadow-sm">
                   <div class="card-body">
-                    <h5 class="card-title">
-                      <i class="bi bi-file-earmark-text"></i>
-                      <a href="../mdhtml/这3个时间段跑步等于慢性自杀，尤其是第2个.html" class="text-decoration-none">
+                    <h5 class="card-title article-title">
+                      <i class="bi bi-file-earmark-text me-2 text-primary"></i>
+                      <a href="../mdhtml/这3个时间段跑步等于慢性自杀，尤其是第2个.html" class="text-decoration-none text-dark">
                         这3个时间段跑步等于慢性自杀，尤其是第2个
                       </a>
                     </h5>
                     
-                      <p class="card-text">
+                      <p class="card-text text-muted mb-3">
                         分析不适合跑步的时间段，提供健康跑步建议，帮助科学锻炼。
                       </p>
                       
-                        
-                          <small class="text-muted">
-                            2026-03-24
-                          </small>
-                          
+                        <div class="article-meta">
+                            
+                                <i class="bi bi-clock me-1"></i>
+                                2026-03-24
+                                
+                        </div>
                   </div>
-                  <div class="card-footer text-muted">
+                  <div class="card-footer text-muted bg-white border-top">
                     <a href="/category/%E5%81%A5%E5%BA%B7%E7%94%9F%E6%B4%BB.html"
-                      class="badge bg-primary">
+                      class="badge bg-primary me-2">
                       健康生活
                     </a>
                     
-                      <a href="/tag/%E8%B7%91%E6%AD%A5.html" class="badge tag-link">
+                      <a href="/tag/%E8%B7%91%E6%AD%A5.html" class="badge tag-link me-2 mb-1">
                         跑步
                       </a>
                       
-                      <a href="/tag/%E5%81%A5%E5%BA%B7.html" class="badge tag-link">
+                      <a href="/tag/%E5%81%A5%E5%BA%B7.html" class="badge tag-link me-2 mb-1">
                         健康
                       </a>
                       
-                      <a href="/tag/%E8%BF%90%E5%8A%A8%E6%97%B6%E9%97%B4.html" class="badge tag-link">
+                      <a href="/tag/%E8%BF%90%E5%8A%A8%E6%97%B6%E9%97%B4.html" class="badge tag-link me-2 mb-1">
                         运动时间
                       </a>
                       
-                      <a href="/tag/%E9%94%BB%E7%82%BC.html" class="badge tag-link">
+                      <a href="/tag/%E9%94%BB%E7%82%BC.html" class="badge tag-link me-2 mb-1">
                         锻炼
                       </a>
                       
-                      <a href="/tag/%E5%85%BB%E7%94%9F.html" class="badge tag-link">
+                      <a href="/tag/%E5%85%BB%E7%94%9F.html" class="badge tag-link me-2 mb-1">
                         养生
                       </a>
                       
@@ -891,48 +972,49 @@
               </div>
               
               <div class="masonry-grid-item">
-                <div class="card shadow-sm">
+                <div class="card article-card shadow-sm">
                   <div class="card-body">
-                    <h5 class="card-title">
-                      <i class="bi bi-file-earmark-text"></i>
-                      <a href="../mdhtml/这4种食物是睡眠杀手，第2种很多人天天在吃.html" class="text-decoration-none">
+                    <h5 class="card-title article-title">
+                      <i class="bi bi-file-earmark-text me-2 text-primary"></i>
+                      <a href="../mdhtml/这4种食物是睡眠杀手，第2种很多人天天在吃.html" class="text-decoration-none text-dark">
                         这4种食物是睡眠杀手，第2种很多人天天在吃
                       </a>
                     </h5>
                     
-                      <p class="card-text">
+                      <p class="card-text text-muted mb-3">
                         分析影响睡眠的食物，提供饮食建议，帮助改善睡眠质量。
                       </p>
                       
-                        
-                          <small class="text-muted">
-                            2026-03-24
-                          </small>
-                          
+                        <div class="article-meta">
+                            
+                                <i class="bi bi-clock me-1"></i>
+                                2026-03-24
+                                
+                        </div>
                   </div>
-                  <div class="card-footer text-muted">
+                  <div class="card-footer text-muted bg-white border-top">
                     <a href="/category/%E5%81%A5%E5%BA%B7%E7%94%9F%E6%B4%BB.html"
-                      class="badge bg-primary">
+                      class="badge bg-primary me-2">
                       健康生活
                     </a>
                     
-                      <a href="/tag/%E7%9D%A1%E7%9C%A0.html" class="badge tag-link">
+                      <a href="/tag/%E7%9D%A1%E7%9C%A0.html" class="badge tag-link me-2 mb-1">
                         睡眠
                       </a>
                       
-                      <a href="/tag/%E9%A3%9F%E7%89%A9.html" class="badge tag-link">
+                      <a href="/tag/%E9%A3%9F%E7%89%A9.html" class="badge tag-link me-2 mb-1">
                         食物
                       </a>
                       
-                      <a href="/tag/%E5%81%A5%E5%BA%B7.html" class="badge tag-link">
+                      <a href="/tag/%E5%81%A5%E5%BA%B7.html" class="badge tag-link me-2 mb-1">
                         健康
                       </a>
                       
-                      <a href="/tag/%E5%A4%B1%E7%9C%A0.html" class="badge tag-link">
+                      <a href="/tag/%E5%A4%B1%E7%9C%A0.html" class="badge tag-link me-2 mb-1">
                         失眠
                       </a>
                       
-                      <a href="/tag/%E9%A5%AE%E9%A3%9F.html" class="badge tag-link">
+                      <a href="/tag/%E9%A5%AE%E9%A3%9F.html" class="badge tag-link me-2 mb-1">
                         饮食
                       </a>
                       
@@ -941,48 +1023,49 @@
               </div>
               
               <div class="masonry-grid-item">
-                <div class="card shadow-sm">
+                <div class="card article-card shadow-sm">
                   <div class="card-body">
-                    <h5 class="card-title">
-                      <i class="bi bi-file-earmark-text"></i>
-                      <a href="../mdhtml/这6个时间点睡觉的人老得快，尤其是第3个.html" class="text-decoration-none">
+                    <h5 class="card-title article-title">
+                      <i class="bi bi-file-earmark-text me-2 text-primary"></i>
+                      <a href="../mdhtml/这6个时间点睡觉的人老得快，尤其是第3个.html" class="text-decoration-none text-dark">
                         这6个时间点睡觉的人老得快，尤其是第3个
                       </a>
                     </h5>
                     
-                      <p class="card-text">
+                      <p class="card-text text-muted mb-3">
                         揭示熬夜对衰老的影响，分析不同时间点睡觉的危害，提供健康睡眠建议。
                       </p>
                       
-                        
-                          <small class="text-muted">
-                            2026-03-24
-                          </small>
-                          
+                        <div class="article-meta">
+                            
+                                <i class="bi bi-clock me-1"></i>
+                                2026-03-24
+                                
+                        </div>
                   </div>
-                  <div class="card-footer text-muted">
+                  <div class="card-footer text-muted bg-white border-top">
                     <a href="/category/%E5%81%A5%E5%BA%B7%E7%94%9F%E6%B4%BB.html"
-                      class="badge bg-primary">
+                      class="badge bg-primary me-2">
                       健康生活
                     </a>
                     
-                      <a href="/tag/%E7%86%AC%E5%A4%9C.html" class="badge tag-link">
+                      <a href="/tag/%E7%86%AC%E5%A4%9C.html" class="badge tag-link me-2 mb-1">
                         熬夜
                       </a>
                       
-                      <a href="/tag/%E7%9D%A1%E7%9C%A0.html" class="badge tag-link">
+                      <a href="/tag/%E7%9D%A1%E7%9C%A0.html" class="badge tag-link me-2 mb-1">
                         睡眠
                       </a>
                       
-                      <a href="/tag/%E6%8A%97%E8%A1%B0%E8%80%81.html" class="badge tag-link">
+                      <a href="/tag/%E6%8A%97%E8%A1%B0%E8%80%81.html" class="badge tag-link me-2 mb-1">
                         抗衰老
                       </a>
                       
-                      <a href="/tag/%E5%81%A5%E5%BA%B7.html" class="badge tag-link">
+                      <a href="/tag/%E5%81%A5%E5%BA%B7.html" class="badge tag-link me-2 mb-1">
                         健康
                       </a>
                       
-                      <a href="/tag/%E5%85%BB%E7%94%9F.html" class="badge tag-link">
+                      <a href="/tag/%E5%85%BB%E7%94%9F.html" class="badge tag-link me-2 mb-1">
                         养生
                       </a>
                       
@@ -991,48 +1074,49 @@
               </div>
               
               <div class="masonry-grid-item">
-                <div class="card shadow-sm">
+                <div class="card article-card shadow-sm">
                   <div class="card-body">
-                    <h5 class="card-title">
-                      <i class="bi bi-file-earmark-text"></i>
-                      <a href="../mdhtml/这5个常见的行为其实很伤肾，看看你中了几个.html" class="text-decoration-none">
+                    <h5 class="card-title article-title">
+                      <i class="bi bi-file-earmark-text me-2 text-primary"></i>
+                      <a href="../mdhtml/这5个常见的行为其实很伤肾，看看你中了几个.html" class="text-decoration-none text-dark">
                         这5个常见的行为其实很伤肾，看看你中了几个
                       </a>
                     </h5>
                     
-                      <p class="card-text">
+                      <p class="card-text text-muted mb-3">
                         揭秘日常生活中伤肾的行为，提供护肾建议，帮助你保护肾脏健康。
                       </p>
                       
-                        
-                          <small class="text-muted">
-                            2026-03-24
-                          </small>
-                          
+                        <div class="article-meta">
+                            
+                                <i class="bi bi-clock me-1"></i>
+                                2026-03-24
+                                
+                        </div>
                   </div>
-                  <div class="card-footer text-muted">
+                  <div class="card-footer text-muted bg-white border-top">
                     <a href="/category/%E5%81%A5%E5%BA%B7%E7%94%9F%E6%B4%BB.html"
-                      class="badge bg-primary">
+                      class="badge bg-primary me-2">
                       健康生活
                     </a>
                     
-                      <a href="/tag/%E8%82%BE%E8%84%8F.html" class="badge tag-link">
+                      <a href="/tag/%E8%82%BE%E8%84%8F.html" class="badge tag-link me-2 mb-1">
                         肾脏
                       </a>
                       
-                      <a href="/tag/%E5%81%A5%E5%BA%B7.html" class="badge tag-link">
+                      <a href="/tag/%E5%81%A5%E5%BA%B7.html" class="badge tag-link me-2 mb-1">
                         健康
                       </a>
                       
-                      <a href="/tag/%E5%85%BB%E7%94%9F.html" class="badge tag-link">
+                      <a href="/tag/%E5%85%BB%E7%94%9F.html" class="badge tag-link me-2 mb-1">
                         养生
                       </a>
                       
-                      <a href="/tag/%E4%BC%A4%E8%82%BE%E8%A1%8C%E4%B8%BA.html" class="badge tag-link">
+                      <a href="/tag/%E4%BC%A4%E8%82%BE%E8%A1%8C%E4%B8%BA.html" class="badge tag-link me-2 mb-1">
                         伤肾行为
                       </a>
                       
-                      <a href="/tag/%E7%94%9F%E6%B4%BB%E4%B9%A0%E6%83%AF.html" class="badge tag-link">
+                      <a href="/tag/%E7%94%9F%E6%B4%BB%E4%B9%A0%E6%83%AF.html" class="badge tag-link me-2 mb-1">
                         生活习惯
                       </a>
                       
@@ -1041,48 +1125,49 @@
               </div>
               
               <div class="masonry-grid-item">
-                <div class="card shadow-sm">
+                <div class="card article-card shadow-sm">
                   <div class="card-body">
-                    <h5 class="card-title">
-                      <i class="bi bi-file-earmark-text"></i>
-                      <a href="../mdhtml/这6个网红美食其实很脏，很多人还在天天吃.html" class="text-decoration-none">
+                    <h5 class="card-title article-title">
+                      <i class="bi bi-file-earmark-text me-2 text-primary"></i>
+                      <a href="../mdhtml/这6个网红美食其实很脏，很多人还在天天吃.html" class="text-decoration-none text-dark">
                         这6个网红美食其实很脏，很多人还在天天吃
                       </a>
                     </h5>
                     
-                      <p class="card-text">
+                      <p class="card-text text-muted mb-3">
                         揭秘网红美食的卫生问题，提供健康饮食建议，帮助你避开食品安全陷阱。
                       </p>
                       
-                        
-                          <small class="text-muted">
-                            2026-03-24
-                          </small>
-                          
+                        <div class="article-meta">
+                            
+                                <i class="bi bi-clock me-1"></i>
+                                2026-03-24
+                                
+                        </div>
                   </div>
-                  <div class="card-footer text-muted">
+                  <div class="card-footer text-muted bg-white border-top">
                     <a href="/category/%E5%81%A5%E5%BA%B7%E7%94%9F%E6%B4%BB.html"
-                      class="badge bg-primary">
+                      class="badge bg-primary me-2">
                       健康生活
                     </a>
                     
-                      <a href="/tag/%E9%A3%9F%E5%93%81%E5%AE%89%E5%85%A8.html" class="badge tag-link">
+                      <a href="/tag/%E9%A3%9F%E5%93%81%E5%AE%89%E5%85%A8.html" class="badge tag-link me-2 mb-1">
                         食品安全
                       </a>
                       
-                      <a href="/tag/%E7%BD%91%E7%BA%A2%E7%BE%8E%E9%A3%9F.html" class="badge tag-link">
+                      <a href="/tag/%E7%BD%91%E7%BA%A2%E7%BE%8E%E9%A3%9F.html" class="badge tag-link me-2 mb-1">
                         网红美食
                       </a>
                       
-                      <a href="/tag/%E5%81%A5%E5%BA%B7.html" class="badge tag-link">
+                      <a href="/tag/%E5%81%A5%E5%BA%B7.html" class="badge tag-link me-2 mb-1">
                         健康
                       </a>
                       
-                      <a href="/tag/%E5%8D%AB%E7%94%9F.html" class="badge tag-link">
+                      <a href="/tag/%E5%8D%AB%E7%94%9F.html" class="badge tag-link me-2 mb-1">
                         卫生
                       </a>
                       
-                      <a href="/tag/%E9%A5%AE%E9%A3%9F.html" class="badge tag-link">
+                      <a href="/tag/%E9%A5%AE%E9%A3%9F.html" class="badge tag-link me-2 mb-1">
                         饮食
                       </a>
                       
@@ -1091,48 +1176,49 @@
               </div>
               
               <div class="masonry-grid-item">
-                <div class="card shadow-sm">
+                <div class="card article-card shadow-sm">
                   <div class="card-body">
-                    <h5 class="card-title">
-                      <i class="bi bi-file-earmark-text"></i>
-                      <a href="../mdhtml/这5个行为正在悄悄毁掉你的肝脏，看看你中了几个.html" class="text-decoration-none">
+                    <h5 class="card-title article-title">
+                      <i class="bi bi-file-earmark-text me-2 text-primary"></i>
+                      <a href="../mdhtml/这5个行为正在悄悄毁掉你的肝脏，看看你中了几个.html" class="text-decoration-none text-dark">
                         这5个行为正在悄悄毁掉你的肝脏，看看你中了几个
                       </a>
                     </h5>
                     
-                      <p class="card-text">
+                      <p class="card-text text-muted mb-3">
                         分析日常生活中伤害肝脏的行为，提供护肝建议，帮助你保护肝脏健康。
                       </p>
                       
-                        
-                          <small class="text-muted">
-                            2026-03-24
-                          </small>
-                          
+                        <div class="article-meta">
+                            
+                                <i class="bi bi-clock me-1"></i>
+                                2026-03-24
+                                
+                        </div>
                   </div>
-                  <div class="card-footer text-muted">
+                  <div class="card-footer text-muted bg-white border-top">
                     <a href="/category/%E5%81%A5%E5%BA%B7%E7%94%9F%E6%B4%BB.html"
-                      class="badge bg-primary">
+                      class="badge bg-primary me-2">
                       健康生活
                     </a>
                     
-                      <a href="/tag/%E8%82%9D%E8%84%8F.html" class="badge tag-link">
+                      <a href="/tag/%E8%82%9D%E8%84%8F.html" class="badge tag-link me-2 mb-1">
                         肝脏
                       </a>
                       
-                      <a href="/tag/%E5%81%A5%E5%BA%B7.html" class="badge tag-link">
+                      <a href="/tag/%E5%81%A5%E5%BA%B7.html" class="badge tag-link me-2 mb-1">
                         健康
                       </a>
                       
-                      <a href="/tag/%E8%82%9D%E7%97%85.html" class="badge tag-link">
+                      <a href="/tag/%E8%82%9D%E7%97%85.html" class="badge tag-link me-2 mb-1">
                         肝病
                       </a>
                       
-                      <a href="/tag/%E7%94%9F%E6%B4%BB%E6%96%B9%E5%BC%8F.html" class="badge tag-link">
+                      <a href="/tag/%E7%94%9F%E6%B4%BB%E6%96%B9%E5%BC%8F.html" class="badge tag-link me-2 mb-1">
                         生活方式
                       </a>
                       
-                      <a href="/tag/%E5%85%BB%E7%94%9F.html" class="badge tag-link">
+                      <a href="/tag/%E5%85%BB%E7%94%9F.html" class="badge tag-link me-2 mb-1">
                         养生
                       </a>
                       
@@ -1141,48 +1227,49 @@
               </div>
               
               <div class="masonry-grid-item">
-                <div class="card shadow-sm">
+                <div class="card article-card shadow-sm">
                   <div class="card-body">
-                    <h5 class="card-title">
-                      <i class="bi bi-file-earmark-text"></i>
-                      <a href="../mdhtml/为什么你的体重总是减不下来？可能是这7个原因.html" class="text-decoration-none">
+                    <h5 class="card-title article-title">
+                      <i class="bi bi-file-earmark-text me-2 text-primary"></i>
+                      <a href="../mdhtml/为什么你的体重总是减不下来？可能是这7个原因.html" class="text-decoration-none text-dark">
                         为什么你的体重总是减不下来？可能是这7个原因
                       </a>
                     </h5>
                     
-                      <p class="card-text">
+                      <p class="card-text text-muted mb-3">
                         分析减肥失败常见的7个原因，提供科学的减肥建议，帮助你健康瘦身。
                       </p>
                       
-                        
-                          <small class="text-muted">
-                            2026-03-24
-                          </small>
-                          
+                        <div class="article-meta">
+                            
+                                <i class="bi bi-clock me-1"></i>
+                                2026-03-24
+                                
+                        </div>
                   </div>
-                  <div class="card-footer text-muted">
+                  <div class="card-footer text-muted bg-white border-top">
                     <a href="/category/%E5%81%A5%E5%BA%B7%E7%94%9F%E6%B4%BB.html"
-                      class="badge bg-primary">
+                      class="badge bg-primary me-2">
                       健康生活
                     </a>
                     
-                      <a href="/tag/%E5%87%8F%E8%82%A5.html" class="badge tag-link">
+                      <a href="/tag/%E5%87%8F%E8%82%A5.html" class="badge tag-link me-2 mb-1">
                         减肥
                       </a>
                       
-                      <a href="/tag/%E4%BD%93%E9%87%8D.html" class="badge tag-link">
+                      <a href="/tag/%E4%BD%93%E9%87%8D.html" class="badge tag-link me-2 mb-1">
                         体重
                       </a>
                       
-                      <a href="/tag/%E7%98%A6%E8%BA%AB.html" class="badge tag-link">
+                      <a href="/tag/%E7%98%A6%E8%BA%AB.html" class="badge tag-link me-2 mb-1">
                         瘦身
                       </a>
                       
-                      <a href="/tag/%E5%81%A5%E5%BA%B7.html" class="badge tag-link">
+                      <a href="/tag/%E5%81%A5%E5%BA%B7.html" class="badge tag-link me-2 mb-1">
                         健康
                       </a>
                       
-                      <a href="/tag/%E7%94%9F%E6%B4%BB%E6%96%B9%E5%BC%8F.html" class="badge tag-link">
+                      <a href="/tag/%E7%94%9F%E6%B4%BB%E6%96%B9%E5%BC%8F.html" class="badge tag-link me-2 mb-1">
                         生活方式
                       </a>
                       
@@ -1191,48 +1278,49 @@
               </div>
               
               <div class="masonry-grid-item">
-                <div class="card shadow-sm">
+                <div class="card article-card shadow-sm">
                   <div class="card-body">
-                    <h5 class="card-title">
-                      <i class="bi bi-file-earmark-text"></i>
-                      <a href="../mdhtml/2026年最火的生活方式居然是这10个.html" class="text-decoration-none">
+                    <h5 class="card-title article-title">
+                      <i class="bi bi-file-earmark-text me-2 text-primary"></i>
+                      <a href="../mdhtml/2026年最火的生活方式居然是这10个.html" class="text-decoration-none text-dark">
                         2026年最火的生活方式居然是这10个
                       </a>
                     </h5>
                     
-                      <p class="card-text">
+                      <p class="card-text text-muted mb-3">
                         盘点2026年最火的10种生活方式，从健康到消费，从社交到娱乐，全面解读当下的流行趋势。
                       </p>
                       
-                        
-                          <small class="text-muted">
-                            2026-03-24
-                          </small>
-                          
+                        <div class="article-meta">
+                            
+                                <i class="bi bi-clock me-1"></i>
+                                2026-03-24
+                                
+                        </div>
                   </div>
-                  <div class="card-footer text-muted">
+                  <div class="card-footer text-muted bg-white border-top">
                     <a href="/category/%E7%94%9F%E6%B4%BB%E8%B6%8B%E5%8A%BF.html"
-                      class="badge bg-primary">
+                      class="badge bg-primary me-2">
                       生活趋势
                     </a>
                     
-                      <a href="/tag/%E7%94%9F%E6%B4%BB%E6%96%B9%E5%BC%8F.html" class="badge tag-link">
+                      <a href="/tag/%E7%94%9F%E6%B4%BB%E6%96%B9%E5%BC%8F.html" class="badge tag-link me-2 mb-1">
                         生活方式
                       </a>
                       
-                      <a href="/tag/%E6%B5%81%E8%A1%8C%E8%B6%8B%E5%8A%BF.html" class="badge tag-link">
+                      <a href="/tag/%E6%B5%81%E8%A1%8C%E8%B6%8B%E5%8A%BF.html" class="badge tag-link me-2 mb-1">
                         流行趋势
                       </a>
                       
-                      <a href="/tag/%E6%96%B0%E6%BD%AE%E6%B5%81.html" class="badge tag-link">
+                      <a href="/tag/%E6%96%B0%E6%BD%AE%E6%B5%81.html" class="badge tag-link me-2 mb-1">
                         新潮流
                       </a>
                       
-                      <a href="/tag/%E5%81%A5%E5%BA%B7.html" class="badge tag-link">
+                      <a href="/tag/%E5%81%A5%E5%BA%B7.html" class="badge tag-link me-2 mb-1">
                         健康
                       </a>
                       
-                      <a href="/tag/%E6%B6%88%E8%B4%B9.html" class="badge tag-link">
+                      <a href="/tag/%E6%B6%88%E8%B4%B9.html" class="badge tag-link me-2 mb-1">
                         消费
                       </a>
                       
@@ -1241,48 +1329,49 @@
               </div>
               
               <div class="masonry-grid-item">
-                <div class="card shadow-sm">
+                <div class="card article-card shadow-sm">
                   <div class="card-body">
-                    <h5 class="card-title">
-                      <i class="bi bi-file-earmark-text"></i>
-                      <a href="../mdhtml/营养的真相：食物如何影响我们的生活.html" class="text-decoration-none">
+                    <h5 class="card-title article-title">
+                      <i class="bi bi-file-earmark-text me-2 text-primary"></i>
+                      <a href="../mdhtml/营养的真相：食物如何影响我们的生活.html" class="text-decoration-none text-dark">
                         营养的真相：食物如何影响我们的生活
                       </a>
                     </h5>
                     
-                      <p class="card-text">
+                      <p class="card-text text-muted mb-3">
                         深入分析营养的重要性，探讨饮食与健康的关系、营养误解、健康饮食的建立、以及如何改变饮食习惯。
                       </p>
                       
-                        
-                          <small class="text-muted">
-                            2026-03-24
-                          </small>
-                          
+                        <div class="article-meta">
+                            
+                                <i class="bi bi-clock me-1"></i>
+                                2026-03-24
+                                
+                        </div>
                   </div>
-                  <div class="card-footer text-muted">
+                  <div class="card-footer text-muted bg-white border-top">
                     <a href="/category/%E5%81%A5%E5%BA%B7%E7%94%9F%E6%B4%BB.html"
-                      class="badge bg-primary">
+                      class="badge bg-primary me-2">
                       健康生活
                     </a>
                     
-                      <a href="/tag/%E8%90%A5%E5%85%BB.html" class="badge tag-link">
+                      <a href="/tag/%E8%90%A5%E5%85%BB.html" class="badge tag-link me-2 mb-1">
                         营养
                       </a>
                       
-                      <a href="/tag/%E9%A5%AE%E9%A3%9F.html" class="badge tag-link">
+                      <a href="/tag/%E9%A5%AE%E9%A3%9F.html" class="badge tag-link me-2 mb-1">
                         饮食
                       </a>
                       
-                      <a href="/tag/%E5%81%A5%E5%BA%B7.html" class="badge tag-link">
+                      <a href="/tag/%E5%81%A5%E5%BA%B7.html" class="badge tag-link me-2 mb-1">
                         健康
                       </a>
                       
-                      <a href="/tag/%E9%A3%9F%E7%89%A9.html" class="badge tag-link">
+                      <a href="/tag/%E9%A3%9F%E7%89%A9.html" class="badge tag-link me-2 mb-1">
                         食物
                       </a>
                       
-                      <a href="/tag/%E7%94%9F%E6%B4%BB%E6%96%B9%E5%BC%8F.html" class="badge tag-link">
+                      <a href="/tag/%E7%94%9F%E6%B4%BB%E6%96%B9%E5%BC%8F.html" class="badge tag-link me-2 mb-1">
                         生活方式
                       </a>
                       
@@ -1291,48 +1380,49 @@
               </div>
               
               <div class="masonry-grid-item">
-                <div class="card shadow-sm">
+                <div class="card article-card shadow-sm">
                   <div class="card-body">
-                    <h5 class="card-title">
-                      <i class="bi bi-file-earmark-text"></i>
-                      <a href="../mdhtml/睡眠的科学：为什么好睡眠是最好的投资.html" class="text-decoration-none">
+                    <h5 class="card-title article-title">
+                      <i class="bi bi-file-earmark-text me-2 text-primary"></i>
+                      <a href="../mdhtml/睡眠的科学：为什么好睡眠是最好的投资.html" class="text-decoration-none text-dark">
                         睡眠的科学：为什么好睡眠是最好的投资
                       </a>
                     </h5>
                     
-                      <p class="card-text">
+                      <p class="card-text text-muted mb-3">
                         深入分析睡眠的重要性，探讨睡眠不足的危害、睡眠质量的改善、睡眠与健康的关系、以及如何获得更好的睡眠。
                       </p>
                       
-                        
-                          <small class="text-muted">
-                            2026-03-24
-                          </small>
-                          
+                        <div class="article-meta">
+                            
+                                <i class="bi bi-clock me-1"></i>
+                                2026-03-24
+                                
+                        </div>
                   </div>
-                  <div class="card-footer text-muted">
+                  <div class="card-footer text-muted bg-white border-top">
                     <a href="/category/%E5%81%A5%E5%BA%B7%E7%94%9F%E6%B4%BB.html"
-                      class="badge bg-primary">
+                      class="badge bg-primary me-2">
                       健康生活
                     </a>
                     
-                      <a href="/tag/%E7%9D%A1%E7%9C%A0.html" class="badge tag-link">
+                      <a href="/tag/%E7%9D%A1%E7%9C%A0.html" class="badge tag-link me-2 mb-1">
                         睡眠
                       </a>
                       
-                      <a href="/tag/%E5%81%A5%E5%BA%B7.html" class="badge tag-link">
+                      <a href="/tag/%E5%81%A5%E5%BA%B7.html" class="badge tag-link me-2 mb-1">
                         健康
                       </a>
                       
-                      <a href="/tag/%E6%81%A2%E5%A4%8D.html" class="badge tag-link">
+                      <a href="/tag/%E6%81%A2%E5%A4%8D.html" class="badge tag-link me-2 mb-1">
                         恢复
                       </a>
                       
-                      <a href="/tag/%E7%94%9F%E4%BA%A7%E5%8A%9B.html" class="badge tag-link">
+                      <a href="/tag/%E7%94%9F%E4%BA%A7%E5%8A%9B.html" class="badge tag-link me-2 mb-1">
                         生产力
                       </a>
                       
-                      <a href="/tag/%E7%94%9F%E6%B4%BB%E8%B4%A8%E9%87%8F.html" class="badge tag-link">
+                      <a href="/tag/%E7%94%9F%E6%B4%BB%E8%B4%A8%E9%87%8F.html" class="badge tag-link me-2 mb-1">
                         生活质量
                       </a>
                       
@@ -1341,48 +1431,49 @@
               </div>
               
               <div class="masonry-grid-item">
-                <div class="card shadow-sm">
+                <div class="card article-card shadow-sm">
                   <div class="card-body">
-                    <h5 class="card-title">
-                      <i class="bi bi-file-earmark-text"></i>
-                      <a href="../mdhtml/体育精神的衰落：竞争如何摧毁了运动的快乐.html" class="text-decoration-none">
+                    <h5 class="card-title article-title">
+                      <i class="bi bi-file-earmark-text me-2 text-primary"></i>
+                      <a href="../mdhtml/体育精神的衰落：竞争如何摧毁了运动的快乐.html" class="text-decoration-none text-dark">
                         体育精神的衰落：竞争如何摧毁了运动的快乐
                       </a>
                     </h5>
                     
-                      <p class="card-text">
+                      <p class="card-text text-muted mb-3">
                         深入分析体育产业的变化，探讨商业化的影响、竞争的过度、运动精神的丧失、以及如何恢复体育的本质。
                       </p>
                       
-                        
-                          <small class="text-muted">
-                            2026-03-24
-                          </small>
-                          
+                        <div class="article-meta">
+                            
+                                <i class="bi bi-clock me-1"></i>
+                                2026-03-24
+                                
+                        </div>
                   </div>
-                  <div class="card-footer text-muted">
+                  <div class="card-footer text-muted bg-white border-top">
                     <a href="/category/%E4%BD%93%E8%82%B2%E6%96%87%E5%8C%96.html"
-                      class="badge bg-primary">
+                      class="badge bg-primary me-2">
                       体育文化
                     </a>
                     
-                      <a href="/tag/%E4%BD%93%E8%82%B2.html" class="badge tag-link">
+                      <a href="/tag/%E4%BD%93%E8%82%B2.html" class="badge tag-link me-2 mb-1">
                         体育
                       </a>
                       
-                      <a href="/tag/%E7%AB%9E%E4%BA%89.html" class="badge tag-link">
+                      <a href="/tag/%E7%AB%9E%E4%BA%89.html" class="badge tag-link me-2 mb-1">
                         竞争
                       </a>
                       
-                      <a href="/tag/%E5%95%86%E4%B8%9A%E5%8C%96.html" class="badge tag-link">
+                      <a href="/tag/%E5%95%86%E4%B8%9A%E5%8C%96.html" class="badge tag-link me-2 mb-1">
                         商业化
                       </a>
                       
-                      <a href="/tag/%E8%BF%90%E5%8A%A8%E7%B2%BE%E7%A5%9E.html" class="badge tag-link">
+                      <a href="/tag/%E8%BF%90%E5%8A%A8%E7%B2%BE%E7%A5%9E.html" class="badge tag-link me-2 mb-1">
                         运动精神
                       </a>
                       
-                      <a href="/tag/%E5%81%A5%E5%BA%B7.html" class="badge tag-link">
+                      <a href="/tag/%E5%81%A5%E5%BA%B7.html" class="badge tag-link me-2 mb-1">
                         健康
                       </a>
                       
@@ -1391,48 +1482,49 @@
               </div>
               
               <div class="masonry-grid-item">
-                <div class="card shadow-sm">
+                <div class="card article-card shadow-sm">
                   <div class="card-body">
-                    <h5 class="card-title">
-                      <i class="bi bi-file-earmark-text"></i>
-                      <a href="../mdhtml/父母健康查询微信小程序.html" class="text-decoration-none">
+                    <h5 class="card-title article-title">
+                      <i class="bi bi-file-earmark-text me-2 text-primary"></i>
+                      <a href="../mdhtml/父母健康查询微信小程序.html" class="text-decoration-none text-dark">
                         远程关怀父母健康！微信小程序帮子女守护家人
                       </a>
                     </h5>
                     
-                      <p class="card-text">
+                      <p class="card-text text-muted mb-3">
                         父母身体怎么样？药吃完了吗？下一次体检是什么时候？身在异地的子女如何关心父母健康？这些小程序帮你守护家人！
                       </p>
                       
-                        
-                          <small class="text-muted">
-                            2026-03-18
-                          </small>
-                          
+                        <div class="article-meta">
+                            
+                                <i class="bi bi-clock me-1"></i>
+                                2026-03-18
+                                
+                        </div>
                   </div>
-                  <div class="card-footer text-muted">
+                  <div class="card-footer text-muted bg-white border-top">
                     <a href="/category/%E5%B7%A5%E5%85%B7%E6%8E%A8%E8%8D%90.html"
-                      class="badge bg-primary">
+                      class="badge bg-primary me-2">
                       工具推荐
                     </a>
                     
-                      <a href="/tag/%E7%88%B6%E6%AF%8D.html" class="badge tag-link">
+                      <a href="/tag/%E7%88%B6%E6%AF%8D.html" class="badge tag-link me-2 mb-1">
                         父母
                       </a>
                       
-                      <a href="/tag/%E5%81%A5%E5%BA%B7.html" class="badge tag-link">
+                      <a href="/tag/%E5%81%A5%E5%BA%B7.html" class="badge tag-link me-2 mb-1">
                         健康
                       </a>
                       
-                      <a href="/tag/%E5%85%B3%E6%80%80.html" class="badge tag-link">
+                      <a href="/tag/%E5%85%B3%E6%80%80.html" class="badge tag-link me-2 mb-1">
                         关怀
                       </a>
                       
-                      <a href="/tag/%E8%BF%9C%E7%A8%8B.html" class="badge tag-link">
+                      <a href="/tag/%E8%BF%9C%E7%A8%8B.html" class="badge tag-link me-2 mb-1">
                         远程
                       </a>
                       
-                      <a href="/tag/%E5%AE%B6%E5%BA%AD.html" class="badge tag-link">
+                      <a href="/tag/%E5%AE%B6%E5%BA%AD.html" class="badge tag-link me-2 mb-1">
                         家庭
                       </a>
                       
@@ -1441,48 +1533,49 @@
               </div>
               
               <div class="masonry-grid-item">
-                <div class="card shadow-sm">
+                <div class="card article-card shadow-sm">
                   <div class="card-body">
-                    <h5 class="card-title">
-                      <i class="bi bi-file-earmark-text"></i>
-                      <a href="../mdhtml/健身卡路里计算微信小程序.html" class="text-decoration-none">
+                    <h5 class="card-title article-title">
+                      <i class="bi bi-file-earmark-text me-2 text-primary"></i>
+                      <a href="../mdhtml/健身卡路里计算微信小程序.html" class="text-decoration-none text-dark">
                         健身必看！微信小程序帮你科学计算卡路里
                       </a>
                     </h5>
                     
-                      <p class="card-text">
+                      <p class="card-text text-muted mb-3">
                         这个食物多少卡？运动消耗多少热量？健身减脂必备的卡路里计算器，让你的汗水不白流！
                       </p>
                       
-                        
-                          <small class="text-muted">
-                            2026-03-18
-                          </small>
-                          
+                        <div class="article-meta">
+                            
+                                <i class="bi bi-clock me-1"></i>
+                                2026-03-18
+                                
+                        </div>
                   </div>
-                  <div class="card-footer text-muted">
+                  <div class="card-footer text-muted bg-white border-top">
                     <a href="/category/%E5%B7%A5%E5%85%B7%E6%8E%A8%E8%8D%90.html"
-                      class="badge bg-primary">
+                      class="badge bg-primary me-2">
                       工具推荐
                     </a>
                     
-                      <a href="/tag/%E5%81%A5%E8%BA%AB.html" class="badge tag-link">
+                      <a href="/tag/%E5%81%A5%E8%BA%AB.html" class="badge tag-link me-2 mb-1">
                         健身
                       </a>
                       
-                      <a href="/tag/%E5%8D%A1%E8%B7%AF%E9%87%8C.html" class="badge tag-link">
+                      <a href="/tag/%E5%8D%A1%E8%B7%AF%E9%87%8C.html" class="badge tag-link me-2 mb-1">
                         卡路里
                       </a>
                       
-                      <a href="/tag/%E5%87%8F%E8%82%A5.html" class="badge tag-link">
+                      <a href="/tag/%E5%87%8F%E8%82%A5.html" class="badge tag-link me-2 mb-1">
                         减肥
                       </a>
                       
-                      <a href="/tag/%E5%81%A5%E5%BA%B7.html" class="badge tag-link">
+                      <a href="/tag/%E5%81%A5%E5%BA%B7.html" class="badge tag-link me-2 mb-1">
                         健康
                       </a>
                       
-                      <a href="/tag/%E8%BF%90%E5%8A%A8.html" class="badge tag-link">
+                      <a href="/tag/%E8%BF%90%E5%8A%A8.html" class="badge tag-link me-2 mb-1">
                         运动
                       </a>
                       
@@ -1492,8 +1585,8 @@
               
           </div>
 
-          <div class="mt-4 text-center">
-            <a href="标签列表.html" class="btn btn-outline-primary"><i class="bi bi-arrow-left"></i> 返回标签列表</a>
+          <div class="mt-6 text-center">
+            <a href="标签列表.html" class="btn btn-outline-primary back-button"><i class="bi bi-arrow-left me-2"></i> 返回标签列表</a>
           </div>
         </div>
       </div>
@@ -1517,7 +1610,7 @@
             itemSelector: '.masonry-grid-item',
             columnWidth: '.masonry-grid-item',
             percentPosition: true,
-            gutter: 10 // 可选，添加卡片间的间距
+            gutter: 15 // 增加间距，提升视觉效果
           });
         });
       </script>

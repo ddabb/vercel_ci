@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
 
 <head>
     <meta charset="UTF-8">
@@ -9,7 +9,7 @@
     <meta name="description" content="无人自助站的【生活百科】分类列表页面，汇集了关于【生活百科】分类的文章和资讯，方便您快速找到感兴趣的内容。">
     <meta name="keywords" content="无人自助站,生活百科">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>分类列表</title>
+    <title>生活百科分类 - 无人自助站</title>
     <link rel="icon" href="../logo.svg" type="image/svg+xml">
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/footer.css">
@@ -27,6 +27,62 @@
     <!-- 引入Masonry -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/masonry/4.2.2/masonry.pkgd.min.js"></script>
 
+    <style>
+        .category-header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 2rem;
+            border-radius: 8px;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        .category-title {
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+        .article-card {
+            transition: all 0.3s ease;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        .article-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+        }
+        .article-title {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            transition: color 0.3s ease;
+        }
+        .article-title:hover {
+            color: #0d6efd;
+        }
+        .article-meta {
+            font-size: 0.85rem;
+            color: #6c757d;
+        }
+        .tag-link {
+            background-color: #e9ecef;
+            color: #495057;
+            transition: all 0.2s ease;
+        }
+        .tag-link:hover {
+            background-color: #dee2e6;
+            color: #212529;
+        }
+        .back-button {
+            transition: all 0.3s ease;
+        }
+        .back-button:hover {
+            transform: translateX(-3px);
+        }
+        .article-count {
+            font-size: 0.9rem;
+            opacity: 0.9;
+        }
+    </style>
 </head>
 
 <body>
@@ -80,7 +136,7 @@
         <main class="container-fluid mt-4">
             <div class="col-lg-8 col-md-12 mx-auto">
                 <!-- 面包屑导航 -->
-                <nav aria-label="breadcrumb">
+                <nav aria-label="breadcrumb" class="mb-4">
                     <ol class="breadcrumb">
                         <li class="breadcrumb-item"><a href="/html/index.html">首页</a></li>
                         <li class="breadcrumb-item"><a href="分类列表.html">分类列表</a></li>
@@ -89,66 +145,76 @@
                         </li>
                     </ol>
                 </nav>
-                <h1 style="font-size: 1.5em; margin: 0.5em 0;">
-                    生活百科分类的文章和资讯
-                </h1>
+                
+                <!-- 分类头部 -->
+                <div class="category-header">
+                    <h1 class="category-title">
+                        <i class="bi bi-folder2 me-2"></i>
+                        生活百科
+                    </h1>
+                    <p class="article-count">
+                        共 13 篇文章
+                    </p>
+                </div>
+                
                 <!-- 分类内容卡片 使用 Masonry 布局 -->
                 <div class="masonry-grid">
                     
                         <div class="masonry-grid-item">
-                            <div class="card shadow-sm">
+                            <div class="card article-card shadow-sm">
                                 <div class="card-body">
-                                    <h5 class="card-title">
-                                        <i class="bi bi-file-earmark-text"></i>
+                                    <h5 class="card-title article-title">
+                                        <i class="bi bi-file-earmark-text me-2 text-primary"></i>
                                         <a href="../mdhtml/2026丙午马年家居风水布局指南：招财纳福，提升运势.html"
-                                            class="text-decoration-none">
+                                            class="text-decoration-none text-dark">
                                             2026丙午马年家居风水布局指南：招财纳福，提升运势
                                         </a>
                                     </h5>
                                     
-                                        <p class="card-text">
+                                        <p class="card-text text-muted mb-3">
                                             2026丙午马年家居风水布局指南，提供具体可操作的家居调整建议，帮助您招财纳福，提升新年运势。
                                         </p>
                                         
+                                        <div class="article-meta">
                                             
-                                                <small class="text-muted">
-                                                    2026-02-28
-                                                </small>
+                                                <i class="bi bi-clock me-1"></i>
+                                                2026-02-28
                                                 
+                                        </div>
                                 </div>
-                                <div class="card-footer text-muted">
+                                <div class="card-footer text-muted bg-white border-top">
                                     <a href="/category/%E7%94%9F%E6%B4%BB%E7%99%BE%E7%A7%91.html"
-                                        class="badge bg-primary">
+                                        class="badge bg-primary me-2">
                                         生活百科
                                     </a>
                                     
                                         <a href="/tag/%E5%AE%B6%E5%B1%85%E9%A3%8E%E6%B0%B4.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             家居风水
                                         </a>
                                         
                                         <a href="/tag/%E9%A9%AC%E5%B9%B4%E8%BF%90%E5%8A%BF.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             马年运势
                                         </a>
                                         
                                         <a href="/tag/%E6%8B%9B%E8%B4%A2%E7%BA%B3%E7%A6%8F.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             招财纳福
                                         </a>
                                         
                                         <a href="/tag/2026%E5%B9%B4.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             2026年
                                         </a>
                                         
                                         <a href="/tag/%E9%A3%8E%E6%B0%B4%E5%B8%83%E5%B1%80.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             风水布局
                                         </a>
                                         
                                         <a href="/tag/%E5%AE%B6%E5%B1%85%E8%B0%83%E6%95%B4.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             家居调整
                                         </a>
                                         
@@ -157,59 +223,60 @@
                         </div>
                         
                         <div class="masonry-grid-item">
-                            <div class="card shadow-sm">
+                            <div class="card article-card shadow-sm">
                                 <div class="card-body">
-                                    <h5 class="card-title">
-                                        <i class="bi bi-file-earmark-text"></i>
+                                    <h5 class="card-title article-title">
+                                        <i class="bi bi-file-earmark-text me-2 text-primary"></i>
                                         <a href="../mdhtml/2026丙午马年运势解析：事业、财运、健康全指南.html"
-                                            class="text-decoration-none">
+                                            class="text-decoration-none text-dark">
                                             2026丙午马年运势解析：事业、财运、健康全指南
                                         </a>
                                     </h5>
                                     
-                                        <p class="card-text">
+                                        <p class="card-text text-muted mb-3">
                                             2026丙午马年运势全面解析，涵盖事业、财运、健康等方面，为您的新年规划提供参考，助力您在新的一年顺风顺水。
                                         </p>
                                         
+                                        <div class="article-meta">
                                             
-                                                <small class="text-muted">
-                                                    2026-02-28
-                                                </small>
+                                                <i class="bi bi-clock me-1"></i>
+                                                2026-02-28
                                                 
+                                        </div>
                                 </div>
-                                <div class="card-footer text-muted">
+                                <div class="card-footer text-muted bg-white border-top">
                                     <a href="/category/%E7%94%9F%E6%B4%BB%E7%99%BE%E7%A7%91.html"
-                                        class="badge bg-primary">
+                                        class="badge bg-primary me-2">
                                         生活百科
                                     </a>
                                     
                                         <a href="/tag/%E9%A9%AC%E5%B9%B4%E8%BF%90%E5%8A%BF.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             马年运势
                                         </a>
                                         
                                         <a href="/tag/%E4%BA%8B%E4%B8%9A%E8%B4%A2%E8%BF%90.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             事业财运
                                         </a>
                                         
                                         <a href="/tag/%E5%81%A5%E5%BA%B7%E6%8C%87%E5%8D%97.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             健康指南
                                         </a>
                                         
                                         <a href="/tag/2026%E5%B9%B4.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             2026年
                                         </a>
                                         
                                         <a href="/tag/%E6%96%B0%E5%B9%B4%E8%A7%84%E5%88%92.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             新年规划
                                         </a>
                                         
                                         <a href="/tag/%E7%94%9F%E8%82%96%E8%BF%90%E5%8A%BF.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             生肖运势
                                         </a>
                                         
@@ -218,54 +285,55 @@
                         </div>
                         
                         <div class="masonry-grid-item">
-                            <div class="card shadow-sm">
+                            <div class="card article-card shadow-sm">
                                 <div class="card-body">
-                                    <h5 class="card-title">
-                                        <i class="bi bi-file-earmark-text"></i>
+                                    <h5 class="card-title article-title">
+                                        <i class="bi bi-file-earmark-text me-2 text-primary"></i>
                                         <a href="../mdhtml/如何正确选择和使用家用清洁产品.html"
-                                            class="text-decoration-none">
+                                            class="text-decoration-none text-dark">
                                             如何正确选择和使用家用清洁产品
                                         </a>
                                     </h5>
                                     
-                                        <p class="card-text">
+                                        <p class="card-text text-muted mb-3">
                                             针对家庭清洁的需求，提供实用的清洁产品选择和使用指南，帮助你在保持家居清洁的同时，确保家庭成员的健康和安全。
                                         </p>
                                         
+                                        <div class="article-meta">
                                             
-                                                <small class="text-muted">
-                                                    2026-02-27
-                                                </small>
+                                                <i class="bi bi-clock me-1"></i>
+                                                2026-02-27
                                                 
+                                        </div>
                                 </div>
-                                <div class="card-footer text-muted">
+                                <div class="card-footer text-muted bg-white border-top">
                                     <a href="/category/%E7%94%9F%E6%B4%BB%E7%99%BE%E7%A7%91.html"
-                                        class="badge bg-primary">
+                                        class="badge bg-primary me-2">
                                         生活百科
                                     </a>
                                     
                                         <a href="/tag/%E6%B8%85%E6%B4%81%E4%BA%A7%E5%93%81.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             清洁产品
                                         </a>
                                         
                                         <a href="/tag/%E5%AE%B6%E5%B1%85%E6%B8%85%E6%B4%81.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             家居清洁
                                         </a>
                                         
                                         <a href="/tag/%E5%AE%89%E5%85%A8%E4%BD%BF%E7%94%A8.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             安全使用
                                         </a>
                                         
                                         <a href="/tag/%E7%8E%AF%E4%BF%9D%E6%B8%85%E6%B4%81.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             环保清洁
                                         </a>
                                         
                                         <a href="/tag/%E5%81%A5%E5%BA%B7%E7%94%9F%E6%B4%BB.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             健康生活
                                         </a>
                                         
@@ -274,54 +342,55 @@
                         </div>
                         
                         <div class="masonry-grid-item">
-                            <div class="card shadow-sm">
+                            <div class="card article-card shadow-sm">
                                 <div class="card-body">
-                                    <h5 class="card-title">
-                                        <i class="bi bi-file-earmark-text"></i>
+                                    <h5 class="card-title article-title">
+                                        <i class="bi bi-file-earmark-text me-2 text-primary"></i>
                                         <a href="../mdhtml/我切了个洋葱，为啥会辣眼睛？.html"
-                                            class="text-decoration-none">
+                                            class="text-decoration-none text-dark">
                                             我切了个洋葱，为啥会辣眼睛？
                                         </a>
                                     </h5>
                                     
-                                        <p class="card-text">
+                                        <p class="card-text text-muted mb-3">
                                             深入剖析洋葱辣眼睛的科学缘由、化学反应过程，分享切洋葱不辣眼睛的实用方法，同时介绍洋葱丰富多样的营养价值，带你全面了解这种常见食材的奥秘。
                                         </p>
                                         
+                                        <div class="article-meta">
                                             
-                                                <small class="text-muted">
-                                                    2026-02-24
-                                                </small>
+                                                <i class="bi bi-clock me-1"></i>
+                                                2026-02-24
                                                 
+                                        </div>
                                 </div>
-                                <div class="card-footer text-muted">
+                                <div class="card-footer text-muted bg-white border-top">
                                     <a href="/category/%E7%94%9F%E6%B4%BB%E7%99%BE%E7%A7%91.html"
-                                        class="badge bg-primary">
+                                        class="badge bg-primary me-2">
                                         生活百科
                                     </a>
                                     
                                         <a href="/tag/%E6%B4%8B%E8%91%B1.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             洋葱
                                         </a>
                                         
                                         <a href="/tag/%E8%BE%A3%E7%9C%BC%E7%9D%9B.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             辣眼睛
                                         </a>
                                         
                                         <a href="/tag/%E7%A7%91%E5%AD%A6%E5%8E%9F%E7%90%86.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             科学原理
                                         </a>
                                         
                                         <a href="/tag/%E5%BA%94%E5%AF%B9%E6%8A%80%E5%B7%A7.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             应对技巧
                                         </a>
                                         
                                         <a href="/tag/%E8%90%A5%E5%85%BB%E4%BB%B7%E5%80%BC.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             营养价值
                                         </a>
                                         
@@ -330,54 +399,55 @@
                         </div>
                         
                         <div class="masonry-grid-item">
-                            <div class="card shadow-sm">
+                            <div class="card article-card shadow-sm">
                                 <div class="card-body">
-                                    <h5 class="card-title">
-                                        <i class="bi bi-file-earmark-text"></i>
+                                    <h5 class="card-title article-title">
+                                        <i class="bi bi-file-earmark-text me-2 text-primary"></i>
                                         <a href="../mdhtml/我买了根黄瓜，为啥有的地方苦有的地方不苦？.html"
-                                            class="text-decoration-none">
+                                            class="text-decoration-none text-dark">
                                             我买了根黄瓜，为啥有的地方苦有的地方不苦？
                                         </a>
                                     </h5>
                                     
-                                        <p class="card-text">
+                                        <p class="card-text text-muted mb-3">
                                             深入剖析黄瓜苦味的科学缘由、影响因素，分享挑选不苦黄瓜的实用方法，同时介绍黄瓜丰富多样的营养价值，带你全面了解这种常见蔬菜的奥秘。
                                         </p>
                                         
+                                        <div class="article-meta">
                                             
-                                                <small class="text-muted">
-                                                    2026-02-24
-                                                </small>
+                                                <i class="bi bi-clock me-1"></i>
+                                                2026-02-24
                                                 
+                                        </div>
                                 </div>
-                                <div class="card-footer text-muted">
+                                <div class="card-footer text-muted bg-white border-top">
                                     <a href="/category/%E7%94%9F%E6%B4%BB%E7%99%BE%E7%A7%91.html"
-                                        class="badge bg-primary">
+                                        class="badge bg-primary me-2">
                                         生活百科
                                     </a>
                                     
                                         <a href="/tag/%E9%BB%84%E7%93%9C.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             黄瓜
                                         </a>
                                         
                                         <a href="/tag/%E8%8B%A6%E5%91%B3.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             苦味
                                         </a>
                                         
                                         <a href="/tag/%E7%A7%91%E5%AD%A6%E5%8E%9F%E7%90%86.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             科学原理
                                         </a>
                                         
                                         <a href="/tag/%E6%8C%91%E9%80%89%E6%8A%80%E5%B7%A7.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             挑选技巧
                                         </a>
                                         
                                         <a href="/tag/%E8%90%A5%E5%85%BB%E4%BB%B7%E5%80%BC.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             营养价值
                                         </a>
                                         
@@ -386,54 +456,55 @@
                         </div>
                         
                         <div class="masonry-grid-item">
-                            <div class="card shadow-sm">
+                            <div class="card article-card shadow-sm">
                                 <div class="card-body">
-                                    <h5 class="card-title">
-                                        <i class="bi bi-file-earmark-text"></i>
+                                    <h5 class="card-title article-title">
+                                        <i class="bi bi-file-earmark-text me-2 text-primary"></i>
                                         <a href="../mdhtml/我买了头大蒜，为啥放几天就发芽了？.html"
-                                            class="text-decoration-none">
+                                            class="text-decoration-none text-dark">
                                             我买了头大蒜，为啥放几天就发芽了？
                                         </a>
                                     </h5>
                                     
-                                        <p class="card-text">
+                                        <p class="card-text text-muted mb-3">
                                             深入剖析大蒜发芽的科学缘由、影响因素，分享防止大蒜发芽的实用储存方法，同时介绍大蒜丰富多样的营养价值，带你全面了解这种常见调味品的奥秘。
                                         </p>
                                         
+                                        <div class="article-meta">
                                             
-                                                <small class="text-muted">
-                                                    2026-02-24
-                                                </small>
+                                                <i class="bi bi-clock me-1"></i>
+                                                2026-02-24
                                                 
+                                        </div>
                                 </div>
-                                <div class="card-footer text-muted">
+                                <div class="card-footer text-muted bg-white border-top">
                                     <a href="/category/%E7%94%9F%E6%B4%BB%E7%99%BE%E7%A7%91.html"
-                                        class="badge bg-primary">
+                                        class="badge bg-primary me-2">
                                         生活百科
                                     </a>
                                     
                                         <a href="/tag/%E5%A4%A7%E8%92%9C.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             大蒜
                                         </a>
                                         
                                         <a href="/tag/%E5%8F%91%E8%8A%BD.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             发芽
                                         </a>
                                         
                                         <a href="/tag/%E7%A7%91%E5%AD%A6%E5%8E%9F%E7%90%86.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             科学原理
                                         </a>
                                         
                                         <a href="/tag/%E5%82%A8%E5%AD%98%E6%8A%80%E5%B7%A7.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             储存技巧
                                         </a>
                                         
                                         <a href="/tag/%E8%90%A5%E5%85%BB%E4%BB%B7%E5%80%BC.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             营养价值
                                         </a>
                                         
@@ -442,54 +513,55 @@
                         </div>
                         
                         <div class="masonry-grid-item">
-                            <div class="card shadow-sm">
+                            <div class="card article-card shadow-sm">
                                 <div class="card-body">
-                                    <h5 class="card-title">
-                                        <i class="bi bi-file-earmark-text"></i>
+                                    <h5 class="card-title article-title">
+                                        <i class="bi bi-file-earmark-text me-2 text-primary"></i>
                                         <a href="../mdhtml/我买了块生姜，为啥放几天就发芽了？.html"
-                                            class="text-decoration-none">
+                                            class="text-decoration-none text-dark">
                                             我买了块生姜，为啥放几天就发芽了？
                                         </a>
                                     </h5>
                                     
-                                        <p class="card-text">
+                                        <p class="card-text text-muted mb-3">
                                             深入剖析生姜发芽的科学缘由、影响因素，分享防止生姜发芽的实用储存方法，同时介绍生姜丰富多样的营养价值，带你全面了解这种常见调味品的奥秘。
                                         </p>
                                         
+                                        <div class="article-meta">
                                             
-                                                <small class="text-muted">
-                                                    2026-02-24
-                                                </small>
+                                                <i class="bi bi-clock me-1"></i>
+                                                2026-02-24
                                                 
+                                        </div>
                                 </div>
-                                <div class="card-footer text-muted">
+                                <div class="card-footer text-muted bg-white border-top">
                                     <a href="/category/%E7%94%9F%E6%B4%BB%E7%99%BE%E7%A7%91.html"
-                                        class="badge bg-primary">
+                                        class="badge bg-primary me-2">
                                         生活百科
                                     </a>
                                     
                                         <a href="/tag/%E7%94%9F%E5%A7%9C.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             生姜
                                         </a>
                                         
                                         <a href="/tag/%E5%8F%91%E8%8A%BD.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             发芽
                                         </a>
                                         
                                         <a href="/tag/%E7%A7%91%E5%AD%A6%E5%8E%9F%E7%90%86.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             科学原理
                                         </a>
                                         
                                         <a href="/tag/%E5%82%A8%E5%AD%98%E6%8A%80%E5%B7%A7.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             储存技巧
                                         </a>
                                         
                                         <a href="/tag/%E8%90%A5%E5%85%BB%E4%BB%B7%E5%80%BC.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             营养价值
                                         </a>
                                         
@@ -498,54 +570,55 @@
                         </div>
                         
                         <div class="masonry-grid-item">
-                            <div class="card shadow-sm">
+                            <div class="card article-card shadow-sm">
                                 <div class="card-body">
-                                    <h5 class="card-title">
-                                        <i class="bi bi-file-earmark-text"></i>
+                                    <h5 class="card-title article-title">
+                                        <i class="bi bi-file-earmark-text me-2 text-primary"></i>
                                         <a href="../mdhtml/我买了个苹果，为啥表面有层蜡？.html"
-                                            class="text-decoration-none">
+                                            class="text-decoration-none text-dark">
                                             我买了个苹果，为啥表面有层蜡？
                                         </a>
                                     </h5>
                                     
-                                        <p class="card-text">
+                                        <p class="card-text text-muted mb-3">
                                             深入剖析苹果表面有蜡的科学缘由、种类差异，分享挑选安全苹果的实用方法，同时介绍苹果丰富多样的营养价值，带你全面了解这种常见水果的奥秘。
                                         </p>
                                         
+                                        <div class="article-meta">
                                             
-                                                <small class="text-muted">
-                                                    2026-02-24
-                                                </small>
+                                                <i class="bi bi-clock me-1"></i>
+                                                2026-02-24
                                                 
+                                        </div>
                                 </div>
-                                <div class="card-footer text-muted">
+                                <div class="card-footer text-muted bg-white border-top">
                                     <a href="/category/%E7%94%9F%E6%B4%BB%E7%99%BE%E7%A7%91.html"
-                                        class="badge bg-primary">
+                                        class="badge bg-primary me-2">
                                         生活百科
                                     </a>
                                     
                                         <a href="/tag/%E8%8B%B9%E6%9E%9C.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             苹果
                                         </a>
                                         
                                         <a href="/tag/%E6%9E%9C%E8%9C%A1.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             果蜡
                                         </a>
                                         
                                         <a href="/tag/%E7%A7%91%E5%AD%A6%E5%8E%9F%E7%90%86.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             科学原理
                                         </a>
                                         
                                         <a href="/tag/%E6%8C%91%E9%80%89%E6%8A%80%E5%B7%A7.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             挑选技巧
                                         </a>
                                         
                                         <a href="/tag/%E8%90%A5%E5%85%BB%E4%BB%B7%E5%80%BC.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             营养价值
                                         </a>
                                         
@@ -554,54 +627,55 @@
                         </div>
                         
                         <div class="masonry-grid-item">
-                            <div class="card shadow-sm">
+                            <div class="card article-card shadow-sm">
                                 <div class="card-body">
-                                    <h5 class="card-title">
-                                        <i class="bi bi-file-earmark-text"></i>
+                                    <h5 class="card-title article-title">
+                                        <i class="bi bi-file-earmark-text me-2 text-primary"></i>
                                         <a href="../mdhtml/我买了一袋土豆，为啥有的发芽有的不发芽？.html"
-                                            class="text-decoration-none">
+                                            class="text-decoration-none text-dark">
                                             我买了一袋土豆，为啥有的发芽有的不发芽？
                                         </a>
                                     </h5>
                                     
-                                        <p class="card-text">
+                                        <p class="card-text text-muted mb-3">
                                             深入剖析土豆发芽的科学缘由、影响因素，分享防止土豆发芽的实用储存方法，同时介绍土豆丰富多样的营养价值，带你全面了解这种常见食材的奥秘。
                                         </p>
                                         
+                                        <div class="article-meta">
                                             
-                                                <small class="text-muted">
-                                                    2026-02-24
-                                                </small>
+                                                <i class="bi bi-clock me-1"></i>
+                                                2026-02-24
                                                 
+                                        </div>
                                 </div>
-                                <div class="card-footer text-muted">
+                                <div class="card-footer text-muted bg-white border-top">
                                     <a href="/category/%E7%94%9F%E6%B4%BB%E7%99%BE%E7%A7%91.html"
-                                        class="badge bg-primary">
+                                        class="badge bg-primary me-2">
                                         生活百科
                                     </a>
                                     
                                         <a href="/tag/%E5%9C%9F%E8%B1%86.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             土豆
                                         </a>
                                         
                                         <a href="/tag/%E5%8F%91%E8%8A%BD.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             发芽
                                         </a>
                                         
                                         <a href="/tag/%E7%A7%91%E5%AD%A6%E5%8E%9F%E7%90%86.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             科学原理
                                         </a>
                                         
                                         <a href="/tag/%E5%82%A8%E5%AD%98%E6%8A%80%E5%B7%A7.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             储存技巧
                                         </a>
                                         
                                         <a href="/tag/%E8%90%A5%E5%85%BB%E4%BB%B7%E5%80%BC.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             营养价值
                                         </a>
                                         
@@ -610,54 +684,55 @@
                         </div>
                         
                         <div class="masonry-grid-item">
-                            <div class="card shadow-sm">
+                            <div class="card article-card shadow-sm">
                                 <div class="card-body">
-                                    <h5 class="card-title">
-                                        <i class="bi bi-file-earmark-text"></i>
+                                    <h5 class="card-title article-title">
+                                        <i class="bi bi-file-earmark-text me-2 text-primary"></i>
                                         <a href="../mdhtml/我买了一篮西红柿，为啥有的红有的绿？.html"
-                                            class="text-decoration-none">
+                                            class="text-decoration-none text-dark">
                                             我买了一篮西红柿，为啥有的红有的绿？
                                         </a>
                                     </h5>
                                     
-                                        <p class="card-text">
+                                        <p class="card-text text-muted mb-3">
                                             深入剖析西红柿红青不一的科学缘由、影响因素，分享挑选成熟度均匀西红柿的实用方法，同时介绍西红柿丰富多样的营养价值，带你全面了解这种常见果蔬的奥秘。
                                         </p>
                                         
+                                        <div class="article-meta">
                                             
-                                                <small class="text-muted">
-                                                    2026-02-24
-                                                </small>
+                                                <i class="bi bi-clock me-1"></i>
+                                                2026-02-24
                                                 
+                                        </div>
                                 </div>
-                                <div class="card-footer text-muted">
+                                <div class="card-footer text-muted bg-white border-top">
                                     <a href="/category/%E7%94%9F%E6%B4%BB%E7%99%BE%E7%A7%91.html"
-                                        class="badge bg-primary">
+                                        class="badge bg-primary me-2">
                                         生活百科
                                     </a>
                                     
                                         <a href="/tag/%E8%A5%BF%E7%BA%A2%E6%9F%BF.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             西红柿
                                         </a>
                                         
                                         <a href="/tag/%E6%88%90%E7%86%9F%E5%BA%A6.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             成熟度
                                         </a>
                                         
                                         <a href="/tag/%E7%A7%91%E5%AD%A6%E5%8E%9F%E7%90%86.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             科学原理
                                         </a>
                                         
                                         <a href="/tag/%E6%8C%91%E9%80%89%E6%8A%80%E5%B7%A7.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             挑选技巧
                                         </a>
                                         
                                         <a href="/tag/%E8%90%A5%E5%85%BB%E4%BB%B7%E5%80%BC.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             营养价值
                                         </a>
                                         
@@ -666,54 +741,55 @@
                         </div>
                         
                         <div class="masonry-grid-item">
-                            <div class="card shadow-sm">
+                            <div class="card article-card shadow-sm">
                                 <div class="card-body">
-                                    <h5 class="card-title">
-                                        <i class="bi bi-file-earmark-text"></i>
+                                    <h5 class="card-title article-title">
+                                        <i class="bi bi-file-earmark-text me-2 text-primary"></i>
                                         <a href="../mdhtml/我买了一把香蕉，为啥有的熟有的生？.html"
-                                            class="text-decoration-none">
+                                            class="text-decoration-none text-dark">
                                             我买了一把香蕉，为啥有的熟有的生？
                                         </a>
                                     </h5>
                                     
-                                        <p class="card-text">
+                                        <p class="card-text text-muted mb-3">
                                             深入剖析香蕉成熟度不一的科学缘由、影响因素，分享挑选成熟度均匀香蕉的实用方法，同时介绍香蕉丰富多样的营养价值，带你全面了解这种常见水果的奥秘。
                                         </p>
                                         
+                                        <div class="article-meta">
                                             
-                                                <small class="text-muted">
-                                                    2026-02-24
-                                                </small>
+                                                <i class="bi bi-clock me-1"></i>
+                                                2026-02-24
                                                 
+                                        </div>
                                 </div>
-                                <div class="card-footer text-muted">
+                                <div class="card-footer text-muted bg-white border-top">
                                     <a href="/category/%E7%94%9F%E6%B4%BB%E7%99%BE%E7%A7%91.html"
-                                        class="badge bg-primary">
+                                        class="badge bg-primary me-2">
                                         生活百科
                                     </a>
                                     
                                         <a href="/tag/%E9%A6%99%E8%95%89.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             香蕉
                                         </a>
                                         
                                         <a href="/tag/%E6%88%90%E7%86%9F%E5%BA%A6.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             成熟度
                                         </a>
                                         
                                         <a href="/tag/%E7%A7%91%E5%AD%A6%E5%8E%9F%E7%90%86.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             科学原理
                                         </a>
                                         
                                         <a href="/tag/%E6%8C%91%E9%80%89%E6%8A%80%E5%B7%A7.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             挑选技巧
                                         </a>
                                         
                                         <a href="/tag/%E8%90%A5%E5%85%BB%E4%BB%B7%E5%80%BC.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             营养价值
                                         </a>
                                         
@@ -722,54 +798,55 @@
                         </div>
                         
                         <div class="masonry-grid-item">
-                            <div class="card shadow-sm">
+                            <div class="card article-card shadow-sm">
                                 <div class="card-body">
-                                    <h5 class="card-title">
-                                        <i class="bi bi-file-earmark-text"></i>
+                                    <h5 class="card-title article-title">
+                                        <i class="bi bi-file-earmark-text me-2 text-primary"></i>
                                         <a href="../mdhtml/我买了一串葡萄，为啥有的酸有的甜？.html"
-                                            class="text-decoration-none">
+                                            class="text-decoration-none text-dark">
                                             我买了一串葡萄，为啥有的酸有的甜？
                                         </a>
                                     </h5>
                                     
-                                        <p class="card-text">
+                                        <p class="card-text text-muted mb-3">
                                             深入剖析葡萄酸甜不一的科学缘由、影响因素，分享挑选甜度均匀葡萄的实用方法，同时介绍葡萄丰富多样的营养价值，带你全面了解这种常见水果的奥秘。
                                         </p>
                                         
+                                        <div class="article-meta">
                                             
-                                                <small class="text-muted">
-                                                    2026-02-24
-                                                </small>
+                                                <i class="bi bi-clock me-1"></i>
+                                                2026-02-24
                                                 
+                                        </div>
                                 </div>
-                                <div class="card-footer text-muted">
+                                <div class="card-footer text-muted bg-white border-top">
                                     <a href="/category/%E7%94%9F%E6%B4%BB%E7%99%BE%E7%A7%91.html"
-                                        class="badge bg-primary">
+                                        class="badge bg-primary me-2">
                                         生活百科
                                     </a>
                                     
                                         <a href="/tag/%E8%91%A1%E8%90%84.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             葡萄
                                         </a>
                                         
                                         <a href="/tag/%E9%85%B8%E7%94%9C%E5%B7%AE%E5%BC%82.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             酸甜差异
                                         </a>
                                         
                                         <a href="/tag/%E7%A7%91%E5%AD%A6%E5%8E%9F%E7%90%86.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             科学原理
                                         </a>
                                         
                                         <a href="/tag/%E6%8C%91%E9%80%89%E6%8A%80%E5%B7%A7.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             挑选技巧
                                         </a>
                                         
                                         <a href="/tag/%E8%90%A5%E5%85%BB%E4%BB%B7%E5%80%BC.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             营养价值
                                         </a>
                                         
@@ -778,54 +855,55 @@
                         </div>
                         
                         <div class="masonry-grid-item">
-                            <div class="card shadow-sm">
+                            <div class="card article-card shadow-sm">
                                 <div class="card-body">
-                                    <h5 class="card-title">
-                                        <i class="bi bi-file-earmark-text"></i>
+                                    <h5 class="card-title article-title">
+                                        <i class="bi bi-file-earmark-text me-2 text-primary"></i>
                                         <a href="../mdhtml/我买了一堆胡萝卜，为啥有的红有的黄？.html"
-                                            class="text-decoration-none">
+                                            class="text-decoration-none text-dark">
                                             我买了一堆胡萝卜，为啥有的红有的黄？
                                         </a>
                                     </h5>
                                     
-                                        <p class="card-text">
+                                        <p class="card-text text-muted mb-3">
                                             深入剖析胡萝卜颜色差异的科学缘由、影响因素，分享挑选优质胡萝卜的实用方法，同时介绍胡萝卜丰富多样的营养价值，带你全面了解这种常见蔬菜的奥秘。
                                         </p>
                                         
+                                        <div class="article-meta">
                                             
-                                                <small class="text-muted">
-                                                    2026-02-24
-                                                </small>
+                                                <i class="bi bi-clock me-1"></i>
+                                                2026-02-24
                                                 
+                                        </div>
                                 </div>
-                                <div class="card-footer text-muted">
+                                <div class="card-footer text-muted bg-white border-top">
                                     <a href="/category/%E7%94%9F%E6%B4%BB%E7%99%BE%E7%A7%91.html"
-                                        class="badge bg-primary">
+                                        class="badge bg-primary me-2">
                                         生活百科
                                     </a>
                                     
                                         <a href="/tag/%E8%83%A1%E8%90%9D%E5%8D%9C.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             胡萝卜
                                         </a>
                                         
                                         <a href="/tag/%E9%A2%9C%E8%89%B2%E5%B7%AE%E5%BC%82.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             颜色差异
                                         </a>
                                         
                                         <a href="/tag/%E7%A7%91%E5%AD%A6%E5%8E%9F%E7%90%86.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             科学原理
                                         </a>
                                         
                                         <a href="/tag/%E6%8C%91%E9%80%89%E6%8A%80%E5%B7%A7.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             挑选技巧
                                         </a>
                                         
                                         <a href="/tag/%E8%90%A5%E5%85%BB%E4%BB%B7%E5%80%BC.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             营养价值
                                         </a>
                                         
@@ -836,9 +914,9 @@
                 </div>
 
                 <!-- 返回按钮 -->
-                <div class="mt-4 text-center">
-                    <a href="分类列表.html" class="btn btn-outline-primary">
-                        <i class="bi bi-arrow-left"></i> 返回分类列表
+                <div class="mt-6 text-center">
+                    <a href="分类列表.html" class="btn btn-outline-primary back-button">
+                        <i class="bi bi-arrow-left me-2"></i> 返回分类列表
                     </a>
                 </div>
             </div>
@@ -862,7 +940,7 @@
                         itemSelector: '.masonry-grid-item',
                         columnWidth: '.masonry-grid-item',
                         percentPosition: true,
-                        gutter: 10 // 明确设置 gutter 值为 10px
+                        gutter: 15 // 增加间距，提升视觉效果
                     });
                 });
             </script>

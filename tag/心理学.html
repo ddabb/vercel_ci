@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
 
 <head>
   <meta charset="UTF-8">
@@ -9,7 +9,7 @@
   <meta name="description" content="无人自助站的【心理学】的标签列表页面，汇集了关于【心理学】标签相关的文章和资讯，方便您快速找到感兴趣的内容。">
   <meta name="keywords" content="无人自助站,心理学">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>标签文章列表</title>
+  <title>心理学标签 - 无人自助站</title>
 
   <link rel="icon" href="../logo.svg" type="image/svg+xml">
   <link rel="stylesheet" href="../css/style.css">
@@ -27,6 +27,62 @@
   <!-- 引入Masonry -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/masonry/4.2.2/masonry.pkgd.min.js"></script>
 
+  <style>
+        .tag-header {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            color: white;
+            padding: 2rem;
+            border-radius: 8px;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        .tag-title {
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+        .article-card {
+            transition: all 0.3s ease;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        .article-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+        }
+        .article-title {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            transition: color 0.3s ease;
+        }
+        .article-title:hover {
+            color: #0d6efd;
+        }
+        .article-meta {
+            font-size: 0.85rem;
+            color: #6c757d;
+        }
+        .tag-link {
+            background-color: #e9ecef;
+            color: #495057;
+            transition: all 0.2s ease;
+        }
+        .tag-link:hover {
+            background-color: #dee2e6;
+            color: #212529;
+        }
+        .back-button {
+            transition: all 0.3s ease;
+        }
+        .back-button:hover {
+            transform: translateX(-3px);
+        }
+        .article-count {
+            font-size: 0.9rem;
+            opacity: 0.9;
+        }
+    </style>
 </head>
 
 <body>
@@ -80,7 +136,7 @@
     <main class="container-fluid mt-4">
       <div class="row">
         <div class="col-lg-8 col-md-12 mx-auto">
-          <nav aria-label="breadcrumb">
+          <nav aria-label="breadcrumb" class="mb-4">
             <ol class="breadcrumb">
               <li class="breadcrumb-item"><a href="/html/index.html">首页</a></li>
               <li class="breadcrumb-item"><a href="标签列表.html">标签列表</a></li>
@@ -89,54 +145,64 @@
               </li>
             </ol>
           </nav>
-          <h1 style="font-size: 1.5em; margin: 0.5em 0;">
-            心理学标签的文章和资讯
-        </h1>
+          
+          <!-- 标签头部 -->
+          <div class="tag-header">
+              <h1 class="tag-title">
+                  <i class="bi bi-tags me-2"></i>
+                  心理学
+              </h1>
+              <p class="article-count">
+                  共 13 篇文章
+              </p>
+          </div>
+          
           <div class="masonry-grid">
             
               <div class="masonry-grid-item">
-                <div class="card shadow-sm">
+                <div class="card article-card shadow-sm">
                   <div class="card-body">
-                    <h5 class="card-title">
-                      <i class="bi bi-file-earmark-text"></i>
-                      <a href="../mdhtml/2026年的身份认同危机：为什么越来越多人不知道自己是谁，如何建立真实的自我.html" class="text-decoration-none">
+                    <h5 class="card-title article-title">
+                      <i class="bi bi-file-earmark-text me-2 text-primary"></i>
+                      <a href="../mdhtml/2026年的身份认同危机：为什么越来越多人不知道自己是谁，如何建立真实的自我.html" class="text-decoration-none text-dark">
                         你不知道自己是谁：身份认同危机的时代
                       </a>
                     </h5>
                     
-                      <p class="card-text">
+                      <p class="card-text text-muted mb-3">
                         深度分析现代人的身份危机。不是缺乏选择，而是选择太多。包含建立真实自我的方法。
                       </p>
                       
-                        
-                          <small class="text-muted">
-                            2026-03-26
-                          </small>
-                          
+                        <div class="article-meta">
+                            
+                                <i class="bi bi-clock me-1"></i>
+                                2026-03-26
+                                
+                        </div>
                   </div>
-                  <div class="card-footer text-muted">
+                  <div class="card-footer text-muted bg-white border-top">
                     <a href="/category/%E8%87%AA%E6%88%91%E8%AE%A4%E7%9F%A5.html"
-                      class="badge bg-primary">
+                      class="badge bg-primary me-2">
                       自我认知
                     </a>
                     
-                      <a href="/tag/%E8%BA%AB%E4%BB%BD%E8%AE%A4%E5%90%8C.html" class="badge tag-link">
+                      <a href="/tag/%E8%BA%AB%E4%BB%BD%E8%AE%A4%E5%90%8C.html" class="badge tag-link me-2 mb-1">
                         身份认同
                       </a>
                       
-                      <a href="/tag/%E8%87%AA%E6%88%91%E8%AE%A4%E7%9F%A5.html" class="badge tag-link">
+                      <a href="/tag/%E8%87%AA%E6%88%91%E8%AE%A4%E7%9F%A5.html" class="badge tag-link me-2 mb-1">
                         自我认知
                       </a>
                       
-                      <a href="/tag/%E7%9C%9F%E5%AE%9E%E8%87%AA%E6%88%91.html" class="badge tag-link">
+                      <a href="/tag/%E7%9C%9F%E5%AE%9E%E8%87%AA%E6%88%91.html" class="badge tag-link me-2 mb-1">
                         真实自我
                       </a>
                       
-                      <a href="/tag/%E5%BF%83%E7%90%86%E5%AD%A6.html" class="badge tag-link">
+                      <a href="/tag/%E5%BF%83%E7%90%86%E5%AD%A6.html" class="badge tag-link me-2 mb-1">
                         心理学
                       </a>
                       
-                      <a href="/tag/2026%E8%B6%8B%E5%8A%BF.html" class="badge tag-link">
+                      <a href="/tag/2026%E8%B6%8B%E5%8A%BF.html" class="badge tag-link me-2 mb-1">
                         2026趋势
                       </a>
                       
@@ -145,48 +211,49 @@
               </div>
               
               <div class="masonry-grid-item">
-                <div class="card shadow-sm">
+                <div class="card article-card shadow-sm">
                   <div class="card-body">
-                    <h5 class="card-title">
-                      <i class="bi bi-file-earmark-text"></i>
-                      <a href="../mdhtml/2026年的消费主义陷阱：为什么我们越来越想买东西，如何建立理性的消费观.html" class="text-decoration-none">
+                    <h5 class="card-title article-title">
+                      <i class="bi bi-file-earmark-text me-2 text-primary"></i>
+                      <a href="../mdhtml/2026年的消费主义陷阱：为什么我们越来越想买东西，如何建立理性的消费观.html" class="text-decoration-none text-dark">
                         你的购物车就是你的灵魂：消费主义如何操纵你
                       </a>
                     </h5>
                     
-                      <p class="card-text">
+                      <p class="card-text text-muted mb-3">
                         深度分析消费主义的心理机制。不是缺乏自制力，而是被设计的欲望。包含建立理性消费的方法。
                       </p>
                       
-                        
-                          <small class="text-muted">
-                            2026-03-26
-                          </small>
-                          
+                        <div class="article-meta">
+                            
+                                <i class="bi bi-clock me-1"></i>
+                                2026-03-26
+                                
+                        </div>
                   </div>
-                  <div class="card-footer text-muted">
+                  <div class="card-footer text-muted bg-white border-top">
                     <a href="/category/%E6%B6%88%E8%B4%B9%E7%90%86%E8%B4%A2.html"
-                      class="badge bg-primary">
+                      class="badge bg-primary me-2">
                       消费理财
                     </a>
                     
-                      <a href="/tag/%E6%B6%88%E8%B4%B9%E4%B8%BB%E4%B9%89.html" class="badge tag-link">
+                      <a href="/tag/%E6%B6%88%E8%B4%B9%E4%B8%BB%E4%B9%89.html" class="badge tag-link me-2 mb-1">
                         消费主义
                       </a>
                       
-                      <a href="/tag/%E7%90%86%E8%B4%A2.html" class="badge tag-link">
+                      <a href="/tag/%E7%90%86%E8%B4%A2.html" class="badge tag-link me-2 mb-1">
                         理财
                       </a>
                       
-                      <a href="/tag/%E6%9E%81%E7%AE%80%E7%94%9F%E6%B4%BB.html" class="badge tag-link">
+                      <a href="/tag/%E6%9E%81%E7%AE%80%E7%94%9F%E6%B4%BB.html" class="badge tag-link me-2 mb-1">
                         极简生活
                       </a>
                       
-                      <a href="/tag/%E5%BF%83%E7%90%86%E5%AD%A6.html" class="badge tag-link">
+                      <a href="/tag/%E5%BF%83%E7%90%86%E5%AD%A6.html" class="badge tag-link me-2 mb-1">
                         心理学
                       </a>
                       
-                      <a href="/tag/2026%E8%B6%8B%E5%8A%BF.html" class="badge tag-link">
+                      <a href="/tag/2026%E8%B6%8B%E5%8A%BF.html" class="badge tag-link me-2 mb-1">
                         2026趋势
                       </a>
                       
@@ -195,48 +262,49 @@
               </div>
               
               <div class="masonry-grid-item">
-                <div class="card shadow-sm">
+                <div class="card article-card shadow-sm">
                   <div class="card-body">
-                    <h5 class="card-title">
-                      <i class="bi bi-file-earmark-text"></i>
-                      <a href="../mdhtml/2026年的自我怀疑危机：为什么聪明人总是自我怀疑，如何建立真正的自信.html" class="text-decoration-none">
+                    <h5 class="card-title article-title">
+                      <i class="bi bi-file-earmark-text me-2 text-primary"></i>
+                      <a href="../mdhtml/2026年的自我怀疑危机：为什么聪明人总是自我怀疑，如何建立真正的自信.html" class="text-decoration-none text-dark">
                         自我怀疑是聪明人的诅咒：如何从冒充者综合征中逃脱
                       </a>
                     </h5>
                     
-                      <p class="card-text">
+                      <p class="card-text text-muted mb-3">
                         深度分析自我怀疑的根源。不是能力问题，而是认知问题。包含建立真正自信的方法。
                       </p>
                       
-                        
-                          <small class="text-muted">
-                            2026-03-26
-                          </small>
-                          
+                        <div class="article-meta">
+                            
+                                <i class="bi bi-clock me-1"></i>
+                                2026-03-26
+                                
+                        </div>
                   </div>
-                  <div class="card-footer text-muted">
+                  <div class="card-footer text-muted bg-white border-top">
                     <a href="/category/%E5%BF%83%E7%90%86%E6%88%90%E9%95%BF.html"
-                      class="badge bg-primary">
+                      class="badge bg-primary me-2">
                       心理成长
                     </a>
                     
-                      <a href="/tag/%E8%87%AA%E6%88%91%E6%80%80%E7%96%91.html" class="badge tag-link">
+                      <a href="/tag/%E8%87%AA%E6%88%91%E6%80%80%E7%96%91.html" class="badge tag-link me-2 mb-1">
                         自我怀疑
                       </a>
                       
-                      <a href="/tag/%E8%87%AA%E4%BF%A1%E5%BF%83.html" class="badge tag-link">
+                      <a href="/tag/%E8%87%AA%E4%BF%A1%E5%BF%83.html" class="badge tag-link me-2 mb-1">
                         自信心
                       </a>
                       
-                      <a href="/tag/%E5%86%92%E5%85%85%E8%80%85%E7%BB%BC%E5%90%88%E5%BE%81.html" class="badge tag-link">
+                      <a href="/tag/%E5%86%92%E5%85%85%E8%80%85%E7%BB%BC%E5%90%88%E5%BE%81.html" class="badge tag-link me-2 mb-1">
                         冒充者综合征
                       </a>
                       
-                      <a href="/tag/%E5%BF%83%E7%90%86%E5%AD%A6.html" class="badge tag-link">
+                      <a href="/tag/%E5%BF%83%E7%90%86%E5%AD%A6.html" class="badge tag-link me-2 mb-1">
                         心理学
                       </a>
                       
-                      <a href="/tag/2026%E8%B6%8B%E5%8A%BF.html" class="badge tag-link">
+                      <a href="/tag/2026%E8%B6%8B%E5%8A%BF.html" class="badge tag-link me-2 mb-1">
                         2026趋势
                       </a>
                       
@@ -245,48 +313,49 @@
               </div>
               
               <div class="masonry-grid-item">
-                <div class="card shadow-sm">
+                <div class="card article-card shadow-sm">
                   <div class="card-body">
-                    <h5 class="card-title">
-                      <i class="bi bi-file-earmark-text"></i>
-                      <a href="../mdhtml/2026年的拖延症根治指南：为什么你总是拖延，如何彻底改变.html" class="text-decoration-none">
+                    <h5 class="card-title article-title">
+                      <i class="bi bi-file-earmark-text me-2 text-primary"></i>
+                      <a href="../mdhtml/2026年的拖延症根治指南：为什么你总是拖延，如何彻底改变.html" class="text-decoration-none text-dark">
                         拖延症的真相：你不是懒，你是害怕
                       </a>
                     </h5>
                     
-                      <p class="card-text">
+                      <p class="card-text text-muted mb-3">
                         深度分析拖延症的心理根源。不是懒惰，而是恐惧。包含科学的改变方法。
                       </p>
                       
-                        
-                          <small class="text-muted">
-                            2026-03-26
-                          </small>
-                          
+                        <div class="article-meta">
+                            
+                                <i class="bi bi-clock me-1"></i>
+                                2026-03-26
+                                
+                        </div>
                   </div>
-                  <div class="card-footer text-muted">
+                  <div class="card-footer text-muted bg-white border-top">
                     <a href="/category/%E8%87%AA%E6%88%91%E7%AE%A1%E7%90%86.html"
-                      class="badge bg-primary">
+                      class="badge bg-primary me-2">
                       自我管理
                     </a>
                     
-                      <a href="/tag/%E6%8B%96%E5%BB%B6%E7%97%87.html" class="badge tag-link">
+                      <a href="/tag/%E6%8B%96%E5%BB%B6%E7%97%87.html" class="badge tag-link me-2 mb-1">
                         拖延症
                       </a>
                       
-                      <a href="/tag/%E6%97%B6%E9%97%B4%E7%AE%A1%E7%90%86.html" class="badge tag-link">
+                      <a href="/tag/%E6%97%B6%E9%97%B4%E7%AE%A1%E7%90%86.html" class="badge tag-link me-2 mb-1">
                         时间管理
                       </a>
                       
-                      <a href="/tag/%E8%A1%8C%E4%B8%BA%E6%94%B9%E5%8F%98.html" class="badge tag-link">
+                      <a href="/tag/%E8%A1%8C%E4%B8%BA%E6%94%B9%E5%8F%98.html" class="badge tag-link me-2 mb-1">
                         行为改变
                       </a>
                       
-                      <a href="/tag/%E5%BF%83%E7%90%86%E5%AD%A6.html" class="badge tag-link">
+                      <a href="/tag/%E5%BF%83%E7%90%86%E5%AD%A6.html" class="badge tag-link me-2 mb-1">
                         心理学
                       </a>
                       
-                      <a href="/tag/2026%E8%B6%8B%E5%8A%BF.html" class="badge tag-link">
+                      <a href="/tag/2026%E8%B6%8B%E5%8A%BF.html" class="badge tag-link me-2 mb-1">
                         2026趋势
                       </a>
                       
@@ -295,48 +364,49 @@
               </div>
               
               <div class="masonry-grid-item">
-                <div class="card shadow-sm">
+                <div class="card article-card shadow-sm">
                   <div class="card-body">
-                    <h5 class="card-title">
-                      <i class="bi bi-file-earmark-text"></i>
-                      <a href="../mdhtml/幸福的悖论：为什么追求幸福反而让我们不幸？.html" class="text-decoration-none">
+                    <h5 class="card-title article-title">
+                      <i class="bi bi-file-earmark-text me-2 text-primary"></i>
+                      <a href="../mdhtml/幸福的悖论：为什么追求幸福反而让我们不幸？.html" class="text-decoration-none text-dark">
                         幸福的悖论：为什么追求幸福反而让我们不幸？
                       </a>
                     </h5>
                     
-                      <p class="card-text">
+                      <p class="card-text text-muted mb-3">
                         深入分析幸福的悖论，探讨幸福追求的陷阱、满足感的缺失、意义的重要性、以及如何真正获得幸福。
                       </p>
                       
-                        
-                          <small class="text-muted">
-                            2026-03-24
-                          </small>
-                          
+                        <div class="article-meta">
+                            
+                                <i class="bi bi-clock me-1"></i>
+                                2026-03-24
+                                
+                        </div>
                   </div>
-                  <div class="card-footer text-muted">
+                  <div class="card-footer text-muted bg-white border-top">
                     <a href="/category/%E4%BA%BA%E7%94%9F%E5%93%B2%E5%AD%A6.html"
-                      class="badge bg-primary">
+                      class="badge bg-primary me-2">
                       人生哲学
                     </a>
                     
-                      <a href="/tag/%E5%B9%B8%E7%A6%8F.html" class="badge tag-link">
+                      <a href="/tag/%E5%B9%B8%E7%A6%8F.html" class="badge tag-link me-2 mb-1">
                         幸福
                       </a>
                       
-                      <a href="/tag/%E5%BF%83%E7%90%86%E5%AD%A6.html" class="badge tag-link">
+                      <a href="/tag/%E5%BF%83%E7%90%86%E5%AD%A6.html" class="badge tag-link me-2 mb-1">
                         心理学
                       </a>
                       
-                      <a href="/tag/%E8%BF%BD%E6%B1%82.html" class="badge tag-link">
+                      <a href="/tag/%E8%BF%BD%E6%B1%82.html" class="badge tag-link me-2 mb-1">
                         追求
                       </a>
                       
-                      <a href="/tag/%E6%BB%A1%E8%B6%B3%E6%84%9F.html" class="badge tag-link">
+                      <a href="/tag/%E6%BB%A1%E8%B6%B3%E6%84%9F.html" class="badge tag-link me-2 mb-1">
                         满足感
                       </a>
                       
-                      <a href="/tag/%E7%94%9F%E6%B4%BB%E8%B4%A8%E9%87%8F.html" class="badge tag-link">
+                      <a href="/tag/%E7%94%9F%E6%B4%BB%E8%B4%A8%E9%87%8F.html" class="badge tag-link me-2 mb-1">
                         生活质量
                       </a>
                       
@@ -345,112 +415,113 @@
               </div>
               
               <div class="masonry-grid-item">
-                <div class="card shadow-sm">
+                <div class="card article-card shadow-sm">
                   <div class="card-body">
-                    <h5 class="card-title">
-                      <i class="bi bi-file-earmark-text"></i>
-                      <a href="../mdhtml/异地三百公里的选择题：我用了十年才看懂的爱情真相.html" class="text-decoration-none">
+                    <h5 class="card-title article-title">
+                      <i class="bi bi-file-earmark-text me-2 text-primary"></i>
+                      <a href="../mdhtml/异地三百公里的选择题：我用了十年才看懂的爱情真相.html" class="text-decoration-none text-dark">
                         异地恋指南：2026年如何跨越距离维持长久关系的实用策略
                       </a>
                     </h5>
                     
-                      <p class="card-text">
+                      <p class="card-text text-muted mb-3">
                         2026年最新异地恋指南，深入解析异地恋的挑战与解决方案，包括情感距离管理、沟通技巧、决策模型构建以及实用的异地恋生存策略，帮助你跨越距离维持长久健康的恋爱关系，让远距离爱情更加稳固。
                       </p>
                       
-                        
-                          <small class="text-muted">
-                            2026-02-25
-                          </small>
-                          
+                        <div class="article-meta">
+                            
+                                <i class="bi bi-clock me-1"></i>
+                                2026-02-25
+                                
+                        </div>
                   </div>
-                  <div class="card-footer text-muted">
+                  <div class="card-footer text-muted bg-white border-top">
                     <a href="/category/%E4%BA%BA%E9%99%85%E7%9B%B8%E5%A4%84.html"
-                      class="badge bg-primary">
+                      class="badge bg-primary me-2">
                       人际相处
                     </a>
                     
-                      <a href="/tag/%E5%BC%82%E5%9C%B0%E6%81%8B.html" class="badge tag-link">
+                      <a href="/tag/%E5%BC%82%E5%9C%B0%E6%81%8B.html" class="badge tag-link me-2 mb-1">
                         异地恋
                       </a>
                       
-                      <a href="/tag/%E6%83%85%E6%84%9F%E5%88%86%E6%9E%90.html" class="badge tag-link">
+                      <a href="/tag/%E6%83%85%E6%84%9F%E5%88%86%E6%9E%90.html" class="badge tag-link me-2 mb-1">
                         情感分析
                       </a>
                       
-                      <a href="/tag/%E7%94%9F%E6%B4%BB%E6%88%90%E6%9C%AC.html" class="badge tag-link">
+                      <a href="/tag/%E7%94%9F%E6%B4%BB%E6%88%90%E6%9C%AC.html" class="badge tag-link me-2 mb-1">
                         生活成本
                       </a>
                       
-                      <a href="/tag/%E5%BF%83%E7%90%86%E5%AD%A6.html" class="badge tag-link">
+                      <a href="/tag/%E5%BF%83%E7%90%86%E5%AD%A6.html" class="badge tag-link me-2 mb-1">
                         心理学
                       </a>
                       
-                      <a href="/tag/%E6%81%8B%E7%88%B1%E6%8A%80%E5%B7%A7.html" class="badge tag-link">
+                      <a href="/tag/%E6%81%8B%E7%88%B1%E6%8A%80%E5%B7%A7.html" class="badge tag-link me-2 mb-1">
                         恋爱技巧
                       </a>
                       
-                      <a href="/tag/%E5%BC%82%E5%9C%B0%E5%85%B3%E7%B3%BB.html" class="badge tag-link">
+                      <a href="/tag/%E5%BC%82%E5%9C%B0%E5%85%B3%E7%B3%BB.html" class="badge tag-link me-2 mb-1">
                         异地关系
                       </a>
                       
-                      <a href="/tag/%E6%83%85%E6%84%9F%E7%BB%B4%E6%8A%A4.html" class="badge tag-link">
+                      <a href="/tag/%E6%83%85%E6%84%9F%E7%BB%B4%E6%8A%A4.html" class="badge tag-link me-2 mb-1">
                         情感维护
                       </a>
                       
-                      <a href="/tag/%E6%81%8B%E7%88%B1%E5%BB%BA%E8%AE%AE.html" class="badge tag-link">
+                      <a href="/tag/%E6%81%8B%E7%88%B1%E5%BB%BA%E8%AE%AE.html" class="badge tag-link me-2 mb-1">
                         恋爱建议
                       </a>
                       
-                      <a href="/tag/%E7%88%B1%E6%83%85%E4%BF%9D%E9%B2%9C.html" class="badge tag-link">
+                      <a href="/tag/%E7%88%B1%E6%83%85%E4%BF%9D%E9%B2%9C.html" class="badge tag-link me-2 mb-1">
                         爱情保鲜
                       </a>
                       
-                      <a href="/tag/%E9%95%BF%E6%9C%9F%E5%85%B3%E7%B3%BB.html" class="badge tag-link">
+                      <a href="/tag/%E9%95%BF%E6%9C%9F%E5%85%B3%E7%B3%BB.html" class="badge tag-link me-2 mb-1">
                         长期关系
                       </a>
                       
-                      <a href="/tag/%E5%BC%82%E5%9C%B0%E6%81%8B%E7%BB%B4%E6%8C%81.html" class="badge tag-link">
+                      <a href="/tag/%E5%BC%82%E5%9C%B0%E6%81%8B%E7%BB%B4%E6%8C%81.html" class="badge tag-link me-2 mb-1">
                         异地恋维持
                       </a>
                       
-                      <a href="/tag/%E6%83%85%E6%84%9F%E6%B2%9F%E9%80%9A.html" class="badge tag-link">
+                      <a href="/tag/%E6%83%85%E6%84%9F%E6%B2%9F%E9%80%9A.html" class="badge tag-link me-2 mb-1">
                         情感沟通
                       </a>
                       
-                      <a href="/tag/2026%E5%B9%B4%E5%BC%82%E5%9C%B0%E6%81%8B.html" class="badge tag-link">
+                      <a href="/tag/2026%E5%B9%B4%E5%BC%82%E5%9C%B0%E6%81%8B.html" class="badge tag-link me-2 mb-1">
                         2026年异地恋
                       </a>
                       
-                      <a href="/tag/%E5%BC%82%E5%9C%B0%E6%81%8B%E6%88%90%E5%8A%9F.html" class="badge tag-link">
+                      <a href="/tag/%E5%BC%82%E5%9C%B0%E6%81%8B%E6%88%90%E5%8A%9F.html" class="badge tag-link me-2 mb-1">
                         异地恋成功
                       </a>
                       
-                      <a href="/tag/%E5%BC%82%E5%9C%B0%E6%81%8B%E7%BB%B4%E6%8C%81%E6%8A%80%E5%B7%A7.html" class="badge tag-link">
+                      <a href="/tag/%E5%BC%82%E5%9C%B0%E6%81%8B%E7%BB%B4%E6%8C%81%E6%8A%80%E5%B7%A7.html" class="badge tag-link me-2 mb-1">
                         异地恋维持技巧
                       </a>
                       
-                      <a href="/tag/%E8%BF%9C%E8%B7%9D%E7%A6%BB%E6%81%8B%E7%88%B1.html" class="badge tag-link">
+                      <a href="/tag/%E8%BF%9C%E8%B7%9D%E7%A6%BB%E6%81%8B%E7%88%B1.html" class="badge tag-link me-2 mb-1">
                         远距离恋爱
                       </a>
                       
-                      <a href="/tag/%E6%81%8B%E7%88%B1%E5%85%B3%E7%B3%BB.html" class="badge tag-link">
+                      <a href="/tag/%E6%81%8B%E7%88%B1%E5%85%B3%E7%B3%BB.html" class="badge tag-link me-2 mb-1">
                         恋爱关系
                       </a>
                       
-                      <a href="/tag/%E6%83%85%E6%84%9F%E8%BF%9E%E6%8E%A5.html" class="badge tag-link">
+                      <a href="/tag/%E6%83%85%E6%84%9F%E8%BF%9E%E6%8E%A5.html" class="badge tag-link me-2 mb-1">
                         情感连接
                       </a>
                       
-                      <a href="/tag/%E5%BC%82%E5%9C%B0%E6%81%8B%E6%8C%91%E6%88%98.html" class="badge tag-link">
+                      <a href="/tag/%E5%BC%82%E5%9C%B0%E6%81%8B%E6%8C%91%E6%88%98.html" class="badge tag-link me-2 mb-1">
                         异地恋挑战
                       </a>
                       
-                      <a href="/tag/%E6%81%8B%E7%88%B1%E6%B2%9F%E9%80%9A%E6%8A%80%E5%B7%A7.html" class="badge tag-link">
+                      <a href="/tag/%E6%81%8B%E7%88%B1%E6%B2%9F%E9%80%9A%E6%8A%80%E5%B7%A7.html" class="badge tag-link me-2 mb-1">
                         恋爱沟通技巧
                       </a>
                       
-                      <a href="/tag/%E5%BC%82%E5%9C%B0%E6%81%8B%E7%94%9F%E5%AD%98%E6%8C%87%E5%8D%97.html" class="badge tag-link">
+                      <a href="/tag/%E5%BC%82%E5%9C%B0%E6%81%8B%E7%94%9F%E5%AD%98%E6%8C%87%E5%8D%97.html" class="badge tag-link me-2 mb-1">
                         异地恋生存指南
                       </a>
                       
@@ -459,84 +530,85 @@
               </div>
               
               <div class="masonry-grid-item">
-                <div class="card shadow-sm">
+                <div class="card article-card shadow-sm">
                   <div class="card-body">
-                    <h5 class="card-title">
-                      <i class="bi bi-file-earmark-text"></i>
-                      <a href="../mdhtml/个人理财的心理学探秘：解锁财富管理的深层密码.html" class="text-decoration-none">
+                    <h5 class="card-title article-title">
+                      <i class="bi bi-file-earmark-text me-2 text-primary"></i>
+                      <a href="../mdhtml/个人理财的心理学探秘：解锁财富管理的深层密码.html" class="text-decoration-none text-dark">
                         个人理财心理学指南：解锁财富管理的深层密码
                       </a>
                     </h5>
                     
-                      <p class="card-text">
+                      <p class="card-text text-muted mb-3">
                         2024年最新个人理财心理学指南，深入剖析认知偏差、情绪因素、自我控制和社会比较等心理因素对理财决策的影响，帮助你运用心理学知识做出更明智的理财决策，实现财务自由。
                       </p>
                       
-                        
-                          <small class="text-muted">
-                            2026-02-25
-                          </small>
-                          
+                        <div class="article-meta">
+                            
+                                <i class="bi bi-clock me-1"></i>
+                                2026-02-25
+                                
+                        </div>
                   </div>
-                  <div class="card-footer text-muted">
+                  <div class="card-footer text-muted bg-white border-top">
                     <a href="/category/%E8%B4%A2%E5%AF%8C%E7%AE%A1%E7%90%86.html"
-                      class="badge bg-primary">
+                      class="badge bg-primary me-2">
                       财富管理
                     </a>
                     
-                      <a href="/tag/%E4%B8%AA%E4%BA%BA%E7%90%86%E8%B4%A2.html" class="badge tag-link">
+                      <a href="/tag/%E4%B8%AA%E4%BA%BA%E7%90%86%E8%B4%A2.html" class="badge tag-link me-2 mb-1">
                         个人理财
                       </a>
                       
-                      <a href="/tag/%E5%BF%83%E7%90%86%E5%AD%A6.html" class="badge tag-link">
+                      <a href="/tag/%E5%BF%83%E7%90%86%E5%AD%A6.html" class="badge tag-link me-2 mb-1">
                         心理学
                       </a>
                       
-                      <a href="/tag/%E8%AE%A4%E7%9F%A5%E5%81%8F%E5%B7%AE.html" class="badge tag-link">
+                      <a href="/tag/%E8%AE%A4%E7%9F%A5%E5%81%8F%E5%B7%AE.html" class="badge tag-link me-2 mb-1">
                         认知偏差
                       </a>
                       
-                      <a href="/tag/%E6%83%85%E7%BB%AA%E5%9B%A0%E7%B4%A0.html" class="badge tag-link">
+                      <a href="/tag/%E6%83%85%E7%BB%AA%E5%9B%A0%E7%B4%A0.html" class="badge tag-link me-2 mb-1">
                         情绪因素
                       </a>
                       
-                      <a href="/tag/%E8%87%AA%E6%88%91%E6%8E%A7%E5%88%B6.html" class="badge tag-link">
+                      <a href="/tag/%E8%87%AA%E6%88%91%E6%8E%A7%E5%88%B6.html" class="badge tag-link me-2 mb-1">
                         自我控制
                       </a>
                       
-                      <a href="/tag/%E8%B4%A2%E5%AF%8C%E7%AE%A1%E7%90%86.html" class="badge tag-link">
+                      <a href="/tag/%E8%B4%A2%E5%AF%8C%E7%AE%A1%E7%90%86.html" class="badge tag-link me-2 mb-1">
                         财富管理
                       </a>
                       
-                      <a href="/tag/%E8%B4%A2%E5%8A%A1%E8%87%AA%E7%94%B1.html" class="badge tag-link">
+                      <a href="/tag/%E8%B4%A2%E5%8A%A1%E8%87%AA%E7%94%B1.html" class="badge tag-link me-2 mb-1">
                         财务自由
                       </a>
                       
-                      <a href="/tag/%E6%8A%95%E8%B5%84%E5%86%B3%E7%AD%96.html" class="badge tag-link">
+                      <a href="/tag/%E6%8A%95%E8%B5%84%E5%86%B3%E7%AD%96.html" class="badge tag-link me-2 mb-1">
                         投资决策
                       </a>
                       
-                      <a href="/tag/%E7%90%86%E8%B4%A2%E4%B9%A0%E6%83%AF.html" class="badge tag-link">
+                      <a href="/tag/%E7%90%86%E8%B4%A2%E4%B9%A0%E6%83%AF.html" class="badge tag-link me-2 mb-1">
                         理财习惯
                       </a>
                       
-                      <a href="/tag/%E6%B6%88%E8%B4%B9%E8%A1%8C%E4%B8%BA.html" class="badge tag-link">
+                      <a href="/tag/%E6%B6%88%E8%B4%B9%E8%A1%8C%E4%B8%BA.html" class="badge tag-link me-2 mb-1">
                         消费行为
                       </a>
                       
-                      <a href="/tag/%E5%BB%B6%E8%BF%9F%E6%BB%A1%E8%B6%B3.html" class="badge tag-link">
+                      <a href="/tag/%E5%BB%B6%E8%BF%9F%E6%BB%A1%E8%B6%B3.html" class="badge tag-link me-2 mb-1">
                         延迟满足
                       </a>
                       
-                      <a href="/tag/%E7%A4%BE%E4%BC%9A%E6%AF%94%E8%BE%83.html" class="badge tag-link">
+                      <a href="/tag/%E7%A4%BE%E4%BC%9A%E6%AF%94%E8%BE%83.html" class="badge tag-link me-2 mb-1">
                         社会比较
                       </a>
                       
-                      <a href="/tag/%E7%90%86%E8%B4%A2%E8%A7%84%E5%88%92.html" class="badge tag-link">
+                      <a href="/tag/%E7%90%86%E8%B4%A2%E8%A7%84%E5%88%92.html" class="badge tag-link me-2 mb-1">
                         理财规划
                       </a>
                       
-                      <a href="/tag/%E9%87%91%E9%92%B1%E5%BF%83%E7%90%86%E5%AD%A6.html" class="badge tag-link">
+                      <a href="/tag/%E9%87%91%E9%92%B1%E5%BF%83%E7%90%86%E5%AD%A6.html" class="badge tag-link me-2 mb-1">
                         金钱心理学
                       </a>
                       
@@ -545,52 +617,53 @@
               </div>
               
               <div class="masonry-grid-item">
-                <div class="card shadow-sm">
+                <div class="card article-card shadow-sm">
                   <div class="card-body">
-                    <h5 class="card-title">
-                      <i class="bi bi-file-earmark-text"></i>
-                      <a href="../mdhtml/自我的本质：固定实体还是动态建构.html" class="text-decoration-none">
+                    <h5 class="card-title article-title">
+                      <i class="bi bi-file-earmark-text me-2 text-primary"></i>
+                      <a href="../mdhtml/自我的本质：固定实体还是动态建构.html" class="text-decoration-none text-dark">
                         自我的本质：固定实体还是动态建构
                       </a>
                     </h5>
                     
-                      <p class="card-text">
+                      <p class="card-text text-muted mb-3">
                         本文探讨了自我的本质，分析了本质主义与建构主义的哲学争论。通过哲学、心理学和神经科学的多角度分析，揭示了自我概念的复杂性，最终提出了在自我认知中寻找平衡的生活智慧。
                       </p>
                       
-                        
-                          <small class="text-muted">
-                            2026-02-24
-                          </small>
-                          
+                        <div class="article-meta">
+                            
+                                <i class="bi bi-clock me-1"></i>
+                                2026-02-24
+                                
+                        </div>
                   </div>
-                  <div class="card-footer text-muted">
+                  <div class="card-footer text-muted bg-white border-top">
                     <a href="/category/%E5%93%B2%E5%AD%A6%E6%80%9D%E8%80%83.html"
-                      class="badge bg-primary">
+                      class="badge bg-primary me-2">
                       哲学思考
                     </a>
                     
-                      <a href="/tag/%E8%87%AA%E6%88%91%E6%9C%AC%E8%B4%A8.html" class="badge tag-link">
+                      <a href="/tag/%E8%87%AA%E6%88%91%E6%9C%AC%E8%B4%A8.html" class="badge tag-link me-2 mb-1">
                         自我本质
                       </a>
                       
-                      <a href="/tag/%E5%93%B2%E5%AD%A6%E6%80%9D%E8%80%83.html" class="badge tag-link">
+                      <a href="/tag/%E5%93%B2%E5%AD%A6%E6%80%9D%E8%80%83.html" class="badge tag-link me-2 mb-1">
                         哲学思考
                       </a>
                       
-                      <a href="/tag/%E5%AD%98%E5%9C%A8%E4%B8%BB%E4%B9%89.html" class="badge tag-link">
+                      <a href="/tag/%E5%AD%98%E5%9C%A8%E4%B8%BB%E4%B9%89.html" class="badge tag-link me-2 mb-1">
                         存在主义
                       </a>
                       
-                      <a href="/tag/%E5%BF%83%E7%90%86%E5%AD%A6.html" class="badge tag-link">
+                      <a href="/tag/%E5%BF%83%E7%90%86%E5%AD%A6.html" class="badge tag-link me-2 mb-1">
                         心理学
                       </a>
                       
-                      <a href="/tag/%E7%A5%9E%E7%BB%8F%E7%A7%91%E5%AD%A6.html" class="badge tag-link">
+                      <a href="/tag/%E7%A5%9E%E7%BB%8F%E7%A7%91%E5%AD%A6.html" class="badge tag-link me-2 mb-1">
                         神经科学
                       </a>
                       
-                      <a href="/tag/%E4%BD%9B%E5%AD%A6.html" class="badge tag-link">
+                      <a href="/tag/%E4%BD%9B%E5%AD%A6.html" class="badge tag-link me-2 mb-1">
                         佛学
                       </a>
                       
@@ -599,52 +672,53 @@
               </div>
               
               <div class="masonry-grid-item">
-                <div class="card shadow-sm">
+                <div class="card article-card shadow-sm">
                   <div class="card-body">
-                    <h5 class="card-title">
-                      <i class="bi bi-file-earmark-text"></i>
-                      <a href="../mdhtml/时间的本质：线性流动还是永恒当下.html" class="text-decoration-none">
+                    <h5 class="card-title article-title">
+                      <i class="bi bi-file-earmark-text me-2 text-primary"></i>
+                      <a href="../mdhtml/时间的本质：线性流动还是永恒当下.html" class="text-decoration-none text-dark">
                         时间的本质：线性流动还是永恒当下
                       </a>
                     </h5>
                     
-                      <p class="card-text">
+                      <p class="card-text text-muted mb-3">
                         本文探讨了时间的本质，分析了线性时间观与永恒当下的哲学争论。通过物理学、心理学和哲学的多角度分析，揭示了时间体验的复杂性，最终提出了在时间中寻找意义的生活智慧。
                       </p>
                       
-                        
-                          <small class="text-muted">
-                            2026-02-24
-                          </small>
-                          
+                        <div class="article-meta">
+                            
+                                <i class="bi bi-clock me-1"></i>
+                                2026-02-24
+                                
+                        </div>
                   </div>
-                  <div class="card-footer text-muted">
+                  <div class="card-footer text-muted bg-white border-top">
                     <a href="/category/%E5%93%B2%E5%AD%A6%E6%80%9D%E8%80%83.html"
-                      class="badge bg-primary">
+                      class="badge bg-primary me-2">
                       哲学思考
                     </a>
                     
-                      <a href="/tag/%E6%97%B6%E9%97%B4%E6%9C%AC%E8%B4%A8.html" class="badge tag-link">
+                      <a href="/tag/%E6%97%B6%E9%97%B4%E6%9C%AC%E8%B4%A8.html" class="badge tag-link me-2 mb-1">
                         时间本质
                       </a>
                       
-                      <a href="/tag/%E5%93%B2%E5%AD%A6%E6%80%9D%E8%80%83.html" class="badge tag-link">
+                      <a href="/tag/%E5%93%B2%E5%AD%A6%E6%80%9D%E8%80%83.html" class="badge tag-link me-2 mb-1">
                         哲学思考
                       </a>
                       
-                      <a href="/tag/%E7%89%A9%E7%90%86%E5%AD%A6.html" class="badge tag-link">
+                      <a href="/tag/%E7%89%A9%E7%90%86%E5%AD%A6.html" class="badge tag-link me-2 mb-1">
                         物理学
                       </a>
                       
-                      <a href="/tag/%E5%BF%83%E7%90%86%E5%AD%A6.html" class="badge tag-link">
+                      <a href="/tag/%E5%BF%83%E7%90%86%E5%AD%A6.html" class="badge tag-link me-2 mb-1">
                         心理学
                       </a>
                       
-                      <a href="/tag/%E5%AD%98%E5%9C%A8%E4%B8%BB%E4%B9%89.html" class="badge tag-link">
+                      <a href="/tag/%E5%AD%98%E5%9C%A8%E4%B8%BB%E4%B9%89.html" class="badge tag-link me-2 mb-1">
                         存在主义
                       </a>
                       
-                      <a href="/tag/%E7%9B%B8%E5%AF%B9%E8%AE%BA.html" class="badge tag-link">
+                      <a href="/tag/%E7%9B%B8%E5%AF%B9%E8%AE%BA.html" class="badge tag-link me-2 mb-1">
                         相对论
                       </a>
                       
@@ -653,52 +727,53 @@
               </div>
               
               <div class="masonry-grid-item">
-                <div class="card shadow-sm">
+                <div class="card article-card shadow-sm">
                   <div class="card-body">
-                    <h5 class="card-title">
-                      <i class="bi bi-file-earmark-text"></i>
-                      <a href="../mdhtml/幸福的本质：客观条件还是主观体验.html" class="text-decoration-none">
+                    <h5 class="card-title article-title">
+                      <i class="bi bi-file-earmark-text me-2 text-primary"></i>
+                      <a href="../mdhtml/幸福的本质：客观条件还是主观体验.html" class="text-decoration-none text-dark">
                         幸福的本质：客观条件还是主观体验
                       </a>
                     </h5>
                     
-                      <p class="card-text">
+                      <p class="card-text text-muted mb-3">
                         本文探讨了幸福的本质，分析了客观主义与主观主义的幸福观争论。通过哲学、心理学和伦理学的多角度分析，揭示了幸福现象的复杂性，最终提出了在追求幸福中寻找平衡的生活智慧。
                       </p>
                       
-                        
-                          <small class="text-muted">
-                            2026-02-24
-                          </small>
-                          
+                        <div class="article-meta">
+                            
+                                <i class="bi bi-clock me-1"></i>
+                                2026-02-24
+                                
+                        </div>
                   </div>
-                  <div class="card-footer text-muted">
+                  <div class="card-footer text-muted bg-white border-top">
                     <a href="/category/%E5%93%B2%E5%AD%A6%E6%80%9D%E8%80%83.html"
-                      class="badge bg-primary">
+                      class="badge bg-primary me-2">
                       哲学思考
                     </a>
                     
-                      <a href="/tag/%E5%B9%B8%E7%A6%8F%E6%9C%AC%E8%B4%A8.html" class="badge tag-link">
+                      <a href="/tag/%E5%B9%B8%E7%A6%8F%E6%9C%AC%E8%B4%A8.html" class="badge tag-link me-2 mb-1">
                         幸福本质
                       </a>
                       
-                      <a href="/tag/%E5%93%B2%E5%AD%A6%E6%80%9D%E8%80%83.html" class="badge tag-link">
+                      <a href="/tag/%E5%93%B2%E5%AD%A6%E6%80%9D%E8%80%83.html" class="badge tag-link me-2 mb-1">
                         哲学思考
                       </a>
                       
-                      <a href="/tag/%E4%BC%A6%E7%90%86%E5%AD%A6.html" class="badge tag-link">
+                      <a href="/tag/%E4%BC%A6%E7%90%86%E5%AD%A6.html" class="badge tag-link me-2 mb-1">
                         伦理学
                       </a>
                       
-                      <a href="/tag/%E5%BF%83%E7%90%86%E5%AD%A6.html" class="badge tag-link">
+                      <a href="/tag/%E5%BF%83%E7%90%86%E5%AD%A6.html" class="badge tag-link me-2 mb-1">
                         心理学
                       </a>
                       
-                      <a href="/tag/%E5%8A%9F%E5%88%A9%E4%B8%BB%E4%B9%89.html" class="badge tag-link">
+                      <a href="/tag/%E5%8A%9F%E5%88%A9%E4%B8%BB%E4%B9%89.html" class="badge tag-link me-2 mb-1">
                         功利主义
                       </a>
                       
-                      <a href="/tag/%E5%AD%98%E5%9C%A8%E4%B8%BB%E4%B9%89.html" class="badge tag-link">
+                      <a href="/tag/%E5%AD%98%E5%9C%A8%E4%B8%BB%E4%B9%89.html" class="badge tag-link me-2 mb-1">
                         存在主义
                       </a>
                       
@@ -707,60 +782,61 @@
               </div>
               
               <div class="masonry-grid-item">
-                <div class="card shadow-sm">
+                <div class="card article-card shadow-sm">
                   <div class="card-body">
-                    <h5 class="card-title">
-                      <i class="bi bi-file-earmark-text"></i>
-                      <a href="../mdhtml/为什么洗澡时总喜欢唱歌？.html" class="text-decoration-none">
+                    <h5 class="card-title article-title">
+                      <i class="bi bi-file-earmark-text me-2 text-primary"></i>
+                      <a href="../mdhtml/为什么洗澡时总喜欢唱歌？.html" class="text-decoration-none text-dark">
                         为什么洗澡时总喜欢唱歌？
                       </a>
                     </h5>
                     
-                      <p class="card-text">
+                      <p class="card-text text-muted mb-3">
                         探索洗澡时喜欢唱歌的科学原因，从声学环境、心理放松、大脑奖励机制等多个角度解析这一有趣的日常现象，揭示浴室为何成为我们的天然音乐厅。
                       </p>
                       
-                        
-                          <small class="text-muted">
-                            2026-02-24
-                          </small>
-                          
+                        <div class="article-meta">
+                            
+                                <i class="bi bi-clock me-1"></i>
+                                2026-02-24
+                                
+                        </div>
                   </div>
-                  <div class="card-footer text-muted">
+                  <div class="card-footer text-muted bg-white border-top">
                     <a href="/category/%E8%87%AA%E7%84%B6%E7%A7%91%E5%AD%A6.html"
-                      class="badge bg-primary">
+                      class="badge bg-primary me-2">
                       自然科学
                     </a>
                     
-                      <a href="/tag/%E5%BF%83%E7%90%86%E5%AD%A6.html" class="badge tag-link">
+                      <a href="/tag/%E5%BF%83%E7%90%86%E5%AD%A6.html" class="badge tag-link me-2 mb-1">
                         心理学
                       </a>
                       
-                      <a href="/tag/%E7%A5%9E%E7%BB%8F%E7%A7%91%E5%AD%A6.html" class="badge tag-link">
+                      <a href="/tag/%E7%A5%9E%E7%BB%8F%E7%A7%91%E5%AD%A6.html" class="badge tag-link me-2 mb-1">
                         神经科学
                       </a>
                       
-                      <a href="/tag/%E5%A4%A7%E8%84%91%E6%9C%BA%E5%88%B6.html" class="badge tag-link">
+                      <a href="/tag/%E5%A4%A7%E8%84%91%E6%9C%BA%E5%88%B6.html" class="badge tag-link me-2 mb-1">
                         大脑机制
                       </a>
                       
-                      <a href="/tag/%E4%BA%BA%E4%BD%93%E5%A5%A5%E7%A7%98.html" class="badge tag-link">
+                      <a href="/tag/%E4%BA%BA%E4%BD%93%E5%A5%A5%E7%A7%98.html" class="badge tag-link me-2 mb-1">
                         人体奥秘
                       </a>
                       
-                      <a href="/tag/%E7%94%9F%E6%B4%BB%E7%99%BE%E7%A7%91.html" class="badge tag-link">
+                      <a href="/tag/%E7%94%9F%E6%B4%BB%E7%99%BE%E7%A7%91.html" class="badge tag-link me-2 mb-1">
                         生活百科
                       </a>
                       
-                      <a href="/tag/%E8%A1%8C%E4%B8%BA%E7%A7%91%E5%AD%A6.html" class="badge tag-link">
+                      <a href="/tag/%E8%A1%8C%E4%B8%BA%E7%A7%91%E5%AD%A6.html" class="badge tag-link me-2 mb-1">
                         行为科学
                       </a>
                       
-                      <a href="/tag/%E5%A3%B0%E5%AD%A6.html" class="badge tag-link">
+                      <a href="/tag/%E5%A3%B0%E5%AD%A6.html" class="badge tag-link me-2 mb-1">
                         声学
                       </a>
                       
-                      <a href="/tag/%E5%BF%83%E7%90%86%E6%94%BE%E6%9D%BE.html" class="badge tag-link">
+                      <a href="/tag/%E5%BF%83%E7%90%86%E6%94%BE%E6%9D%BE.html" class="badge tag-link me-2 mb-1">
                         心理放松
                       </a>
                       
@@ -769,56 +845,57 @@
               </div>
               
               <div class="masonry-grid-item">
-                <div class="card shadow-sm">
+                <div class="card article-card shadow-sm">
                   <div class="card-body">
-                    <h5 class="card-title">
-                      <i class="bi bi-file-earmark-text"></i>
-                      <a href="../mdhtml/不确定性的心理学：如何在不确定世界中保持掌控感.html" class="text-decoration-none">
+                    <h5 class="card-title article-title">
+                      <i class="bi bi-file-earmark-text me-2 text-primary"></i>
+                      <a href="../mdhtml/不确定性的心理学：如何在不确定世界中保持掌控感.html" class="text-decoration-none text-dark">
                         不确定性的心理学：如何在不确定世界中保持掌控感
                       </a>
                     </h5>
                     
-                      <p class="card-text">
+                      <p class="card-text text-muted mb-3">
                         从心理学角度探讨不确定性的本质和影响，分析人们对不确定性的认知和情绪反应，提供实用的策略来管理不确定性带来的焦虑，帮助读者在不确定的世界中建立内在的掌控感和适应能力。
                       </p>
                       
-                        
-                          <small class="text-muted">
-                            2026-02-24
-                          </small>
-                          
+                        <div class="article-meta">
+                            
+                                <i class="bi bi-clock me-1"></i>
+                                2026-02-24
+                                
+                        </div>
                   </div>
-                  <div class="card-footer text-muted">
+                  <div class="card-footer text-muted bg-white border-top">
                     <a href="/category/%E4%BA%BA%E7%94%9F%E7%AE%A1%E7%90%86.html"
-                      class="badge bg-primary">
+                      class="badge bg-primary me-2">
                       人生管理
                     </a>
                     
-                      <a href="/tag/%E4%B8%8D%E7%A1%AE%E5%AE%9A%E6%80%A7.html" class="badge tag-link">
+                      <a href="/tag/%E4%B8%8D%E7%A1%AE%E5%AE%9A%E6%80%A7.html" class="badge tag-link me-2 mb-1">
                         不确定性
                       </a>
                       
-                      <a href="/tag/%E5%BF%83%E7%90%86%E5%AD%A6.html" class="badge tag-link">
+                      <a href="/tag/%E5%BF%83%E7%90%86%E5%AD%A6.html" class="badge tag-link me-2 mb-1">
                         心理学
                       </a>
                       
-                      <a href="/tag/%E6%8E%8C%E6%8E%A7%E6%84%9F.html" class="badge tag-link">
+                      <a href="/tag/%E6%8E%8C%E6%8E%A7%E6%84%9F.html" class="badge tag-link me-2 mb-1">
                         掌控感
                       </a>
                       
-                      <a href="/tag/%E7%84%A6%E8%99%91%E7%AE%A1%E7%90%86.html" class="badge tag-link">
+                      <a href="/tag/%E7%84%A6%E8%99%91%E7%AE%A1%E7%90%86.html" class="badge tag-link me-2 mb-1">
                         焦虑管理
                       </a>
                       
-                      <a href="/tag/%E9%80%82%E5%BA%94%E8%83%BD%E5%8A%9B.html" class="badge tag-link">
+                      <a href="/tag/%E9%80%82%E5%BA%94%E8%83%BD%E5%8A%9B.html" class="badge tag-link me-2 mb-1">
                         适应能力
                       </a>
                       
-                      <a href="/tag/%E5%BF%83%E7%90%86%E9%9F%A7%E6%80%A7.html" class="badge tag-link">
+                      <a href="/tag/%E5%BF%83%E7%90%86%E9%9F%A7%E6%80%A7.html" class="badge tag-link me-2 mb-1">
                         心理韧性
                       </a>
                       
-                      <a href="/tag/%E4%BA%BA%E7%94%9F%E5%86%B3%E7%AD%96.html" class="badge tag-link">
+                      <a href="/tag/%E4%BA%BA%E7%94%9F%E5%86%B3%E7%AD%96.html" class="badge tag-link me-2 mb-1">
                         人生决策
                       </a>
                       
@@ -827,48 +904,49 @@
               </div>
               
               <div class="masonry-grid-item">
-                <div class="card shadow-sm">
+                <div class="card article-card shadow-sm">
                   <div class="card-body">
-                    <h5 class="card-title">
-                      <i class="bi bi-file-earmark-text"></i>
-                      <a href="../mdhtml/善与恶的界限在哪里？.html" class="text-decoration-none">
+                    <h5 class="card-title article-title">
+                      <i class="bi bi-file-earmark-text me-2 text-primary"></i>
+                      <a href="../mdhtml/善与恶的界限在哪里？.html" class="text-decoration-none text-dark">
                         善与恶的界限在哪里？
                       </a>
                     </h5>
                     
-                      <p class="card-text">
+                      <p class="card-text text-muted mb-3">
                         探讨善与恶的界限，从远古时期的道德萌芽到现代科技带来的伦理挑战，分析不同文明对善恶标准的影响及哲学思考。文章通过考古发现、哲学论述以及现代实验揭示了善恶既是客观存在也是主观观测的结果，并提出在人工智能时代，理解善恶需要超越传统的黑白思维框架，寻找动态平衡的生存智慧。善恶边界如同指引文明方向的星辰，在人性探索中持续演变。
                       </p>
                       
-                        
-                          <small class="text-muted">
-                            2026-02-11
-                          </small>
-                          
+                        <div class="article-meta">
+                            
+                                <i class="bi bi-clock me-1"></i>
+                                2026-02-11
+                                
+                        </div>
                   </div>
-                  <div class="card-footer text-muted">
+                  <div class="card-footer text-muted bg-white border-top">
                     <a href="/category/%E7%A4%BE%E4%BC%9A%E6%8E%A2%E7%A9%B6.html"
-                      class="badge bg-primary">
+                      class="badge bg-primary me-2">
                       社会探究
                     </a>
                     
-                      <a href="/tag/%E9%81%93%E5%BE%B7%E5%93%B2%E5%AD%A6.html" class="badge tag-link">
+                      <a href="/tag/%E9%81%93%E5%BE%B7%E5%93%B2%E5%AD%A6.html" class="badge tag-link me-2 mb-1">
                         道德哲学
                       </a>
                       
-                      <a href="/tag/%E5%96%84%E6%81%B6%E6%8E%A2%E8%AE%A8.html" class="badge tag-link">
+                      <a href="/tag/%E5%96%84%E6%81%B6%E6%8E%A2%E8%AE%A8.html" class="badge tag-link me-2 mb-1">
                         善恶探讨
                       </a>
                       
-                      <a href="/tag/%E6%96%87%E6%98%8E%E5%AF%B9%E6%AF%94.html" class="badge tag-link">
+                      <a href="/tag/%E6%96%87%E6%98%8E%E5%AF%B9%E6%AF%94.html" class="badge tag-link me-2 mb-1">
                         文明对比
                       </a>
                       
-                      <a href="/tag/%E7%A7%91%E6%8A%80%E4%BC%A6%E7%90%86.html" class="badge tag-link">
+                      <a href="/tag/%E7%A7%91%E6%8A%80%E4%BC%A6%E7%90%86.html" class="badge tag-link me-2 mb-1">
                         科技伦理
                       </a>
                       
-                      <a href="/tag/%E5%BF%83%E7%90%86%E5%AD%A6.html" class="badge tag-link">
+                      <a href="/tag/%E5%BF%83%E7%90%86%E5%AD%A6.html" class="badge tag-link me-2 mb-1">
                         心理学
                       </a>
                       
@@ -878,8 +956,8 @@
               
           </div>
 
-          <div class="mt-4 text-center">
-            <a href="标签列表.html" class="btn btn-outline-primary"><i class="bi bi-arrow-left"></i> 返回标签列表</a>
+          <div class="mt-6 text-center">
+            <a href="标签列表.html" class="btn btn-outline-primary back-button"><i class="bi bi-arrow-left me-2"></i> 返回标签列表</a>
           </div>
         </div>
       </div>
@@ -903,7 +981,7 @@
             itemSelector: '.masonry-grid-item',
             columnWidth: '.masonry-grid-item',
             percentPosition: true,
-            gutter: 10 // 可选，添加卡片间的间距
+            gutter: 15 // 增加间距，提升视觉效果
           });
         });
       </script>

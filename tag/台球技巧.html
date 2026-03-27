@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
 
 <head>
   <meta charset="UTF-8">
@@ -9,7 +9,7 @@
   <meta name="description" content="无人自助站的【台球技巧】的标签列表页面，汇集了关于【台球技巧】标签相关的文章和资讯，方便您快速找到感兴趣的内容。">
   <meta name="keywords" content="无人自助站,台球技巧">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>标签文章列表</title>
+  <title>台球技巧标签 - 无人自助站</title>
 
   <link rel="icon" href="../logo.svg" type="image/svg+xml">
   <link rel="stylesheet" href="../css/style.css">
@@ -27,6 +27,62 @@
   <!-- 引入Masonry -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/masonry/4.2.2/masonry.pkgd.min.js"></script>
 
+  <style>
+        .tag-header {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            color: white;
+            padding: 2rem;
+            border-radius: 8px;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        .tag-title {
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+        .article-card {
+            transition: all 0.3s ease;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        .article-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+        }
+        .article-title {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            transition: color 0.3s ease;
+        }
+        .article-title:hover {
+            color: #0d6efd;
+        }
+        .article-meta {
+            font-size: 0.85rem;
+            color: #6c757d;
+        }
+        .tag-link {
+            background-color: #e9ecef;
+            color: #495057;
+            transition: all 0.2s ease;
+        }
+        .tag-link:hover {
+            background-color: #dee2e6;
+            color: #212529;
+        }
+        .back-button {
+            transition: all 0.3s ease;
+        }
+        .back-button:hover {
+            transform: translateX(-3px);
+        }
+        .article-count {
+            font-size: 0.9rem;
+            opacity: 0.9;
+        }
+    </style>
 </head>
 
 <body>
@@ -80,7 +136,7 @@
     <main class="container-fluid mt-4">
       <div class="row">
         <div class="col-lg-8 col-md-12 mx-auto">
-          <nav aria-label="breadcrumb">
+          <nav aria-label="breadcrumb" class="mb-4">
             <ol class="breadcrumb">
               <li class="breadcrumb-item"><a href="/html/index.html">首页</a></li>
               <li class="breadcrumb-item"><a href="标签列表.html">标签列表</a></li>
@@ -89,50 +145,60 @@
               </li>
             </ol>
           </nav>
-          <h1 style="font-size: 1.5em; margin: 0.5em 0;">
-            台球技巧标签的文章和资讯
-        </h1>
+          
+          <!-- 标签头部 -->
+          <div class="tag-header">
+              <h1 class="tag-title">
+                  <i class="bi bi-tags me-2"></i>
+                  台球技巧
+              </h1>
+              <p class="article-count">
+                  共 6 篇文章
+              </p>
+          </div>
+          
           <div class="masonry-grid">
             
               <div class="masonry-grid-item">
-                <div class="card shadow-sm">
+                <div class="card article-card shadow-sm">
                   <div class="card-body">
-                    <h5 class="card-title">
-                      <i class="bi bi-file-earmark-text"></i>
-                      <a href="../mdhtml/台球高级技巧分享.html" class="text-decoration-none">
+                    <h5 class="card-title article-title">
+                      <i class="bi bi-file-earmark-text me-2 text-primary"></i>
+                      <a href="../mdhtml/台球高级技巧分享.html" class="text-decoration-none text-dark">
                         台球高级技巧分享
                       </a>
                     </h5>
                     
-                      <p class="card-text">
+                      <p class="card-text text-muted mb-3">
                         文章详细介绍了中式八球的高级技巧，包括精确瞄准、力度控制、高杆、低杆、侧旋等基础与进阶技巧，以及攻防结合、心理战术等实战策略，旨在帮助玩家提升技术水平和比赛表现。
                       </p>
                       
-                        
-                          <small class="text-muted">
-                            2026-02-27
-                          </small>
-                          
+                        <div class="article-meta">
+                            
+                                <i class="bi bi-clock me-1"></i>
+                                2026-02-27
+                                
+                        </div>
                   </div>
-                  <div class="card-footer text-muted">
+                  <div class="card-footer text-muted bg-white border-top">
                     <a href="/category/%E5%8F%B0%E7%90%83%E5%A4%A9%E5%9C%B0.html"
-                      class="badge bg-primary">
+                      class="badge bg-primary me-2">
                       台球天地
                     </a>
                     
-                      <a href="/tag/%E5%8F%B0%E7%90%83.html" class="badge tag-link">
+                      <a href="/tag/%E5%8F%B0%E7%90%83.html" class="badge tag-link me-2 mb-1">
                         台球
                       </a>
                       
-                      <a href="/tag/%E5%8F%B0%E7%90%83%E6%8A%80%E5%B7%A7.html" class="badge tag-link">
+                      <a href="/tag/%E5%8F%B0%E7%90%83%E6%8A%80%E5%B7%A7.html" class="badge tag-link me-2 mb-1">
                         台球技巧
                       </a>
                       
-                      <a href="/tag/%E6%88%98%E6%9C%AF%E5%BA%94%E7%94%A8.html" class="badge tag-link">
+                      <a href="/tag/%E6%88%98%E6%9C%AF%E5%BA%94%E7%94%A8.html" class="badge tag-link me-2 mb-1">
                         战术应用
                       </a>
                       
-                      <a href="/tag/%E6%8A%80%E5%B7%A7%E5%AE%9E%E8%B7%B5.html" class="badge tag-link">
+                      <a href="/tag/%E6%8A%80%E5%B7%A7%E5%AE%9E%E8%B7%B5.html" class="badge tag-link me-2 mb-1">
                         技巧实践
                       </a>
                       
@@ -141,60 +207,61 @@
               </div>
               
               <div class="masonry-grid-item">
-                <div class="card shadow-sm">
+                <div class="card article-card shadow-sm">
                   <div class="card-body">
-                    <h5 class="card-title">
-                      <i class="bi bi-file-earmark-text"></i>
-                      <a href="../mdhtml/台球初学者指南.html" class="text-decoration-none">
+                    <h5 class="card-title article-title">
+                      <i class="bi bi-file-earmark-text me-2 text-primary"></i>
+                      <a href="../mdhtml/台球初学者指南.html" class="text-decoration-none text-dark">
                         台球初学者指南
                       </a>
                     </h5>
                     
-                      <p class="card-text">
+                      <p class="card-text text-muted mb-3">
                         本指南为台球初学者提供了全面的入门知识，包括基本技巧如握杆与站姿、瞄球与击球的方法，以及不同杆法的介绍。此外，还介绍了几种战术运用方式，如直接击球、翻袋和解球等，并给出了练习和比赛时应注意的事项。通过阅读本文，初学者可以学习到如何稳定地控制球杆，掌握不同的击球技巧，理解台球的基本战术，从而更快地上手这项优雅而策略性的运动。适合希望快速入门并享受台球乐趣的新手玩家。耐心练习和对规则的理解是成功的关键。
                       </p>
                       
-                        
-                          <small class="text-muted">
-                            2026-02-27
-                          </small>
-                          
+                        <div class="article-meta">
+                            
+                                <i class="bi bi-clock me-1"></i>
+                                2026-02-27
+                                
+                        </div>
                   </div>
-                  <div class="card-footer text-muted">
+                  <div class="card-footer text-muted bg-white border-top">
                     <a href="/category/%E5%8F%B0%E7%90%83%E5%A4%A9%E5%9C%B0.html"
-                      class="badge bg-primary">
+                      class="badge bg-primary me-2">
                       台球天地
                     </a>
                     
-                      <a href="/tag/%E5%8F%B0%E7%90%83.html" class="badge tag-link">
+                      <a href="/tag/%E5%8F%B0%E7%90%83.html" class="badge tag-link me-2 mb-1">
                         台球
                       </a>
                       
-                      <a href="/tag/%E5%8F%B0%E7%90%83%E6%8A%80%E5%B7%A7.html" class="badge tag-link">
+                      <a href="/tag/%E5%8F%B0%E7%90%83%E6%8A%80%E5%B7%A7.html" class="badge tag-link me-2 mb-1">
                         台球技巧
                       </a>
                       
-                      <a href="/tag/%E5%8F%B0%E7%90%83%E6%95%99%E5%AD%A6.html" class="badge tag-link">
+                      <a href="/tag/%E5%8F%B0%E7%90%83%E6%95%99%E5%AD%A6.html" class="badge tag-link me-2 mb-1">
                         台球教学
                       </a>
                       
-                      <a href="/tag/%E6%8F%A1%E6%9D%86%E4%B8%8E%E7%AB%99%E5%A7%BF.html" class="badge tag-link">
+                      <a href="/tag/%E6%8F%A1%E6%9D%86%E4%B8%8E%E7%AB%99%E5%A7%BF.html" class="badge tag-link me-2 mb-1">
                         握杆与站姿
                       </a>
                       
-                      <a href="/tag/%E7%9E%84%E7%90%83%E4%B8%8E%E5%87%BB%E7%90%83.html" class="badge tag-link">
+                      <a href="/tag/%E7%9E%84%E7%90%83%E4%B8%8E%E5%87%BB%E7%90%83.html" class="badge tag-link me-2 mb-1">
                         瞄球与击球
                       </a>
                       
-                      <a href="/tag/%E6%9D%86%E6%B3%95%E4%BB%8B%E7%BB%8D.html" class="badge tag-link">
+                      <a href="/tag/%E6%9D%86%E6%B3%95%E4%BB%8B%E7%BB%8D.html" class="badge tag-link me-2 mb-1">
                         杆法介绍
                       </a>
                       
-                      <a href="/tag/%E6%88%98%E6%9C%AF%E8%BF%90%E7%94%A8.html" class="badge tag-link">
+                      <a href="/tag/%E6%88%98%E6%9C%AF%E8%BF%90%E7%94%A8.html" class="badge tag-link me-2 mb-1">
                         战术运用
                       </a>
                       
-                      <a href="/tag/%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9.html" class="badge tag-link">
+                      <a href="/tag/%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9.html" class="badge tag-link me-2 mb-1">
                         注意事项
                       </a>
                       
@@ -203,84 +270,85 @@
               </div>
               
               <div class="masonry-grid-item">
-                <div class="card shadow-sm">
+                <div class="card article-card shadow-sm">
                   <div class="card-body">
-                    <h5 class="card-title">
-                      <i class="bi bi-file-earmark-text"></i>
-                      <a href="../mdhtml/中式八球台球运动简介.html" class="text-decoration-none">
+                    <h5 class="card-title article-title">
+                      <i class="bi bi-file-earmark-text me-2 text-primary"></i>
+                      <a href="../mdhtml/中式八球台球运动简介.html" class="text-decoration-none text-dark">
                         中式八球台球运动简介（2026年最新版）
                       </a>
                     </h5>
                     
-                      <p class="card-text">
+                      <p class="card-text text-muted mb-3">
                         2026年最新中式八球台球运动简介，详细介绍了中式八球的起源、发展、设备与场地要求、基本规则、技巧与策略及其赛事组织情况，展示了这项运动的魅力与活力，适合各类台球爱好者了解和参与。
                       </p>
                       
-                        
-                          <small class="text-muted">
-                            2026-02-25
-                          </small>
-                          
+                        <div class="article-meta">
+                            
+                                <i class="bi bi-clock me-1"></i>
+                                2026-02-25
+                                
+                        </div>
                   </div>
-                  <div class="card-footer text-muted">
+                  <div class="card-footer text-muted bg-white border-top">
                     <a href="/category/%E5%8F%B0%E7%90%83%E5%A4%A9%E5%9C%B0.html"
-                      class="badge bg-primary">
+                      class="badge bg-primary me-2">
                       台球天地
                     </a>
                     
-                      <a href="/tag/%E4%B8%AD%E5%BC%8F%E5%85%AB%E7%90%83.html" class="badge tag-link">
+                      <a href="/tag/%E4%B8%AD%E5%BC%8F%E5%85%AB%E7%90%83.html" class="badge tag-link me-2 mb-1">
                         中式八球
                       </a>
                       
-                      <a href="/tag/%E5%8F%B0%E7%90%83%E6%96%87%E5%8C%96.html" class="badge tag-link">
+                      <a href="/tag/%E5%8F%B0%E7%90%83%E6%96%87%E5%8C%96.html" class="badge tag-link me-2 mb-1">
                         台球文化
                       </a>
                       
-                      <a href="/tag/%E5%9F%BA%E6%9C%AC%E8%A7%84%E5%88%99.html" class="badge tag-link">
+                      <a href="/tag/%E5%9F%BA%E6%9C%AC%E8%A7%84%E5%88%99.html" class="badge tag-link me-2 mb-1">
                         基本规则
                       </a>
                       
-                      <a href="/tag/%E5%87%BB%E7%90%83%E9%A1%BA%E5%BA%8F.html" class="badge tag-link">
+                      <a href="/tag/%E5%87%BB%E7%90%83%E9%A1%BA%E5%BA%8F.html" class="badge tag-link me-2 mb-1">
                         击球顺序
                       </a>
                       
-                      <a href="/tag/%E6%8A%80%E5%B7%A7%E4%B8%8E%E7%AD%96%E7%95%A5.html" class="badge tag-link">
+                      <a href="/tag/%E6%8A%80%E5%B7%A7%E4%B8%8E%E7%AD%96%E7%95%A5.html" class="badge tag-link me-2 mb-1">
                         技巧与策略
                       </a>
                       
-                      <a href="/tag/2026%E5%B9%B4%E5%8F%B0%E7%90%83.html" class="badge tag-link">
+                      <a href="/tag/2026%E5%B9%B4%E5%8F%B0%E7%90%83.html" class="badge tag-link me-2 mb-1">
                         2026年台球
                       </a>
                       
-                      <a href="/tag/%E5%8F%B0%E7%90%83%E8%BF%90%E5%8A%A8.html" class="badge tag-link">
+                      <a href="/tag/%E5%8F%B0%E7%90%83%E8%BF%90%E5%8A%A8.html" class="badge tag-link me-2 mb-1">
                         台球运动
                       </a>
                       
-                      <a href="/tag/%E5%8F%B0%E7%90%83%E8%B5%B7%E6%BA%90.html" class="badge tag-link">
+                      <a href="/tag/%E5%8F%B0%E7%90%83%E8%B5%B7%E6%BA%90.html" class="badge tag-link me-2 mb-1">
                         台球起源
                       </a>
                       
-                      <a href="/tag/%E5%8F%B0%E7%90%83%E8%AE%BE%E5%A4%87.html" class="badge tag-link">
+                      <a href="/tag/%E5%8F%B0%E7%90%83%E8%AE%BE%E5%A4%87.html" class="badge tag-link me-2 mb-1">
                         台球设备
                       </a>
                       
-                      <a href="/tag/%E5%8F%B0%E7%90%83%E8%B5%9B%E4%BA%8B.html" class="badge tag-link">
+                      <a href="/tag/%E5%8F%B0%E7%90%83%E8%B5%9B%E4%BA%8B.html" class="badge tag-link me-2 mb-1">
                         台球赛事
                       </a>
                       
-                      <a href="/tag/%E5%8F%B0%E7%90%83%E6%8A%80%E5%B7%A7.html" class="badge tag-link">
+                      <a href="/tag/%E5%8F%B0%E7%90%83%E6%8A%80%E5%B7%A7.html" class="badge tag-link me-2 mb-1">
                         台球技巧
                       </a>
                       
-                      <a href="/tag/%E5%8F%B0%E7%90%83%E8%A7%84%E5%88%99.html" class="badge tag-link">
+                      <a href="/tag/%E5%8F%B0%E7%90%83%E8%A7%84%E5%88%99.html" class="badge tag-link me-2 mb-1">
                         台球规则
                       </a>
                       
-                      <a href="/tag/%E4%B8%AD%E5%BC%8F%E5%8F%B0%E7%90%83%E6%96%87%E5%8C%96.html" class="badge tag-link">
+                      <a href="/tag/%E4%B8%AD%E5%BC%8F%E5%8F%B0%E7%90%83%E6%96%87%E5%8C%96.html" class="badge tag-link me-2 mb-1">
                         中式台球文化
                       </a>
                       
-                      <a href="/tag/%E5%8F%B0%E7%90%83%E8%BF%90%E5%8A%A8%E5%8F%91%E5%B1%95.html" class="badge tag-link">
+                      <a href="/tag/%E5%8F%B0%E7%90%83%E8%BF%90%E5%8A%A8%E5%8F%91%E5%B1%95.html" class="badge tag-link me-2 mb-1">
                         台球运动发展
                       </a>
                       
@@ -289,88 +357,89 @@
               </div>
               
               <div class="masonry-grid-item">
-                <div class="card shadow-sm">
+                <div class="card article-card shadow-sm">
                   <div class="card-body">
-                    <h5 class="card-title">
-                      <i class="bi bi-file-earmark-text"></i>
-                      <a href="../mdhtml/中式八球台球技巧进阶指南：从入门到精通.html" class="text-decoration-none">
+                    <h5 class="card-title article-title">
+                      <i class="bi bi-file-earmark-text me-2 text-primary"></i>
+                      <a href="../mdhtml/中式八球台球技巧进阶指南：从入门到精通.html" class="text-decoration-none text-dark">
                         中式八球台球技巧进阶指南：从入门到精通（2026年版）
                       </a>
                     </h5>
                     
-                      <p class="card-text">
+                      <p class="card-text text-muted mb-3">
                         2026年最新中式八球台球技巧进阶指南，从入门到精通的全面教程，包含基本击球技巧、走位策略、防守技巧和比赛战术，帮助你快速提升台球水平，成为台球高手。
                       </p>
                       
-                        
-                          <small class="text-muted">
-                            2026-02-25
-                          </small>
-                          
+                        <div class="article-meta">
+                            
+                                <i class="bi bi-clock me-1"></i>
+                                2026-02-25
+                                
+                        </div>
                   </div>
-                  <div class="card-footer text-muted">
+                  <div class="card-footer text-muted bg-white border-top">
                     <a href="/category/%E5%8F%B0%E7%90%83%E5%A4%A9%E5%9C%B0.html"
-                      class="badge bg-primary">
+                      class="badge bg-primary me-2">
                       台球天地
                     </a>
                     
-                      <a href="/tag/%E4%B8%AD%E5%BC%8F%E5%85%AB%E7%90%83.html" class="badge tag-link">
+                      <a href="/tag/%E4%B8%AD%E5%BC%8F%E5%85%AB%E7%90%83.html" class="badge tag-link me-2 mb-1">
                         中式八球
                       </a>
                       
-                      <a href="/tag/%E5%8F%B0%E7%90%83%E6%8A%80%E5%B7%A7.html" class="badge tag-link">
+                      <a href="/tag/%E5%8F%B0%E7%90%83%E6%8A%80%E5%B7%A7.html" class="badge tag-link me-2 mb-1">
                         台球技巧
                       </a>
                       
-                      <a href="/tag/%E5%8F%B0%E7%90%83%E8%BF%9B%E9%98%B6.html" class="badge tag-link">
+                      <a href="/tag/%E5%8F%B0%E7%90%83%E8%BF%9B%E9%98%B6.html" class="badge tag-link me-2 mb-1">
                         台球进阶
                       </a>
                       
-                      <a href="/tag/%E5%87%BB%E7%90%83%E6%8A%80%E5%B7%A7.html" class="badge tag-link">
+                      <a href="/tag/%E5%87%BB%E7%90%83%E6%8A%80%E5%B7%A7.html" class="badge tag-link me-2 mb-1">
                         击球技巧
                       </a>
                       
-                      <a href="/tag/%E8%B5%B0%E4%BD%8D%E6%8A%80%E5%B7%A7.html" class="badge tag-link">
+                      <a href="/tag/%E8%B5%B0%E4%BD%8D%E6%8A%80%E5%B7%A7.html" class="badge tag-link me-2 mb-1">
                         走位技巧
                       </a>
                       
-                      <a href="/tag/%E9%98%B2%E5%AE%88%E7%AD%96%E7%95%A5.html" class="badge tag-link">
+                      <a href="/tag/%E9%98%B2%E5%AE%88%E7%AD%96%E7%95%A5.html" class="badge tag-link me-2 mb-1">
                         防守策略
                       </a>
                       
-                      <a href="/tag/%E8%BF%9B%E6%94%BB%E6%8A%80%E5%B7%A7.html" class="badge tag-link">
+                      <a href="/tag/%E8%BF%9B%E6%94%BB%E6%8A%80%E5%B7%A7.html" class="badge tag-link me-2 mb-1">
                         进攻技巧
                       </a>
                       
-                      <a href="/tag/%E5%8F%B0%E7%90%83%E8%AE%AD%E7%BB%83.html" class="badge tag-link">
+                      <a href="/tag/%E5%8F%B0%E7%90%83%E8%AE%AD%E7%BB%83.html" class="badge tag-link me-2 mb-1">
                         台球训练
                       </a>
                       
-                      <a href="/tag/%E5%8F%B0%E7%90%83%E6%AF%94%E8%B5%9B.html" class="badge tag-link">
+                      <a href="/tag/%E5%8F%B0%E7%90%83%E6%AF%94%E8%B5%9B.html" class="badge tag-link me-2 mb-1">
                         台球比赛
                       </a>
                       
-                      <a href="/tag/2026%E5%B9%B4%E5%8F%B0%E7%90%83%E6%8A%80%E5%B7%A7.html" class="badge tag-link">
+                      <a href="/tag/2026%E5%B9%B4%E5%8F%B0%E7%90%83%E6%8A%80%E5%B7%A7.html" class="badge tag-link me-2 mb-1">
                         2026年台球技巧
                       </a>
                       
-                      <a href="/tag/%E5%8F%B0%E7%90%83%E5%85%A5%E9%97%A8.html" class="badge tag-link">
+                      <a href="/tag/%E5%8F%B0%E7%90%83%E5%85%A5%E9%97%A8.html" class="badge tag-link me-2 mb-1">
                         台球入门
                       </a>
                       
-                      <a href="/tag/%E5%8F%B0%E7%90%83%E7%B2%BE%E9%80%9A.html" class="badge tag-link">
+                      <a href="/tag/%E5%8F%B0%E7%90%83%E7%B2%BE%E9%80%9A.html" class="badge tag-link me-2 mb-1">
                         台球精通
                       </a>
                       
-                      <a href="/tag/%E5%8F%B0%E7%90%83%E6%8A%80%E6%9C%AF.html" class="badge tag-link">
+                      <a href="/tag/%E5%8F%B0%E7%90%83%E6%8A%80%E6%9C%AF.html" class="badge tag-link me-2 mb-1">
                         台球技术
                       </a>
                       
-                      <a href="/tag/%E5%8F%B0%E7%90%83%E6%88%98%E6%9C%AF.html" class="badge tag-link">
+                      <a href="/tag/%E5%8F%B0%E7%90%83%E6%88%98%E6%9C%AF.html" class="badge tag-link me-2 mb-1">
                         台球战术
                       </a>
                       
-                      <a href="/tag/%E5%8F%B0%E7%90%83%E7%BB%83%E4%B9%A0%E6%96%B9%E6%B3%95.html" class="badge tag-link">
+                      <a href="/tag/%E5%8F%B0%E7%90%83%E7%BB%83%E4%B9%A0%E6%96%B9%E6%B3%95.html" class="badge tag-link me-2 mb-1">
                         台球练习方法
                       </a>
                       
@@ -379,96 +448,97 @@
               </div>
               
               <div class="masonry-grid-item">
-                <div class="card shadow-sm">
+                <div class="card article-card shadow-sm">
                   <div class="card-body">
-                    <h5 class="card-title">
-                      <i class="bi bi-file-earmark-text"></i>
-                      <a href="../mdhtml/中式八球台球规则详解.html" class="text-decoration-none">
+                    <h5 class="card-title article-title">
+                      <i class="bi bi-file-earmark-text me-2 text-primary"></i>
+                      <a href="../mdhtml/中式八球台球规则详解.html" class="text-decoration-none text-dark">
                         中式八球台球规则详解：2026年最新比赛规则、器材标准与犯规处罚
                       </a>
                     </h5>
                     
-                      <p class="card-text">
+                      <p class="card-text text-muted mb-3">
                         2026年最新中式八球台球规则详解，包含比赛器材标准、摆球规则、开球要求、击球顺序、获胜条件、犯规处理与处罚机制等完整内容，为台球爱好者提供全面的规则指南，帮助您快速掌握中式八球比赛规则。
                       </p>
                       
-                        
-                          <small class="text-muted">
-                            2026-02-25
-                          </small>
-                          
+                        <div class="article-meta">
+                            
+                                <i class="bi bi-clock me-1"></i>
+                                2026-02-25
+                                
+                        </div>
                   </div>
-                  <div class="card-footer text-muted">
+                  <div class="card-footer text-muted bg-white border-top">
                     <a href="/category/%E5%8F%B0%E7%90%83%E5%A4%A9%E5%9C%B0.html"
-                      class="badge bg-primary">
+                      class="badge bg-primary me-2">
                       台球天地
                     </a>
                     
-                      <a href="/tag/%E4%B8%AD%E5%BC%8F%E5%85%AB%E7%90%83.html" class="badge tag-link">
+                      <a href="/tag/%E4%B8%AD%E5%BC%8F%E5%85%AB%E7%90%83.html" class="badge tag-link me-2 mb-1">
                         中式八球
                       </a>
                       
-                      <a href="/tag/%E5%8F%B0%E7%90%83%E8%A7%84%E5%88%99.html" class="badge tag-link">
+                      <a href="/tag/%E5%8F%B0%E7%90%83%E8%A7%84%E5%88%99.html" class="badge tag-link me-2 mb-1">
                         台球规则
                       </a>
                       
-                      <a href="/tag/%E6%AF%94%E8%B5%9B%E5%99%A8%E6%9D%90.html" class="badge tag-link">
+                      <a href="/tag/%E6%AF%94%E8%B5%9B%E5%99%A8%E6%9D%90.html" class="badge tag-link me-2 mb-1">
                         比赛器材
                       </a>
                       
-                      <a href="/tag/%E6%91%86%E7%90%83%E8%A7%84%E5%88%99.html" class="badge tag-link">
+                      <a href="/tag/%E6%91%86%E7%90%83%E8%A7%84%E5%88%99.html" class="badge tag-link me-2 mb-1">
                         摆球规则
                       </a>
                       
-                      <a href="/tag/%E5%BC%80%E7%90%83%E8%A6%81%E6%B1%82.html" class="badge tag-link">
+                      <a href="/tag/%E5%BC%80%E7%90%83%E8%A6%81%E6%B1%82.html" class="badge tag-link me-2 mb-1">
                         开球要求
                       </a>
                       
-                      <a href="/tag/%E5%87%BB%E7%90%83%E9%A1%BA%E5%BA%8F.html" class="badge tag-link">
+                      <a href="/tag/%E5%87%BB%E7%90%83%E9%A1%BA%E5%BA%8F.html" class="badge tag-link me-2 mb-1">
                         击球顺序
                       </a>
                       
-                      <a href="/tag/%E7%8A%AF%E8%A7%84%E5%A4%84%E7%BD%9A.html" class="badge tag-link">
+                      <a href="/tag/%E7%8A%AF%E8%A7%84%E5%A4%84%E7%BD%9A.html" class="badge tag-link me-2 mb-1">
                         犯规处罚
                       </a>
                       
-                      <a href="/tag/%E8%8E%B7%E8%83%9C%E6%9D%A1%E4%BB%B6.html" class="badge tag-link">
+                      <a href="/tag/%E8%8E%B7%E8%83%9C%E6%9D%A1%E4%BB%B6.html" class="badge tag-link me-2 mb-1">
                         获胜条件
                       </a>
                       
-                      <a href="/tag/%E5%8F%B0%E7%90%83%E6%8A%80%E5%B7%A7.html" class="badge tag-link">
+                      <a href="/tag/%E5%8F%B0%E7%90%83%E6%8A%80%E5%B7%A7.html" class="badge tag-link me-2 mb-1">
                         台球技巧
                       </a>
                       
-                      <a href="/tag/%E5%8F%B0%E7%90%83%E6%AF%94%E8%B5%9B.html" class="badge tag-link">
+                      <a href="/tag/%E5%8F%B0%E7%90%83%E6%AF%94%E8%B5%9B.html" class="badge tag-link me-2 mb-1">
                         台球比赛
                       </a>
                       
-                      <a href="/tag/%E4%B8%AD%E5%BC%8F%E5%8F%B0%E7%90%83.html" class="badge tag-link">
+                      <a href="/tag/%E4%B8%AD%E5%BC%8F%E5%8F%B0%E7%90%83.html" class="badge tag-link me-2 mb-1">
                         中式台球
                       </a>
                       
-                      <a href="/tag/%E5%8F%B0%E7%90%83%E8%A7%84%E5%88%99%E8%AF%A6%E8%A7%A3.html" class="badge tag-link">
+                      <a href="/tag/%E5%8F%B0%E7%90%83%E8%A7%84%E5%88%99%E8%AF%A6%E8%A7%A3.html" class="badge tag-link me-2 mb-1">
                         台球规则详解
                       </a>
                       
-                      <a href="/tag/2026%E5%B9%B4%E5%8F%B0%E7%90%83%E8%A7%84%E5%88%99.html" class="badge tag-link">
+                      <a href="/tag/2026%E5%B9%B4%E5%8F%B0%E7%90%83%E8%A7%84%E5%88%99.html" class="badge tag-link me-2 mb-1">
                         2026年台球规则
                       </a>
                       
-                      <a href="/tag/%E5%8F%B0%E7%90%83%E6%AF%94%E8%B5%9B%E8%A7%84%E5%88%99.html" class="badge tag-link">
+                      <a href="/tag/%E5%8F%B0%E7%90%83%E6%AF%94%E8%B5%9B%E8%A7%84%E5%88%99.html" class="badge tag-link me-2 mb-1">
                         台球比赛规则
                       </a>
                       
-                      <a href="/tag/%E5%8F%B0%E7%90%83%E5%99%A8%E6%9D%90%E6%A0%87%E5%87%86.html" class="badge tag-link">
+                      <a href="/tag/%E5%8F%B0%E7%90%83%E5%99%A8%E6%9D%90%E6%A0%87%E5%87%86.html" class="badge tag-link me-2 mb-1">
                         台球器材标准
                       </a>
                       
-                      <a href="/tag/%E4%B8%AD%E5%BC%8F%E5%85%AB%E7%90%83%E8%A7%84%E5%88%99.html" class="badge tag-link">
+                      <a href="/tag/%E4%B8%AD%E5%BC%8F%E5%85%AB%E7%90%83%E8%A7%84%E5%88%99.html" class="badge tag-link me-2 mb-1">
                         中式八球规则
                       </a>
                       
-                      <a href="/tag/%E5%8F%B0%E7%90%83%E7%8A%AF%E8%A7%84%E5%A4%84%E7%90%86.html" class="badge tag-link">
+                      <a href="/tag/%E5%8F%B0%E7%90%83%E7%8A%AF%E8%A7%84%E5%A4%84%E7%90%86.html" class="badge tag-link me-2 mb-1">
                         台球犯规处理
                       </a>
                       
@@ -477,44 +547,45 @@
               </div>
               
               <div class="masonry-grid-item">
-                <div class="card shadow-sm">
+                <div class="card article-card shadow-sm">
                   <div class="card-body">
-                    <h5 class="card-title">
-                      <i class="bi bi-file-earmark-text"></i>
-                      <a href="../mdhtml/关于我们.html" class="text-decoration-none">
+                    <h5 class="card-title article-title">
+                      <i class="bi bi-file-earmark-text me-2 text-primary"></i>
+                      <a href="../mdhtml/关于我们.html" class="text-decoration-none text-dark">
                         关于我们
                       </a>
                     </h5>
                     
-                      <p class="card-text">
+                      <p class="card-text text-muted mb-3">
                         介绍一个致力于台球运动的网站，它不仅为台球爱好者提供了丰富的学习资源和交流平台，还支持台球店的运营管理。网站内容包括从台球的历史、规则到技巧和策略的全方位覆盖，并通过清晰的分类列表和标签系统帮助用户快速找到所需信息。此外，还提供实用工具和游戏资源以增强用户体验，同时鼓励用户间的互动交流，分享经验和提问。网站还集成了微信公众号文章，确保用户能获取最新的台球资讯和深度分析。无论是新手还是老手，都能在这个平台上找到乐趣和知识。
                       </p>
                       
-                        
-                          <small class="text-muted">
-                            2026-02-11
-                          </small>
-                          
+                        <div class="article-meta">
+                            
+                                <i class="bi bi-clock me-1"></i>
+                                2026-02-11
+                                
+                        </div>
                   </div>
-                  <div class="card-footer text-muted">
+                  <div class="card-footer text-muted bg-white border-top">
                     <a href="/category/%E5%8F%B0%E7%90%83%E5%A4%A9%E5%9C%B0.html"
-                      class="badge bg-primary">
+                      class="badge bg-primary me-2">
                       台球天地
                     </a>
                     
-                      <a href="/tag/%E5%8F%B0%E7%90%83%E6%96%87%E5%8C%96.html" class="badge tag-link">
+                      <a href="/tag/%E5%8F%B0%E7%90%83%E6%96%87%E5%8C%96.html" class="badge tag-link me-2 mb-1">
                         台球文化
                       </a>
                       
-                      <a href="/tag/%E5%8F%B0%E7%90%83%E6%8A%80%E5%B7%A7.html" class="badge tag-link">
+                      <a href="/tag/%E5%8F%B0%E7%90%83%E6%8A%80%E5%B7%A7.html" class="badge tag-link me-2 mb-1">
                         台球技巧
                       </a>
                       
-                      <a href="/tag/%E5%8F%B0%E7%90%83%E5%8E%86%E5%8F%B2.html" class="badge tag-link">
+                      <a href="/tag/%E5%8F%B0%E7%90%83%E5%8E%86%E5%8F%B2.html" class="badge tag-link me-2 mb-1">
                         台球历史
                       </a>
                       
-                      <a href="/tag/%E6%8A%80%E6%9C%AF%E9%A9%B1%E5%8A%A8%E4%BD%93%E9%AA%8C.html" class="badge tag-link">
+                      <a href="/tag/%E6%8A%80%E6%9C%AF%E9%A9%B1%E5%8A%A8%E4%BD%93%E9%AA%8C.html" class="badge tag-link me-2 mb-1">
                         技术驱动体验
                       </a>
                       
@@ -524,8 +595,8 @@
               
           </div>
 
-          <div class="mt-4 text-center">
-            <a href="标签列表.html" class="btn btn-outline-primary"><i class="bi bi-arrow-left"></i> 返回标签列表</a>
+          <div class="mt-6 text-center">
+            <a href="标签列表.html" class="btn btn-outline-primary back-button"><i class="bi bi-arrow-left me-2"></i> 返回标签列表</a>
           </div>
         </div>
       </div>
@@ -549,7 +620,7 @@
             itemSelector: '.masonry-grid-item',
             columnWidth: '.masonry-grid-item',
             percentPosition: true,
-            gutter: 10 // 可选，添加卡片间的间距
+            gutter: 15 // 增加间距，提升视觉效果
           });
         });
       </script>

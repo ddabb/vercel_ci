@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
 
 <head>
   <meta charset="UTF-8">
@@ -9,7 +9,7 @@
   <meta name="description" content="无人自助站的【个人数据价值挖掘】的标签列表页面，汇集了关于【个人数据价值挖掘】标签相关的文章和资讯，方便您快速找到感兴趣的内容。">
   <meta name="keywords" content="无人自助站,个人数据价值挖掘">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>标签文章列表</title>
+  <title>个人数据价值挖掘标签 - 无人自助站</title>
 
   <link rel="icon" href="../logo.svg" type="image/svg+xml">
   <link rel="stylesheet" href="../css/style.css">
@@ -27,6 +27,62 @@
   <!-- 引入Masonry -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/masonry/4.2.2/masonry.pkgd.min.js"></script>
 
+  <style>
+        .tag-header {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            color: white;
+            padding: 2rem;
+            border-radius: 8px;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        .tag-title {
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+        .article-card {
+            transition: all 0.3s ease;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        .article-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+        }
+        .article-title {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            transition: color 0.3s ease;
+        }
+        .article-title:hover {
+            color: #0d6efd;
+        }
+        .article-meta {
+            font-size: 0.85rem;
+            color: #6c757d;
+        }
+        .tag-link {
+            background-color: #e9ecef;
+            color: #495057;
+            transition: all 0.2s ease;
+        }
+        .tag-link:hover {
+            background-color: #dee2e6;
+            color: #212529;
+        }
+        .back-button {
+            transition: all 0.3s ease;
+        }
+        .back-button:hover {
+            transform: translateX(-3px);
+        }
+        .article-count {
+            font-size: 0.9rem;
+            opacity: 0.9;
+        }
+    </style>
 </head>
 
 <body>
@@ -80,7 +136,7 @@
     <main class="container-fluid mt-4">
       <div class="row">
         <div class="col-lg-8 col-md-12 mx-auto">
-          <nav aria-label="breadcrumb">
+          <nav aria-label="breadcrumb" class="mb-4">
             <ol class="breadcrumb">
               <li class="breadcrumb-item"><a href="/html/index.html">首页</a></li>
               <li class="breadcrumb-item"><a href="标签列表.html">标签列表</a></li>
@@ -89,114 +145,124 @@
               </li>
             </ol>
           </nav>
-          <h1 style="font-size: 1.5em; margin: 0.5em 0;">
-            个人数据价值挖掘标签的文章和资讯
-        </h1>
+          
+          <!-- 标签头部 -->
+          <div class="tag-header">
+              <h1 class="tag-title">
+                  <i class="bi bi-tags me-2"></i>
+                  个人数据价值挖掘
+              </h1>
+              <p class="article-count">
+                  共 1 篇文章
+              </p>
+          </div>
+          
           <div class="masonry-grid">
             
               <div class="masonry-grid-item">
-                <div class="card shadow-sm">
+                <div class="card article-card shadow-sm">
                   <div class="card-body">
-                    <h5 class="card-title">
-                      <i class="bi bi-file-earmark-text"></i>
-                      <a href="../mdhtml/AI时代的个人数据管理：从隐私保护到价值创造.html" class="text-decoration-none">
+                    <h5 class="card-title article-title">
+                      <i class="bi bi-file-earmark-text me-2 text-primary"></i>
+                      <a href="../mdhtml/AI时代的个人数据管理：从隐私保护到价值创造.html" class="text-decoration-none text-dark">
                         AI时代的个人数据管理：从隐私保护到价值创造
                       </a>
                     </h5>
                     
-                      <p class="card-text">
+                      <p class="card-text text-muted mb-3">
                         深入探讨AI时代个人数据管理的挑战与机遇，分析如何在保护隐私的同时利用个人数据创造价值，实现数据管理的平衡。涵盖数据收集特点、隐私保护技术、数据价值挖掘、个人数据管理实践框架等内容，帮助读者建立个人数据主权，从隐私保护转向价值创造。
                       </p>
                       
-                        
-                          <small class="text-muted">
-                            2026-02-24
-                          </small>
-                          
+                        <div class="article-meta">
+                            
+                                <i class="bi bi-clock me-1"></i>
+                                2026-02-24
+                                
+                        </div>
                   </div>
-                  <div class="card-footer text-muted">
+                  <div class="card-footer text-muted bg-white border-top">
                     <a href="/category/%E7%A7%91%E6%8A%80%E5%89%8D%E6%B2%BF.html"
-                      class="badge bg-primary">
+                      class="badge bg-primary me-2">
                       科技前沿
                     </a>
                     
-                      <a href="/tag/AI%E6%97%B6%E4%BB%A3%E4%B8%AA%E4%BA%BA%E6%95%B0%E6%8D%AE%E7%AE%A1%E7%90%86.html" class="badge tag-link">
+                      <a href="/tag/AI%E6%97%B6%E4%BB%A3%E4%B8%AA%E4%BA%BA%E6%95%B0%E6%8D%AE%E7%AE%A1%E7%90%86.html" class="badge tag-link me-2 mb-1">
                         AI时代个人数据管理
                       </a>
                       
-                      <a href="/tag/%E9%9A%90%E7%A7%81%E4%BF%9D%E6%8A%A4%E7%AD%96%E7%95%A5.html" class="badge tag-link">
+                      <a href="/tag/%E9%9A%90%E7%A7%81%E4%BF%9D%E6%8A%A4%E7%AD%96%E7%95%A5.html" class="badge tag-link me-2 mb-1">
                         隐私保护策略
                       </a>
                       
-                      <a href="/tag/%E4%B8%AA%E4%BA%BA%E6%95%B0%E6%8D%AE%E4%BB%B7%E5%80%BC%E5%88%9B%E9%80%A0.html" class="badge tag-link">
+                      <a href="/tag/%E4%B8%AA%E4%BA%BA%E6%95%B0%E6%8D%AE%E4%BB%B7%E5%80%BC%E5%88%9B%E9%80%A0.html" class="badge tag-link me-2 mb-1">
                         个人数据价值创造
                       </a>
                       
-                      <a href="/tag/%E6%95%B0%E5%AD%97%E8%BA%AB%E4%BB%BD%E7%AE%A1%E7%90%86.html" class="badge tag-link">
+                      <a href="/tag/%E6%95%B0%E5%AD%97%E8%BA%AB%E4%BB%BD%E7%AE%A1%E7%90%86.html" class="badge tag-link me-2 mb-1">
                         数字身份管理
                       </a>
                       
-                      <a href="/tag/%E4%B8%AA%E4%BA%BA%E6%95%B0%E6%8D%AE%E4%B8%BB%E6%9D%83.html" class="badge tag-link">
+                      <a href="/tag/%E4%B8%AA%E4%BA%BA%E6%95%B0%E6%8D%AE%E4%B8%BB%E6%9D%83.html" class="badge tag-link me-2 mb-1">
                         个人数据主权
                       </a>
                       
-                      <a href="/tag/%E6%95%B0%E6%8D%AE%E9%9A%90%E7%A7%81%E4%BF%9D%E6%8A%A4%E6%8A%80%E6%9C%AF.html" class="badge tag-link">
+                      <a href="/tag/%E6%95%B0%E6%8D%AE%E9%9A%90%E7%A7%81%E4%BF%9D%E6%8A%A4%E6%8A%80%E6%9C%AF.html" class="badge tag-link me-2 mb-1">
                         数据隐私保护技术
                       </a>
                       
-                      <a href="/tag/%E4%B8%AA%E4%BA%BA%E6%95%B0%E6%8D%AE%E4%BB%B7%E5%80%BC%E6%8C%96%E6%8E%98.html" class="badge tag-link">
+                      <a href="/tag/%E4%B8%AA%E4%BA%BA%E6%95%B0%E6%8D%AE%E4%BB%B7%E5%80%BC%E6%8C%96%E6%8E%98.html" class="badge tag-link me-2 mb-1">
                         个人数据价值挖掘
                       </a>
                       
-                      <a href="/tag/%E6%95%B0%E6%8D%AE%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F%E7%AE%A1%E7%90%86.html" class="badge tag-link">
+                      <a href="/tag/%E6%95%B0%E6%8D%AE%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F%E7%AE%A1%E7%90%86.html" class="badge tag-link me-2 mb-1">
                         数据生命周期管理
                       </a>
                       
-                      <a href="/tag/%E4%B8%AA%E4%BA%BA%E6%95%B0%E6%8D%AE%E5%AE%89%E5%85%A8.html" class="badge tag-link">
+                      <a href="/tag/%E4%B8%AA%E4%BA%BA%E6%95%B0%E6%8D%AE%E5%AE%89%E5%85%A8.html" class="badge tag-link me-2 mb-1">
                         个人数据安全
                       </a>
                       
-                      <a href="/tag/%E6%95%B0%E6%8D%AE%E4%BA%A4%E6%98%93%E4%B8%8E%E5%85%B1%E4%BA%AB.html" class="badge tag-link">
+                      <a href="/tag/%E6%95%B0%E6%8D%AE%E4%BA%A4%E6%98%93%E4%B8%8E%E5%85%B1%E4%BA%AB.html" class="badge tag-link me-2 mb-1">
                         数据交易与共享
                       </a>
                       
-                      <a href="/tag/%E4%B8%AA%E4%BA%BA%E6%95%B0%E6%8D%AE%E5%88%86%E7%B1%BB%E7%AE%A1%E7%90%86.html" class="badge tag-link">
+                      <a href="/tag/%E4%B8%AA%E4%BA%BA%E6%95%B0%E6%8D%AE%E5%88%86%E7%B1%BB%E7%AE%A1%E7%90%86.html" class="badge tag-link me-2 mb-1">
                         个人数据分类管理
                       </a>
                       
-                      <a href="/tag/%E6%95%B0%E6%8D%AE%E9%A3%8E%E9%99%A9%E8%AF%84%E4%BC%B0.html" class="badge tag-link">
+                      <a href="/tag/%E6%95%B0%E6%8D%AE%E9%A3%8E%E9%99%A9%E8%AF%84%E4%BC%B0.html" class="badge tag-link me-2 mb-1">
                         数据风险评估
                       </a>
                       
-                      <a href="/tag/%E4%B8%AA%E4%BA%BA%E6%95%B0%E6%8D%AE%E7%AE%A1%E7%90%86%E5%AE%9E%E8%B7%B5.html" class="badge tag-link">
+                      <a href="/tag/%E4%B8%AA%E4%BA%BA%E6%95%B0%E6%8D%AE%E7%AE%A1%E7%90%86%E5%AE%9E%E8%B7%B5.html" class="badge tag-link me-2 mb-1">
                         个人数据管理实践
                       </a>
                       
-                      <a href="/tag/AI%E6%97%B6%E4%BB%A3%E9%9A%90%E7%A7%81%E4%BF%9D%E6%8A%A4.html" class="badge tag-link">
+                      <a href="/tag/AI%E6%97%B6%E4%BB%A3%E9%9A%90%E7%A7%81%E4%BF%9D%E6%8A%A4.html" class="badge tag-link me-2 mb-1">
                         AI时代隐私保护
                       </a>
                       
-                      <a href="/tag/%E4%B8%AA%E4%BA%BA%E6%95%B0%E6%8D%AE%E6%95%B4%E5%90%88.html" class="badge tag-link">
+                      <a href="/tag/%E4%B8%AA%E4%BA%BA%E6%95%B0%E6%8D%AE%E6%95%B4%E5%90%88.html" class="badge tag-link me-2 mb-1">
                         个人数据整合
                       </a>
                       
-                      <a href="/tag/%E6%95%B0%E6%8D%AE%E6%B4%9E%E5%AF%9F%E8%8E%B7%E5%8F%96.html" class="badge tag-link">
+                      <a href="/tag/%E6%95%B0%E6%8D%AE%E6%B4%9E%E5%AF%9F%E8%8E%B7%E5%8F%96.html" class="badge tag-link me-2 mb-1">
                         数据洞察获取
                       </a>
                       
-                      <a href="/tag/%E4%B8%AA%E6%80%A7%E5%8C%96%E6%9C%8D%E5%8A%A1%E4%BC%98%E5%8C%96.html" class="badge tag-link">
+                      <a href="/tag/%E4%B8%AA%E6%80%A7%E5%8C%96%E6%9C%8D%E5%8A%A1%E4%BC%98%E5%8C%96.html" class="badge tag-link me-2 mb-1">
                         个性化服务优化
                       </a>
                       
-                      <a href="/tag/%E6%95%B0%E6%8D%AE%E4%BC%A6%E7%90%86%E8%A7%84%E8%8C%83.html" class="badge tag-link">
+                      <a href="/tag/%E6%95%B0%E6%8D%AE%E4%BC%A6%E7%90%86%E8%A7%84%E8%8C%83.html" class="badge tag-link me-2 mb-1">
                         数据伦理规范
                       </a>
                       
-                      <a href="/tag/%E4%B8%AA%E4%BA%BA%E6%95%B0%E6%8D%AE%E9%92%B1%E5%8C%85.html" class="badge tag-link">
+                      <a href="/tag/%E4%B8%AA%E4%BA%BA%E6%95%B0%E6%8D%AE%E9%92%B1%E5%8C%85.html" class="badge tag-link me-2 mb-1">
                         个人数据钱包
                       </a>
                       
-                      <a href="/tag/%E5%8C%BA%E5%9D%97%E9%93%BE%E4%B8%AA%E4%BA%BA%E6%95%B0%E6%8D%AE%E7%AE%A1%E7%90%86.html" class="badge tag-link">
+                      <a href="/tag/%E5%8C%BA%E5%9D%97%E9%93%BE%E4%B8%AA%E4%BA%BA%E6%95%B0%E6%8D%AE%E7%AE%A1%E7%90%86.html" class="badge tag-link me-2 mb-1">
                         区块链个人数据管理
                       </a>
                       
@@ -206,8 +272,8 @@
               
           </div>
 
-          <div class="mt-4 text-center">
-            <a href="标签列表.html" class="btn btn-outline-primary"><i class="bi bi-arrow-left"></i> 返回标签列表</a>
+          <div class="mt-6 text-center">
+            <a href="标签列表.html" class="btn btn-outline-primary back-button"><i class="bi bi-arrow-left me-2"></i> 返回标签列表</a>
           </div>
         </div>
       </div>
@@ -231,7 +297,7 @@
             itemSelector: '.masonry-grid-item',
             columnWidth: '.masonry-grid-item',
             percentPosition: true,
-            gutter: 10 // 可选，添加卡片间的间距
+            gutter: 15 // 增加间距，提升视觉效果
           });
         });
       </script>

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
 
 <head>
     <meta charset="UTF-8">
@@ -9,7 +9,7 @@
     <meta name="description" content="无人自助站的【职场观察】分类列表页面，汇集了关于【职场观察】分类的文章和资讯，方便您快速找到感兴趣的内容。">
     <meta name="keywords" content="无人自助站,职场观察">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>分类列表</title>
+    <title>职场观察分类 - 无人自助站</title>
     <link rel="icon" href="../logo.svg" type="image/svg+xml">
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/footer.css">
@@ -27,6 +27,62 @@
     <!-- 引入Masonry -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/masonry/4.2.2/masonry.pkgd.min.js"></script>
 
+    <style>
+        .category-header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 2rem;
+            border-radius: 8px;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        .category-title {
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+        .article-card {
+            transition: all 0.3s ease;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        .article-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+        }
+        .article-title {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            transition: color 0.3s ease;
+        }
+        .article-title:hover {
+            color: #0d6efd;
+        }
+        .article-meta {
+            font-size: 0.85rem;
+            color: #6c757d;
+        }
+        .tag-link {
+            background-color: #e9ecef;
+            color: #495057;
+            transition: all 0.2s ease;
+        }
+        .tag-link:hover {
+            background-color: #dee2e6;
+            color: #212529;
+        }
+        .back-button {
+            transition: all 0.3s ease;
+        }
+        .back-button:hover {
+            transform: translateX(-3px);
+        }
+        .article-count {
+            font-size: 0.9rem;
+            opacity: 0.9;
+        }
+    </style>
 </head>
 
 <body>
@@ -80,7 +136,7 @@
         <main class="container-fluid mt-4">
             <div class="col-lg-8 col-md-12 mx-auto">
                 <!-- 面包屑导航 -->
-                <nav aria-label="breadcrumb">
+                <nav aria-label="breadcrumb" class="mb-4">
                     <ol class="breadcrumb">
                         <li class="breadcrumb-item"><a href="/html/index.html">首页</a></li>
                         <li class="breadcrumb-item"><a href="分类列表.html">分类列表</a></li>
@@ -89,61 +145,71 @@
                         </li>
                     </ol>
                 </nav>
-                <h1 style="font-size: 1.5em; margin: 0.5em 0;">
-                    职场观察分类的文章和资讯
-                </h1>
+                
+                <!-- 分类头部 -->
+                <div class="category-header">
+                    <h1 class="category-title">
+                        <i class="bi bi-folder2 me-2"></i>
+                        职场观察
+                    </h1>
+                    <p class="article-count">
+                        共 7 篇文章
+                    </p>
+                </div>
+                
                 <!-- 分类内容卡片 使用 Masonry 布局 -->
                 <div class="masonry-grid">
                     
                         <div class="masonry-grid-item">
-                            <div class="card shadow-sm">
+                            <div class="card article-card shadow-sm">
                                 <div class="card-body">
-                                    <h5 class="card-title">
-                                        <i class="bi bi-file-earmark-text"></i>
+                                    <h5 class="card-title article-title">
+                                        <i class="bi bi-file-earmark-text me-2 text-primary"></i>
                                         <a href="../mdhtml/为什么现在的00后都爱进体制内了.html"
-                                            class="text-decoration-none">
+                                            class="text-decoration-none text-dark">
                                             为什么现在的00后都爱进体制内了
                                         </a>
                                     </h5>
                                     
-                                        <p class="card-text">
+                                        <p class="card-text text-muted mb-3">
                                             分析00后青睐体制内工作的现象。
                                         </p>
                                         
+                                        <div class="article-meta">
                                             
-                                                <small class="text-muted">
-                                                    2026-03-24
-                                                </small>
+                                                <i class="bi bi-clock me-1"></i>
+                                                2026-03-24
                                                 
+                                        </div>
                                 </div>
-                                <div class="card-footer text-muted">
+                                <div class="card-footer text-muted bg-white border-top">
                                     <a href="/category/%E8%81%8C%E5%9C%BA%E8%A7%82%E5%AF%9F.html"
-                                        class="badge bg-primary">
+                                        class="badge bg-primary me-2">
                                         职场观察
                                     </a>
                                     
                                         <a href="/tag/%E4%BD%93%E5%88%B6%E5%86%85.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             体制内
                                         </a>
                                         
                                         <a href="/tag/00%E5%90%8E.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             00后
                                         </a>
                                         
                                         <a href="/tag/%E5%B7%A5%E4%BD%9C.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             工作
                                         </a>
                                         
                                         <a href="/tag/%E7%A8%B3%E5%AE%9A.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             稳定
                                         </a>
                                         
                                         <a href="/tag/%E8%B6%8B%E5%8A%BF.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             趋势
                                         </a>
                                         
@@ -152,54 +218,55 @@
                         </div>
                         
                         <div class="masonry-grid-item">
-                            <div class="card shadow-sm">
+                            <div class="card article-card shadow-sm">
                                 <div class="card-body">
-                                    <h5 class="card-title">
-                                        <i class="bi bi-file-earmark-text"></i>
+                                    <h5 class="card-title article-title">
+                                        <i class="bi bi-file-earmark-text me-2 text-primary"></i>
                                         <a href="../mdhtml/这5个行业正在消失.html"
-                                            class="text-decoration-none">
+                                            class="text-decoration-none text-dark">
                                             这5个行业正在消失
                                         </a>
                                     </h5>
                                     
-                                        <p class="card-text">
+                                        <p class="card-text text-muted mb-3">
                                             分析正在消失的行业。
                                         </p>
                                         
+                                        <div class="article-meta">
                                             
-                                                <small class="text-muted">
-                                                    2026-03-24
-                                                </small>
+                                                <i class="bi bi-clock me-1"></i>
+                                                2026-03-24
                                                 
+                                        </div>
                                 </div>
-                                <div class="card-footer text-muted">
+                                <div class="card-footer text-muted bg-white border-top">
                                     <a href="/category/%E8%81%8C%E5%9C%BA%E8%A7%82%E5%AF%9F.html"
-                                        class="badge bg-primary">
+                                        class="badge bg-primary me-2">
                                         职场观察
                                     </a>
                                     
                                         <a href="/tag/%E8%A1%8C%E4%B8%9A.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             行业
                                         </a>
                                         
                                         <a href="/tag/%E6%B6%88%E5%A4%B1.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             消失
                                         </a>
                                         
                                         <a href="/tag/%E5%A4%B1%E4%B8%9A.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             失业
                                         </a>
                                         
                                         <a href="/tag/AI.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             AI
                                         </a>
                                         
                                         <a href="/tag/%E8%B6%8B%E5%8A%BF.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             趋势
                                         </a>
                                         
@@ -208,54 +275,55 @@
                         </div>
                         
                         <div class="masonry-grid-item">
-                            <div class="card shadow-sm">
+                            <div class="card article-card shadow-sm">
                                 <div class="card-body">
-                                    <h5 class="card-title">
-                                        <i class="bi bi-file-earmark-text"></i>
+                                    <h5 class="card-title article-title">
+                                        <i class="bi bi-file-earmark-text me-2 text-primary"></i>
                                         <a href="../mdhtml/这3个行业越老越吃香.html"
-                                            class="text-decoration-none">
+                                            class="text-decoration-none text-dark">
                                             这3个行业越老越吃香
                                         </a>
                                     </h5>
                                     
-                                        <p class="card-text">
+                                        <p class="card-text text-muted mb-3">
                                             分析越老越吃香的行业。
                                         </p>
                                         
+                                        <div class="article-meta">
                                             
-                                                <small class="text-muted">
-                                                    2026-03-24
-                                                </small>
+                                                <i class="bi bi-clock me-1"></i>
+                                                2026-03-24
                                                 
+                                        </div>
                                 </div>
-                                <div class="card-footer text-muted">
+                                <div class="card-footer text-muted bg-white border-top">
                                     <a href="/category/%E8%81%8C%E5%9C%BA%E8%A7%82%E5%AF%9F.html"
-                                        class="badge bg-primary">
+                                        class="badge bg-primary me-2">
                                         职场观察
                                     </a>
                                     
                                         <a href="/tag/%E8%A1%8C%E4%B8%9A.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             行业
                                         </a>
                                         
                                         <a href="/tag/%E5%90%83%E9%A6%99.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             吃香
                                         </a>
                                         
                                         <a href="/tag/%E7%BB%8F%E9%AA%8C.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             经验
                                         </a>
                                         
                                         <a href="/tag/%E8%B6%8A%E8%80%81%E8%B6%8A%E9%A6%99.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             越老越香
                                         </a>
                                         
                                         <a href="/tag/%E8%81%8C%E4%B8%9A.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             职业
                                         </a>
                                         
@@ -264,54 +332,55 @@
                         </div>
                         
                         <div class="masonry-grid-item">
-                            <div class="card shadow-sm">
+                            <div class="card article-card shadow-sm">
                                 <div class="card-body">
-                                    <h5 class="card-title">
-                                        <i class="bi bi-file-earmark-text"></i>
+                                    <h5 class="card-title article-title">
+                                        <i class="bi bi-file-earmark-text me-2 text-primary"></i>
                                         <a href="../mdhtml/为什么现在的大学生都爱进工厂了.html"
-                                            class="text-decoration-none">
+                                            class="text-decoration-none text-dark">
                                             为什么现在的大学生都爱进工厂了
                                         </a>
                                     </h5>
                                     
-                                        <p class="card-text">
+                                        <p class="card-text text-muted mb-3">
                                             分析大学生进工厂的现象。
                                         </p>
                                         
+                                        <div class="article-meta">
                                             
-                                                <small class="text-muted">
-                                                    2026-03-24
-                                                </small>
+                                                <i class="bi bi-clock me-1"></i>
+                                                2026-03-24
                                                 
+                                        </div>
                                 </div>
-                                <div class="card-footer text-muted">
+                                <div class="card-footer text-muted bg-white border-top">
                                     <a href="/category/%E8%81%8C%E5%9C%BA%E8%A7%82%E5%AF%9F.html"
-                                        class="badge bg-primary">
+                                        class="badge bg-primary me-2">
                                         职场观察
                                     </a>
                                     
                                         <a href="/tag/%E5%A4%A7%E5%AD%A6%E7%94%9F.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             大学生
                                         </a>
                                         
                                         <a href="/tag/%E8%BF%9B%E5%B7%A5%E5%8E%82.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             进工厂
                                         </a>
                                         
                                         <a href="/tag/%E5%B7%A5%E4%BD%9C.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             工作
                                         </a>
                                         
                                         <a href="/tag/%E5%B0%B1%E4%B8%9A.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             就业
                                         </a>
                                         
                                         <a href="/tag/%E7%8E%B0%E5%AE%9E.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             现实
                                         </a>
                                         
@@ -320,54 +389,55 @@
                         </div>
                         
                         <div class="masonry-grid-item">
-                            <div class="card shadow-sm">
+                            <div class="card article-card shadow-sm">
                                 <div class="card-body">
-                                    <h5 class="card-title">
-                                        <i class="bi bi-file-earmark-text"></i>
+                                    <h5 class="card-title article-title">
+                                        <i class="bi bi-file-earmark-text me-2 text-primary"></i>
                                         <a href="../mdhtml/为什么现在的00后都不爱上班了.html"
-                                            class="text-decoration-none">
+                                            class="text-decoration-none text-dark">
                                             为什么现在的00后都不爱上班了
                                         </a>
                                     </h5>
                                     
-                                        <p class="card-text">
+                                        <p class="card-text text-muted mb-3">
                                             分析00后整顿职场的现象，探讨年轻一代的工作观念变化。
                                         </p>
                                         
+                                        <div class="article-meta">
                                             
-                                                <small class="text-muted">
-                                                    2026-03-24
-                                                </small>
+                                                <i class="bi bi-clock me-1"></i>
+                                                2026-03-24
                                                 
+                                        </div>
                                 </div>
-                                <div class="card-footer text-muted">
+                                <div class="card-footer text-muted bg-white border-top">
                                     <a href="/category/%E8%81%8C%E5%9C%BA%E8%A7%82%E5%AF%9F.html"
-                                        class="badge bg-primary">
+                                        class="badge bg-primary me-2">
                                         职场观察
                                     </a>
                                     
                                         <a href="/tag/00%E5%90%8E.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             00后
                                         </a>
                                         
                                         <a href="/tag/%E8%81%8C%E5%9C%BA.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             职场
                                         </a>
                                         
                                         <a href="/tag/%E5%B7%A5%E4%BD%9C%E6%80%81%E5%BA%A6.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             工作态度
                                         </a>
                                         
                                         <a href="/tag/%E7%A6%BB%E8%81%8C.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             离职
                                         </a>
                                         
                                         <a href="/tag/%E6%95%B4%E9%A1%BF%E8%81%8C%E5%9C%BA.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             整顿职场
                                         </a>
                                         
@@ -376,54 +446,55 @@
                         </div>
                         
                         <div class="masonry-grid-item">
-                            <div class="card shadow-sm">
+                            <div class="card article-card shadow-sm">
                                 <div class="card-body">
-                                    <h5 class="card-title">
-                                        <i class="bi bi-file-earmark-text"></i>
+                                    <h5 class="card-title article-title">
+                                        <i class="bi bi-file-earmark-text me-2 text-primary"></i>
                                         <a href="../mdhtml/为什么现在的年轻人都在做兼职？原因很心酸.html"
-                                            class="text-decoration-none">
+                                            class="text-decoration-none text-dark">
                                             为什么现在的年轻人都在做兼职？原因很心酸
                                         </a>
                                     </h5>
                                     
-                                        <p class="card-text">
+                                        <p class="card-text text-muted mb-3">
                                             探讨年轻人做兼职的现象，分析背后的经济压力和生活困境。
                                         </p>
                                         
+                                        <div class="article-meta">
                                             
-                                                <small class="text-muted">
-                                                    2026-03-24
-                                                </small>
+                                                <i class="bi bi-clock me-1"></i>
+                                                2026-03-24
                                                 
+                                        </div>
                                 </div>
-                                <div class="card-footer text-muted">
+                                <div class="card-footer text-muted bg-white border-top">
                                     <a href="/category/%E8%81%8C%E5%9C%BA%E8%A7%82%E5%AF%9F.html"
-                                        class="badge bg-primary">
+                                        class="badge bg-primary me-2">
                                         职场观察
                                     </a>
                                     
                                         <a href="/tag/%E5%85%BC%E8%81%8C.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             兼职
                                         </a>
                                         
                                         <a href="/tag/%E5%89%AF%E4%B8%9A.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             副业
                                         </a>
                                         
                                         <a href="/tag/%E5%B9%B4%E8%BD%BB%E4%BA%BA.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             年轻人
                                         </a>
                                         
                                         <a href="/tag/%E6%94%B6%E5%85%A5.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             收入
                                         </a>
                                         
                                         <a href="/tag/%E7%94%9F%E6%B4%BB%E5%8E%8B%E5%8A%9B.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             生活压力
                                         </a>
                                         
@@ -432,54 +503,55 @@
                         </div>
                         
                         <div class="masonry-grid-item">
-                            <div class="card shadow-sm">
+                            <div class="card article-card shadow-sm">
                                 <div class="card-body">
-                                    <h5 class="card-title">
-                                        <i class="bi bi-file-earmark-text"></i>
+                                    <h5 class="card-title article-title">
+                                        <i class="bi bi-file-earmark-text me-2 text-primary"></i>
                                         <a href="../mdhtml/2026年这5个行业正在消失，快看看有没有你的工作.html"
-                                            class="text-decoration-none">
+                                            class="text-decoration-none text-dark">
                                             2026年这5个行业正在消失，快看看有没有你的工作
                                         </a>
                                     </h5>
                                     
-                                        <p class="card-text">
+                                        <p class="card-text text-muted mb-3">
                                             分析2026年正在快速萎缩甚至消失的行业，探讨哪些工作正在被AI和自动化取代，以及普通人如何应对。
                                         </p>
                                         
+                                        <div class="article-meta">
                                             
-                                                <small class="text-muted">
-                                                    2026-03-24
-                                                </small>
+                                                <i class="bi bi-clock me-1"></i>
+                                                2026-03-24
                                                 
+                                        </div>
                                 </div>
-                                <div class="card-footer text-muted">
+                                <div class="card-footer text-muted bg-white border-top">
                                     <a href="/category/%E8%81%8C%E5%9C%BA%E8%A7%82%E5%AF%9F.html"
-                                        class="badge bg-primary">
+                                        class="badge bg-primary me-2">
                                         职场观察
                                     </a>
                                     
                                         <a href="/tag/%E8%81%8C%E4%B8%9A%E5%8D%B1%E6%9C%BA.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             职业危机
                                         </a>
                                         
                                         <a href="/tag/%E5%A4%B1%E4%B8%9A.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             失业
                                         </a>
                                         
                                         <a href="/tag/AI%E6%9B%BF%E4%BB%A3.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             AI替代
                                         </a>
                                         
                                         <a href="/tag/%E8%A1%8C%E4%B8%9A%E6%B2%A1%E8%90%BD.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             行业没落
                                         </a>
                                         
                                         <a href="/tag/%E5%B7%A5%E4%BD%9C.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             工作
                                         </a>
                                         
@@ -490,9 +562,9 @@
                 </div>
 
                 <!-- 返回按钮 -->
-                <div class="mt-4 text-center">
-                    <a href="分类列表.html" class="btn btn-outline-primary">
-                        <i class="bi bi-arrow-left"></i> 返回分类列表
+                <div class="mt-6 text-center">
+                    <a href="分类列表.html" class="btn btn-outline-primary back-button">
+                        <i class="bi bi-arrow-left me-2"></i> 返回分类列表
                     </a>
                 </div>
             </div>
@@ -516,7 +588,7 @@
                         itemSelector: '.masonry-grid-item',
                         columnWidth: '.masonry-grid-item',
                         percentPosition: true,
-                        gutter: 10 // 明确设置 gutter 值为 10px
+                        gutter: 15 // 增加间距，提升视觉效果
                     });
                 });
             </script>

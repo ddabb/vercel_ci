@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
 
 <head>
   <meta charset="UTF-8">
@@ -9,7 +9,7 @@
   <meta name="description" content="无人自助站的【人生决策】的标签列表页面，汇集了关于【人生决策】标签相关的文章和资讯，方便您快速找到感兴趣的内容。">
   <meta name="keywords" content="无人自助站,人生决策">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>标签文章列表</title>
+  <title>人生决策标签 - 无人自助站</title>
 
   <link rel="icon" href="../logo.svg" type="image/svg+xml">
   <link rel="stylesheet" href="../css/style.css">
@@ -27,6 +27,62 @@
   <!-- 引入Masonry -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/masonry/4.2.2/masonry.pkgd.min.js"></script>
 
+  <style>
+        .tag-header {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            color: white;
+            padding: 2rem;
+            border-radius: 8px;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        .tag-title {
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+        .article-card {
+            transition: all 0.3s ease;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        .article-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+        }
+        .article-title {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            transition: color 0.3s ease;
+        }
+        .article-title:hover {
+            color: #0d6efd;
+        }
+        .article-meta {
+            font-size: 0.85rem;
+            color: #6c757d;
+        }
+        .tag-link {
+            background-color: #e9ecef;
+            color: #495057;
+            transition: all 0.2s ease;
+        }
+        .tag-link:hover {
+            background-color: #dee2e6;
+            color: #212529;
+        }
+        .back-button {
+            transition: all 0.3s ease;
+        }
+        .back-button:hover {
+            transform: translateX(-3px);
+        }
+        .article-count {
+            font-size: 0.9rem;
+            opacity: 0.9;
+        }
+    </style>
 </head>
 
 <body>
@@ -80,7 +136,7 @@
     <main class="container-fluid mt-4">
       <div class="row">
         <div class="col-lg-8 col-md-12 mx-auto">
-          <nav aria-label="breadcrumb">
+          <nav aria-label="breadcrumb" class="mb-4">
             <ol class="breadcrumb">
               <li class="breadcrumb-item"><a href="/html/index.html">首页</a></li>
               <li class="breadcrumb-item"><a href="标签列表.html">标签列表</a></li>
@@ -89,62 +145,72 @@
               </li>
             </ol>
           </nav>
-          <h1 style="font-size: 1.5em; margin: 0.5em 0;">
-            人生决策标签的文章和资讯
-        </h1>
+          
+          <!-- 标签头部 -->
+          <div class="tag-header">
+              <h1 class="tag-title">
+                  <i class="bi bi-tags me-2"></i>
+                  人生决策
+              </h1>
+              <p class="article-count">
+                  共 7 篇文章
+              </p>
+          </div>
+          
           <div class="masonry-grid">
             
               <div class="masonry-grid-item">
-                <div class="card shadow-sm">
+                <div class="card article-card shadow-sm">
                   <div class="card-body">
-                    <h5 class="card-title">
-                      <i class="bi bi-file-earmark-text"></i>
-                      <a href="../mdhtml/机会成本的行为经济学：如何在有限选择中最大化价值.html" class="text-decoration-none">
+                    <h5 class="card-title article-title">
+                      <i class="bi bi-file-earmark-text me-2 text-primary"></i>
+                      <a href="../mdhtml/机会成本的行为经济学：如何在有限选择中最大化价值.html" class="text-decoration-none text-dark">
                         机会成本的行为经济学：如何在有限选择中最大化价值
                       </a>
                     </h5>
                     
-                      <p class="card-text">
+                      <p class="card-text text-muted mb-3">
                         从行为经济学的角度探讨机会成本的概念和应用，分析人们在决策中对机会成本的认知偏差，提供识别和量化机会成本的方法，以及在日常生活和职业发展中优化机会成本决策的策略。
                       </p>
                       
-                        
-                          <small class="text-muted">
-                            2026-02-24
-                          </small>
-                          
+                        <div class="article-meta">
+                            
+                                <i class="bi bi-clock me-1"></i>
+                                2026-02-24
+                                
+                        </div>
                   </div>
-                  <div class="card-footer text-muted">
+                  <div class="card-footer text-muted bg-white border-top">
                     <a href="/category/%E4%BA%BA%E7%94%9F%E7%AE%A1%E7%90%86.html"
-                      class="badge bg-primary">
+                      class="badge bg-primary me-2">
                       人生管理
                     </a>
                     
-                      <a href="/tag/%E6%9C%BA%E4%BC%9A%E6%88%90%E6%9C%AC.html" class="badge tag-link">
+                      <a href="/tag/%E6%9C%BA%E4%BC%9A%E6%88%90%E6%9C%AC.html" class="badge tag-link me-2 mb-1">
                         机会成本
                       </a>
                       
-                      <a href="/tag/%E8%A1%8C%E4%B8%BA%E7%BB%8F%E6%B5%8E%E5%AD%A6.html" class="badge tag-link">
+                      <a href="/tag/%E8%A1%8C%E4%B8%BA%E7%BB%8F%E6%B5%8E%E5%AD%A6.html" class="badge tag-link me-2 mb-1">
                         行为经济学
                       </a>
                       
-                      <a href="/tag/%E5%86%B3%E7%AD%96%E4%BC%98%E5%8C%96.html" class="badge tag-link">
+                      <a href="/tag/%E5%86%B3%E7%AD%96%E4%BC%98%E5%8C%96.html" class="badge tag-link me-2 mb-1">
                         决策优化
                       </a>
                       
-                      <a href="/tag/%E4%BB%B7%E5%80%BC%E6%9C%80%E5%A4%A7%E5%8C%96.html" class="badge tag-link">
+                      <a href="/tag/%E4%BB%B7%E5%80%BC%E6%9C%80%E5%A4%A7%E5%8C%96.html" class="badge tag-link me-2 mb-1">
                         价值最大化
                       </a>
                       
-                      <a href="/tag/%E8%AE%A4%E7%9F%A5%E5%81%8F%E5%B7%AE.html" class="badge tag-link">
+                      <a href="/tag/%E8%AE%A4%E7%9F%A5%E5%81%8F%E5%B7%AE.html" class="badge tag-link me-2 mb-1">
                         认知偏差
                       </a>
                       
-                      <a href="/tag/%E8%B5%84%E6%BA%90%E5%88%86%E9%85%8D.html" class="badge tag-link">
+                      <a href="/tag/%E8%B5%84%E6%BA%90%E5%88%86%E9%85%8D.html" class="badge tag-link me-2 mb-1">
                         资源分配
                       </a>
                       
-                      <a href="/tag/%E4%BA%BA%E7%94%9F%E5%86%B3%E7%AD%96.html" class="badge tag-link">
+                      <a href="/tag/%E4%BA%BA%E7%94%9F%E5%86%B3%E7%AD%96.html" class="badge tag-link me-2 mb-1">
                         人生决策
                       </a>
                       
@@ -153,56 +219,57 @@
               </div>
               
               <div class="masonry-grid-item">
-                <div class="card shadow-sm">
+                <div class="card article-card shadow-sm">
                   <div class="card-body">
-                    <h5 class="card-title">
-                      <i class="bi bi-file-earmark-text"></i>
-                      <a href="../mdhtml/决策优化的科学：如何做出更明智的选择.html" class="text-decoration-none">
+                    <h5 class="card-title article-title">
+                      <i class="bi bi-file-earmark-text me-2 text-primary"></i>
+                      <a href="../mdhtml/决策优化的科学：如何做出更明智的选择.html" class="text-decoration-none text-dark">
                         决策优化的科学：如何做出更明智的选择
                       </a>
                     </h5>
                     
-                      <p class="card-text">
+                      <p class="card-text text-muted mb-3">
                         探讨决策优化的科学原理和实践方法，分析影响决策质量的因素，提供结构化的决策框架和工具，帮助读者在面对复杂选择时做出更明智、更符合个人价值观的决策。
                       </p>
                       
-                        
-                          <small class="text-muted">
-                            2026-02-24
-                          </small>
-                          
+                        <div class="article-meta">
+                            
+                                <i class="bi bi-clock me-1"></i>
+                                2026-02-24
+                                
+                        </div>
                   </div>
-                  <div class="card-footer text-muted">
+                  <div class="card-footer text-muted bg-white border-top">
                     <a href="/category/%E4%BA%BA%E7%94%9F%E7%AE%A1%E7%90%86.html"
-                      class="badge bg-primary">
+                      class="badge bg-primary me-2">
                       人生管理
                     </a>
                     
-                      <a href="/tag/%E5%86%B3%E7%AD%96%E4%BC%98%E5%8C%96.html" class="badge tag-link">
+                      <a href="/tag/%E5%86%B3%E7%AD%96%E4%BC%98%E5%8C%96.html" class="badge tag-link me-2 mb-1">
                         决策优化
                       </a>
                       
-                      <a href="/tag/%E4%BA%BA%E7%94%9F%E5%86%B3%E7%AD%96.html" class="badge tag-link">
+                      <a href="/tag/%E4%BA%BA%E7%94%9F%E5%86%B3%E7%AD%96.html" class="badge tag-link me-2 mb-1">
                         人生决策
                       </a>
                       
-                      <a href="/tag/%E8%AE%A4%E7%9F%A5%E7%A7%91%E5%AD%A6.html" class="badge tag-link">
+                      <a href="/tag/%E8%AE%A4%E7%9F%A5%E7%A7%91%E5%AD%A6.html" class="badge tag-link me-2 mb-1">
                         认知科学
                       </a>
                       
-                      <a href="/tag/%E7%90%86%E6%80%A7%E5%86%B3%E7%AD%96.html" class="badge tag-link">
+                      <a href="/tag/%E7%90%86%E6%80%A7%E5%86%B3%E7%AD%96.html" class="badge tag-link me-2 mb-1">
                         理性决策
                       </a>
                       
-                      <a href="/tag/%E5%86%B3%E7%AD%96%E6%A1%86%E6%9E%B6.html" class="badge tag-link">
+                      <a href="/tag/%E5%86%B3%E7%AD%96%E6%A1%86%E6%9E%B6.html" class="badge tag-link me-2 mb-1">
                         决策框架
                       </a>
                       
-                      <a href="/tag/%E4%BB%B7%E5%80%BC%E8%A7%82.html" class="badge tag-link">
+                      <a href="/tag/%E4%BB%B7%E5%80%BC%E8%A7%82.html" class="badge tag-link me-2 mb-1">
                         价值观
                       </a>
                       
-                      <a href="/tag/%E9%80%89%E6%8B%A9%E7%A7%91%E5%AD%A6.html" class="badge tag-link">
+                      <a href="/tag/%E9%80%89%E6%8B%A9%E7%A7%91%E5%AD%A6.html" class="badge tag-link me-2 mb-1">
                         选择科学
                       </a>
                       
@@ -211,56 +278,57 @@
               </div>
               
               <div class="masonry-grid-item">
-                <div class="card shadow-sm">
+                <div class="card article-card shadow-sm">
                   <div class="card-body">
-                    <h5 class="card-title">
-                      <i class="bi bi-file-earmark-text"></i>
-                      <a href="../mdhtml/人生决策的神经科学视角：大脑如何做选择.html" class="text-decoration-none">
+                    <h5 class="card-title article-title">
+                      <i class="bi bi-file-earmark-text me-2 text-primary"></i>
+                      <a href="../mdhtml/人生决策的神经科学视角：大脑如何做选择.html" class="text-decoration-none text-dark">
                         人生决策的神经科学视角：大脑如何做选择
                       </a>
                     </h5>
                     
-                      <p class="card-text">
+                      <p class="card-text text-muted mb-3">
                         从神经科学的角度探讨人生决策的机制，分析大脑在做决策时的神经过程，包括理性与感性的平衡、决策偏差的神经基础、最佳决策时机等，帮助读者理解大脑的决策机制并优化个人决策过程。
                       </p>
                       
-                        
-                          <small class="text-muted">
-                            2026-02-24
-                          </small>
-                          
+                        <div class="article-meta">
+                            
+                                <i class="bi bi-clock me-1"></i>
+                                2026-02-24
+                                
+                        </div>
                   </div>
-                  <div class="card-footer text-muted">
+                  <div class="card-footer text-muted bg-white border-top">
                     <a href="/category/%E4%BA%BA%E7%94%9F%E7%AE%A1%E7%90%86.html"
-                      class="badge bg-primary">
+                      class="badge bg-primary me-2">
                       人生管理
                     </a>
                     
-                      <a href="/tag/%E4%BA%BA%E7%94%9F%E5%86%B3%E7%AD%96.html" class="badge tag-link">
+                      <a href="/tag/%E4%BA%BA%E7%94%9F%E5%86%B3%E7%AD%96.html" class="badge tag-link me-2 mb-1">
                         人生决策
                       </a>
                       
-                      <a href="/tag/%E7%A5%9E%E7%BB%8F%E7%A7%91%E5%AD%A6.html" class="badge tag-link">
+                      <a href="/tag/%E7%A5%9E%E7%BB%8F%E7%A7%91%E5%AD%A6.html" class="badge tag-link me-2 mb-1">
                         神经科学
                       </a>
                       
-                      <a href="/tag/%E5%A4%A7%E8%84%91%E6%9C%BA%E5%88%B6.html" class="badge tag-link">
+                      <a href="/tag/%E5%A4%A7%E8%84%91%E6%9C%BA%E5%88%B6.html" class="badge tag-link me-2 mb-1">
                         大脑机制
                       </a>
                       
-                      <a href="/tag/%E5%86%B3%E7%AD%96%E5%81%8F%E5%B7%AE.html" class="badge tag-link">
+                      <a href="/tag/%E5%86%B3%E7%AD%96%E5%81%8F%E5%B7%AE.html" class="badge tag-link me-2 mb-1">
                         决策偏差
                       </a>
                       
-                      <a href="/tag/%E7%90%86%E6%80%A7%E5%86%B3%E7%AD%96.html" class="badge tag-link">
+                      <a href="/tag/%E7%90%86%E6%80%A7%E5%86%B3%E7%AD%96.html" class="badge tag-link me-2 mb-1">
                         理性决策
                       </a>
                       
-                      <a href="/tag/%E7%9B%B4%E8%A7%89%E5%86%B3%E7%AD%96.html" class="badge tag-link">
+                      <a href="/tag/%E7%9B%B4%E8%A7%89%E5%86%B3%E7%AD%96.html" class="badge tag-link me-2 mb-1">
                         直觉决策
                       </a>
                       
-                      <a href="/tag/%E8%AE%A4%E7%9F%A5%E7%A7%91%E5%AD%A6.html" class="badge tag-link">
+                      <a href="/tag/%E8%AE%A4%E7%9F%A5%E7%A7%91%E5%AD%A6.html" class="badge tag-link me-2 mb-1">
                         认知科学
                       </a>
                       
@@ -269,56 +337,57 @@
               </div>
               
               <div class="masonry-grid-item">
-                <div class="card shadow-sm">
+                <div class="card article-card shadow-sm">
                   <div class="card-body">
-                    <h5 class="card-title">
-                      <i class="bi bi-file-earmark-text"></i>
-                      <a href="../mdhtml/人生决策的成本效益分析：从经济学视角到生活实践.html" class="text-decoration-none">
+                    <h5 class="card-title article-title">
+                      <i class="bi bi-file-earmark-text me-2 text-primary"></i>
+                      <a href="../mdhtml/人生决策的成本效益分析：从经济学视角到生活实践.html" class="text-decoration-none text-dark">
                         人生决策的成本效益分析：从经济学视角到生活实践
                       </a>
                     </h5>
                     
-                      <p class="card-text">
+                      <p class="card-text text-muted mb-3">
                         探讨如何将经济学中的成本效益分析方法应用到人生决策中，建立个人决策的成本效益分析框架，包括识别隐性成本、评估长期收益、考虑机会成本等，帮助读者在面对人生重要选择时做出更明智的决策。
                       </p>
                       
-                        
-                          <small class="text-muted">
-                            2026-02-24
-                          </small>
-                          
+                        <div class="article-meta">
+                            
+                                <i class="bi bi-clock me-1"></i>
+                                2026-02-24
+                                
+                        </div>
                   </div>
-                  <div class="card-footer text-muted">
+                  <div class="card-footer text-muted bg-white border-top">
                     <a href="/category/%E4%BA%BA%E7%94%9F%E7%AE%A1%E7%90%86.html"
-                      class="badge bg-primary">
+                      class="badge bg-primary me-2">
                       人生管理
                     </a>
                     
-                      <a href="/tag/%E6%88%90%E6%9C%AC%E6%95%88%E7%9B%8A%E5%88%86%E6%9E%90.html" class="badge tag-link">
+                      <a href="/tag/%E6%88%90%E6%9C%AC%E6%95%88%E7%9B%8A%E5%88%86%E6%9E%90.html" class="badge tag-link me-2 mb-1">
                         成本效益分析
                       </a>
                       
-                      <a href="/tag/%E4%BA%BA%E7%94%9F%E5%86%B3%E7%AD%96.html" class="badge tag-link">
+                      <a href="/tag/%E4%BA%BA%E7%94%9F%E5%86%B3%E7%AD%96.html" class="badge tag-link me-2 mb-1">
                         人生决策
                       </a>
                       
-                      <a href="/tag/%E7%BB%8F%E6%B5%8E%E5%AD%A6%E8%A7%86%E8%A7%92.html" class="badge tag-link">
+                      <a href="/tag/%E7%BB%8F%E6%B5%8E%E5%AD%A6%E8%A7%86%E8%A7%92.html" class="badge tag-link me-2 mb-1">
                         经济学视角
                       </a>
                       
-                      <a href="/tag/%E6%9C%BA%E4%BC%9A%E6%88%90%E6%9C%AC.html" class="badge tag-link">
+                      <a href="/tag/%E6%9C%BA%E4%BC%9A%E6%88%90%E6%9C%AC.html" class="badge tag-link me-2 mb-1">
                         机会成本
                       </a>
                       
-                      <a href="/tag/%E9%9A%90%E6%80%A7%E6%88%90%E6%9C%AC.html" class="badge tag-link">
+                      <a href="/tag/%E9%9A%90%E6%80%A7%E6%88%90%E6%9C%AC.html" class="badge tag-link me-2 mb-1">
                         隐性成本
                       </a>
                       
-                      <a href="/tag/%E9%95%BF%E6%9C%9F%E6%94%B6%E7%9B%8A.html" class="badge tag-link">
+                      <a href="/tag/%E9%95%BF%E6%9C%9F%E6%94%B6%E7%9B%8A.html" class="badge tag-link me-2 mb-1">
                         长期收益
                       </a>
                       
-                      <a href="/tag/%E5%86%B3%E7%AD%96%E6%A1%86%E6%9E%B6.html" class="badge tag-link">
+                      <a href="/tag/%E5%86%B3%E7%AD%96%E6%A1%86%E6%9E%B6.html" class="badge tag-link me-2 mb-1">
                         决策框架
                       </a>
                       
@@ -327,56 +396,57 @@
               </div>
               
               <div class="masonry-grid-item">
-                <div class="card shadow-sm">
+                <div class="card article-card shadow-sm">
                   <div class="card-body">
-                    <h5 class="card-title">
-                      <i class="bi bi-file-earmark-text"></i>
-                      <a href="../mdhtml/不确定性的心理学：如何在不确定世界中保持掌控感.html" class="text-decoration-none">
+                    <h5 class="card-title article-title">
+                      <i class="bi bi-file-earmark-text me-2 text-primary"></i>
+                      <a href="../mdhtml/不确定性的心理学：如何在不确定世界中保持掌控感.html" class="text-decoration-none text-dark">
                         不确定性的心理学：如何在不确定世界中保持掌控感
                       </a>
                     </h5>
                     
-                      <p class="card-text">
+                      <p class="card-text text-muted mb-3">
                         从心理学角度探讨不确定性的本质和影响，分析人们对不确定性的认知和情绪反应，提供实用的策略来管理不确定性带来的焦虑，帮助读者在不确定的世界中建立内在的掌控感和适应能力。
                       </p>
                       
-                        
-                          <small class="text-muted">
-                            2026-02-24
-                          </small>
-                          
+                        <div class="article-meta">
+                            
+                                <i class="bi bi-clock me-1"></i>
+                                2026-02-24
+                                
+                        </div>
                   </div>
-                  <div class="card-footer text-muted">
+                  <div class="card-footer text-muted bg-white border-top">
                     <a href="/category/%E4%BA%BA%E7%94%9F%E7%AE%A1%E7%90%86.html"
-                      class="badge bg-primary">
+                      class="badge bg-primary me-2">
                       人生管理
                     </a>
                     
-                      <a href="/tag/%E4%B8%8D%E7%A1%AE%E5%AE%9A%E6%80%A7.html" class="badge tag-link">
+                      <a href="/tag/%E4%B8%8D%E7%A1%AE%E5%AE%9A%E6%80%A7.html" class="badge tag-link me-2 mb-1">
                         不确定性
                       </a>
                       
-                      <a href="/tag/%E5%BF%83%E7%90%86%E5%AD%A6.html" class="badge tag-link">
+                      <a href="/tag/%E5%BF%83%E7%90%86%E5%AD%A6.html" class="badge tag-link me-2 mb-1">
                         心理学
                       </a>
                       
-                      <a href="/tag/%E6%8E%8C%E6%8E%A7%E6%84%9F.html" class="badge tag-link">
+                      <a href="/tag/%E6%8E%8C%E6%8E%A7%E6%84%9F.html" class="badge tag-link me-2 mb-1">
                         掌控感
                       </a>
                       
-                      <a href="/tag/%E7%84%A6%E8%99%91%E7%AE%A1%E7%90%86.html" class="badge tag-link">
+                      <a href="/tag/%E7%84%A6%E8%99%91%E7%AE%A1%E7%90%86.html" class="badge tag-link me-2 mb-1">
                         焦虑管理
                       </a>
                       
-                      <a href="/tag/%E9%80%82%E5%BA%94%E8%83%BD%E5%8A%9B.html" class="badge tag-link">
+                      <a href="/tag/%E9%80%82%E5%BA%94%E8%83%BD%E5%8A%9B.html" class="badge tag-link me-2 mb-1">
                         适应能力
                       </a>
                       
-                      <a href="/tag/%E5%BF%83%E7%90%86%E9%9F%A7%E6%80%A7.html" class="badge tag-link">
+                      <a href="/tag/%E5%BF%83%E7%90%86%E9%9F%A7%E6%80%A7.html" class="badge tag-link me-2 mb-1">
                         心理韧性
                       </a>
                       
-                      <a href="/tag/%E4%BA%BA%E7%94%9F%E5%86%B3%E7%AD%96.html" class="badge tag-link">
+                      <a href="/tag/%E4%BA%BA%E7%94%9F%E5%86%B3%E7%AD%96.html" class="badge tag-link me-2 mb-1">
                         人生决策
                       </a>
                       
@@ -385,48 +455,49 @@
               </div>
               
               <div class="masonry-grid-item">
-                <div class="card shadow-sm">
+                <div class="card article-card shadow-sm">
                   <div class="card-body">
-                    <h5 class="card-title">
-                      <i class="bi bi-file-earmark-text"></i>
-                      <a href="../mdhtml/长期主义与概率彩票：坚持是否是另一种形式的赌徒谬误.html" class="text-decoration-none">
+                    <h5 class="card-title article-title">
+                      <i class="bi bi-file-earmark-text me-2 text-primary"></i>
+                      <a href="../mdhtml/长期主义与概率彩票：坚持是否是另一种形式的赌徒谬误.html" class="text-decoration-none text-dark">
                         长期主义与概率彩票：坚持是否是另一种形式的赌徒谬误
                       </a>
                     </h5>
                     
-                      <p class="card-text">
+                      <p class="card-text text-muted mb-3">
                         探讨长期主义与概率的关系，分析坚持长期主义是否是对概率彩票的持续购买，以及如何论证这份坚持不是另一种形式的赌徒谬误
                       </p>
                       
-                        
-                          <small class="text-muted">
-                            2026-02-11
-                          </small>
-                          
+                        <div class="article-meta">
+                            
+                                <i class="bi bi-clock me-1"></i>
+                                2026-02-11
+                                
+                        </div>
                   </div>
-                  <div class="card-footer text-muted">
+                  <div class="card-footer text-muted bg-white border-top">
                     <a href="/category/%E4%BA%BA%E7%94%9F%E5%93%B2%E5%AD%A6.html"
-                      class="badge bg-primary">
+                      class="badge bg-primary me-2">
                       人生哲学
                     </a>
                     
-                      <a href="/tag/%E9%95%BF%E6%9C%9F%E4%B8%BB%E4%B9%89.html" class="badge tag-link">
+                      <a href="/tag/%E9%95%BF%E6%9C%9F%E4%B8%BB%E4%B9%89.html" class="badge tag-link me-2 mb-1">
                         长期主义
                       </a>
                       
-                      <a href="/tag/%E6%A6%82%E7%8E%87.html" class="badge tag-link">
+                      <a href="/tag/%E6%A6%82%E7%8E%87.html" class="badge tag-link me-2 mb-1">
                         概率
                       </a>
                       
-                      <a href="/tag/%E8%B5%8C%E5%BE%92%E8%B0%AC%E8%AF%AF.html" class="badge tag-link">
+                      <a href="/tag/%E8%B5%8C%E5%BE%92%E8%B0%AC%E8%AF%AF.html" class="badge tag-link me-2 mb-1">
                         赌徒谬误
                       </a>
                       
-                      <a href="/tag/%E5%9D%9A%E6%8C%81.html" class="badge tag-link">
+                      <a href="/tag/%E5%9D%9A%E6%8C%81.html" class="badge tag-link me-2 mb-1">
                         坚持
                       </a>
                       
-                      <a href="/tag/%E4%BA%BA%E7%94%9F%E5%86%B3%E7%AD%96.html" class="badge tag-link">
+                      <a href="/tag/%E4%BA%BA%E7%94%9F%E5%86%B3%E7%AD%96.html" class="badge tag-link me-2 mb-1">
                         人生决策
                       </a>
                       
@@ -435,48 +506,49 @@
               </div>
               
               <div class="masonry-grid-item">
-                <div class="card shadow-sm">
+                <div class="card article-card shadow-sm">
                   <div class="card-body">
-                    <h5 class="card-title">
-                      <i class="bi bi-file-earmark-text"></i>
-                      <a href="../mdhtml/时间循环与重新开始：割舍沉没成本是打破循环还是跳入新循环.html" class="text-decoration-none">
+                    <h5 class="card-title article-title">
+                      <i class="bi bi-file-earmark-text me-2 text-primary"></i>
+                      <a href="../mdhtml/时间循环与重新开始：割舍沉没成本是打破循环还是跳入新循环.html" class="text-decoration-none text-dark">
                         时间循环与重新开始：割舍沉没成本是打破循环还是跳入新循环
                       </a>
                     </h5>
                     
-                      <p class="card-text">
+                      <p class="card-text text-muted mb-3">
                         用时间循环理论分析割舍沉没成本、重新开张公众号的行为，探讨这是打破了无效内容循环，还是跳入了一个名为&#34;从0开始&#34;的新循环
                       </p>
                       
-                        
-                          <small class="text-muted">
-                            2026-02-11
-                          </small>
-                          
+                        <div class="article-meta">
+                            
+                                <i class="bi bi-clock me-1"></i>
+                                2026-02-11
+                                
+                        </div>
                   </div>
-                  <div class="card-footer text-muted">
+                  <div class="card-footer text-muted bg-white border-top">
                     <a href="/category/%E4%BA%BA%E7%94%9F%E5%93%B2%E5%AD%A6.html"
-                      class="badge bg-primary">
+                      class="badge bg-primary me-2">
                       人生哲学
                     </a>
                     
-                      <a href="/tag/%E6%97%B6%E9%97%B4%E5%BE%AA%E7%8E%AF.html" class="badge tag-link">
+                      <a href="/tag/%E6%97%B6%E9%97%B4%E5%BE%AA%E7%8E%AF.html" class="badge tag-link me-2 mb-1">
                         时间循环
                       </a>
                       
-                      <a href="/tag/%E6%B2%89%E6%B2%A1%E6%88%90%E6%9C%AC.html" class="badge tag-link">
+                      <a href="/tag/%E6%B2%89%E6%B2%A1%E6%88%90%E6%9C%AC.html" class="badge tag-link me-2 mb-1">
                         沉没成本
                       </a>
                       
-                      <a href="/tag/%E9%87%8D%E6%96%B0%E5%BC%80%E5%A7%8B.html" class="badge tag-link">
+                      <a href="/tag/%E9%87%8D%E6%96%B0%E5%BC%80%E5%A7%8B.html" class="badge tag-link me-2 mb-1">
                         重新开始
                       </a>
                       
-                      <a href="/tag/%E4%BA%BA%E7%94%9F%E5%86%B3%E7%AD%96.html" class="badge tag-link">
+                      <a href="/tag/%E4%BA%BA%E7%94%9F%E5%86%B3%E7%AD%96.html" class="badge tag-link me-2 mb-1">
                         人生决策
                       </a>
                       
-                      <a href="/tag/%E5%86%85%E5%AE%B9%E5%88%9B%E4%BD%9C.html" class="badge tag-link">
+                      <a href="/tag/%E5%86%85%E5%AE%B9%E5%88%9B%E4%BD%9C.html" class="badge tag-link me-2 mb-1">
                         内容创作
                       </a>
                       
@@ -486,8 +558,8 @@
               
           </div>
 
-          <div class="mt-4 text-center">
-            <a href="标签列表.html" class="btn btn-outline-primary"><i class="bi bi-arrow-left"></i> 返回标签列表</a>
+          <div class="mt-6 text-center">
+            <a href="标签列表.html" class="btn btn-outline-primary back-button"><i class="bi bi-arrow-left me-2"></i> 返回标签列表</a>
           </div>
         </div>
       </div>
@@ -511,7 +583,7 @@
             itemSelector: '.masonry-grid-item',
             columnWidth: '.masonry-grid-item',
             percentPosition: true,
-            gutter: 10 // 可选，添加卡片间的间距
+            gutter: 15 // 增加间距，提升视觉效果
           });
         });
       </script>

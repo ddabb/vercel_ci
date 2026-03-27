@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
 
 <head>
   <meta charset="UTF-8">
@@ -9,7 +9,7 @@
   <meta name="description" content="无人自助站的【家庭教育】的标签列表页面，汇集了关于【家庭教育】标签相关的文章和资讯，方便您快速找到感兴趣的内容。">
   <meta name="keywords" content="无人自助站,家庭教育">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>标签文章列表</title>
+  <title>家庭教育标签 - 无人自助站</title>
 
   <link rel="icon" href="../logo.svg" type="image/svg+xml">
   <link rel="stylesheet" href="../css/style.css">
@@ -27,6 +27,62 @@
   <!-- 引入Masonry -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/masonry/4.2.2/masonry.pkgd.min.js"></script>
 
+  <style>
+        .tag-header {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            color: white;
+            padding: 2rem;
+            border-radius: 8px;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        .tag-title {
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+        .article-card {
+            transition: all 0.3s ease;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        .article-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+        }
+        .article-title {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            transition: color 0.3s ease;
+        }
+        .article-title:hover {
+            color: #0d6efd;
+        }
+        .article-meta {
+            font-size: 0.85rem;
+            color: #6c757d;
+        }
+        .tag-link {
+            background-color: #e9ecef;
+            color: #495057;
+            transition: all 0.2s ease;
+        }
+        .tag-link:hover {
+            background-color: #dee2e6;
+            color: #212529;
+        }
+        .back-button {
+            transition: all 0.3s ease;
+        }
+        .back-button:hover {
+            transform: translateX(-3px);
+        }
+        .article-count {
+            font-size: 0.9rem;
+            opacity: 0.9;
+        }
+    </style>
 </head>
 
 <body>
@@ -80,7 +136,7 @@
     <main class="container-fluid mt-4">
       <div class="row">
         <div class="col-lg-8 col-md-12 mx-auto">
-          <nav aria-label="breadcrumb">
+          <nav aria-label="breadcrumb" class="mb-4">
             <ol class="breadcrumb">
               <li class="breadcrumb-item"><a href="/html/index.html">首页</a></li>
               <li class="breadcrumb-item"><a href="标签列表.html">标签列表</a></li>
@@ -89,54 +145,64 @@
               </li>
             </ol>
           </nav>
-          <h1 style="font-size: 1.5em; margin: 0.5em 0;">
-            家庭教育标签的文章和资讯
-        </h1>
+          
+          <!-- 标签头部 -->
+          <div class="tag-header">
+              <h1 class="tag-title">
+                  <i class="bi bi-tags me-2"></i>
+                  家庭教育
+              </h1>
+              <p class="article-count">
+                  共 14 篇文章
+              </p>
+          </div>
+          
           <div class="masonry-grid">
             
               <div class="masonry-grid-item">
-                <div class="card shadow-sm">
+                <div class="card article-card shadow-sm">
                   <div class="card-body">
-                    <h5 class="card-title">
-                      <i class="bi bi-file-earmark-text"></i>
-                      <a href="../mdhtml/因材施教2.0：2026年特殊需求儿童家庭个性化教育方案设计.html" class="text-decoration-none">
+                    <h5 class="card-title article-title">
+                      <i class="bi bi-file-earmark-text me-2 text-primary"></i>
+                      <a href="../mdhtml/因材施教2.0：2026年特殊需求儿童家庭个性化教育方案设计.html" class="text-decoration-none text-dark">
                         因材施教2.0：2026年特殊需求儿童家庭个性化教育方案设计
                       </a>
                     </h5>
                     
-                      <p class="card-text">
+                      <p class="card-text text-muted mb-3">
                         本文填补教育领域细分需求，为有特殊需求儿童的家庭提供专业指导，帮助设计个性化教育方案。
                       </p>
                       
-                        
-                          <small class="text-muted">
-                            2026-02-28
-                          </small>
-                          
+                        <div class="article-meta">
+                            
+                                <i class="bi bi-clock me-1"></i>
+                                2026-02-28
+                                
+                        </div>
                   </div>
-                  <div class="card-footer text-muted">
+                  <div class="card-footer text-muted bg-white border-top">
                     <a href="/category/%E6%95%99%E8%82%B2%E6%88%90%E9%95%BF.html"
-                      class="badge bg-primary">
+                      class="badge bg-primary me-2">
                       教育成长
                     </a>
                     
-                      <a href="/tag/%E7%89%B9%E6%AE%8A%E9%9C%80%E6%B1%82%E5%84%BF%E7%AB%A5.html" class="badge tag-link">
+                      <a href="/tag/%E7%89%B9%E6%AE%8A%E9%9C%80%E6%B1%82%E5%84%BF%E7%AB%A5.html" class="badge tag-link me-2 mb-1">
                         特殊需求儿童
                       </a>
                       
-                      <a href="/tag/%E4%B8%AA%E6%80%A7%E5%8C%96%E6%95%99%E8%82%B2.html" class="badge tag-link">
+                      <a href="/tag/%E4%B8%AA%E6%80%A7%E5%8C%96%E6%95%99%E8%82%B2.html" class="badge tag-link me-2 mb-1">
                         个性化教育
                       </a>
                       
-                      <a href="/tag/%E5%AE%B6%E5%BA%AD%E6%95%99%E8%82%B2.html" class="badge tag-link">
+                      <a href="/tag/%E5%AE%B6%E5%BA%AD%E6%95%99%E8%82%B2.html" class="badge tag-link me-2 mb-1">
                         家庭教育
                       </a>
                       
-                      <a href="/tag/2026%E5%B9%B4.html" class="badge tag-link">
+                      <a href="/tag/2026%E5%B9%B4.html" class="badge tag-link me-2 mb-1">
                         2026年
                       </a>
                       
-                      <a href="/tag/%E5%9B%A0%E6%9D%90%E6%96%BD%E6%95%99.html" class="badge tag-link">
+                      <a href="/tag/%E5%9B%A0%E6%9D%90%E6%96%BD%E6%95%99.html" class="badge tag-link me-2 mb-1">
                         因材施教
                       </a>
                       
@@ -145,48 +211,49 @@
               </div>
               
               <div class="masonry-grid-item">
-                <div class="card shadow-sm">
+                <div class="card article-card shadow-sm">
                   <div class="card-body">
-                    <h5 class="card-title">
-                      <i class="bi bi-file-earmark-text"></i>
-                      <a href="../mdhtml/短视频时代的孩子：2026年家长必读的青少年数字素养培养指南.html" class="text-decoration-none">
+                    <h5 class="card-title article-title">
+                      <i class="bi bi-file-earmark-text me-2 text-primary"></i>
+                      <a href="../mdhtml/短视频时代的孩子：2026年家长必读的青少年数字素养培养指南.html" class="text-decoration-none text-dark">
                         短视频时代的孩子：2026年家长必读的青少年数字素养培养指南
                       </a>
                     </h5>
                     
-                      <p class="card-text">
+                      <p class="card-text text-muted mb-3">
                         本文针对家庭教育热点，提供平衡数字工具使用与健康成长的专业建议，帮助家长培养孩子的数字素养。
                       </p>
                       
-                        
-                          <small class="text-muted">
-                            2026-02-28
-                          </small>
-                          
+                        <div class="article-meta">
+                            
+                                <i class="bi bi-clock me-1"></i>
+                                2026-02-28
+                                
+                        </div>
                   </div>
-                  <div class="card-footer text-muted">
+                  <div class="card-footer text-muted bg-white border-top">
                     <a href="/category/%E5%AE%B6%E5%BA%AD%E6%95%99%E8%82%B2.html"
-                      class="badge bg-primary">
+                      class="badge bg-primary me-2">
                       家庭教育
                     </a>
                     
-                      <a href="/tag/%E7%9F%AD%E8%A7%86%E9%A2%91.html" class="badge tag-link">
+                      <a href="/tag/%E7%9F%AD%E8%A7%86%E9%A2%91.html" class="badge tag-link me-2 mb-1">
                         短视频
                       </a>
                       
-                      <a href="/tag/%E6%95%B0%E5%AD%97%E7%B4%A0%E5%85%BB.html" class="badge tag-link">
+                      <a href="/tag/%E6%95%B0%E5%AD%97%E7%B4%A0%E5%85%BB.html" class="badge tag-link me-2 mb-1">
                         数字素养
                       </a>
                       
-                      <a href="/tag/%E9%9D%92%E5%B0%91%E5%B9%B4.html" class="badge tag-link">
+                      <a href="/tag/%E9%9D%92%E5%B0%91%E5%B9%B4.html" class="badge tag-link me-2 mb-1">
                         青少年
                       </a>
                       
-                      <a href="/tag/2026%E5%B9%B4.html" class="badge tag-link">
+                      <a href="/tag/2026%E5%B9%B4.html" class="badge tag-link me-2 mb-1">
                         2026年
                       </a>
                       
-                      <a href="/tag/%E5%AE%B6%E5%BA%AD%E6%95%99%E8%82%B2.html" class="badge tag-link">
+                      <a href="/tag/%E5%AE%B6%E5%BA%AD%E6%95%99%E8%82%B2.html" class="badge tag-link me-2 mb-1">
                         家庭教育
                       </a>
                       
@@ -195,48 +262,49 @@
               </div>
               
               <div class="masonry-grid-item">
-                <div class="card shadow-sm">
+                <div class="card article-card shadow-sm">
                   <div class="card-body">
-                    <h5 class="card-title">
-                      <i class="bi bi-file-earmark-text"></i>
-                      <a href="../mdhtml/如何改善亲子关系：从沟通到理解的实用指南.html" class="text-decoration-none">
+                    <h5 class="card-title article-title">
+                      <i class="bi bi-file-earmark-text me-2 text-primary"></i>
+                      <a href="../mdhtml/如何改善亲子关系：从沟通到理解的实用指南.html" class="text-decoration-none text-dark">
                         如何改善亲子关系：从沟通到理解的实用指南
                       </a>
                     </h5>
                     
-                      <p class="card-text">
+                      <p class="card-text text-muted mb-3">
                         探讨如何改善亲子关系，提供实用的方法和技巧，帮助父母和子女建立健康、和谐的关系，促进家庭幸福。
                       </p>
                       
-                        
-                          <small class="text-muted">
-                            2026-02-28
-                          </small>
-                          
+                        <div class="article-meta">
+                            
+                                <i class="bi bi-clock me-1"></i>
+                                2026-02-28
+                                
+                        </div>
                   </div>
-                  <div class="card-footer text-muted">
+                  <div class="card-footer text-muted bg-white border-top">
                     <a href="/category/%E5%AE%B6%E5%BA%AD%E5%85%B3%E7%B3%BB.html"
-                      class="badge bg-primary">
+                      class="badge bg-primary me-2">
                       家庭关系
                     </a>
                     
-                      <a href="/tag/%E4%BA%B2%E5%AD%90%E5%85%B3%E7%B3%BB.html" class="badge tag-link">
+                      <a href="/tag/%E4%BA%B2%E5%AD%90%E5%85%B3%E7%B3%BB.html" class="badge tag-link me-2 mb-1">
                         亲子关系
                       </a>
                       
-                      <a href="/tag/%E6%B2%9F%E9%80%9A%E6%8A%80%E5%B7%A7.html" class="badge tag-link">
+                      <a href="/tag/%E6%B2%9F%E9%80%9A%E6%8A%80%E5%B7%A7.html" class="badge tag-link me-2 mb-1">
                         沟通技巧
                       </a>
                       
-                      <a href="/tag/%E5%AE%B6%E5%BA%AD%E6%95%99%E8%82%B2.html" class="badge tag-link">
+                      <a href="/tag/%E5%AE%B6%E5%BA%AD%E6%95%99%E8%82%B2.html" class="badge tag-link me-2 mb-1">
                         家庭教育
                       </a>
                       
-                      <a href="/tag/%E4%BA%B2%E5%AD%90%E6%B2%9F%E9%80%9A.html" class="badge tag-link">
+                      <a href="/tag/%E4%BA%B2%E5%AD%90%E6%B2%9F%E9%80%9A.html" class="badge tag-link me-2 mb-1">
                         亲子沟通
                       </a>
                       
-                      <a href="/tag/%E5%AE%B6%E5%BA%AD%E5%92%8C%E8%B0%90.html" class="badge tag-link">
+                      <a href="/tag/%E5%AE%B6%E5%BA%AD%E5%92%8C%E8%B0%90.html" class="badge tag-link me-2 mb-1">
                         家庭和谐
                       </a>
                       
@@ -245,48 +313,49 @@
               </div>
               
               <div class="masonry-grid-item">
-                <div class="card shadow-sm">
+                <div class="card article-card shadow-sm">
                   <div class="card-body">
-                    <h5 class="card-title">
-                      <i class="bi bi-file-earmark-text"></i>
-                      <a href="../mdhtml/如何提高孩子的学习动力.html" class="text-decoration-none">
+                    <h5 class="card-title article-title">
+                      <i class="bi bi-file-earmark-text me-2 text-primary"></i>
+                      <a href="../mdhtml/如何提高孩子的学习动力.html" class="text-decoration-none text-dark">
                         如何提高孩子的学习动力
                       </a>
                     </h5>
                     
-                      <p class="card-text">
+                      <p class="card-text text-muted mb-3">
                         探讨如何提高孩子的学习动力，包括内在动机培养、目标设定、学习环境优化等方面的实用建议。
                       </p>
                       
-                        
-                          <small class="text-muted">
-                            2026-02-28
-                          </small>
-                          
+                        <div class="article-meta">
+                            
+                                <i class="bi bi-clock me-1"></i>
+                                2026-02-28
+                                
+                        </div>
                   </div>
-                  <div class="card-footer text-muted">
+                  <div class="card-footer text-muted bg-white border-top">
                     <a href="/category/%E6%95%99%E8%82%B2%E5%AD%A6%E4%B9%A0.html"
-                      class="badge bg-primary">
+                      class="badge bg-primary me-2">
                       教育学习
                     </a>
                     
-                      <a href="/tag/%E5%AD%A6%E4%B9%A0%E5%8A%A8%E5%8A%9B.html" class="badge tag-link">
+                      <a href="/tag/%E5%AD%A6%E4%B9%A0%E5%8A%A8%E5%8A%9B.html" class="badge tag-link me-2 mb-1">
                         学习动力
                       </a>
                       
-                      <a href="/tag/%E5%84%BF%E7%AB%A5%E6%95%99%E8%82%B2.html" class="badge tag-link">
+                      <a href="/tag/%E5%84%BF%E7%AB%A5%E6%95%99%E8%82%B2.html" class="badge tag-link me-2 mb-1">
                         儿童教育
                       </a>
                       
-                      <a href="/tag/%E5%AD%A6%E4%B9%A0%E6%96%B9%E6%B3%95.html" class="badge tag-link">
+                      <a href="/tag/%E5%AD%A6%E4%B9%A0%E6%96%B9%E6%B3%95.html" class="badge tag-link me-2 mb-1">
                         学习方法
                       </a>
                       
-                      <a href="/tag/%E5%AE%B6%E5%BA%AD%E6%95%99%E8%82%B2.html" class="badge tag-link">
+                      <a href="/tag/%E5%AE%B6%E5%BA%AD%E6%95%99%E8%82%B2.html" class="badge tag-link me-2 mb-1">
                         家庭教育
                       </a>
                       
-                      <a href="/tag/%E5%AD%A6%E4%B9%A0%E5%85%B4%E8%B6%A3.html" class="badge tag-link">
+                      <a href="/tag/%E5%AD%A6%E4%B9%A0%E5%85%B4%E8%B6%A3.html" class="badge tag-link me-2 mb-1">
                         学习兴趣
                       </a>
                       
@@ -295,48 +364,49 @@
               </div>
               
               <div class="masonry-grid-item">
-                <div class="card shadow-sm">
+                <div class="card article-card shadow-sm">
                   <div class="card-body">
-                    <h5 class="card-title">
-                      <i class="bi bi-file-earmark-text"></i>
-                      <a href="../mdhtml/如何培养孩子的责任感.html" class="text-decoration-none">
+                    <h5 class="card-title article-title">
+                      <i class="bi bi-file-earmark-text me-2 text-primary"></i>
+                      <a href="../mdhtml/如何培养孩子的责任感.html" class="text-decoration-none text-dark">
                         如何培养孩子的责任感
                       </a>
                     </h5>
                     
-                      <p class="card-text">
+                      <p class="card-text text-muted mb-3">
                         探讨如何在家庭教育中培养孩子的责任感，包括具体方法、注意事项以及不同年龄段的培养重点。
                       </p>
                       
-                        
-                          <small class="text-muted">
-                            2026-02-28
-                          </small>
-                          
+                        <div class="article-meta">
+                            
+                                <i class="bi bi-clock me-1"></i>
+                                2026-02-28
+                                
+                        </div>
                   </div>
-                  <div class="card-footer text-muted">
+                  <div class="card-footer text-muted bg-white border-top">
                     <a href="/category/%E5%AE%B6%E5%BA%AD%E6%95%99%E8%82%B2.html"
-                      class="badge bg-primary">
+                      class="badge bg-primary me-2">
                       家庭教育
                     </a>
                     
-                      <a href="/tag/%E8%B4%A3%E4%BB%BB%E6%84%9F.html" class="badge tag-link">
+                      <a href="/tag/%E8%B4%A3%E4%BB%BB%E6%84%9F.html" class="badge tag-link me-2 mb-1">
                         责任感
                       </a>
                       
-                      <a href="/tag/%E5%AE%B6%E5%BA%AD%E6%95%99%E8%82%B2.html" class="badge tag-link">
+                      <a href="/tag/%E5%AE%B6%E5%BA%AD%E6%95%99%E8%82%B2.html" class="badge tag-link me-2 mb-1">
                         家庭教育
                       </a>
                       
-                      <a href="/tag/%E5%84%BF%E7%AB%A5%E6%95%99%E8%82%B2.html" class="badge tag-link">
+                      <a href="/tag/%E5%84%BF%E7%AB%A5%E6%95%99%E8%82%B2.html" class="badge tag-link me-2 mb-1">
                         儿童教育
                       </a>
                       
-                      <a href="/tag/%E6%80%A7%E6%A0%BC%E5%9F%B9%E5%85%BB.html" class="badge tag-link">
+                      <a href="/tag/%E6%80%A7%E6%A0%BC%E5%9F%B9%E5%85%BB.html" class="badge tag-link me-2 mb-1">
                         性格培养
                       </a>
                       
-                      <a href="/tag/%E6%88%90%E9%95%BF%E5%8F%91%E5%B1%95.html" class="badge tag-link">
+                      <a href="/tag/%E6%88%90%E9%95%BF%E5%8F%91%E5%B1%95.html" class="badge tag-link me-2 mb-1">
                         成长发展
                       </a>
                       
@@ -345,48 +415,49 @@
               </div>
               
               <div class="masonry-grid-item">
-                <div class="card shadow-sm">
+                <div class="card article-card shadow-sm">
                   <div class="card-body">
-                    <h5 class="card-title">
-                      <i class="bi bi-file-earmark-text"></i>
-                      <a href="../mdhtml/如何培养健康的亲子关系.html" class="text-decoration-none">
+                    <h5 class="card-title article-title">
+                      <i class="bi bi-file-earmark-text me-2 text-primary"></i>
+                      <a href="../mdhtml/如何培养健康的亲子关系.html" class="text-decoration-none text-dark">
                         如何培养健康的亲子关系
                       </a>
                     </h5>
                     
-                      <p class="card-text">
+                      <p class="card-text text-muted mb-3">
                         探讨如何培养健康的亲子关系，包括沟通方法、情感表达、边界设定等方面的实用建议。
                       </p>
                       
-                        
-                          <small class="text-muted">
-                            2026-02-28
-                          </small>
-                          
+                        <div class="article-meta">
+                            
+                                <i class="bi bi-clock me-1"></i>
+                                2026-02-28
+                                
+                        </div>
                   </div>
-                  <div class="card-footer text-muted">
+                  <div class="card-footer text-muted bg-white border-top">
                     <a href="/category/%E5%AE%B6%E5%BA%AD%E6%95%99%E8%82%B2.html"
-                      class="badge bg-primary">
+                      class="badge bg-primary me-2">
                       家庭教育
                     </a>
                     
-                      <a href="/tag/%E4%BA%B2%E5%AD%90%E5%85%B3%E7%B3%BB.html" class="badge tag-link">
+                      <a href="/tag/%E4%BA%B2%E5%AD%90%E5%85%B3%E7%B3%BB.html" class="badge tag-link me-2 mb-1">
                         亲子关系
                       </a>
                       
-                      <a href="/tag/%E5%AE%B6%E5%BA%AD%E6%95%99%E8%82%B2.html" class="badge tag-link">
+                      <a href="/tag/%E5%AE%B6%E5%BA%AD%E6%95%99%E8%82%B2.html" class="badge tag-link me-2 mb-1">
                         家庭教育
                       </a>
                       
-                      <a href="/tag/%E6%B2%9F%E9%80%9A%E6%8A%80%E5%B7%A7.html" class="badge tag-link">
+                      <a href="/tag/%E6%B2%9F%E9%80%9A%E6%8A%80%E5%B7%A7.html" class="badge tag-link me-2 mb-1">
                         沟通技巧
                       </a>
                       
-                      <a href="/tag/%E6%83%85%E6%84%9F%E8%BF%9E%E6%8E%A5.html" class="badge tag-link">
+                      <a href="/tag/%E6%83%85%E6%84%9F%E8%BF%9E%E6%8E%A5.html" class="badge tag-link me-2 mb-1">
                         情感连接
                       </a>
                       
-                      <a href="/tag/%E6%88%90%E9%95%BF%E5%8F%91%E5%B1%95.html" class="badge tag-link">
+                      <a href="/tag/%E6%88%90%E9%95%BF%E5%8F%91%E5%B1%95.html" class="badge tag-link me-2 mb-1">
                         成长发展
                       </a>
                       
@@ -395,48 +466,49 @@
               </div>
               
               <div class="masonry-grid-item">
-                <div class="card shadow-sm">
+                <div class="card article-card shadow-sm">
                   <div class="card-body">
-                    <h5 class="card-title">
-                      <i class="bi bi-file-earmark-text"></i>
-                      <a href="../mdhtml/如何在数字时代保护儿童安全.html" class="text-decoration-none">
+                    <h5 class="card-title article-title">
+                      <i class="bi bi-file-earmark-text me-2 text-primary"></i>
+                      <a href="../mdhtml/如何在数字时代保护儿童安全.html" class="text-decoration-none text-dark">
                         如何在数字时代保护儿童安全
                       </a>
                     </h5>
                     
-                      <p class="card-text">
+                      <p class="card-text text-muted mb-3">
                         探讨在数字时代如何保护儿童安全，包括网络安全、隐私保护、内容过滤等方面的实用建议。
                       </p>
                       
-                        
-                          <small class="text-muted">
-                            2026-02-28
-                          </small>
-                          
+                        <div class="article-meta">
+                            
+                                <i class="bi bi-clock me-1"></i>
+                                2026-02-28
+                                
+                        </div>
                   </div>
-                  <div class="card-footer text-muted">
+                  <div class="card-footer text-muted bg-white border-top">
                     <a href="/category/%E5%AE%B6%E5%BA%AD%E6%95%99%E8%82%B2.html"
-                      class="badge bg-primary">
+                      class="badge bg-primary me-2">
                       家庭教育
                     </a>
                     
-                      <a href="/tag/%E5%84%BF%E7%AB%A5%E5%AE%89%E5%85%A8.html" class="badge tag-link">
+                      <a href="/tag/%E5%84%BF%E7%AB%A5%E5%AE%89%E5%85%A8.html" class="badge tag-link me-2 mb-1">
                         儿童安全
                       </a>
                       
-                      <a href="/tag/%E6%95%B0%E5%AD%97%E6%97%B6%E4%BB%A3.html" class="badge tag-link">
+                      <a href="/tag/%E6%95%B0%E5%AD%97%E6%97%B6%E4%BB%A3.html" class="badge tag-link me-2 mb-1">
                         数字时代
                       </a>
                       
-                      <a href="/tag/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8.html" class="badge tag-link">
+                      <a href="/tag/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8.html" class="badge tag-link me-2 mb-1">
                         网络安全
                       </a>
                       
-                      <a href="/tag/%E5%AE%B6%E5%BA%AD%E6%95%99%E8%82%B2.html" class="badge tag-link">
+                      <a href="/tag/%E5%AE%B6%E5%BA%AD%E6%95%99%E8%82%B2.html" class="badge tag-link me-2 mb-1">
                         家庭教育
                       </a>
                       
-                      <a href="/tag/%E4%BA%B2%E5%AD%90%E6%B2%9F%E9%80%9A.html" class="badge tag-link">
+                      <a href="/tag/%E4%BA%B2%E5%AD%90%E6%B2%9F%E9%80%9A.html" class="badge tag-link me-2 mb-1">
                         亲子沟通
                       </a>
                       
@@ -445,48 +517,49 @@
               </div>
               
               <div class="masonry-grid-item">
-                <div class="card shadow-sm">
+                <div class="card article-card shadow-sm">
                   <div class="card-body">
-                    <h5 class="card-title">
-                      <i class="bi bi-file-earmark-text"></i>
-                      <a href="../mdhtml/家庭亲子活动实用指南.html" class="text-decoration-none">
+                    <h5 class="card-title article-title">
+                      <i class="bi bi-file-earmark-text me-2 text-primary"></i>
+                      <a href="../mdhtml/家庭亲子活动实用指南.html" class="text-decoration-none text-dark">
                         家庭亲子活动实用指南
                       </a>
                     </h5>
                     
-                      <p class="card-text">
+                      <p class="card-text text-muted mb-3">
                         本指南详细介绍适合不同年龄段孩子的家庭亲子活动，帮助您增进亲子关系，促进孩子的全面发展。
                       </p>
                       
-                        
-                          <small class="text-muted">
-                            2026-02-24
-                          </small>
-                          
+                        <div class="article-meta">
+                            
+                                <i class="bi bi-clock me-1"></i>
+                                2026-02-24
+                                
+                        </div>
                   </div>
-                  <div class="card-footer text-muted">
+                  <div class="card-footer text-muted bg-white border-top">
                     <a href="/category/%E5%AE%B6%E5%BA%AD%E6%95%99%E8%82%B2.html"
-                      class="badge bg-primary">
+                      class="badge bg-primary me-2">
                       家庭教育
                     </a>
                     
-                      <a href="/tag/%E4%BA%B2%E5%AD%90%E6%B4%BB%E5%8A%A8.html" class="badge tag-link">
+                      <a href="/tag/%E4%BA%B2%E5%AD%90%E6%B4%BB%E5%8A%A8.html" class="badge tag-link me-2 mb-1">
                         亲子活动
                       </a>
                       
-                      <a href="/tag/%E5%AE%B6%E5%BA%AD%E6%95%99%E8%82%B2.html" class="badge tag-link">
+                      <a href="/tag/%E5%AE%B6%E5%BA%AD%E6%95%99%E8%82%B2.html" class="badge tag-link me-2 mb-1">
                         家庭教育
                       </a>
                       
-                      <a href="/tag/%E4%BA%B2%E5%AD%90%E5%85%B3%E7%B3%BB.html" class="badge tag-link">
+                      <a href="/tag/%E4%BA%B2%E5%AD%90%E5%85%B3%E7%B3%BB.html" class="badge tag-link me-2 mb-1">
                         亲子关系
                       </a>
                       
-                      <a href="/tag/%E5%84%BF%E7%AB%A5%E6%88%90%E9%95%BF.html" class="badge tag-link">
+                      <a href="/tag/%E5%84%BF%E7%AB%A5%E6%88%90%E9%95%BF.html" class="badge tag-link me-2 mb-1">
                         儿童成长
                       </a>
                       
-                      <a href="/tag/%E7%94%9F%E6%B4%BB%E6%8A%80%E5%B7%A7.html" class="badge tag-link">
+                      <a href="/tag/%E7%94%9F%E6%B4%BB%E6%8A%80%E5%B7%A7.html" class="badge tag-link me-2 mb-1">
                         生活技巧
                       </a>
                       
@@ -495,68 +568,69 @@
               </div>
               
               <div class="masonry-grid-item">
-                <div class="card shadow-sm">
+                <div class="card article-card shadow-sm">
                   <div class="card-body">
-                    <h5 class="card-title">
-                      <i class="bi bi-file-earmark-text"></i>
-                      <a href="../mdhtml/如何培养孩子的创造力？实用指南.html" class="text-decoration-none">
+                    <h5 class="card-title article-title">
+                      <i class="bi bi-file-earmark-text me-2 text-primary"></i>
+                      <a href="../mdhtml/如何培养孩子的创造力？实用指南.html" class="text-decoration-none text-dark">
                         创造力的培养：点亮孩子的创新思维
                       </a>
                     </h5>
                     
-                      <p class="card-text">
+                      <p class="card-text text-muted mb-3">
                         全面解析如何培养孩子的创造力，从环境营造到方法指导，从游戏设计到思维训练，提供具体的创意活动、家庭互动策略和学校教育建议，帮助家长和教育者激发孩子的创新潜能，培养未来的创新人才。
                       </p>
                       
-                        
-                          <small class="text-muted">
-                            2026-02-24
-                          </small>
-                          
+                        <div class="article-meta">
+                            
+                                <i class="bi bi-clock me-1"></i>
+                                2026-02-24
+                                
+                        </div>
                   </div>
-                  <div class="card-footer text-muted">
+                  <div class="card-footer text-muted bg-white border-top">
                     <a href="/category/%E5%AE%B6%E5%BA%AD%E6%95%99%E8%82%B2.html"
-                      class="badge bg-primary">
+                      class="badge bg-primary me-2">
                       家庭教育
                     </a>
                     
-                      <a href="/tag/%E5%88%9B%E9%80%A0%E5%8A%9B%E5%9F%B9%E5%85%BB.html" class="badge tag-link">
+                      <a href="/tag/%E5%88%9B%E9%80%A0%E5%8A%9B%E5%9F%B9%E5%85%BB.html" class="badge tag-link me-2 mb-1">
                         创造力培养
                       </a>
                       
-                      <a href="/tag/%E5%84%BF%E7%AB%A5%E6%95%99%E8%82%B2.html" class="badge tag-link">
+                      <a href="/tag/%E5%84%BF%E7%AB%A5%E6%95%99%E8%82%B2.html" class="badge tag-link me-2 mb-1">
                         儿童教育
                       </a>
                       
-                      <a href="/tag/%E5%88%9B%E6%96%B0%E6%80%9D%E7%BB%B4.html" class="badge tag-link">
+                      <a href="/tag/%E5%88%9B%E6%96%B0%E6%80%9D%E7%BB%B4.html" class="badge tag-link me-2 mb-1">
                         创新思维
                       </a>
                       
-                      <a href="/tag/%E5%AE%B6%E5%BA%AD%E6%95%99%E8%82%B2.html" class="badge tag-link">
+                      <a href="/tag/%E5%AE%B6%E5%BA%AD%E6%95%99%E8%82%B2.html" class="badge tag-link me-2 mb-1">
                         家庭教育
                       </a>
                       
-                      <a href="/tag/%E6%83%B3%E8%B1%A1%E5%8A%9B.html" class="badge tag-link">
+                      <a href="/tag/%E6%83%B3%E8%B1%A1%E5%8A%9B.html" class="badge tag-link me-2 mb-1">
                         想象力
                       </a>
                       
-                      <a href="/tag/%E5%88%9B%E9%80%A0%E5%8A%9B%E5%BC%80%E5%8F%91.html" class="badge tag-link">
+                      <a href="/tag/%E5%88%9B%E9%80%A0%E5%8A%9B%E5%BC%80%E5%8F%91.html" class="badge tag-link me-2 mb-1">
                         创造力开发
                       </a>
                       
-                      <a href="/tag/%E5%84%BF%E7%AB%A5%E5%8F%91%E5%B1%95.html" class="badge tag-link">
+                      <a href="/tag/%E5%84%BF%E7%AB%A5%E5%8F%91%E5%B1%95.html" class="badge tag-link me-2 mb-1">
                         儿童发展
                       </a>
                       
-                      <a href="/tag/%E6%80%9D%E7%BB%B4%E8%AE%AD%E7%BB%83.html" class="badge tag-link">
+                      <a href="/tag/%E6%80%9D%E7%BB%B4%E8%AE%AD%E7%BB%83.html" class="badge tag-link me-2 mb-1">
                         思维训练
                       </a>
                       
-                      <a href="/tag/%E5%88%9B%E6%84%8F%E6%95%99%E8%82%B2.html" class="badge tag-link">
+                      <a href="/tag/%E5%88%9B%E6%84%8F%E6%95%99%E8%82%B2.html" class="badge tag-link me-2 mb-1">
                         创意教育
                       </a>
                       
-                      <a href="/tag/%E4%BA%B2%E5%AD%90%E4%BA%92%E5%8A%A8.html" class="badge tag-link">
+                      <a href="/tag/%E4%BA%B2%E5%AD%90%E4%BA%92%E5%8A%A8.html" class="badge tag-link me-2 mb-1">
                         亲子互动
                       </a>
                       
@@ -565,68 +639,69 @@
               </div>
               
               <div class="masonry-grid-item">
-                <div class="card shadow-sm">
+                <div class="card article-card shadow-sm">
                   <div class="card-body">
-                    <h5 class="card-title">
-                      <i class="bi bi-file-earmark-text"></i>
-                      <a href="../mdhtml/如何建立和维护健康的亲子关系？实用指南.html" class="text-decoration-none">
+                    <h5 class="card-title article-title">
+                      <i class="bi bi-file-earmark-text me-2 text-primary"></i>
+                      <a href="../mdhtml/如何建立和维护健康的亲子关系？实用指南.html" class="text-decoration-none text-dark">
                         亲子关系的艺术：从理解到连接的全方位指南
                       </a>
                     </h5>
                     
-                      <p class="card-text">
+                      <p class="card-text text-muted mb-3">
                         全面解析健康亲子关系的构建与维护，从儿童发展心理学角度理解孩子的需求，提供具体的沟通技巧、冲突解决方法和情感连接策略，帮助父母建立基于尊重、理解和爱的亲子关系，促进孩子的健康成长。
                       </p>
                       
-                        
-                          <small class="text-muted">
-                            2026-02-24
-                          </small>
-                          
+                        <div class="article-meta">
+                            
+                                <i class="bi bi-clock me-1"></i>
+                                2026-02-24
+                                
+                        </div>
                   </div>
-                  <div class="card-footer text-muted">
+                  <div class="card-footer text-muted bg-white border-top">
                     <a href="/category/%E5%AE%B6%E5%BA%AD%E6%95%99%E8%82%B2.html"
-                      class="badge bg-primary">
+                      class="badge bg-primary me-2">
                       家庭教育
                     </a>
                     
-                      <a href="/tag/%E4%BA%B2%E5%AD%90%E5%85%B3%E7%B3%BB.html" class="badge tag-link">
+                      <a href="/tag/%E4%BA%B2%E5%AD%90%E5%85%B3%E7%B3%BB.html" class="badge tag-link me-2 mb-1">
                         亲子关系
                       </a>
                       
-                      <a href="/tag/%E5%AE%B6%E5%BA%AD%E6%95%99%E8%82%B2.html" class="badge tag-link">
+                      <a href="/tag/%E5%AE%B6%E5%BA%AD%E6%95%99%E8%82%B2.html" class="badge tag-link me-2 mb-1">
                         家庭教育
                       </a>
                       
-                      <a href="/tag/%E6%B2%9F%E9%80%9A%E6%8A%80%E5%B7%A7.html" class="badge tag-link">
+                      <a href="/tag/%E6%B2%9F%E9%80%9A%E6%8A%80%E5%B7%A7.html" class="badge tag-link me-2 mb-1">
                         沟通技巧
                       </a>
                       
-                      <a href="/tag/%E6%AD%A3%E9%9D%A2%E7%AE%A1%E6%95%99.html" class="badge tag-link">
+                      <a href="/tag/%E6%AD%A3%E9%9D%A2%E7%AE%A1%E6%95%99.html" class="badge tag-link me-2 mb-1">
                         正面管教
                       </a>
                       
-                      <a href="/tag/%E5%84%BF%E7%AB%A5%E5%BF%83%E7%90%86.html" class="badge tag-link">
+                      <a href="/tag/%E5%84%BF%E7%AB%A5%E5%BF%83%E7%90%86.html" class="badge tag-link me-2 mb-1">
                         儿童心理
                       </a>
                       
-                      <a href="/tag/%E4%BA%B2%E5%AD%90%E6%B2%9F%E9%80%9A.html" class="badge tag-link">
+                      <a href="/tag/%E4%BA%B2%E5%AD%90%E6%B2%9F%E9%80%9A.html" class="badge tag-link me-2 mb-1">
                         亲子沟通
                       </a>
                       
-                      <a href="/tag/%E5%AE%B6%E5%BA%AD%E5%92%8C%E8%B0%90.html" class="badge tag-link">
+                      <a href="/tag/%E5%AE%B6%E5%BA%AD%E5%92%8C%E8%B0%90.html" class="badge tag-link me-2 mb-1">
                         家庭和谐
                       </a>
                       
-                      <a href="/tag/%E7%88%B6%E6%AF%8D%E6%88%90%E9%95%BF.html" class="badge tag-link">
+                      <a href="/tag/%E7%88%B6%E6%AF%8D%E6%88%90%E9%95%BF.html" class="badge tag-link me-2 mb-1">
                         父母成长
                       </a>
                       
-                      <a href="/tag/%E5%AD%A9%E5%AD%90%E5%8F%91%E5%B1%95.html" class="badge tag-link">
+                      <a href="/tag/%E5%AD%A9%E5%AD%90%E5%8F%91%E5%B1%95.html" class="badge tag-link me-2 mb-1">
                         孩子发展
                       </a>
                       
-                      <a href="/tag/%E6%83%85%E6%84%9F%E8%BF%9E%E6%8E%A5.html" class="badge tag-link">
+                      <a href="/tag/%E6%83%85%E6%84%9F%E8%BF%9E%E6%8E%A5.html" class="badge tag-link me-2 mb-1">
                         情感连接
                       </a>
                       
@@ -635,68 +710,69 @@
               </div>
               
               <div class="masonry-grid-item">
-                <div class="card shadow-sm">
+                <div class="card article-card shadow-sm">
                   <div class="card-body">
-                    <h5 class="card-title">
-                      <i class="bi bi-file-earmark-text"></i>
-                      <a href="../mdhtml/家庭财务规划：从月光族到财务自由的全家实践指南.html" class="text-decoration-none">
+                    <h5 class="card-title article-title">
+                      <i class="bi bi-file-earmark-text me-2 text-primary"></i>
+                      <a href="../mdhtml/家庭财务规划：从月光族到财务自由的全家实践指南.html" class="text-decoration-none text-dark">
                         家庭财务规划：从月光族到财务自由的全家实践指南
                       </a>
                     </h5>
                     
-                      <p class="card-text">
+                      <p class="card-text text-muted mb-3">
                         全面解析家庭财务规划的核心要素与实践方法。深入分析预算管理、储蓄投资、保险规划、债务管理、退休规划等关键领域，提供从家庭财务诊断到资产配置的具体策略，帮助家庭从月光族走向财务自由，建立可持续的家庭财务体系。
                       </p>
                       
-                        
-                          <small class="text-muted">
-                            2026-02-24
-                          </small>
-                          
+                        <div class="article-meta">
+                            
+                                <i class="bi bi-clock me-1"></i>
+                                2026-02-24
+                                
+                        </div>
                   </div>
-                  <div class="card-footer text-muted">
+                  <div class="card-footer text-muted bg-white border-top">
                     <a href="/category/%E8%B4%A2%E5%AF%8C%E7%AE%A1%E7%90%86.html"
-                      class="badge bg-primary">
+                      class="badge bg-primary me-2">
                       财富管理
                     </a>
                     
-                      <a href="/tag/%E5%AE%B6%E5%BA%AD%E8%B4%A2%E5%8A%A1%E8%A7%84%E5%88%92.html" class="badge tag-link">
+                      <a href="/tag/%E5%AE%B6%E5%BA%AD%E8%B4%A2%E5%8A%A1%E8%A7%84%E5%88%92.html" class="badge tag-link me-2 mb-1">
                         家庭财务规划
                       </a>
                       
-                      <a href="/tag/%E9%A2%84%E7%AE%97%E7%AE%A1%E7%90%86.html" class="badge tag-link">
+                      <a href="/tag/%E9%A2%84%E7%AE%97%E7%AE%A1%E7%90%86.html" class="badge tag-link me-2 mb-1">
                         预算管理
                       </a>
                       
-                      <a href="/tag/%E5%82%A8%E8%93%84%E6%8A%95%E8%B5%84.html" class="badge tag-link">
+                      <a href="/tag/%E5%82%A8%E8%93%84%E6%8A%95%E8%B5%84.html" class="badge tag-link me-2 mb-1">
                         储蓄投资
                       </a>
                       
-                      <a href="/tag/%E4%BF%9D%E9%99%A9%E8%A7%84%E5%88%92.html" class="badge tag-link">
+                      <a href="/tag/%E4%BF%9D%E9%99%A9%E8%A7%84%E5%88%92.html" class="badge tag-link me-2 mb-1">
                         保险规划
                       </a>
                       
-                      <a href="/tag/%E5%80%BA%E5%8A%A1%E7%AE%A1%E7%90%86.html" class="badge tag-link">
+                      <a href="/tag/%E5%80%BA%E5%8A%A1%E7%AE%A1%E7%90%86.html" class="badge tag-link me-2 mb-1">
                         债务管理
                       </a>
                       
-                      <a href="/tag/%E9%80%80%E4%BC%91%E8%A7%84%E5%88%92.html" class="badge tag-link">
+                      <a href="/tag/%E9%80%80%E4%BC%91%E8%A7%84%E5%88%92.html" class="badge tag-link me-2 mb-1">
                         退休规划
                       </a>
                       
-                      <a href="/tag/%E8%B4%A2%E5%AF%8C%E7%AE%A1%E7%90%86.html" class="badge tag-link">
+                      <a href="/tag/%E8%B4%A2%E5%AF%8C%E7%AE%A1%E7%90%86.html" class="badge tag-link me-2 mb-1">
                         财富管理
                       </a>
                       
-                      <a href="/tag/%E8%B4%A2%E5%8A%A1%E8%87%AA%E7%94%B1.html" class="badge tag-link">
+                      <a href="/tag/%E8%B4%A2%E5%8A%A1%E8%87%AA%E7%94%B1.html" class="badge tag-link me-2 mb-1">
                         财务自由
                       </a>
                       
-                      <a href="/tag/%E5%AE%B6%E5%BA%AD%E6%95%99%E8%82%B2.html" class="badge tag-link">
+                      <a href="/tag/%E5%AE%B6%E5%BA%AD%E6%95%99%E8%82%B2.html" class="badge tag-link me-2 mb-1">
                         家庭教育
                       </a>
                       
-                      <a href="/tag/%E5%AE%B6%E5%BA%AD%E5%92%8C%E8%B0%90.html" class="badge tag-link">
+                      <a href="/tag/%E5%AE%B6%E5%BA%AD%E5%92%8C%E8%B0%90.html" class="badge tag-link me-2 mb-1">
                         家庭和谐
                       </a>
                       
@@ -705,48 +781,49 @@
               </div>
               
               <div class="masonry-grid-item">
-                <div class="card shadow-sm">
+                <div class="card article-card shadow-sm">
                   <div class="card-body">
-                    <h5 class="card-title">
-                      <i class="bi bi-file-earmark-text"></i>
-                      <a href="../mdhtml/如何培养孩子的良好习惯：从生活到学习的实用指南.html" class="text-decoration-none">
+                    <h5 class="card-title article-title">
+                      <i class="bi bi-file-earmark-text me-2 text-primary"></i>
+                      <a href="../mdhtml/如何培养孩子的良好习惯：从生活到学习的实用指南.html" class="text-decoration-none text-dark">
                         如何培养孩子的良好习惯：从生活到学习的实用指南
                       </a>
                     </h5>
                     
-                      <p class="card-text">
+                      <p class="card-text text-muted mb-3">
                         探讨如何培养孩子的良好习惯，从生活习惯到学习习惯，帮助孩子建立健康的生活方式和学习态度，为未来的发展奠定基础。
                       </p>
                       
-                        
-                          <small class="text-muted">
-                            2026-02-24
-                          </small>
-                          
+                        <div class="article-meta">
+                            
+                                <i class="bi bi-clock me-1"></i>
+                                2026-02-24
+                                
+                        </div>
                   </div>
-                  <div class="card-footer text-muted">
+                  <div class="card-footer text-muted bg-white border-top">
                     <a href="/category/%E5%AE%B6%E5%BA%AD%E6%95%99%E8%82%B2.html"
-                      class="badge bg-primary">
+                      class="badge bg-primary me-2">
                       家庭教育
                     </a>
                     
-                      <a href="/tag/%E5%AE%B6%E5%BA%AD%E6%95%99%E8%82%B2.html" class="badge tag-link">
+                      <a href="/tag/%E5%AE%B6%E5%BA%AD%E6%95%99%E8%82%B2.html" class="badge tag-link me-2 mb-1">
                         家庭教育
                       </a>
                       
-                      <a href="/tag/%E4%B9%A0%E6%83%AF%E5%9F%B9%E5%85%BB.html" class="badge tag-link">
+                      <a href="/tag/%E4%B9%A0%E6%83%AF%E5%9F%B9%E5%85%BB.html" class="badge tag-link me-2 mb-1">
                         习惯培养
                       </a>
                       
-                      <a href="/tag/%E5%84%BF%E7%AB%A5%E5%8F%91%E5%B1%95.html" class="badge tag-link">
+                      <a href="/tag/%E5%84%BF%E7%AB%A5%E5%8F%91%E5%B1%95.html" class="badge tag-link me-2 mb-1">
                         儿童发展
                       </a>
                       
-                      <a href="/tag/%E5%AD%A6%E4%B9%A0%E4%B9%A0%E6%83%AF.html" class="badge tag-link">
+                      <a href="/tag/%E5%AD%A6%E4%B9%A0%E4%B9%A0%E6%83%AF.html" class="badge tag-link me-2 mb-1">
                         学习习惯
                       </a>
                       
-                      <a href="/tag/%E7%94%9F%E6%B4%BB%E4%B9%A0%E6%83%AF.html" class="badge tag-link">
+                      <a href="/tag/%E7%94%9F%E6%B4%BB%E4%B9%A0%E6%83%AF.html" class="badge tag-link me-2 mb-1">
                         生活习惯
                       </a>
                       
@@ -755,48 +832,49 @@
               </div>
               
               <div class="masonry-grid-item">
-                <div class="card shadow-sm">
+                <div class="card article-card shadow-sm">
                   <div class="card-body">
-                    <h5 class="card-title">
-                      <i class="bi bi-file-earmark-text"></i>
-                      <a href="../mdhtml/如何培育既聪慧又快乐的孩子.html" class="text-decoration-none">
+                    <h5 class="card-title article-title">
+                      <i class="bi bi-file-earmark-text me-2 text-primary"></i>
+                      <a href="../mdhtml/如何培育既聪慧又快乐的孩子.html" class="text-decoration-none text-dark">
                         如何培育既聪慧又快乐的孩子
                       </a>
                     </h5>
                     
-                      <p class="card-text">
+                      <p class="card-text text-muted mb-3">
                         本文围绕如何培育既聪慧又快乐的孩子展开，从打造优质成长环境、重视启蒙教育、关注情感世界、丰富学习资源与体验以及激发独立思考与创新精神等多个方面提供方法，助力家长为孩子创造美好未来。
                       </p>
                       
-                        
-                          <small class="text-muted">
-                            2026-02-11
-                          </small>
-                          
+                        <div class="article-meta">
+                            
+                                <i class="bi bi-clock me-1"></i>
+                                2026-02-11
+                                
+                        </div>
                   </div>
-                  <div class="card-footer text-muted">
+                  <div class="card-footer text-muted bg-white border-top">
                     <a href="/category/%E6%95%99%E8%82%B2%E5%AD%A6%E4%B9%A0.html"
-                      class="badge bg-primary">
+                      class="badge bg-primary me-2">
                       教育学习
                     </a>
                     
-                      <a href="/tag/%E5%AE%B6%E5%BA%AD%E6%95%99%E8%82%B2.html" class="badge tag-link">
+                      <a href="/tag/%E5%AE%B6%E5%BA%AD%E6%95%99%E8%82%B2.html" class="badge tag-link me-2 mb-1">
                         家庭教育
                       </a>
                       
-                      <a href="/tag/%E5%AD%A9%E5%AD%90%E8%81%AA%E6%85%A7.html" class="badge tag-link">
+                      <a href="/tag/%E5%AD%A9%E5%AD%90%E8%81%AA%E6%85%A7.html" class="badge tag-link me-2 mb-1">
                         孩子聪慧
                       </a>
                       
-                      <a href="/tag/%E5%AD%A9%E5%AD%90%E5%BF%AB%E4%B9%90.html" class="badge tag-link">
+                      <a href="/tag/%E5%AD%A9%E5%AD%90%E5%BF%AB%E4%B9%90.html" class="badge tag-link me-2 mb-1">
                         孩子快乐
                       </a>
                       
-                      <a href="/tag/%E5%90%AF%E8%92%99%E6%95%99%E8%82%B2.html" class="badge tag-link">
+                      <a href="/tag/%E5%90%AF%E8%92%99%E6%95%99%E8%82%B2.html" class="badge tag-link me-2 mb-1">
                         启蒙教育
                       </a>
                       
-                      <a href="/tag/%E4%BA%B2%E5%AD%90%E5%85%B3%E7%B3%BB.html" class="badge tag-link">
+                      <a href="/tag/%E4%BA%B2%E5%AD%90%E5%85%B3%E7%B3%BB.html" class="badge tag-link me-2 mb-1">
                         亲子关系
                       </a>
                       
@@ -805,48 +883,49 @@
               </div>
               
               <div class="masonry-grid-item">
-                <div class="card shadow-sm">
+                <div class="card article-card shadow-sm">
                   <div class="card-body">
-                    <h5 class="card-title">
-                      <i class="bi bi-file-earmark-text"></i>
-                      <a href="../mdhtml/儿童心理健康的早期培养：筑牢孩子未来的根基.html" class="text-decoration-none">
+                    <h5 class="card-title article-title">
+                      <i class="bi bi-file-earmark-text me-2 text-primary"></i>
+                      <a href="../mdhtml/儿童心理健康的早期培养：筑牢孩子未来的根基.html" class="text-decoration-none text-dark">
                         儿童心理健康的早期培养：筑牢孩子未来的根基
                       </a>
                     </h5>
                     
-                      <p class="card-text">
+                      <p class="card-text text-muted mb-3">
                         阐述儿童心理健康早期培养的重要性、关键时期、方法等内容，强调其为孩子未来筑牢根基的意义，涵盖从0 - 12岁不同阶段的培养要点及家庭、学校和社会的协同作用。
                       </p>
                       
-                        
-                          <small class="text-muted">
-                            2026-02-11
-                          </small>
-                          
+                        <div class="article-meta">
+                            
+                                <i class="bi bi-clock me-1"></i>
+                                2026-02-11
+                                
+                        </div>
                   </div>
-                  <div class="card-footer text-muted">
+                  <div class="card-footer text-muted bg-white border-top">
                     <a href="/category/%E8%BA%AB%E5%BF%83%E5%81%A5%E5%BA%B7.html"
-                      class="badge bg-primary">
+                      class="badge bg-primary me-2">
                       身心健康
                     </a>
                     
-                      <a href="/tag/%E5%84%BF%E7%AB%A5%E5%BF%83%E7%90%86%E5%81%A5%E5%BA%B7.html" class="badge tag-link">
+                      <a href="/tag/%E5%84%BF%E7%AB%A5%E5%BF%83%E7%90%86%E5%81%A5%E5%BA%B7.html" class="badge tag-link me-2 mb-1">
                         儿童心理健康
                       </a>
                       
-                      <a href="/tag/%E6%97%A9%E6%9C%9F%E5%9F%B9%E5%85%BB.html" class="badge tag-link">
+                      <a href="/tag/%E6%97%A9%E6%9C%9F%E5%9F%B9%E5%85%BB.html" class="badge tag-link me-2 mb-1">
                         早期培养
                       </a>
                       
-                      <a href="/tag/%E4%BA%BA%E6%A0%BC%E5%A1%91%E9%80%A0.html" class="badge tag-link">
+                      <a href="/tag/%E4%BA%BA%E6%A0%BC%E5%A1%91%E9%80%A0.html" class="badge tag-link me-2 mb-1">
                         人格塑造
                       </a>
                       
-                      <a href="/tag/%E7%A4%BE%E4%BA%A4%E8%83%BD%E5%8A%9B.html" class="badge tag-link">
+                      <a href="/tag/%E7%A4%BE%E4%BA%A4%E8%83%BD%E5%8A%9B.html" class="badge tag-link me-2 mb-1">
                         社交能力
                       </a>
                       
-                      <a href="/tag/%E5%AE%B6%E5%BA%AD%E6%95%99%E8%82%B2.html" class="badge tag-link">
+                      <a href="/tag/%E5%AE%B6%E5%BA%AD%E6%95%99%E8%82%B2.html" class="badge tag-link me-2 mb-1">
                         家庭教育
                       </a>
                       
@@ -856,8 +935,8 @@
               
           </div>
 
-          <div class="mt-4 text-center">
-            <a href="标签列表.html" class="btn btn-outline-primary"><i class="bi bi-arrow-left"></i> 返回标签列表</a>
+          <div class="mt-6 text-center">
+            <a href="标签列表.html" class="btn btn-outline-primary back-button"><i class="bi bi-arrow-left me-2"></i> 返回标签列表</a>
           </div>
         </div>
       </div>
@@ -881,7 +960,7 @@
             itemSelector: '.masonry-grid-item',
             columnWidth: '.masonry-grid-item',
             percentPosition: true,
-            gutter: 10 // 可选，添加卡片间的间距
+            gutter: 15 // 增加间距，提升视觉效果
           });
         });
       </script>

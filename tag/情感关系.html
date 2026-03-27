@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
 
 <head>
   <meta charset="UTF-8">
@@ -9,7 +9,7 @@
   <meta name="description" content="无人自助站的【情感关系】的标签列表页面，汇集了关于【情感关系】标签相关的文章和资讯，方便您快速找到感兴趣的内容。">
   <meta name="keywords" content="无人自助站,情感关系">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>标签文章列表</title>
+  <title>情感关系标签 - 无人自助站</title>
 
   <link rel="icon" href="../logo.svg" type="image/svg+xml">
   <link rel="stylesheet" href="../css/style.css">
@@ -27,6 +27,62 @@
   <!-- 引入Masonry -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/masonry/4.2.2/masonry.pkgd.min.js"></script>
 
+  <style>
+        .tag-header {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            color: white;
+            padding: 2rem;
+            border-radius: 8px;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        .tag-title {
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+        .article-card {
+            transition: all 0.3s ease;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        .article-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+        }
+        .article-title {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            transition: color 0.3s ease;
+        }
+        .article-title:hover {
+            color: #0d6efd;
+        }
+        .article-meta {
+            font-size: 0.85rem;
+            color: #6c757d;
+        }
+        .tag-link {
+            background-color: #e9ecef;
+            color: #495057;
+            transition: all 0.2s ease;
+        }
+        .tag-link:hover {
+            background-color: #dee2e6;
+            color: #212529;
+        }
+        .back-button {
+            transition: all 0.3s ease;
+        }
+        .back-button:hover {
+            transform: translateX(-3px);
+        }
+        .article-count {
+            font-size: 0.9rem;
+            opacity: 0.9;
+        }
+    </style>
 </head>
 
 <body>
@@ -80,7 +136,7 @@
     <main class="container-fluid mt-4">
       <div class="row">
         <div class="col-lg-8 col-md-12 mx-auto">
-          <nav aria-label="breadcrumb">
+          <nav aria-label="breadcrumb" class="mb-4">
             <ol class="breadcrumb">
               <li class="breadcrumb-item"><a href="/html/index.html">首页</a></li>
               <li class="breadcrumb-item"><a href="标签列表.html">标签列表</a></li>
@@ -89,58 +145,68 @@
               </li>
             </ol>
           </nav>
-          <h1 style="font-size: 1.5em; margin: 0.5em 0;">
-            情感关系标签的文章和资讯
-        </h1>
+          
+          <!-- 标签头部 -->
+          <div class="tag-header">
+              <h1 class="tag-title">
+                  <i class="bi bi-tags me-2"></i>
+                  情感关系
+              </h1>
+              <p class="article-count">
+                  共 4 篇文章
+              </p>
+          </div>
+          
           <div class="masonry-grid">
             
               <div class="masonry-grid-item">
-                <div class="card shadow-sm">
+                <div class="card article-card shadow-sm">
                   <div class="card-body">
-                    <h5 class="card-title">
-                      <i class="bi bi-file-earmark-text"></i>
-                      <a href="../mdhtml/婚后如何保持新鲜感与有效沟通.html" class="text-decoration-none">
+                    <h5 class="card-title article-title">
+                      <i class="bi bi-file-earmark-text me-2 text-primary"></i>
+                      <a href="../mdhtml/婚后如何保持新鲜感与有效沟通.html" class="text-decoration-none text-dark">
                         2026年情感关系维系：异地恋/婚后如何保持新鲜感与有效沟通
                       </a>
                     </h5>
                     
-                      <p class="card-text">
+                      <p class="card-text text-muted mb-3">
                         2026年情感关系维系指南，教您如何在异地恋或婚后保持新鲜感与有效沟通，维持健康的情感关系。
                       </p>
                       
-                        
-                          <small class="text-muted">
-                            2026-02-28
-                          </small>
-                          
+                        <div class="article-meta">
+                            
+                                <i class="bi bi-clock me-1"></i>
+                                2026-02-28
+                                
+                        </div>
                   </div>
-                  <div class="card-footer text-muted">
+                  <div class="card-footer text-muted bg-white border-top">
                     <a href="/category/%E6%83%85%E6%84%9F%E5%85%B3%E7%B3%BB.html"
-                      class="badge bg-primary">
+                      class="badge bg-primary me-2">
                       情感关系
                     </a>
                     
-                      <a href="/tag/%E6%83%85%E6%84%9F%E5%85%B3%E7%B3%BB.html" class="badge tag-link">
+                      <a href="/tag/%E6%83%85%E6%84%9F%E5%85%B3%E7%B3%BB.html" class="badge tag-link me-2 mb-1">
                         情感关系
                       </a>
                       
-                      <a href="/tag/%E5%BC%82%E5%9C%B0%E6%81%8B.html" class="badge tag-link">
+                      <a href="/tag/%E5%BC%82%E5%9C%B0%E6%81%8B.html" class="badge tag-link me-2 mb-1">
                         异地恋
                       </a>
                       
-                      <a href="/tag/%E5%A9%9A%E5%90%8E%E7%94%9F%E6%B4%BB.html" class="badge tag-link">
+                      <a href="/tag/%E5%A9%9A%E5%90%8E%E7%94%9F%E6%B4%BB.html" class="badge tag-link me-2 mb-1">
                         婚后生活
                       </a>
                       
-                      <a href="/tag/%E4%BF%9D%E6%8C%81%E6%96%B0%E9%B2%9C%E6%84%9F.html" class="badge tag-link">
+                      <a href="/tag/%E4%BF%9D%E6%8C%81%E6%96%B0%E9%B2%9C%E6%84%9F.html" class="badge tag-link me-2 mb-1">
                         保持新鲜感
                       </a>
                       
-                      <a href="/tag/%E6%9C%89%E6%95%88%E6%B2%9F%E9%80%9A.html" class="badge tag-link">
+                      <a href="/tag/%E6%9C%89%E6%95%88%E6%B2%9F%E9%80%9A.html" class="badge tag-link me-2 mb-1">
                         有效沟通
                       </a>
                       
-                      <a href="/tag/2026%E5%B9%B4.html" class="badge tag-link">
+                      <a href="/tag/2026%E5%B9%B4.html" class="badge tag-link me-2 mb-1">
                         2026年
                       </a>
                       
@@ -149,44 +215,45 @@
               </div>
               
               <div class="masonry-grid-item">
-                <div class="card shadow-sm">
+                <div class="card article-card shadow-sm">
                   <div class="card-body">
-                    <h5 class="card-title">
-                      <i class="bi bi-file-earmark-text"></i>
-                      <a href="../mdhtml/情感关系中的边界感设定：守护内心的宁静港湾.html" class="text-decoration-none">
+                    <h5 class="card-title article-title">
+                      <i class="bi bi-file-earmark-text me-2 text-primary"></i>
+                      <a href="../mdhtml/情感关系中的边界感设定：守护内心的宁静港湾.html" class="text-decoration-none text-dark">
                         情感关系中的边界感设定：守护内心的宁静港湾
                       </a>
                     </h5>
                     
-                      <p class="card-text">
+                      <p class="card-text text-muted mb-3">
                         探讨在情感关系中设定边界感的重要性，分析常见的边界问题，并提供实用的设定边界感的方法，帮助读者在情感关系中保持独立自主，维护健康和谐的关系。
                       </p>
                       
-                        
-                          <small class="text-muted">
-                            2026-02-11
-                          </small>
-                          
+                        <div class="article-meta">
+                            
+                                <i class="bi bi-clock me-1"></i>
+                                2026-02-11
+                                
+                        </div>
                   </div>
-                  <div class="card-footer text-muted">
+                  <div class="card-footer text-muted bg-white border-top">
                     <a href="/category/%E4%BA%BA%E9%99%85%E7%9B%B8%E5%A4%84.html"
-                      class="badge bg-primary">
+                      class="badge bg-primary me-2">
                       人际相处
                     </a>
                     
-                      <a href="/tag/%E6%83%85%E6%84%9F%E5%85%B3%E7%B3%BB.html" class="badge tag-link">
+                      <a href="/tag/%E6%83%85%E6%84%9F%E5%85%B3%E7%B3%BB.html" class="badge tag-link me-2 mb-1">
                         情感关系
                       </a>
                       
-                      <a href="/tag/%E8%BE%B9%E7%95%8C%E6%84%9F.html" class="badge tag-link">
+                      <a href="/tag/%E8%BE%B9%E7%95%8C%E6%84%9F.html" class="badge tag-link me-2 mb-1">
                         边界感
                       </a>
                       
-                      <a href="/tag/%E6%83%85%E6%84%9F%E4%BE%9D%E8%B5%96.html" class="badge tag-link">
+                      <a href="/tag/%E6%83%85%E6%84%9F%E4%BE%9D%E8%B5%96.html" class="badge tag-link me-2 mb-1">
                         情感依赖
                       </a>
                       
-                      <a href="/tag/%E4%BB%B7%E5%80%BC%E8%A7%82%E5%86%B2%E7%AA%81.html" class="badge tag-link">
+                      <a href="/tag/%E4%BB%B7%E5%80%BC%E8%A7%82%E5%86%B2%E7%AA%81.html" class="badge tag-link me-2 mb-1">
                         价值观冲突
                       </a>
                       
@@ -195,48 +262,49 @@
               </div>
               
               <div class="masonry-grid-item">
-                <div class="card shadow-sm">
+                <div class="card article-card shadow-sm">
                   <div class="card-body">
-                    <h5 class="card-title">
-                      <i class="bi bi-file-earmark-text"></i>
-                      <a href="../mdhtml/情侣之间婚前性行为的全面剖析.html" class="text-decoration-none">
+                    <h5 class="card-title article-title">
+                      <i class="bi bi-file-earmark-text me-2 text-primary"></i>
+                      <a href="../mdhtml/情侣之间婚前性行为的全面剖析.html" class="text-decoration-none text-dark">
                         情侣之间婚前性行为的全面剖析
                       </a>
                     </h5>
                     
-                      <p class="card-text">
+                      <p class="card-text text-muted mb-3">
                         深入探讨情侣之间婚前性行为这一备受关注的话题，分析其在新时代的认知变化，阐述恋爱时长与亲密行为的关系，以及性生活并非情侣关系的唯一表达方式，为情侣们提供关于此问题的思考方向和决策依据。
                       </p>
                       
-                        
-                          <small class="text-muted">
-                            2026-02-11
-                          </small>
-                          
+                        <div class="article-meta">
+                            
+                                <i class="bi bi-clock me-1"></i>
+                                2026-02-11
+                                
+                        </div>
                   </div>
-                  <div class="card-footer text-muted">
+                  <div class="card-footer text-muted bg-white border-top">
                     <a href="/category/%E4%BA%BA%E9%99%85%E7%9B%B8%E5%A4%84.html"
-                      class="badge bg-primary">
+                      class="badge bg-primary me-2">
                       人际相处
                     </a>
                     
-                      <a href="/tag/%E6%83%85%E4%BE%A3%E5%85%B3%E7%B3%BB.html" class="badge tag-link">
+                      <a href="/tag/%E6%83%85%E4%BE%A3%E5%85%B3%E7%B3%BB.html" class="badge tag-link me-2 mb-1">
                         情侣关系
                       </a>
                       
-                      <a href="/tag/%E6%83%85%E6%84%9F%E5%85%B3%E7%B3%BB.html" class="badge tag-link">
+                      <a href="/tag/%E6%83%85%E6%84%9F%E5%85%B3%E7%B3%BB.html" class="badge tag-link me-2 mb-1">
                         情感关系
                       </a>
                       
-                      <a href="/tag/%E6%80%A7%E8%A7%82%E5%BF%B5.html" class="badge tag-link">
+                      <a href="/tag/%E6%80%A7%E8%A7%82%E5%BF%B5.html" class="badge tag-link me-2 mb-1">
                         性观念
                       </a>
                       
-                      <a href="/tag/%E6%81%8B%E7%88%B1%E6%97%B6%E9%95%BF.html" class="badge tag-link">
+                      <a href="/tag/%E6%81%8B%E7%88%B1%E6%97%B6%E9%95%BF.html" class="badge tag-link me-2 mb-1">
                         恋爱时长
                       </a>
                       
-                      <a href="/tag/%E6%83%85%E6%84%9F%E8%A1%A8%E8%BE%BE.html" class="badge tag-link">
+                      <a href="/tag/%E6%83%85%E6%84%9F%E8%A1%A8%E8%BE%BE.html" class="badge tag-link me-2 mb-1">
                         情感表达
                       </a>
                       
@@ -245,48 +313,49 @@
               </div>
               
               <div class="masonry-grid-item">
-                <div class="card shadow-sm">
+                <div class="card article-card shadow-sm">
                   <div class="card-body">
-                    <h5 class="card-title">
-                      <i class="bi bi-file-earmark-text"></i>
-                      <a href="../mdhtml/婚前同居：是时尚选择还是价值“掉价”？.html" class="text-decoration-none">
+                    <h5 class="card-title article-title">
+                      <i class="bi bi-file-earmark-text me-2 text-primary"></i>
+                      <a href="../mdhtml/婚前同居：是时尚选择还是价值“掉价”？.html" class="text-decoration-none text-dark">
                         婚前同居：是时尚选择还是价值“掉价”？
                       </a>
                     </h5>
                     
-                      <p class="card-text">
+                      <p class="card-text text-muted mb-3">
                         探讨婚前同居在现代社会中的现象，分析其背后的个人价值观、传统与现代观念的碰撞、利弊交织的现实考量等方面，以理性和包容的态度看待这一现象，为面临相关选择的人提供参考。
                       </p>
                       
-                        
-                          <small class="text-muted">
-                            2026-02-11
-                          </small>
-                          
+                        <div class="article-meta">
+                            
+                                <i class="bi bi-clock me-1"></i>
+                                2026-02-11
+                                
+                        </div>
                   </div>
-                  <div class="card-footer text-muted">
+                  <div class="card-footer text-muted bg-white border-top">
                     <a href="/category/%E5%A9%9A%E5%A7%BB%E6%83%85%E6%84%9F.html"
-                      class="badge bg-primary">
+                      class="badge bg-primary me-2">
                       婚姻情感
                     </a>
                     
-                      <a href="/tag/%E5%A9%9A%E5%89%8D%E5%90%8C%E5%B1%85.html" class="badge tag-link">
+                      <a href="/tag/%E5%A9%9A%E5%89%8D%E5%90%8C%E5%B1%85.html" class="badge tag-link me-2 mb-1">
                         婚前同居
                       </a>
                       
-                      <a href="/tag/%E4%B8%AA%E4%BA%BA%E4%BB%B7%E5%80%BC%E8%A7%82.html" class="badge tag-link">
+                      <a href="/tag/%E4%B8%AA%E4%BA%BA%E4%BB%B7%E5%80%BC%E8%A7%82.html" class="badge tag-link me-2 mb-1">
                         个人价值观
                       </a>
                       
-                      <a href="/tag/%E7%A4%BE%E4%BC%9A%E8%A7%82%E5%BF%B5.html" class="badge tag-link">
+                      <a href="/tag/%E7%A4%BE%E4%BC%9A%E8%A7%82%E5%BF%B5.html" class="badge tag-link me-2 mb-1">
                         社会观念
                       </a>
                       
-                      <a href="/tag/%E6%83%85%E6%84%9F%E5%85%B3%E7%B3%BB.html" class="badge tag-link">
+                      <a href="/tag/%E6%83%85%E6%84%9F%E5%85%B3%E7%B3%BB.html" class="badge tag-link me-2 mb-1">
                         情感关系
                       </a>
                       
-                      <a href="/tag/%E5%88%A9%E5%BC%8A%E5%88%86%E6%9E%90.html" class="badge tag-link">
+                      <a href="/tag/%E5%88%A9%E5%BC%8A%E5%88%86%E6%9E%90.html" class="badge tag-link me-2 mb-1">
                         利弊分析
                       </a>
                       
@@ -296,8 +365,8 @@
               
           </div>
 
-          <div class="mt-4 text-center">
-            <a href="标签列表.html" class="btn btn-outline-primary"><i class="bi bi-arrow-left"></i> 返回标签列表</a>
+          <div class="mt-6 text-center">
+            <a href="标签列表.html" class="btn btn-outline-primary back-button"><i class="bi bi-arrow-left me-2"></i> 返回标签列表</a>
           </div>
         </div>
       </div>
@@ -321,7 +390,7 @@
             itemSelector: '.masonry-grid-item',
             columnWidth: '.masonry-grid-item',
             percentPosition: true,
-            gutter: 10 // 可选，添加卡片间的间距
+            gutter: 15 // 增加间距，提升视觉效果
           });
         });
       </script>

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
 
 <head>
     <meta charset="UTF-8">
@@ -9,7 +9,7 @@
     <meta name="description" content="无人自助站的【艺术文化】分类列表页面，汇集了关于【艺术文化】分类的文章和资讯，方便您快速找到感兴趣的内容。">
     <meta name="keywords" content="无人自助站,艺术文化">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>分类列表</title>
+    <title>艺术文化分类 - 无人自助站</title>
     <link rel="icon" href="../logo.svg" type="image/svg+xml">
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/footer.css">
@@ -27,6 +27,62 @@
     <!-- 引入Masonry -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/masonry/4.2.2/masonry.pkgd.min.js"></script>
 
+    <style>
+        .category-header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 2rem;
+            border-radius: 8px;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        .category-title {
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+        .article-card {
+            transition: all 0.3s ease;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        .article-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+        }
+        .article-title {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            transition: color 0.3s ease;
+        }
+        .article-title:hover {
+            color: #0d6efd;
+        }
+        .article-meta {
+            font-size: 0.85rem;
+            color: #6c757d;
+        }
+        .tag-link {
+            background-color: #e9ecef;
+            color: #495057;
+            transition: all 0.2s ease;
+        }
+        .tag-link:hover {
+            background-color: #dee2e6;
+            color: #212529;
+        }
+        .back-button {
+            transition: all 0.3s ease;
+        }
+        .back-button:hover {
+            transform: translateX(-3px);
+        }
+        .article-count {
+            font-size: 0.9rem;
+            opacity: 0.9;
+        }
+    </style>
 </head>
 
 <body>
@@ -80,7 +136,7 @@
         <main class="container-fluid mt-4">
             <div class="col-lg-8 col-md-12 mx-auto">
                 <!-- 面包屑导航 -->
-                <nav aria-label="breadcrumb">
+                <nav aria-label="breadcrumb" class="mb-4">
                     <ol class="breadcrumb">
                         <li class="breadcrumb-item"><a href="/html/index.html">首页</a></li>
                         <li class="breadcrumb-item"><a href="分类列表.html">分类列表</a></li>
@@ -89,61 +145,71 @@
                         </li>
                     </ol>
                 </nav>
-                <h1 style="font-size: 1.5em; margin: 0.5em 0;">
-                    艺术文化分类的文章和资讯
-                </h1>
+                
+                <!-- 分类头部 -->
+                <div class="category-header">
+                    <h1 class="category-title">
+                        <i class="bi bi-folder2 me-2"></i>
+                        艺术文化
+                    </h1>
+                    <p class="article-count">
+                        共 3 篇文章
+                    </p>
+                </div>
+                
                 <!-- 分类内容卡片 使用 Masonry 布局 -->
                 <div class="masonry-grid">
                     
                         <div class="masonry-grid-item">
-                            <div class="card shadow-sm">
+                            <div class="card article-card shadow-sm">
                                 <div class="card-body">
-                                    <h5 class="card-title">
-                                        <i class="bi bi-file-earmark-text"></i>
+                                    <h5 class="card-title article-title">
+                                        <i class="bi bi-file-earmark-text me-2 text-primary"></i>
                                         <a href="../mdhtml/电影的衰落：为什么我们不再看电影了.html"
-                                            class="text-decoration-none">
+                                            class="text-decoration-none text-dark">
                                             电影的衰落：为什么我们不再看电影了
                                         </a>
                                     </h5>
                                     
-                                        <p class="card-text">
+                                        <p class="card-text text-muted mb-3">
                                             深入分析电影产业的变化，探讨流媒体的冲击、电影院的衰落、电影质量的问题、以及电影的未来。
                                         </p>
                                         
+                                        <div class="article-meta">
                                             
-                                                <small class="text-muted">
-                                                    2026-03-24
-                                                </small>
+                                                <i class="bi bi-clock me-1"></i>
+                                                2026-03-24
                                                 
+                                        </div>
                                 </div>
-                                <div class="card-footer text-muted">
+                                <div class="card-footer text-muted bg-white border-top">
                                     <a href="/category/%E8%89%BA%E6%9C%AF%E6%96%87%E5%8C%96.html"
-                                        class="badge bg-primary">
+                                        class="badge bg-primary me-2">
                                         艺术文化
                                     </a>
                                     
                                         <a href="/tag/%E7%94%B5%E5%BD%B1.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             电影
                                         </a>
                                         
                                         <a href="/tag/%E6%B5%81%E5%AA%92%E4%BD%93.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             流媒体
                                         </a>
                                         
                                         <a href="/tag/%E7%94%B5%E5%BD%B1%E9%99%A2.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             电影院
                                         </a>
                                         
                                         <a href="/tag/%E8%A7%86%E5%90%AC%E6%96%87%E5%8C%96.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             视听文化
                                         </a>
                                         
                                         <a href="/tag/%E5%A8%B1%E4%B9%90.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             娱乐
                                         </a>
                                         
@@ -152,54 +218,55 @@
                         </div>
                         
                         <div class="masonry-grid-item">
-                            <div class="card shadow-sm">
+                            <div class="card article-card shadow-sm">
                                 <div class="card-body">
-                                    <h5 class="card-title">
-                                        <i class="bi bi-file-earmark-text"></i>
+                                    <h5 class="card-title article-title">
+                                        <i class="bi bi-file-earmark-text me-2 text-primary"></i>
                                         <a href="../mdhtml/音乐的商业化：流媒体如何杀死了音乐.html"
-                                            class="text-decoration-none">
+                                            class="text-decoration-none text-dark">
                                             音乐的商业化：流媒体如何杀死了音乐
                                         </a>
                                     </h5>
                                     
-                                        <p class="card-text">
+                                        <p class="card-text text-muted mb-3">
                                             深入分析音乐产业的变化，探讨流媒体的影响、艺术家的贫困、音乐质量的下降、以及如何支持真实的音乐。
                                         </p>
                                         
+                                        <div class="article-meta">
                                             
-                                                <small class="text-muted">
-                                                    2026-03-24
-                                                </small>
+                                                <i class="bi bi-clock me-1"></i>
+                                                2026-03-24
                                                 
+                                        </div>
                                 </div>
-                                <div class="card-footer text-muted">
+                                <div class="card-footer text-muted bg-white border-top">
                                     <a href="/category/%E8%89%BA%E6%9C%AF%E6%96%87%E5%8C%96.html"
-                                        class="badge bg-primary">
+                                        class="badge bg-primary me-2">
                                         艺术文化
                                     </a>
                                     
                                         <a href="/tag/%E9%9F%B3%E4%B9%90.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             音乐
                                         </a>
                                         
                                         <a href="/tag/%E6%B5%81%E5%AA%92%E4%BD%93.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             流媒体
                                         </a>
                                         
                                         <a href="/tag/%E8%89%BA%E6%9C%AF%E5%AE%B6%E6%94%B6%E5%85%A5.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             艺术家收入
                                         </a>
                                         
                                         <a href="/tag/%E9%9F%B3%E4%B9%90%E4%BA%A7%E4%B8%9A.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             音乐产业
                                         </a>
                                         
                                         <a href="/tag/%E5%88%9B%E6%84%8F.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             创意
                                         </a>
                                         
@@ -208,54 +275,55 @@
                         </div>
                         
                         <div class="masonry-grid-item">
-                            <div class="card shadow-sm">
+                            <div class="card article-card shadow-sm">
                                 <div class="card-body">
-                                    <h5 class="card-title">
-                                        <i class="bi bi-file-earmark-text"></i>
+                                    <h5 class="card-title article-title">
+                                        <i class="bi bi-file-earmark-text me-2 text-primary"></i>
                                         <a href="../mdhtml/艺术的死亡：为什么我们不再创造真正的艺术.html"
-                                            class="text-decoration-none">
+                                            class="text-decoration-none text-dark">
                                             艺术的死亡：为什么我们不再创造真正的艺术
                                         </a>
                                     </h5>
                                     
-                                        <p class="card-text">
+                                        <p class="card-text text-muted mb-3">
                                             深入分析当代艺术的危机，探讨艺术的商业化、真实艺术的衰落、创意的死亡、以及如何拯救艺术。
                                         </p>
                                         
+                                        <div class="article-meta">
                                             
-                                                <small class="text-muted">
-                                                    2026-03-24
-                                                </small>
+                                                <i class="bi bi-clock me-1"></i>
+                                                2026-03-24
                                                 
+                                        </div>
                                 </div>
-                                <div class="card-footer text-muted">
+                                <div class="card-footer text-muted bg-white border-top">
                                     <a href="/category/%E8%89%BA%E6%9C%AF%E6%96%87%E5%8C%96.html"
-                                        class="badge bg-primary">
+                                        class="badge bg-primary me-2">
                                         艺术文化
                                     </a>
                                     
                                         <a href="/tag/%E8%89%BA%E6%9C%AF.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             艺术
                                         </a>
                                         
                                         <a href="/tag/%E5%88%9B%E6%84%8F.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             创意
                                         </a>
                                         
                                         <a href="/tag/%E5%95%86%E4%B8%9A%E5%8C%96.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             商业化
                                         </a>
                                         
                                         <a href="/tag/%E7%9C%9F%E5%AE%9E%E8%89%BA%E6%9C%AF.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             真实艺术
                                         </a>
                                         
                                         <a href="/tag/%E6%96%87%E5%8C%96%E8%A1%B0%E8%90%BD.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             文化衰落
                                         </a>
                                         
@@ -266,9 +334,9 @@
                 </div>
 
                 <!-- 返回按钮 -->
-                <div class="mt-4 text-center">
-                    <a href="分类列表.html" class="btn btn-outline-primary">
-                        <i class="bi bi-arrow-left"></i> 返回分类列表
+                <div class="mt-6 text-center">
+                    <a href="分类列表.html" class="btn btn-outline-primary back-button">
+                        <i class="bi bi-arrow-left me-2"></i> 返回分类列表
                     </a>
                 </div>
             </div>
@@ -292,7 +360,7 @@
                         itemSelector: '.masonry-grid-item',
                         columnWidth: '.masonry-grid-item',
                         percentPosition: true,
-                        gutter: 10 // 明确设置 gutter 值为 10px
+                        gutter: 15 // 增加间距，提升视觉效果
                     });
                 });
             </script>

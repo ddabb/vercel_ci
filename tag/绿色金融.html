@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
 
 <head>
   <meta charset="UTF-8">
@@ -9,7 +9,7 @@
   <meta name="description" content="无人自助站的【绿色金融】的标签列表页面，汇集了关于【绿色金融】标签相关的文章和资讯，方便您快速找到感兴趣的内容。">
   <meta name="keywords" content="无人自助站,绿色金融">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>标签文章列表</title>
+  <title>绿色金融标签 - 无人自助站</title>
 
   <link rel="icon" href="../logo.svg" type="image/svg+xml">
   <link rel="stylesheet" href="../css/style.css">
@@ -27,6 +27,62 @@
   <!-- 引入Masonry -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/masonry/4.2.2/masonry.pkgd.min.js"></script>
 
+  <style>
+        .tag-header {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            color: white;
+            padding: 2rem;
+            border-radius: 8px;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        .tag-title {
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+        .article-card {
+            transition: all 0.3s ease;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        .article-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+        }
+        .article-title {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            transition: color 0.3s ease;
+        }
+        .article-title:hover {
+            color: #0d6efd;
+        }
+        .article-meta {
+            font-size: 0.85rem;
+            color: #6c757d;
+        }
+        .tag-link {
+            background-color: #e9ecef;
+            color: #495057;
+            transition: all 0.2s ease;
+        }
+        .tag-link:hover {
+            background-color: #dee2e6;
+            color: #212529;
+        }
+        .back-button {
+            transition: all 0.3s ease;
+        }
+        .back-button:hover {
+            transform: translateX(-3px);
+        }
+        .article-count {
+            font-size: 0.9rem;
+            opacity: 0.9;
+        }
+    </style>
 </head>
 
 <body>
@@ -80,7 +136,7 @@
     <main class="container-fluid mt-4">
       <div class="row">
         <div class="col-lg-8 col-md-12 mx-auto">
-          <nav aria-label="breadcrumb">
+          <nav aria-label="breadcrumb" class="mb-4">
             <ol class="breadcrumb">
               <li class="breadcrumb-item"><a href="/html/index.html">首页</a></li>
               <li class="breadcrumb-item"><a href="标签列表.html">标签列表</a></li>
@@ -89,74 +145,84 @@
               </li>
             </ol>
           </nav>
-          <h1 style="font-size: 1.5em; margin: 0.5em 0;">
-            绿色金融标签的文章和资讯
-        </h1>
+          
+          <!-- 标签头部 -->
+          <div class="tag-header">
+              <h1 class="tag-title">
+                  <i class="bi bi-tags me-2"></i>
+                  绿色金融
+              </h1>
+              <p class="article-count">
+                  共 2 篇文章
+              </p>
+          </div>
+          
           <div class="masonry-grid">
             
               <div class="masonry-grid-item">
-                <div class="card shadow-sm">
+                <div class="card article-card shadow-sm">
                   <div class="card-body">
-                    <h5 class="card-title">
-                      <i class="bi bi-file-earmark-text"></i>
-                      <a href="../mdhtml/财富管理的可持续发展：ESG投资策略与实践.html" class="text-decoration-none">
+                    <h5 class="card-title article-title">
+                      <i class="bi bi-file-earmark-text me-2 text-primary"></i>
+                      <a href="../mdhtml/财富管理的可持续发展：ESG投资策略与实践.html" class="text-decoration-none text-dark">
                         财富管理的可持续发展：ESG投资策略与实践
                       </a>
                     </h5>
                     
-                      <p class="card-text">
+                      <p class="card-text text-muted mb-3">
                         探讨财富管理中的可持续发展理念，分析ESG投资的核心原则和实践方法，提供ESG投资策略的具体实施步骤，帮助投资者在追求财务回报的同时，为社会和环境做出积极贡献。
                       </p>
                       
-                        
-                          <small class="text-muted">
-                            2026-02-24
-                          </small>
-                          
+                        <div class="article-meta">
+                            
+                                <i class="bi bi-clock me-1"></i>
+                                2026-02-24
+                                
+                        </div>
                   </div>
-                  <div class="card-footer text-muted">
+                  <div class="card-footer text-muted bg-white border-top">
                     <a href="/category/%E8%B4%A2%E5%AF%8C%E7%AE%A1%E7%90%86.html"
-                      class="badge bg-primary">
+                      class="badge bg-primary me-2">
                       财富管理
                     </a>
                     
-                      <a href="/tag/ESG%E6%8A%95%E8%B5%84.html" class="badge tag-link">
+                      <a href="/tag/ESG%E6%8A%95%E8%B5%84.html" class="badge tag-link me-2 mb-1">
                         ESG投资
                       </a>
                       
-                      <a href="/tag/%E5%8F%AF%E6%8C%81%E7%BB%AD%E5%8F%91%E5%B1%95.html" class="badge tag-link">
+                      <a href="/tag/%E5%8F%AF%E6%8C%81%E7%BB%AD%E5%8F%91%E5%B1%95.html" class="badge tag-link me-2 mb-1">
                         可持续发展
                       </a>
                       
-                      <a href="/tag/%E7%A4%BE%E4%BC%9A%E8%B4%A3%E4%BB%BB%E6%8A%95%E8%B5%84.html" class="badge tag-link">
+                      <a href="/tag/%E7%A4%BE%E4%BC%9A%E8%B4%A3%E4%BB%BB%E6%8A%95%E8%B5%84.html" class="badge tag-link me-2 mb-1">
                         社会责任投资
                       </a>
                       
-                      <a href="/tag/%E7%8E%AF%E5%A2%83%E6%B2%BB%E7%90%86.html" class="badge tag-link">
+                      <a href="/tag/%E7%8E%AF%E5%A2%83%E6%B2%BB%E7%90%86.html" class="badge tag-link me-2 mb-1">
                         环境治理
                       </a>
                       
-                      <a href="/tag/%E5%85%AC%E5%8F%B8%E6%B2%BB%E7%90%86.html" class="badge tag-link">
+                      <a href="/tag/%E5%85%AC%E5%8F%B8%E6%B2%BB%E7%90%86.html" class="badge tag-link me-2 mb-1">
                         公司治理
                       </a>
                       
-                      <a href="/tag/%E7%BB%BF%E8%89%B2%E9%87%91%E8%9E%8D.html" class="badge tag-link">
+                      <a href="/tag/%E7%BB%BF%E8%89%B2%E9%87%91%E8%9E%8D.html" class="badge tag-link me-2 mb-1">
                         绿色金融
                       </a>
                       
-                      <a href="/tag/%E5%BD%B1%E5%93%8D%E5%8A%9B%E6%8A%95%E8%B5%84.html" class="badge tag-link">
+                      <a href="/tag/%E5%BD%B1%E5%93%8D%E5%8A%9B%E6%8A%95%E8%B5%84.html" class="badge tag-link me-2 mb-1">
                         影响力投资
                       </a>
                       
-                      <a href="/tag/%E5%8F%AF%E6%8C%81%E7%BB%AD%E6%8A%95%E8%B5%84.html" class="badge tag-link">
+                      <a href="/tag/%E5%8F%AF%E6%8C%81%E7%BB%AD%E6%8A%95%E8%B5%84.html" class="badge tag-link me-2 mb-1">
                         可持续投资
                       </a>
                       
-                      <a href="/tag/ESG%E9%A3%8E%E9%99%A9%E7%AE%A1%E7%90%86.html" class="badge tag-link">
+                      <a href="/tag/ESG%E9%A3%8E%E9%99%A9%E7%AE%A1%E7%90%86.html" class="badge tag-link me-2 mb-1">
                         ESG风险管理
                       </a>
                       
-                      <a href="/tag/%E5%8F%AF%E6%8C%81%E7%BB%AD%E5%8F%91%E5%B1%95%E7%9B%AE%E6%A0%87.html" class="badge tag-link">
+                      <a href="/tag/%E5%8F%AF%E6%8C%81%E7%BB%AD%E5%8F%91%E5%B1%95%E7%9B%AE%E6%A0%87.html" class="badge tag-link me-2 mb-1">
                         可持续发展目标
                       </a>
                       
@@ -165,48 +231,49 @@
               </div>
               
               <div class="masonry-grid-item">
-                <div class="card shadow-sm">
+                <div class="card article-card shadow-sm">
                   <div class="card-body">
-                    <h5 class="card-title">
-                      <i class="bi bi-file-earmark-text"></i>
-                      <a href="../mdhtml/绿色金融：解锁可持续未来的财富密码.html" class="text-decoration-none">
+                    <h5 class="card-title article-title">
+                      <i class="bi bi-file-earmark-text me-2 text-primary"></i>
+                      <a href="../mdhtml/绿色金融：解锁可持续未来的财富密码.html" class="text-decoration-none text-dark">
                         绿色金融：解锁可持续未来的财富密码
                       </a>
                     </h5>
                     
-                      <p class="card-text">
+                      <p class="card-text text-muted mb-3">
                         深入剖析绿色金融在可持续发展中的关键作用，探索多元投资方向、收益与风险，以及把握投资机会的策略，助力投资者在环保与财富增长上取得双赢。
                       </p>
                       
-                        
-                          <small class="text-muted">
-                            2026-02-11
-                          </small>
-                          
+                        <div class="article-meta">
+                            
+                                <i class="bi bi-clock me-1"></i>
+                                2026-02-11
+                                
+                        </div>
                   </div>
-                  <div class="card-footer text-muted">
+                  <div class="card-footer text-muted bg-white border-top">
                     <a href="/category/%E8%B4%A2%E5%AF%8C%E7%AE%A1%E7%90%86.html"
-                      class="badge bg-primary">
+                      class="badge bg-primary me-2">
                       财富管理
                     </a>
                     
-                      <a href="/tag/%E7%BB%BF%E8%89%B2%E9%87%91%E8%9E%8D.html" class="badge tag-link">
+                      <a href="/tag/%E7%BB%BF%E8%89%B2%E9%87%91%E8%9E%8D.html" class="badge tag-link me-2 mb-1">
                         绿色金融
                       </a>
                       
-                      <a href="/tag/%E5%8F%AF%E6%8C%81%E7%BB%AD%E5%8F%91%E5%B1%95.html" class="badge tag-link">
+                      <a href="/tag/%E5%8F%AF%E6%8C%81%E7%BB%AD%E5%8F%91%E5%B1%95.html" class="badge tag-link me-2 mb-1">
                         可持续发展
                       </a>
                       
-                      <a href="/tag/%E6%8A%95%E8%B5%84%E6%96%B9%E5%90%91.html" class="badge tag-link">
+                      <a href="/tag/%E6%8A%95%E8%B5%84%E6%96%B9%E5%90%91.html" class="badge tag-link me-2 mb-1">
                         投资方向
                       </a>
                       
-                      <a href="/tag/%E6%94%B6%E7%9B%8A%E9%A3%8E%E9%99%A9.html" class="badge tag-link">
+                      <a href="/tag/%E6%94%B6%E7%9B%8A%E9%A3%8E%E9%99%A9.html" class="badge tag-link me-2 mb-1">
                         收益风险
                       </a>
                       
-                      <a href="/tag/%E6%8A%95%E8%B5%84%E7%AD%96%E7%95%A5.html" class="badge tag-link">
+                      <a href="/tag/%E6%8A%95%E8%B5%84%E7%AD%96%E7%95%A5.html" class="badge tag-link me-2 mb-1">
                         投资策略
                       </a>
                       
@@ -216,8 +283,8 @@
               
           </div>
 
-          <div class="mt-4 text-center">
-            <a href="标签列表.html" class="btn btn-outline-primary"><i class="bi bi-arrow-left"></i> 返回标签列表</a>
+          <div class="mt-6 text-center">
+            <a href="标签列表.html" class="btn btn-outline-primary back-button"><i class="bi bi-arrow-left me-2"></i> 返回标签列表</a>
           </div>
         </div>
       </div>
@@ -241,7 +308,7 @@
             itemSelector: '.masonry-grid-item',
             columnWidth: '.masonry-grid-item',
             percentPosition: true,
-            gutter: 10 // 可选，添加卡片间的间距
+            gutter: 15 // 增加间距，提升视觉效果
           });
         });
       </script>

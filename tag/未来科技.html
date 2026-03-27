@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
 
 <head>
   <meta charset="UTF-8">
@@ -9,7 +9,7 @@
   <meta name="description" content="无人自助站的【未来科技】的标签列表页面，汇集了关于【未来科技】标签相关的文章和资讯，方便您快速找到感兴趣的内容。">
   <meta name="keywords" content="无人自助站,未来科技">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>标签文章列表</title>
+  <title>未来科技标签 - 无人自助站</title>
 
   <link rel="icon" href="../logo.svg" type="image/svg+xml">
   <link rel="stylesheet" href="../css/style.css">
@@ -27,6 +27,62 @@
   <!-- 引入Masonry -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/masonry/4.2.2/masonry.pkgd.min.js"></script>
 
+  <style>
+        .tag-header {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            color: white;
+            padding: 2rem;
+            border-radius: 8px;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        .tag-title {
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+        .article-card {
+            transition: all 0.3s ease;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        .article-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+        }
+        .article-title {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            transition: color 0.3s ease;
+        }
+        .article-title:hover {
+            color: #0d6efd;
+        }
+        .article-meta {
+            font-size: 0.85rem;
+            color: #6c757d;
+        }
+        .tag-link {
+            background-color: #e9ecef;
+            color: #495057;
+            transition: all 0.2s ease;
+        }
+        .tag-link:hover {
+            background-color: #dee2e6;
+            color: #212529;
+        }
+        .back-button {
+            transition: all 0.3s ease;
+        }
+        .back-button:hover {
+            transform: translateX(-3px);
+        }
+        .article-count {
+            font-size: 0.9rem;
+            opacity: 0.9;
+        }
+    </style>
 </head>
 
 <body>
@@ -80,7 +136,7 @@
     <main class="container-fluid mt-4">
       <div class="row">
         <div class="col-lg-8 col-md-12 mx-auto">
-          <nav aria-label="breadcrumb">
+          <nav aria-label="breadcrumb" class="mb-4">
             <ol class="breadcrumb">
               <li class="breadcrumb-item"><a href="/html/index.html">首页</a></li>
               <li class="breadcrumb-item"><a href="标签列表.html">标签列表</a></li>
@@ -89,54 +145,64 @@
               </li>
             </ol>
           </nav>
-          <h1 style="font-size: 1.5em; margin: 0.5em 0;">
-            未来科技标签的文章和资讯
-        </h1>
+          
+          <!-- 标签头部 -->
+          <div class="tag-header">
+              <h1 class="tag-title">
+                  <i class="bi bi-tags me-2"></i>
+                  未来科技
+              </h1>
+              <p class="article-count">
+                  共 13 篇文章
+              </p>
+          </div>
+          
           <div class="masonry-grid">
             
               <div class="masonry-grid-item">
-                <div class="card shadow-sm">
+                <div class="card article-card shadow-sm">
                   <div class="card-body">
-                    <h5 class="card-title">
-                      <i class="bi bi-file-earmark-text"></i>
-                      <a href="../mdhtml/量子计算：改变世界的下一个技术革命.html" class="text-decoration-none">
+                    <h5 class="card-title article-title">
+                      <i class="bi bi-file-earmark-text me-2 text-primary"></i>
+                      <a href="../mdhtml/量子计算：改变世界的下一个技术革命.html" class="text-decoration-none text-dark">
                         量子计算：改变世界的下一个技术革命
                       </a>
                     </h5>
                     
-                      <p class="card-text">
+                      <p class="card-text text-muted mb-3">
                         深入解析量子计算的基本原理、发展现状和未来应用，探讨这项技术将如何颠覆传统计算模式，改变科学研究和商业应用。
                       </p>
                       
-                        
-                          <small class="text-muted">
-                            2026-03-24
-                          </small>
-                          
+                        <div class="article-meta">
+                            
+                                <i class="bi bi-clock me-1"></i>
+                                2026-03-24
+                                
+                        </div>
                   </div>
-                  <div class="card-footer text-muted">
+                  <div class="card-footer text-muted bg-white border-top">
                     <a href="/category/%E7%A7%91%E6%8A%80%E5%89%8D%E6%B2%BF.html"
-                      class="badge bg-primary">
+                      class="badge bg-primary me-2">
                       科技前沿
                     </a>
                     
-                      <a href="/tag/%E9%87%8F%E5%AD%90%E8%AE%A1%E7%AE%97.html" class="badge tag-link">
+                      <a href="/tag/%E9%87%8F%E5%AD%90%E8%AE%A1%E7%AE%97.html" class="badge tag-link me-2 mb-1">
                         量子计算
                       </a>
                       
-                      <a href="/tag/%E9%87%8F%E5%AD%90%E6%8A%80%E6%9C%AF.html" class="badge tag-link">
+                      <a href="/tag/%E9%87%8F%E5%AD%90%E6%8A%80%E6%9C%AF.html" class="badge tag-link me-2 mb-1">
                         量子技术
                       </a>
                       
-                      <a href="/tag/%E8%AE%A1%E7%AE%97%E9%9D%A9%E5%91%BD.html" class="badge tag-link">
+                      <a href="/tag/%E8%AE%A1%E7%AE%97%E9%9D%A9%E5%91%BD.html" class="badge tag-link me-2 mb-1">
                         计算革命
                       </a>
                       
-                      <a href="/tag/%E6%9C%AA%E6%9D%A5%E7%A7%91%E6%8A%80.html" class="badge tag-link">
+                      <a href="/tag/%E6%9C%AA%E6%9D%A5%E7%A7%91%E6%8A%80.html" class="badge tag-link me-2 mb-1">
                         未来科技
                       </a>
                       
-                      <a href="/tag/%E7%A7%91%E5%AD%A6%E7%AA%81%E7%A0%B4.html" class="badge tag-link">
+                      <a href="/tag/%E7%A7%91%E5%AD%A6%E7%AA%81%E7%A0%B4.html" class="badge tag-link me-2 mb-1">
                         科学突破
                       </a>
                       
@@ -145,52 +211,53 @@
               </div>
               
               <div class="masonry-grid-item">
-                <div class="card shadow-sm">
+                <div class="card article-card shadow-sm">
                   <div class="card-body">
-                    <h5 class="card-title">
-                      <i class="bi bi-file-earmark-text"></i>
-                      <a href="../mdhtml/如果人类可以与植物交流，会发生什么？.html" class="text-decoration-none">
+                    <h5 class="card-title article-title">
+                      <i class="bi bi-file-earmark-text me-2 text-primary"></i>
+                      <a href="../mdhtml/如果人类可以与植物交流，会发生什么？.html" class="text-decoration-none text-dark">
                         如果人类可以与植物交流，会发生什么？
                       </a>
                     </h5>
                     
-                      <p class="card-text">
+                      <p class="card-text text-muted mb-3">
                         探讨如果人类可以与植物交流，将会带来的变化和影响，从科学、社会、文化等多个角度展开想象，探索人与自然的新关系。
                       </p>
                       
-                        
-                          <small class="text-muted">
-                            2026-02-28
-                          </small>
-                          
+                        <div class="article-meta">
+                            
+                                <i class="bi bi-clock me-1"></i>
+                                2026-02-28
+                                
+                        </div>
                   </div>
-                  <div class="card-footer text-muted">
+                  <div class="card-footer text-muted bg-white border-top">
                     <a href="/category/%E8%84%91%E6%B4%9E%E5%A4%A7%E5%BC%80.html"
-                      class="badge bg-primary">
+                      class="badge bg-primary me-2">
                       脑洞大开
                     </a>
                     
-                      <a href="/tag/%E6%A4%8D%E7%89%A9%E4%BA%A4%E6%B5%81.html" class="badge tag-link">
+                      <a href="/tag/%E6%A4%8D%E7%89%A9%E4%BA%A4%E6%B5%81.html" class="badge tag-link me-2 mb-1">
                         植物交流
                       </a>
                       
-                      <a href="/tag/%E8%84%91%E6%B4%9E%E5%A4%A7%E5%BC%80.html" class="badge tag-link">
+                      <a href="/tag/%E8%84%91%E6%B4%9E%E5%A4%A7%E5%BC%80.html" class="badge tag-link me-2 mb-1">
                         脑洞大开
                       </a>
                       
-                      <a href="/tag/%E7%A7%91%E5%AD%A6%E5%B9%BB%E6%83%B3.html" class="badge tag-link">
+                      <a href="/tag/%E7%A7%91%E5%AD%A6%E5%B9%BB%E6%83%B3.html" class="badge tag-link me-2 mb-1">
                         科学幻想
                       </a>
                       
-                      <a href="/tag/%E4%BA%BA%E4%B8%8E%E8%87%AA%E7%84%B6.html" class="badge tag-link">
+                      <a href="/tag/%E4%BA%BA%E4%B8%8E%E8%87%AA%E7%84%B6.html" class="badge tag-link me-2 mb-1">
                         人与自然
                       </a>
                       
-                      <a href="/tag/%E6%9C%AA%E6%9D%A5%E7%A7%91%E6%8A%80.html" class="badge tag-link">
+                      <a href="/tag/%E6%9C%AA%E6%9D%A5%E7%A7%91%E6%8A%80.html" class="badge tag-link me-2 mb-1">
                         未来科技
                       </a>
                       
-                      <a href="/tag/%E7%94%9F%E5%91%BD%E6%B2%9F%E9%80%9A.html" class="badge tag-link">
+                      <a href="/tag/%E7%94%9F%E5%91%BD%E6%B2%9F%E9%80%9A.html" class="badge tag-link me-2 mb-1">
                         生命沟通
                       </a>
                       
@@ -199,48 +266,49 @@
               </div>
               
               <div class="masonry-grid-item">
-                <div class="card shadow-sm">
+                <div class="card article-card shadow-sm">
                   <div class="card-body">
-                    <h5 class="card-title">
-                      <i class="bi bi-file-earmark-text"></i>
-                      <a href="../mdhtml/量子计算：未来计算的革命性突破.html" class="text-decoration-none">
+                    <h5 class="card-title article-title">
+                      <i class="bi bi-file-earmark-text me-2 text-primary"></i>
+                      <a href="../mdhtml/量子计算：未来计算的革命性突破.html" class="text-decoration-none text-dark">
                         量子计算：未来计算的革命性突破
                       </a>
                     </h5>
                     
-                      <p class="card-text">
+                      <p class="card-text text-muted mb-3">
                         深入探讨量子计算的基本原理、发展现状、技术挑战与应用前景，分析其如何突破经典计算机的局限性，以及对未来科学、技术和社会的深远影响。
                       </p>
                       
-                        
-                          <small class="text-muted">
-                            2026-02-24
-                          </small>
-                          
+                        <div class="article-meta">
+                            
+                                <i class="bi bi-clock me-1"></i>
+                                2026-02-24
+                                
+                        </div>
                   </div>
-                  <div class="card-footer text-muted">
+                  <div class="card-footer text-muted bg-white border-top">
                     <a href="/category/%E7%A7%91%E6%8A%80%E5%89%8D%E6%B2%BF.html"
-                      class="badge bg-primary">
+                      class="badge bg-primary me-2">
                       科技前沿
                     </a>
                     
-                      <a href="/tag/%E9%87%8F%E5%AD%90%E8%AE%A1%E7%AE%97.html" class="badge tag-link">
+                      <a href="/tag/%E9%87%8F%E5%AD%90%E8%AE%A1%E7%AE%97.html" class="badge tag-link me-2 mb-1">
                         量子计算
                       </a>
                       
-                      <a href="/tag/%E7%A7%91%E6%8A%80%E5%89%8D%E6%B2%BF.html" class="badge tag-link">
+                      <a href="/tag/%E7%A7%91%E6%8A%80%E5%89%8D%E6%B2%BF.html" class="badge tag-link me-2 mb-1">
                         科技前沿
                       </a>
                       
-                      <a href="/tag/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A7%91%E5%AD%A6.html" class="badge tag-link">
+                      <a href="/tag/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A7%91%E5%AD%A6.html" class="badge tag-link me-2 mb-1">
                         计算机科学
                       </a>
                       
-                      <a href="/tag/%E7%89%A9%E7%90%86%E5%AD%A6.html" class="badge tag-link">
+                      <a href="/tag/%E7%89%A9%E7%90%86%E5%AD%A6.html" class="badge tag-link me-2 mb-1">
                         物理学
                       </a>
                       
-                      <a href="/tag/%E6%9C%AA%E6%9D%A5%E7%A7%91%E6%8A%80.html" class="badge tag-link">
+                      <a href="/tag/%E6%9C%AA%E6%9D%A5%E7%A7%91%E6%8A%80.html" class="badge tag-link me-2 mb-1">
                         未来科技
                       </a>
                       
@@ -249,48 +317,49 @@
               </div>
               
               <div class="masonry-grid-item">
-                <div class="card shadow-sm">
+                <div class="card article-card shadow-sm">
                   <div class="card-body">
-                    <h5 class="card-title">
-                      <i class="bi bi-file-earmark-text"></i>
-                      <a href="../mdhtml/量子计算：将如何改变我们的未来？.html" class="text-decoration-none">
+                    <h5 class="card-title article-title">
+                      <i class="bi bi-file-earmark-text me-2 text-primary"></i>
+                      <a href="../mdhtml/量子计算：将如何改变我们的未来？.html" class="text-decoration-none text-dark">
                         量子计算：将如何改变我们的未来？
                       </a>
                     </h5>
                     
-                      <p class="card-text">
+                      <p class="card-text text-muted mb-3">
                         深入探讨量子计算的基本原理、发展现状和未来应用，分析其在密码学、药物研发、材料科学等领域的潜在影响，同时审视其面临的技术挑战。
                       </p>
                       
-                        
-                          <small class="text-muted">
-                            2026-02-24
-                          </small>
-                          
+                        <div class="article-meta">
+                            
+                                <i class="bi bi-clock me-1"></i>
+                                2026-02-24
+                                
+                        </div>
                   </div>
-                  <div class="card-footer text-muted">
+                  <div class="card-footer text-muted bg-white border-top">
                     <a href="/category/%E7%A7%91%E6%8A%80%E5%89%8D%E6%B2%BF.html"
-                      class="badge bg-primary">
+                      class="badge bg-primary me-2">
                       科技前沿
                     </a>
                     
-                      <a href="/tag/%E9%87%8F%E5%AD%90%E8%AE%A1%E7%AE%97.html" class="badge tag-link">
+                      <a href="/tag/%E9%87%8F%E5%AD%90%E8%AE%A1%E7%AE%97.html" class="badge tag-link me-2 mb-1">
                         量子计算
                       </a>
                       
-                      <a href="/tag/%E9%87%8F%E5%AD%90%E5%8A%9B%E5%AD%A6.html" class="badge tag-link">
+                      <a href="/tag/%E9%87%8F%E5%AD%90%E5%8A%9B%E5%AD%A6.html" class="badge tag-link me-2 mb-1">
                         量子力学
                       </a>
                       
-                      <a href="/tag/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A7%91%E5%AD%A6.html" class="badge tag-link">
+                      <a href="/tag/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A7%91%E5%AD%A6.html" class="badge tag-link me-2 mb-1">
                         计算机科学
                       </a>
                       
-                      <a href="/tag/%E6%9C%AA%E6%9D%A5%E7%A7%91%E6%8A%80.html" class="badge tag-link">
+                      <a href="/tag/%E6%9C%AA%E6%9D%A5%E7%A7%91%E6%8A%80.html" class="badge tag-link me-2 mb-1">
                         未来科技
                       </a>
                       
-                      <a href="/tag/%E6%8A%80%E6%9C%AF%E9%9D%A9%E5%91%BD.html" class="badge tag-link">
+                      <a href="/tag/%E6%8A%80%E6%9C%AF%E9%9D%A9%E5%91%BD.html" class="badge tag-link me-2 mb-1">
                         技术革命
                       </a>
                       
@@ -299,48 +368,49 @@
               </div>
               
               <div class="masonry-grid-item">
-                <div class="card shadow-sm">
+                <div class="card article-card shadow-sm">
                   <div class="card-body">
-                    <h5 class="card-title">
-                      <i class="bi bi-file-earmark-text"></i>
-                      <a href="../mdhtml/量子计算如何改变我们的未来世界.html" class="text-decoration-none">
+                    <h5 class="card-title article-title">
+                      <i class="bi bi-file-earmark-text me-2 text-primary"></i>
+                      <a href="../mdhtml/量子计算如何改变我们的未来世界.html" class="text-decoration-none text-dark">
                         量子计算如何改变我们的未来世界
                       </a>
                     </h5>
                     
-                      <p class="card-text">
+                      <p class="card-text text-muted mb-3">
                         深入探讨量子计算的基本原理、发展现状以及它将如何彻底改变密码学、人工智能、材料科学等领域的未来。
                       </p>
                       
-                        
-                          <small class="text-muted">
-                            2026-02-24
-                          </small>
-                          
+                        <div class="article-meta">
+                            
+                                <i class="bi bi-clock me-1"></i>
+                                2026-02-24
+                                
+                        </div>
                   </div>
-                  <div class="card-footer text-muted">
+                  <div class="card-footer text-muted bg-white border-top">
                     <a href="/category/%E7%A7%91%E6%8A%80%E5%89%8D%E6%B2%BF.html"
-                      class="badge bg-primary">
+                      class="badge bg-primary me-2">
                       科技前沿
                     </a>
                     
-                      <a href="/tag/%E9%87%8F%E5%AD%90%E8%AE%A1%E7%AE%97.html" class="badge tag-link">
+                      <a href="/tag/%E9%87%8F%E5%AD%90%E8%AE%A1%E7%AE%97.html" class="badge tag-link me-2 mb-1">
                         量子计算
                       </a>
                       
-                      <a href="/tag/%E6%9C%AA%E6%9D%A5%E7%A7%91%E6%8A%80.html" class="badge tag-link">
+                      <a href="/tag/%E6%9C%AA%E6%9D%A5%E7%A7%91%E6%8A%80.html" class="badge tag-link me-2 mb-1">
                         未来科技
                       </a>
                       
-                      <a href="/tag/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD.html" class="badge tag-link">
+                      <a href="/tag/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD.html" class="badge tag-link me-2 mb-1">
                         人工智能
                       </a>
                       
-                      <a href="/tag/%E5%AF%86%E7%A0%81%E5%AD%A6.html" class="badge tag-link">
+                      <a href="/tag/%E5%AF%86%E7%A0%81%E5%AD%A6.html" class="badge tag-link me-2 mb-1">
                         密码学
                       </a>
                       
-                      <a href="/tag/%E7%A7%91%E6%8A%80%E5%89%8D%E6%B2%BF.html" class="badge tag-link">
+                      <a href="/tag/%E7%A7%91%E6%8A%80%E5%89%8D%E6%B2%BF.html" class="badge tag-link me-2 mb-1">
                         科技前沿
                       </a>
                       
@@ -349,48 +419,49 @@
               </div>
               
               <div class="masonry-grid-item">
-                <div class="card shadow-sm">
+                <div class="card article-card shadow-sm">
                   <div class="card-body">
-                    <h5 class="card-title">
-                      <i class="bi bi-file-earmark-text"></i>
-                      <a href="../mdhtml/虚拟现实技术：将如何改变我们的生活？.html" class="text-decoration-none">
+                    <h5 class="card-title article-title">
+                      <i class="bi bi-file-earmark-text me-2 text-primary"></i>
+                      <a href="../mdhtml/虚拟现实技术：将如何改变我们的生活？.html" class="text-decoration-none text-dark">
                         虚拟现实技术：将如何改变我们的生活？
                       </a>
                     </h5>
                     
-                      <p class="card-text">
+                      <p class="card-text text-muted mb-3">
                         深入探讨虚拟现实技术的原理、发展现状与应用前景，分析其对人类生活和社会的影响，以及未来的发展趋势。
                       </p>
                       
-                        
-                          <small class="text-muted">
-                            2026-02-24
-                          </small>
-                          
+                        <div class="article-meta">
+                            
+                                <i class="bi bi-clock me-1"></i>
+                                2026-02-24
+                                
+                        </div>
                   </div>
-                  <div class="card-footer text-muted">
+                  <div class="card-footer text-muted bg-white border-top">
                     <a href="/category/%E7%A7%91%E6%8A%80%E5%89%8D%E6%B2%BF.html"
-                      class="badge bg-primary">
+                      class="badge bg-primary me-2">
                       科技前沿
                     </a>
                     
-                      <a href="/tag/%E8%99%9A%E6%8B%9F%E7%8E%B0%E5%AE%9E.html" class="badge tag-link">
+                      <a href="/tag/%E8%99%9A%E6%8B%9F%E7%8E%B0%E5%AE%9E.html" class="badge tag-link me-2 mb-1">
                         虚拟现实
                       </a>
                       
-                      <a href="/tag/VR.html" class="badge tag-link">
+                      <a href="/tag/VR.html" class="badge tag-link me-2 mb-1">
                         VR
                       </a>
                       
-                      <a href="/tag/%E6%B2%89%E6%B5%B8%E5%BC%8F%E4%BD%93%E9%AA%8C.html" class="badge tag-link">
+                      <a href="/tag/%E6%B2%89%E6%B5%B8%E5%BC%8F%E4%BD%93%E9%AA%8C.html" class="badge tag-link me-2 mb-1">
                         沉浸式体验
                       </a>
                       
-                      <a href="/tag/%E6%9C%AA%E6%9D%A5%E7%A7%91%E6%8A%80.html" class="badge tag-link">
+                      <a href="/tag/%E6%9C%AA%E6%9D%A5%E7%A7%91%E6%8A%80.html" class="badge tag-link me-2 mb-1">
                         未来科技
                       </a>
                       
-                      <a href="/tag/%E6%95%B0%E5%AD%97%E7%94%9F%E6%B4%BB.html" class="badge tag-link">
+                      <a href="/tag/%E6%95%B0%E5%AD%97%E7%94%9F%E6%B4%BB.html" class="badge tag-link me-2 mb-1">
                         数字生活
                       </a>
                       
@@ -399,48 +470,49 @@
               </div>
               
               <div class="masonry-grid-item">
-                <div class="card shadow-sm">
+                <div class="card article-card shadow-sm">
                   <div class="card-body">
-                    <h5 class="card-title">
-                      <i class="bi bi-file-earmark-text"></i>
-                      <a href="../mdhtml/脑机接口技术：人类与机器融合的未来.html" class="text-decoration-none">
+                    <h5 class="card-title article-title">
+                      <i class="bi bi-file-earmark-text me-2 text-primary"></i>
+                      <a href="../mdhtml/脑机接口技术：人类与机器融合的未来.html" class="text-decoration-none text-dark">
                         脑机接口技术：人类与机器融合的未来
                       </a>
                     </h5>
                     
-                      <p class="card-text">
+                      <p class="card-text text-muted mb-3">
                         深入探讨脑机接口技术的原理、发展现状和未来前景，分析其在医疗、教育、娱乐等领域的应用，同时审视其可能带来的伦理和社会影响。
                       </p>
                       
-                        
-                          <small class="text-muted">
-                            2026-02-24
-                          </small>
-                          
+                        <div class="article-meta">
+                            
+                                <i class="bi bi-clock me-1"></i>
+                                2026-02-24
+                                
+                        </div>
                   </div>
-                  <div class="card-footer text-muted">
+                  <div class="card-footer text-muted bg-white border-top">
                     <a href="/category/%E7%A7%91%E6%8A%80%E5%89%8D%E6%B2%BF.html"
-                      class="badge bg-primary">
+                      class="badge bg-primary me-2">
                       科技前沿
                     </a>
                     
-                      <a href="/tag/%E8%84%91%E6%9C%BA%E6%8E%A5%E5%8F%A3.html" class="badge tag-link">
+                      <a href="/tag/%E8%84%91%E6%9C%BA%E6%8E%A5%E5%8F%A3.html" class="badge tag-link me-2 mb-1">
                         脑机接口
                       </a>
                       
-                      <a href="/tag/%E7%A5%9E%E7%BB%8F%E7%A7%91%E5%AD%A6.html" class="badge tag-link">
+                      <a href="/tag/%E7%A5%9E%E7%BB%8F%E7%A7%91%E5%AD%A6.html" class="badge tag-link me-2 mb-1">
                         神经科学
                       </a>
                       
-                      <a href="/tag/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD.html" class="badge tag-link">
+                      <a href="/tag/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD.html" class="badge tag-link me-2 mb-1">
                         人工智能
                       </a>
                       
-                      <a href="/tag/%E4%BA%BA%E6%9C%BA%E8%9E%8D%E5%90%88.html" class="badge tag-link">
+                      <a href="/tag/%E4%BA%BA%E6%9C%BA%E8%9E%8D%E5%90%88.html" class="badge tag-link me-2 mb-1">
                         人机融合
                       </a>
                       
-                      <a href="/tag/%E6%9C%AA%E6%9D%A5%E7%A7%91%E6%8A%80.html" class="badge tag-link">
+                      <a href="/tag/%E6%9C%AA%E6%9D%A5%E7%A7%91%E6%8A%80.html" class="badge tag-link me-2 mb-1">
                         未来科技
                       </a>
                       
@@ -449,48 +521,49 @@
               </div>
               
               <div class="masonry-grid-item">
-                <div class="card shadow-sm">
+                <div class="card article-card shadow-sm">
                   <div class="card-body">
-                    <h5 class="card-title">
-                      <i class="bi bi-file-earmark-text"></i>
-                      <a href="../mdhtml/数字孪生：现实与虚拟的融合.html" class="text-decoration-none">
+                    <h5 class="card-title article-title">
+                      <i class="bi bi-file-earmark-text me-2 text-primary"></i>
+                      <a href="../mdhtml/数字孪生：现实与虚拟的融合.html" class="text-decoration-none text-dark">
                         数字孪生：现实与虚拟的融合
                       </a>
                     </h5>
                     
-                      <p class="card-text">
+                      <p class="card-text text-muted mb-3">
                         深入探讨数字孪生的概念、技术架构、应用场景与发展前景，分析数字孪生如何通过虚拟模型与现实世界的实时交互，优化产品设计、生产流程和城市管理，以及对未来社会和产业的深远影响。
                       </p>
                       
-                        
-                          <small class="text-muted">
-                            2026-02-24
-                          </small>
-                          
+                        <div class="article-meta">
+                            
+                                <i class="bi bi-clock me-1"></i>
+                                2026-02-24
+                                
+                        </div>
                   </div>
-                  <div class="card-footer text-muted">
+                  <div class="card-footer text-muted bg-white border-top">
                     <a href="/category/%E7%A7%91%E6%8A%80%E5%89%8D%E6%B2%BF.html"
-                      class="badge bg-primary">
+                      class="badge bg-primary me-2">
                       科技前沿
                     </a>
                     
-                      <a href="/tag/%E6%95%B0%E5%AD%97%E5%AD%AA%E7%94%9F.html" class="badge tag-link">
+                      <a href="/tag/%E6%95%B0%E5%AD%97%E5%AD%AA%E7%94%9F.html" class="badge tag-link me-2 mb-1">
                         数字孪生
                       </a>
                       
-                      <a href="/tag/%E7%A7%91%E6%8A%80%E5%89%8D%E6%B2%BF.html" class="badge tag-link">
+                      <a href="/tag/%E7%A7%91%E6%8A%80%E5%89%8D%E6%B2%BF.html" class="badge tag-link me-2 mb-1">
                         科技前沿
                       </a>
                       
-                      <a href="/tag/%E7%89%A9%E8%81%94%E7%BD%91.html" class="badge tag-link">
+                      <a href="/tag/%E7%89%A9%E8%81%94%E7%BD%91.html" class="badge tag-link me-2 mb-1">
                         物联网
                       </a>
                       
-                      <a href="/tag/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD.html" class="badge tag-link">
+                      <a href="/tag/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD.html" class="badge tag-link me-2 mb-1">
                         人工智能
                       </a>
                       
-                      <a href="/tag/%E6%9C%AA%E6%9D%A5%E7%A7%91%E6%8A%80.html" class="badge tag-link">
+                      <a href="/tag/%E6%9C%AA%E6%9D%A5%E7%A7%91%E6%8A%80.html" class="badge tag-link me-2 mb-1">
                         未来科技
                       </a>
                       
@@ -499,48 +572,49 @@
               </div>
               
               <div class="masonry-grid-item">
-                <div class="card shadow-sm">
+                <div class="card article-card shadow-sm">
                   <div class="card-body">
-                    <h5 class="card-title">
-                      <i class="bi bi-file-earmark-text"></i>
-                      <a href="../mdhtml/太空旅游：何时能成为普通人的选择？.html" class="text-decoration-none">
+                    <h5 class="card-title article-title">
+                      <i class="bi bi-file-earmark-text me-2 text-primary"></i>
+                      <a href="../mdhtml/太空旅游：何时能成为普通人的选择？.html" class="text-decoration-none text-dark">
                         太空旅游：何时能成为普通人的选择？
                       </a>
                     </h5>
                     
-                      <p class="card-text">
+                      <p class="card-text text-muted mb-3">
                         深入探讨太空旅游的发展现状、技术挑战与商业前景，分析其对人类社会的影响，以及未来成为普通人选择的时间线与条件。
                       </p>
                       
-                        
-                          <small class="text-muted">
-                            2026-02-24
-                          </small>
-                          
+                        <div class="article-meta">
+                            
+                                <i class="bi bi-clock me-1"></i>
+                                2026-02-24
+                                
+                        </div>
                   </div>
-                  <div class="card-footer text-muted">
+                  <div class="card-footer text-muted bg-white border-top">
                     <a href="/category/%E7%A7%91%E6%8A%80%E5%89%8D%E6%B2%BF.html"
-                      class="badge bg-primary">
+                      class="badge bg-primary me-2">
                       科技前沿
                     </a>
                     
-                      <a href="/tag/%E5%A4%AA%E7%A9%BA%E6%97%85%E6%B8%B8.html" class="badge tag-link">
+                      <a href="/tag/%E5%A4%AA%E7%A9%BA%E6%97%85%E6%B8%B8.html" class="badge tag-link me-2 mb-1">
                         太空旅游
                       </a>
                       
-                      <a href="/tag/%E5%95%86%E4%B8%9A%E8%88%AA%E5%A4%A9.html" class="badge tag-link">
+                      <a href="/tag/%E5%95%86%E4%B8%9A%E8%88%AA%E5%A4%A9.html" class="badge tag-link me-2 mb-1">
                         商业航天
                       </a>
                       
-                      <a href="/tag/%E5%A4%AA%E7%A9%BA%E6%8E%A2%E7%B4%A2.html" class="badge tag-link">
+                      <a href="/tag/%E5%A4%AA%E7%A9%BA%E6%8E%A2%E7%B4%A2.html" class="badge tag-link me-2 mb-1">
                         太空探索
                       </a>
                       
-                      <a href="/tag/%E6%9C%AA%E6%9D%A5%E7%A7%91%E6%8A%80.html" class="badge tag-link">
+                      <a href="/tag/%E6%9C%AA%E6%9D%A5%E7%A7%91%E6%8A%80.html" class="badge tag-link me-2 mb-1">
                         未来科技
                       </a>
                       
-                      <a href="/tag/%E4%BA%BA%E7%B1%BB%E6%96%87%E6%98%8E.html" class="badge tag-link">
+                      <a href="/tag/%E4%BA%BA%E7%B1%BB%E6%96%87%E6%98%8E.html" class="badge tag-link me-2 mb-1">
                         人类文明
                       </a>
                       
@@ -549,48 +623,49 @@
               </div>
               
               <div class="masonry-grid-item">
-                <div class="card shadow-sm">
+                <div class="card article-card shadow-sm">
                   <div class="card-body">
-                    <h5 class="card-title">
-                      <i class="bi bi-file-earmark-text"></i>
-                      <a href="../mdhtml/具身智能：AI的下一个进化方向.html" class="text-decoration-none">
+                    <h5 class="card-title article-title">
+                      <i class="bi bi-file-earmark-text me-2 text-primary"></i>
+                      <a href="../mdhtml/具身智能：AI的下一个进化方向.html" class="text-decoration-none text-dark">
                         具身智能：AI的下一个进化方向
                       </a>
                     </h5>
                     
-                      <p class="card-text">
+                      <p class="card-text text-muted mb-3">
                         深入探讨具身智能的概念、发展现状、关键技术和未来应用，分析其如何成为人工智能的下一个重要进化方向。
                       </p>
                       
-                        
-                          <small class="text-muted">
-                            2026-02-24
-                          </small>
-                          
+                        <div class="article-meta">
+                            
+                                <i class="bi bi-clock me-1"></i>
+                                2026-02-24
+                                
+                        </div>
                   </div>
-                  <div class="card-footer text-muted">
+                  <div class="card-footer text-muted bg-white border-top">
                     <a href="/category/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD.html"
-                      class="badge bg-primary">
+                      class="badge bg-primary me-2">
                       人工智能
                     </a>
                     
-                      <a href="/tag/%E5%85%B7%E8%BA%AB%E6%99%BA%E8%83%BD.html" class="badge tag-link">
+                      <a href="/tag/%E5%85%B7%E8%BA%AB%E6%99%BA%E8%83%BD.html" class="badge tag-link me-2 mb-1">
                         具身智能
                       </a>
                       
-                      <a href="/tag/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD.html" class="badge tag-link">
+                      <a href="/tag/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD.html" class="badge tag-link me-2 mb-1">
                         人工智能
                       </a>
                       
-                      <a href="/tag/%E6%9C%BA%E5%99%A8%E4%BA%BA.html" class="badge tag-link">
+                      <a href="/tag/%E6%9C%BA%E5%99%A8%E4%BA%BA.html" class="badge tag-link me-2 mb-1">
                         机器人
                       </a>
                       
-                      <a href="/tag/%E7%89%A9%E7%90%86%E4%B8%96%E7%95%8C%E4%BA%A4%E4%BA%92.html" class="badge tag-link">
+                      <a href="/tag/%E7%89%A9%E7%90%86%E4%B8%96%E7%95%8C%E4%BA%A4%E4%BA%92.html" class="badge tag-link me-2 mb-1">
                         物理世界交互
                       </a>
                       
-                      <a href="/tag/%E6%9C%AA%E6%9D%A5%E7%A7%91%E6%8A%80.html" class="badge tag-link">
+                      <a href="/tag/%E6%9C%AA%E6%9D%A5%E7%A7%91%E6%8A%80.html" class="badge tag-link me-2 mb-1">
                         未来科技
                       </a>
                       
@@ -599,48 +674,49 @@
               </div>
               
               <div class="masonry-grid-item">
-                <div class="card shadow-sm">
+                <div class="card article-card shadow-sm">
                   <div class="card-body">
-                    <h5 class="card-title">
-                      <i class="bi bi-file-earmark-text"></i>
-                      <a href="../mdhtml/人工智能会产生自我意识吗？深度解析AI意识的可能性.html" class="text-decoration-none">
+                    <h5 class="card-title article-title">
+                      <i class="bi bi-file-earmark-text me-2 text-primary"></i>
+                      <a href="../mdhtml/人工智能会产生自我意识吗？深度解析AI意识的可能性.html" class="text-decoration-none text-dark">
                         人工智能会产生自我意识吗？深度解析AI意识的可能性
                       </a>
                     </h5>
                     
-                      <p class="card-text">
+                      <p class="card-text text-muted mb-3">
                         深入探讨人工智能是否可能产生自我意识，分析当前AI技术的局限性，以及意识产生的必要条件，同时审视AI意识可能带来的伦理和社会影响。
                       </p>
                       
-                        
-                          <small class="text-muted">
-                            2026-02-24
-                          </small>
-                          
+                        <div class="article-meta">
+                            
+                                <i class="bi bi-clock me-1"></i>
+                                2026-02-24
+                                
+                        </div>
                   </div>
-                  <div class="card-footer text-muted">
+                  <div class="card-footer text-muted bg-white border-top">
                     <a href="/category/%E7%A7%91%E6%8A%80%E5%89%8D%E6%B2%BF.html"
-                      class="badge bg-primary">
+                      class="badge bg-primary me-2">
                       科技前沿
                     </a>
                     
-                      <a href="/tag/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD.html" class="badge tag-link">
+                      <a href="/tag/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD.html" class="badge tag-link me-2 mb-1">
                         人工智能
                       </a>
                       
-                      <a href="/tag/%E8%87%AA%E6%88%91%E6%84%8F%E8%AF%86.html" class="badge tag-link">
+                      <a href="/tag/%E8%87%AA%E6%88%91%E6%84%8F%E8%AF%86.html" class="badge tag-link me-2 mb-1">
                         自我意识
                       </a>
                       
-                      <a href="/tag/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0.html" class="badge tag-link">
+                      <a href="/tag/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0.html" class="badge tag-link me-2 mb-1">
                         深度学习
                       </a>
                       
-                      <a href="/tag/%E6%84%8F%E8%AF%86%E7%90%86%E8%AE%BA.html" class="badge tag-link">
+                      <a href="/tag/%E6%84%8F%E8%AF%86%E7%90%86%E8%AE%BA.html" class="badge tag-link me-2 mb-1">
                         意识理论
                       </a>
                       
-                      <a href="/tag/%E6%9C%AA%E6%9D%A5%E7%A7%91%E6%8A%80.html" class="badge tag-link">
+                      <a href="/tag/%E6%9C%AA%E6%9D%A5%E7%A7%91%E6%8A%80.html" class="badge tag-link me-2 mb-1">
                         未来科技
                       </a>
                       
@@ -649,56 +725,57 @@
               </div>
               
               <div class="masonry-grid-item">
-                <div class="card shadow-sm">
+                <div class="card article-card shadow-sm">
                   <div class="card-body">
-                    <h5 class="card-title">
-                      <i class="bi bi-file-earmark-text"></i>
-                      <a href="../mdhtml/人工智能是否会超越人类并掌控世界？.html" class="text-decoration-none">
+                    <h5 class="card-title article-title">
+                      <i class="bi bi-file-earmark-text me-2 text-primary"></i>
+                      <a href="../mdhtml/人工智能是否会超越人类并掌控世界？.html" class="text-decoration-none text-dark">
                         人工智能是否会超越人类并掌控世界？
                       </a>
                     </h5>
                     
-                      <p class="card-text">
+                      <p class="card-text text-muted mb-3">
                         文章探讨了人工智能是否会超越人类并掌控世界的议题，分析了AI在数据处理和自我优化方面的优势，同时也强调了人类独有的情感、创造力及自我意识等特质。文章提倡未来应注重人与AI的协作，并确保技术发展符合人类的利益和价值观，以实现和谐共处的美好愿景。
                       </p>
                       
-                        
-                          <small class="text-muted">
-                            2026-02-11
-                          </small>
-                          
+                        <div class="article-meta">
+                            
+                                <i class="bi bi-clock me-1"></i>
+                                2026-02-11
+                                
+                        </div>
                   </div>
-                  <div class="card-footer text-muted">
+                  <div class="card-footer text-muted bg-white border-top">
                     <a href="/category/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD.html"
-                      class="badge bg-primary">
+                      class="badge bg-primary me-2">
                       人工智能
                     </a>
                     
-                      <a href="/tag/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD.html" class="badge tag-link">
+                      <a href="/tag/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD.html" class="badge tag-link me-2 mb-1">
                         人工智能
                       </a>
                       
-                      <a href="/tag/%E4%BA%BA%E7%B1%BB%E7%89%B9%E8%B4%A8.html" class="badge tag-link">
+                      <a href="/tag/%E4%BA%BA%E7%B1%BB%E7%89%B9%E8%B4%A8.html" class="badge tag-link me-2 mb-1">
                         人类特质
                       </a>
                       
-                      <a href="/tag/%E7%A7%91%E6%8A%80%E4%BC%A6%E7%90%86.html" class="badge tag-link">
+                      <a href="/tag/%E7%A7%91%E6%8A%80%E4%BC%A6%E7%90%86.html" class="badge tag-link me-2 mb-1">
                         科技伦理
                       </a>
                       
-                      <a href="/tag/%E4%BA%BA%E6%9C%BA%E5%8D%8F%E4%BD%9C.html" class="badge tag-link">
+                      <a href="/tag/%E4%BA%BA%E6%9C%BA%E5%8D%8F%E4%BD%9C.html" class="badge tag-link me-2 mb-1">
                         人机协作
                       </a>
                       
-                      <a href="/tag/AI%E5%8F%91%E5%B1%95.html" class="badge tag-link">
+                      <a href="/tag/AI%E5%8F%91%E5%B1%95.html" class="badge tag-link me-2 mb-1">
                         AI发展
                       </a>
                       
-                      <a href="/tag/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%E4%BC%A6%E7%90%86.html" class="badge tag-link">
+                      <a href="/tag/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%E4%BC%A6%E7%90%86.html" class="badge tag-link me-2 mb-1">
                         人工智能伦理
                       </a>
                       
-                      <a href="/tag/%E6%9C%AA%E6%9D%A5%E7%A7%91%E6%8A%80.html" class="badge tag-link">
+                      <a href="/tag/%E6%9C%AA%E6%9D%A5%E7%A7%91%E6%8A%80.html" class="badge tag-link me-2 mb-1">
                         未来科技
                       </a>
                       
@@ -707,48 +784,49 @@
               </div>
               
               <div class="masonry-grid-item">
-                <div class="card shadow-sm">
+                <div class="card article-card shadow-sm">
                   <div class="card-body">
-                    <h5 class="card-title">
-                      <i class="bi bi-file-earmark-text"></i>
-                      <a href="../mdhtml/元宇宙与现实生活的融合：从虚拟世界到增强现实的过渡.html" class="text-decoration-none">
+                    <h5 class="card-title article-title">
+                      <i class="bi bi-file-earmark-text me-2 text-primary"></i>
+                      <a href="../mdhtml/元宇宙与现实生活的融合：从虚拟世界到增强现实的过渡.html" class="text-decoration-none text-dark">
                         元宇宙与现实生活的融合：从虚拟世界到增强现实的过渡
                       </a>
                     </h5>
                     
-                      <p class="card-text">
+                      <p class="card-text text-muted mb-3">
                         探讨元宇宙与现实生活的融合趋势，分析如何从虚拟世界过渡到增强现实，实现数字与物理世界的无缝连接
                       </p>
                       
-                        
-                          <small class="text-muted">
-                            2026-02-11
-                          </small>
-                          
+                        <div class="article-meta">
+                            
+                                <i class="bi bi-clock me-1"></i>
+                                2026-02-11
+                                
+                        </div>
                   </div>
-                  <div class="card-footer text-muted">
+                  <div class="card-footer text-muted bg-white border-top">
                     <a href="/category/%E7%A7%91%E6%8A%80%E5%89%8D%E6%B2%BF.html"
-                      class="badge bg-primary">
+                      class="badge bg-primary me-2">
                       科技前沿
                     </a>
                     
-                      <a href="/tag/%E5%85%83%E5%AE%87%E5%AE%99.html" class="badge tag-link">
+                      <a href="/tag/%E5%85%83%E5%AE%87%E5%AE%99.html" class="badge tag-link me-2 mb-1">
                         元宇宙
                       </a>
                       
-                      <a href="/tag/%E7%8E%B0%E5%AE%9E%E7%94%9F%E6%B4%BB.html" class="badge tag-link">
+                      <a href="/tag/%E7%8E%B0%E5%AE%9E%E7%94%9F%E6%B4%BB.html" class="badge tag-link me-2 mb-1">
                         现实生活
                       </a>
                       
-                      <a href="/tag/%E5%A2%9E%E5%BC%BA%E7%8E%B0%E5%AE%9E.html" class="badge tag-link">
+                      <a href="/tag/%E5%A2%9E%E5%BC%BA%E7%8E%B0%E5%AE%9E.html" class="badge tag-link me-2 mb-1">
                         增强现实
                       </a>
                       
-                      <a href="/tag/%E6%95%B0%E5%AD%97%E8%9E%8D%E5%90%88.html" class="badge tag-link">
+                      <a href="/tag/%E6%95%B0%E5%AD%97%E8%9E%8D%E5%90%88.html" class="badge tag-link me-2 mb-1">
                         数字融合
                       </a>
                       
-                      <a href="/tag/%E6%9C%AA%E6%9D%A5%E7%A7%91%E6%8A%80.html" class="badge tag-link">
+                      <a href="/tag/%E6%9C%AA%E6%9D%A5%E7%A7%91%E6%8A%80.html" class="badge tag-link me-2 mb-1">
                         未来科技
                       </a>
                       
@@ -758,8 +836,8 @@
               
           </div>
 
-          <div class="mt-4 text-center">
-            <a href="标签列表.html" class="btn btn-outline-primary"><i class="bi bi-arrow-left"></i> 返回标签列表</a>
+          <div class="mt-6 text-center">
+            <a href="标签列表.html" class="btn btn-outline-primary back-button"><i class="bi bi-arrow-left me-2"></i> 返回标签列表</a>
           </div>
         </div>
       </div>
@@ -783,7 +861,7 @@
             itemSelector: '.masonry-grid-item',
             columnWidth: '.masonry-grid-item',
             percentPosition: true,
-            gutter: 10 // 可选，添加卡片间的间距
+            gutter: 15 // 增加间距，提升视觉效果
           });
         });
       </script>

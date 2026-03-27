@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
 
 <head>
     <meta charset="UTF-8">
@@ -9,7 +9,7 @@
     <meta name="description" content="无人自助站的【婚姻情感】分类列表页面，汇集了关于【婚姻情感】分类的文章和资讯，方便您快速找到感兴趣的内容。">
     <meta name="keywords" content="无人自助站,婚姻情感">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>分类列表</title>
+    <title>婚姻情感分类 - 无人自助站</title>
     <link rel="icon" href="../logo.svg" type="image/svg+xml">
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/footer.css">
@@ -27,6 +27,62 @@
     <!-- 引入Masonry -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/masonry/4.2.2/masonry.pkgd.min.js"></script>
 
+    <style>
+        .category-header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 2rem;
+            border-radius: 8px;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        .category-title {
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+        .article-card {
+            transition: all 0.3s ease;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        .article-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+        }
+        .article-title {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            transition: color 0.3s ease;
+        }
+        .article-title:hover {
+            color: #0d6efd;
+        }
+        .article-meta {
+            font-size: 0.85rem;
+            color: #6c757d;
+        }
+        .tag-link {
+            background-color: #e9ecef;
+            color: #495057;
+            transition: all 0.2s ease;
+        }
+        .tag-link:hover {
+            background-color: #dee2e6;
+            color: #212529;
+        }
+        .back-button {
+            transition: all 0.3s ease;
+        }
+        .back-button:hover {
+            transform: translateX(-3px);
+        }
+        .article-count {
+            font-size: 0.9rem;
+            opacity: 0.9;
+        }
+    </style>
 </head>
 
 <body>
@@ -80,7 +136,7 @@
         <main class="container-fluid mt-4">
             <div class="col-lg-8 col-md-12 mx-auto">
                 <!-- 面包屑导航 -->
-                <nav aria-label="breadcrumb">
+                <nav aria-label="breadcrumb" class="mb-4">
                     <ol class="breadcrumb">
                         <li class="breadcrumb-item"><a href="/html/index.html">首页</a></li>
                         <li class="breadcrumb-item"><a href="分类列表.html">分类列表</a></li>
@@ -89,61 +145,71 @@
                         </li>
                     </ol>
                 </nav>
-                <h1 style="font-size: 1.5em; margin: 0.5em 0;">
-                    婚姻情感分类的文章和资讯
-                </h1>
+                
+                <!-- 分类头部 -->
+                <div class="category-header">
+                    <h1 class="category-title">
+                        <i class="bi bi-folder2 me-2"></i>
+                        婚姻情感
+                    </h1>
+                    <p class="article-count">
+                        共 27 篇文章
+                    </p>
+                </div>
+                
                 <!-- 分类内容卡片 使用 Masonry 布局 -->
                 <div class="masonry-grid">
                     
                         <div class="masonry-grid-item">
-                            <div class="card shadow-sm">
+                            <div class="card article-card shadow-sm">
                                 <div class="card-body">
-                                    <h5 class="card-title">
-                                        <i class="bi bi-file-earmark-text"></i>
+                                    <h5 class="card-title article-title">
+                                        <i class="bi bi-file-earmark-text me-2 text-primary"></i>
                                         <a href="../mdhtml/如何在婚姻中培养共同兴趣.html"
-                                            class="text-decoration-none">
+                                            class="text-decoration-none text-dark">
                                             如何在婚姻中培养共同兴趣
                                         </a>
                                     </h5>
                                     
-                                        <p class="card-text">
+                                        <p class="card-text text-muted mb-3">
                                             探讨如何在婚姻中培养共同兴趣，包括共同兴趣的重要性、培养方法、不同婚姻阶段的兴趣培养、具体实践建议等方面的实用指南，帮助夫妻建立更加亲密的关系。
                                         </p>
                                         
+                                        <div class="article-meta">
                                             
-                                                <small class="text-muted">
-                                                    2026-02-28
-                                                </small>
+                                                <i class="bi bi-clock me-1"></i>
+                                                2026-02-28
                                                 
+                                        </div>
                                 </div>
-                                <div class="card-footer text-muted">
+                                <div class="card-footer text-muted bg-white border-top">
                                     <a href="/category/%E5%A9%9A%E5%A7%BB%E6%83%85%E6%84%9F.html"
-                                        class="badge bg-primary">
+                                        class="badge bg-primary me-2">
                                         婚姻情感
                                     </a>
                                     
                                         <a href="/tag/%E5%A9%9A%E5%A7%BB%E5%85%B1%E5%90%8C%E5%85%B4%E8%B6%A3.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             婚姻共同兴趣
                                         </a>
                                         
                                         <a href="/tag/%E5%A4%AB%E5%A6%BB%E5%85%B3%E7%B3%BB.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             夫妻关系
                                         </a>
                                         
                                         <a href="/tag/%E5%85%B4%E8%B6%A3%E5%9F%B9%E5%85%BB.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             兴趣培养
                                         </a>
                                         
                                         <a href="/tag/%E5%A9%9A%E5%A7%BB%E5%92%8C%E8%B0%90.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             婚姻和谐
                                         </a>
                                         
                                         <a href="/tag/%E6%83%85%E6%84%9F%E8%BF%9E%E6%8E%A5.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             情感连接
                                         </a>
                                         
@@ -152,54 +218,55 @@
                         </div>
                         
                         <div class="masonry-grid-item">
-                            <div class="card shadow-sm">
+                            <div class="card article-card shadow-sm">
                                 <div class="card-body">
-                                    <h5 class="card-title">
-                                        <i class="bi bi-file-earmark-text"></i>
+                                    <h5 class="card-title article-title">
+                                        <i class="bi bi-file-earmark-text me-2 text-primary"></i>
                                         <a href="../mdhtml/如何处理婚姻中的冲突.html"
-                                            class="text-decoration-none">
+                                            class="text-decoration-none text-dark">
                                             如何处理婚姻中的冲突
                                         </a>
                                     </h5>
                                     
-                                        <p class="card-text">
+                                        <p class="card-text text-muted mb-3">
                                             探讨如何处理婚姻中的冲突，包括冲突的原因、影响、处理方法、沟通技巧等方面的实用建议，帮助夫妻有效管理冲突，维护婚姻关系。
                                         </p>
                                         
+                                        <div class="article-meta">
                                             
-                                                <small class="text-muted">
-                                                    2026-02-28
-                                                </small>
+                                                <i class="bi bi-clock me-1"></i>
+                                                2026-02-28
                                                 
+                                        </div>
                                 </div>
-                                <div class="card-footer text-muted">
+                                <div class="card-footer text-muted bg-white border-top">
                                     <a href="/category/%E5%A9%9A%E5%A7%BB%E6%83%85%E6%84%9F.html"
-                                        class="badge bg-primary">
+                                        class="badge bg-primary me-2">
                                         婚姻情感
                                     </a>
                                     
                                         <a href="/tag/%E5%A9%9A%E5%A7%BB%E5%86%B2%E7%AA%81.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             婚姻冲突
                                         </a>
                                         
                                         <a href="/tag/%E5%86%B2%E7%AA%81%E5%A4%84%E7%90%86.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             冲突处理
                                         </a>
                                         
                                         <a href="/tag/%E5%A4%AB%E5%A6%BB%E5%85%B3%E7%B3%BB.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             夫妻关系
                                         </a>
                                         
                                         <a href="/tag/%E6%B2%9F%E9%80%9A%E6%8A%80%E5%B7%A7.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             沟通技巧
                                         </a>
                                         
                                         <a href="/tag/%E5%A9%9A%E5%A7%BB%E5%92%8C%E8%B0%90.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             婚姻和谐
                                         </a>
                                         
@@ -208,54 +275,55 @@
                         </div>
                         
                         <div class="masonry-grid-item">
-                            <div class="card shadow-sm">
+                            <div class="card article-card shadow-sm">
                                 <div class="card-body">
-                                    <h5 class="card-title">
-                                        <i class="bi bi-file-earmark-text"></i>
+                                    <h5 class="card-title article-title">
+                                        <i class="bi bi-file-earmark-text me-2 text-primary"></i>
                                         <a href="../mdhtml/如何在婚姻中保持自我.html"
-                                            class="text-decoration-none">
+                                            class="text-decoration-none text-dark">
                                             如何在婚姻中保持自我
                                         </a>
                                     </h5>
                                     
-                                        <p class="card-text">
+                                        <p class="card-text text-muted mb-3">
                                             探讨如何在婚姻中保持自我，包括保持自我的重要性、常见挑战、方法策略、不同婚姻阶段的自我维护等方面的实用建议，帮助夫妻在婚姻中保持个体独立性。
                                         </p>
                                         
+                                        <div class="article-meta">
                                             
-                                                <small class="text-muted">
-                                                    2026-02-28
-                                                </small>
+                                                <i class="bi bi-clock me-1"></i>
+                                                2026-02-28
                                                 
+                                        </div>
                                 </div>
-                                <div class="card-footer text-muted">
+                                <div class="card-footer text-muted bg-white border-top">
                                     <a href="/category/%E5%A9%9A%E5%A7%BB%E6%83%85%E6%84%9F.html"
-                                        class="badge bg-primary">
+                                        class="badge bg-primary me-2">
                                         婚姻情感
                                     </a>
                                     
                                         <a href="/tag/%E5%A9%9A%E5%A7%BB%E8%87%AA%E6%88%91.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             婚姻自我
                                         </a>
                                         
                                         <a href="/tag/%E4%BF%9D%E6%8C%81%E8%87%AA%E6%88%91.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             保持自我
                                         </a>
                                         
                                         <a href="/tag/%E5%A4%AB%E5%A6%BB%E5%85%B3%E7%B3%BB.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             夫妻关系
                                         </a>
                                         
                                         <a href="/tag/%E4%B8%AA%E4%BA%BA%E6%88%90%E9%95%BF.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             个人成长
                                         </a>
                                         
                                         <a href="/tag/%E5%A9%9A%E5%A7%BB%E5%B9%B3%E8%A1%A1.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             婚姻平衡
                                         </a>
                                         
@@ -264,54 +332,55 @@
                         </div>
                         
                         <div class="masonry-grid-item">
-                            <div class="card shadow-sm">
+                            <div class="card article-card shadow-sm">
                                 <div class="card-body">
-                                    <h5 class="card-title">
-                                        <i class="bi bi-file-earmark-text"></i>
+                                    <h5 class="card-title article-title">
+                                        <i class="bi bi-file-earmark-text me-2 text-primary"></i>
                                         <a href="../mdhtml/如何应对婚姻中的无性问题.html"
-                                            class="text-decoration-none">
+                                            class="text-decoration-none text-dark">
                                             如何应对婚姻中的无性问题
                                         </a>
                                     </h5>
                                     
-                                        <p class="card-text">
+                                        <p class="card-text text-muted mb-3">
                                             探讨如何应对婚姻中的无性问题，包括无性婚姻的原因、影响、改善方法、沟通技巧等方面的实用建议，帮助夫妻重建亲密关系。
                                         </p>
                                         
+                                        <div class="article-meta">
                                             
-                                                <small class="text-muted">
-                                                    2026-02-28
-                                                </small>
+                                                <i class="bi bi-clock me-1"></i>
+                                                2026-02-28
                                                 
+                                        </div>
                                 </div>
-                                <div class="card-footer text-muted">
+                                <div class="card-footer text-muted bg-white border-top">
                                     <a href="/category/%E5%A9%9A%E5%A7%BB%E6%83%85%E6%84%9F.html"
-                                        class="badge bg-primary">
+                                        class="badge bg-primary me-2">
                                         婚姻情感
                                     </a>
                                     
                                         <a href="/tag/%E6%97%A0%E6%80%A7%E5%A9%9A%E5%A7%BB.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             无性婚姻
                                         </a>
                                         
                                         <a href="/tag/%E5%A9%9A%E5%A7%BB%E6%80%A7%E9%97%AE%E9%A2%98.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             婚姻性问题
                                         </a>
                                         
                                         <a href="/tag/%E5%A4%AB%E5%A6%BB%E5%85%B3%E7%B3%BB.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             夫妻关系
                                         </a>
                                         
                                         <a href="/tag/%E6%80%A7%E6%B2%9F%E9%80%9A.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             性沟通
                                         </a>
                                         
                                         <a href="/tag/%E5%A9%9A%E5%A7%BB%E4%BF%AE%E5%A4%8D.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             婚姻修复
                                         </a>
                                         
@@ -320,54 +389,55 @@
                         </div>
                         
                         <div class="masonry-grid-item">
-                            <div class="card shadow-sm">
+                            <div class="card article-card shadow-sm">
                                 <div class="card-body">
-                                    <h5 class="card-title">
-                                        <i class="bi bi-file-earmark-text"></i>
+                                    <h5 class="card-title article-title">
+                                        <i class="bi bi-file-earmark-text me-2 text-primary"></i>
                                         <a href="../mdhtml/如何在婚姻中有效沟通.html"
-                                            class="text-decoration-none">
+                                            class="text-decoration-none text-dark">
                                             如何在婚姻中有效沟通
                                         </a>
                                     </h5>
                                     
-                                        <p class="card-text">
+                                        <p class="card-text text-muted mb-3">
                                             探讨如何在婚姻中有效沟通，包括沟通的重要性、常见沟通问题、有效沟通的方法、沟通技巧等方面的实用建议，帮助夫妻建立良好的沟通关系。
                                         </p>
                                         
+                                        <div class="article-meta">
                                             
-                                                <small class="text-muted">
-                                                    2026-02-28
-                                                </small>
+                                                <i class="bi bi-clock me-1"></i>
+                                                2026-02-28
                                                 
+                                        </div>
                                 </div>
-                                <div class="card-footer text-muted">
+                                <div class="card-footer text-muted bg-white border-top">
                                     <a href="/category/%E5%A9%9A%E5%A7%BB%E6%83%85%E6%84%9F.html"
-                                        class="badge bg-primary">
+                                        class="badge bg-primary me-2">
                                         婚姻情感
                                     </a>
                                     
                                         <a href="/tag/%E5%A9%9A%E5%A7%BB%E6%B2%9F%E9%80%9A.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             婚姻沟通
                                         </a>
                                         
                                         <a href="/tag/%E6%9C%89%E6%95%88%E6%B2%9F%E9%80%9A.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             有效沟通
                                         </a>
                                         
                                         <a href="/tag/%E5%A4%AB%E5%A6%BB%E5%85%B3%E7%B3%BB.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             夫妻关系
                                         </a>
                                         
                                         <a href="/tag/%E6%B2%9F%E9%80%9A%E6%8A%80%E5%B7%A7.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             沟通技巧
                                         </a>
                                         
                                         <a href="/tag/%E5%A9%9A%E5%A7%BB%E5%92%8C%E8%B0%90.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             婚姻和谐
                                         </a>
                                         
@@ -376,54 +446,55 @@
                         </div>
                         
                         <div class="masonry-grid-item">
-                            <div class="card shadow-sm">
+                            <div class="card article-card shadow-sm">
                                 <div class="card-body">
-                                    <h5 class="card-title">
-                                        <i class="bi bi-file-earmark-text"></i>
+                                    <h5 class="card-title article-title">
+                                        <i class="bi bi-file-earmark-text me-2 text-primary"></i>
                                         <a href="../mdhtml/如何处理婚姻中的婆媳关系.html"
-                                            class="text-decoration-none">
+                                            class="text-decoration-none text-dark">
                                             如何处理婚姻中的婆媳关系
                                         </a>
                                     </h5>
                                     
-                                        <p class="card-text">
+                                        <p class="card-text text-muted mb-3">
                                             探讨如何处理婚姻中的婆媳关系，包括婆媳关系的常见问题、改善婆媳关系的方法、沟通技巧等方面的实用建议，帮助夫妻建立和谐的家庭关系。
                                         </p>
                                         
+                                        <div class="article-meta">
                                             
-                                                <small class="text-muted">
-                                                    2026-02-28
-                                                </small>
+                                                <i class="bi bi-clock me-1"></i>
+                                                2026-02-28
                                                 
+                                        </div>
                                 </div>
-                                <div class="card-footer text-muted">
+                                <div class="card-footer text-muted bg-white border-top">
                                     <a href="/category/%E5%A9%9A%E5%A7%BB%E6%83%85%E6%84%9F.html"
-                                        class="badge bg-primary">
+                                        class="badge bg-primary me-2">
                                         婚姻情感
                                     </a>
                                     
                                         <a href="/tag/%E5%A9%86%E5%AA%B3%E5%85%B3%E7%B3%BB.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             婆媳关系
                                         </a>
                                         
                                         <a href="/tag/%E5%A9%9A%E5%A7%BB%E5%AE%B6%E5%BA%AD.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             婚姻家庭
                                         </a>
                                         
                                         <a href="/tag/%E5%AE%B6%E5%BA%AD%E7%9F%9B%E7%9B%BE.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             家庭矛盾
                                         </a>
                                         
                                         <a href="/tag/%E5%A9%86%E5%AA%B3%E6%B2%9F%E9%80%9A.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             婆媳沟通
                                         </a>
                                         
                                         <a href="/tag/%E5%AE%B6%E5%BA%AD%E5%92%8C%E8%B0%90.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             家庭和谐
                                         </a>
                                         
@@ -432,54 +503,55 @@
                         </div>
                         
                         <div class="masonry-grid-item">
-                            <div class="card shadow-sm">
+                            <div class="card article-card shadow-sm">
                                 <div class="card-body">
-                                    <h5 class="card-title">
-                                        <i class="bi bi-file-earmark-text"></i>
+                                    <h5 class="card-title article-title">
+                                        <i class="bi bi-file-earmark-text me-2 text-primary"></i>
                                         <a href="../mdhtml/如何平衡婚姻与个人空间.html"
-                                            class="text-decoration-none">
+                                            class="text-decoration-none text-dark">
                                             如何平衡婚姻与个人空间
                                         </a>
                                     </h5>
                                     
-                                        <p class="card-text">
+                                        <p class="card-text text-muted mb-3">
                                             探讨如何平衡婚姻与个人空间，包括个人空间的重要性、如何在婚姻中保持个人空间、如何与配偶沟通个人需求等方面的实用建议，帮助夫妻建立健康的婚姻关系。
                                         </p>
                                         
+                                        <div class="article-meta">
                                             
-                                                <small class="text-muted">
-                                                    2026-02-28
-                                                </small>
+                                                <i class="bi bi-clock me-1"></i>
+                                                2026-02-28
                                                 
+                                        </div>
                                 </div>
-                                <div class="card-footer text-muted">
+                                <div class="card-footer text-muted bg-white border-top">
                                     <a href="/category/%E5%A9%9A%E5%A7%BB%E6%83%85%E6%84%9F.html"
-                                        class="badge bg-primary">
+                                        class="badge bg-primary me-2">
                                         婚姻情感
                                     </a>
                                     
                                         <a href="/tag/%E5%A9%9A%E5%A7%BB%E5%B9%B3%E8%A1%A1.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             婚姻平衡
                                         </a>
                                         
                                         <a href="/tag/%E4%B8%AA%E4%BA%BA%E7%A9%BA%E9%97%B4.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             个人空间
                                         </a>
                                         
                                         <a href="/tag/%E5%A4%AB%E5%A6%BB%E5%85%B3%E7%B3%BB.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             夫妻关系
                                         </a>
                                         
                                         <a href="/tag/%E5%A9%9A%E5%A7%BB%E7%95%8C%E9%99%90.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             婚姻界限
                                         </a>
                                         
                                         <a href="/tag/%E8%87%AA%E6%88%91%E6%88%90%E9%95%BF.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             自我成长
                                         </a>
                                         
@@ -488,54 +560,55 @@
                         </div>
                         
                         <div class="masonry-grid-item">
-                            <div class="card shadow-sm">
+                            <div class="card article-card shadow-sm">
                                 <div class="card-body">
-                                    <h5 class="card-title">
-                                        <i class="bi bi-file-earmark-text"></i>
+                                    <h5 class="card-title article-title">
+                                        <i class="bi bi-file-earmark-text me-2 text-primary"></i>
                                         <a href="../mdhtml/如何应对婚姻中的信任危机.html"
-                                            class="text-decoration-none">
+                                            class="text-decoration-none text-dark">
                                             如何应对婚姻中的信任危机
                                         </a>
                                     </h5>
                                     
-                                        <p class="card-text">
+                                        <p class="card-text text-muted mb-3">
                                             探讨如何应对婚姻中的信任危机，包括信任危机的原因、重建信任的步骤、具体实践方法等方面的实用建议，帮助夫妻重建信任，修复婚姻关系。
                                         </p>
                                         
+                                        <div class="article-meta">
                                             
-                                                <small class="text-muted">
-                                                    2026-02-28
-                                                </small>
+                                                <i class="bi bi-clock me-1"></i>
+                                                2026-02-28
                                                 
+                                        </div>
                                 </div>
-                                <div class="card-footer text-muted">
+                                <div class="card-footer text-muted bg-white border-top">
                                     <a href="/category/%E5%A9%9A%E5%A7%BB%E6%83%85%E6%84%9F.html"
-                                        class="badge bg-primary">
+                                        class="badge bg-primary me-2">
                                         婚姻情感
                                     </a>
                                     
                                         <a href="/tag/%E5%A9%9A%E5%A7%BB%E4%BF%A1%E4%BB%BB.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             婚姻信任
                                         </a>
                                         
                                         <a href="/tag/%E4%BF%A1%E4%BB%BB%E5%8D%B1%E6%9C%BA.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             信任危机
                                         </a>
                                         
                                         <a href="/tag/%E5%A4%AB%E5%A6%BB%E5%85%B3%E7%B3%BB.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             夫妻关系
                                         </a>
                                         
                                         <a href="/tag/%E4%BF%A1%E4%BB%BB%E9%87%8D%E5%BB%BA.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             信任重建
                                         </a>
                                         
                                         <a href="/tag/%E5%A9%9A%E5%A7%BB%E4%BF%AE%E5%A4%8D.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             婚姻修复
                                         </a>
                                         
@@ -544,54 +617,55 @@
                         </div>
                         
                         <div class="masonry-grid-item">
-                            <div class="card shadow-sm">
+                            <div class="card article-card shadow-sm">
                                 <div class="card-body">
-                                    <h5 class="card-title">
-                                        <i class="bi bi-file-earmark-text"></i>
+                                    <h5 class="card-title article-title">
+                                        <i class="bi bi-file-earmark-text me-2 text-primary"></i>
                                         <a href="../mdhtml/如何处理婚姻中的金钱问题.html"
-                                            class="text-decoration-none">
+                                            class="text-decoration-none text-dark">
                                             如何处理婚姻中的金钱问题
                                         </a>
                                     </h5>
                                     
-                                        <p class="card-text">
+                                        <p class="card-text text-muted mb-3">
                                             探讨如何处理婚姻中的金钱问题，包括财务沟通、预算制定、债务管理、投资规划等方面的实用建议，帮助夫妻建立健康的财务关系。
                                         </p>
                                         
+                                        <div class="article-meta">
                                             
-                                                <small class="text-muted">
-                                                    2026-02-28
-                                                </small>
+                                                <i class="bi bi-clock me-1"></i>
+                                                2026-02-28
                                                 
+                                        </div>
                                 </div>
-                                <div class="card-footer text-muted">
+                                <div class="card-footer text-muted bg-white border-top">
                                     <a href="/category/%E5%A9%9A%E5%A7%BB%E6%83%85%E6%84%9F.html"
-                                        class="badge bg-primary">
+                                        class="badge bg-primary me-2">
                                         婚姻情感
                                     </a>
                                     
                                         <a href="/tag/%E5%A9%9A%E5%A7%BB%E9%87%91%E9%92%B1.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             婚姻金钱
                                         </a>
                                         
                                         <a href="/tag/%E5%A4%AB%E5%A6%BB%E8%B4%A2%E5%8A%A1.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             夫妻财务
                                         </a>
                                         
                                         <a href="/tag/%E7%90%86%E8%B4%A2%E8%A7%84%E5%88%92.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             理财规划
                                         </a>
                                         
                                         <a href="/tag/%E8%B4%A2%E5%8A%A1%E6%B2%9F%E9%80%9A.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             财务沟通
                                         </a>
                                         
                                         <a href="/tag/%E5%AE%B6%E5%BA%AD%E8%B4%A2%E5%8A%A1.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             家庭财务
                                         </a>
                                         
@@ -600,54 +674,55 @@
                         </div>
                         
                         <div class="masonry-grid-item">
-                            <div class="card shadow-sm">
+                            <div class="card article-card shadow-sm">
                                 <div class="card-body">
-                                    <h5 class="card-title">
-                                        <i class="bi bi-file-earmark-text"></i>
+                                    <h5 class="card-title article-title">
+                                        <i class="bi bi-file-earmark-text me-2 text-primary"></i>
                                         <a href="../mdhtml/如何在婚姻中保持激情.html"
-                                            class="text-decoration-none">
+                                            class="text-decoration-none text-dark">
                                             如何在婚姻中保持激情
                                         </a>
                                     </h5>
                                     
-                                        <p class="card-text">
+                                        <p class="card-text text-muted mb-3">
                                             探讨如何在婚姻中保持激情，包括日常互动、情感表达、共同体验等方面的实用建议，帮助夫妻维持婚姻的新鲜感和亲密感。
                                         </p>
                                         
+                                        <div class="article-meta">
                                             
-                                                <small class="text-muted">
-                                                    2026-02-28
-                                                </small>
+                                                <i class="bi bi-clock me-1"></i>
+                                                2026-02-28
                                                 
+                                        </div>
                                 </div>
-                                <div class="card-footer text-muted">
+                                <div class="card-footer text-muted bg-white border-top">
                                     <a href="/category/%E5%A9%9A%E5%A7%BB%E6%83%85%E6%84%9F.html"
-                                        class="badge bg-primary">
+                                        class="badge bg-primary me-2">
                                         婚姻情感
                                     </a>
                                     
                                         <a href="/tag/%E5%A9%9A%E5%A7%BB%E6%BF%80%E6%83%85.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             婚姻激情
                                         </a>
                                         
                                         <a href="/tag/%E5%A4%AB%E5%A6%BB%E5%85%B3%E7%B3%BB.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             夫妻关系
                                         </a>
                                         
                                         <a href="/tag/%E6%83%85%E6%84%9F%E7%BB%B4%E6%8A%A4.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             情感维护
                                         </a>
                                         
                                         <a href="/tag/%E5%A9%9A%E5%A7%BB%E4%BF%9D%E9%B2%9C.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             婚姻保鲜
                                         </a>
                                         
                                         <a href="/tag/%E4%BA%B2%E5%AF%86%E5%85%B3%E7%B3%BB.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             亲密关系
                                         </a>
                                         
@@ -656,79 +731,80 @@
                         </div>
                         
                         <div class="masonry-grid-item">
-                            <div class="card shadow-sm">
+                            <div class="card article-card shadow-sm">
                                 <div class="card-body">
-                                    <h5 class="card-title">
-                                        <i class="bi bi-file-earmark-text"></i>
+                                    <h5 class="card-title article-title">
+                                        <i class="bi bi-file-earmark-text me-2 text-primary"></i>
                                         <a href="../mdhtml/异地恋中的信任问题处理方法.html"
-                                            class="text-decoration-none">
+                                            class="text-decoration-none text-dark">
                                             异地恋信任危机解决方案：如何维护远距离恋爱的感情稳定
                                         </a>
                                     </h5>
                                     
-                                        <p class="card-text">
+                                        <p class="card-text text-muted mb-3">
                                             详细的异地恋信任危机解决方案，从有效沟通、安全感建立、共同目标设定到自我提升等多个维度，帮助异地情侣维护感情稳定，克服距离障碍，建立健康的远距离恋爱关系。
                                         </p>
                                         
+                                        <div class="article-meta">
                                             
-                                                <small class="text-muted">
-                                                    2026-02-27
-                                                </small>
+                                                <i class="bi bi-clock me-1"></i>
+                                                2026-02-27
                                                 
+                                        </div>
                                 </div>
-                                <div class="card-footer text-muted">
+                                <div class="card-footer text-muted bg-white border-top">
                                     <a href="/category/%E5%A9%9A%E5%A7%BB%E6%83%85%E6%84%9F.html"
-                                        class="badge bg-primary">
+                                        class="badge bg-primary me-2">
                                         婚姻情感
                                     </a>
                                     
                                         <a href="/tag/%E5%BC%82%E5%9C%B0%E6%81%8B.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             异地恋
                                         </a>
                                         
                                         <a href="/tag/%E4%BF%A1%E4%BB%BB%E5%8D%B1%E6%9C%BA.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             信任危机
                                         </a>
                                         
                                         <a href="/tag/%E6%83%85%E6%84%9F%E7%BB%B4%E6%8A%A4.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             情感维护
                                         </a>
                                         
                                         <a href="/tag/%E6%83%85%E6%84%9F%E6%B2%9F%E9%80%9A.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             情感沟通
                                         </a>
                                         
                                         <a href="/tag/%E5%AE%89%E5%85%A8%E6%84%9F.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             安全感
                                         </a>
                                         
                                         <a href="/tag/%E5%85%B1%E5%90%8C%E7%9B%AE%E6%A0%87.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             共同目标
                                         </a>
                                         
                                         <a href="/tag/%E8%BF%9C%E8%B7%9D%E7%A6%BB%E6%81%8B%E7%88%B1.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             远距离恋爱
                                         </a>
                                         
                                         <a href="/tag/%E6%81%8B%E7%88%B1%E6%8A%80%E5%B7%A7.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             恋爱技巧
                                         </a>
                                         
                                         <a href="/tag/%E6%84%9F%E6%83%85%E7%BB%8F%E8%90%A5.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             感情经营
                                         </a>
                                         
                                         <a href="/tag/%E6%83%85%E4%BE%A3%E5%85%B3%E7%B3%BB.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             情侣关系
                                         </a>
                                         
@@ -737,79 +813,80 @@
                         </div>
                         
                         <div class="masonry-grid-item">
-                            <div class="card shadow-sm">
+                            <div class="card article-card shadow-sm">
                                 <div class="card-body">
-                                    <h5 class="card-title">
-                                        <i class="bi bi-file-earmark-text"></i>
+                                    <h5 class="card-title article-title">
+                                        <i class="bi bi-file-earmark-text me-2 text-primary"></i>
                                         <a href="../mdhtml/如何成为令人称羡的好妻子.html"
-                                            class="text-decoration-none">
+                                            class="text-decoration-none text-dark">
                                             如何成为令人称羡的好妻子
                                         </a>
                                     </h5>
                                     
-                                        <p class="card-text">
+                                        <p class="card-text text-muted mb-3">
                                             详细从情感支持、家庭管理、个人成长和人际关系等多个角度探讨如何成为令人称羡的好妻子，为女性在婚姻生活中的角色提供实用指导和深刻见解，包括深度倾听与共情理解、多元爱意表达、公平家务分担、打造独特家庭文化、持续自我提升、全方位支持丈夫事业等方面的具体方法。
                                         </p>
                                         
+                                        <div class="article-meta">
                                             
-                                                <small class="text-muted">
-                                                    2026-02-27
-                                                </small>
+                                                <i class="bi bi-clock me-1"></i>
+                                                2026-02-27
                                                 
+                                        </div>
                                 </div>
-                                <div class="card-footer text-muted">
+                                <div class="card-footer text-muted bg-white border-top">
                                     <a href="/category/%E5%A9%9A%E5%A7%BB%E6%83%85%E6%84%9F.html"
-                                        class="badge bg-primary">
+                                        class="badge bg-primary me-2">
                                         婚姻情感
                                     </a>
                                     
                                         <a href="/tag/%E5%A5%BD%E5%A6%BB%E5%AD%90.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             好妻子
                                         </a>
                                         
                                         <a href="/tag/%E6%83%85%E6%84%9F%E6%94%AF%E6%8C%81.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             情感支持
                                         </a>
                                         
                                         <a href="/tag/%E5%AE%B6%E5%BA%AD%E7%AE%A1%E7%90%86.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             家庭管理
                                         </a>
                                         
                                         <a href="/tag/%E8%87%AA%E6%88%91%E6%8F%90%E5%8D%87.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             自我提升
                                         </a>
                                         
                                         <a href="/tag/%E4%BA%BA%E9%99%85%E5%85%B3%E7%B3%BB.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             人际关系
                                         </a>
                                         
                                         <a href="/tag/%E5%A9%9A%E5%A7%BB%E5%B9%B8%E7%A6%8F.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             婚姻幸福
                                         </a>
                                         
                                         <a href="/tag/%E5%A4%AB%E5%A6%BB%E5%85%B3%E7%B3%BB.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             夫妻关系
                                         </a>
                                         
                                         <a href="/tag/%E5%AE%B6%E5%BA%AD%E6%96%87%E5%8C%96.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             家庭文化
                                         </a>
                                         
                                         <a href="/tag/%E5%AE%B6%E5%8A%A1%E5%88%86%E6%8B%85.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             家务分担
                                         </a>
                                         
                                         <a href="/tag/%E7%88%B1%E6%84%8F%E8%A1%A8%E8%BE%BE.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             爱意表达
                                         </a>
                                         
@@ -818,79 +895,80 @@
                         </div>
                         
                         <div class="masonry-grid-item">
-                            <div class="card shadow-sm">
+                            <div class="card article-card shadow-sm">
                                 <div class="card-body">
-                                    <h5 class="card-title">
-                                        <i class="bi bi-file-earmark-text"></i>
+                                    <h5 class="card-title article-title">
+                                        <i class="bi bi-file-earmark-text me-2 text-primary"></i>
                                         <a href="../mdhtml/如何成为一个好丈夫：关键要素与实践指南.html"
-                                            class="text-decoration-none">
+                                            class="text-decoration-none text-dark">
                                             如何成为一个好丈夫：关键要素与实践指南
                                         </a>
                                     </h5>
                                     
-                                        <p class="card-text">
+                                        <p class="card-text text-muted mb-3">
                                             详细探讨成为一个好丈夫所需的关键要素，包括情感支持、家庭责任、沟通交流和个人成长等方面，旨在帮助男性更好地履行丈夫角色，创造幸福美满的婚姻生活。内容涵盖深度理解与共情、巧妙表达爱意、稳固的经济支持、积极家务分担、用心倾听与尊重、坦诚相待与信任、持续自我提升等具体方法。
                                         </p>
                                         
+                                        <div class="article-meta">
                                             
-                                                <small class="text-muted">
-                                                    2026-02-27
-                                                </small>
+                                                <i class="bi bi-clock me-1"></i>
+                                                2026-02-27
                                                 
+                                        </div>
                                 </div>
-                                <div class="card-footer text-muted">
+                                <div class="card-footer text-muted bg-white border-top">
                                     <a href="/category/%E5%A9%9A%E5%A7%BB%E6%83%85%E6%84%9F.html"
-                                        class="badge bg-primary">
+                                        class="badge bg-primary me-2">
                                         婚姻情感
                                     </a>
                                     
                                         <a href="/tag/%E5%A5%BD%E4%B8%88%E5%A4%AB.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             好丈夫
                                         </a>
                                         
                                         <a href="/tag/%E6%83%85%E6%84%9F%E6%94%AF%E6%8C%81.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             情感支持
                                         </a>
                                         
                                         <a href="/tag/%E5%AE%B6%E5%BA%AD%E8%B4%A3%E4%BB%BB.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             家庭责任
                                         </a>
                                         
                                         <a href="/tag/%E6%B2%9F%E9%80%9A%E4%BA%A4%E6%B5%81.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             沟通交流
                                         </a>
                                         
                                         <a href="/tag/%E8%87%AA%E6%88%91%E6%8F%90%E5%8D%87.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             自我提升
                                         </a>
                                         
                                         <a href="/tag/%E5%A9%9A%E5%A7%BB%E5%B9%B8%E7%A6%8F.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             婚姻幸福
                                         </a>
                                         
                                         <a href="/tag/%E5%A4%AB%E5%A6%BB%E5%85%B3%E7%B3%BB.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             夫妻关系
                                         </a>
                                         
                                         <a href="/tag/%E7%BB%8F%E6%B5%8E%E6%94%AF%E6%8C%81.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             经济支持
                                         </a>
                                         
                                         <a href="/tag/%E5%AE%B6%E5%8A%A1%E5%88%86%E6%8B%85.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             家务分担
                                         </a>
                                         
                                         <a href="/tag/%E7%88%B1%E6%84%8F%E8%A1%A8%E8%BE%BE.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             爱意表达
                                         </a>
                                         
@@ -899,54 +977,55 @@
                         </div>
                         
                         <div class="masonry-grid-item">
-                            <div class="card shadow-sm">
+                            <div class="card article-card shadow-sm">
                                 <div class="card-body">
-                                    <h5 class="card-title">
-                                        <i class="bi bi-file-earmark-text"></i>
+                                    <h5 class="card-title article-title">
+                                        <i class="bi bi-file-earmark-text me-2 text-primary"></i>
                                         <a href="../mdhtml/女人应该在什么时候把自己嫁出去？.html"
-                                            class="text-decoration-none">
+                                            class="text-decoration-none text-dark">
                                             女人应该在什么时候把自己嫁出去？
                                         </a>
                                     </h5>
                                     
-                                        <p class="card-text">
+                                        <p class="card-text text-muted mb-3">
                                             探讨女性何时步入婚姻殿堂的最佳时机，综合考虑爱情、个人成长、社会压力及个人发展等因素，帮助女性做出适合自己的婚姻选择。
                                         </p>
                                         
+                                        <div class="article-meta">
                                             
-                                                <small class="text-muted">
-                                                    2026-02-27
-                                                </small>
+                                                <i class="bi bi-clock me-1"></i>
+                                                2026-02-27
                                                 
+                                        </div>
                                 </div>
-                                <div class="card-footer text-muted">
+                                <div class="card-footer text-muted bg-white border-top">
                                     <a href="/category/%E5%A9%9A%E5%A7%BB%E6%83%85%E6%84%9F.html"
-                                        class="badge bg-primary">
+                                        class="badge bg-primary me-2">
                                         婚姻情感
                                     </a>
                                     
                                         <a href="/tag/%E5%A5%B3%E6%80%A7%E5%A9%9A%E5%A7%BB.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             女性婚姻
                                         </a>
                                         
                                         <a href="/tag/%E7%BB%93%E5%A9%9A%E6%97%B6%E6%9C%BA.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             结婚时机
                                         </a>
                                         
                                         <a href="/tag/%E7%88%B1%E6%83%85%E4%B8%8E%E5%A9%9A%E5%A7%BB.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             爱情与婚姻
                                         </a>
                                         
                                         <a href="/tag/%E8%87%AA%E6%88%91%E6%8F%90%E5%8D%87.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             自我提升
                                         </a>
                                         
                                         <a href="/tag/%E7%A4%BE%E4%BC%9A%E5%8E%8B%E5%8A%9B.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             社会压力
                                         </a>
                                         
@@ -955,54 +1034,55 @@
                         </div>
                         
                         <div class="masonry-grid-item">
-                            <div class="card shadow-sm">
+                            <div class="card article-card shadow-sm">
                                 <div class="card-body">
-                                    <h5 class="card-title">
-                                        <i class="bi bi-file-earmark-text"></i>
+                                    <h5 class="card-title article-title">
+                                        <i class="bi bi-file-earmark-text me-2 text-primary"></i>
                                         <a href="../mdhtml/夫妻关系：人际关系中最重要的基石.html"
-                                            class="text-decoration-none">
+                                            class="text-decoration-none text-dark">
                                             夫妻关系：人际关系中最重要的基石
                                         </a>
                                     </h5>
                                     
-                                        <p class="card-text">
+                                        <p class="card-text text-muted mb-3">
                                             探讨夫妻关系在人际关系中的重要性，分析其作为情感港湾、家庭稳定器、个人成长助力及对社会和谐的意义，强调珍惜和维护夫妻关系的必要性。
                                         </p>
                                         
+                                        <div class="article-meta">
                                             
-                                                <small class="text-muted">
-                                                    2026-02-27
-                                                </small>
+                                                <i class="bi bi-clock me-1"></i>
+                                                2026-02-27
                                                 
+                                        </div>
                                 </div>
-                                <div class="card-footer text-muted">
+                                <div class="card-footer text-muted bg-white border-top">
                                     <a href="/category/%E5%A9%9A%E5%A7%BB%E6%83%85%E6%84%9F.html"
-                                        class="badge bg-primary">
+                                        class="badge bg-primary me-2">
                                         婚姻情感
                                     </a>
                                     
                                         <a href="/tag/%E5%A4%AB%E5%A6%BB%E5%85%B3%E7%B3%BB.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             夫妻关系
                                         </a>
                                         
                                         <a href="/tag/%E5%AE%B6%E5%BA%AD%E5%85%B3%E7%B3%BB.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             家庭关系
                                         </a>
                                         
                                         <a href="/tag/%E8%87%AA%E6%88%91%E6%8F%90%E5%8D%87.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             自我提升
                                         </a>
                                         
                                         <a href="/tag/%E7%A4%BE%E4%BC%9A%E5%92%8C%E8%B0%90.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             社会和谐
                                         </a>
                                         
                                         <a href="/tag/%E6%83%85%E6%84%9F%E6%94%AF%E6%8C%81.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             情感支持
                                         </a>
                                         
@@ -1011,54 +1091,55 @@
                         </div>
                         
                         <div class="masonry-grid-item">
-                            <div class="card shadow-sm">
+                            <div class="card article-card shadow-sm">
                                 <div class="card-body">
-                                    <h5 class="card-title">
-                                        <i class="bi bi-file-earmark-text"></i>
+                                    <h5 class="card-title article-title">
+                                        <i class="bi bi-file-earmark-text me-2 text-primary"></i>
                                         <a href="../mdhtml/什么样的女人在婚恋市场遇冷？.html"
-                                            class="text-decoration-none">
+                                            class="text-decoration-none text-dark">
                                             什么样的女人在婚恋市场遇冷？
                                         </a>
                                     </h5>
                                     
-                                        <p class="card-text">
+                                        <p class="card-text text-muted mb-3">
                                             分析在婚恋市场中容易遇冷的几类女性特质，包括过度强势、“寄生式”依赖、完美主义挑刺、“茧居”封闭自我以及消极丧系等，为女性在婚恋方面提供启示，助力其找到合适伴侣。
                                         </p>
                                         
+                                        <div class="article-meta">
                                             
-                                                <small class="text-muted">
-                                                    2026-02-27
-                                                </small>
+                                                <i class="bi bi-clock me-1"></i>
+                                                2026-02-27
                                                 
+                                        </div>
                                 </div>
-                                <div class="card-footer text-muted">
+                                <div class="card-footer text-muted bg-white border-top">
                                     <a href="/category/%E5%A9%9A%E5%A7%BB%E6%83%85%E6%84%9F.html"
-                                        class="badge bg-primary">
+                                        class="badge bg-primary me-2">
                                         婚姻情感
                                     </a>
                                     
                                         <a href="/tag/%E5%A9%9A%E6%81%8B%E5%B8%82%E5%9C%BA.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             婚恋市场
                                         </a>
                                         
                                         <a href="/tag/%E5%A5%B3%E6%80%A7%E7%89%B9%E8%B4%A8.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             女性特质
                                         </a>
                                         
                                         <a href="/tag/%E6%8B%A9%E5%81%B6%E6%A0%87%E5%87%86.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             择偶标准
                                         </a>
                                         
                                         <a href="/tag/%E6%83%85%E6%84%9F%E4%BA%A4%E6%B5%81.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             情感交流
                                         </a>
                                         
                                         <a href="/tag/%E8%87%AA%E6%88%91%E6%8F%90%E5%8D%87.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             自我提升
                                         </a>
                                         
@@ -1067,54 +1148,55 @@
                         </div>
                         
                         <div class="masonry-grid-item">
-                            <div class="card shadow-sm">
+                            <div class="card article-card shadow-sm">
                                 <div class="card-body">
-                                    <h5 class="card-title">
-                                        <i class="bi bi-file-earmark-text"></i>
+                                    <h5 class="card-title article-title">
+                                        <i class="bi bi-file-earmark-text me-2 text-primary"></i>
                                         <a href="../mdhtml/老公对我不错但性生活缺失是否该离婚.html"
-                                            class="text-decoration-none">
+                                            class="text-decoration-none text-dark">
                                             老公对我不错但性生活缺失是否该离婚
                                         </a>
                                     </h5>
                                     
-                                        <p class="card-text">
+                                        <p class="card-text text-muted mb-3">
                                             探讨老公对女方不错但存在性生活缺失的情况下是否应该离婚，分析性生活缺失的原因，提出解决问题的方法，并权衡离婚的利弊，帮助读者做出适合自己的决定。
                                         </p>
                                         
+                                        <div class="article-meta">
                                             
-                                                <small class="text-muted">
-                                                    2026-02-11
-                                                </small>
+                                                <i class="bi bi-clock me-1"></i>
+                                                2026-02-11
                                                 
+                                        </div>
                                 </div>
-                                <div class="card-footer text-muted">
+                                <div class="card-footer text-muted bg-white border-top">
                                     <a href="/category/%E5%A9%9A%E5%A7%BB%E6%83%85%E6%84%9F.html"
-                                        class="badge bg-primary">
+                                        class="badge bg-primary me-2">
                                         婚姻情感
                                     </a>
                                     
                                         <a href="/tag/%E5%A9%9A%E5%A7%BB%E5%85%B3%E7%B3%BB.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             婚姻关系
                                         </a>
                                         
                                         <a href="/tag/%E6%80%A7%E7%94%9F%E6%B4%BB%E7%BC%BA%E5%A4%B1.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             性生活缺失
                                         </a>
                                         
                                         <a href="/tag/%E7%A6%BB%E5%A9%9A%E5%86%B3%E7%AD%96.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             离婚决策
                                         </a>
                                         
                                         <a href="/tag/%E5%A4%AB%E5%A6%BB%E6%B2%9F%E9%80%9A.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             夫妻沟通
                                         </a>
                                         
                                         <a href="/tag/%E6%84%9F%E6%83%85%E5%A4%84%E7%90%86.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             感情处理
                                         </a>
                                         
@@ -1123,54 +1205,55 @@
                         </div>
                         
                         <div class="masonry-grid-item">
-                            <div class="card shadow-sm">
+                            <div class="card article-card shadow-sm">
                                 <div class="card-body">
-                                    <h5 class="card-title">
-                                        <i class="bi bi-file-earmark-text"></i>
+                                    <h5 class="card-title article-title">
+                                        <i class="bi bi-file-earmark-text me-2 text-primary"></i>
                                         <a href="../mdhtml/老公向着婆婆，婚姻该何去何从？.html"
-                                            class="text-decoration-none">
+                                            class="text-decoration-none text-dark">
                                             老公向着婆婆，婚姻该何去何从？
                                         </a>
                                     </h5>
                                     
-                                        <p class="card-text">
+                                        <p class="card-text text-muted mb-3">
                                             当老公在婆媳矛盾中偏向婆婆，婚姻面临挑战。本文深入剖析老公偏向婆婆的原因、影响，探讨是否该离婚以及应对策略，助力守护婚姻稳定与幸福。
                                         </p>
                                         
+                                        <div class="article-meta">
                                             
-                                                <small class="text-muted">
-                                                    2026-02-11
-                                                </small>
+                                                <i class="bi bi-clock me-1"></i>
+                                                2026-02-11
                                                 
+                                        </div>
                                 </div>
-                                <div class="card-footer text-muted">
+                                <div class="card-footer text-muted bg-white border-top">
                                     <a href="/category/%E5%A9%9A%E5%A7%BB%E6%83%85%E6%84%9F.html"
-                                        class="badge bg-primary">
+                                        class="badge bg-primary me-2">
                                         婚姻情感
                                     </a>
                                     
                                         <a href="/tag/%E5%A9%86%E5%AA%B3%E5%85%B3%E7%B3%BB.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             婆媳关系
                                         </a>
                                         
                                         <a href="/tag/%E5%A9%9A%E5%A7%BB%E5%8D%B1%E6%9C%BA.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             婚姻危机
                                         </a>
                                         
                                         <a href="/tag/%E5%A4%AB%E5%A6%BB%E6%B2%9F%E9%80%9A.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             夫妻沟通
                                         </a>
                                         
                                         <a href="/tag/%E5%AE%B6%E5%BA%AD%E5%92%8C%E8%B0%90.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             家庭和谐
                                         </a>
                                         
                                         <a href="/tag/%E5%A9%86%E5%AA%B3%E7%9F%9B%E7%9B%BE%E5%A4%84%E7%90%86.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             婆媳矛盾处理
                                         </a>
                                         
@@ -1179,54 +1262,55 @@
                         </div>
                         
                         <div class="masonry-grid-item">
-                            <div class="card shadow-sm">
+                            <div class="card article-card shadow-sm">
                                 <div class="card-body">
-                                    <h5 class="card-title">
-                                        <i class="bi bi-file-earmark-text"></i>
+                                    <h5 class="card-title article-title">
+                                        <i class="bi bi-file-earmark-text me-2 text-primary"></i>
                                         <a href="../mdhtml/男人把钱交给老婆是否就是爱她.html"
-                                            class="text-decoration-none">
+                                            class="text-decoration-none text-dark">
                                             男人把钱交给老婆是否就是爱她
                                         </a>
                                     </h5>
                                     
-                                        <p class="card-text">
+                                        <p class="card-text text-muted mb-3">
                                             探讨男人把钱交给老婆这一行为在婚姻中的意义，分析其是否为爱的表现，以及金钱管理与夫妻感情的复杂关系，为读者解读婚姻中金钱与爱情的相关问题。
                                         </p>
                                         
+                                        <div class="article-meta">
                                             
-                                                <small class="text-muted">
-                                                    2026-02-11
-                                                </small>
+                                                <i class="bi bi-clock me-1"></i>
+                                                2026-02-11
                                                 
+                                        </div>
                                 </div>
-                                <div class="card-footer text-muted">
+                                <div class="card-footer text-muted bg-white border-top">
                                     <a href="/category/%E5%A9%9A%E5%A7%BB%E6%83%85%E6%84%9F.html"
-                                        class="badge bg-primary">
+                                        class="badge bg-primary me-2">
                                         婚姻情感
                                     </a>
                                     
                                         <a href="/tag/%E5%A9%9A%E5%A7%BB.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             婚姻
                                         </a>
                                         
                                         <a href="/tag/%E9%87%91%E9%92%B1%E7%AE%A1%E7%90%86.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             金钱管理
                                         </a>
                                         
                                         <a href="/tag/%E7%88%B1%E6%83%85%E8%A1%A8%E8%BE%BE.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             爱情表达
                                         </a>
                                         
                                         <a href="/tag/%E5%A4%AB%E5%A6%BB%E7%9B%B8%E5%A4%84.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             夫妻相处
                                         </a>
                                         
                                         <a href="/tag/%E5%AE%B6%E5%BA%AD%E8%B4%A3%E4%BB%BB.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             家庭责任
                                         </a>
                                         
@@ -1235,54 +1319,55 @@
                         </div>
                         
                         <div class="masonry-grid-item">
-                            <div class="card shadow-sm">
+                            <div class="card article-card shadow-sm">
                                 <div class="card-body">
-                                    <h5 class="card-title">
-                                        <i class="bi bi-file-earmark-text"></i>
+                                    <h5 class="card-title article-title">
+                                        <i class="bi bi-file-earmark-text me-2 text-primary"></i>
                                         <a href="../mdhtml/找不到老婆的男人都有什么样的特点.html"
-                                            class="text-decoration-none">
+                                            class="text-decoration-none text-dark">
                                             找不到老婆的男人都有什么样的特点
                                         </a>
                                     </h5>
                                     
-                                        <p class="card-text">
+                                        <p class="card-text text-muted mb-3">
                                             深入分析在婚恋市场中遭遇困难的男性所具备的特质，涵盖自信与沟通、经济因素、性格与行为等多方面原因，并提供提升魅力、改善现状的有效建议，助力男性在婚恋道路上收获幸福。
                                         </p>
                                         
+                                        <div class="article-meta">
                                             
-                                                <small class="text-muted">
-                                                    2026-02-11
-                                                </small>
+                                                <i class="bi bi-clock me-1"></i>
+                                                2026-02-11
                                                 
+                                        </div>
                                 </div>
-                                <div class="card-footer text-muted">
+                                <div class="card-footer text-muted bg-white border-top">
                                     <a href="/category/%E5%A9%9A%E5%A7%BB%E6%83%85%E6%84%9F.html"
-                                        class="badge bg-primary">
+                                        class="badge bg-primary me-2">
                                         婚姻情感
                                     </a>
                                     
                                         <a href="/tag/%E5%A9%9A%E6%81%8B%E5%B8%82%E5%9C%BA.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             婚恋市场
                                         </a>
                                         
                                         <a href="/tag/%E7%94%B7%E6%80%A7%E7%89%B9%E8%B4%A8.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             男性特质
                                         </a>
                                         
                                         <a href="/tag/%E8%87%AA%E4%BF%A1%E6%B2%9F%E9%80%9A.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             自信沟通
                                         </a>
                                         
                                         <a href="/tag/%E7%BB%8F%E6%B5%8E%E5%9B%A0%E7%B4%A0.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             经济因素
                                         </a>
                                         
                                         <a href="/tag/%E6%80%A7%E6%A0%BC%E8%A1%8C%E4%B8%BA.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             性格行为
                                         </a>
                                         
@@ -1291,49 +1376,50 @@
                         </div>
                         
                         <div class="masonry-grid-item">
-                            <div class="card shadow-sm">
+                            <div class="card article-card shadow-sm">
                                 <div class="card-body">
-                                    <h5 class="card-title">
-                                        <i class="bi bi-file-earmark-text"></i>
+                                    <h5 class="card-title article-title">
+                                        <i class="bi bi-file-earmark-text me-2 text-primary"></i>
                                         <a href="../mdhtml/婚外情能维持到老死吗？.html"
-                                            class="text-decoration-none">
+                                            class="text-decoration-none text-dark">
                                             婚外情能维持到老死吗？
                                         </a>
                                     </h5>
                                     
-                                        <p class="card-text">
+                                        <p class="card-text text-muted mb-3">
                                             探讨婚外情是否能维持到老死这一沉重话题，从婚外情的开端、维系的困难、维持到老死的现实可能性以及回归家庭的建议等方面进行分析，揭示婚外情面临的诸多挑战和回归家庭的重要性。
                                         </p>
                                         
+                                        <div class="article-meta">
                                             
-                                                <small class="text-muted">
-                                                    2026-02-11
-                                                </small>
+                                                <i class="bi bi-clock me-1"></i>
+                                                2026-02-11
                                                 
+                                        </div>
                                 </div>
-                                <div class="card-footer text-muted">
+                                <div class="card-footer text-muted bg-white border-top">
                                     <a href="/category/%E5%A9%9A%E5%A7%BB%E6%83%85%E6%84%9F.html"
-                                        class="badge bg-primary">
+                                        class="badge bg-primary me-2">
                                         婚姻情感
                                     </a>
                                     
                                         <a href="/tag/%E5%A9%9A%E5%A4%96%E6%83%85.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             婚外情
                                         </a>
                                         
                                         <a href="/tag/%E5%A9%9A%E5%A7%BB%E5%85%B3%E7%B3%BB.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             婚姻关系
                                         </a>
                                         
                                         <a href="/tag/%E9%81%93%E5%BE%B7%E4%BC%A6%E7%90%86.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             道德伦理
                                         </a>
                                         
                                         <a href="/tag/%E6%83%85%E6%84%9F%E7%BB%B4%E7%B3%BB.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             情感维系
                                         </a>
                                         
@@ -1342,54 +1428,55 @@
                         </div>
                         
                         <div class="masonry-grid-item">
-                            <div class="card shadow-sm">
+                            <div class="card article-card shadow-sm">
                                 <div class="card-body">
-                                    <h5 class="card-title">
-                                        <i class="bi bi-file-earmark-text"></i>
+                                    <h5 class="card-title article-title">
+                                        <i class="bi bi-file-earmark-text me-2 text-primary"></i>
                                         <a href="../mdhtml/婚前同居：是时尚选择还是价值“掉价”？.html"
-                                            class="text-decoration-none">
+                                            class="text-decoration-none text-dark">
                                             婚前同居：是时尚选择还是价值“掉价”？
                                         </a>
                                     </h5>
                                     
-                                        <p class="card-text">
+                                        <p class="card-text text-muted mb-3">
                                             探讨婚前同居在现代社会中的现象，分析其背后的个人价值观、传统与现代观念的碰撞、利弊交织的现实考量等方面，以理性和包容的态度看待这一现象，为面临相关选择的人提供参考。
                                         </p>
                                         
+                                        <div class="article-meta">
                                             
-                                                <small class="text-muted">
-                                                    2026-02-11
-                                                </small>
+                                                <i class="bi bi-clock me-1"></i>
+                                                2026-02-11
                                                 
+                                        </div>
                                 </div>
-                                <div class="card-footer text-muted">
+                                <div class="card-footer text-muted bg-white border-top">
                                     <a href="/category/%E5%A9%9A%E5%A7%BB%E6%83%85%E6%84%9F.html"
-                                        class="badge bg-primary">
+                                        class="badge bg-primary me-2">
                                         婚姻情感
                                     </a>
                                     
                                         <a href="/tag/%E5%A9%9A%E5%89%8D%E5%90%8C%E5%B1%85.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             婚前同居
                                         </a>
                                         
                                         <a href="/tag/%E4%B8%AA%E4%BA%BA%E4%BB%B7%E5%80%BC%E8%A7%82.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             个人价值观
                                         </a>
                                         
                                         <a href="/tag/%E7%A4%BE%E4%BC%9A%E8%A7%82%E5%BF%B5.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             社会观念
                                         </a>
                                         
                                         <a href="/tag/%E6%83%85%E6%84%9F%E5%85%B3%E7%B3%BB.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             情感关系
                                         </a>
                                         
                                         <a href="/tag/%E5%88%A9%E5%BC%8A%E5%88%86%E6%9E%90.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             利弊分析
                                         </a>
                                         
@@ -1398,54 +1485,55 @@
                         </div>
                         
                         <div class="masonry-grid-item">
-                            <div class="card shadow-sm">
+                            <div class="card article-card shadow-sm">
                                 <div class="card-body">
-                                    <h5 class="card-title">
-                                        <i class="bi bi-file-earmark-text"></i>
+                                    <h5 class="card-title article-title">
+                                        <i class="bi bi-file-earmark-text me-2 text-primary"></i>
                                         <a href="../mdhtml/娶比自己大两岁的老婆：开启别样幸福之旅.html"
-                                            class="text-decoration-none">
+                                            class="text-decoration-none text-dark">
                                             娶比自己大两岁的老婆：开启别样幸福之旅
                                         </a>
                                     </h5>
                                     
-                                        <p class="card-text">
+                                        <p class="card-text text-muted mb-3">
                                             深入剖析娶比自己大两岁的老婆这一婚姻组合所带来的诸多好处，如成熟魅力、人生阅历、性格互补等，同时也探讨可能面临的小挑战及应对方法，为你揭示通往幸福婚姻的可行之路。
                                         </p>
                                         
+                                        <div class="article-meta">
                                             
-                                                <small class="text-muted">
-                                                    2026-02-11
-                                                </small>
+                                                <i class="bi bi-clock me-1"></i>
+                                                2026-02-11
                                                 
+                                        </div>
                                 </div>
-                                <div class="card-footer text-muted">
+                                <div class="card-footer text-muted bg-white border-top">
                                     <a href="/category/%E5%A9%9A%E5%A7%BB%E6%83%85%E6%84%9F.html"
-                                        class="badge bg-primary">
+                                        class="badge bg-primary me-2">
                                         婚姻情感
                                     </a>
                                     
                                         <a href="/tag/%E5%A9%9A%E5%A7%BB%E7%BB%84%E5%90%88.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             婚姻组合
                                         </a>
                                         
                                         <a href="/tag/%E5%B9%B8%E7%A6%8F%E5%A9%9A%E5%A7%BB.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             幸福婚姻
                                         </a>
                                         
                                         <a href="/tag/%E5%A4%A7%E9%BE%84%E5%A6%BB%E5%AD%90.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             大龄妻子
                                         </a>
                                         
                                         <a href="/tag/%E6%80%A7%E6%A0%BC%E4%BA%92%E8%A1%A5.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             性格互补
                                         </a>
                                         
                                         <a href="/tag/%E5%AE%B6%E5%BA%AD%E7%BB%8F%E8%90%A5.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             家庭经营
                                         </a>
                                         
@@ -1454,54 +1542,55 @@
                         </div>
                         
                         <div class="masonry-grid-item">
-                            <div class="card shadow-sm">
+                            <div class="card article-card shadow-sm">
                                 <div class="card-body">
-                                    <h5 class="card-title">
-                                        <i class="bi bi-file-earmark-text"></i>
+                                    <h5 class="card-title article-title">
+                                        <i class="bi bi-file-earmark-text me-2 text-primary"></i>
                                         <a href="../mdhtml/女人因孩子原谅出轨老公：对错的复杂权衡.html"
-                                            class="text-decoration-none">
+                                            class="text-decoration-none text-dark">
                                             女人因孩子原谅出轨老公：对错的复杂权衡
                                         </a>
                                     </h5>
                                     
-                                        <p class="card-text">
+                                        <p class="card-text text-muted mb-3">
                                             探讨女人在老公出轨后因孩子因素选择原谅这一现象，分析其中涉及的沉重代价、可能收获、隐藏风险，以及如何做出正确抉择，权衡这一行为对错的复杂性。
                                         </p>
                                         
+                                        <div class="article-meta">
                                             
-                                                <small class="text-muted">
-                                                    2026-02-11
-                                                </small>
+                                                <i class="bi bi-clock me-1"></i>
+                                                2026-02-11
                                                 
+                                        </div>
                                 </div>
-                                <div class="card-footer text-muted">
+                                <div class="card-footer text-muted bg-white border-top">
                                     <a href="/category/%E5%A9%9A%E5%A7%BB%E6%83%85%E6%84%9F.html"
-                                        class="badge bg-primary">
+                                        class="badge bg-primary me-2">
                                         婚姻情感
                                     </a>
                                     
                                         <a href="/tag/%E5%A9%9A%E5%A7%BB%E5%87%BA%E8%BD%A8.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             婚姻出轨
                                         </a>
                                         
                                         <a href="/tag/%E5%A5%B3%E4%BA%BA%E6%8A%89%E6%8B%A9.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             女人抉择
                                         </a>
                                         
                                         <a href="/tag/%E5%8E%9F%E8%B0%85%E7%9A%84%E5%BD%B1%E5%93%8D.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             原谅的影响
                                         </a>
                                         
                                         <a href="/tag/%E5%AD%A9%E5%AD%90%E4%B8%8E%E5%AE%B6%E5%BA%AD.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             孩子与家庭
                                         </a>
                                         
                                         <a href="/tag/%E5%A9%9A%E5%A7%BB%E4%BF%AE%E5%A4%8D.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             婚姻修复
                                         </a>
                                         
@@ -1510,54 +1599,55 @@
                         </div>
                         
                         <div class="masonry-grid-item">
-                            <div class="card shadow-sm">
+                            <div class="card article-card shadow-sm">
                                 <div class="card-body">
-                                    <h5 class="card-title">
-                                        <i class="bi bi-file-earmark-text"></i>
+                                    <h5 class="card-title article-title">
+                                        <i class="bi bi-file-earmark-text me-2 text-primary"></i>
                                         <a href="../mdhtml/夫妻之间，无性婚姻能坚持多久？.html"
-                                            class="text-decoration-none">
+                                            class="text-decoration-none text-dark">
                                             夫妻之间，无性婚姻能坚持多久？
                                         </a>
                                     </h5>
                                     
-                                        <p class="card-text">
+                                        <p class="card-text text-muted mb-3">
                                             探讨夫妻间无性婚姻能坚持多久，分析其现状、成因、对夫妻关系的影响，阐述个体差异和外部因素在其中的作用，并提供应对无性婚姻的方法。
                                         </p>
                                         
+                                        <div class="article-meta">
                                             
-                                                <small class="text-muted">
-                                                    2026-02-11
-                                                </small>
+                                                <i class="bi bi-clock me-1"></i>
+                                                2026-02-11
                                                 
+                                        </div>
                                 </div>
-                                <div class="card-footer text-muted">
+                                <div class="card-footer text-muted bg-white border-top">
                                     <a href="/category/%E5%A9%9A%E5%A7%BB%E6%83%85%E6%84%9F.html"
-                                        class="badge bg-primary">
+                                        class="badge bg-primary me-2">
                                         婚姻情感
                                     </a>
                                     
                                         <a href="/tag/%E6%97%A0%E6%80%A7%E5%A9%9A%E5%A7%BB.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             无性婚姻
                                         </a>
                                         
                                         <a href="/tag/%E5%A4%AB%E5%A6%BB%E5%85%B3%E7%B3%BB.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             夫妻关系
                                         </a>
                                         
                                         <a href="/tag/%E6%83%85%E6%84%9F%E6%B2%9F%E9%80%9A.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             情感沟通
                                         </a>
                                         
                                         <a href="/tag/%E5%A9%9A%E5%A7%BB%E6%8C%81%E7%BB%AD%E6%97%B6%E9%97%B4.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             婚姻持续时间
                                         </a>
                                         
                                         <a href="/tag/%E5%BA%94%E5%AF%B9%E6%96%B9%E6%B3%95.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             应对方法
                                         </a>
                                         
@@ -1566,49 +1656,50 @@
                         </div>
                         
                         <div class="masonry-grid-item">
-                            <div class="card shadow-sm">
+                            <div class="card article-card shadow-sm">
                                 <div class="card-body">
-                                    <h5 class="card-title">
-                                        <i class="bi bi-file-earmark-text"></i>
+                                    <h5 class="card-title article-title">
+                                        <i class="bi bi-file-earmark-text me-2 text-primary"></i>
                                         <a href="../mdhtml/亏妻者百财不入：家庭与财富的微妙平衡.html"
-                                            class="text-decoration-none">
+                                            class="text-decoration-none text-dark">
                                             亏妻者百财不入：家庭与财富的微妙平衡
                                         </a>
                                     </h5>
                                     
-                                        <p class="card-text">
+                                        <p class="card-text text-muted mb-3">
                                             阐述家庭中妻子的重要角色及亏妻对家庭财富的影响，探讨如何避免亏妻以实现家庭与财富的共赢，强调家庭与财富的紧密联系和相互影响。
                                         </p>
                                         
+                                        <div class="article-meta">
                                             
-                                                <small class="text-muted">
-                                                    2026-02-11
-                                                </small>
+                                                <i class="bi bi-clock me-1"></i>
+                                                2026-02-11
                                                 
+                                        </div>
                                 </div>
-                                <div class="card-footer text-muted">
+                                <div class="card-footer text-muted bg-white border-top">
                                     <a href="/category/%E5%A9%9A%E5%A7%BB%E6%83%85%E6%84%9F.html"
-                                        class="badge bg-primary">
+                                        class="badge bg-primary me-2">
                                         婚姻情感
                                     </a>
                                     
                                         <a href="/tag/%E5%AE%B6%E5%BA%AD%E5%85%B3%E7%B3%BB.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             家庭关系
                                         </a>
                                         
                                         <a href="/tag/%E8%B4%A2%E5%AF%8C%E7%A7%AF%E7%B4%AF.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             财富积累
                                         </a>
                                         
                                         <a href="/tag/%E5%A9%9A%E5%A7%BB%E4%B8%8E%E8%B4%A2%E5%AF%8C.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             婚姻与财富
                                         </a>
                                         
                                         <a href="/tag/%E5%AE%B6%E5%BA%AD%E5%92%8C%E8%B0%90.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             家庭和谐
                                         </a>
                                         
@@ -1617,54 +1708,55 @@
                         </div>
                         
                         <div class="masonry-grid-item">
-                            <div class="card shadow-sm">
+                            <div class="card article-card shadow-sm">
                                 <div class="card-body">
-                                    <h5 class="card-title">
-                                        <i class="bi bi-file-earmark-text"></i>
+                                    <h5 class="card-title article-title">
+                                        <i class="bi bi-file-earmark-text me-2 text-primary"></i>
                                         <a href="../mdhtml/为啥我爸妈结婚时没喊我参加婚礼？.html"
-                                            class="text-decoration-none">
+                                            class="text-decoration-none text-dark">
                                             为啥我爸妈结婚时没喊我参加婚礼？
                                         </a>
                                     </h5>
                                     
-                                        <p class="card-text">
+                                        <p class="card-text text-muted mb-3">
                                             探讨为何很多人会遗憾错过父母婚礼这一话题，从父母婚礼的时代背景、个人选择出发，分析人们对此的情感反应，并给出弥补遗憾的方法，带你感受家庭情感中的理解与温暖。
                                         </p>
                                         
+                                        <div class="article-meta">
                                             
-                                                <small class="text-muted">
-                                                    2026-02-11
-                                                </small>
+                                                <i class="bi bi-clock me-1"></i>
+                                                2026-02-11
                                                 
+                                        </div>
                                 </div>
-                                <div class="card-footer text-muted">
+                                <div class="card-footer text-muted bg-white border-top">
                                     <a href="/category/%E5%A9%9A%E5%A7%BB%E6%83%85%E6%84%9F.html"
-                                        class="badge bg-primary">
+                                        class="badge bg-primary me-2">
                                         婚姻情感
                                     </a>
                                     
                                         <a href="/tag/%E7%88%B6%E6%AF%8D%E5%A9%9A%E7%A4%BC.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             父母婚礼
                                         </a>
                                         
                                         <a href="/tag/%E6%97%B6%E4%BB%A3%E8%83%8C%E6%99%AF.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             时代背景
                                         </a>
                                         
                                         <a href="/tag/%E4%B8%AA%E4%BA%BA%E9%80%89%E6%8B%A9.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             个人选择
                                         </a>
                                         
                                         <a href="/tag/%E6%83%85%E6%84%9F%E5%8F%8D%E5%BA%94.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             情感反应
                                         </a>
                                         
                                         <a href="/tag/%E5%BC%A5%E8%A1%A5%E9%81%97%E6%86%BE.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             弥补遗憾
                                         </a>
                                         
@@ -1675,9 +1767,9 @@
                 </div>
 
                 <!-- 返回按钮 -->
-                <div class="mt-4 text-center">
-                    <a href="分类列表.html" class="btn btn-outline-primary">
-                        <i class="bi bi-arrow-left"></i> 返回分类列表
+                <div class="mt-6 text-center">
+                    <a href="分类列表.html" class="btn btn-outline-primary back-button">
+                        <i class="bi bi-arrow-left me-2"></i> 返回分类列表
                     </a>
                 </div>
             </div>
@@ -1701,7 +1793,7 @@
                         itemSelector: '.masonry-grid-item',
                         columnWidth: '.masonry-grid-item',
                         percentPosition: true,
-                        gutter: 10 // 明确设置 gutter 值为 10px
+                        gutter: 15 // 增加间距，提升视觉效果
                     });
                 });
             </script>

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
 
 <head>
     <meta charset="UTF-8">
@@ -9,7 +9,7 @@
     <meta name="description" content="无人自助站的【自然科学】分类列表页面，汇集了关于【自然科学】分类的文章和资讯，方便您快速找到感兴趣的内容。">
     <meta name="keywords" content="无人自助站,自然科学">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>分类列表</title>
+    <title>自然科学分类 - 无人自助站</title>
     <link rel="icon" href="../logo.svg" type="image/svg+xml">
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/footer.css">
@@ -27,6 +27,62 @@
     <!-- 引入Masonry -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/masonry/4.2.2/masonry.pkgd.min.js"></script>
 
+    <style>
+        .category-header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 2rem;
+            border-radius: 8px;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        .category-title {
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+        .article-card {
+            transition: all 0.3s ease;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        .article-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+        }
+        .article-title {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            transition: color 0.3s ease;
+        }
+        .article-title:hover {
+            color: #0d6efd;
+        }
+        .article-meta {
+            font-size: 0.85rem;
+            color: #6c757d;
+        }
+        .tag-link {
+            background-color: #e9ecef;
+            color: #495057;
+            transition: all 0.2s ease;
+        }
+        .tag-link:hover {
+            background-color: #dee2e6;
+            color: #212529;
+        }
+        .back-button {
+            transition: all 0.3s ease;
+        }
+        .back-button:hover {
+            transform: translateX(-3px);
+        }
+        .article-count {
+            font-size: 0.9rem;
+            opacity: 0.9;
+        }
+    </style>
 </head>
 
 <body>
@@ -80,7 +136,7 @@
         <main class="container-fluid mt-4">
             <div class="col-lg-8 col-md-12 mx-auto">
                 <!-- 面包屑导航 -->
-                <nav aria-label="breadcrumb">
+                <nav aria-label="breadcrumb" class="mb-4">
                     <ol class="breadcrumb">
                         <li class="breadcrumb-item"><a href="/html/index.html">首页</a></li>
                         <li class="breadcrumb-item"><a href="分类列表.html">分类列表</a></li>
@@ -89,86 +145,96 @@
                         </li>
                     </ol>
                 </nav>
-                <h1 style="font-size: 1.5em; margin: 0.5em 0;">
-                    自然科学分类的文章和资讯
-                </h1>
+                
+                <!-- 分类头部 -->
+                <div class="category-header">
+                    <h1 class="category-title">
+                        <i class="bi bi-folder2 me-2"></i>
+                        自然科学
+                    </h1>
+                    <p class="article-count">
+                        共 32 篇文章
+                    </p>
+                </div>
+                
                 <!-- 分类内容卡片 使用 Masonry 布局 -->
                 <div class="masonry-grid">
                     
                         <div class="masonry-grid-item">
-                            <div class="card shadow-sm">
+                            <div class="card article-card shadow-sm">
                                 <div class="card-body">
-                                    <h5 class="card-title">
-                                        <i class="bi bi-file-earmark-text"></i>
+                                    <h5 class="card-title article-title">
+                                        <i class="bi bi-file-earmark-text me-2 text-primary"></i>
                                         <a href="../mdhtml/地球之外存在智慧生命吗？.html"
-                                            class="text-decoration-none">
+                                            class="text-decoration-none text-dark">
                                             地外智慧生命探索：宇宙中是否存在外星人？
                                         </a>
                                     </h5>
                                     
-                                        <p class="card-text">
+                                        <p class="card-text text-muted mb-3">
                                             详细探讨地球之外是否存在智慧生命的科学问题，介绍射电望远镜搜索、光谱分析等寻找地外文明的方法，分析发现地外生命的意义，以及未来探索的展望，为您揭开宇宙中是否存在外星人的神秘面纱。
                                         </p>
                                         
+                                        <div class="article-meta">
                                             
-                                                <small class="text-muted">
-                                                    2026-02-27
-                                                </small>
+                                                <i class="bi bi-clock me-1"></i>
+                                                2026-02-27
                                                 
+                                        </div>
                                 </div>
-                                <div class="card-footer text-muted">
+                                <div class="card-footer text-muted bg-white border-top">
                                     <a href="/category/%E8%87%AA%E7%84%B6%E7%A7%91%E5%AD%A6.html"
-                                        class="badge bg-primary">
+                                        class="badge bg-primary me-2">
                                         自然科学
                                     </a>
                                     
                                         <a href="/tag/%E5%9C%B0%E5%A4%96%E6%99%BA%E6%85%A7%E7%94%9F%E5%91%BD.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             地外智慧生命
                                         </a>
                                         
                                         <a href="/tag/%E5%AE%87%E5%AE%99%E6%8E%A2%E7%B4%A2.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             宇宙探索
                                         </a>
                                         
                                         <a href="/tag/%E5%B0%84%E7%94%B5%E6%9C%9B%E8%BF%9C%E9%95%9C.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             射电望远镜
                                         </a>
                                         
                                         <a href="/tag/%E7%B3%BB%E5%A4%96%E8%A1%8C%E6%98%9F.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             系外行星
                                         </a>
                                         
                                         <a href="/tag/%E7%A7%91%E5%AD%A6%E4%B8%8E%E5%93%B2%E5%AD%A6.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             科学与哲学
                                         </a>
                                         
                                         <a href="/tag/%E5%A4%96%E6%98%9F%E4%BA%BA.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             外星人
                                         </a>
                                         
                                         <a href="/tag/%E5%A4%AA%E7%A9%BA%E6%8E%A2%E7%B4%A2.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             太空探索
                                         </a>
                                         
                                         <a href="/tag/%E5%A4%A9%E6%96%87%E8%A7%82%E6%B5%8B.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             天文观测
                                         </a>
                                         
                                         <a href="/tag/%E5%AE%87%E5%AE%99%E6%96%87%E6%98%8E.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             宇宙文明
                                         </a>
                                         
                                         <a href="/tag/%E8%B4%B9%E7%B1%B3%E6%82%96%E8%AE%BA.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             费米悖论
                                         </a>
                                         
@@ -177,54 +243,55 @@
                         </div>
                         
                         <div class="masonry-grid-item">
-                            <div class="card shadow-sm">
+                            <div class="card article-card shadow-sm">
                                 <div class="card-body">
-                                    <h5 class="card-title">
-                                        <i class="bi bi-file-earmark-text"></i>
+                                    <h5 class="card-title article-title">
+                                        <i class="bi bi-file-earmark-text me-2 text-primary"></i>
                                         <a href="../mdhtml/长颈鹿的脖子为什么那么长？探索长颈鹿的进化之谜.html"
-                                            class="text-decoration-none">
+                                            class="text-decoration-none text-dark">
                                             长颈鹿的脖子为什么那么长？探索长颈鹿的进化之谜
                                         </a>
                                     </h5>
                                     
-                                        <p class="card-text">
+                                        <p class="card-text text-muted mb-3">
                                             深入探究长颈鹿脖子变长的进化原因，分析其身体结构和生活习性的适应变化，并详细介绍长颈鹿在草原生活中的独特优势，同时讲述其在文化象征中的意义。
                                         </p>
                                         
+                                        <div class="article-meta">
                                             
-                                                <small class="text-muted">
-                                                    2026-02-24
-                                                </small>
+                                                <i class="bi bi-clock me-1"></i>
+                                                2026-02-24
                                                 
+                                        </div>
                                 </div>
-                                <div class="card-footer text-muted">
+                                <div class="card-footer text-muted bg-white border-top">
                                     <a href="/category/%E8%87%AA%E7%84%B6%E7%A7%91%E5%AD%A6.html"
-                                        class="badge bg-primary">
+                                        class="badge bg-primary me-2">
                                         自然科学
                                     </a>
                                     
                                         <a href="/tag/%E9%95%BF%E9%A2%88%E9%B9%BF.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             长颈鹿
                                         </a>
                                         
                                         <a href="/tag/%E8%84%96%E5%AD%90%E9%95%BF%E5%BA%A6.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             脖子长度
                                         </a>
                                         
                                         <a href="/tag/%E8%BF%9B%E5%8C%96%E9%80%82%E5%BA%94.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             进化适应
                                         </a>
                                         
                                         <a href="/tag/%E8%A7%85%E9%A3%9F%E7%AD%96%E7%95%A5.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             觅食策略
                                         </a>
                                         
                                         <a href="/tag/%E5%8A%A8%E7%89%A9%E4%B9%A0%E6%80%A7.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             动物习性
                                         </a>
                                         
@@ -233,54 +300,55 @@
                         </div>
                         
                         <div class="masonry-grid-item">
-                            <div class="card shadow-sm">
+                            <div class="card article-card shadow-sm">
                                 <div class="card-body">
-                                    <h5 class="card-title">
-                                        <i class="bi bi-file-earmark-text"></i>
+                                    <h5 class="card-title article-title">
+                                        <i class="bi bi-file-earmark-text me-2 text-primary"></i>
                                         <a href="../mdhtml/长生不老真的可能实现吗？科学分析与伦理思考.html"
-                                            class="text-decoration-none">
+                                            class="text-decoration-none text-dark">
                                             长生不老真的可能实现吗？科学分析与伦理思考
                                         </a>
                                     </h5>
                                     
-                                        <p class="card-text">
+                                        <p class="card-text text-muted mb-3">
                                             深入探讨长生不老的历史、现状与未来可能性，分析相关科学技术的发展，以及实现长生不老可能带来的伦理与社会影响。
                                         </p>
                                         
+                                        <div class="article-meta">
                                             
-                                                <small class="text-muted">
-                                                    2026-02-24
-                                                </small>
+                                                <i class="bi bi-clock me-1"></i>
+                                                2026-02-24
                                                 
+                                        </div>
                                 </div>
-                                <div class="card-footer text-muted">
+                                <div class="card-footer text-muted bg-white border-top">
                                     <a href="/category/%E8%87%AA%E7%84%B6%E7%A7%91%E5%AD%A6.html"
-                                        class="badge bg-primary">
+                                        class="badge bg-primary me-2">
                                         自然科学
                                     </a>
                                     
                                         <a href="/tag/%E9%95%BF%E7%94%9F%E4%B8%8D%E8%80%81.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             长生不老
                                         </a>
                                         
                                         <a href="/tag/%E6%8A%97%E8%A1%B0%E8%80%81.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             抗衰老
                                         </a>
                                         
                                         <a href="/tag/%E7%94%9F%E5%91%BD%E7%A7%91%E5%AD%A6.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             生命科学
                                         </a>
                                         
                                         <a href="/tag/%E6%8A%80%E6%9C%AF%E4%BC%A6%E7%90%86.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             技术伦理
                                         </a>
                                         
                                         <a href="/tag/%E6%9C%AA%E6%9D%A5%E5%8C%BB%E5%AD%A6.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             未来医学
                                         </a>
                                         
@@ -289,54 +357,55 @@
                         </div>
                         
                         <div class="masonry-grid-item">
-                            <div class="card shadow-sm">
+                            <div class="card article-card shadow-sm">
                                 <div class="card-body">
-                                    <h5 class="card-title">
-                                        <i class="bi bi-file-earmark-text"></i>
+                                    <h5 class="card-title article-title">
+                                        <i class="bi bi-file-earmark-text me-2 text-primary"></i>
                                         <a href="../mdhtml/眼镜发明前，眼镜蛇叫什么？.html"
-                                            class="text-decoration-none">
+                                            class="text-decoration-none text-dark">
                                             眼镜发明前，眼镜蛇叫什么？
                                         </a>
                                     </h5>
                                     
-                                        <p class="card-text">
+                                        <p class="card-text text-muted mb-3">
                                             探寻眼镜发明前眼镜蛇在不同文明中的独特命名及其背后蕴含的深厚文化，了解其在古埃及、印度、中国、日本以及古希腊和罗马等文化中的称谓与象征意义。
                                         </p>
                                         
+                                        <div class="article-meta">
                                             
-                                                <small class="text-muted">
-                                                    2026-02-24
-                                                </small>
+                                                <i class="bi bi-clock me-1"></i>
+                                                2026-02-24
                                                 
+                                        </div>
                                 </div>
-                                <div class="card-footer text-muted">
+                                <div class="card-footer text-muted bg-white border-top">
                                     <a href="/category/%E8%87%AA%E7%84%B6%E7%A7%91%E5%AD%A6.html"
-                                        class="badge bg-primary">
+                                        class="badge bg-primary me-2">
                                         自然科学
                                     </a>
                                     
                                         <a href="/tag/%E7%9C%BC%E9%95%9C%E8%9B%87.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             眼镜蛇
                                         </a>
                                         
                                         <a href="/tag/%E5%8F%A4%E4%BB%A3%E6%96%87%E6%98%8E.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             古代文明
                                         </a>
                                         
                                         <a href="/tag/%E6%96%87%E5%8C%96%E8%B1%A1%E5%BE%81.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             文化象征
                                         </a>
                                         
                                         <a href="/tag/%E5%8E%86%E5%8F%B2%E7%A7%B0%E8%B0%93.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             历史称谓
                                         </a>
                                         
                                         <a href="/tag/%E5%8A%A8%E7%89%A9%E4%BC%A0%E8%AF%B4.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             动物传说
                                         </a>
                                         
@@ -345,54 +414,55 @@
                         </div>
                         
                         <div class="masonry-grid-item">
-                            <div class="card shadow-sm">
+                            <div class="card article-card shadow-sm">
                                 <div class="card-body">
-                                    <h5 class="card-title">
-                                        <i class="bi bi-file-earmark-text"></i>
+                                    <h5 class="card-title article-title">
+                                        <i class="bi bi-file-earmark-text me-2 text-primary"></i>
                                         <a href="../mdhtml/斑马是黑底白纹还是白底黑纹？揭开斑马条纹的神秘面纱.html"
-                                            class="text-decoration-none">
+                                            class="text-decoration-none text-dark">
                                             斑马是黑底白纹还是白底黑纹？揭开斑马条纹的神秘面纱
                                         </a>
                                     </h5>
                                     
-                                        <p class="card-text">
+                                        <p class="card-text text-muted mb-3">
                                             深入探究斑马身上黑白条纹的颜色之谜，分析其究竟是黑底白纹还是白底黑纹，并详细介绍斑马条纹在伪装保护、驱虫防病、社交交流等方面的功能，同时讲述其在艺术文化领域的意义。
                                         </p>
                                         
+                                        <div class="article-meta">
                                             
-                                                <small class="text-muted">
-                                                    2026-02-24
-                                                </small>
+                                                <i class="bi bi-clock me-1"></i>
+                                                2026-02-24
                                                 
+                                        </div>
                                 </div>
-                                <div class="card-footer text-muted">
+                                <div class="card-footer text-muted bg-white border-top">
                                     <a href="/category/%E8%87%AA%E7%84%B6%E7%A7%91%E5%AD%A6.html"
-                                        class="badge bg-primary">
+                                        class="badge bg-primary me-2">
                                         自然科学
                                     </a>
                                     
                                         <a href="/tag/%E6%96%91%E9%A9%AC.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             斑马
                                         </a>
                                         
                                         <a href="/tag/%E6%9D%A1%E7%BA%B9%E9%A2%9C%E8%89%B2.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             条纹颜色
                                         </a>
                                         
                                         <a href="/tag/%E6%9D%A1%E7%BA%B9%E5%8A%9F%E8%83%BD.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             条纹功能
                                         </a>
                                         
                                         <a href="/tag/%E5%8A%A8%E7%89%A9%E4%B9%A0%E6%80%A7.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             动物习性
                                         </a>
                                         
                                         <a href="/tag/%E5%8A%A8%E7%89%A9%E6%96%87%E5%8C%96.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             动物文化
                                         </a>
                                         
@@ -401,54 +471,55 @@
                         </div>
                         
                         <div class="masonry-grid-item">
-                            <div class="card shadow-sm">
+                            <div class="card article-card shadow-sm">
                                 <div class="card-body">
-                                    <h5 class="card-title">
-                                        <i class="bi bi-file-earmark-text"></i>
+                                    <h5 class="card-title article-title">
+                                        <i class="bi bi-file-earmark-text me-2 text-primary"></i>
                                         <a href="../mdhtml/探秘毒蛇相残：毒蛇用毒蛇毒毒毒蛇，会被毒死吗？.html"
-                                            class="text-decoration-none">
+                                            class="text-decoration-none text-dark">
                                             探秘毒蛇相残：毒蛇用毒蛇毒毒毒蛇，会被毒死吗？
                                         </a>
                                     </h5>
                                     
-                                        <p class="card-text">
+                                        <p class="card-text text-muted mb-3">
                                             深入探究毒蛇之间用毒液攻击的场景，剖析毒液类型、毒性差异，解读同种与异种毒蛇互咬时不同的生死结局，以及影响毒液作用效果的多重因素，揭示毒蛇在自然选择下的生存策略。
                                         </p>
                                         
+                                        <div class="article-meta">
                                             
-                                                <small class="text-muted">
-                                                    2026-02-24
-                                                </small>
+                                                <i class="bi bi-clock me-1"></i>
+                                                2026-02-24
                                                 
+                                        </div>
                                 </div>
-                                <div class="card-footer text-muted">
+                                <div class="card-footer text-muted bg-white border-top">
                                     <a href="/category/%E8%87%AA%E7%84%B6%E7%A7%91%E5%AD%A6.html"
-                                        class="badge bg-primary">
+                                        class="badge bg-primary me-2">
                                         自然科学
                                     </a>
                                     
                                         <a href="/tag/%E6%AF%92%E8%9B%87.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             毒蛇
                                         </a>
                                         
                                         <a href="/tag/%E6%AF%92%E6%B6%B2.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             毒液
                                         </a>
                                         
                                         <a href="/tag/%E5%90%8C%E7%B1%BB%E7%9B%B8%E6%AE%8B.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             同类相残
                                         </a>
                                         
                                         <a href="/tag/%E6%AF%92%E6%B6%B2%E5%85%8D%E7%96%AB.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             毒液免疫
                                         </a>
                                         
                                         <a href="/tag/%E7%94%9F%E5%AD%98%E7%AD%96%E7%95%A5.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             生存策略
                                         </a>
                                         
@@ -457,54 +528,55 @@
                         </div>
                         
                         <div class="masonry-grid-item">
-                            <div class="card shadow-sm">
+                            <div class="card article-card shadow-sm">
                                 <div class="card-body">
-                                    <h5 class="card-title">
-                                        <i class="bi bi-file-earmark-text"></i>
+                                    <h5 class="card-title article-title">
+                                        <i class="bi bi-file-earmark-text me-2 text-primary"></i>
                                         <a href="../mdhtml/太空探索：人类向宇宙的伟大征程.html"
-                                            class="text-decoration-none">
+                                            class="text-decoration-none text-dark">
                                             太空探索：人类向宇宙的伟大征程
                                         </a>
                                     </h5>
                                     
-                                        <p class="card-text">
+                                        <p class="card-text text-muted mb-3">
                                             深入探讨太空探索的历史、现状、关键技术以及它如何推动人类文明的发展，开启人类向宇宙深处进军的伟大征程。
                                         </p>
                                         
+                                        <div class="article-meta">
                                             
-                                                <small class="text-muted">
-                                                    2026-02-24
-                                                </small>
+                                                <i class="bi bi-clock me-1"></i>
+                                                2026-02-24
                                                 
+                                        </div>
                                 </div>
-                                <div class="card-footer text-muted">
+                                <div class="card-footer text-muted bg-white border-top">
                                     <a href="/category/%E8%87%AA%E7%84%B6%E7%A7%91%E5%AD%A6.html"
-                                        class="badge bg-primary">
+                                        class="badge bg-primary me-2">
                                         自然科学
                                     </a>
                                     
                                         <a href="/tag/%E5%A4%AA%E7%A9%BA%E6%8E%A2%E7%B4%A2.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             太空探索
                                         </a>
                                         
                                         <a href="/tag/%E8%88%AA%E5%A4%A9%E6%8A%80%E6%9C%AF.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             航天技术
                                         </a>
                                         
                                         <a href="/tag/%E5%AE%87%E5%AE%99%E7%A7%91%E5%AD%A6.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             宇宙科学
                                         </a>
                                         
                                         <a href="/tag/%E4%BA%BA%E7%B1%BB%E5%A4%AA%E7%A9%BA%E6%B4%BB%E5%8A%A8.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             人类太空活动
                                         </a>
                                         
                                         <a href="/tag/%E8%87%AA%E7%84%B6%E7%A7%91%E5%AD%A6.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             自然科学
                                         </a>
                                         
@@ -513,54 +585,55 @@
                         </div>
                         
                         <div class="masonry-grid-item">
-                            <div class="card shadow-sm">
+                            <div class="card article-card shadow-sm">
                                 <div class="card-body">
-                                    <h5 class="card-title">
-                                        <i class="bi bi-file-earmark-text"></i>
+                                    <h5 class="card-title article-title">
+                                        <i class="bi bi-file-earmark-text me-2 text-primary"></i>
                                         <a href="../mdhtml/大象的鼻子为什么那么长？探索大象的进化之谜.html"
-                                            class="text-decoration-none">
+                                            class="text-decoration-none text-dark">
                                             大象的鼻子为什么那么长？探索大象的进化之谜
                                         </a>
                                     </h5>
                                     
-                                        <p class="card-text">
+                                        <p class="card-text text-muted mb-3">
                                             深入探究大象鼻子变长的进化原因，分析其身体结构和生活习性的适应变化，并详细介绍大象在草原生活中的独特优势，同时讲述其在文化象征中的意义。
                                         </p>
                                         
+                                        <div class="article-meta">
                                             
-                                                <small class="text-muted">
-                                                    2026-02-24
-                                                </small>
+                                                <i class="bi bi-clock me-1"></i>
+                                                2026-02-24
                                                 
+                                        </div>
                                 </div>
-                                <div class="card-footer text-muted">
+                                <div class="card-footer text-muted bg-white border-top">
                                     <a href="/category/%E8%87%AA%E7%84%B6%E7%A7%91%E5%AD%A6.html"
-                                        class="badge bg-primary">
+                                        class="badge bg-primary me-2">
                                         自然科学
                                     </a>
                                     
                                         <a href="/tag/%E5%A4%A7%E8%B1%A1.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             大象
                                         </a>
                                         
                                         <a href="/tag/%E9%BC%BB%E5%AD%90%E9%95%BF%E5%BA%A6.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             鼻子长度
                                         </a>
                                         
                                         <a href="/tag/%E8%BF%9B%E5%8C%96%E9%80%82%E5%BA%94.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             进化适应
                                         </a>
                                         
                                         <a href="/tag/%E7%94%9F%E5%AD%98%E7%AD%96%E7%95%A5.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             生存策略
                                         </a>
                                         
                                         <a href="/tag/%E5%8A%A8%E7%89%A9%E4%B9%A0%E6%80%A7.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             动物习性
                                         </a>
                                         
@@ -569,54 +642,55 @@
                         </div>
                         
                         <div class="masonry-grid-item">
-                            <div class="card shadow-sm">
+                            <div class="card article-card shadow-sm">
                                 <div class="card-body">
-                                    <h5 class="card-title">
-                                        <i class="bi bi-file-earmark-text"></i>
+                                    <h5 class="card-title article-title">
+                                        <i class="bi bi-file-earmark-text me-2 text-primary"></i>
                                         <a href="../mdhtml/塑料恐龙玩具是否含真正恐龙成分揭秘.html"
-                                            class="text-decoration-none">
+                                            class="text-decoration-none text-dark">
                                             塑料恐龙玩具是否含真正恐龙成分揭秘
                                         </a>
                                     </h5>
                                     
-                                        <p class="card-text">
+                                        <p class="card-text text-muted mb-3">
                                             探讨塑料恐龙玩具是否含有真正的恐龙成分，深入解析其材质、与真正恐龙成分的区别，同时介绍其教育价值和市场新动态，为你揭开塑料恐龙玩具背后的秘密。
                                         </p>
                                         
+                                        <div class="article-meta">
                                             
-                                                <small class="text-muted">
-                                                    2026-02-24
-                                                </small>
+                                                <i class="bi bi-clock me-1"></i>
+                                                2026-02-24
                                                 
+                                        </div>
                                 </div>
-                                <div class="card-footer text-muted">
+                                <div class="card-footer text-muted bg-white border-top">
                                     <a href="/category/%E8%87%AA%E7%84%B6%E7%A7%91%E5%AD%A6.html"
-                                        class="badge bg-primary">
+                                        class="badge bg-primary me-2">
                                         自然科学
                                     </a>
                                     
                                         <a href="/tag/%E5%A1%91%E6%96%99%E6%81%90%E9%BE%99%E7%8E%A9%E5%85%B7.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             塑料恐龙玩具
                                         </a>
                                         
                                         <a href="/tag/%E6%81%90%E9%BE%99%E6%88%90%E5%88%86.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             恐龙成分
                                         </a>
                                         
                                         <a href="/tag/%E7%8E%A9%E5%85%B7%E6%9D%90%E8%B4%A8.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             玩具材质
                                         </a>
                                         
                                         <a href="/tag/%E7%8E%A9%E5%85%B7%E6%95%99%E8%82%B2%E4%BB%B7%E5%80%BC.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             玩具教育价值
                                         </a>
                                         
                                         <a href="/tag/%E7%8E%A9%E5%85%B7%E5%B8%82%E5%9C%BA%E5%8A%A8%E6%80%81.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             玩具市场动态
                                         </a>
                                         
@@ -625,54 +699,55 @@
                         </div>
                         
                         <div class="masonry-grid-item">
-                            <div class="card shadow-sm">
+                            <div class="card article-card shadow-sm">
                                 <div class="card-body">
-                                    <h5 class="card-title">
-                                        <i class="bi bi-file-earmark-text"></i>
+                                    <h5 class="card-title article-title">
+                                        <i class="bi bi-file-earmark-text me-2 text-primary"></i>
                                         <a href="../mdhtml/基因编辑：改写生命密码的革命性技术.html"
-                                            class="text-decoration-none">
+                                            class="text-decoration-none text-dark">
                                             基因编辑：改写生命密码的革命性技术
                                         </a>
                                     </h5>
                                     
-                                        <p class="card-text">
+                                        <p class="card-text text-muted mb-3">
                                             深入探讨基因编辑技术的基本原理、发展现状、应用场景以及它如何通过改写生命密码，为人类健康、农业发展和环境保护带来革命性的变化，同时也面临着伦理和社会的挑战。
                                         </p>
                                         
+                                        <div class="article-meta">
                                             
-                                                <small class="text-muted">
-                                                    2026-02-24
-                                                </small>
+                                                <i class="bi bi-clock me-1"></i>
+                                                2026-02-24
                                                 
+                                        </div>
                                 </div>
-                                <div class="card-footer text-muted">
+                                <div class="card-footer text-muted bg-white border-top">
                                     <a href="/category/%E8%87%AA%E7%84%B6%E7%A7%91%E5%AD%A6.html"
-                                        class="badge bg-primary">
+                                        class="badge bg-primary me-2">
                                         自然科学
                                     </a>
                                     
                                         <a href="/tag/%E5%9F%BA%E5%9B%A0%E7%BC%96%E8%BE%91.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             基因编辑
                                         </a>
                                         
                                         <a href="/tag/CRISPR.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             CRISPR
                                         </a>
                                         
                                         <a href="/tag/%E7%94%9F%E7%89%A9%E6%8A%80%E6%9C%AF.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             生物技术
                                         </a>
                                         
                                         <a href="/tag/%E5%9F%BA%E5%9B%A0%E6%B2%BB%E7%96%97.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             基因治疗
                                         </a>
                                         
                                         <a href="/tag/%E8%87%AA%E7%84%B6%E7%A7%91%E5%AD%A6.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             自然科学
                                         </a>
                                         
@@ -681,54 +756,55 @@
                         </div>
                         
                         <div class="masonry-grid-item">
-                            <div class="card shadow-sm">
+                            <div class="card article-card shadow-sm">
                                 <div class="card-body">
-                                    <h5 class="card-title">
-                                        <i class="bi bi-file-earmark-text"></i>
+                                    <h5 class="card-title article-title">
+                                        <i class="bi bi-file-earmark-text me-2 text-primary"></i>
                                         <a href="../mdhtml/基因编辑技术：人类的未来是福是祸？.html"
-                                            class="text-decoration-none">
+                                            class="text-decoration-none text-dark">
                                             基因编辑技术：人类的未来是福是祸？
                                         </a>
                                     </h5>
                                     
-                                        <p class="card-text">
+                                        <p class="card-text text-muted mb-3">
                                             深入探讨基因编辑技术的原理、发展现状与应用前景，分析其对人类社会的影响，以及可能带来的伦理与社会挑战。
                                         </p>
                                         
+                                        <div class="article-meta">
                                             
-                                                <small class="text-muted">
-                                                    2026-02-24
-                                                </small>
+                                                <i class="bi bi-clock me-1"></i>
+                                                2026-02-24
                                                 
+                                        </div>
                                 </div>
-                                <div class="card-footer text-muted">
+                                <div class="card-footer text-muted bg-white border-top">
                                     <a href="/category/%E8%87%AA%E7%84%B6%E7%A7%91%E5%AD%A6.html"
-                                        class="badge bg-primary">
+                                        class="badge bg-primary me-2">
                                         自然科学
                                     </a>
                                     
                                         <a href="/tag/%E5%9F%BA%E5%9B%A0%E7%BC%96%E8%BE%91.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             基因编辑
                                         </a>
                                         
                                         <a href="/tag/CRISPR.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             CRISPR
                                         </a>
                                         
                                         <a href="/tag/%E7%94%9F%E5%91%BD%E7%A7%91%E5%AD%A6.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             生命科学
                                         </a>
                                         
                                         <a href="/tag/%E7%94%9F%E7%89%A9%E6%8A%80%E6%9C%AF.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             生物技术
                                         </a>
                                         
                                         <a href="/tag/%E4%BC%A6%E7%90%86%E4%BA%89%E8%AE%AE.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             伦理争议
                                         </a>
                                         
@@ -737,54 +813,55 @@
                         </div>
                         
                         <div class="masonry-grid-item">
-                            <div class="card shadow-sm">
+                            <div class="card article-card shadow-sm">
                                 <div class="card-body">
-                                    <h5 class="card-title">
-                                        <i class="bi bi-file-earmark-text"></i>
+                                    <h5 class="card-title article-title">
+                                        <i class="bi bi-file-earmark-text me-2 text-primary"></i>
                                         <a href="../mdhtml/变色龙为什么会变色？探索变色龙的进化之谜.html"
-                                            class="text-decoration-none">
+                                            class="text-decoration-none text-dark">
                                             变色龙为什么会变色？探索变色龙的进化之谜
                                         </a>
                                     </h5>
                                     
-                                        <p class="card-text">
+                                        <p class="card-text text-muted mb-3">
                                             深入探究变色龙变色的进化原因，分析其身体结构和生活习性的适应变化，并详细介绍变色龙在森林生活中的独特优势，同时讲述其在文化象征中的意义。
                                         </p>
                                         
+                                        <div class="article-meta">
                                             
-                                                <small class="text-muted">
-                                                    2026-02-24
-                                                </small>
+                                                <i class="bi bi-clock me-1"></i>
+                                                2026-02-24
                                                 
+                                        </div>
                                 </div>
-                                <div class="card-footer text-muted">
+                                <div class="card-footer text-muted bg-white border-top">
                                     <a href="/category/%E8%87%AA%E7%84%B6%E7%A7%91%E5%AD%A6.html"
-                                        class="badge bg-primary">
+                                        class="badge bg-primary me-2">
                                         自然科学
                                     </a>
                                     
                                         <a href="/tag/%E5%8F%98%E8%89%B2%E9%BE%99.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             变色龙
                                         </a>
                                         
                                         <a href="/tag/%E5%8F%98%E8%89%B2%E8%83%BD%E5%8A%9B.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             变色能力
                                         </a>
                                         
                                         <a href="/tag/%E8%BF%9B%E5%8C%96%E9%80%82%E5%BA%94.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             进化适应
                                         </a>
                                         
                                         <a href="/tag/%E7%94%9F%E5%AD%98%E7%AD%96%E7%95%A5.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             生存策略
                                         </a>
                                         
                                         <a href="/tag/%E5%8A%A8%E7%89%A9%E4%B9%A0%E6%80%A7.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             动物习性
                                         </a>
                                         
@@ -793,54 +870,55 @@
                         </div>
                         
                         <div class="masonry-grid-item">
-                            <div class="card shadow-sm">
+                            <div class="card article-card shadow-sm">
                                 <div class="card-body">
-                                    <h5 class="card-title">
-                                        <i class="bi bi-file-earmark-text"></i>
+                                    <h5 class="card-title article-title">
+                                        <i class="bi bi-file-earmark-text me-2 text-primary"></i>
                                         <a href="../mdhtml/企鹅为什么不会飞？探索企鹅的进化之谜.html"
-                                            class="text-decoration-none">
+                                            class="text-decoration-none text-dark">
                                             企鹅为什么不会飞？探索企鹅的进化之谜
                                         </a>
                                     </h5>
                                     
-                                        <p class="card-text">
+                                        <p class="card-text text-muted mb-3">
                                             深入探究企鹅失去飞行能力的进化原因，分析其身体结构和生活习性的适应变化，并详细介绍企鹅在海洋生活中的独特优势，同时讲述其在文化象征中的意义。
                                         </p>
                                         
+                                        <div class="article-meta">
                                             
-                                                <small class="text-muted">
-                                                    2026-02-24
-                                                </small>
+                                                <i class="bi bi-clock me-1"></i>
+                                                2026-02-24
                                                 
+                                        </div>
                                 </div>
-                                <div class="card-footer text-muted">
+                                <div class="card-footer text-muted bg-white border-top">
                                     <a href="/category/%E8%87%AA%E7%84%B6%E7%A7%91%E5%AD%A6.html"
-                                        class="badge bg-primary">
+                                        class="badge bg-primary me-2">
                                         自然科学
                                     </a>
                                     
                                         <a href="/tag/%E4%BC%81%E9%B9%85.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             企鹅
                                         </a>
                                         
                                         <a href="/tag/%E9%A3%9E%E8%A1%8C%E8%83%BD%E5%8A%9B.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             飞行能力
                                         </a>
                                         
                                         <a href="/tag/%E8%BF%9B%E5%8C%96%E9%80%82%E5%BA%94.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             进化适应
                                         </a>
                                         
                                         <a href="/tag/%E6%B5%B7%E6%B4%8B%E7%94%9F%E6%B4%BB.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             海洋生活
                                         </a>
                                         
                                         <a href="/tag/%E5%8A%A8%E7%89%A9%E4%B9%A0%E6%80%A7.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             动物习性
                                         </a>
                                         
@@ -849,69 +927,70 @@
                         </div>
                         
                         <div class="masonry-grid-item">
-                            <div class="card shadow-sm">
+                            <div class="card article-card shadow-sm">
                                 <div class="card-body">
-                                    <h5 class="card-title">
-                                        <i class="bi bi-file-earmark-text"></i>
+                                    <h5 class="card-title article-title">
+                                        <i class="bi bi-file-earmark-text me-2 text-primary"></i>
                                         <a href="../mdhtml/为什么洗澡时总喜欢唱歌？.html"
-                                            class="text-decoration-none">
+                                            class="text-decoration-none text-dark">
                                             为什么洗澡时总喜欢唱歌？
                                         </a>
                                     </h5>
                                     
-                                        <p class="card-text">
+                                        <p class="card-text text-muted mb-3">
                                             探索洗澡时喜欢唱歌的科学原因，从声学环境、心理放松、大脑奖励机制等多个角度解析这一有趣的日常现象，揭示浴室为何成为我们的天然音乐厅。
                                         </p>
                                         
+                                        <div class="article-meta">
                                             
-                                                <small class="text-muted">
-                                                    2026-02-24
-                                                </small>
+                                                <i class="bi bi-clock me-1"></i>
+                                                2026-02-24
                                                 
+                                        </div>
                                 </div>
-                                <div class="card-footer text-muted">
+                                <div class="card-footer text-muted bg-white border-top">
                                     <a href="/category/%E8%87%AA%E7%84%B6%E7%A7%91%E5%AD%A6.html"
-                                        class="badge bg-primary">
+                                        class="badge bg-primary me-2">
                                         自然科学
                                     </a>
                                     
                                         <a href="/tag/%E5%BF%83%E7%90%86%E5%AD%A6.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             心理学
                                         </a>
                                         
                                         <a href="/tag/%E7%A5%9E%E7%BB%8F%E7%A7%91%E5%AD%A6.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             神经科学
                                         </a>
                                         
                                         <a href="/tag/%E5%A4%A7%E8%84%91%E6%9C%BA%E5%88%B6.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             大脑机制
                                         </a>
                                         
                                         <a href="/tag/%E4%BA%BA%E4%BD%93%E5%A5%A5%E7%A7%98.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             人体奥秘
                                         </a>
                                         
                                         <a href="/tag/%E7%94%9F%E6%B4%BB%E7%99%BE%E7%A7%91.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             生活百科
                                         </a>
                                         
                                         <a href="/tag/%E8%A1%8C%E4%B8%BA%E7%A7%91%E5%AD%A6.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             行为科学
                                         </a>
                                         
                                         <a href="/tag/%E5%A3%B0%E5%AD%A6.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             声学
                                         </a>
                                         
                                         <a href="/tag/%E5%BF%83%E7%90%86%E6%94%BE%E6%9D%BE.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             心理放松
                                         </a>
                                         
@@ -920,64 +999,65 @@
                         </div>
                         
                         <div class="masonry-grid-item">
-                            <div class="card shadow-sm">
+                            <div class="card article-card shadow-sm">
                                 <div class="card-body">
-                                    <h5 class="card-title">
-                                        <i class="bi bi-file-earmark-text"></i>
+                                    <h5 class="card-title article-title">
+                                        <i class="bi bi-file-earmark-text me-2 text-primary"></i>
                                         <a href="../mdhtml/为什么剪指甲时不觉得疼？.html"
-                                            class="text-decoration-none">
+                                            class="text-decoration-none text-dark">
                                             为什么剪指甲时不觉得疼？
                                         </a>
                                     </h5>
                                     
-                                        <p class="card-text">
+                                        <p class="card-text text-muted mb-3">
                                             探索剪指甲不疼的科学原理，从指甲的结构组成、神经分布、角质蛋白特性等角度解析这一日常现象，了解人体这个精密而神奇的设计。
                                         </p>
                                         
+                                        <div class="article-meta">
                                             
-                                                <small class="text-muted">
-                                                    2026-02-24
-                                                </small>
+                                                <i class="bi bi-clock me-1"></i>
+                                                2026-02-24
                                                 
+                                        </div>
                                 </div>
-                                <div class="card-footer text-muted">
+                                <div class="card-footer text-muted bg-white border-top">
                                     <a href="/category/%E8%87%AA%E7%84%B6%E7%A7%91%E5%AD%A6.html"
-                                        class="badge bg-primary">
+                                        class="badge bg-primary me-2">
                                         自然科学
                                     </a>
                                     
                                         <a href="/tag/%E4%BA%BA%E4%BD%93%E5%A5%A5%E7%A7%98.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             人体奥秘
                                         </a>
                                         
                                         <a href="/tag/%E8%A7%A3%E5%89%96%E5%AD%A6.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             解剖学
                                         </a>
                                         
                                         <a href="/tag/%E7%A5%9E%E7%BB%8F%E7%A7%91%E5%AD%A6.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             神经科学
                                         </a>
                                         
                                         <a href="/tag/%E7%94%9F%E7%90%86%E5%AD%A6.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             生理学
                                         </a>
                                         
                                         <a href="/tag/%E7%94%9F%E6%B4%BB%E7%99%BE%E7%A7%91.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             生活百科
                                         </a>
                                         
                                         <a href="/tag/%E8%A7%92%E8%B4%A8%E8%9B%8B%E7%99%BD.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             角质蛋白
                                         </a>
                                         
                                         <a href="/tag/%E7%96%BC%E7%97%9B%E6%84%9F%E7%9F%A5.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             疼痛感知
                                         </a>
                                         
@@ -986,54 +1066,55 @@
                         </div>
                         
                         <div class="masonry-grid-item">
-                            <div class="card shadow-sm">
+                            <div class="card article-card shadow-sm">
                                 <div class="card-body">
-                                    <h5 class="card-title">
-                                        <i class="bi bi-file-earmark-text"></i>
+                                    <h5 class="card-title article-title">
+                                        <i class="bi bi-file-earmark-text me-2 text-primary"></i>
                                         <a href="../mdhtml/雷公电母放的是直流电还是交流电？.html"
-                                            class="text-decoration-none">
+                                            class="text-decoration-none text-dark">
                                             雷公电母放的是直流电还是交流电？
                                         </a>
                                     </h5>
                                     
-                                        <p class="card-text">
+                                        <p class="card-text text-muted mb-3">
                                             探讨神话中雷公电母所放雷电在现代科学认知下究竟是直流电还是交流电，解析雷电形成原理、电流类型，并介绍雷电防护与利用价值等内容。
                                         </p>
                                         
+                                        <div class="article-meta">
                                             
-                                                <small class="text-muted">
-                                                    2026-02-11
-                                                </small>
+                                                <i class="bi bi-clock me-1"></i>
+                                                2026-02-11
                                                 
+                                        </div>
                                 </div>
-                                <div class="card-footer text-muted">
+                                <div class="card-footer text-muted bg-white border-top">
                                     <a href="/category/%E8%87%AA%E7%84%B6%E7%A7%91%E5%AD%A6.html"
-                                        class="badge bg-primary">
+                                        class="badge bg-primary me-2">
                                         自然科学
                                     </a>
                                     
                                         <a href="/tag/%E9%9B%B7%E7%94%B5.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             雷电
                                         </a>
                                         
                                         <a href="/tag/%E7%9B%B4%E6%B5%81%E7%94%B5.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             直流电
                                         </a>
                                         
                                         <a href="/tag/%E4%BA%A4%E6%B5%81%E7%94%B5.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             交流电
                                         </a>
                                         
                                         <a href="/tag/%E6%B0%94%E8%B1%A1%E7%89%A9%E7%90%86.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             气象物理
                                         </a>
                                         
                                         <a href="/tag/%E9%9B%B7%E7%94%B5%E9%98%B2%E6%8A%A4.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             雷电防护
                                         </a>
                                         
@@ -1042,54 +1123,55 @@
                         </div>
                         
                         <div class="masonry-grid-item">
-                            <div class="card shadow-sm">
+                            <div class="card article-card shadow-sm">
                                 <div class="card-body">
-                                    <h5 class="card-title">
-                                        <i class="bi bi-file-earmark-text"></i>
+                                    <h5 class="card-title article-title">
+                                        <i class="bi bi-file-earmark-text me-2 text-primary"></i>
                                         <a href="../mdhtml/草船借箭：一场跨越千年的资源博弈与人性实验.html"
-                                            class="text-decoration-none">
+                                            class="text-decoration-none text-dark">
                                             草船借箭：一场跨越千年的资源博弈与人性实验
                                         </a>
                                     </h5>
                                     
-                                        <p class="card-text">
+                                        <p class="card-text text-muted mb-3">
                                             本文以现代战略视角重新解读了经典历史故事《草船借箭》，揭示了其中蕴含的资源博弈与人性实验的深层含义。文章探讨了如何将环境变量转化为战略资产，分析了曹操在信息不对称情况下的决策困境，并阐述了诸葛亮所采用的风险对冲策略。此外，还讨论了叙事重构的力量以及这一古老故事对现代社会在资源调度、利用认知偏差构建策略优势、风险管理及通过故事影响现实等方面的启示。适合对战略思维、博弈论感兴趣的读者，以及希望从历史中汲取智慧应对现代挑战的人士。
                                         </p>
                                         
+                                        <div class="article-meta">
                                             
-                                                <small class="text-muted">
-                                                    2026-02-11
-                                                </small>
+                                                <i class="bi bi-clock me-1"></i>
+                                                2026-02-11
                                                 
+                                        </div>
                                 </div>
-                                <div class="card-footer text-muted">
+                                <div class="card-footer text-muted bg-white border-top">
                                     <a href="/category/%E8%87%AA%E7%84%B6%E7%A7%91%E5%AD%A6.html"
-                                        class="badge bg-primary">
+                                        class="badge bg-primary me-2">
                                         自然科学
                                     </a>
                                     
                                         <a href="/tag/%E5%8E%86%E5%8F%B2%E6%99%BA%E6%85%A7.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             历史智慧
                                         </a>
                                         
                                         <a href="/tag/%E5%8D%9A%E5%BC%88%E8%AE%BA.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             博弈论
                                         </a>
                                         
                                         <a href="/tag/%E9%A3%8E%E9%99%A9%E7%AE%A1%E7%90%86.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             风险管理
                                         </a>
                                         
                                         <a href="/tag/%E5%8F%99%E4%BA%8B%E9%87%8D%E6%9E%84.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             叙事重构
                                         </a>
                                         
                                         <a href="/tag/%E8%B5%84%E6%BA%90%E8%B0%83%E5%BA%A6.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             资源调度
                                         </a>
                                         
@@ -1098,49 +1180,50 @@
                         </div>
                         
                         <div class="masonry-grid-item">
-                            <div class="card shadow-sm">
+                            <div class="card article-card shadow-sm">
                                 <div class="card-body">
-                                    <h5 class="card-title">
-                                        <i class="bi bi-file-earmark-text"></i>
+                                    <h5 class="card-title article-title">
+                                        <i class="bi bi-file-earmark-text me-2 text-primary"></i>
                                         <a href="../mdhtml/科技飞速发展：重塑人类情感与人性的双刃剑.html"
-                                            class="text-decoration-none">
+                                            class="text-decoration-none text-dark">
                                             科技飞速发展：重塑人类情感与人性的双刃剑
                                         </a>
                                     </h5>
                                     
-                                        <p class="card-text">
+                                        <p class="card-text text-muted mb-3">
                                             探讨科技快速发展对人类情感和人性的影响，包括情感表达从面对面交流到数字化转变带来的真实性和深度的减弱、人际关系因社交媒体而变得表面化及可能引发的心理健康问题、自我认知方面量化自我的趋势以及人工智能对人类独特性的挑战。文章强调了在享受科技带来便利的同时，保持人性温暖的重要性，并提出了在未来发展中寻求科技与人性平衡的观点。
                                         </p>
                                         
+                                        <div class="article-meta">
                                             
-                                                <small class="text-muted">
-                                                    2026-02-11
-                                                </small>
+                                                <i class="bi bi-clock me-1"></i>
+                                                2026-02-11
                                                 
+                                        </div>
                                 </div>
-                                <div class="card-footer text-muted">
+                                <div class="card-footer text-muted bg-white border-top">
                                     <a href="/category/%E8%87%AA%E7%84%B6%E7%A7%91%E5%AD%A6.html"
-                                        class="badge bg-primary">
+                                        class="badge bg-primary me-2">
                                         自然科学
                                     </a>
                                     
                                         <a href="/tag/%E7%A7%91%E6%8A%80%E4%B8%8E%E4%BA%BA%E6%96%87%E4%BB%B7%E5%80%BC.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             科技与人文价值
                                         </a>
                                         
                                         <a href="/tag/%E6%83%85%E6%84%9F%E8%A1%A8%E8%BE%BE.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             情感表达
                                         </a>
                                         
                                         <a href="/tag/%E4%BA%BA%E9%99%85%E5%85%B3%E7%B3%BB.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             人际关系
                                         </a>
                                         
                                         <a href="/tag/%E8%87%AA%E6%88%91%E8%AE%A4%E7%9F%A5%E4%B8%8E%E5%86%85%E5%BF%83%E5%B9%B8%E7%A6%8F.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             自我认知与内心幸福
                                         </a>
                                         
@@ -1149,54 +1232,55 @@
                         </div>
                         
                         <div class="masonry-grid-item">
-                            <div class="card shadow-sm">
+                            <div class="card article-card shadow-sm">
                                 <div class="card-body">
-                                    <h5 class="card-title">
-                                        <i class="bi bi-file-earmark-text"></i>
+                                    <h5 class="card-title article-title">
+                                        <i class="bi bi-file-earmark-text me-2 text-primary"></i>
                                         <a href="../mdhtml/科学是否有一个发展的极限？.html"
-                                            class="text-decoration-none">
+                                            class="text-decoration-none text-dark">
                                             科学是否有一个发展的极限？
                                         </a>
                                     </h5>
                                     
-                                        <p class="card-text">
+                                        <p class="card-text text-muted mb-3">
                                             探讨科学发展是否存在极限，分析科学发展面临的物理极限、资源限制、技术瓶颈和哲学伦理困境，同时展望科学发展的多元未来可能性。
                                         </p>
                                         
+                                        <div class="article-meta">
                                             
-                                                <small class="text-muted">
-                                                    2026-02-11
-                                                </small>
+                                                <i class="bi bi-clock me-1"></i>
+                                                2026-02-11
                                                 
+                                        </div>
                                 </div>
-                                <div class="card-footer text-muted">
+                                <div class="card-footer text-muted bg-white border-top">
                                     <a href="/category/%E8%87%AA%E7%84%B6%E7%A7%91%E5%AD%A6.html"
-                                        class="badge bg-primary">
+                                        class="badge bg-primary me-2">
                                         自然科学
                                     </a>
                                     
                                         <a href="/tag/%E7%A7%91%E5%AD%A6%E5%93%B2%E5%AD%A6.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             科学哲学
                                         </a>
                                         
                                         <a href="/tag/%E7%89%A9%E7%90%86%E6%9E%81%E9%99%90.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             物理极限
                                         </a>
                                         
                                         <a href="/tag/%E8%B5%84%E6%BA%90%E9%99%90%E5%88%B6.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             资源限制
                                         </a>
                                         
                                         <a href="/tag/%E6%8A%80%E6%9C%AF%E7%93%B6%E9%A2%88.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             技术瓶颈
                                         </a>
                                         
                                         <a href="/tag/%E4%BC%A6%E7%90%86%E5%9B%B0%E5%A2%83.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             伦理困境
                                         </a>
                                         
@@ -1205,54 +1289,55 @@
                         </div>
                         
                         <div class="masonry-grid-item">
-                            <div class="card shadow-sm">
+                            <div class="card article-card shadow-sm">
                                 <div class="card-body">
-                                    <h5 class="card-title">
-                                        <i class="bi bi-file-earmark-text"></i>
+                                    <h5 class="card-title article-title">
+                                        <i class="bi bi-file-earmark-text me-2 text-primary"></i>
                                         <a href="../mdhtml/树木与文化：自然与人类文明的交融.html"
-                                            class="text-decoration-none">
+                                            class="text-decoration-none text-dark">
                                             树木与文化：自然与人类文明的交融
                                         </a>
                                     </h5>
                                     
-                                        <p class="card-text">
+                                        <p class="card-text text-muted mb-3">
                                             深入探讨树木在不同文化中的象征意义、与宗教信仰的联系、在文学艺术中的体现以及和民俗传统的渊源，强调保护树木对文化传承的重要性。
                                         </p>
                                         
+                                        <div class="article-meta">
                                             
-                                                <small class="text-muted">
-                                                    2026-02-11
-                                                </small>
+                                                <i class="bi bi-clock me-1"></i>
+                                                2026-02-11
                                                 
+                                        </div>
                                 </div>
-                                <div class="card-footer text-muted">
+                                <div class="card-footer text-muted bg-white border-top">
                                     <a href="/category/%E8%87%AA%E7%84%B6%E7%A7%91%E5%AD%A6.html"
-                                        class="badge bg-primary">
+                                        class="badge bg-primary me-2">
                                         自然科学
                                     </a>
                                     
                                         <a href="/tag/%E6%A0%91%E6%9C%A8%E6%96%87%E5%8C%96.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             树木文化
                                         </a>
                                         
                                         <a href="/tag/%E5%AE%97%E6%95%99%E4%BF%A1%E4%BB%B0.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             宗教信仰
                                         </a>
                                         
                                         <a href="/tag/%E6%96%87%E5%AD%A6%E8%89%BA%E6%9C%AF.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             文学艺术
                                         </a>
                                         
                                         <a href="/tag/%E6%B0%91%E4%BF%97%E4%BC%A0%E7%BB%9F.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             民俗传统
                                         </a>
                                         
                                         <a href="/tag/%E6%A0%91%E6%9C%A8%E4%BF%9D%E6%8A%A4.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             树木保护
                                         </a>
                                         
@@ -1261,54 +1346,55 @@
                         </div>
                         
                         <div class="masonry-grid-item">
-                            <div class="card shadow-sm">
+                            <div class="card article-card shadow-sm">
                                 <div class="card-body">
-                                    <h5 class="card-title">
-                                        <i class="bi bi-file-earmark-text"></i>
+                                    <h5 class="card-title article-title">
+                                        <i class="bi bi-file-earmark-text me-2 text-primary"></i>
                                         <a href="../mdhtml/数学在生活中的一些作用.html"
-                                            class="text-decoration-none">
+                                            class="text-decoration-none text-dark">
                                             数学在生活中的一些作用
                                         </a>
                                     </h5>
                                     
-                                        <p class="card-text">
+                                        <p class="card-text text-muted mb-3">
                                             探讨数学在日常生活中的多种作用，包括如何通过数学知识判断他人的教育背景、辅助投资决策、辨别事情真伪以及指导个人言行。特别是在理财、购物及就业分析等方面，数学提供了必要的逻辑分析和数据处理能力，帮助人们做出更加明智的决策。掌握基础的数学技能，不仅能够保护自己免受诈骗，还能更好地理解世界，实现理性生活。
                                         </p>
                                         
+                                        <div class="article-meta">
                                             
-                                                <small class="text-muted">
-                                                    2026-02-11
-                                                </small>
+                                                <i class="bi bi-clock me-1"></i>
+                                                2026-02-11
                                                 
+                                        </div>
                                 </div>
-                                <div class="card-footer text-muted">
+                                <div class="card-footer text-muted bg-white border-top">
                                     <a href="/category/%E8%87%AA%E7%84%B6%E7%A7%91%E5%AD%A6.html"
-                                        class="badge bg-primary">
+                                        class="badge bg-primary me-2">
                                         自然科学
                                     </a>
                                     
                                         <a href="/tag/%E6%95%B0%E5%AD%A6%E5%BA%94%E7%94%A8.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             数学应用
                                         </a>
                                         
                                         <a href="/tag/%E6%97%A5%E5%B8%B8%E7%94%9F%E6%B4%BB.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             日常生活
                                         </a>
                                         
                                         <a href="/tag/%E6%8A%95%E8%B5%84%E5%86%B3%E7%AD%96.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             投资决策
                                         </a>
                                         
                                         <a href="/tag/%E9%80%BB%E8%BE%91%E5%88%A4%E6%96%AD.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             逻辑判断
                                         </a>
                                         
                                         <a href="/tag/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             数据分析
                                         </a>
                                         
@@ -1317,49 +1403,50 @@
                         </div>
                         
                         <div class="masonry-grid-item">
-                            <div class="card shadow-sm">
+                            <div class="card article-card shadow-sm">
                                 <div class="card-body">
-                                    <h5 class="card-title">
-                                        <i class="bi bi-file-earmark-text"></i>
+                                    <h5 class="card-title article-title">
+                                        <i class="bi bi-file-earmark-text me-2 text-primary"></i>
                                         <a href="../mdhtml/探索未知的宇宙奥秘.html"
-                                            class="text-decoration-none">
+                                            class="text-decoration-none text-dark">
                                             探索未知的宇宙奥秘
                                         </a>
                                     </h5>
                                     
-                                        <p class="card-text">
+                                        <p class="card-text text-muted mb-3">
                                             本文探讨了从古至今对死亡的不同理解。古代文明如埃及和中国通过葬礼仪式表达对死后世界的信仰；哲学家们则在灵魂不朽与虚无之间辩论。现代科学尝试解释濒死体验，探索生死界限；而现代社会中，数字纪念和虚拟存在正重新定义死亡的意义。无论是期待轮回还是相信意识上传，人类持续探索将死亡的终点转化为新起点的可能性。
                                         </p>
                                         
+                                        <div class="article-meta">
                                             
-                                                <small class="text-muted">
-                                                    2026-02-11
-                                                </small>
+                                                <i class="bi bi-clock me-1"></i>
+                                                2026-02-11
                                                 
+                                        </div>
                                 </div>
-                                <div class="card-footer text-muted">
+                                <div class="card-footer text-muted bg-white border-top">
                                     <a href="/category/%E8%87%AA%E7%84%B6%E7%A7%91%E5%AD%A6.html"
-                                        class="badge bg-primary">
+                                        class="badge bg-primary me-2">
                                         自然科学
                                     </a>
                                     
                                         <a href="/tag/%E5%AE%87%E5%AE%99%E6%8E%A2%E7%B4%A2.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             宇宙探索
                                         </a>
                                         
                                         <a href="/tag/%E7%A7%91%E5%AD%A6%E5%8F%91%E7%8E%B0.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             科学发现
                                         </a>
                                         
                                         <a href="/tag/%E6%9C%AA%E8%A7%A3%E4%B9%8B%E8%B0%9C.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             未解之谜
                                         </a>
                                         
                                         <a href="/tag/%E5%A4%A9%E6%96%87%E6%8A%80%E6%9C%AF.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             天文技术
                                         </a>
                                         
@@ -1368,49 +1455,50 @@
                         </div>
                         
                         <div class="masonry-grid-item">
-                            <div class="card shadow-sm">
+                            <div class="card article-card shadow-sm">
                                 <div class="card-body">
-                                    <h5 class="card-title">
-                                        <i class="bi bi-file-earmark-text"></i>
+                                    <h5 class="card-title article-title">
+                                        <i class="bi bi-file-earmark-text me-2 text-primary"></i>
                                         <a href="../mdhtml/探索月亮的奥秘：从远看的圆缺到近看的坑洼.html"
-                                            class="text-decoration-none">
+                                            class="text-decoration-none text-dark">
                                             探索月亮的奥秘：从远看的圆缺到近看的坑洼
                                         </a>
                                     </h5>
                                     
-                                        <p class="card-text">
+                                        <p class="card-text text-muted mb-3">
                                             深入探索月亮的奥秘，包括月亮远看和近看呈现不同面貌的原因、月相变化的原理、月球表面坑洼的形成因素、人类对月亮的探索历程以及月亮在文化和科学研究方面对人类的影响。
                                         </p>
                                         
+                                        <div class="article-meta">
                                             
-                                                <small class="text-muted">
-                                                    2026-02-11
-                                                </small>
+                                                <i class="bi bi-clock me-1"></i>
+                                                2026-02-11
                                                 
+                                        </div>
                                 </div>
-                                <div class="card-footer text-muted">
+                                <div class="card-footer text-muted bg-white border-top">
                                     <a href="/category/%E8%87%AA%E7%84%B6%E7%A7%91%E5%AD%A6.html"
-                                        class="badge bg-primary">
+                                        class="badge bg-primary me-2">
                                         自然科学
                                     </a>
                                     
                                         <a href="/tag/%E5%AE%87%E5%AE%99%E7%A7%91%E5%AD%A6.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             宇宙科学
                                         </a>
                                         
                                         <a href="/tag/%E6%9C%88%E7%90%83%E8%A1%A8%E9%9D%A2.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             月球表面
                                         </a>
                                         
                                         <a href="/tag/%E4%BA%BA%E7%B1%BB%E6%8E%A2%E6%9C%88.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             人类探月
                                         </a>
                                         
                                         <a href="/tag/%E5%A4%A9%E6%96%87%E6%8E%A2%E7%B4%A2.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             天文探索
                                         </a>
                                         
@@ -1419,54 +1507,55 @@
                         </div>
                         
                         <div class="masonry-grid-item">
-                            <div class="card shadow-sm">
+                            <div class="card article-card shadow-sm">
                                 <div class="card-body">
-                                    <h5 class="card-title">
-                                        <i class="bi bi-file-earmark-text"></i>
+                                    <h5 class="card-title article-title">
+                                        <i class="bi bi-file-earmark-text me-2 text-primary"></i>
                                         <a href="../mdhtml/我们如何在享受科技成果的同时，保持人性的温暖和尊严？.html"
-                                            class="text-decoration-none">
+                                            class="text-decoration-none text-dark">
                                             我们如何在享受科技成果的同时，保持人性的温暖和尊严？
                                         </a>
                                     </h5>
                                     
-                                        <p class="card-text">
+                                        <p class="card-text text-muted mb-3">
                                             在享受科技带来的便利时，我们面临着人际关系疏远和人性温暖缺失的挑战。本文探讨了如何在科技进步的同时保持人性的温度与尊严，包括有意识地控制科技使用、重新定义科技的价值观以及通过教育培养下一代的人文关怀。实现科技与人性的和谐共生，需要我们在技术发展与人文价值间找到平衡，确保社会既高效又充满温情。
                                         </p>
                                         
+                                        <div class="article-meta">
                                             
-                                                <small class="text-muted">
-                                                    2026-02-11
-                                                </small>
+                                                <i class="bi bi-clock me-1"></i>
+                                                2026-02-11
                                                 
+                                        </div>
                                 </div>
-                                <div class="card-footer text-muted">
+                                <div class="card-footer text-muted bg-white border-top">
                                     <a href="/category/%E8%87%AA%E7%84%B6%E7%A7%91%E5%AD%A6.html"
-                                        class="badge bg-primary">
+                                        class="badge bg-primary me-2">
                                         自然科学
                                     </a>
                                     
                                         <a href="/tag/%E7%A7%91%E6%8A%80%E4%B8%8E%E4%BA%BA%E6%96%87%E4%BB%B7%E5%80%BC.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             科技与人文价值
                                         </a>
                                         
                                         <a href="/tag/%E4%BA%BA%E6%80%A7%E6%B8%A9%E6%9A%96.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             人性温暖
                                         </a>
                                         
                                         <a href="/tag/%E7%A4%BE%E4%BA%A4%E5%AA%92%E4%BD%93.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             社交媒体
                                         </a>
                                         
                                         <a href="/tag/%E7%A7%91%E6%8A%80%E4%B8%8E%E4%BA%BA%E6%96%87%E4%BB%B7%E5%80%BC.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             科技与人文价值
                                         </a>
                                         
                                         <a href="/tag/%E6%95%99%E8%82%B2%E8%B7%AF%E5%BE%84.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             教育路径
                                         </a>
                                         
@@ -1475,54 +1564,55 @@
                         </div>
                         
                         <div class="masonry-grid-item">
-                            <div class="card shadow-sm">
+                            <div class="card article-card shadow-sm">
                                 <div class="card-body">
-                                    <h5 class="card-title">
-                                        <i class="bi bi-file-earmark-text"></i>
+                                    <h5 class="card-title article-title">
+                                        <i class="bi bi-file-earmark-text me-2 text-primary"></i>
                                         <a href="../mdhtml/我们做出的每一个选择是否都是必然的，还是存在着真正的自由意志？.html"
-                                            class="text-decoration-none">
+                                            class="text-decoration-none text-dark">
                                             我们做出的每一个选择是否都是必然的，还是存在着真正的自由意志？
                                         </a>
                                     </h5>
                                     
-                                        <p class="card-text">
+                                        <p class="card-text text-muted mb-3">
                                             本文探讨了决定论与自由意志的概念及其在日常生活中的体现。决定论认为所有选择都由先前状态决定，而支持自由意志的观点则强调人类意识的独特性和自我反思的重要性。通过分析两者，文章提出了如何在生活中找到必然与自由间的平衡，以充分利用选择机会创造有意义人生的方法。适合对哲学思考、人类行为感兴趣的读者。关键词涵盖：决定论、自由意志、人类意识、日常选择。
                                         </p>
                                         
+                                        <div class="article-meta">
                                             
-                                                <small class="text-muted">
-                                                    2026-02-11
-                                                </small>
+                                                <i class="bi bi-clock me-1"></i>
+                                                2026-02-11
                                                 
+                                        </div>
                                 </div>
-                                <div class="card-footer text-muted">
+                                <div class="card-footer text-muted bg-white border-top">
                                     <a href="/category/%E8%87%AA%E7%84%B6%E7%A7%91%E5%AD%A6.html"
-                                        class="badge bg-primary">
+                                        class="badge bg-primary me-2">
                                         自然科学
                                     </a>
                                     
                                         <a href="/tag/%E5%86%B3%E5%AE%9A%E8%AE%BA.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             决定论
                                         </a>
                                         
                                         <a href="/tag/%E8%87%AA%E7%94%B1%E6%84%8F%E5%BF%97.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             自由意志
                                         </a>
                                         
                                         <a href="/tag/%E4%BA%BA%E7%B1%BB%E6%84%8F%E8%AF%86.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             人类意识
                                         </a>
                                         
                                         <a href="/tag/%E6%97%A5%E5%B8%B8%E9%80%89%E6%8B%A9.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             日常选择
                                         </a>
                                         
                                         <a href="/tag/%E5%93%B2%E5%AD%A6%E6%80%9D%E8%80%83.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             哲学思考
                                         </a>
                                         
@@ -1531,64 +1621,65 @@
                         </div>
                         
                         <div class="masonry-grid-item">
-                            <div class="card shadow-sm">
+                            <div class="card article-card shadow-sm">
                                 <div class="card-body">
-                                    <h5 class="card-title">
-                                        <i class="bi bi-file-earmark-text"></i>
+                                    <h5 class="card-title article-title">
+                                        <i class="bi bi-file-earmark-text me-2 text-primary"></i>
                                         <a href="../mdhtml/恐龙为什么会突然灭绝？.html"
-                                            class="text-decoration-none">
+                                            class="text-decoration-none text-dark">
                                             恐龙为什么会突然灭绝？
                                         </a>
                                     </h5>
                                     
-                                        <p class="card-text">
+                                        <p class="card-text text-muted mb-3">
                                             恐龙在约6600万年前的白垩纪末期突然灭绝，主要原因是环境剧变，尤其是Chicxulub小行星撞击地球引发的一系列灾难如地震、海啸、尘埃遮蔽天空等导致生态系统崩溃。此外，疾病爆发、食物链断裂及进化瓶颈也是重要因素。尽管小行星撞击是主要原因，火山活动和气候变化等“非撞击”假说也为恐龙灭绝提供了多元解释。恐龙灭绝提醒我们关注生态系统的脆弱性和环境保护的重要性。
                                         </p>
                                         
+                                        <div class="article-meta">
                                             
-                                                <small class="text-muted">
-                                                    2026-02-11
-                                                </small>
+                                                <i class="bi bi-clock me-1"></i>
+                                                2026-02-11
                                                 
+                                        </div>
                                 </div>
-                                <div class="card-footer text-muted">
+                                <div class="card-footer text-muted bg-white border-top">
                                     <a href="/category/%E8%87%AA%E7%84%B6%E7%A7%91%E5%AD%A6.html"
-                                        class="badge bg-primary">
+                                        class="badge bg-primary me-2">
                                         自然科学
                                     </a>
                                     
                                         <a href="/tag/%E6%81%90%E9%BE%99%E7%81%AD%E7%BB%9D.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             恐龙灭绝
                                         </a>
                                         
                                         <a href="/tag/%E7%99%BD%E5%9E%A9%E7%BA%AA%E6%9C%AB%E6%9C%9F.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             白垩纪末期
                                         </a>
                                         
                                         <a href="/tag/%E5%B0%8F%E8%A1%8C%E6%98%9F%E6%92%9E%E5%87%BB.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             小行星撞击
                                         </a>
                                         
                                         <a href="/tag/%E7%8E%AF%E5%A2%83%E5%89%A7%E5%8F%98.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             环境剧变
                                         </a>
                                         
                                         <a href="/tag/%E7%94%9F%E6%80%81%E7%B3%BB%E7%BB%9F%E5%B4%A9%E6%BA%83.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             生态系统崩溃
                                         </a>
                                         
                                         <a href="/tag/%E8%BF%9B%E5%8C%96%E7%93%B6%E9%A2%88.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             进化瓶颈
                                         </a>
                                         
                                         <a href="/tag/%E9%9D%9E%E6%92%9E%E5%87%BB%E5%81%87%E8%AF%B4.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             非撞击假说
                                         </a>
                                         
@@ -1597,54 +1688,55 @@
                         </div>
                         
                         <div class="masonry-grid-item">
-                            <div class="card shadow-sm">
+                            <div class="card article-card shadow-sm">
                                 <div class="card-body">
-                                    <h5 class="card-title">
-                                        <i class="bi bi-file-earmark-text"></i>
+                                    <h5 class="card-title article-title">
+                                        <i class="bi bi-file-earmark-text me-2 text-primary"></i>
                                         <a href="../mdhtml/宇宙到底有没有边界.html"
-                                            class="text-decoration-none">
+                                            class="text-decoration-none text-dark">
                                             宇宙到底有没有边界
                                         </a>
                                     </h5>
                                     
-                                        <p class="card-text">
+                                        <p class="card-text text-muted mb-3">
                                             宇宙是否有边界是一个涉及物理学、哲学和宗教的复杂问题。科学上，基于宇宙大爆炸理论和膨胀模型，宇宙可能是无限且没有明确边界的，但这也取决于对宇宙本质的理解和假设。哲学与宗教则从有限与无限的辩证关系及宇宙的神圣性等角度提出不同见解。尽管人类受限于观测技术和认知能力，对宇宙边界的探索依然无止境。
                                         </p>
                                         
+                                        <div class="article-meta">
                                             
-                                                <small class="text-muted">
-                                                    2026-02-11
-                                                </small>
+                                                <i class="bi bi-clock me-1"></i>
+                                                2026-02-11
                                                 
+                                        </div>
                                 </div>
-                                <div class="card-footer text-muted">
+                                <div class="card-footer text-muted bg-white border-top">
                                     <a href="/category/%E8%87%AA%E7%84%B6%E7%A7%91%E5%AD%A6.html"
-                                        class="badge bg-primary">
+                                        class="badge bg-primary me-2">
                                         自然科学
                                     </a>
                                     
                                         <a href="/tag/%E5%AE%87%E5%AE%99%E8%BE%B9%E7%95%8C.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             宇宙边界
                                         </a>
                                         
                                         <a href="/tag/%E7%A7%91%E5%AD%A6%E6%8E%A2%E7%B4%A2.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             科学探索
                                         </a>
                                         
                                         <a href="/tag/%E5%93%B2%E5%AD%A6%E6%80%9D%E8%80%83.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             哲学思考
                                         </a>
                                         
                                         <a href="/tag/%E5%AE%97%E6%95%99%E8%A7%82%E7%82%B9.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             宗教观点
                                         </a>
                                         
                                         <a href="/tag/%E4%BA%BA%E7%B1%BB%E8%AE%A4%E7%9F%A5.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             人类认知
                                         </a>
                                         
@@ -1653,49 +1745,50 @@
                         </div>
                         
                         <div class="masonry-grid-item">
-                            <div class="card shadow-sm">
+                            <div class="card article-card shadow-sm">
                                 <div class="card-body">
-                                    <h5 class="card-title">
-                                        <i class="bi bi-file-earmark-text"></i>
+                                    <h5 class="card-title article-title">
+                                        <i class="bi bi-file-earmark-text me-2 text-primary"></i>
                                         <a href="../mdhtml/字典数排序.html"
-                                            class="text-decoration-none">
+                                            class="text-decoration-none text-dark">
                                             字典数排序
                                         </a>
                                     </h5>
                                     
-                                        <p class="card-text">
+                                        <p class="card-text text-muted mb-3">
                                             字典序排序问题要求对从1到n的整数按字典顺序排序。文章介绍了一种基于二叉树前序遍历的方法来解决此问题，适用于n小于等于5,000,000的情况。通过构建特殊的二叉树结构，并对其进行前序遍历以生成所需的字典顺序列表。虽然不是最快速的解决方案，但提供了一种复习二叉树遍历知识的有效方式。
                                         </p>
                                         
+                                        <div class="article-meta">
                                             
-                                                <small class="text-muted">
-                                                    2026-02-11
-                                                </small>
+                                                <i class="bi bi-clock me-1"></i>
+                                                2026-02-11
                                                 
+                                        </div>
                                 </div>
-                                <div class="card-footer text-muted">
+                                <div class="card-footer text-muted bg-white border-top">
                                     <a href="/category/%E8%87%AA%E7%84%B6%E7%A7%91%E5%AD%A6.html"
-                                        class="badge bg-primary">
+                                        class="badge bg-primary me-2">
                                         自然科学
                                     </a>
                                     
                                         <a href="/tag/%E5%AD%97%E5%85%B8%E5%BA%8F%E6%8E%92%E5%BA%8F.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             字典序排序
                                         </a>
                                         
                                         <a href="/tag/%E4%BA%8C%E5%8F%89%E6%A0%91.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             二叉树
                                         </a>
                                         
                                         <a href="/tag/%E5%89%8D%E5%BA%8F%E9%81%8D%E5%8E%86.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             前序遍历
                                         </a>
                                         
                                         <a href="/tag/%E7%AE%97%E6%B3%95%E4%BC%98%E5%8C%96.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             算法优化
                                         </a>
                                         
@@ -1704,54 +1797,55 @@
                         </div>
                         
                         <div class="masonry-grid-item">
-                            <div class="card shadow-sm">
+                            <div class="card article-card shadow-sm">
                                 <div class="card-body">
-                                    <h5 class="card-title">
-                                        <i class="bi bi-file-earmark-text"></i>
+                                    <h5 class="card-title article-title">
+                                        <i class="bi bi-file-earmark-text me-2 text-primary"></i>
                                         <a href="../mdhtml/夸父追日：一场上古神话中的星际探索与人类觉醒.html"
-                                            class="text-decoration-none">
+                                            class="text-decoration-none text-dark">
                                             夸父追日：一场上古神话中的星际探索与人类觉醒
                                         </a>
                                     </h5>
                                     
-                                        <p class="card-text">
+                                        <p class="card-text text-muted mb-3">
                                             本文重新解读了夸父追日这一古老神话，探讨其在星际探索与人类觉醒方面的现代意义。文章提出，夸父追逐的“太阳”可能是远古时期对地外文明或未知宇宙能量体的探索尝试，而桃木杖落地成林的传说则隐喻着能量转换和量子纠缠等科学概念。此外，文中还讨论了个体内在觉醒与集体认知惯性的冲突，并展示了夸父追日故事结构如何反映人类认知进化的逻辑。最后，文章展望了夸父神话在数字时代的重生，如通过AI和区块链技术实现的数字孪生及永生叙事，揭示了古代智慧与现代科技的惊人共鸣。
                                         </p>
                                         
+                                        <div class="article-meta">
                                             
-                                                <small class="text-muted">
-                                                    2026-02-11
-                                                </small>
+                                                <i class="bi bi-clock me-1"></i>
+                                                2026-02-11
                                                 
+                                        </div>
                                 </div>
-                                <div class="card-footer text-muted">
+                                <div class="card-footer text-muted bg-white border-top">
                                     <a href="/category/%E8%87%AA%E7%84%B6%E7%A7%91%E5%AD%A6.html"
-                                        class="badge bg-primary">
+                                        class="badge bg-primary me-2">
                                         自然科学
                                     </a>
                                     
                                         <a href="/tag/%E6%98%9F%E9%99%85%E6%8E%A2%E7%B4%A2.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             星际探索
                                         </a>
                                         
                                         <a href="/tag/%E7%A7%91%E6%8A%80%E9%A2%84%E8%A8%80.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             科技预言
                                         </a>
                                         
                                         <a href="/tag/%E4%B8%AA%E4%BD%93%E8%A7%89%E9%86%92.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             个体觉醒
                                         </a>
                                         
                                         <a href="/tag/%E6%96%87%E6%98%8E%E8%BF%9B%E5%8C%96.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             文明进化
                                         </a>
                                         
                                         <a href="/tag/%E6%95%B0%E5%AD%97%E9%87%8D%E7%94%9F.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             数字重生
                                         </a>
                                         
@@ -1760,49 +1854,50 @@
                         </div>
                         
                         <div class="masonry-grid-item">
-                            <div class="card shadow-sm">
+                            <div class="card article-card shadow-sm">
                                 <div class="card-body">
-                                    <h5 class="card-title">
-                                        <i class="bi bi-file-earmark-text"></i>
+                                    <h5 class="card-title article-title">
+                                        <i class="bi bi-file-earmark-text me-2 text-primary"></i>
                                         <a href="../mdhtml/在探索未知的过程中，我们会遇到哪些无法逾越的障碍？.html"
-                                            class="text-decoration-none">
+                                            class="text-decoration-none text-dark">
                                             在探索未知的过程中，我们会遇到哪些无法逾越的障碍？
                                         </a>
                                     </h5>
                                     
-                                        <p class="card-text">
+                                        <p class="card-text text-muted mb-3">
                                             探讨在探索未知过程中遇到的无法逾越的障碍，包括物理极限如光速限制、量子现象的理解与控制以及热力学定律揭示的熵增原理；生物进化中的自然选择压力和生态系统的复杂相互依赖性限制了生命形式的多样性发展；认知边界方面，人类使用的语言和逻辑工具本身的局限性，科学方法论的突破难度，以及哲学上的认识论问题都构成了对更深层次理解的挑战。这些障碍不仅考验人类智慧，也推动科学技术不断进步，并提醒我们在追求知识时应保持谦逊态度。
                                         </p>
                                         
+                                        <div class="article-meta">
                                             
-                                                <small class="text-muted">
-                                                    2026-02-11
-                                                </small>
+                                                <i class="bi bi-clock me-1"></i>
+                                                2026-02-11
                                                 
+                                        </div>
                                 </div>
-                                <div class="card-footer text-muted">
+                                <div class="card-footer text-muted bg-white border-top">
                                     <a href="/category/%E8%87%AA%E7%84%B6%E7%A7%91%E5%AD%A6.html"
-                                        class="badge bg-primary">
+                                        class="badge bg-primary me-2">
                                         自然科学
                                     </a>
                                     
                                         <a href="/tag/%E7%89%A9%E7%90%86%E6%9E%81%E9%99%90.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             物理极限
                                         </a>
                                         
                                         <a href="/tag/%E7%94%9F%E7%89%A9%E8%BF%9B%E5%8C%96.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             生物进化
                                         </a>
                                         
                                         <a href="/tag/%E8%AE%A4%E7%9F%A5%E8%BE%B9%E7%95%8C.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             认知边界
                                         </a>
                                         
                                         <a href="/tag/%E7%A7%91%E5%AD%A6%E6%8E%A2%E7%B4%A2.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             科学探索
                                         </a>
                                         
@@ -1811,49 +1906,50 @@
                         </div>
                         
                         <div class="masonry-grid-item">
-                            <div class="card shadow-sm">
+                            <div class="card article-card shadow-sm">
                                 <div class="card-body">
-                                    <h5 class="card-title">
-                                        <i class="bi bi-file-earmark-text"></i>
+                                    <h5 class="card-title article-title">
+                                        <i class="bi bi-file-earmark-text me-2 text-primary"></i>
                                         <a href="../mdhtml/为什么放桃树枝的水会变得浑浊.html"
-                                            class="text-decoration-none">
+                                            class="text-decoration-none text-dark">
                                             为什么放桃树枝的水会变得浑浊
                                         </a>
                                     </h5>
                                     
-                                        <p class="card-text">
+                                        <p class="card-text text-muted mb-3">
                                             将桃树枝放入水中后，水体逐渐变得浑浊的现象是由多种因素共同作用的结果。这包括桃树中含有的单宁和酚类物质、细胞壁成分的溶解，以及微生物在树枝上生长繁殖并分解有机物产生的影响。此外，物理因素如颗粒物的脱落和环境条件的变化也起到一定作用。了解这些原理有助于我们更好地认识自然现象及管理水质。
                                         </p>
                                         
+                                        <div class="article-meta">
                                             
-                                                <small class="text-muted">
-                                                    2026-02-11
-                                                </small>
+                                                <i class="bi bi-clock me-1"></i>
+                                                2026-02-11
                                                 
+                                        </div>
                                 </div>
-                                <div class="card-footer text-muted">
+                                <div class="card-footer text-muted bg-white border-top">
                                     <a href="/category/%E8%87%AA%E7%84%B6%E7%A7%91%E5%AD%A6.html"
-                                        class="badge bg-primary">
+                                        class="badge bg-primary me-2">
                                         自然科学
                                     </a>
                                     
                                         <a href="/tag/%E6%A4%8D%E7%89%A9%E5%8C%96%E5%AD%A6.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             植物化学
                                         </a>
                                         
                                         <a href="/tag/%E5%BE%AE%E7%94%9F%E7%89%A9%E6%B4%BB%E5%8A%A8.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             微生物活动
                                         </a>
                                         
                                         <a href="/tag/%E6%B0%B4%E8%B4%A8%E5%8F%98%E5%8C%96.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             水质变化
                                         </a>
                                         
                                         <a href="/tag/%E7%89%A9%E7%90%86%E5%9B%A0%E7%B4%A0.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             物理因素
                                         </a>
                                         
@@ -1862,49 +1958,50 @@
                         </div>
                         
                         <div class="masonry-grid-item">
-                            <div class="card shadow-sm">
+                            <div class="card article-card shadow-sm">
                                 <div class="card-body">
-                                    <h5 class="card-title">
-                                        <i class="bi bi-file-earmark-text"></i>
+                                    <h5 class="card-title article-title">
+                                        <i class="bi bi-file-earmark-text me-2 text-primary"></i>
                                         <a href="../mdhtml/为什么一摘眼镜就听不清.html"
-                                            class="text-decoration-none">
+                                            class="text-decoration-none text-dark">
                                             为什么一摘眼镜就听不清
                                         </a>
                                     </h5>
                                     
-                                        <p class="card-text">
+                                        <p class="card-text text-muted mb-3">
                                             文章探讨了摘下眼镜后感觉听力下降的现象，指出这主要是由于心理因素如习惯依赖和注意力转移造成的，并非真正的听力损失。文章还简要提到了一些物理因素和罕见的综合感官障碍的可能性。对于持续性感官问题，建议咨询专业医生。
                                         </p>
                                         
+                                        <div class="article-meta">
                                             
-                                                <small class="text-muted">
-                                                    2026-02-11
-                                                </small>
+                                                <i class="bi bi-clock me-1"></i>
+                                                2026-02-11
                                                 
+                                        </div>
                                 </div>
-                                <div class="card-footer text-muted">
+                                <div class="card-footer text-muted bg-white border-top">
                                     <a href="/category/%E8%87%AA%E7%84%B6%E7%A7%91%E5%AD%A6.html"
-                                        class="badge bg-primary">
+                                        class="badge bg-primary me-2">
                                         自然科学
                                     </a>
                                     
                                         <a href="/tag/%E6%84%9F%E5%AE%98%E4%BA%A4%E4%BA%92.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             感官交互
                                         </a>
                                         
                                         <a href="/tag/%E5%BF%83%E7%90%86%E4%BE%9D%E8%B5%96.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             心理依赖
                                         </a>
                                         
                                         <a href="/tag/%E6%B3%A8%E6%84%8F%E5%8A%9B%E5%88%86%E9%85%8D.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             注意力分配
                                         </a>
                                         
                                         <a href="/tag/%E6%84%9F%E5%AE%98%E9%9A%9C%E7%A2%8D.html"
-                                            class="badge tag-link">
+                                            class="badge tag-link me-2 mb-1">
                                             感官障碍
                                         </a>
                                         
@@ -1915,9 +2012,9 @@
                 </div>
 
                 <!-- 返回按钮 -->
-                <div class="mt-4 text-center">
-                    <a href="分类列表.html" class="btn btn-outline-primary">
-                        <i class="bi bi-arrow-left"></i> 返回分类列表
+                <div class="mt-6 text-center">
+                    <a href="分类列表.html" class="btn btn-outline-primary back-button">
+                        <i class="bi bi-arrow-left me-2"></i> 返回分类列表
                     </a>
                 </div>
             </div>
@@ -1941,7 +2038,7 @@
                         itemSelector: '.masonry-grid-item',
                         columnWidth: '.masonry-grid-item',
                         percentPosition: true,
-                        gutter: 10 // 明确设置 gutter 值为 10px
+                        gutter: 15 // 增加间距，提升视觉效果
                     });
                 });
             </script>

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
 
 <head>
   <meta charset="UTF-8">
@@ -9,7 +9,7 @@
   <meta name="description" content="无人自助站的【社会现象】的标签列表页面，汇集了关于【社会现象】标签相关的文章和资讯，方便您快速找到感兴趣的内容。">
   <meta name="keywords" content="无人自助站,社会现象">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>标签文章列表</title>
+  <title>社会现象标签 - 无人自助站</title>
 
   <link rel="icon" href="../logo.svg" type="image/svg+xml">
   <link rel="stylesheet" href="../css/style.css">
@@ -27,6 +27,62 @@
   <!-- 引入Masonry -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/masonry/4.2.2/masonry.pkgd.min.js"></script>
 
+  <style>
+        .tag-header {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            color: white;
+            padding: 2rem;
+            border-radius: 8px;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        .tag-title {
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+        .article-card {
+            transition: all 0.3s ease;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        .article-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+        }
+        .article-title {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            transition: color 0.3s ease;
+        }
+        .article-title:hover {
+            color: #0d6efd;
+        }
+        .article-meta {
+            font-size: 0.85rem;
+            color: #6c757d;
+        }
+        .tag-link {
+            background-color: #e9ecef;
+            color: #495057;
+            transition: all 0.2s ease;
+        }
+        .tag-link:hover {
+            background-color: #dee2e6;
+            color: #212529;
+        }
+        .back-button {
+            transition: all 0.3s ease;
+        }
+        .back-button:hover {
+            transform: translateX(-3px);
+        }
+        .article-count {
+            font-size: 0.9rem;
+            opacity: 0.9;
+        }
+    </style>
 </head>
 
 <body>
@@ -80,7 +136,7 @@
     <main class="container-fluid mt-4">
       <div class="row">
         <div class="col-lg-8 col-md-12 mx-auto">
-          <nav aria-label="breadcrumb">
+          <nav aria-label="breadcrumb" class="mb-4">
             <ol class="breadcrumb">
               <li class="breadcrumb-item"><a href="/html/index.html">首页</a></li>
               <li class="breadcrumb-item"><a href="标签列表.html">标签列表</a></li>
@@ -89,54 +145,64 @@
               </li>
             </ol>
           </nav>
-          <h1 style="font-size: 1.5em; margin: 0.5em 0;">
-            社会现象标签的文章和资讯
-        </h1>
+          
+          <!-- 标签头部 -->
+          <div class="tag-header">
+              <h1 class="tag-title">
+                  <i class="bi bi-tags me-2"></i>
+                  社会现象
+              </h1>
+              <p class="article-count">
+                  共 5 篇文章
+              </p>
+          </div>
+          
           <div class="masonry-grid">
             
               <div class="masonry-grid-item">
-                <div class="card shadow-sm">
+                <div class="card article-card shadow-sm">
                   <div class="card-body">
-                    <h5 class="card-title">
-                      <i class="bi bi-file-earmark-text"></i>
-                      <a href="../mdhtml/为什么越来越多的人开始反感内卷了.html" class="text-decoration-none">
+                    <h5 class="card-title article-title">
+                      <i class="bi bi-file-earmark-text me-2 text-primary"></i>
+                      <a href="../mdhtml/为什么越来越多的人开始反感内卷了.html" class="text-decoration-none text-dark">
                         为什么越来越多的人开始反感内卷了
                       </a>
                     </h5>
                     
-                      <p class="card-text">
+                      <p class="card-text text-muted mb-3">
                         分析内卷现象的弊端和年轻人的反抗，探讨如何打破内卷怪圈。
                       </p>
                       
-                        
-                          <small class="text-muted">
-                            2026-03-24
-                          </small>
-                          
+                        <div class="article-meta">
+                            
+                                <i class="bi bi-clock me-1"></i>
+                                2026-03-24
+                                
+                        </div>
                   </div>
-                  <div class="card-footer text-muted">
+                  <div class="card-footer text-muted bg-white border-top">
                     <a href="/category/%E7%A4%BE%E4%BC%9A%E8%A7%82%E5%AF%9F.html"
-                      class="badge bg-primary">
+                      class="badge bg-primary me-2">
                       社会观察
                     </a>
                     
-                      <a href="/tag/%E5%86%85%E5%8D%B7.html" class="badge tag-link">
+                      <a href="/tag/%E5%86%85%E5%8D%B7.html" class="badge tag-link me-2 mb-1">
                         内卷
                       </a>
                       
-                      <a href="/tag/%E8%81%8C%E5%9C%BA.html" class="badge tag-link">
+                      <a href="/tag/%E8%81%8C%E5%9C%BA.html" class="badge tag-link me-2 mb-1">
                         职场
                       </a>
                       
-                      <a href="/tag/%E7%AB%9E%E4%BA%89.html" class="badge tag-link">
+                      <a href="/tag/%E7%AB%9E%E4%BA%89.html" class="badge tag-link me-2 mb-1">
                         竞争
                       </a>
                       
-                      <a href="/tag/%E5%8F%8D%E6%84%9F.html" class="badge tag-link">
+                      <a href="/tag/%E5%8F%8D%E6%84%9F.html" class="badge tag-link me-2 mb-1">
                         反感
                       </a>
                       
-                      <a href="/tag/%E7%A4%BE%E4%BC%9A%E7%8E%B0%E8%B1%A1.html" class="badge tag-link">
+                      <a href="/tag/%E7%A4%BE%E4%BC%9A%E7%8E%B0%E8%B1%A1.html" class="badge tag-link me-2 mb-1">
                         社会现象
                       </a>
                       
@@ -145,48 +211,49 @@
               </div>
               
               <div class="masonry-grid-item">
-                <div class="card shadow-sm">
+                <div class="card article-card shadow-sm">
                   <div class="card-body">
-                    <h5 class="card-title">
-                      <i class="bi bi-file-earmark-text"></i>
-                      <a href="../mdhtml/为什么现在年轻人都不爱结婚了？原因太现实了.html" class="text-decoration-none">
+                    <h5 class="card-title article-title">
+                      <i class="bi bi-file-earmark-text me-2 text-primary"></i>
+                      <a href="../mdhtml/为什么现在年轻人都不爱结婚了？原因太现实了.html" class="text-decoration-none text-dark">
                         为什么现在年轻人都不爱结婚了？原因太现实了
                       </a>
                     </h5>
                     
-                      <p class="card-text">
+                      <p class="card-text text-muted mb-3">
                         探讨当代年轻人不愿意结婚的现象，分析背后的经济压力、观念变化和个人选择。
                       </p>
                       
-                        
-                          <small class="text-muted">
-                            2026-03-24
-                          </small>
-                          
+                        <div class="article-meta">
+                            
+                                <i class="bi bi-clock me-1"></i>
+                                2026-03-24
+                                
+                        </div>
                   </div>
-                  <div class="card-footer text-muted">
+                  <div class="card-footer text-muted bg-white border-top">
                     <a href="/category/%E7%A4%BE%E4%BC%9A%E8%A7%82%E5%AF%9F.html"
-                      class="badge bg-primary">
+                      class="badge bg-primary me-2">
                       社会观察
                     </a>
                     
-                      <a href="/tag/%E7%BB%93%E5%A9%9A.html" class="badge tag-link">
+                      <a href="/tag/%E7%BB%93%E5%A9%9A.html" class="badge tag-link me-2 mb-1">
                         结婚
                       </a>
                       
-                      <a href="/tag/%E5%B9%B4%E8%BD%BB%E4%BA%BA.html" class="badge tag-link">
+                      <a href="/tag/%E5%B9%B4%E8%BD%BB%E4%BA%BA.html" class="badge tag-link me-2 mb-1">
                         年轻人
                       </a>
                       
-                      <a href="/tag/%E5%A9%9A%E5%A7%BB%E8%A7%82.html" class="badge tag-link">
+                      <a href="/tag/%E5%A9%9A%E5%A7%BB%E8%A7%82.html" class="badge tag-link me-2 mb-1">
                         婚姻观
                       </a>
                       
-                      <a href="/tag/%E5%8D%95%E8%BA%AB.html" class="badge tag-link">
+                      <a href="/tag/%E5%8D%95%E8%BA%AB.html" class="badge tag-link me-2 mb-1">
                         单身
                       </a>
                       
-                      <a href="/tag/%E7%A4%BE%E4%BC%9A%E7%8E%B0%E8%B1%A1.html" class="badge tag-link">
+                      <a href="/tag/%E7%A4%BE%E4%BC%9A%E7%8E%B0%E8%B1%A1.html" class="badge tag-link me-2 mb-1">
                         社会现象
                       </a>
                       
@@ -195,48 +262,49 @@
               </div>
               
               <div class="masonry-grid-item">
-                <div class="card shadow-sm">
+                <div class="card article-card shadow-sm">
                   <div class="card-body">
-                    <h5 class="card-title">
-                      <i class="bi bi-file-earmark-text"></i>
-                      <a href="../mdhtml/为什么现在的大学生都在躺平？.html" class="text-decoration-none">
+                    <h5 class="card-title article-title">
+                      <i class="bi bi-file-earmark-text me-2 text-primary"></i>
+                      <a href="../mdhtml/为什么现在的大学生都在躺平？.html" class="text-decoration-none text-dark">
                         为什么现在的大学生都在&#34;躺平&#34;？
                       </a>
                     </h5>
                     
-                      <p class="card-text">
+                      <p class="card-text text-muted mb-3">
                         探讨当代大学生&#34;躺平&#34;现象的背后原因，分析就业压力、竞争焦虑，以及年轻人面对现实的选择。
                       </p>
                       
-                        
-                          <small class="text-muted">
-                            2026-03-24
-                          </small>
-                          
+                        <div class="article-meta">
+                            
+                                <i class="bi bi-clock me-1"></i>
+                                2026-03-24
+                                
+                        </div>
                   </div>
-                  <div class="card-footer text-muted">
+                  <div class="card-footer text-muted bg-white border-top">
                     <a href="/category/%E7%A4%BE%E4%BC%9A%E8%A7%82%E5%AF%9F.html"
-                      class="badge bg-primary">
+                      class="badge bg-primary me-2">
                       社会观察
                     </a>
                     
-                      <a href="/tag/%E8%BA%BA%E5%B9%B3.html" class="badge tag-link">
+                      <a href="/tag/%E8%BA%BA%E5%B9%B3.html" class="badge tag-link me-2 mb-1">
                         躺平
                       </a>
                       
-                      <a href="/tag/%E5%A4%A7%E5%AD%A6%E7%94%9F.html" class="badge tag-link">
+                      <a href="/tag/%E5%A4%A7%E5%AD%A6%E7%94%9F.html" class="badge tag-link me-2 mb-1">
                         大学生
                       </a>
                       
-                      <a href="/tag/%E5%B0%B1%E4%B8%9A.html" class="badge tag-link">
+                      <a href="/tag/%E5%B0%B1%E4%B8%9A.html" class="badge tag-link me-2 mb-1">
                         就业
                       </a>
                       
-                      <a href="/tag/%E7%84%A6%E8%99%91.html" class="badge tag-link">
+                      <a href="/tag/%E7%84%A6%E8%99%91.html" class="badge tag-link me-2 mb-1">
                         焦虑
                       </a>
                       
-                      <a href="/tag/%E7%A4%BE%E4%BC%9A%E7%8E%B0%E8%B1%A1.html" class="badge tag-link">
+                      <a href="/tag/%E7%A4%BE%E4%BC%9A%E7%8E%B0%E8%B1%A1.html" class="badge tag-link me-2 mb-1">
                         社会现象
                       </a>
                       
@@ -245,48 +313,49 @@
               </div>
               
               <div class="masonry-grid-item">
-                <div class="card shadow-sm">
+                <div class="card article-card shadow-sm">
                   <div class="card-body">
-                    <h5 class="card-title">
-                      <i class="bi bi-file-earmark-text"></i>
-                      <a href="../mdhtml/2026年年轻人最新的10种生活方式，看看你占了几个.html" class="text-decoration-none">
+                    <h5 class="card-title article-title">
+                      <i class="bi bi-file-earmark-text me-2 text-primary"></i>
+                      <a href="../mdhtml/2026年年轻人最新的10种生活方式，看看你占了几个.html" class="text-decoration-none text-dark">
                         2026年年轻人最新的10种生活方式，看看你占了几个
                       </a>
                     </h5>
                     
-                      <p class="card-text">
+                      <p class="card-text text-muted mb-3">
                         盘点2026年年轻人最流行的生活方式，从消费观到社交观，从工作观到生活观，全面解读当代青年的生活状态。
                       </p>
                       
-                        
-                          <small class="text-muted">
-                            2026-03-24
-                          </small>
-                          
+                        <div class="article-meta">
+                            
+                                <i class="bi bi-clock me-1"></i>
+                                2026-03-24
+                                
+                        </div>
                   </div>
-                  <div class="card-footer text-muted">
+                  <div class="card-footer text-muted bg-white border-top">
                     <a href="/category/%E7%94%9F%E6%B4%BB%E8%A7%82%E5%AF%9F.html"
-                      class="badge bg-primary">
+                      class="badge bg-primary me-2">
                       生活观察
                     </a>
                     
-                      <a href="/tag/%E5%B9%B4%E8%BD%BB%E4%BA%BA.html" class="badge tag-link">
+                      <a href="/tag/%E5%B9%B4%E8%BD%BB%E4%BA%BA.html" class="badge tag-link me-2 mb-1">
                         年轻人
                       </a>
                       
-                      <a href="/tag/%E7%94%9F%E6%B4%BB%E6%96%B9%E5%BC%8F.html" class="badge tag-link">
+                      <a href="/tag/%E7%94%9F%E6%B4%BB%E6%96%B9%E5%BC%8F.html" class="badge tag-link me-2 mb-1">
                         生活方式
                       </a>
                       
-                      <a href="/tag/%E6%B6%88%E8%B4%B9%E8%B6%8B%E5%8A%BF.html" class="badge tag-link">
+                      <a href="/tag/%E6%B6%88%E8%B4%B9%E8%B6%8B%E5%8A%BF.html" class="badge tag-link me-2 mb-1">
                         消费趋势
                       </a>
                       
-                      <a href="/tag/%E6%96%B0%E6%BD%AE%E6%B5%81.html" class="badge tag-link">
+                      <a href="/tag/%E6%96%B0%E6%BD%AE%E6%B5%81.html" class="badge tag-link me-2 mb-1">
                         新潮流
                       </a>
                       
-                      <a href="/tag/%E7%A4%BE%E4%BC%9A%E7%8E%B0%E8%B1%A1.html" class="badge tag-link">
+                      <a href="/tag/%E7%A4%BE%E4%BC%9A%E7%8E%B0%E8%B1%A1.html" class="badge tag-link me-2 mb-1">
                         社会现象
                       </a>
                       
@@ -295,48 +364,49 @@
               </div>
               
               <div class="masonry-grid-item">
-                <div class="card shadow-sm">
+                <div class="card article-card shadow-sm">
                   <div class="card-body">
-                    <h5 class="card-title">
-                      <i class="bi bi-file-earmark-text"></i>
-                      <a href="../mdhtml/重新审视“有钱能使鬼推磨”.html" class="text-decoration-none">
+                    <h5 class="card-title article-title">
+                      <i class="bi bi-file-earmark-text me-2 text-primary"></i>
+                      <a href="../mdhtml/重新审视“有钱能使鬼推磨”.html" class="text-decoration-none text-dark">
                         重新审视“有钱能使鬼推磨”
                       </a>
                     </h5>
                     
-                      <p class="card-text">
+                      <p class="card-text text-muted mb-3">
                         深入探讨“有钱能使鬼推磨”这一俗语背后的复杂内涵，分析金钱在生活中的多面影响，包括其带来的物质基础、梦想助力和社会地位彰显，同时也指出其在幸福、道德和价值观方面的局限，倡导正确对待金钱的态度。
                       </p>
                       
-                        
-                          <small class="text-muted">
-                            2026-02-11
-                          </small>
-                          
+                        <div class="article-meta">
+                            
+                                <i class="bi bi-clock me-1"></i>
+                                2026-02-11
+                                
+                        </div>
                   </div>
-                  <div class="card-footer text-muted">
+                  <div class="card-footer text-muted bg-white border-top">
                     <a href="/category/%E8%B4%A2%E5%AF%8C%E7%AE%A1%E7%90%86.html"
-                      class="badge bg-primary">
+                      class="badge bg-primary me-2">
                       财富管理
                     </a>
                     
-                      <a href="/tag/%E9%87%91%E9%92%B1%E8%A7%82.html" class="badge tag-link">
+                      <a href="/tag/%E9%87%91%E9%92%B1%E8%A7%82.html" class="badge tag-link me-2 mb-1">
                         金钱观
                       </a>
                       
-                      <a href="/tag/%E7%89%A9%E8%B4%A8%E4%B8%8E%E7%B2%BE%E7%A5%9E.html" class="badge tag-link">
+                      <a href="/tag/%E7%89%A9%E8%B4%A8%E4%B8%8E%E7%B2%BE%E7%A5%9E.html" class="badge tag-link me-2 mb-1">
                         物质与精神
                       </a>
                       
-                      <a href="/tag/%E8%B4%A2%E5%AF%8C%E8%BF%BD%E6%B1%82.html" class="badge tag-link">
+                      <a href="/tag/%E8%B4%A2%E5%AF%8C%E8%BF%BD%E6%B1%82.html" class="badge tag-link me-2 mb-1">
                         财富追求
                       </a>
                       
-                      <a href="/tag/%E4%BB%B7%E5%80%BC%E8%A7%82.html" class="badge tag-link">
+                      <a href="/tag/%E4%BB%B7%E5%80%BC%E8%A7%82.html" class="badge tag-link me-2 mb-1">
                         价值观
                       </a>
                       
-                      <a href="/tag/%E7%A4%BE%E4%BC%9A%E7%8E%B0%E8%B1%A1.html" class="badge tag-link">
+                      <a href="/tag/%E7%A4%BE%E4%BC%9A%E7%8E%B0%E8%B1%A1.html" class="badge tag-link me-2 mb-1">
                         社会现象
                       </a>
                       
@@ -346,8 +416,8 @@
               
           </div>
 
-          <div class="mt-4 text-center">
-            <a href="标签列表.html" class="btn btn-outline-primary"><i class="bi bi-arrow-left"></i> 返回标签列表</a>
+          <div class="mt-6 text-center">
+            <a href="标签列表.html" class="btn btn-outline-primary back-button"><i class="bi bi-arrow-left me-2"></i> 返回标签列表</a>
           </div>
         </div>
       </div>
@@ -371,7 +441,7 @@
             itemSelector: '.masonry-grid-item',
             columnWidth: '.masonry-grid-item',
             percentPosition: true,
-            gutter: 10 // 可选，添加卡片间的间距
+            gutter: 15 // 增加间距，提升视觉效果
           });
         });
       </script>

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
 
 <head>
   <meta charset="UTF-8">
@@ -9,7 +9,7 @@
   <meta name="description" content="无人自助站的【创业】的标签列表页面，汇集了关于【创业】标签相关的文章和资讯，方便您快速找到感兴趣的内容。">
   <meta name="keywords" content="无人自助站,创业">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>标签文章列表</title>
+  <title>创业标签 - 无人自助站</title>
 
   <link rel="icon" href="../logo.svg" type="image/svg+xml">
   <link rel="stylesheet" href="../css/style.css">
@@ -27,6 +27,62 @@
   <!-- 引入Masonry -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/masonry/4.2.2/masonry.pkgd.min.js"></script>
 
+  <style>
+        .tag-header {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            color: white;
+            padding: 2rem;
+            border-radius: 8px;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        .tag-title {
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+        .article-card {
+            transition: all 0.3s ease;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        .article-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+        }
+        .article-title {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            transition: color 0.3s ease;
+        }
+        .article-title:hover {
+            color: #0d6efd;
+        }
+        .article-meta {
+            font-size: 0.85rem;
+            color: #6c757d;
+        }
+        .tag-link {
+            background-color: #e9ecef;
+            color: #495057;
+            transition: all 0.2s ease;
+        }
+        .tag-link:hover {
+            background-color: #dee2e6;
+            color: #212529;
+        }
+        .back-button {
+            transition: all 0.3s ease;
+        }
+        .back-button:hover {
+            transform: translateX(-3px);
+        }
+        .article-count {
+            font-size: 0.9rem;
+            opacity: 0.9;
+        }
+    </style>
 </head>
 
 <body>
@@ -80,7 +136,7 @@
     <main class="container-fluid mt-4">
       <div class="row">
         <div class="col-lg-8 col-md-12 mx-auto">
-          <nav aria-label="breadcrumb">
+          <nav aria-label="breadcrumb" class="mb-4">
             <ol class="breadcrumb">
               <li class="breadcrumb-item"><a href="/html/index.html">首页</a></li>
               <li class="breadcrumb-item"><a href="标签列表.html">标签列表</a></li>
@@ -89,54 +145,64 @@
               </li>
             </ol>
           </nav>
-          <h1 style="font-size: 1.5em; margin: 0.5em 0;">
-            创业标签的文章和资讯
-        </h1>
+          
+          <!-- 标签头部 -->
+          <div class="tag-header">
+              <h1 class="tag-title">
+                  <i class="bi bi-tags me-2"></i>
+                  创业
+              </h1>
+              <p class="article-count">
+                  共 8 篇文章
+              </p>
+          </div>
+          
           <div class="masonry-grid">
             
               <div class="masonry-grid-item">
-                <div class="card shadow-sm">
+                <div class="card article-card shadow-sm">
                   <div class="card-body">
-                    <h5 class="card-title">
-                      <i class="bi bi-file-earmark-text"></i>
-                      <a href="../mdhtml/为什么现在的大学生都爱做自媒体了.html" class="text-decoration-none">
+                    <h5 class="card-title article-title">
+                      <i class="bi bi-file-earmark-text me-2 text-primary"></i>
+                      <a href="../mdhtml/为什么现在的大学生都爱做自媒体了.html" class="text-decoration-none text-dark">
                         为什么现在的大学生都爱做自媒体了
                       </a>
                     </h5>
                     
-                      <p class="card-text">
+                      <p class="card-text text-muted mb-3">
                         分析大学生做自媒体的现象。
                       </p>
                       
-                        
-                          <small class="text-muted">
-                            2026-03-24
-                          </small>
-                          
+                        <div class="article-meta">
+                            
+                                <i class="bi bi-clock me-1"></i>
+                                2026-03-24
+                                
+                        </div>
                   </div>
-                  <div class="card-footer text-muted">
+                  <div class="card-footer text-muted bg-white border-top">
                     <a href="/category/%E8%87%AA%E5%AA%92%E4%BD%93%E8%A7%82%E5%AF%9F.html"
-                      class="badge bg-primary">
+                      class="badge bg-primary me-2">
                       自媒体观察
                     </a>
                     
-                      <a href="/tag/%E8%87%AA%E5%AA%92%E4%BD%93.html" class="badge tag-link">
+                      <a href="/tag/%E8%87%AA%E5%AA%92%E4%BD%93.html" class="badge tag-link me-2 mb-1">
                         自媒体
                       </a>
                       
-                      <a href="/tag/%E5%A4%A7%E5%AD%A6%E7%94%9F.html" class="badge tag-link">
+                      <a href="/tag/%E5%A4%A7%E5%AD%A6%E7%94%9F.html" class="badge tag-link me-2 mb-1">
                         大学生
                       </a>
                       
-                      <a href="/tag/%E5%88%9B%E4%B8%9A.html" class="badge tag-link">
+                      <a href="/tag/%E5%88%9B%E4%B8%9A.html" class="badge tag-link me-2 mb-1">
                         创业
                       </a>
                       
-                      <a href="/tag/%E5%85%BC%E8%81%8C.html" class="badge tag-link">
+                      <a href="/tag/%E5%85%BC%E8%81%8C.html" class="badge tag-link me-2 mb-1">
                         兼职
                       </a>
                       
-                      <a href="/tag/%E8%B5%9A%E9%92%B1.html" class="badge tag-link">
+                      <a href="/tag/%E8%B5%9A%E9%92%B1.html" class="badge tag-link me-2 mb-1">
                         赚钱
                       </a>
                       
@@ -145,48 +211,49 @@
               </div>
               
               <div class="masonry-grid-item">
-                <div class="card shadow-sm">
+                <div class="card article-card shadow-sm">
                   <div class="card-body">
-                    <h5 class="card-title">
-                      <i class="bi bi-file-earmark-text"></i>
-                      <a href="../mdhtml/为什么现在的年轻人都开始做TikTok了.html" class="text-decoration-none">
+                    <h5 class="card-title article-title">
+                      <i class="bi bi-file-earmark-text me-2 text-primary"></i>
+                      <a href="../mdhtml/为什么现在的年轻人都开始做TikTok了.html" class="text-decoration-none text-dark">
                         为什么现在的年轻人都开始做Tiktok了
                       </a>
                     </h5>
                     
-                      <p class="card-text">
+                      <p class="card-text text-muted mb-3">
                         分析年轻人做TikTok的现象，探讨短视频创业趋势。
                       </p>
                       
-                        
-                          <small class="text-muted">
-                            2026-03-24
-                          </small>
-                          
+                        <div class="article-meta">
+                            
+                                <i class="bi bi-clock me-1"></i>
+                                2026-03-24
+                                
+                        </div>
                   </div>
-                  <div class="card-footer text-muted">
+                  <div class="card-footer text-muted bg-white border-top">
                     <a href="/category/%E8%87%AA%E5%AA%92%E4%BD%93%E8%A7%82%E5%AF%9F.html"
-                      class="badge bg-primary">
+                      class="badge bg-primary me-2">
                       自媒体观察
                     </a>
                     
-                      <a href="/tag/TikTok.html" class="badge tag-link">
+                      <a href="/tag/TikTok.html" class="badge tag-link me-2 mb-1">
                         TikTok
                       </a>
                       
-                      <a href="/tag/%E8%87%AA%E5%AA%92%E4%BD%93.html" class="badge tag-link">
+                      <a href="/tag/%E8%87%AA%E5%AA%92%E4%BD%93.html" class="badge tag-link me-2 mb-1">
                         自媒体
                       </a>
                       
-                      <a href="/tag/%E5%B9%B4%E8%BD%BB%E4%BA%BA.html" class="badge tag-link">
+                      <a href="/tag/%E5%B9%B4%E8%BD%BB%E4%BA%BA.html" class="badge tag-link me-2 mb-1">
                         年轻人
                       </a>
                       
-                      <a href="/tag/%E5%88%9B%E4%B8%9A.html" class="badge tag-link">
+                      <a href="/tag/%E5%88%9B%E4%B8%9A.html" class="badge tag-link me-2 mb-1">
                         创业
                       </a>
                       
-                      <a href="/tag/%E7%9F%AD%E8%A7%86%E9%A2%91.html" class="badge tag-link">
+                      <a href="/tag/%E7%9F%AD%E8%A7%86%E9%A2%91.html" class="badge tag-link me-2 mb-1">
                         短视频
                       </a>
                       
@@ -195,48 +262,49 @@
               </div>
               
               <div class="masonry-grid-item">
-                <div class="card shadow-sm">
+                <div class="card article-card shadow-sm">
                   <div class="card-body">
-                    <h5 class="card-title">
-                      <i class="bi bi-file-earmark-text"></i>
-                      <a href="../mdhtml/中小企业主财务工具微信小程序.html" class="text-decoration-none">
+                    <h5 class="card-title article-title">
+                      <i class="bi bi-file-earmark-text me-2 text-primary"></i>
+                      <a href="../mdhtml/中小企业主财务工具微信小程序.html" class="text-decoration-none text-dark">
                         中小企业主必看！微信小程序帮你管理公司财务
                       </a>
                     </h5>
                     
-                      <p class="card-text">
+                      <p class="card-text text-muted mb-3">
                         算不清账、忙不过来？中小企业主必备的财务计算工具，房贷、利润、成本一站式管理，让公司运营更高效！
                       </p>
                       
-                        
-                          <small class="text-muted">
-                            2026-03-18
-                          </small>
-                          
+                        <div class="article-meta">
+                            
+                                <i class="bi bi-clock me-1"></i>
+                                2026-03-18
+                                
+                        </div>
                   </div>
-                  <div class="card-footer text-muted">
+                  <div class="card-footer text-muted bg-white border-top">
                     <a href="/category/%E5%B7%A5%E5%85%B7%E6%8E%A8%E8%8D%90.html"
-                      class="badge bg-primary">
+                      class="badge bg-primary me-2">
                       工具推荐
                     </a>
                     
-                      <a href="/tag/%E4%BC%81%E4%B8%9A.html" class="badge tag-link">
+                      <a href="/tag/%E4%BC%81%E4%B8%9A.html" class="badge tag-link me-2 mb-1">
                         企业
                       </a>
                       
-                      <a href="/tag/%E8%B4%A2%E5%8A%A1.html" class="badge tag-link">
+                      <a href="/tag/%E8%B4%A2%E5%8A%A1.html" class="badge tag-link me-2 mb-1">
                         财务
                       </a>
                       
-                      <a href="/tag/%E4%B8%AD%E5%B0%8F%E4%BC%81%E4%B8%9A.html" class="badge tag-link">
+                      <a href="/tag/%E4%B8%AD%E5%B0%8F%E4%BC%81%E4%B8%9A.html" class="badge tag-link me-2 mb-1">
                         中小企业
                       </a>
                       
-                      <a href="/tag/%E5%88%9B%E4%B8%9A.html" class="badge tag-link">
+                      <a href="/tag/%E5%88%9B%E4%B8%9A.html" class="badge tag-link me-2 mb-1">
                         创业
                       </a>
                       
-                      <a href="/tag/%E7%AE%A1%E7%90%86.html" class="badge tag-link">
+                      <a href="/tag/%E7%AE%A1%E7%90%86.html" class="badge tag-link me-2 mb-1">
                         管理
                       </a>
                       
@@ -245,48 +313,49 @@
               </div>
               
               <div class="masonry-grid-item">
-                <div class="card shadow-sm">
+                <div class="card article-card shadow-sm">
                   <div class="card-body">
-                    <h5 class="card-title">
-                      <i class="bi bi-file-earmark-text"></i>
-                      <a href="../mdhtml/跨境电商单位换算微信小程序.html" class="text-decoration-none">
+                    <h5 class="card-title article-title">
+                      <i class="bi bi-file-earmark-text me-2 text-primary"></i>
+                      <a href="../mdhtml/跨境电商单位换算微信小程序.html" class="text-decoration-none text-dark">
                         跨境电商必备！微信小程序搞定全球单位换算
                       </a>
                     </h5>
                     
-                      <p class="card-text">
+                      <p class="card-text text-muted mb-3">
                         美元欧元怎么换算？英寸厘米怎么转换？跨境电商、海淘代购必备的单位换算神器，让国际生意更简单！
                       </p>
                       
-                        
-                          <small class="text-muted">
-                            2026-03-18
-                          </small>
-                          
+                        <div class="article-meta">
+                            
+                                <i class="bi bi-clock me-1"></i>
+                                2026-03-18
+                                
+                        </div>
                   </div>
-                  <div class="card-footer text-muted">
+                  <div class="card-footer text-muted bg-white border-top">
                     <a href="/category/%E5%B7%A5%E5%85%B7%E6%8E%A8%E8%8D%90.html"
-                      class="badge bg-primary">
+                      class="badge bg-primary me-2">
                       工具推荐
                     </a>
                     
-                      <a href="/tag/%E8%B7%A8%E5%A2%83%E7%94%B5%E5%95%86.html" class="badge tag-link">
+                      <a href="/tag/%E8%B7%A8%E5%A2%83%E7%94%B5%E5%95%86.html" class="badge tag-link me-2 mb-1">
                         跨境电商
                       </a>
                       
-                      <a href="/tag/%E5%8D%95%E4%BD%8D%E6%8D%A2%E7%AE%97.html" class="badge tag-link">
+                      <a href="/tag/%E5%8D%95%E4%BD%8D%E6%8D%A2%E7%AE%97.html" class="badge tag-link me-2 mb-1">
                         单位换算
                       </a>
                       
-                      <a href="/tag/%E6%B5%B7%E6%B7%98.html" class="badge tag-link">
+                      <a href="/tag/%E6%B5%B7%E6%B7%98.html" class="badge tag-link me-2 mb-1">
                         海淘
                       </a>
                       
-                      <a href="/tag/%E5%9B%BD%E9%99%85.html" class="badge tag-link">
+                      <a href="/tag/%E5%9B%BD%E9%99%85.html" class="badge tag-link me-2 mb-1">
                         国际
                       </a>
                       
-                      <a href="/tag/%E5%88%9B%E4%B8%9A.html" class="badge tag-link">
+                      <a href="/tag/%E5%88%9B%E4%B8%9A.html" class="badge tag-link me-2 mb-1">
                         创业
                       </a>
                       
@@ -295,48 +364,49 @@
               </div>
               
               <div class="masonry-grid-item">
-                <div class="card shadow-sm">
+                <div class="card article-card shadow-sm">
                   <div class="card-body">
-                    <h5 class="card-title">
-                      <i class="bi bi-file-earmark-text"></i>
-                      <a href="../mdhtml/微商利润计算器微信小程序订单管理.html" class="text-decoration-none">
+                    <h5 class="card-title article-title">
+                      <i class="bi bi-file-earmark-text me-2 text-primary"></i>
+                      <a href="../mdhtml/微商利润计算器微信小程序订单管理.html" class="text-decoration-none text-dark">
                         微商必备！微信小程序帮你算清每笔订单利润
                       </a>
                     </h5>
                     
-                      <p class="card-text">
+                      <p class="card-text text-muted mb-3">
                         卖出一单赚多少？定价怎么定才能有钱赚？随身工具宝计算器，微商、电商从业者必备的生意小助手！
                       </p>
                       
-                        
-                          <small class="text-muted">
-                            2026-03-18
-                          </small>
-                          
+                        <div class="article-meta">
+                            
+                                <i class="bi bi-clock me-1"></i>
+                                2026-03-18
+                                
+                        </div>
                   </div>
-                  <div class="card-footer text-muted">
+                  <div class="card-footer text-muted bg-white border-top">
                     <a href="/category/%E5%B7%A5%E5%85%B7%E6%8E%A8%E8%8D%90.html"
-                      class="badge bg-primary">
+                      class="badge bg-primary me-2">
                       工具推荐
                     </a>
                     
-                      <a href="/tag/%E5%BE%AE%E5%95%86.html" class="badge tag-link">
+                      <a href="/tag/%E5%BE%AE%E5%95%86.html" class="badge tag-link me-2 mb-1">
                         微商
                       </a>
                       
-                      <a href="/tag/%E7%94%B5%E5%95%86.html" class="badge tag-link">
+                      <a href="/tag/%E7%94%B5%E5%95%86.html" class="badge tag-link me-2 mb-1">
                         电商
                       </a>
                       
-                      <a href="/tag/%E5%88%A9%E6%B6%A6%E8%AE%A1%E7%AE%97.html" class="badge tag-link">
+                      <a href="/tag/%E5%88%A9%E6%B6%A6%E8%AE%A1%E7%AE%97.html" class="badge tag-link me-2 mb-1">
                         利润计算
                       </a>
                       
-                      <a href="/tag/%E7%94%9F%E6%84%8F.html" class="badge tag-link">
+                      <a href="/tag/%E7%94%9F%E6%84%8F.html" class="badge tag-link me-2 mb-1">
                         生意
                       </a>
                       
-                      <a href="/tag/%E5%88%9B%E4%B8%9A.html" class="badge tag-link">
+                      <a href="/tag/%E5%88%9B%E4%B8%9A.html" class="badge tag-link me-2 mb-1">
                         创业
                       </a>
                       
@@ -345,68 +415,69 @@
               </div>
               
               <div class="masonry-grid-item">
-                <div class="card shadow-sm">
+                <div class="card article-card shadow-sm">
                   <div class="card-body">
-                    <h5 class="card-title">
-                      <i class="bi bi-file-earmark-text"></i>
-                      <a href="../mdhtml/财富管理中的创业与财富积累：如何通过创业实现财务自由.html" class="text-decoration-none">
+                    <h5 class="card-title article-title">
+                      <i class="bi bi-file-earmark-text me-2 text-primary"></i>
+                      <a href="../mdhtml/财富管理中的创业与财富积累：如何通过创业实现财务自由.html" class="text-decoration-none text-dark">
                         财富管理中的创业与财富积累：如何通过创业实现财务自由
                       </a>
                     </h5>
                     
-                      <p class="card-text">
+                      <p class="card-text text-muted mb-3">
                         探讨财富管理中的创业与财富积累策略，分析如何通过创业实现财务自由，帮助创业者在创业过程中积累财富，实现财务目标。
                       </p>
                       
-                        
-                          <small class="text-muted">
-                            2026-02-24
-                          </small>
-                          
+                        <div class="article-meta">
+                            
+                                <i class="bi bi-clock me-1"></i>
+                                2026-02-24
+                                
+                        </div>
                   </div>
-                  <div class="card-footer text-muted">
+                  <div class="card-footer text-muted bg-white border-top">
                     <a href="/category/%E8%B4%A2%E5%AF%8C%E7%AE%A1%E7%90%86.html"
-                      class="badge bg-primary">
+                      class="badge bg-primary me-2">
                       财富管理
                     </a>
                     
-                      <a href="/tag/%E5%88%9B%E4%B8%9A.html" class="badge tag-link">
+                      <a href="/tag/%E5%88%9B%E4%B8%9A.html" class="badge tag-link me-2 mb-1">
                         创业
                       </a>
                       
-                      <a href="/tag/%E8%B4%A2%E5%AF%8C%E7%A7%AF%E7%B4%AF.html" class="badge tag-link">
+                      <a href="/tag/%E8%B4%A2%E5%AF%8C%E7%A7%AF%E7%B4%AF.html" class="badge tag-link me-2 mb-1">
                         财富积累
                       </a>
                       
-                      <a href="/tag/%E8%B4%A2%E5%8A%A1%E8%87%AA%E7%94%B1.html" class="badge tag-link">
+                      <a href="/tag/%E8%B4%A2%E5%8A%A1%E8%87%AA%E7%94%B1.html" class="badge tag-link me-2 mb-1">
                         财务自由
                       </a>
                       
-                      <a href="/tag/%E5%95%86%E4%B8%9A%E8%AE%A1%E5%88%92.html" class="badge tag-link">
+                      <a href="/tag/%E5%95%86%E4%B8%9A%E8%AE%A1%E5%88%92.html" class="badge tag-link me-2 mb-1">
                         商业计划
                       </a>
                       
-                      <a href="/tag/%E8%9E%8D%E8%B5%84%E7%AD%96%E7%95%A5.html" class="badge tag-link">
+                      <a href="/tag/%E8%9E%8D%E8%B5%84%E7%AD%96%E7%95%A5.html" class="badge tag-link me-2 mb-1">
                         融资策略
                       </a>
                       
-                      <a href="/tag/%E9%A3%8E%E9%99%A9%E7%AE%A1%E7%90%86.html" class="badge tag-link">
+                      <a href="/tag/%E9%A3%8E%E9%99%A9%E7%AE%A1%E7%90%86.html" class="badge tag-link me-2 mb-1">
                         风险管理
                       </a>
                       
-                      <a href="/tag/%E5%9B%A2%E9%98%9F%E5%BB%BA%E8%AE%BE.html" class="badge tag-link">
+                      <a href="/tag/%E5%9B%A2%E9%98%9F%E5%BB%BA%E8%AE%BE.html" class="badge tag-link me-2 mb-1">
                         团队建设
                       </a>
                       
-                      <a href="/tag/%E5%B8%82%E5%9C%BA%E5%AE%9A%E4%BD%8D.html" class="badge tag-link">
+                      <a href="/tag/%E5%B8%82%E5%9C%BA%E5%AE%9A%E4%BD%8D.html" class="badge tag-link me-2 mb-1">
                         市场定位
                       </a>
                       
-                      <a href="/tag/%E5%95%86%E4%B8%9A%E6%A8%A1%E5%BC%8F.html" class="badge tag-link">
+                      <a href="/tag/%E5%95%86%E4%B8%9A%E6%A8%A1%E5%BC%8F.html" class="badge tag-link me-2 mb-1">
                         商业模式
                       </a>
                       
-                      <a href="/tag/%E8%B4%A2%E5%AF%8C%E7%AE%A1%E7%90%86.html" class="badge tag-link">
+                      <a href="/tag/%E8%B4%A2%E5%AF%8C%E7%AE%A1%E7%90%86.html" class="badge tag-link me-2 mb-1">
                         财富管理
                       </a>
                       
@@ -415,48 +486,49 @@
               </div>
               
               <div class="masonry-grid-item">
-                <div class="card shadow-sm">
+                <div class="card article-card shadow-sm">
                   <div class="card-body">
-                    <h5 class="card-title">
-                      <i class="bi bi-file-earmark-text"></i>
-                      <a href="../mdhtml/赚钱新视角：为何要先努力停止打工.html" class="text-decoration-none">
+                    <h5 class="card-title article-title">
+                      <i class="bi bi-file-earmark-text me-2 text-primary"></i>
+                      <a href="../mdhtml/赚钱新视角：为何要先努力停止打工.html" class="text-decoration-none text-dark">
                         赚钱新视角：为何要先努力停止打工
                       </a>
                     </h5>
                     
-                      <p class="card-text">
+                      <p class="card-text text-muted mb-3">
                         探讨为何要努力停止打工以实现财务自由，分析打工背后的隐形枷锁，阐述停止打工带来的全新可能，介绍巧妙停止打工的方法以及停止打工后的挑战与应对策略。
                       </p>
                       
-                        
-                          <small class="text-muted">
-                            2026-02-11
-                          </small>
-                          
+                        <div class="article-meta">
+                            
+                                <i class="bi bi-clock me-1"></i>
+                                2026-02-11
+                                
+                        </div>
                   </div>
-                  <div class="card-footer text-muted">
+                  <div class="card-footer text-muted bg-white border-top">
                     <a href="/category/%E8%B4%A2%E5%AF%8C%E7%AE%A1%E7%90%86.html"
-                      class="badge bg-primary">
+                      class="badge bg-primary me-2">
                       财富管理
                     </a>
                     
-                      <a href="/tag/%E8%B4%A2%E5%8A%A1%E8%87%AA%E7%94%B1.html" class="badge tag-link">
+                      <a href="/tag/%E8%B4%A2%E5%8A%A1%E8%87%AA%E7%94%B1.html" class="badge tag-link me-2 mb-1">
                         财务自由
                       </a>
                       
-                      <a href="/tag/%E5%88%9B%E4%B8%9A.html" class="badge tag-link">
+                      <a href="/tag/%E5%88%9B%E4%B8%9A.html" class="badge tag-link me-2 mb-1">
                         创业
                       </a>
                       
-                      <a href="/tag/%E6%8A%95%E8%B5%84.html" class="badge tag-link">
+                      <a href="/tag/%E6%8A%95%E8%B5%84.html" class="badge tag-link me-2 mb-1">
                         投资
                       </a>
                       
-                      <a href="/tag/%E6%89%93%E5%B7%A5%E5%9B%B0%E5%A2%83.html" class="badge tag-link">
+                      <a href="/tag/%E6%89%93%E5%B7%A5%E5%9B%B0%E5%A2%83.html" class="badge tag-link me-2 mb-1">
                         打工困境
                       </a>
                       
-                      <a href="/tag/%E8%B4%A2%E5%AF%8C%E5%A2%9E%E9%95%BF.html" class="badge tag-link">
+                      <a href="/tag/%E8%B4%A2%E5%AF%8C%E5%A2%9E%E9%95%BF.html" class="badge tag-link me-2 mb-1">
                         财富增长
                       </a>
                       
@@ -465,52 +537,53 @@
               </div>
               
               <div class="masonry-grid-item">
-                <div class="card shadow-sm">
+                <div class="card article-card shadow-sm">
                   <div class="card-body">
-                    <h5 class="card-title">
-                      <i class="bi bi-file-earmark-text"></i>
-                      <a href="../mdhtml/普通人赚钱的途径.html" class="text-decoration-none">
+                    <h5 class="card-title article-title">
+                      <i class="bi bi-file-earmark-text me-2 text-primary"></i>
+                      <a href="../mdhtml/普通人赚钱的途径.html" class="text-decoration-none text-dark">
                         普通人赚钱的途径
                       </a>
                     </h5>
                     
-                      <p class="card-text">
+                      <p class="card-text text-muted mb-3">
                         本文概述了五种适合普通人的赚钱方式：1) 兼职工作，如零售、家教等；2) 在线平台，包括电商、自媒体、远程工作及网络课程；3) 小规模创业，依据市场需求和个人兴趣选择项目；4) 投资，推荐基金定投、股票和房地产；5) 持续技能提升，增强个人竞争力。选择适合自己的方法，并坚持努力。
                       </p>
                       
-                        
-                          <small class="text-muted">
-                            2026-02-11
-                          </small>
-                          
+                        <div class="article-meta">
+                            
+                                <i class="bi bi-clock me-1"></i>
+                                2026-02-11
+                                
+                        </div>
                   </div>
-                  <div class="card-footer text-muted">
+                  <div class="card-footer text-muted bg-white border-top">
                     <a href="/category/%E8%B4%A2%E5%AF%8C%E7%AE%A1%E7%90%86.html"
-                      class="badge bg-primary">
+                      class="badge bg-primary me-2">
                       财富管理
                     </a>
                     
-                      <a href="/tag/%E8%B5%9A%E9%92%B1%E9%80%94%E5%BE%84.html" class="badge tag-link">
+                      <a href="/tag/%E8%B5%9A%E9%92%B1%E9%80%94%E5%BE%84.html" class="badge tag-link me-2 mb-1">
                         赚钱途径
                       </a>
                       
-                      <a href="/tag/%E5%85%BC%E8%81%8C%E5%B7%A5%E4%BD%9C.html" class="badge tag-link">
+                      <a href="/tag/%E5%85%BC%E8%81%8C%E5%B7%A5%E4%BD%9C.html" class="badge tag-link me-2 mb-1">
                         兼职工作
                       </a>
                       
-                      <a href="/tag/%E5%9C%A8%E7%BA%BF%E5%B9%B3%E5%8F%B0.html" class="badge tag-link">
+                      <a href="/tag/%E5%9C%A8%E7%BA%BF%E5%B9%B3%E5%8F%B0.html" class="badge tag-link me-2 mb-1">
                         在线平台
                       </a>
                       
-                      <a href="/tag/%E5%88%9B%E4%B8%9A.html" class="badge tag-link">
+                      <a href="/tag/%E5%88%9B%E4%B8%9A.html" class="badge tag-link me-2 mb-1">
                         创业
                       </a>
                       
-                      <a href="/tag/%E6%8A%95%E8%B5%84.html" class="badge tag-link">
+                      <a href="/tag/%E6%8A%95%E8%B5%84.html" class="badge tag-link me-2 mb-1">
                         投资
                       </a>
                       
-                      <a href="/tag/%E6%8A%80%E8%83%BD%E6%8F%90%E5%8D%87.html" class="badge tag-link">
+                      <a href="/tag/%E6%8A%80%E8%83%BD%E6%8F%90%E5%8D%87.html" class="badge tag-link me-2 mb-1">
                         技能提升
                       </a>
                       
@@ -520,8 +593,8 @@
               
           </div>
 
-          <div class="mt-4 text-center">
-            <a href="标签列表.html" class="btn btn-outline-primary"><i class="bi bi-arrow-left"></i> 返回标签列表</a>
+          <div class="mt-6 text-center">
+            <a href="标签列表.html" class="btn btn-outline-primary back-button"><i class="bi bi-arrow-left me-2"></i> 返回标签列表</a>
           </div>
         </div>
       </div>
@@ -545,7 +618,7 @@
             itemSelector: '.masonry-grid-item',
             columnWidth: '.masonry-grid-item',
             percentPosition: true,
-            gutter: 10 // 可选，添加卡片间的间距
+            gutter: 15 // 增加间距，提升视觉效果
           });
         });
       </script>

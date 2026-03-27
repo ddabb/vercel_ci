@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
 
 <head>
   <meta charset="UTF-8">
@@ -9,7 +9,7 @@
   <meta name="description" content="无人自助站的【2026年】的标签列表页面，汇集了关于【2026年】标签相关的文章和资讯，方便您快速找到感兴趣的内容。">
   <meta name="keywords" content="无人自助站,2026年">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>标签文章列表</title>
+  <title>2026年标签 - 无人自助站</title>
 
   <link rel="icon" href="../logo.svg" type="image/svg+xml">
   <link rel="stylesheet" href="../css/style.css">
@@ -27,6 +27,62 @@
   <!-- 引入Masonry -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/masonry/4.2.2/masonry.pkgd.min.js"></script>
 
+  <style>
+        .tag-header {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            color: white;
+            padding: 2rem;
+            border-radius: 8px;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        .tag-title {
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+        .article-card {
+            transition: all 0.3s ease;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        .article-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+        }
+        .article-title {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            transition: color 0.3s ease;
+        }
+        .article-title:hover {
+            color: #0d6efd;
+        }
+        .article-meta {
+            font-size: 0.85rem;
+            color: #6c757d;
+        }
+        .tag-link {
+            background-color: #e9ecef;
+            color: #495057;
+            transition: all 0.2s ease;
+        }
+        .tag-link:hover {
+            background-color: #dee2e6;
+            color: #212529;
+        }
+        .back-button {
+            transition: all 0.3s ease;
+        }
+        .back-button:hover {
+            transform: translateX(-3px);
+        }
+        .article-count {
+            font-size: 0.9rem;
+            opacity: 0.9;
+        }
+    </style>
 </head>
 
 <body>
@@ -80,7 +136,7 @@
     <main class="container-fluid mt-4">
       <div class="row">
         <div class="col-lg-8 col-md-12 mx-auto">
-          <nav aria-label="breadcrumb">
+          <nav aria-label="breadcrumb" class="mb-4">
             <ol class="breadcrumb">
               <li class="breadcrumb-item"><a href="/html/index.html">首页</a></li>
               <li class="breadcrumb-item"><a href="标签列表.html">标签列表</a></li>
@@ -89,54 +145,64 @@
               </li>
             </ol>
           </nav>
-          <h1 style="font-size: 1.5em; margin: 0.5em 0;">
-            2026年标签的文章和资讯
-        </h1>
+          
+          <!-- 标签头部 -->
+          <div class="tag-header">
+              <h1 class="tag-title">
+                  <i class="bi bi-tags me-2"></i>
+                  2026年
+              </h1>
+              <p class="article-count">
+                  共 24 篇文章
+              </p>
+          </div>
+          
           <div class="masonry-grid">
             
               <div class="masonry-grid-item">
-                <div class="card shadow-sm">
+                <div class="card article-card shadow-sm">
                   <div class="card-body">
-                    <h5 class="card-title">
-                      <i class="bi bi-file-earmark-text"></i>
-                      <a href="../mdhtml/情绪劳动者自救手册：2026年服务行业从业者的心理边界设置与能量恢复指南.html" class="text-decoration-none">
+                    <h5 class="card-title article-title">
+                      <i class="bi bi-file-earmark-text me-2 text-primary"></i>
+                      <a href="../mdhtml/情绪劳动者自救手册：2026年服务行业从业者的心理边界设置与能量恢复指南.html" class="text-decoration-none text-dark">
                         情绪劳动者自救手册：2026年服务行业从业者的心理边界设置与能量恢复指南
                       </a>
                     </h5>
                     
-                      <p class="card-text">
+                      <p class="card-text text-muted mb-3">
                         本文关注职场心理健康细分领域，为高情绪消耗职业人群提供实用保护策略，帮助服务行业从业者设置心理边界并恢复能量。
                       </p>
                       
-                        
-                          <small class="text-muted">
-                            2026-02-28
-                          </small>
-                          
+                        <div class="article-meta">
+                            
+                                <i class="bi bi-clock me-1"></i>
+                                2026-02-28
+                                
+                        </div>
                   </div>
-                  <div class="card-footer text-muted">
+                  <div class="card-footer text-muted bg-white border-top">
                     <a href="/category/%E8%81%8C%E5%9C%BA%E5%81%A5%E5%BA%B7.html"
-                      class="badge bg-primary">
+                      class="badge bg-primary me-2">
                       职场健康
                     </a>
                     
-                      <a href="/tag/%E6%83%85%E7%BB%AA%E5%8A%B3%E5%8A%A8.html" class="badge tag-link">
+                      <a href="/tag/%E6%83%85%E7%BB%AA%E5%8A%B3%E5%8A%A8.html" class="badge tag-link me-2 mb-1">
                         情绪劳动
                       </a>
                       
-                      <a href="/tag/%E5%BF%83%E7%90%86%E8%BE%B9%E7%95%8C.html" class="badge tag-link">
+                      <a href="/tag/%E5%BF%83%E7%90%86%E8%BE%B9%E7%95%8C.html" class="badge tag-link me-2 mb-1">
                         心理边界
                       </a>
                       
-                      <a href="/tag/%E8%83%BD%E9%87%8F%E6%81%A2%E5%A4%8D.html" class="badge tag-link">
+                      <a href="/tag/%E8%83%BD%E9%87%8F%E6%81%A2%E5%A4%8D.html" class="badge tag-link me-2 mb-1">
                         能量恢复
                       </a>
                       
-                      <a href="/tag/2026%E5%B9%B4.html" class="badge tag-link">
+                      <a href="/tag/2026%E5%B9%B4.html" class="badge tag-link me-2 mb-1">
                         2026年
                       </a>
                       
-                      <a href="/tag/%E6%9C%8D%E5%8A%A1%E8%A1%8C%E4%B8%9A.html" class="badge tag-link">
+                      <a href="/tag/%E6%9C%8D%E5%8A%A1%E8%A1%8C%E4%B8%9A.html" class="badge tag-link me-2 mb-1">
                         服务行业
                       </a>
                       
@@ -145,48 +211,49 @@
               </div>
               
               <div class="masonry-grid-item">
-                <div class="card shadow-sm">
+                <div class="card article-card shadow-sm">
                   <div class="card-body">
-                    <h5 class="card-title">
-                      <i class="bi bi-file-earmark-text"></i>
-                      <a href="../mdhtml/因材施教2.0：2026年特殊需求儿童家庭个性化教育方案设计.html" class="text-decoration-none">
+                    <h5 class="card-title article-title">
+                      <i class="bi bi-file-earmark-text me-2 text-primary"></i>
+                      <a href="../mdhtml/因材施教2.0：2026年特殊需求儿童家庭个性化教育方案设计.html" class="text-decoration-none text-dark">
                         因材施教2.0：2026年特殊需求儿童家庭个性化教育方案设计
                       </a>
                     </h5>
                     
-                      <p class="card-text">
+                      <p class="card-text text-muted mb-3">
                         本文填补教育领域细分需求，为有特殊需求儿童的家庭提供专业指导，帮助设计个性化教育方案。
                       </p>
                       
-                        
-                          <small class="text-muted">
-                            2026-02-28
-                          </small>
-                          
+                        <div class="article-meta">
+                            
+                                <i class="bi bi-clock me-1"></i>
+                                2026-02-28
+                                
+                        </div>
                   </div>
-                  <div class="card-footer text-muted">
+                  <div class="card-footer text-muted bg-white border-top">
                     <a href="/category/%E6%95%99%E8%82%B2%E6%88%90%E9%95%BF.html"
-                      class="badge bg-primary">
+                      class="badge bg-primary me-2">
                       教育成长
                     </a>
                     
-                      <a href="/tag/%E7%89%B9%E6%AE%8A%E9%9C%80%E6%B1%82%E5%84%BF%E7%AB%A5.html" class="badge tag-link">
+                      <a href="/tag/%E7%89%B9%E6%AE%8A%E9%9C%80%E6%B1%82%E5%84%BF%E7%AB%A5.html" class="badge tag-link me-2 mb-1">
                         特殊需求儿童
                       </a>
                       
-                      <a href="/tag/%E4%B8%AA%E6%80%A7%E5%8C%96%E6%95%99%E8%82%B2.html" class="badge tag-link">
+                      <a href="/tag/%E4%B8%AA%E6%80%A7%E5%8C%96%E6%95%99%E8%82%B2.html" class="badge tag-link me-2 mb-1">
                         个性化教育
                       </a>
                       
-                      <a href="/tag/%E5%AE%B6%E5%BA%AD%E6%95%99%E8%82%B2.html" class="badge tag-link">
+                      <a href="/tag/%E5%AE%B6%E5%BA%AD%E6%95%99%E8%82%B2.html" class="badge tag-link me-2 mb-1">
                         家庭教育
                       </a>
                       
-                      <a href="/tag/2026%E5%B9%B4.html" class="badge tag-link">
+                      <a href="/tag/2026%E5%B9%B4.html" class="badge tag-link me-2 mb-1">
                         2026年
                       </a>
                       
-                      <a href="/tag/%E5%9B%A0%E6%9D%90%E6%96%BD%E6%95%99.html" class="badge tag-link">
+                      <a href="/tag/%E5%9B%A0%E6%9D%90%E6%96%BD%E6%95%99.html" class="badge tag-link me-2 mb-1">
                         因材施教
                       </a>
                       
@@ -195,48 +262,49 @@
               </div>
               
               <div class="masonry-grid-item">
-                <div class="card shadow-sm">
+                <div class="card article-card shadow-sm">
                   <div class="card-body">
-                    <h5 class="card-title">
-                      <i class="bi bi-file-earmark-text"></i>
-                      <a href="../mdhtml/24小时微旅行：2026年上班族周末充电的深度体验攻略与预算模板.html" class="text-decoration-none">
+                    <h5 class="card-title article-title">
+                      <i class="bi bi-file-earmark-text me-2 text-primary"></i>
+                      <a href="../mdhtml/24小时微旅行：2026年上班族周末充电的深度体验攻略与预算模板.html" class="text-decoration-none text-dark">
                         24小时微旅行：2026年上班族周末充电的深度体验攻略与预算模板
                       </a>
                     </h5>
                     
-                      <p class="card-text">
+                      <p class="card-text text-muted mb-3">
                         本文契合现代人休闲需求，提供短时间、高质量的旅行体验方案，帮助上班族利用周末进行深度微旅行。
                       </p>
                       
-                        
-                          <small class="text-muted">
-                            2026-02-28
-                          </small>
-                          
+                        <div class="article-meta">
+                            
+                                <i class="bi bi-clock me-1"></i>
+                                2026-02-28
+                                
+                        </div>
                   </div>
-                  <div class="card-footer text-muted">
+                  <div class="card-footer text-muted bg-white border-top">
                     <a href="/category/%E6%97%85%E8%A1%8C%E4%BC%91%E9%97%B2.html"
-                      class="badge bg-primary">
+                      class="badge bg-primary me-2">
                       旅行休闲
                     </a>
                     
-                      <a href="/tag/%E5%BE%AE%E6%97%85%E8%A1%8C.html" class="badge tag-link">
+                      <a href="/tag/%E5%BE%AE%E6%97%85%E8%A1%8C.html" class="badge tag-link me-2 mb-1">
                         微旅行
                       </a>
                       
-                      <a href="/tag/%E5%91%A8%E6%9C%AB%E5%85%85%E7%94%B5.html" class="badge tag-link">
+                      <a href="/tag/%E5%91%A8%E6%9C%AB%E5%85%85%E7%94%B5.html" class="badge tag-link me-2 mb-1">
                         周末充电
                       </a>
                       
-                      <a href="/tag/%E4%B8%8A%E7%8F%AD%E6%97%8F.html" class="badge tag-link">
+                      <a href="/tag/%E4%B8%8A%E7%8F%AD%E6%97%8F.html" class="badge tag-link me-2 mb-1">
                         上班族
                       </a>
                       
-                      <a href="/tag/2026%E5%B9%B4.html" class="badge tag-link">
+                      <a href="/tag/2026%E5%B9%B4.html" class="badge tag-link me-2 mb-1">
                         2026年
                       </a>
                       
-                      <a href="/tag/%E9%A2%84%E7%AE%97%E6%A8%A1%E6%9D%BF.html" class="badge tag-link">
+                      <a href="/tag/%E9%A2%84%E7%AE%97%E6%A8%A1%E6%9D%BF.html" class="badge tag-link me-2 mb-1">
                         预算模板
                       </a>
                       
@@ -245,48 +313,49 @@
               </div>
               
               <div class="masonry-grid-item">
-                <div class="card shadow-sm">
+                <div class="card article-card shadow-sm">
                   <div class="card-body">
-                    <h5 class="card-title">
-                      <i class="bi bi-file-earmark-text"></i>
-                      <a href="../mdhtml/短视频时代的孩子：2026年家长必读的青少年数字素养培养指南.html" class="text-decoration-none">
+                    <h5 class="card-title article-title">
+                      <i class="bi bi-file-earmark-text me-2 text-primary"></i>
+                      <a href="../mdhtml/短视频时代的孩子：2026年家长必读的青少年数字素养培养指南.html" class="text-decoration-none text-dark">
                         短视频时代的孩子：2026年家长必读的青少年数字素养培养指南
                       </a>
                     </h5>
                     
-                      <p class="card-text">
+                      <p class="card-text text-muted mb-3">
                         本文针对家庭教育热点，提供平衡数字工具使用与健康成长的专业建议，帮助家长培养孩子的数字素养。
                       </p>
                       
-                        
-                          <small class="text-muted">
-                            2026-02-28
-                          </small>
-                          
+                        <div class="article-meta">
+                            
+                                <i class="bi bi-clock me-1"></i>
+                                2026-02-28
+                                
+                        </div>
                   </div>
-                  <div class="card-footer text-muted">
+                  <div class="card-footer text-muted bg-white border-top">
                     <a href="/category/%E5%AE%B6%E5%BA%AD%E6%95%99%E8%82%B2.html"
-                      class="badge bg-primary">
+                      class="badge bg-primary me-2">
                       家庭教育
                     </a>
                     
-                      <a href="/tag/%E7%9F%AD%E8%A7%86%E9%A2%91.html" class="badge tag-link">
+                      <a href="/tag/%E7%9F%AD%E8%A7%86%E9%A2%91.html" class="badge tag-link me-2 mb-1">
                         短视频
                       </a>
                       
-                      <a href="/tag/%E6%95%B0%E5%AD%97%E7%B4%A0%E5%85%BB.html" class="badge tag-link">
+                      <a href="/tag/%E6%95%B0%E5%AD%97%E7%B4%A0%E5%85%BB.html" class="badge tag-link me-2 mb-1">
                         数字素养
                       </a>
                       
-                      <a href="/tag/%E9%9D%92%E5%B0%91%E5%B9%B4.html" class="badge tag-link">
+                      <a href="/tag/%E9%9D%92%E5%B0%91%E5%B9%B4.html" class="badge tag-link me-2 mb-1">
                         青少年
                       </a>
                       
-                      <a href="/tag/2026%E5%B9%B4.html" class="badge tag-link">
+                      <a href="/tag/2026%E5%B9%B4.html" class="badge tag-link me-2 mb-1">
                         2026年
                       </a>
                       
-                      <a href="/tag/%E5%AE%B6%E5%BA%AD%E6%95%99%E8%82%B2.html" class="badge tag-link">
+                      <a href="/tag/%E5%AE%B6%E5%BA%AD%E6%95%99%E8%82%B2.html" class="badge tag-link me-2 mb-1">
                         家庭教育
                       </a>
                       
@@ -295,48 +364,49 @@
               </div>
               
               <div class="masonry-grid-item">
-                <div class="card shadow-sm">
+                <div class="card article-card shadow-sm">
                   <div class="card-body">
-                    <h5 class="card-title">
-                      <i class="bi bi-file-earmark-text"></i>
-                      <a href="../mdhtml/量子传感走进日常生活：2026年医疗健康与环境安全的隐形守护者.html" class="text-decoration-none">
+                    <h5 class="card-title article-title">
+                      <i class="bi bi-file-earmark-text me-2 text-primary"></i>
+                      <a href="../mdhtml/量子传感走进日常生活：2026年医疗健康与环境安全的隐形守护者.html" class="text-decoration-none text-dark">
                         量子传感走进日常生活：2026年医疗健康与环境安全的隐形守护者
                       </a>
                     </h5>
                     
-                      <p class="card-text">
+                      <p class="card-text text-muted mb-3">
                         本文探讨了2026年量子传感技术在日常生活中的实际应用，特别是在医疗健康与环境安全领域的作用，满足读者对科技落地的好奇。
                       </p>
                       
-                        
-                          <small class="text-muted">
-                            2026-02-28
-                          </small>
-                          
+                        <div class="article-meta">
+                            
+                                <i class="bi bi-clock me-1"></i>
+                                2026-02-28
+                                
+                        </div>
                   </div>
-                  <div class="card-footer text-muted">
+                  <div class="card-footer text-muted bg-white border-top">
                     <a href="/category/%E7%A7%91%E6%8A%80%E5%88%9B%E6%96%B0.html"
-                      class="badge bg-primary">
+                      class="badge bg-primary me-2">
                       科技创新
                     </a>
                     
-                      <a href="/tag/%E9%87%8F%E5%AD%90%E4%BC%A0%E6%84%9F.html" class="badge tag-link">
+                      <a href="/tag/%E9%87%8F%E5%AD%90%E4%BC%A0%E6%84%9F.html" class="badge tag-link me-2 mb-1">
                         量子传感
                       </a>
                       
-                      <a href="/tag/%E5%8C%BB%E7%96%97%E5%81%A5%E5%BA%B7.html" class="badge tag-link">
+                      <a href="/tag/%E5%8C%BB%E7%96%97%E5%81%A5%E5%BA%B7.html" class="badge tag-link me-2 mb-1">
                         医疗健康
                       </a>
                       
-                      <a href="/tag/%E7%8E%AF%E5%A2%83%E5%AE%89%E5%85%A8.html" class="badge tag-link">
+                      <a href="/tag/%E7%8E%AF%E5%A2%83%E5%AE%89%E5%85%A8.html" class="badge tag-link me-2 mb-1">
                         环境安全
                       </a>
                       
-                      <a href="/tag/2026%E5%B9%B4.html" class="badge tag-link">
+                      <a href="/tag/2026%E5%B9%B4.html" class="badge tag-link me-2 mb-1">
                         2026年
                       </a>
                       
-                      <a href="/tag/%E7%A7%91%E6%8A%80%E5%BA%94%E7%94%A8.html" class="badge tag-link">
+                      <a href="/tag/%E7%A7%91%E6%8A%80%E5%BA%94%E7%94%A8.html" class="badge tag-link me-2 mb-1">
                         科技应用
                       </a>
                       
@@ -345,48 +415,49 @@
               </div>
               
               <div class="masonry-grid-item">
-                <div class="card shadow-sm">
+                <div class="card article-card shadow-sm">
                   <div class="card-body">
-                    <h5 class="card-title">
-                      <i class="bi bi-file-earmark-text"></i>
-                      <a href="../mdhtml/2026抗通胀生活实战：普通人无需投资也能保护购买力的12个日常策略.html" class="text-decoration-none">
+                    <h5 class="card-title article-title">
+                      <i class="bi bi-file-earmark-text me-2 text-primary"></i>
+                      <a href="../mdhtml/2026抗通胀生活实战：普通人无需投资也能保护购买力的12个日常策略.html" class="text-decoration-none text-dark">
                         2026抗通胀生活实战：普通人无需投资也能保护购买力的12个日常策略
                       </a>
                     </h5>
                     
-                      <p class="card-text">
+                      <p class="card-text text-muted mb-3">
                         本文提供了2026年应对通胀的12个日常策略，帮助普通人无需投资也能保护购买力，覆盖日常生活各个方面。
                       </p>
                       
-                        
-                          <small class="text-muted">
-                            2026-02-28
-                          </small>
-                          
+                        <div class="article-meta">
+                            
+                                <i class="bi bi-clock me-1"></i>
+                                2026-02-28
+                                
+                        </div>
                   </div>
-                  <div class="card-footer text-muted">
+                  <div class="card-footer text-muted bg-white border-top">
                     <a href="/category/%E7%94%9F%E6%B4%BB%E7%90%86%E8%B4%A2.html"
-                      class="badge bg-primary">
+                      class="badge bg-primary me-2">
                       生活理财
                     </a>
                     
-                      <a href="/tag/%E6%8A%97%E9%80%9A%E8%83%80.html" class="badge tag-link">
+                      <a href="/tag/%E6%8A%97%E9%80%9A%E8%83%80.html" class="badge tag-link me-2 mb-1">
                         抗通胀
                       </a>
                       
-                      <a href="/tag/%E8%B4%AD%E4%B9%B0%E5%8A%9B.html" class="badge tag-link">
+                      <a href="/tag/%E8%B4%AD%E4%B9%B0%E5%8A%9B.html" class="badge tag-link me-2 mb-1">
                         购买力
                       </a>
                       
-                      <a href="/tag/%E6%97%A5%E5%B8%B8%E7%94%9F%E6%B4%BB.html" class="badge tag-link">
+                      <a href="/tag/%E6%97%A5%E5%B8%B8%E7%94%9F%E6%B4%BB.html" class="badge tag-link me-2 mb-1">
                         日常生活
                       </a>
                       
-                      <a href="/tag/2026%E5%B9%B4.html" class="badge tag-link">
+                      <a href="/tag/2026%E5%B9%B4.html" class="badge tag-link me-2 mb-1">
                         2026年
                       </a>
                       
-                      <a href="/tag/%E8%B4%A2%E5%8A%A1%E4%BF%9D%E6%8A%A4.html" class="badge tag-link">
+                      <a href="/tag/%E8%B4%A2%E5%8A%A1%E4%BF%9D%E6%8A%A4.html" class="badge tag-link me-2 mb-1">
                         财务保护
                       </a>
                       
@@ -395,52 +466,53 @@
               </div>
               
               <div class="masonry-grid-item">
-                <div class="card shadow-sm">
+                <div class="card article-card shadow-sm">
                   <div class="card-body">
-                    <h5 class="card-title">
-                      <i class="bi bi-file-earmark-text"></i>
-                      <a href="../mdhtml/AI训练师职业揭秘：2026年入门门槛、薪资前景与必备技能清单.html" class="text-decoration-none">
+                    <h5 class="card-title article-title">
+                      <i class="bi bi-file-earmark-text me-2 text-primary"></i>
+                      <a href="../mdhtml/AI训练师职业揭秘：2026年入门门槛、薪资前景与必备技能清单.html" class="text-decoration-none text-dark">
                         AI训练师职业揭秘：2026年入门门槛、薪资前景与必备技能清单
                       </a>
                     </h5>
                     
-                      <p class="card-text">
+                      <p class="card-text text-muted mb-3">
                         本文揭秘了2026年AI训练师职业的入门门槛、薪资前景与必备技能清单，为寻求职业转型者提供详细入行指南。
                       </p>
                       
-                        
-                          <small class="text-muted">
-                            2026-02-28
-                          </small>
-                          
+                        <div class="article-meta">
+                            
+                                <i class="bi bi-clock me-1"></i>
+                                2026-02-28
+                                
+                        </div>
                   </div>
-                  <div class="card-footer text-muted">
+                  <div class="card-footer text-muted bg-white border-top">
                     <a href="/category/%E8%81%8C%E4%B8%9A%E5%8F%91%E5%B1%95.html"
-                      class="badge bg-primary">
+                      class="badge bg-primary me-2">
                       职业发展
                     </a>
                     
-                      <a href="/tag/AI%E8%AE%AD%E7%BB%83%E5%B8%88.html" class="badge tag-link">
+                      <a href="/tag/AI%E8%AE%AD%E7%BB%83%E5%B8%88.html" class="badge tag-link me-2 mb-1">
                         AI训练师
                       </a>
                       
-                      <a href="/tag/%E8%81%8C%E4%B8%9A%E6%8F%AD%E7%A7%98.html" class="badge tag-link">
+                      <a href="/tag/%E8%81%8C%E4%B8%9A%E6%8F%AD%E7%A7%98.html" class="badge tag-link me-2 mb-1">
                         职业揭秘
                       </a>
                       
-                      <a href="/tag/%E5%85%A5%E9%97%A8%E9%97%A8%E6%A7%9B.html" class="badge tag-link">
+                      <a href="/tag/%E5%85%A5%E9%97%A8%E9%97%A8%E6%A7%9B.html" class="badge tag-link me-2 mb-1">
                         入门门槛
                       </a>
                       
-                      <a href="/tag/%E8%96%AA%E8%B5%84%E5%89%8D%E6%99%AF.html" class="badge tag-link">
+                      <a href="/tag/%E8%96%AA%E8%B5%84%E5%89%8D%E6%99%AF.html" class="badge tag-link me-2 mb-1">
                         薪资前景
                       </a>
                       
-                      <a href="/tag/%E5%BF%85%E5%A4%87%E6%8A%80%E8%83%BD.html" class="badge tag-link">
+                      <a href="/tag/%E5%BF%85%E5%A4%87%E6%8A%80%E8%83%BD.html" class="badge tag-link me-2 mb-1">
                         必备技能
                       </a>
                       
-                      <a href="/tag/2026%E5%B9%B4.html" class="badge tag-link">
+                      <a href="/tag/2026%E5%B9%B4.html" class="badge tag-link me-2 mb-1">
                         2026年
                       </a>
                       
@@ -449,48 +521,49 @@
               </div>
               
               <div class="masonry-grid-item">
-                <div class="card shadow-sm">
+                <div class="card article-card shadow-sm">
                   <div class="card-body">
-                    <h5 class="card-title">
-                      <i class="bi bi-file-earmark-text"></i>
-                      <a href="../mdhtml/Z世代数字生存指南：2026年应对社交媒体焦虑的10个科学策略.html" class="text-decoration-none">
+                    <h5 class="card-title article-title">
+                      <i class="bi bi-file-earmark-text me-2 text-primary"></i>
+                      <a href="../mdhtml/Z世代数字生存指南：2026年应对社交媒体焦虑的10个科学策略.html" class="text-decoration-none text-dark">
                         Z世代数字生存指南：2026年应对社交媒体焦虑的10个科学策略
                       </a>
                     </h5>
                     
-                      <p class="card-text">
+                      <p class="card-text text-muted mb-3">
                         本文介绍了2026年Z世代应对社交媒体焦虑的10个科学策略，帮助年轻群体在数字时代保持心理健康。
                       </p>
                       
-                        
-                          <small class="text-muted">
-                            2026-02-28
-                          </small>
-                          
+                        <div class="article-meta">
+                            
+                                <i class="bi bi-clock me-1"></i>
+                                2026-02-28
+                                
+                        </div>
                   </div>
-                  <div class="card-footer text-muted">
+                  <div class="card-footer text-muted bg-white border-top">
                     <a href="/category/%E5%BF%83%E7%90%86%E5%81%A5%E5%BA%B7.html"
-                      class="badge bg-primary">
+                      class="badge bg-primary me-2">
                       心理健康
                     </a>
                     
-                      <a href="/tag/Z%E4%B8%96%E4%BB%A3.html" class="badge tag-link">
+                      <a href="/tag/Z%E4%B8%96%E4%BB%A3.html" class="badge tag-link me-2 mb-1">
                         Z世代
                       </a>
                       
-                      <a href="/tag/%E6%95%B0%E5%AD%97%E7%94%9F%E5%AD%98.html" class="badge tag-link">
+                      <a href="/tag/%E6%95%B0%E5%AD%97%E7%94%9F%E5%AD%98.html" class="badge tag-link me-2 mb-1">
                         数字生存
                       </a>
                       
-                      <a href="/tag/%E7%A4%BE%E4%BA%A4%E5%AA%92%E4%BD%93%E7%84%A6%E8%99%91.html" class="badge tag-link">
+                      <a href="/tag/%E7%A4%BE%E4%BA%A4%E5%AA%92%E4%BD%93%E7%84%A6%E8%99%91.html" class="badge tag-link me-2 mb-1">
                         社交媒体焦虑
                       </a>
                       
-                      <a href="/tag/2026%E5%B9%B4.html" class="badge tag-link">
+                      <a href="/tag/2026%E5%B9%B4.html" class="badge tag-link me-2 mb-1">
                         2026年
                       </a>
                       
-                      <a href="/tag/%E7%A7%91%E5%AD%A6%E7%AD%96%E7%95%A5.html" class="badge tag-link">
+                      <a href="/tag/%E7%A7%91%E5%AD%A6%E7%AD%96%E7%95%A5.html" class="badge tag-link me-2 mb-1">
                         科学策略
                       </a>
                       
@@ -499,48 +572,49 @@
               </div>
               
               <div class="masonry-grid-item">
-                <div class="card shadow-sm">
+                <div class="card article-card shadow-sm">
                   <div class="card-body">
-                    <h5 class="card-title">
-                      <i class="bi bi-file-earmark-text"></i>
-                      <a href="../mdhtml/都市阳台农场实战：2026年小空间种出全家30%蔬菜的可持续生活方案.html" class="text-decoration-none">
+                    <h5 class="card-title article-title">
+                      <i class="bi bi-file-earmark-text me-2 text-primary"></i>
+                      <a href="../mdhtml/都市阳台农场实战：2026年小空间种出全家30%蔬菜的可持续生活方案.html" class="text-decoration-none text-dark">
                         都市阳台农场实战：2026年小空间种出全家30%蔬菜的可持续生活方案
                       </a>
                     </h5>
                     
-                      <p class="card-text">
+                      <p class="card-text text-muted mb-3">
                         本文介绍了2026年都市阳台农场的实战方案，帮助城市居民在小空间种出全家30%的蔬菜，实现可持续生活。
                       </p>
                       
-                        
-                          <small class="text-muted">
-                            2026-02-28
-                          </small>
-                          
+                        <div class="article-meta">
+                            
+                                <i class="bi bi-clock me-1"></i>
+                                2026-02-28
+                                
+                        </div>
                   </div>
-                  <div class="card-footer text-muted">
+                  <div class="card-footer text-muted bg-white border-top">
                     <a href="/category/%E5%8F%AF%E6%8C%81%E7%BB%AD%E7%94%9F%E6%B4%BB.html"
-                      class="badge bg-primary">
+                      class="badge bg-primary me-2">
                       可持续生活
                     </a>
                     
-                      <a href="/tag/%E9%83%BD%E5%B8%82%E9%98%B3%E5%8F%B0%E5%86%9C%E5%9C%BA.html" class="badge tag-link">
+                      <a href="/tag/%E9%83%BD%E5%B8%82%E9%98%B3%E5%8F%B0%E5%86%9C%E5%9C%BA.html" class="badge tag-link me-2 mb-1">
                         都市阳台农场
                       </a>
                       
-                      <a href="/tag/%E5%B0%8F%E7%A9%BA%E9%97%B4%E7%A7%8D%E6%A4%8D.html" class="badge tag-link">
+                      <a href="/tag/%E5%B0%8F%E7%A9%BA%E9%97%B4%E7%A7%8D%E6%A4%8D.html" class="badge tag-link me-2 mb-1">
                         小空间种植
                       </a>
                       
-                      <a href="/tag/%E5%8F%AF%E6%8C%81%E7%BB%AD%E7%94%9F%E6%B4%BB.html" class="badge tag-link">
+                      <a href="/tag/%E5%8F%AF%E6%8C%81%E7%BB%AD%E7%94%9F%E6%B4%BB.html" class="badge tag-link me-2 mb-1">
                         可持续生活
                       </a>
                       
-                      <a href="/tag/2026%E5%B9%B4.html" class="badge tag-link">
+                      <a href="/tag/2026%E5%B9%B4.html" class="badge tag-link me-2 mb-1">
                         2026年
                       </a>
                       
-                      <a href="/tag/%E8%94%AC%E8%8F%9C%E7%A7%8D%E6%A4%8D.html" class="badge tag-link">
+                      <a href="/tag/%E8%94%AC%E8%8F%9C%E7%A7%8D%E6%A4%8D.html" class="badge tag-link me-2 mb-1">
                         蔬菜种植
                       </a>
                       
@@ -549,48 +623,49 @@
               </div>
               
               <div class="masonry-grid-item">
-                <div class="card shadow-sm">
+                <div class="card article-card shadow-sm">
                   <div class="card-body">
-                    <h5 class="card-title">
-                      <i class="bi bi-file-earmark-text"></i>
-                      <a href="../mdhtml/2026年AI绘画革命：零基础入门到作品变现的完整指南.html" class="text-decoration-none">
+                    <h5 class="card-title article-title">
+                      <i class="bi bi-file-earmark-text me-2 text-primary"></i>
+                      <a href="../mdhtml/2026年AI绘画革命：零基础入门到作品变现的完整指南.html" class="text-decoration-none text-dark">
                         2026年AI绘画革命：零基础入门到作品变现的完整指南
                       </a>
                     </h5>
                     
-                      <p class="card-text">
+                      <p class="card-text text-muted mb-3">
                         本文介绍了2026年AI绘画的最新发展，从零基础入门到作品变现的完整指南，帮助普通人利用AI工具实现创意变现。
                       </p>
                       
-                        
-                          <small class="text-muted">
-                            2026-02-28
-                          </small>
-                          
+                        <div class="article-meta">
+                            
+                                <i class="bi bi-clock me-1"></i>
+                                2026-02-28
+                                
+                        </div>
                   </div>
-                  <div class="card-footer text-muted">
+                  <div class="card-footer text-muted bg-white border-top">
                     <a href="/category/%E7%A7%91%E6%8A%80%E5%88%9B%E6%96%B0.html"
-                      class="badge bg-primary">
+                      class="badge bg-primary me-2">
                       科技创新
                     </a>
                     
-                      <a href="/tag/AI%E7%BB%98%E7%94%BB.html" class="badge tag-link">
+                      <a href="/tag/AI%E7%BB%98%E7%94%BB.html" class="badge tag-link me-2 mb-1">
                         AI绘画
                       </a>
                       
-                      <a href="/tag/%E9%9B%B6%E5%9F%BA%E7%A1%80%E5%85%A5%E9%97%A8.html" class="badge tag-link">
+                      <a href="/tag/%E9%9B%B6%E5%9F%BA%E7%A1%80%E5%85%A5%E9%97%A8.html" class="badge tag-link me-2 mb-1">
                         零基础入门
                       </a>
                       
-                      <a href="/tag/%E4%BD%9C%E5%93%81%E5%8F%98%E7%8E%B0.html" class="badge tag-link">
+                      <a href="/tag/%E4%BD%9C%E5%93%81%E5%8F%98%E7%8E%B0.html" class="badge tag-link me-2 mb-1">
                         作品变现
                       </a>
                       
-                      <a href="/tag/2026%E5%B9%B4.html" class="badge tag-link">
+                      <a href="/tag/2026%E5%B9%B4.html" class="badge tag-link me-2 mb-1">
                         2026年
                       </a>
                       
-                      <a href="/tag/%E5%88%9B%E6%84%8F%E5%8F%98%E7%8E%B0.html" class="badge tag-link">
+                      <a href="/tag/%E5%88%9B%E6%84%8F%E5%8F%98%E7%8E%B0.html" class="badge tag-link me-2 mb-1">
                         创意变现
                       </a>
                       
@@ -599,52 +674,53 @@
               </div>
               
               <div class="masonry-grid-item">
-                <div class="card shadow-sm">
+                <div class="card article-card shadow-sm">
                   <div class="card-body">
-                    <h5 class="card-title">
-                      <i class="bi bi-file-earmark-text"></i>
-                      <a href="../mdhtml/AI健康监测：2026年可穿戴设备如何实现精准健康管理.html" class="text-decoration-none">
+                    <h5 class="card-title article-title">
+                      <i class="bi bi-file-earmark-text me-2 text-primary"></i>
+                      <a href="../mdhtml/AI健康监测：2026年可穿戴设备如何实现精准健康管理.html" class="text-decoration-none text-dark">
                         AI健康监测：2026年可穿戴设备如何实现精准健康管理
                       </a>
                     </h5>
                     
-                      <p class="card-text">
+                      <p class="card-text text-muted mb-3">
                         2026年AI健康监测指南，探讨可穿戴设备如何通过人工智能实现精准健康管理，为个人健康提供科学依据。
                       </p>
                       
-                        
-                          <small class="text-muted">
-                            2026-02-28
-                          </small>
-                          
+                        <div class="article-meta">
+                            
+                                <i class="bi bi-clock me-1"></i>
+                                2026-02-28
+                                
+                        </div>
                   </div>
-                  <div class="card-footer text-muted">
+                  <div class="card-footer text-muted bg-white border-top">
                     <a href="/category/%E5%81%A5%E5%BA%B7%E7%A7%91%E6%8A%80.html"
-                      class="badge bg-primary">
+                      class="badge bg-primary me-2">
                       健康科技
                     </a>
                     
-                      <a href="/tag/AI%E5%81%A5%E5%BA%B7%E7%9B%91%E6%B5%8B.html" class="badge tag-link">
+                      <a href="/tag/AI%E5%81%A5%E5%BA%B7%E7%9B%91%E6%B5%8B.html" class="badge tag-link me-2 mb-1">
                         AI健康监测
                       </a>
                       
-                      <a href="/tag/%E5%8F%AF%E7%A9%BF%E6%88%B4%E8%AE%BE%E5%A4%87.html" class="badge tag-link">
+                      <a href="/tag/%E5%8F%AF%E7%A9%BF%E6%88%B4%E8%AE%BE%E5%A4%87.html" class="badge tag-link me-2 mb-1">
                         可穿戴设备
                       </a>
                       
-                      <a href="/tag/%E7%B2%BE%E5%87%86%E5%81%A5%E5%BA%B7%E7%AE%A1%E7%90%86.html" class="badge tag-link">
+                      <a href="/tag/%E7%B2%BE%E5%87%86%E5%81%A5%E5%BA%B7%E7%AE%A1%E7%90%86.html" class="badge tag-link me-2 mb-1">
                         精准健康管理
                       </a>
                       
-                      <a href="/tag/2026%E5%B9%B4.html" class="badge tag-link">
+                      <a href="/tag/2026%E5%B9%B4.html" class="badge tag-link me-2 mb-1">
                         2026年
                       </a>
                       
-                      <a href="/tag/%E5%81%A5%E5%BA%B7%E7%A7%91%E6%8A%80.html" class="badge tag-link">
+                      <a href="/tag/%E5%81%A5%E5%BA%B7%E7%A7%91%E6%8A%80.html" class="badge tag-link me-2 mb-1">
                         健康科技
                       </a>
                       
-                      <a href="/tag/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD.html" class="badge tag-link">
+                      <a href="/tag/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD.html" class="badge tag-link me-2 mb-1">
                         人工智能
                       </a>
                       
@@ -653,52 +729,53 @@
               </div>
               
               <div class="masonry-grid-item">
-                <div class="card shadow-sm">
+                <div class="card article-card shadow-sm">
                   <div class="card-body">
-                    <h5 class="card-title">
-                      <i class="bi bi-file-earmark-text"></i>
-                      <a href="../mdhtml/睡眠革命2026：基于最新研究的R90睡眠周期法实践指南.html" class="text-decoration-none">
+                    <h5 class="card-title article-title">
+                      <i class="bi bi-file-earmark-text me-2 text-primary"></i>
+                      <a href="../mdhtml/睡眠革命2026：基于最新研究的R90睡眠周期法实践指南.html" class="text-decoration-none text-dark">
                         睡眠革命2026：基于最新研究的R90睡眠周期法实践指南
                       </a>
                     </h5>
                     
-                      <p class="card-text">
+                      <p class="card-text text-muted mb-3">
                         2026年睡眠革命指南，基于最新研究的R90睡眠周期法实践指南，帮助您改善睡眠质量，提高生活质量。
                       </p>
                       
-                        
-                          <small class="text-muted">
-                            2026-02-28
-                          </small>
-                          
+                        <div class="article-meta">
+                            
+                                <i class="bi bi-clock me-1"></i>
+                                2026-02-28
+                                
+                        </div>
                   </div>
-                  <div class="card-footer text-muted">
+                  <div class="card-footer text-muted bg-white border-top">
                     <a href="/category/%E5%81%A5%E5%BA%B7%E5%85%BB%E7%94%9F.html"
-                      class="badge bg-primary">
+                      class="badge bg-primary me-2">
                       健康养生
                     </a>
                     
-                      <a href="/tag/%E7%9D%A1%E7%9C%A0%E9%9D%A9%E5%91%BD.html" class="badge tag-link">
+                      <a href="/tag/%E7%9D%A1%E7%9C%A0%E9%9D%A9%E5%91%BD.html" class="badge tag-link me-2 mb-1">
                         睡眠革命
                       </a>
                       
-                      <a href="/tag/R90%E7%9D%A1%E7%9C%A0%E5%91%A8%E6%9C%9F%E6%B3%95.html" class="badge tag-link">
+                      <a href="/tag/R90%E7%9D%A1%E7%9C%A0%E5%91%A8%E6%9C%9F%E6%B3%95.html" class="badge tag-link me-2 mb-1">
                         R90睡眠周期法
                       </a>
                       
-                      <a href="/tag/2026%E5%B9%B4.html" class="badge tag-link">
+                      <a href="/tag/2026%E5%B9%B4.html" class="badge tag-link me-2 mb-1">
                         2026年
                       </a>
                       
-                      <a href="/tag/%E6%9C%80%E6%96%B0%E7%A0%94%E7%A9%B6.html" class="badge tag-link">
+                      <a href="/tag/%E6%9C%80%E6%96%B0%E7%A0%94%E7%A9%B6.html" class="badge tag-link me-2 mb-1">
                         最新研究
                       </a>
                       
-                      <a href="/tag/%E7%9D%A1%E7%9C%A0%E8%B4%A8%E9%87%8F.html" class="badge tag-link">
+                      <a href="/tag/%E7%9D%A1%E7%9C%A0%E8%B4%A8%E9%87%8F.html" class="badge tag-link me-2 mb-1">
                         睡眠质量
                       </a>
                       
-                      <a href="/tag/%E5%81%A5%E5%BA%B7%E6%8C%87%E5%8D%97.html" class="badge tag-link">
+                      <a href="/tag/%E5%81%A5%E5%BA%B7%E6%8C%87%E5%8D%97.html" class="badge tag-link me-2 mb-1">
                         健康指南
                       </a>
                       
@@ -707,52 +784,53 @@
               </div>
               
               <div class="masonry-grid-item">
-                <div class="card shadow-sm">
+                <div class="card article-card shadow-sm">
                   <div class="card-body">
-                    <h5 class="card-title">
-                      <i class="bi bi-file-earmark-text"></i>
-                      <a href="../mdhtml/敏捷实践2026：中小企业如何低成本实施敏捷项目管理.html" class="text-decoration-none">
+                    <h5 class="card-title article-title">
+                      <i class="bi bi-file-earmark-text me-2 text-primary"></i>
+                      <a href="../mdhtml/敏捷实践2026：中小企业如何低成本实施敏捷项目管理.html" class="text-decoration-none text-dark">
                         敏捷实践2026：中小企业如何低成本实施敏捷项目管理
                       </a>
                     </h5>
                     
-                      <p class="card-text">
+                      <p class="card-text text-muted mb-3">
                         2026年敏捷实践指南，教中小企业如何低成本实施敏捷项目管理，提高项目成功率和团队效率。
                       </p>
                       
-                        
-                          <small class="text-muted">
-                            2026-02-28
-                          </small>
-                          
+                        <div class="article-meta">
+                            
+                                <i class="bi bi-clock me-1"></i>
+                                2026-02-28
+                                
+                        </div>
                   </div>
-                  <div class="card-footer text-muted">
+                  <div class="card-footer text-muted bg-white border-top">
                     <a href="/category/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86.html"
-                      class="badge bg-primary">
+                      class="badge bg-primary me-2">
                       项目管理
                     </a>
                     
-                      <a href="/tag/%E6%95%8F%E6%8D%B7%E5%AE%9E%E8%B7%B5.html" class="badge tag-link">
+                      <a href="/tag/%E6%95%8F%E6%8D%B7%E5%AE%9E%E8%B7%B5.html" class="badge tag-link me-2 mb-1">
                         敏捷实践
                       </a>
                       
-                      <a href="/tag/%E4%B8%AD%E5%B0%8F%E4%BC%81%E4%B8%9A.html" class="badge tag-link">
+                      <a href="/tag/%E4%B8%AD%E5%B0%8F%E4%BC%81%E4%B8%9A.html" class="badge tag-link me-2 mb-1">
                         中小企业
                       </a>
                       
-                      <a href="/tag/%E4%BD%8E%E6%88%90%E6%9C%AC.html" class="badge tag-link">
+                      <a href="/tag/%E4%BD%8E%E6%88%90%E6%9C%AC.html" class="badge tag-link me-2 mb-1">
                         低成本
                       </a>
                       
-                      <a href="/tag/%E6%95%8F%E6%8D%B7%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86.html" class="badge tag-link">
+                      <a href="/tag/%E6%95%8F%E6%8D%B7%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86.html" class="badge tag-link me-2 mb-1">
                         敏捷项目管理
                       </a>
                       
-                      <a href="/tag/2026%E5%B9%B4.html" class="badge tag-link">
+                      <a href="/tag/2026%E5%B9%B4.html" class="badge tag-link me-2 mb-1">
                         2026年
                       </a>
                       
-                      <a href="/tag/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86.html" class="badge tag-link">
+                      <a href="/tag/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86.html" class="badge tag-link me-2 mb-1">
                         项目管理
                       </a>
                       
@@ -761,52 +839,53 @@
               </div>
               
               <div class="masonry-grid-item">
-                <div class="card shadow-sm">
+                <div class="card article-card shadow-sm">
                   <div class="card-body">
-                    <h5 class="card-title">
-                      <i class="bi bi-file-earmark-text"></i>
-                      <a href="../mdhtml/2026极简生活实践：数字断舍离与心理减压每周行动清单.html" class="text-decoration-none">
+                    <h5 class="card-title article-title">
+                      <i class="bi bi-file-earmark-text me-2 text-primary"></i>
+                      <a href="../mdhtml/2026极简生活实践：数字断舍离与心理减压每周行动清单.html" class="text-decoration-none text-dark">
                         2026极简生活实践：数字断舍离与心理减压每周行动清单
                       </a>
                     </h5>
                     
-                      <p class="card-text">
+                      <p class="card-text text-muted mb-3">
                         2026年极简生活实践指南，数字断舍离与心理减压的每周行动清单，帮助您实现简单、轻松的生活。
                       </p>
                       
-                        
-                          <small class="text-muted">
-                            2026-02-28
-                          </small>
-                          
+                        <div class="article-meta">
+                            
+                                <i class="bi bi-clock me-1"></i>
+                                2026-02-28
+                                
+                        </div>
                   </div>
-                  <div class="card-footer text-muted">
+                  <div class="card-footer text-muted bg-white border-top">
                     <a href="/category/%E7%94%9F%E6%B4%BB%E6%96%B9%E5%BC%8F.html"
-                      class="badge bg-primary">
+                      class="badge bg-primary me-2">
                       生活方式
                     </a>
                     
-                      <a href="/tag/%E6%9E%81%E7%AE%80%E7%94%9F%E6%B4%BB.html" class="badge tag-link">
+                      <a href="/tag/%E6%9E%81%E7%AE%80%E7%94%9F%E6%B4%BB.html" class="badge tag-link me-2 mb-1">
                         极简生活
                       </a>
                       
-                      <a href="/tag/%E6%95%B0%E5%AD%97%E6%96%AD%E8%88%8D%E7%A6%BB.html" class="badge tag-link">
+                      <a href="/tag/%E6%95%B0%E5%AD%97%E6%96%AD%E8%88%8D%E7%A6%BB.html" class="badge tag-link me-2 mb-1">
                         数字断舍离
                       </a>
                       
-                      <a href="/tag/%E5%BF%83%E7%90%86%E5%87%8F%E5%8E%8B.html" class="badge tag-link">
+                      <a href="/tag/%E5%BF%83%E7%90%86%E5%87%8F%E5%8E%8B.html" class="badge tag-link me-2 mb-1">
                         心理减压
                       </a>
                       
-                      <a href="/tag/%E6%AF%8F%E5%91%A8%E8%A1%8C%E5%8A%A8%E6%B8%85%E5%8D%95.html" class="badge tag-link">
+                      <a href="/tag/%E6%AF%8F%E5%91%A8%E8%A1%8C%E5%8A%A8%E6%B8%85%E5%8D%95.html" class="badge tag-link me-2 mb-1">
                         每周行动清单
                       </a>
                       
-                      <a href="/tag/2026%E5%B9%B4.html" class="badge tag-link">
+                      <a href="/tag/2026%E5%B9%B4.html" class="badge tag-link me-2 mb-1">
                         2026年
                       </a>
                       
-                      <a href="/tag/%E7%94%9F%E6%B4%BB%E6%96%B9%E5%BC%8F.html" class="badge tag-link">
+                      <a href="/tag/%E7%94%9F%E6%B4%BB%E6%96%B9%E5%BC%8F.html" class="badge tag-link me-2 mb-1">
                         生活方式
                       </a>
                       
@@ -815,52 +894,53 @@
               </div>
               
               <div class="masonry-grid-item">
-                <div class="card shadow-sm">
+                <div class="card article-card shadow-sm">
                   <div class="card-body">
-                    <h5 class="card-title">
-                      <i class="bi bi-file-earmark-text"></i>
-                      <a href="../mdhtml/视频号起号核心策略.html" class="text-decoration-none">
+                    <h5 class="card-title article-title">
+                      <i class="bi bi-file-earmark-text me-2 text-primary"></i>
+                      <a href="../mdhtml/视频号起号核心策略.html" class="text-decoration-none text-dark">
                         个人IP打造从0到1：2026年小红书/视频号起号核心策略
                       </a>
                     </h5>
                     
-                      <p class="card-text">
+                      <p class="card-text text-muted mb-3">
                         2026年个人IP打造从0到1的核心策略，教您如何在小红书和视频号平台起号，建立个人品牌。
                       </p>
                       
-                        
-                          <small class="text-muted">
-                            2026-02-28
-                          </small>
-                          
+                        <div class="article-meta">
+                            
+                                <i class="bi bi-clock me-1"></i>
+                                2026-02-28
+                                
+                        </div>
                   </div>
-                  <div class="card-footer text-muted">
+                  <div class="card-footer text-muted bg-white border-top">
                     <a href="/category/%E5%86%85%E5%AE%B9%E5%88%9B%E4%BD%9C.html"
-                      class="badge bg-primary">
+                      class="badge bg-primary me-2">
                       内容创作
                     </a>
                     
-                      <a href="/tag/%E4%B8%AA%E4%BA%BAIP.html" class="badge tag-link">
+                      <a href="/tag/%E4%B8%AA%E4%BA%BAIP.html" class="badge tag-link me-2 mb-1">
                         个人IP
                       </a>
                       
-                      <a href="/tag/%E5%B0%8F%E7%BA%A2%E4%B9%A6.html" class="badge tag-link">
+                      <a href="/tag/%E5%B0%8F%E7%BA%A2%E4%B9%A6.html" class="badge tag-link me-2 mb-1">
                         小红书
                       </a>
                       
-                      <a href="/tag/%E8%A7%86%E9%A2%91%E5%8F%B7.html" class="badge tag-link">
+                      <a href="/tag/%E8%A7%86%E9%A2%91%E5%8F%B7.html" class="badge tag-link me-2 mb-1">
                         视频号
                       </a>
                       
-                      <a href="/tag/%E8%B5%B7%E5%8F%B7%E7%AD%96%E7%95%A5.html" class="badge tag-link">
+                      <a href="/tag/%E8%B5%B7%E5%8F%B7%E7%AD%96%E7%95%A5.html" class="badge tag-link me-2 mb-1">
                         起号策略
                       </a>
                       
-                      <a href="/tag/2026%E5%B9%B4.html" class="badge tag-link">
+                      <a href="/tag/2026%E5%B9%B4.html" class="badge tag-link me-2 mb-1">
                         2026年
                       </a>
                       
-                      <a href="/tag/%E5%93%81%E7%89%8C%E6%89%93%E9%80%A0.html" class="badge tag-link">
+                      <a href="/tag/%E5%93%81%E7%89%8C%E6%89%93%E9%80%A0.html" class="badge tag-link me-2 mb-1">
                         品牌打造
                       </a>
                       
@@ -869,52 +949,53 @@
               </div>
               
               <div class="masonry-grid-item">
-                <div class="card shadow-sm">
+                <div class="card article-card shadow-sm">
                   <div class="card-body">
-                    <h5 class="card-title">
-                      <i class="bi bi-file-earmark-text"></i>
-                      <a href="../mdhtml/婚后如何保持新鲜感与有效沟通.html" class="text-decoration-none">
+                    <h5 class="card-title article-title">
+                      <i class="bi bi-file-earmark-text me-2 text-primary"></i>
+                      <a href="../mdhtml/婚后如何保持新鲜感与有效沟通.html" class="text-decoration-none text-dark">
                         2026年情感关系维系：异地恋/婚后如何保持新鲜感与有效沟通
                       </a>
                     </h5>
                     
-                      <p class="card-text">
+                      <p class="card-text text-muted mb-3">
                         2026年情感关系维系指南，教您如何在异地恋或婚后保持新鲜感与有效沟通，维持健康的情感关系。
                       </p>
                       
-                        
-                          <small class="text-muted">
-                            2026-02-28
-                          </small>
-                          
+                        <div class="article-meta">
+                            
+                                <i class="bi bi-clock me-1"></i>
+                                2026-02-28
+                                
+                        </div>
                   </div>
-                  <div class="card-footer text-muted">
+                  <div class="card-footer text-muted bg-white border-top">
                     <a href="/category/%E6%83%85%E6%84%9F%E5%85%B3%E7%B3%BB.html"
-                      class="badge bg-primary">
+                      class="badge bg-primary me-2">
                       情感关系
                     </a>
                     
-                      <a href="/tag/%E6%83%85%E6%84%9F%E5%85%B3%E7%B3%BB.html" class="badge tag-link">
+                      <a href="/tag/%E6%83%85%E6%84%9F%E5%85%B3%E7%B3%BB.html" class="badge tag-link me-2 mb-1">
                         情感关系
                       </a>
                       
-                      <a href="/tag/%E5%BC%82%E5%9C%B0%E6%81%8B.html" class="badge tag-link">
+                      <a href="/tag/%E5%BC%82%E5%9C%B0%E6%81%8B.html" class="badge tag-link me-2 mb-1">
                         异地恋
                       </a>
                       
-                      <a href="/tag/%E5%A9%9A%E5%90%8E%E7%94%9F%E6%B4%BB.html" class="badge tag-link">
+                      <a href="/tag/%E5%A9%9A%E5%90%8E%E7%94%9F%E6%B4%BB.html" class="badge tag-link me-2 mb-1">
                         婚后生活
                       </a>
                       
-                      <a href="/tag/%E4%BF%9D%E6%8C%81%E6%96%B0%E9%B2%9C%E6%84%9F.html" class="badge tag-link">
+                      <a href="/tag/%E4%BF%9D%E6%8C%81%E6%96%B0%E9%B2%9C%E6%84%9F.html" class="badge tag-link me-2 mb-1">
                         保持新鲜感
                       </a>
                       
-                      <a href="/tag/%E6%9C%89%E6%95%88%E6%B2%9F%E9%80%9A.html" class="badge tag-link">
+                      <a href="/tag/%E6%9C%89%E6%95%88%E6%B2%9F%E9%80%9A.html" class="badge tag-link me-2 mb-1">
                         有效沟通
                       </a>
                       
-                      <a href="/tag/2026%E5%B9%B4.html" class="badge tag-link">
+                      <a href="/tag/2026%E5%B9%B4.html" class="badge tag-link me-2 mb-1">
                         2026年
                       </a>
                       
@@ -923,52 +1004,53 @@
               </div>
               
               <div class="masonry-grid-item">
-                <div class="card shadow-sm">
+                <div class="card article-card shadow-sm">
                   <div class="card-body">
-                    <h5 class="card-title">
-                      <i class="bi bi-file-earmark-text"></i>
-                      <a href="../mdhtml/2026远程办公新趋势：混合办公模式下的团队管理与效率工具.html" class="text-decoration-none">
+                    <h5 class="card-title article-title">
+                      <i class="bi bi-file-earmark-text me-2 text-primary"></i>
+                      <a href="../mdhtml/2026远程办公新趋势：混合办公模式下的团队管理与效率工具.html" class="text-decoration-none text-dark">
                         2026远程办公新趋势：混合办公模式下的团队管理与效率工具
                       </a>
                     </h5>
                     
-                      <p class="card-text">
+                      <p class="card-text text-muted mb-3">
                         2026年远程办公新趋势分析，混合办公模式下的团队管理策略与效率工具推荐，帮助企业和团队适应新的工作模式。
                       </p>
                       
-                        
-                          <small class="text-muted">
-                            2026-02-28
-                          </small>
-                          
+                        <div class="article-meta">
+                            
+                                <i class="bi bi-clock me-1"></i>
+                                2026-02-28
+                                
+                        </div>
                   </div>
-                  <div class="card-footer text-muted">
+                  <div class="card-footer text-muted bg-white border-top">
                     <a href="/category/%E8%81%8C%E5%9C%BA%E6%8C%87%E5%8D%97.html"
-                      class="badge bg-primary">
+                      class="badge bg-primary me-2">
                       职场指南
                     </a>
                     
-                      <a href="/tag/%E8%BF%9C%E7%A8%8B%E5%8A%9E%E5%85%AC.html" class="badge tag-link">
+                      <a href="/tag/%E8%BF%9C%E7%A8%8B%E5%8A%9E%E5%85%AC.html" class="badge tag-link me-2 mb-1">
                         远程办公
                       </a>
                       
-                      <a href="/tag/%E6%B7%B7%E5%90%88%E5%8A%9E%E5%85%AC.html" class="badge tag-link">
+                      <a href="/tag/%E6%B7%B7%E5%90%88%E5%8A%9E%E5%85%AC.html" class="badge tag-link me-2 mb-1">
                         混合办公
                       </a>
                       
-                      <a href="/tag/%E5%9B%A2%E9%98%9F%E7%AE%A1%E7%90%86.html" class="badge tag-link">
+                      <a href="/tag/%E5%9B%A2%E9%98%9F%E7%AE%A1%E7%90%86.html" class="badge tag-link me-2 mb-1">
                         团队管理
                       </a>
                       
-                      <a href="/tag/%E6%95%88%E7%8E%87%E5%B7%A5%E5%85%B7.html" class="badge tag-link">
+                      <a href="/tag/%E6%95%88%E7%8E%87%E5%B7%A5%E5%85%B7.html" class="badge tag-link me-2 mb-1">
                         效率工具
                       </a>
                       
-                      <a href="/tag/2026%E5%B9%B4.html" class="badge tag-link">
+                      <a href="/tag/2026%E5%B9%B4.html" class="badge tag-link me-2 mb-1">
                         2026年
                       </a>
                       
-                      <a href="/tag/%E8%81%8C%E5%9C%BA%E8%B6%8B%E5%8A%BF.html" class="badge tag-link">
+                      <a href="/tag/%E8%81%8C%E5%9C%BA%E8%B6%8B%E5%8A%BF.html" class="badge tag-link me-2 mb-1">
                         职场趋势
                       </a>
                       
@@ -977,52 +1059,53 @@
               </div>
               
               <div class="masonry-grid-item">
-                <div class="card shadow-sm">
+                <div class="card article-card shadow-sm">
                   <div class="card-body">
-                    <h5 class="card-title">
-                      <i class="bi bi-file-earmark-text"></i>
-                      <a href="../mdhtml/用DeepSeek高效创作：2026年内容创作者AI工具实战手册.html" class="text-decoration-none">
+                    <h5 class="card-title article-title">
+                      <i class="bi bi-file-earmark-text me-2 text-primary"></i>
+                      <a href="../mdhtml/用DeepSeek高效创作：2026年内容创作者AI工具实战手册.html" class="text-decoration-none text-dark">
                         用DeepSeek高效创作：2026年内容创作者AI工具实战手册
                       </a>
                     </h5>
                     
-                      <p class="card-text">
+                      <p class="card-text text-muted mb-3">
                         2026年内容创作者AI工具实战手册，教您如何使用DeepSeek高效创作，提升内容创作效率和质量。
                       </p>
                       
-                        
-                          <small class="text-muted">
-                            2026-02-28
-                          </small>
-                          
+                        <div class="article-meta">
+                            
+                                <i class="bi bi-clock me-1"></i>
+                                2026-02-28
+                                
+                        </div>
                   </div>
-                  <div class="card-footer text-muted">
+                  <div class="card-footer text-muted bg-white border-top">
                     <a href="/category/%E5%86%85%E5%AE%B9%E5%88%9B%E4%BD%9C.html"
-                      class="badge bg-primary">
+                      class="badge bg-primary me-2">
                       内容创作
                     </a>
                     
-                      <a href="/tag/DeepSeek.html" class="badge tag-link">
+                      <a href="/tag/DeepSeek.html" class="badge tag-link me-2 mb-1">
                         DeepSeek
                       </a>
                       
-                      <a href="/tag/AI%E5%B7%A5%E5%85%B7.html" class="badge tag-link">
+                      <a href="/tag/AI%E5%B7%A5%E5%85%B7.html" class="badge tag-link me-2 mb-1">
                         AI工具
                       </a>
                       
-                      <a href="/tag/%E5%86%85%E5%AE%B9%E5%88%9B%E4%BD%9C.html" class="badge tag-link">
+                      <a href="/tag/%E5%86%85%E5%AE%B9%E5%88%9B%E4%BD%9C.html" class="badge tag-link me-2 mb-1">
                         内容创作
                       </a>
                       
-                      <a href="/tag/2026%E5%B9%B4.html" class="badge tag-link">
+                      <a href="/tag/2026%E5%B9%B4.html" class="badge tag-link me-2 mb-1">
                         2026年
                       </a>
                       
-                      <a href="/tag/%E5%AE%9E%E6%88%98%E6%89%8B%E5%86%8C.html" class="badge tag-link">
+                      <a href="/tag/%E5%AE%9E%E6%88%98%E6%89%8B%E5%86%8C.html" class="badge tag-link me-2 mb-1">
                         实战手册
                       </a>
                       
-                      <a href="/tag/%E5%88%9B%E4%BD%9C%E8%80%85%E5%B7%A5%E5%85%B7.html" class="badge tag-link">
+                      <a href="/tag/%E5%88%9B%E4%BD%9C%E8%80%85%E5%B7%A5%E5%85%B7.html" class="badge tag-link me-2 mb-1">
                         创作者工具
                       </a>
                       
@@ -1031,52 +1114,53 @@
               </div>
               
               <div class="masonry-grid-item">
-                <div class="card shadow-sm">
+                <div class="card article-card shadow-sm">
                   <div class="card-body">
-                    <h5 class="card-title">
-                      <i class="bi bi-file-earmark-text"></i>
-                      <a href="../mdhtml/2026丙午马年家居风水布局指南：招财纳福，提升运势.html" class="text-decoration-none">
+                    <h5 class="card-title article-title">
+                      <i class="bi bi-file-earmark-text me-2 text-primary"></i>
+                      <a href="../mdhtml/2026丙午马年家居风水布局指南：招财纳福，提升运势.html" class="text-decoration-none text-dark">
                         2026丙午马年家居风水布局指南：招财纳福，提升运势
                       </a>
                     </h5>
                     
-                      <p class="card-text">
+                      <p class="card-text text-muted mb-3">
                         2026丙午马年家居风水布局指南，提供具体可操作的家居调整建议，帮助您招财纳福，提升新年运势。
                       </p>
                       
-                        
-                          <small class="text-muted">
-                            2026-02-28
-                          </small>
-                          
+                        <div class="article-meta">
+                            
+                                <i class="bi bi-clock me-1"></i>
+                                2026-02-28
+                                
+                        </div>
                   </div>
-                  <div class="card-footer text-muted">
+                  <div class="card-footer text-muted bg-white border-top">
                     <a href="/category/%E7%94%9F%E6%B4%BB%E7%99%BE%E7%A7%91.html"
-                      class="badge bg-primary">
+                      class="badge bg-primary me-2">
                       生活百科
                     </a>
                     
-                      <a href="/tag/%E5%AE%B6%E5%B1%85%E9%A3%8E%E6%B0%B4.html" class="badge tag-link">
+                      <a href="/tag/%E5%AE%B6%E5%B1%85%E9%A3%8E%E6%B0%B4.html" class="badge tag-link me-2 mb-1">
                         家居风水
                       </a>
                       
-                      <a href="/tag/%E9%A9%AC%E5%B9%B4%E8%BF%90%E5%8A%BF.html" class="badge tag-link">
+                      <a href="/tag/%E9%A9%AC%E5%B9%B4%E8%BF%90%E5%8A%BF.html" class="badge tag-link me-2 mb-1">
                         马年运势
                       </a>
                       
-                      <a href="/tag/%E6%8B%9B%E8%B4%A2%E7%BA%B3%E7%A6%8F.html" class="badge tag-link">
+                      <a href="/tag/%E6%8B%9B%E8%B4%A2%E7%BA%B3%E7%A6%8F.html" class="badge tag-link me-2 mb-1">
                         招财纳福
                       </a>
                       
-                      <a href="/tag/2026%E5%B9%B4.html" class="badge tag-link">
+                      <a href="/tag/2026%E5%B9%B4.html" class="badge tag-link me-2 mb-1">
                         2026年
                       </a>
                       
-                      <a href="/tag/%E9%A3%8E%E6%B0%B4%E5%B8%83%E5%B1%80.html" class="badge tag-link">
+                      <a href="/tag/%E9%A3%8E%E6%B0%B4%E5%B8%83%E5%B1%80.html" class="badge tag-link me-2 mb-1">
                         风水布局
                       </a>
                       
-                      <a href="/tag/%E5%AE%B6%E5%B1%85%E8%B0%83%E6%95%B4.html" class="badge tag-link">
+                      <a href="/tag/%E5%AE%B6%E5%B1%85%E8%B0%83%E6%95%B4.html" class="badge tag-link me-2 mb-1">
                         家居调整
                       </a>
                       
@@ -1085,52 +1169,53 @@
               </div>
               
               <div class="masonry-grid-item">
-                <div class="card shadow-sm">
+                <div class="card article-card shadow-sm">
                   <div class="card-body">
-                    <h5 class="card-title">
-                      <i class="bi bi-file-earmark-text"></i>
-                      <a href="../mdhtml/三口之家财务规划模板：2026年实现存款与生活质量双提升.html" class="text-decoration-none">
+                    <h5 class="card-title article-title">
+                      <i class="bi bi-file-earmark-text me-2 text-primary"></i>
+                      <a href="../mdhtml/三口之家财务规划模板：2026年实现存款与生活质量双提升.html" class="text-decoration-none text-dark">
                         三口之家财务规划模板：2026年实现存款与生活质量双提升
                       </a>
                     </h5>
                     
-                      <p class="card-text">
+                      <p class="card-text text-muted mb-3">
                         2026年三口之家财务规划模板，帮助您实现存款与生活质量的双提升，为家庭财务健康保驾护航。
                       </p>
                       
-                        
-                          <small class="text-muted">
-                            2026-02-28
-                          </small>
-                          
+                        <div class="article-meta">
+                            
+                                <i class="bi bi-clock me-1"></i>
+                                2026-02-28
+                                
+                        </div>
                   </div>
-                  <div class="card-footer text-muted">
+                  <div class="card-footer text-muted bg-white border-top">
                     <a href="/category/%E7%90%86%E8%B4%A2%E8%A7%84%E5%88%92.html"
-                      class="badge bg-primary">
+                      class="badge bg-primary me-2">
                       理财规划
                     </a>
                     
-                      <a href="/tag/%E8%B4%A2%E5%8A%A1%E8%A7%84%E5%88%92.html" class="badge tag-link">
+                      <a href="/tag/%E8%B4%A2%E5%8A%A1%E8%A7%84%E5%88%92.html" class="badge tag-link me-2 mb-1">
                         财务规划
                       </a>
                       
-                      <a href="/tag/%E4%B8%89%E5%8F%A3%E4%B9%8B%E5%AE%B6.html" class="badge tag-link">
+                      <a href="/tag/%E4%B8%89%E5%8F%A3%E4%B9%8B%E5%AE%B6.html" class="badge tag-link me-2 mb-1">
                         三口之家
                       </a>
                       
-                      <a href="/tag/%E5%AD%98%E6%AC%BE%E6%8F%90%E5%8D%87.html" class="badge tag-link">
+                      <a href="/tag/%E5%AD%98%E6%AC%BE%E6%8F%90%E5%8D%87.html" class="badge tag-link me-2 mb-1">
                         存款提升
                       </a>
                       
-                      <a href="/tag/%E7%94%9F%E6%B4%BB%E8%B4%A8%E9%87%8F.html" class="badge tag-link">
+                      <a href="/tag/%E7%94%9F%E6%B4%BB%E8%B4%A8%E9%87%8F.html" class="badge tag-link me-2 mb-1">
                         生活质量
                       </a>
                       
-                      <a href="/tag/2026%E5%B9%B4.html" class="badge tag-link">
+                      <a href="/tag/2026%E5%B9%B4.html" class="badge tag-link me-2 mb-1">
                         2026年
                       </a>
                       
-                      <a href="/tag/%E5%AE%B6%E5%BA%AD%E7%90%86%E8%B4%A2.html" class="badge tag-link">
+                      <a href="/tag/%E5%AE%B6%E5%BA%AD%E7%90%86%E8%B4%A2.html" class="badge tag-link me-2 mb-1">
                         家庭理财
                       </a>
                       
@@ -1139,52 +1224,53 @@
               </div>
               
               <div class="masonry-grid-item">
-                <div class="card shadow-sm">
+                <div class="card article-card shadow-sm">
                   <div class="card-body">
-                    <h5 class="card-title">
-                      <i class="bi bi-file-earmark-text"></i>
-                      <a href="../mdhtml/远程办公效率翻倍的10个工具与习惯（2026实测版）.html" class="text-decoration-none">
+                    <h5 class="card-title article-title">
+                      <i class="bi bi-file-earmark-text me-2 text-primary"></i>
+                      <a href="../mdhtml/远程办公效率翻倍的10个工具与习惯（2026实测版）.html" class="text-decoration-none text-dark">
                         远程办公效率翻倍的10个工具与习惯（2026实测版）
                       </a>
                     </h5>
                     
-                      <p class="card-text">
+                      <p class="card-text text-muted mb-3">
                         2026年远程办公效率翻倍的10个工具与习惯实测指南，帮助你在远程工作中保持高效，提升工作质量和生活平衡。
                       </p>
                       
-                        
-                          <small class="text-muted">
-                            2026-02-28
-                          </small>
-                          
+                        <div class="article-meta">
+                            
+                                <i class="bi bi-clock me-1"></i>
+                                2026-02-28
+                                
+                        </div>
                   </div>
-                  <div class="card-footer text-muted">
+                  <div class="card-footer text-muted bg-white border-top">
                     <a href="/category/%E8%81%8C%E5%9C%BA%E6%8C%87%E5%8D%97.html"
-                      class="badge bg-primary">
+                      class="badge bg-primary me-2">
                       职场指南
                     </a>
                     
-                      <a href="/tag/%E8%BF%9C%E7%A8%8B%E5%8A%9E%E5%85%AC.html" class="badge tag-link">
+                      <a href="/tag/%E8%BF%9C%E7%A8%8B%E5%8A%9E%E5%85%AC.html" class="badge tag-link me-2 mb-1">
                         远程办公
                       </a>
                       
-                      <a href="/tag/%E6%95%88%E7%8E%87%E5%B7%A5%E5%85%B7.html" class="badge tag-link">
+                      <a href="/tag/%E6%95%88%E7%8E%87%E5%B7%A5%E5%85%B7.html" class="badge tag-link me-2 mb-1">
                         效率工具
                       </a>
                       
-                      <a href="/tag/%E5%B7%A5%E4%BD%9C%E4%B9%A0%E6%83%AF.html" class="badge tag-link">
+                      <a href="/tag/%E5%B7%A5%E4%BD%9C%E4%B9%A0%E6%83%AF.html" class="badge tag-link me-2 mb-1">
                         工作习惯
                       </a>
                       
-                      <a href="/tag/2026%E5%B9%B4.html" class="badge tag-link">
+                      <a href="/tag/2026%E5%B9%B4.html" class="badge tag-link me-2 mb-1">
                         2026年
                       </a>
                       
-                      <a href="/tag/%E8%81%8C%E5%9C%BA%E6%8F%90%E5%8D%87.html" class="badge tag-link">
+                      <a href="/tag/%E8%81%8C%E5%9C%BA%E6%8F%90%E5%8D%87.html" class="badge tag-link me-2 mb-1">
                         职场提升
                       </a>
                       
-                      <a href="/tag/%E5%B7%A5%E4%BD%9C%E6%95%88%E7%8E%87.html" class="badge tag-link">
+                      <a href="/tag/%E5%B7%A5%E4%BD%9C%E6%95%88%E7%8E%87.html" class="badge tag-link me-2 mb-1">
                         工作效率
                       </a>
                       
@@ -1193,52 +1279,53 @@
               </div>
               
               <div class="masonry-grid-item">
-                <div class="card shadow-sm">
+                <div class="card article-card shadow-sm">
                   <div class="card-body">
-                    <h5 class="card-title">
-                      <i class="bi bi-file-earmark-text"></i>
-                      <a href="../mdhtml/AI辅导孩子作业：是神器还是陷阱？2026年家长必读指南.html" class="text-decoration-none">
+                    <h5 class="card-title article-title">
+                      <i class="bi bi-file-earmark-text me-2 text-primary"></i>
+                      <a href="../mdhtml/AI辅导孩子作业：是神器还是陷阱？2026年家长必读指南.html" class="text-decoration-none text-dark">
                         AI辅导孩子作业：是神器还是陷阱？2026年家长必读指南
                       </a>
                     </h5>
                     
-                      <p class="card-text">
+                      <p class="card-text text-muted mb-3">
                         2026年AI辅导孩子作业的全面分析，探讨AI在教育中的利弊，为家长提供科学使用AI辅导工具的指南。
                       </p>
                       
-                        
-                          <small class="text-muted">
-                            2026-02-28
-                          </small>
-                          
+                        <div class="article-meta">
+                            
+                                <i class="bi bi-clock me-1"></i>
+                                2026-02-28
+                                
+                        </div>
                   </div>
-                  <div class="card-footer text-muted">
+                  <div class="card-footer text-muted bg-white border-top">
                     <a href="/category/%E6%95%99%E8%82%B2%E8%82%B2%E5%84%BF.html"
-                      class="badge bg-primary">
+                      class="badge bg-primary me-2">
                       教育育儿
                     </a>
                     
-                      <a href="/tag/AI%E8%BE%85%E5%AF%BC.html" class="badge tag-link">
+                      <a href="/tag/AI%E8%BE%85%E5%AF%BC.html" class="badge tag-link me-2 mb-1">
                         AI辅导
                       </a>
                       
-                      <a href="/tag/%E5%AD%A9%E5%AD%90%E4%BD%9C%E4%B8%9A.html" class="badge tag-link">
+                      <a href="/tag/%E5%AD%A9%E5%AD%90%E4%BD%9C%E4%B8%9A.html" class="badge tag-link me-2 mb-1">
                         孩子作业
                       </a>
                       
-                      <a href="/tag/%E5%AE%B6%E9%95%BF%E5%BF%85%E8%AF%BB.html" class="badge tag-link">
+                      <a href="/tag/%E5%AE%B6%E9%95%BF%E5%BF%85%E8%AF%BB.html" class="badge tag-link me-2 mb-1">
                         家长必读
                       </a>
                       
-                      <a href="/tag/2026%E5%B9%B4.html" class="badge tag-link">
+                      <a href="/tag/2026%E5%B9%B4.html" class="badge tag-link me-2 mb-1">
                         2026年
                       </a>
                       
-                      <a href="/tag/%E6%95%99%E8%82%B2%E7%A7%91%E6%8A%80.html" class="badge tag-link">
+                      <a href="/tag/%E6%95%99%E8%82%B2%E7%A7%91%E6%8A%80.html" class="badge tag-link me-2 mb-1">
                         教育科技
                       </a>
                       
-                      <a href="/tag/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD.html" class="badge tag-link">
+                      <a href="/tag/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD.html" class="badge tag-link me-2 mb-1">
                         人工智能
                       </a>
                       
@@ -1247,52 +1334,53 @@
               </div>
               
               <div class="masonry-grid-item">
-                <div class="card shadow-sm">
+                <div class="card article-card shadow-sm">
                   <div class="card-body">
-                    <h5 class="card-title">
-                      <i class="bi bi-file-earmark-text"></i>
-                      <a href="../mdhtml/元宇宙沉浸式体验测评：2026年哪些虚拟世界值得探索？.html" class="text-decoration-none">
+                    <h5 class="card-title article-title">
+                      <i class="bi bi-file-earmark-text me-2 text-primary"></i>
+                      <a href="../mdhtml/元宇宙沉浸式体验测评：2026年哪些虚拟世界值得探索？.html" class="text-decoration-none text-dark">
                         元宇宙沉浸式体验测评：2026年哪些虚拟世界值得探索？
                       </a>
                     </h5>
                     
-                      <p class="card-text">
+                      <p class="card-text text-muted mb-3">
                         2026年元宇宙沉浸式体验全面测评，为您推荐值得探索的虚拟世界，带您了解最新的元宇宙技术与应用。
                       </p>
                       
-                        
-                          <small class="text-muted">
-                            2026-02-28
-                          </small>
-                          
+                        <div class="article-meta">
+                            
+                                <i class="bi bi-clock me-1"></i>
+                                2026-02-28
+                                
+                        </div>
                   </div>
-                  <div class="card-footer text-muted">
+                  <div class="card-footer text-muted bg-white border-top">
                     <a href="/category/%E7%A7%91%E6%8A%80%E5%89%8D%E6%B2%BF.html"
-                      class="badge bg-primary">
+                      class="badge bg-primary me-2">
                       科技前沿
                     </a>
                     
-                      <a href="/tag/%E5%85%83%E5%AE%87%E5%AE%99.html" class="badge tag-link">
+                      <a href="/tag/%E5%85%83%E5%AE%87%E5%AE%99.html" class="badge tag-link me-2 mb-1">
                         元宇宙
                       </a>
                       
-                      <a href="/tag/%E8%99%9A%E6%8B%9F%E4%B8%96%E7%95%8C.html" class="badge tag-link">
+                      <a href="/tag/%E8%99%9A%E6%8B%9F%E4%B8%96%E7%95%8C.html" class="badge tag-link me-2 mb-1">
                         虚拟世界
                       </a>
                       
-                      <a href="/tag/%E6%B2%89%E6%B5%B8%E5%BC%8F%E4%BD%93%E9%AA%8C.html" class="badge tag-link">
+                      <a href="/tag/%E6%B2%89%E6%B5%B8%E5%BC%8F%E4%BD%93%E9%AA%8C.html" class="badge tag-link me-2 mb-1">
                         沉浸式体验
                       </a>
                       
-                      <a href="/tag/2026%E5%B9%B4.html" class="badge tag-link">
+                      <a href="/tag/2026%E5%B9%B4.html" class="badge tag-link me-2 mb-1">
                         2026年
                       </a>
                       
-                      <a href="/tag/%E7%A7%91%E6%8A%80%E6%B5%8B%E8%AF%84.html" class="badge tag-link">
+                      <a href="/tag/%E7%A7%91%E6%8A%80%E6%B5%8B%E8%AF%84.html" class="badge tag-link me-2 mb-1">
                         科技测评
                       </a>
                       
-                      <a href="/tag/%E8%99%9A%E6%8B%9F%E6%8E%A2%E7%B4%A2.html" class="badge tag-link">
+                      <a href="/tag/%E8%99%9A%E6%8B%9F%E6%8E%A2%E7%B4%A2.html" class="badge tag-link me-2 mb-1">
                         虚拟探索
                       </a>
                       
@@ -1301,52 +1389,53 @@
               </div>
               
               <div class="masonry-grid-item">
-                <div class="card shadow-sm">
+                <div class="card article-card shadow-sm">
                   <div class="card-body">
-                    <h5 class="card-title">
-                      <i class="bi bi-file-earmark-text"></i>
-                      <a href="../mdhtml/2026丙午马年运势解析：事业、财运、健康全指南.html" class="text-decoration-none">
+                    <h5 class="card-title article-title">
+                      <i class="bi bi-file-earmark-text me-2 text-primary"></i>
+                      <a href="../mdhtml/2026丙午马年运势解析：事业、财运、健康全指南.html" class="text-decoration-none text-dark">
                         2026丙午马年运势解析：事业、财运、健康全指南
                       </a>
                     </h5>
                     
-                      <p class="card-text">
+                      <p class="card-text text-muted mb-3">
                         2026丙午马年运势全面解析，涵盖事业、财运、健康等方面，为您的新年规划提供参考，助力您在新的一年顺风顺水。
                       </p>
                       
-                        
-                          <small class="text-muted">
-                            2026-02-28
-                          </small>
-                          
+                        <div class="article-meta">
+                            
+                                <i class="bi bi-clock me-1"></i>
+                                2026-02-28
+                                
+                        </div>
                   </div>
-                  <div class="card-footer text-muted">
+                  <div class="card-footer text-muted bg-white border-top">
                     <a href="/category/%E7%94%9F%E6%B4%BB%E7%99%BE%E7%A7%91.html"
-                      class="badge bg-primary">
+                      class="badge bg-primary me-2">
                       生活百科
                     </a>
                     
-                      <a href="/tag/%E9%A9%AC%E5%B9%B4%E8%BF%90%E5%8A%BF.html" class="badge tag-link">
+                      <a href="/tag/%E9%A9%AC%E5%B9%B4%E8%BF%90%E5%8A%BF.html" class="badge tag-link me-2 mb-1">
                         马年运势
                       </a>
                       
-                      <a href="/tag/%E4%BA%8B%E4%B8%9A%E8%B4%A2%E8%BF%90.html" class="badge tag-link">
+                      <a href="/tag/%E4%BA%8B%E4%B8%9A%E8%B4%A2%E8%BF%90.html" class="badge tag-link me-2 mb-1">
                         事业财运
                       </a>
                       
-                      <a href="/tag/%E5%81%A5%E5%BA%B7%E6%8C%87%E5%8D%97.html" class="badge tag-link">
+                      <a href="/tag/%E5%81%A5%E5%BA%B7%E6%8C%87%E5%8D%97.html" class="badge tag-link me-2 mb-1">
                         健康指南
                       </a>
                       
-                      <a href="/tag/2026%E5%B9%B4.html" class="badge tag-link">
+                      <a href="/tag/2026%E5%B9%B4.html" class="badge tag-link me-2 mb-1">
                         2026年
                       </a>
                       
-                      <a href="/tag/%E6%96%B0%E5%B9%B4%E8%A7%84%E5%88%92.html" class="badge tag-link">
+                      <a href="/tag/%E6%96%B0%E5%B9%B4%E8%A7%84%E5%88%92.html" class="badge tag-link me-2 mb-1">
                         新年规划
                       </a>
                       
-                      <a href="/tag/%E7%94%9F%E8%82%96%E8%BF%90%E5%8A%BF.html" class="badge tag-link">
+                      <a href="/tag/%E7%94%9F%E8%82%96%E8%BF%90%E5%8A%BF.html" class="badge tag-link me-2 mb-1">
                         生肖运势
                       </a>
                       
@@ -1356,8 +1445,8 @@
               
           </div>
 
-          <div class="mt-4 text-center">
-            <a href="标签列表.html" class="btn btn-outline-primary"><i class="bi bi-arrow-left"></i> 返回标签列表</a>
+          <div class="mt-6 text-center">
+            <a href="标签列表.html" class="btn btn-outline-primary back-button"><i class="bi bi-arrow-left me-2"></i> 返回标签列表</a>
           </div>
         </div>
       </div>
@@ -1381,7 +1470,7 @@
             itemSelector: '.masonry-grid-item',
             columnWidth: '.masonry-grid-item',
             percentPosition: true,
-            gutter: 10 // 可选，添加卡片间的间距
+            gutter: 15 // 增加间距，提升视觉效果
           });
         });
       </script>

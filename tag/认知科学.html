@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
 
 <head>
   <meta charset="UTF-8">
@@ -9,7 +9,7 @@
   <meta name="description" content="无人自助站的【认知科学】的标签列表页面，汇集了关于【认知科学】标签相关的文章和资讯，方便您快速找到感兴趣的内容。">
   <meta name="keywords" content="无人自助站,认知科学">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>标签文章列表</title>
+  <title>认知科学标签 - 无人自助站</title>
 
   <link rel="icon" href="../logo.svg" type="image/svg+xml">
   <link rel="stylesheet" href="../css/style.css">
@@ -27,6 +27,62 @@
   <!-- 引入Masonry -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/masonry/4.2.2/masonry.pkgd.min.js"></script>
 
+  <style>
+        .tag-header {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            color: white;
+            padding: 2rem;
+            border-radius: 8px;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        .tag-title {
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+        .article-card {
+            transition: all 0.3s ease;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        .article-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+        }
+        .article-title {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            transition: color 0.3s ease;
+        }
+        .article-title:hover {
+            color: #0d6efd;
+        }
+        .article-meta {
+            font-size: 0.85rem;
+            color: #6c757d;
+        }
+        .tag-link {
+            background-color: #e9ecef;
+            color: #495057;
+            transition: all 0.2s ease;
+        }
+        .tag-link:hover {
+            background-color: #dee2e6;
+            color: #212529;
+        }
+        .back-button {
+            transition: all 0.3s ease;
+        }
+        .back-button:hover {
+            transform: translateX(-3px);
+        }
+        .article-count {
+            font-size: 0.9rem;
+            opacity: 0.9;
+        }
+    </style>
 </head>
 
 <body>
@@ -80,7 +136,7 @@
     <main class="container-fluid mt-4">
       <div class="row">
         <div class="col-lg-8 col-md-12 mx-auto">
-          <nav aria-label="breadcrumb">
+          <nav aria-label="breadcrumb" class="mb-4">
             <ol class="breadcrumb">
               <li class="breadcrumb-item"><a href="/html/index.html">首页</a></li>
               <li class="breadcrumb-item"><a href="标签列表.html">标签列表</a></li>
@@ -89,54 +145,64 @@
               </li>
             </ol>
           </nav>
-          <h1 style="font-size: 1.5em; margin: 0.5em 0;">
-            认知科学标签的文章和资讯
-        </h1>
+          
+          <!-- 标签头部 -->
+          <div class="tag-header">
+              <h1 class="tag-title">
+                  <i class="bi bi-tags me-2"></i>
+                  认知科学
+              </h1>
+              <p class="article-count">
+                  共 12 篇文章
+              </p>
+          </div>
+          
           <div class="masonry-grid">
             
               <div class="masonry-grid-item">
-                <div class="card shadow-sm">
+                <div class="card article-card shadow-sm">
                   <div class="card-body">
-                    <h5 class="card-title">
-                      <i class="bi bi-file-earmark-text"></i>
-                      <a href="../mdhtml/现代版“吾日三省吾身”：用古老智慧解锁自我成长的3个维度.html" class="text-decoration-none">
+                    <h5 class="card-title article-title">
+                      <i class="bi bi-file-earmark-text me-2 text-primary"></i>
+                      <a href="../mdhtml/现代版“吾日三省吾身”：用古老智慧解锁自我成长的3个维度.html" class="text-decoration-none text-dark">
                         现代版“吾日三省吾身”：用古老智慧解锁自我成长的3个维度
                       </a>
                     </h5>
                     
-                      <p class="card-text">
+                      <p class="card-text text-muted mb-3">
                         探索现代版“吾日三省吾身”的实践方法，在2025年的今天，通过决策省察、情绪GPS导航和数字断舍离三大维度解锁自我成长。本文融合古老智慧与最新科技发展，提供实用的自省框架和工具包配置建议，帮助你在算法推荐与AI共生的时代中保持清醒认知，建立坚固的认知健康指数。从晨间三问到技术伦理检查表，掌握提升元认知能力、价值锚定力及意义建构力的方法，让每日反思成为你在数字洪流中的认知方舟。适合追求个人成长、关注科技伦理以及希望在智能时代中持续自我迭代的所有读者。
                       </p>
                       
-                        
-                          <small class="text-muted">
-                            2026-02-27
-                          </small>
-                          
+                        <div class="article-meta">
+                            
+                                <i class="bi bi-clock me-1"></i>
+                                2026-02-27
+                                
+                        </div>
                   </div>
-                  <div class="card-footer text-muted">
+                  <div class="card-footer text-muted bg-white border-top">
                     <a href="/category/%E4%BC%A0%E7%BB%9F%E6%96%87%E5%8C%96.html"
-                      class="badge bg-primary">
+                      class="badge bg-primary me-2">
                       传统文化
                     </a>
                     
-                      <a href="/tag/%E8%87%AA%E6%88%91%E6%8F%90%E5%8D%87.html" class="badge tag-link">
+                      <a href="/tag/%E8%87%AA%E6%88%91%E6%8F%90%E5%8D%87.html" class="badge tag-link me-2 mb-1">
                         自我提升
                       </a>
                       
-                      <a href="/tag/%E6%83%85%E7%BB%AAGPS%E5%AF%BC%E8%88%AA.html" class="badge tag-link">
+                      <a href="/tag/%E6%83%85%E7%BB%AAGPS%E5%AF%BC%E8%88%AA.html" class="badge tag-link me-2 mb-1">
                         情绪GPS导航
                       </a>
                       
-                      <a href="/tag/%E6%95%B0%E5%AD%97%E6%96%AD%E8%88%8D%E7%A6%BB.html" class="badge tag-link">
+                      <a href="/tag/%E6%95%B0%E5%AD%97%E6%96%AD%E8%88%8D%E7%A6%BB.html" class="badge tag-link me-2 mb-1">
                         数字断舍离
                       </a>
                       
-                      <a href="/tag/%E7%A7%91%E6%8A%80%E4%BC%A6%E7%90%86.html" class="badge tag-link">
+                      <a href="/tag/%E7%A7%91%E6%8A%80%E4%BC%A6%E7%90%86.html" class="badge tag-link me-2 mb-1">
                         科技伦理
                       </a>
                       
-                      <a href="/tag/%E8%AE%A4%E7%9F%A5%E7%A7%91%E5%AD%A6.html" class="badge tag-link">
+                      <a href="/tag/%E8%AE%A4%E7%9F%A5%E7%A7%91%E5%AD%A6.html" class="badge tag-link me-2 mb-1">
                         认知科学
                       </a>
                       
@@ -145,72 +211,73 @@
               </div>
               
               <div class="masonry-grid-item">
-                <div class="card shadow-sm">
+                <div class="card article-card shadow-sm">
                   <div class="card-body">
-                    <h5 class="card-title">
-                      <i class="bi bi-file-earmark-text"></i>
-                      <a href="../mdhtml/健康生活的底层逻辑：从认知到行动的转变.html" class="text-decoration-none">
+                    <h5 class="card-title article-title">
+                      <i class="bi bi-file-earmark-text me-2 text-primary"></i>
+                      <a href="../mdhtml/健康生活的底层逻辑：从认知到行动的转变.html" class="text-decoration-none text-dark">
                         健康生活指南：从认知到行动的全面转变策略
                       </a>
                     </h5>
                     
-                      <p class="card-text">
+                      <p class="card-text text-muted mb-3">
                         2026年最新健康生活指南，深入解析健康生活的底层逻辑，从认知转变到行动实践，涵盖营养、运动、睡眠、压力管理等全方位健康策略，帮助你建立长期可持续的健康生活方式。
                       </p>
                       
-                        
-                          <small class="text-muted">
-                            2026-02-25
-                          </small>
-                          
+                        <div class="article-meta">
+                            
+                                <i class="bi bi-clock me-1"></i>
+                                2026-02-25
+                                
+                        </div>
                   </div>
-                  <div class="card-footer text-muted">
+                  <div class="card-footer text-muted bg-white border-top">
                     <a href="/category/%E5%81%A5%E5%BA%B7%E7%94%9F%E6%B4%BB.html"
-                      class="badge bg-primary">
+                      class="badge bg-primary me-2">
                       健康生活
                     </a>
                     
-                      <a href="/tag/%E5%81%A5%E5%BA%B7%E7%94%9F%E6%B4%BB.html" class="badge tag-link">
+                      <a href="/tag/%E5%81%A5%E5%BA%B7%E7%94%9F%E6%B4%BB.html" class="badge tag-link me-2 mb-1">
                         健康生活
                       </a>
                       
-                      <a href="/tag/%E7%94%9F%E6%B4%BB%E6%96%B9%E5%BC%8F.html" class="badge tag-link">
+                      <a href="/tag/%E7%94%9F%E6%B4%BB%E6%96%B9%E5%BC%8F.html" class="badge tag-link me-2 mb-1">
                         生活方式
                       </a>
                       
-                      <a href="/tag/%E8%AE%A4%E7%9F%A5%E7%A7%91%E5%AD%A6.html" class="badge tag-link">
+                      <a href="/tag/%E8%AE%A4%E7%9F%A5%E7%A7%91%E5%AD%A6.html" class="badge tag-link me-2 mb-1">
                         认知科学
                       </a>
                       
-                      <a href="/tag/%E4%B9%A0%E6%83%AF%E5%85%BB%E6%88%90.html" class="badge tag-link">
+                      <a href="/tag/%E4%B9%A0%E6%83%AF%E5%85%BB%E6%88%90.html" class="badge tag-link me-2 mb-1">
                         习惯养成
                       </a>
                       
-                      <a href="/tag/%E8%87%AA%E6%88%91%E6%8F%90%E5%8D%87.html" class="badge tag-link">
+                      <a href="/tag/%E8%87%AA%E6%88%91%E6%8F%90%E5%8D%87.html" class="badge tag-link me-2 mb-1">
                         自我提升
                       </a>
                       
-                      <a href="/tag/%E5%81%A5%E5%BA%B7%E7%AE%A1%E7%90%86.html" class="badge tag-link">
+                      <a href="/tag/%E5%81%A5%E5%BA%B7%E7%AE%A1%E7%90%86.html" class="badge tag-link me-2 mb-1">
                         健康管理
                       </a>
                       
-                      <a href="/tag/%E8%90%A5%E5%85%BB.html" class="badge tag-link">
+                      <a href="/tag/%E8%90%A5%E5%85%BB.html" class="badge tag-link me-2 mb-1">
                         营养
                       </a>
                       
-                      <a href="/tag/%E8%BF%90%E5%8A%A8.html" class="badge tag-link">
+                      <a href="/tag/%E8%BF%90%E5%8A%A8.html" class="badge tag-link me-2 mb-1">
                         运动
                       </a>
                       
-                      <a href="/tag/%E7%9D%A1%E7%9C%A0.html" class="badge tag-link">
+                      <a href="/tag/%E7%9D%A1%E7%9C%A0.html" class="badge tag-link me-2 mb-1">
                         睡眠
                       </a>
                       
-                      <a href="/tag/%E5%8E%8B%E5%8A%9B%E7%AE%A1%E7%90%86.html" class="badge tag-link">
+                      <a href="/tag/%E5%8E%8B%E5%8A%9B%E7%AE%A1%E7%90%86.html" class="badge tag-link me-2 mb-1">
                         压力管理
                       </a>
                       
-                      <a href="/tag/%E5%BF%83%E7%90%86%E5%81%A5%E5%BA%B7.html" class="badge tag-link">
+                      <a href="/tag/%E5%BF%83%E7%90%86%E5%81%A5%E5%BA%B7.html" class="badge tag-link me-2 mb-1">
                         心理健康
                       </a>
                       
@@ -219,68 +286,69 @@
               </div>
               
               <div class="masonry-grid-item">
-                <div class="card shadow-sm">
+                <div class="card article-card shadow-sm">
                   <div class="card-body">
-                    <h5 class="card-title">
-                      <i class="bi bi-file-earmark-text"></i>
-                      <a href="../mdhtml/信息爆炸时代如何保持专注力？实用策略.html" class="text-decoration-none">
+                    <h5 class="card-title article-title">
+                      <i class="bi bi-file-earmark-text me-2 text-primary"></i>
+                      <a href="../mdhtml/信息爆炸时代如何保持专注力？实用策略.html" class="text-decoration-none text-dark">
                         信息时代的专注力革命：从分心到深度的转变
                       </a>
                     </h5>
                     
-                      <p class="card-text">
+                      <p class="card-text text-muted mb-3">
                         全面解析信息爆炸时代的专注力挑战与应对策略，从认知科学角度分析分心机制，提供具体的专注力训练方法、环境优化技巧和数字极简策略，帮助个人在信息过载的环境中保持深度专注，提高工作效率和生活质量。
                       </p>
                       
-                        
-                          <small class="text-muted">
-                            2026-02-24
-                          </small>
-                          
+                        <div class="article-meta">
+                            
+                                <i class="bi bi-clock me-1"></i>
+                                2026-02-24
+                                
+                        </div>
                   </div>
-                  <div class="card-footer text-muted">
+                  <div class="card-footer text-muted bg-white border-top">
                     <a href="/category/%E8%87%AA%E6%88%91%E6%8F%90%E5%8D%87.html"
-                      class="badge bg-primary">
+                      class="badge bg-primary me-2">
                       自我提升
                     </a>
                     
-                      <a href="/tag/%E4%B8%93%E6%B3%A8%E5%8A%9B.html" class="badge tag-link">
+                      <a href="/tag/%E4%B8%93%E6%B3%A8%E5%8A%9B.html" class="badge tag-link me-2 mb-1">
                         专注力
                       </a>
                       
-                      <a href="/tag/%E6%B3%A8%E6%84%8F%E5%8A%9B%E7%AE%A1%E7%90%86.html" class="badge tag-link">
+                      <a href="/tag/%E6%B3%A8%E6%84%8F%E5%8A%9B%E7%AE%A1%E7%90%86.html" class="badge tag-link me-2 mb-1">
                         注意力管理
                       </a>
                       
-                      <a href="/tag/%E4%BF%A1%E6%81%AF%E7%88%86%E7%82%B8.html" class="badge tag-link">
+                      <a href="/tag/%E4%BF%A1%E6%81%AF%E7%88%86%E7%82%B8.html" class="badge tag-link me-2 mb-1">
                         信息爆炸
                       </a>
                       
-                      <a href="/tag/%E6%B7%B1%E5%BA%A6%E5%B7%A5%E4%BD%9C.html" class="badge tag-link">
+                      <a href="/tag/%E6%B7%B1%E5%BA%A6%E5%B7%A5%E4%BD%9C.html" class="badge tag-link me-2 mb-1">
                         深度工作
                       </a>
                       
-                      <a href="/tag/%E5%88%86%E5%BF%83.html" class="badge tag-link">
+                      <a href="/tag/%E5%88%86%E5%BF%83.html" class="badge tag-link me-2 mb-1">
                         分心
                       </a>
                       
-                      <a href="/tag/%E6%97%B6%E9%97%B4%E7%AE%A1%E7%90%86.html" class="badge tag-link">
+                      <a href="/tag/%E6%97%B6%E9%97%B4%E7%AE%A1%E7%90%86.html" class="badge tag-link me-2 mb-1">
                         时间管理
                       </a>
                       
-                      <a href="/tag/%E6%95%88%E7%8E%87%E6%8F%90%E5%8D%87.html" class="badge tag-link">
+                      <a href="/tag/%E6%95%88%E7%8E%87%E6%8F%90%E5%8D%87.html" class="badge tag-link me-2 mb-1">
                         效率提升
                       </a>
                       
-                      <a href="/tag/%E6%95%B0%E5%AD%97%E6%9E%81%E7%AE%80.html" class="badge tag-link">
+                      <a href="/tag/%E6%95%B0%E5%AD%97%E6%9E%81%E7%AE%80.html" class="badge tag-link me-2 mb-1">
                         数字极简
                       </a>
                       
-                      <a href="/tag/%E4%B8%93%E6%B3%A8%E5%8A%9B%E8%AE%AD%E7%BB%83.html" class="badge tag-link">
+                      <a href="/tag/%E4%B8%93%E6%B3%A8%E5%8A%9B%E8%AE%AD%E7%BB%83.html" class="badge tag-link me-2 mb-1">
                         专注力训练
                       </a>
                       
-                      <a href="/tag/%E8%AE%A4%E7%9F%A5%E7%A7%91%E5%AD%A6.html" class="badge tag-link">
+                      <a href="/tag/%E8%AE%A4%E7%9F%A5%E7%A7%91%E5%AD%A6.html" class="badge tag-link me-2 mb-1">
                         认知科学
                       </a>
                       
@@ -289,52 +357,53 @@
               </div>
               
               <div class="masonry-grid-item">
-                <div class="card shadow-sm">
+                <div class="card article-card shadow-sm">
                   <div class="card-body">
-                    <h5 class="card-title">
-                      <i class="bi bi-file-earmark-text"></i>
-                      <a href="../mdhtml/意识的本质：大脑的产物还是独立存在.html" class="text-decoration-none">
+                    <h5 class="card-title article-title">
+                      <i class="bi bi-file-earmark-text me-2 text-primary"></i>
+                      <a href="../mdhtml/意识的本质：大脑的产物还是独立存在.html" class="text-decoration-none text-dark">
                         意识的本质：大脑的产物还是独立存在
                       </a>
                     </h5>
                     
-                      <p class="card-text">
+                      <p class="card-text text-muted mb-3">
                         本文探讨了意识的本质，分析了物理主义与二元论的哲学争论。通过神经科学、认知科学和哲学的多角度分析，揭示了意识现象的复杂性，最终提出了在意识中寻找自我的生活智慧。
                       </p>
                       
-                        
-                          <small class="text-muted">
-                            2026-02-24
-                          </small>
-                          
+                        <div class="article-meta">
+                            
+                                <i class="bi bi-clock me-1"></i>
+                                2026-02-24
+                                
+                        </div>
                   </div>
-                  <div class="card-footer text-muted">
+                  <div class="card-footer text-muted bg-white border-top">
                     <a href="/category/%E5%93%B2%E5%AD%A6%E6%80%9D%E8%80%83.html"
-                      class="badge bg-primary">
+                      class="badge bg-primary me-2">
                       哲学思考
                     </a>
                     
-                      <a href="/tag/%E6%84%8F%E8%AF%86%E6%9C%AC%E8%B4%A8.html" class="badge tag-link">
+                      <a href="/tag/%E6%84%8F%E8%AF%86%E6%9C%AC%E8%B4%A8.html" class="badge tag-link me-2 mb-1">
                         意识本质
                       </a>
                       
-                      <a href="/tag/%E5%93%B2%E5%AD%A6%E6%80%9D%E8%80%83.html" class="badge tag-link">
+                      <a href="/tag/%E5%93%B2%E5%AD%A6%E6%80%9D%E8%80%83.html" class="badge tag-link me-2 mb-1">
                         哲学思考
                       </a>
                       
-                      <a href="/tag/%E7%A5%9E%E7%BB%8F%E7%A7%91%E5%AD%A6.html" class="badge tag-link">
+                      <a href="/tag/%E7%A5%9E%E7%BB%8F%E7%A7%91%E5%AD%A6.html" class="badge tag-link me-2 mb-1">
                         神经科学
                       </a>
                       
-                      <a href="/tag/%E8%AE%A4%E7%9F%A5%E7%A7%91%E5%AD%A6.html" class="badge tag-link">
+                      <a href="/tag/%E8%AE%A4%E7%9F%A5%E7%A7%91%E5%AD%A6.html" class="badge tag-link me-2 mb-1">
                         认知科学
                       </a>
                       
-                      <a href="/tag/%E4%BA%8C%E5%85%83%E8%AE%BA.html" class="badge tag-link">
+                      <a href="/tag/%E4%BA%8C%E5%85%83%E8%AE%BA.html" class="badge tag-link me-2 mb-1">
                         二元论
                       </a>
                       
-                      <a href="/tag/%E7%89%A9%E7%90%86%E4%B8%BB%E4%B9%89.html" class="badge tag-link">
+                      <a href="/tag/%E7%89%A9%E7%90%86%E4%B8%BB%E4%B9%89.html" class="badge tag-link me-2 mb-1">
                         物理主义
                       </a>
                       
@@ -343,56 +412,57 @@
               </div>
               
               <div class="masonry-grid-item">
-                <div class="card shadow-sm">
+                <div class="card article-card shadow-sm">
                   <div class="card-body">
-                    <h5 class="card-title">
-                      <i class="bi bi-file-earmark-text"></i>
-                      <a href="../mdhtml/决策优化的科学：如何做出更明智的选择.html" class="text-decoration-none">
+                    <h5 class="card-title article-title">
+                      <i class="bi bi-file-earmark-text me-2 text-primary"></i>
+                      <a href="../mdhtml/决策优化的科学：如何做出更明智的选择.html" class="text-decoration-none text-dark">
                         决策优化的科学：如何做出更明智的选择
                       </a>
                     </h5>
                     
-                      <p class="card-text">
+                      <p class="card-text text-muted mb-3">
                         探讨决策优化的科学原理和实践方法，分析影响决策质量的因素，提供结构化的决策框架和工具，帮助读者在面对复杂选择时做出更明智、更符合个人价值观的决策。
                       </p>
                       
-                        
-                          <small class="text-muted">
-                            2026-02-24
-                          </small>
-                          
+                        <div class="article-meta">
+                            
+                                <i class="bi bi-clock me-1"></i>
+                                2026-02-24
+                                
+                        </div>
                   </div>
-                  <div class="card-footer text-muted">
+                  <div class="card-footer text-muted bg-white border-top">
                     <a href="/category/%E4%BA%BA%E7%94%9F%E7%AE%A1%E7%90%86.html"
-                      class="badge bg-primary">
+                      class="badge bg-primary me-2">
                       人生管理
                     </a>
                     
-                      <a href="/tag/%E5%86%B3%E7%AD%96%E4%BC%98%E5%8C%96.html" class="badge tag-link">
+                      <a href="/tag/%E5%86%B3%E7%AD%96%E4%BC%98%E5%8C%96.html" class="badge tag-link me-2 mb-1">
                         决策优化
                       </a>
                       
-                      <a href="/tag/%E4%BA%BA%E7%94%9F%E5%86%B3%E7%AD%96.html" class="badge tag-link">
+                      <a href="/tag/%E4%BA%BA%E7%94%9F%E5%86%B3%E7%AD%96.html" class="badge tag-link me-2 mb-1">
                         人生决策
                       </a>
                       
-                      <a href="/tag/%E8%AE%A4%E7%9F%A5%E7%A7%91%E5%AD%A6.html" class="badge tag-link">
+                      <a href="/tag/%E8%AE%A4%E7%9F%A5%E7%A7%91%E5%AD%A6.html" class="badge tag-link me-2 mb-1">
                         认知科学
                       </a>
                       
-                      <a href="/tag/%E7%90%86%E6%80%A7%E5%86%B3%E7%AD%96.html" class="badge tag-link">
+                      <a href="/tag/%E7%90%86%E6%80%A7%E5%86%B3%E7%AD%96.html" class="badge tag-link me-2 mb-1">
                         理性决策
                       </a>
                       
-                      <a href="/tag/%E5%86%B3%E7%AD%96%E6%A1%86%E6%9E%B6.html" class="badge tag-link">
+                      <a href="/tag/%E5%86%B3%E7%AD%96%E6%A1%86%E6%9E%B6.html" class="badge tag-link me-2 mb-1">
                         决策框架
                       </a>
                       
-                      <a href="/tag/%E4%BB%B7%E5%80%BC%E8%A7%82.html" class="badge tag-link">
+                      <a href="/tag/%E4%BB%B7%E5%80%BC%E8%A7%82.html" class="badge tag-link me-2 mb-1">
                         价值观
                       </a>
                       
-                      <a href="/tag/%E9%80%89%E6%8B%A9%E7%A7%91%E5%AD%A6.html" class="badge tag-link">
+                      <a href="/tag/%E9%80%89%E6%8B%A9%E7%A7%91%E5%AD%A6.html" class="badge tag-link me-2 mb-1">
                         选择科学
                       </a>
                       
@@ -401,56 +471,57 @@
               </div>
               
               <div class="masonry-grid-item">
-                <div class="card shadow-sm">
+                <div class="card article-card shadow-sm">
                   <div class="card-body">
-                    <h5 class="card-title">
-                      <i class="bi bi-file-earmark-text"></i>
-                      <a href="../mdhtml/人生决策的神经科学视角：大脑如何做选择.html" class="text-decoration-none">
+                    <h5 class="card-title article-title">
+                      <i class="bi bi-file-earmark-text me-2 text-primary"></i>
+                      <a href="../mdhtml/人生决策的神经科学视角：大脑如何做选择.html" class="text-decoration-none text-dark">
                         人生决策的神经科学视角：大脑如何做选择
                       </a>
                     </h5>
                     
-                      <p class="card-text">
+                      <p class="card-text text-muted mb-3">
                         从神经科学的角度探讨人生决策的机制，分析大脑在做决策时的神经过程，包括理性与感性的平衡、决策偏差的神经基础、最佳决策时机等，帮助读者理解大脑的决策机制并优化个人决策过程。
                       </p>
                       
-                        
-                          <small class="text-muted">
-                            2026-02-24
-                          </small>
-                          
+                        <div class="article-meta">
+                            
+                                <i class="bi bi-clock me-1"></i>
+                                2026-02-24
+                                
+                        </div>
                   </div>
-                  <div class="card-footer text-muted">
+                  <div class="card-footer text-muted bg-white border-top">
                     <a href="/category/%E4%BA%BA%E7%94%9F%E7%AE%A1%E7%90%86.html"
-                      class="badge bg-primary">
+                      class="badge bg-primary me-2">
                       人生管理
                     </a>
                     
-                      <a href="/tag/%E4%BA%BA%E7%94%9F%E5%86%B3%E7%AD%96.html" class="badge tag-link">
+                      <a href="/tag/%E4%BA%BA%E7%94%9F%E5%86%B3%E7%AD%96.html" class="badge tag-link me-2 mb-1">
                         人生决策
                       </a>
                       
-                      <a href="/tag/%E7%A5%9E%E7%BB%8F%E7%A7%91%E5%AD%A6.html" class="badge tag-link">
+                      <a href="/tag/%E7%A5%9E%E7%BB%8F%E7%A7%91%E5%AD%A6.html" class="badge tag-link me-2 mb-1">
                         神经科学
                       </a>
                       
-                      <a href="/tag/%E5%A4%A7%E8%84%91%E6%9C%BA%E5%88%B6.html" class="badge tag-link">
+                      <a href="/tag/%E5%A4%A7%E8%84%91%E6%9C%BA%E5%88%B6.html" class="badge tag-link me-2 mb-1">
                         大脑机制
                       </a>
                       
-                      <a href="/tag/%E5%86%B3%E7%AD%96%E5%81%8F%E5%B7%AE.html" class="badge tag-link">
+                      <a href="/tag/%E5%86%B3%E7%AD%96%E5%81%8F%E5%B7%AE.html" class="badge tag-link me-2 mb-1">
                         决策偏差
                       </a>
                       
-                      <a href="/tag/%E7%90%86%E6%80%A7%E5%86%B3%E7%AD%96.html" class="badge tag-link">
+                      <a href="/tag/%E7%90%86%E6%80%A7%E5%86%B3%E7%AD%96.html" class="badge tag-link me-2 mb-1">
                         理性决策
                       </a>
                       
-                      <a href="/tag/%E7%9B%B4%E8%A7%89%E5%86%B3%E7%AD%96.html" class="badge tag-link">
+                      <a href="/tag/%E7%9B%B4%E8%A7%89%E5%86%B3%E7%AD%96.html" class="badge tag-link me-2 mb-1">
                         直觉决策
                       </a>
                       
-                      <a href="/tag/%E8%AE%A4%E7%9F%A5%E7%A7%91%E5%AD%A6.html" class="badge tag-link">
+                      <a href="/tag/%E8%AE%A4%E7%9F%A5%E7%A7%91%E5%AD%A6.html" class="badge tag-link me-2 mb-1">
                         认知科学
                       </a>
                       
@@ -459,48 +530,49 @@
               </div>
               
               <div class="masonry-grid-item">
-                <div class="card shadow-sm">
+                <div class="card article-card shadow-sm">
                   <div class="card-body">
-                    <h5 class="card-title">
-                      <i class="bi bi-file-earmark-text"></i>
-                      <a href="../mdhtml/井底之蛙：被低估的认知边界实验.html" class="text-decoration-none">
+                    <h5 class="card-title article-title">
+                      <i class="bi bi-file-earmark-text me-2 text-primary"></i>
+                      <a href="../mdhtml/井底之蛙：被低估的认知边界实验.html" class="text-decoration-none text-dark">
                         井底之蛙：被低估的认知边界实验
                       </a>
                     </h5>
                     
-                      <p class="card-text">
+                      <p class="card-text text-muted mb-3">
                         本文以现代认知科学视角重新解读经典寓言《井底之蛙》，揭示了其中蕴含的认知边界理论与突破策略。文章探讨了井蛙困境的现代映射，分析了认知茧房的形成机制，并阐述了突破边界的实践路径。此外，还讨论了井底视角的独特价值以及这一古老寓言对现代社会在信息茧房、思维局限、创新突破等方面的启示。适合对认知科学、思维升级、创新方法论感兴趣的读者，以及希望突破自身局限的人士。
                       </p>
                       
-                        
-                          <small class="text-muted">
-                            2026-02-24
-                          </small>
-                          
+                        <div class="article-meta">
+                            
+                                <i class="bi bi-clock me-1"></i>
+                                2026-02-24
+                                
+                        </div>
                   </div>
-                  <div class="card-footer text-muted">
+                  <div class="card-footer text-muted bg-white border-top">
                     <a href="/category/%E4%BC%A0%E7%BB%9F%E6%96%87%E5%8C%96.html"
-                      class="badge bg-primary">
+                      class="badge bg-primary me-2">
                       传统文化
                     </a>
                     
-                      <a href="/tag/%E5%AF%93%E8%A8%80%E8%A7%A3%E6%9E%90.html" class="badge tag-link">
+                      <a href="/tag/%E5%AF%93%E8%A8%80%E8%A7%A3%E6%9E%90.html" class="badge tag-link me-2 mb-1">
                         寓言解析
                       </a>
                       
-                      <a href="/tag/%E8%AE%A4%E7%9F%A5%E7%A7%91%E5%AD%A6.html" class="badge tag-link">
+                      <a href="/tag/%E8%AE%A4%E7%9F%A5%E7%A7%91%E5%AD%A6.html" class="badge tag-link me-2 mb-1">
                         认知科学
                       </a>
                       
-                      <a href="/tag/%E8%BE%B9%E7%95%8C%E7%AA%81%E7%A0%B4.html" class="badge tag-link">
+                      <a href="/tag/%E8%BE%B9%E7%95%8C%E7%AA%81%E7%A0%B4.html" class="badge tag-link me-2 mb-1">
                         边界突破
                       </a>
                       
-                      <a href="/tag/%E6%80%9D%E7%BB%B4%E5%8D%87%E7%BA%A7.html" class="badge tag-link">
+                      <a href="/tag/%E6%80%9D%E7%BB%B4%E5%8D%87%E7%BA%A7.html" class="badge tag-link me-2 mb-1">
                         思维升级
                       </a>
                       
-                      <a href="/tag/%E7%8E%B0%E4%BB%A3%E5%90%AF%E7%A4%BA.html" class="badge tag-link">
+                      <a href="/tag/%E7%8E%B0%E4%BB%A3%E5%90%AF%E7%A4%BA.html" class="badge tag-link me-2 mb-1">
                         现代启示
                       </a>
                       
@@ -509,48 +581,49 @@
               </div>
               
               <div class="masonry-grid-item">
-                <div class="card shadow-sm">
+                <div class="card article-card shadow-sm">
                   <div class="card-body">
-                    <h5 class="card-title">
-                      <i class="bi bi-file-earmark-text"></i>
-                      <a href="../mdhtml/认知差异下的成长启示：重读《小马过河》的现代隐喻.html" class="text-decoration-none">
+                    <h5 class="card-title article-title">
+                      <i class="bi bi-file-earmark-text me-2 text-primary"></i>
+                      <a href="../mdhtml/认知差异下的成长启示：重读《小马过河》的现代隐喻.html" class="text-decoration-none text-dark">
                         认知差异下的成长启示：重读《小马过河》的现代隐喻
                       </a>
                     </h5>
                     
-                      <p class="card-text">
+                      <p class="card-text text-muted mb-3">
                         本文通过重读经典童话《小马过河》，探讨了其中蕴含的关于认知差异、信息筛选与决策困境的现代隐喻。文章分析了经验如何成为认知的局限，强调了试错的重要性以及通过主动探索构建个人知识体系的价值。此外，还讨论了真相的动态属性和数字时代特有的“小马困境”，即在信息爆炸背景下独立思考的重要性。适合希望从传统故事中寻找解决现代问题启示的读者。
                       </p>
                       
-                        
-                          <small class="text-muted">
-                            2026-02-11
-                          </small>
-                          
+                        <div class="article-meta">
+                            
+                                <i class="bi bi-clock me-1"></i>
+                                2026-02-11
+                                
+                        </div>
                   </div>
-                  <div class="card-footer text-muted">
+                  <div class="card-footer text-muted bg-white border-top">
                     <a href="/category/%E7%A4%BE%E4%BC%9A%E6%8E%A2%E7%A9%B6.html"
-                      class="badge bg-primary">
+                      class="badge bg-primary me-2">
                       社会探究
                     </a>
                     
-                      <a href="/tag/%E8%AE%A4%E7%9F%A5%E7%A7%91%E5%AD%A6.html" class="badge tag-link">
+                      <a href="/tag/%E8%AE%A4%E7%9F%A5%E7%A7%91%E5%AD%A6.html" class="badge tag-link me-2 mb-1">
                         认知科学
                       </a>
                       
-                      <a href="/tag/%E4%BF%A1%E6%81%AF%E7%AD%9B%E9%80%89.html" class="badge tag-link">
+                      <a href="/tag/%E4%BF%A1%E6%81%AF%E7%AD%9B%E9%80%89.html" class="badge tag-link me-2 mb-1">
                         信息筛选
                       </a>
                       
-                      <a href="/tag/%E5%86%B3%E7%AD%96%E5%9B%B0%E5%A2%83.html" class="badge tag-link">
+                      <a href="/tag/%E5%86%B3%E7%AD%96%E5%9B%B0%E5%A2%83.html" class="badge tag-link me-2 mb-1">
                         决策困境
                       </a>
                       
-                      <a href="/tag/%E6%95%99%E8%82%B2%E7%90%86%E5%BF%B5.html" class="badge tag-link">
+                      <a href="/tag/%E6%95%99%E8%82%B2%E7%90%86%E5%BF%B5.html" class="badge tag-link me-2 mb-1">
                         教育理念
                       </a>
                       
-                      <a href="/tag/%E6%95%B0%E5%AD%97%E6%97%B6%E4%BB%A3.html" class="badge tag-link">
+                      <a href="/tag/%E6%95%B0%E5%AD%97%E6%97%B6%E4%BB%A3.html" class="badge tag-link me-2 mb-1">
                         数字时代
                       </a>
                       
@@ -559,48 +632,49 @@
               </div>
               
               <div class="masonry-grid-item">
-                <div class="card shadow-sm">
+                <div class="card article-card shadow-sm">
                   <div class="card-body">
-                    <h5 class="card-title">
-                      <i class="bi bi-file-earmark-text"></i>
-                      <a href="../mdhtml/缘木求鱼：逆向思维下的认知突围与生命韧性.html" class="text-decoration-none">
+                    <h5 class="card-title article-title">
+                      <i class="bi bi-file-earmark-text me-2 text-primary"></i>
+                      <a href="../mdhtml/缘木求鱼：逆向思维下的认知突围与生命韧性.html" class="text-decoration-none text-dark">
                         缘木求鱼：逆向思维下的认知突围与生命韧性
                       </a>
                     </h5>
                     
-                      <p class="card-text">
+                      <p class="card-text text-muted mb-3">
                         本文通过“缘木求鱼”这一古老寓言，探讨了突破传统思维定式的重要性。文章指出，当现实条件与理想路径发生冲突时，所谓的“错误”方法可能带来意想不到的创新和突破。借助自然界和现代社会中的实例，如弹涂鱼离水爬树、特斯拉颠覆汽车业等，本文强调了打破路径依赖、转化资源错位及提升认知维度的价值。最终，本文鼓励读者在面对看似不可能的情况下，勇于挑战常规思维，寻找新的可能性，因为真正的限制往往在于我们对“正确”的狭隘理解，而进化的关键则在于不断突破这些预设框架。
                       </p>
                       
-                        
-                          <small class="text-muted">
-                            2026-02-11
-                          </small>
-                          
+                        <div class="article-meta">
+                            
+                                <i class="bi bi-clock me-1"></i>
+                                2026-02-11
+                                
+                        </div>
                   </div>
-                  <div class="card-footer text-muted">
+                  <div class="card-footer text-muted bg-white border-top">
                     <a href="/category/%E4%BC%A0%E7%BB%9F%E6%96%87%E5%8C%96.html"
-                      class="badge bg-primary">
+                      class="badge bg-primary me-2">
                       传统文化
                     </a>
                     
-                      <a href="/tag/%E8%AE%A4%E7%9F%A5%E7%A7%91%E5%AD%A6.html" class="badge tag-link">
+                      <a href="/tag/%E8%AE%A4%E7%9F%A5%E7%A7%91%E5%AD%A6.html" class="badge tag-link me-2 mb-1">
                         认知科学
                       </a>
                       
-                      <a href="/tag/%E9%80%86%E5%90%91%E6%80%9D%E7%BB%B4.html" class="badge tag-link">
+                      <a href="/tag/%E9%80%86%E5%90%91%E6%80%9D%E7%BB%B4.html" class="badge tag-link me-2 mb-1">
                         逆向思维
                       </a>
                       
-                      <a href="/tag/%E7%94%9F%E5%91%BD%E9%9F%A7%E6%80%A7.html" class="badge tag-link">
+                      <a href="/tag/%E7%94%9F%E5%91%BD%E9%9F%A7%E6%80%A7.html" class="badge tag-link me-2 mb-1">
                         生命韧性
                       </a>
                       
-                      <a href="/tag/%E8%B7%AF%E5%BE%84%E4%BE%9D%E8%B5%96.html" class="badge tag-link">
+                      <a href="/tag/%E8%B7%AF%E5%BE%84%E4%BE%9D%E8%B5%96.html" class="badge tag-link me-2 mb-1">
                         路径依赖
                       </a>
                       
-                      <a href="/tag/%E8%BF%9B%E5%8C%96%E7%AA%81%E7%A0%B4.html" class="badge tag-link">
+                      <a href="/tag/%E8%BF%9B%E5%8C%96%E7%AA%81%E7%A0%B4.html" class="badge tag-link me-2 mb-1">
                         进化突破
                       </a>
                       
@@ -609,48 +683,49 @@
               </div>
               
               <div class="masonry-grid-item">
-                <div class="card shadow-sm">
+                <div class="card article-card shadow-sm">
                   <div class="card-body">
-                    <h5 class="card-title">
-                      <i class="bi bi-file-earmark-text"></i>
-                      <a href="../mdhtml/现代社会中的“掩耳盗铃”行为：现象、危害与破解之道.html" class="text-decoration-none">
+                    <h5 class="card-title article-title">
+                      <i class="bi bi-file-earmark-text me-2 text-primary"></i>
+                      <a href="../mdhtml/现代社会中的“掩耳盗铃”行为：现象、危害与破解之道.html" class="text-decoration-none text-dark">
                         现代社会中的“掩耳盗铃”行为：现象、危害与破解之道
                       </a>
                     </h5>
                     
-                      <p class="card-text">
+                      <p class="card-text text-muted mb-3">
                         现代社会中的“掩耳盗铃”现象包括学术造假、职场敷衍、数据美化及个人生活的认知偏差等，这些行为不仅导致资源浪费和信任损害，还可能引发系统性风险。文章提出了认知重构、制度设计和行为干预三大策略来破解这种自欺行为，强调通过建立透明化体系、正向反馈机制以及教育体系的改进，从个体到系统层面逐步减少此类现象，推动社会向更加诚信和理性的方向发展。
                       </p>
                       
-                        
-                          <small class="text-muted">
-                            2026-02-11
-                          </small>
-                          
+                        <div class="article-meta">
+                            
+                                <i class="bi bi-clock me-1"></i>
+                                2026-02-11
+                                
+                        </div>
                   </div>
-                  <div class="card-footer text-muted">
+                  <div class="card-footer text-muted bg-white border-top">
                     <a href="/category/%E4%BC%A0%E7%BB%9F%E6%96%87%E5%8C%96.html"
-                      class="badge bg-primary">
+                      class="badge bg-primary me-2">
                       传统文化
                     </a>
                     
-                      <a href="/tag/%E5%AD%A6%E6%9C%AF%E9%80%A0%E5%81%87.html" class="badge tag-link">
+                      <a href="/tag/%E5%AD%A6%E6%9C%AF%E9%80%A0%E5%81%87.html" class="badge tag-link me-2 mb-1">
                         学术造假
                       </a>
                       
-                      <a href="/tag/%E8%81%8C%E5%9C%BA%E6%95%B7%E8%A1%8D.html" class="badge tag-link">
+                      <a href="/tag/%E8%81%8C%E5%9C%BA%E6%95%B7%E8%A1%8D.html" class="badge tag-link me-2 mb-1">
                         职场敷衍
                       </a>
                       
-                      <a href="/tag/%E6%95%B0%E6%8D%AE%E7%BE%8E%E5%8C%96.html" class="badge tag-link">
+                      <a href="/tag/%E6%95%B0%E6%8D%AE%E7%BE%8E%E5%8C%96.html" class="badge tag-link me-2 mb-1">
                         数据美化
                       </a>
                       
-                      <a href="/tag/%E8%AE%A4%E7%9F%A5%E7%A7%91%E5%AD%A6.html" class="badge tag-link">
+                      <a href="/tag/%E8%AE%A4%E7%9F%A5%E7%A7%91%E5%AD%A6.html" class="badge tag-link me-2 mb-1">
                         认知科学
                       </a>
                       
-                      <a href="/tag/%E5%88%B6%E5%BA%A6%E8%AE%BE%E8%AE%A1.html" class="badge tag-link">
+                      <a href="/tag/%E5%88%B6%E5%BA%A6%E8%AE%BE%E8%AE%A1.html" class="badge tag-link me-2 mb-1">
                         制度设计
                       </a>
                       
@@ -659,48 +734,49 @@
               </div>
               
               <div class="masonry-grid-item">
-                <div class="card shadow-sm">
+                <div class="card article-card shadow-sm">
                   <div class="card-body">
-                    <h5 class="card-title">
-                      <i class="bi bi-file-earmark-text"></i>
-                      <a href="../mdhtml/我们是否真正了解自己？.html" class="text-decoration-none">
+                    <h5 class="card-title article-title">
+                      <i class="bi bi-file-earmark-text me-2 text-primary"></i>
+                      <a href="../mdhtml/我们是否真正了解自己？.html" class="text-decoration-none text-dark">
                         我们是否真正了解自己？
                       </a>
                     </h5>
                     
-                      <p class="card-text">
+                      <p class="card-text text-muted mb-3">
                         本文深入探讨了自我认知的复杂性和挑战，指出真正的自我了解涉及多个维度，包括心理、情感和社会角色等方面。文中讨论了认知局限如何影响我们的自我理解，并提出了几种探索自我的实用方法，如自我观察、记录内心感受和重视他人反馈。强调维持开放心态对于突破固有思维模式的重要性。适合希望深入了解自己、关注心理健康和个人发展的读者。
                       </p>
                       
-                        
-                          <small class="text-muted">
-                            2026-02-11
-                          </small>
-                          
+                        <div class="article-meta">
+                            
+                                <i class="bi bi-clock me-1"></i>
+                                2026-02-11
+                                
+                        </div>
                   </div>
-                  <div class="card-footer text-muted">
+                  <div class="card-footer text-muted bg-white border-top">
                     <a href="/category/%E8%BA%AB%E5%BF%83%E5%81%A5%E5%BA%B7.html"
-                      class="badge bg-primary">
+                      class="badge bg-primary me-2">
                       身心健康
                     </a>
                     
-                      <a href="/tag/%E8%87%AA%E6%88%91%E8%AE%A4%E7%9F%A5.html" class="badge tag-link">
+                      <a href="/tag/%E8%87%AA%E6%88%91%E8%AE%A4%E7%9F%A5.html" class="badge tag-link me-2 mb-1">
                         自我认知
                       </a>
                       
-                      <a href="/tag/%E8%AE%A4%E7%9F%A5%E7%A7%91%E5%AD%A6.html" class="badge tag-link">
+                      <a href="/tag/%E8%AE%A4%E7%9F%A5%E7%A7%91%E5%AD%A6.html" class="badge tag-link me-2 mb-1">
                         认知科学
                       </a>
                       
-                      <a href="/tag/%E6%8E%A2%E7%B4%A2%E8%B7%AF%E5%BE%84.html" class="badge tag-link">
+                      <a href="/tag/%E6%8E%A2%E7%B4%A2%E8%B7%AF%E5%BE%84.html" class="badge tag-link me-2 mb-1">
                         探索路径
                       </a>
                       
-                      <a href="/tag/%E5%BF%83%E7%90%86%E6%9C%BA%E5%88%B6.html" class="badge tag-link">
+                      <a href="/tag/%E5%BF%83%E7%90%86%E6%9C%BA%E5%88%B6.html" class="badge tag-link me-2 mb-1">
                         心理机制
                       </a>
                       
-                      <a href="/tag/%E7%A4%BE%E4%BC%9A%E8%A7%92%E8%89%B2.html" class="badge tag-link">
+                      <a href="/tag/%E7%A4%BE%E4%BC%9A%E8%A7%92%E8%89%B2.html" class="badge tag-link me-2 mb-1">
                         社会角色
                       </a>
                       
@@ -709,44 +785,45 @@
               </div>
               
               <div class="masonry-grid-item">
-                <div class="card shadow-sm">
+                <div class="card article-card shadow-sm">
                   <div class="card-body">
-                    <h5 class="card-title">
-                      <i class="bi bi-file-earmark-text"></i>
-                      <a href="../mdhtml/《两小儿辩日》：一场跨越千年的认知突围战.html" class="text-decoration-none">
+                    <h5 class="card-title article-title">
+                      <i class="bi bi-file-earmark-text me-2 text-primary"></i>
+                      <a href="../mdhtml/《两小儿辩日》：一场跨越千年的认知突围战.html" class="text-decoration-none text-dark">
                         《两小儿辩日》：一场跨越千年的认知突围战
                       </a>
                     </h5>
                     
-                      <p class="card-text">
+                      <p class="card-text text-muted mb-3">
                         本文通过解读《两小儿辩日》的故事，探讨了认知科学与思辨方法的重要性。文章指出，两小儿分别从视觉和热力学角度提出关于太阳远近的不同论点，展示了将现象抽象为理论的早期科学思维。孔子面对争论无法决断，反映了承认无知对于认知突破的重要性。本文还讨论了信息茧房现象对现代人认知的影响，并提倡在不确定中寻找确定性，鼓励读者保持质疑精神，勇于突破认知边界，正如故事中的孩童一样，用天真破除权威，以矛盾推动创新。这些古代智慧为现代社会提供了重要的启示。
                       </p>
                       
-                        
-                          <small class="text-muted">
-                            2026-02-11
-                          </small>
-                          
+                        <div class="article-meta">
+                            
+                                <i class="bi bi-clock me-1"></i>
+                                2026-02-11
+                                
+                        </div>
                   </div>
-                  <div class="card-footer text-muted">
+                  <div class="card-footer text-muted bg-white border-top">
                     <a href="/category/%E7%A4%BE%E4%BC%9A%E6%8E%A2%E7%A9%B6.html"
-                      class="badge bg-primary">
+                      class="badge bg-primary me-2">
                       社会探究
                     </a>
                     
-                      <a href="/tag/%E6%80%9D%E8%BE%A8%E6%96%B9%E6%B3%95.html" class="badge tag-link">
+                      <a href="/tag/%E6%80%9D%E8%BE%A8%E6%96%B9%E6%B3%95.html" class="badge tag-link me-2 mb-1">
                         思辨方法
                       </a>
                       
-                      <a href="/tag/%E8%AE%A4%E7%9F%A5%E7%A7%91%E5%AD%A6.html" class="badge tag-link">
+                      <a href="/tag/%E8%AE%A4%E7%9F%A5%E7%A7%91%E5%AD%A6.html" class="badge tag-link me-2 mb-1">
                         认知科学
                       </a>
                       
-                      <a href="/tag/%E5%8E%86%E5%8F%B2%E6%95%85%E4%BA%8B.html" class="badge tag-link">
+                      <a href="/tag/%E5%8E%86%E5%8F%B2%E6%95%85%E4%BA%8B.html" class="badge tag-link me-2 mb-1">
                         历史故事
                       </a>
                       
-                      <a href="/tag/%E7%A7%91%E6%8A%80%E5%89%8D%E6%B2%BF.html" class="badge tag-link">
+                      <a href="/tag/%E7%A7%91%E6%8A%80%E5%89%8D%E6%B2%BF.html" class="badge tag-link me-2 mb-1">
                         科技前沿
                       </a>
                       
@@ -756,8 +833,8 @@
               
           </div>
 
-          <div class="mt-4 text-center">
-            <a href="标签列表.html" class="btn btn-outline-primary"><i class="bi bi-arrow-left"></i> 返回标签列表</a>
+          <div class="mt-6 text-center">
+            <a href="标签列表.html" class="btn btn-outline-primary back-button"><i class="bi bi-arrow-left me-2"></i> 返回标签列表</a>
           </div>
         </div>
       </div>
@@ -781,7 +858,7 @@
             itemSelector: '.masonry-grid-item',
             columnWidth: '.masonry-grid-item',
             percentPosition: true,
-            gutter: 10 // 可选，添加卡片间的间距
+            gutter: 15 // 增加间距，提升视觉效果
           });
         });
       </script>
