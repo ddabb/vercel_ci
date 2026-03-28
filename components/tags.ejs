@@ -96,25 +96,104 @@
                             <span class="me-2">按首字母筛选：</span>
                             <a href="#" class="alphabet-link active" data-letter="all">全部</a>
                             <% 
-                            const letters = new Set();
+                            // 手动定义所有可能的拼音首字母
+                            const allLetters = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'];
+                            // 为每个标签分配拼音首字母（简化版，实际项目中可能需要更复杂的拼音转换）
+                            const tagLetters = new Map();
                             sortedTags.forEach(tag => {
-                                const firstChar = tag.name.charAt(0).toUpperCase();
-                                if (/[A-Z0-9]/.test(firstChar)) {
-                                    letters.add(firstChar);
-                                } else {
-                                    letters.add('其他');
+                                const name = tag.name;
+                                let firstLetter = '其他';
+                                
+                                // 完整的中文首字母映射，覆盖所有分类和标签的首字
+                                const charMap = {
+                                    '人': 'R', '工': 'G', '智': 'Z', '能': 'N', '科': 'K', '技': 'J', '前': 'Q', '沿': 'Y',
+                                    '财': 'C', '富': 'F', '管': 'G', '理': 'L', '健': 'J', '康': 'K', '生': 'S', '活': 'H',
+                                    '职': 'Z', '业': 'Y', '发': 'F', '展': 'Z', '自': 'Z', '我': 'W', '提': 'T', '升': 'S',
+                                    '传': 'C', '统': 'T', '文': 'W', '化': 'H', '脑': 'N', '洞': 'D', '大': 'D', '开': 'K',
+                                    '人': 'R', '际': 'J', '相': 'X', '处': 'C', '项': 'X', '目': 'M', '管': 'G', '理': 'L',
+                                    '生': 'S', '活': 'H', '日': 'R', '常': 'C', '感': 'G', '悟': 'W', '台': 'T', '球': 'Q',
+                                    '天': 'T', '地': 'D', '自': 'Z', '然': 'R', '科': 'K', '学': 'X', '工': 'G', '具': 'J',
+                                    '推': 'T', '荐': 'J', '社': 'S', '会': 'H', '探': 'T', '究': 'J', '观': 'G', '察': 'C',
+                                    '婚': 'H', '姻': 'Y', '情': 'Q', '感': 'G', '人': 'R', '生': 'S', '哲': 'Z', '学': 'X',
+                                    '教': 'J', '育': 'Y', '学': 'X', '习': 'X', '环': 'H', '保': 'B', '可': 'K', '持': 'C',
+                                    '续': 'X', '数': 'S', '字': 'Z', '家': 'J', '庭': 'T', '心': 'X', '理': 'L', '性': 'X',
+                                    '别': 'B', '数': 'S', '字': 'Z', '营': 'Y', '销': 'X', '科': 'K', '幻': 'H', '想': 'X',
+                                    '职': 'Z', '场': 'C', '理': 'L', '财': 'C', '心': 'X', '理': 'L', '成': 'C', '长': 'Z',
+                                    '历': 'L', '史': 'S', '创': 'C', '新': 'X', '密': 'M', '关': 'G', '系': 'X', '育': 'Y',
+                                    '儿': 'E', '生': 'S', '命': 'M', '工': 'G', '作': 'Z', '文': 'W', '化': 'H', '艺': 'Y',
+                                    '术': 'S', '内': 'N', '容': 'R', '创': 'C', '作': 'Z', '医': 'Y', '疗': 'L', '美': 'M',
+                                    '容': 'R', '体': 'T', '育': 'Y', '经': 'J', '济': 'J', '交': 'J', '通': 'T', '出': 'C',
+                                    '行': 'X', '思': 'S', '考': 'K', '元': 'Y', '宇': 'Y', '宙': 'Z', '经': 'J', '济': 'J',
+                                    '观': 'G', '察': 'C', '创': 'C', '意': 'Y', '产': 'C', '业': 'Y', '国': 'G', '际': 'J',
+                                    '政': 'Z', '治': 'Z', '房': 'F', '地': 'D', '产': 'C', '生': 'S', '活': 'H', '趋': 'Q',
+                                    '势': 'S', '信': 'X', '息': 'X', '管': 'G', '理': 'L', '副': 'F', '业': 'Y', '创': 'C',
+                                    '业': 'Y', '社': 'S', '群': 'Q', '建': 'J', '设': 'S', '意': 'Y', '义': 'Y', '数': 'S',
+                                    '字': 'Z', '健': 'J', '康': 'K', '自': 'Z', '我': 'W', '管': 'G', '理': 'L', '教': 'J',
+                                    '育': 'Y', '改': 'G', '革': 'G', '消': 'X', '费': 'F', '社': 'S', '会': 'H', '责': 'Z',
+                                    '任': 'R', '认': 'R', '知': 'Z', '网': 'W', '络': 'L', '安': 'A', '全': 'Q', '财': 'C',
+                                    '务': 'W', '自': 'Z', '由': 'Y', '农': 'N', '业': 'Y', '食': 'S', '品': 'P', '旅': 'L',
+                                    '行': 'X', '休': 'X', '闲': 'X', 'A': 'A', 'I': 'I', '出': 'C', '行': 'X', '健': 'J',
+                                    '康': 'K', '教': 'J', '育': 'Y', '家': 'J', '居': 'J', '社': 'S', '交': 'J', '理': 'L',
+                                    '财': 'C', '创': 'C', '意': 'Y', '娱': 'Y', '乐': 'L', '生': 'S', '活': 'H', '职': 'Z',
+                                    '场': 'C', '安': 'A', '全': 'Q', '育': 'Y', '儿': 'E', '数': 'S', '字': 'Z', '资': 'Z',
+                                    '产': 'C', '知': 'Z', '识': 'S', '管': 'G', '理': 'L', '科': 'K', '技': 'J', '观': 'G',
+                                    '察': 'C', '心': 'X', '理': 'L', '文': 'W', '化': 'H', '财': 'C', '富': 'F', '观': 'G',
+                                    '察': 'C', '汽': 'Q', '车': 'C', '观': 'G', '察': 'C', '未': 'W', '来': 'L', '探': 'T',
+                                    '索': 'S', '伦': 'L', '理': 'L', '阶': 'J', '段': 'D', '体': 'T', '育': 'Y', '文': 'W',
+                                    '化': 'H', '社': 'S', '交': 'J', '技': 'J', '巧': 'Q', '生': 'S', '活': 'H', '哲': 'Z',
+                                    '学': 'X', '情': 'Q', '绪': 'X', '管': 'G', '理': 'L', '原': 'Y', '生': 'S', '家': 'J',
+                                    '庭': 'T', '财': 'C', '务': 'W', '心': 'X', '理': 'L', '办': 'B', '公': 'G', '科': 'K',
+                                    '技': 'J', '虚': 'X', '拟': 'N', '现': 'X', '实': 'S', '企': 'Q', '业': 'Y', '文': 'W',
+                                    '化': 'H', '法': 'F', '律': 'L', '正': 'Z', '义': 'Y', '城': 'C', '市': 'S', '规': 'G',
+                                    '划': 'H', '应': 'Y', '用': 'Y', '家': 'J', '庭': 'T', '关': 'G', '系': 'X', '智': 'Z',
+                                    '慧': 'H', '社': 'S', '会': 'H', '心': 'X', '理': 'L', '变': 'B', '化': 'H', '未': 'W',
+                                    '来': 'L', '工': 'G', '作': 'Z', '健': 'J', '康': 'K', '职': 'Z', '场': 'C', '健': 'J',
+                                    '康': 'K', '成': 'C', '长': 'Z', '个': 'G', '人': 'R', '发': 'F', '展': 'Z', '变': 'B',
+                                    '革': 'G', '数': 'S', '据': 'J', '隐': 'Y', '私': 'S', '媒': 'M', '体': 'T', '政': 'Z',
+                                    '治': 'Z', '旅': 'L', '行': 'X', '生': 'S', '活': 'H', '政': 'Z', '策': 'C', '气': 'Q',
+                                    '候': 'H', '变': 'B', '化': 'H', '环': 'H', '境': 'J', '正': 'Z', '义': 'Y', '规': 'G',
+                                    '划': 'H', '信': 'X', '息': 'X', '安': 'A', '全': 'Q', '学': 'X', '习': 'X', '成': 'C',
+                                    '长': 'Z', '环': 'H', '境': 'J', '科': 'K', '学': 'X', '环': 'H', '保': 'B', '生': 'S',
+                                    '活': 'H', '社': 'S', '交': 'J', '网': 'W', '络': 'L', '伦': 'L', '理': 'L', '前': 'Q',
+                                    '沿': 'Y', '探': 'T', '索': 'S', '数': 'S', '字': 'Z', '社': 'S', '会': 'H', '经': 'J',
+                                    '济': 'J', '社': 'S', '会': 'H', '抗': 'K', '衰': 'S', '老': 'L', '数': 'S', '字': 'Z',
+                                    '安': 'A', '全': 'Q', '科': 'K', '技': 'J', '生': 'S', '活': 'H', '工': 'G', '作': 'Z',
+                                    '变': 'B', '革': 'G', '可': 'K', '持': 'C', '续': 'X', '生': 'S', '活': 'H'
+                                };
+                                
+                                const firstChar = name.charAt(0);
+                                if (/[A-Za-z0-9]/.test(firstChar)) {
+                                    firstLetter = firstChar.toUpperCase();
+                                } else if (charMap[firstChar]) {
+                                    firstLetter = charMap[firstChar];
                                 }
+                                
+                                tagLetters.set(name, firstLetter);
                             });
-                            Array.from(letters).sort().forEach(letter => {
+                            
+                            // 收集所有使用的字母
+                            const usedLetters = new Set(tagLetters.values());
+                            // 按顺序显示所有字母，包括未使用的
+                            allLetters.forEach(letter => {
+                                if (usedLetters.has(letter)) {
                             %>
                                 <a href="#" class="alphabet-link" data-letter="<%= letter %>"><%= letter %></a>
-                            <% }); %>
+                            <% 
+                                }
+                            });
+                            // 显示"其他"选项
+                            if (usedLetters.has('其他')) {
+                            %>
+                                <a href="#" class="alphabet-link" data-letter="其他">其他</a>
+                            <% 
+                            }
+                            %>
                         </div>
 
                         <!-- 标签网格 -->
                         <div class="row" id="tag-container">
                             <% sortedTags.forEach(function(tag){ %>
-                                <div class="col-sm-6 col-md-4 col-lg-3 mb-3 tag-item" data-tag="<%= tag.name %>">
+                                <div class="col-sm-6 col-md-4 col-lg-3 mb-3 tag-item" data-tag="<%= tag.name %>" data-letter="<%= tagLetters.get(tag.name) %>">
                                     <a href="<%= sanitizeFileName(tag.name) %>.html" class="tag-card card text-decoration-none">
                                         <div class="card-body p-3">
                                             <div class="d-flex justify-content-between align-items-center">
@@ -162,9 +241,7 @@
                 const tagItems = document.querySelectorAll('.tag-item');
                 
                 tagItems.forEach(item => {
-                    const tagName = item.getAttribute('data-tag');
-                    const firstChar = tagName.charAt(0).toUpperCase();
-                    const tagLetter = /[A-Z0-9]/.test(firstChar) ? firstChar : '其他';
+                    const tagLetter = item.getAttribute('data-letter');
                     
                     if (letter === 'all' || tagLetter === letter) {
                         item.style.display = '';
