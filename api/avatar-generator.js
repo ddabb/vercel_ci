@@ -81,81 +81,107 @@ const templates = {
 
 // 字体样式配置
 const fontStyles = {
+    // 无衬线字体
     sans: {
         name: '黑体',
-        fontFamily: 'sans-serif',
+        fontFamily: 'Inter, sans-serif',
         fontWeight: 'bold',
         fontStyle: 'normal'
     },
+    // 衬线字体
     serif: {
         name: '宋体',
-        fontFamily: 'serif',
+        fontFamily: 'Noto Sans SC, serif',
         fontWeight: 'bold',
         fontStyle: 'normal'
     },
+    // 等宽字体
     mono: {
         name: '等宽',
-        fontFamily: 'monospace',
+        fontFamily: 'Fira Code, JetBrains Mono, monospace',
         fontWeight: 'bold',
         fontStyle: 'normal'
     },
+    // 细体无衬线
     sansLight: {
         name: '细体',
-        fontFamily: 'sans-serif',
+        fontFamily: 'Noto Sans SC, sans-serif',
         fontWeight: '300',
         fontStyle: 'normal'
     },
+    // 中等无衬线
     sansMedium: {
         name: '中体',
-        fontFamily: 'sans-serif',
+        fontFamily: 'Inter, Roboto, sans-serif',
         fontWeight: '500',
         fontStyle: 'normal'
     },
+    // 粗体无衬线
     sansBold: {
         name: '特粗',
-        fontFamily: 'sans-serif',
+        fontFamily: 'Inter, Roboto, sans-serif',
         fontWeight: '900',
         fontStyle: 'normal'
     },
+    // 斜体
     sansItalic: {
         name: '斜体',
-        fontFamily: 'sans-serif',
+        fontFamily: 'Inter, Roboto, sans-serif',
         fontWeight: 'bold',
         fontStyle: 'italic'
     },
+    // 细宋体
     serifLight: {
         name: '细宋',
-        fontFamily: 'serif',
+        fontFamily: 'Noto Sans SC, serif',
         fontWeight: '300',
         fontStyle: 'normal'
     },
+    // 意大利体
     cursive: {
         name: '手写体',
-        fontFamily: 'cursive',
+        fontFamily: 'Pacifico, Dancing Script, cursive',
         fontWeight: 'normal',
         fontStyle: 'normal'
     },
+    // 装饰体
     fantasy: {
         name: '艺术体',
-        fontFamily: 'fantasy',
+        fontFamily: 'Bangers, Comic Neue, fantasy',
         fontWeight: 'bold',
         fontStyle: 'normal'
     },
+    // 系统默认加粗
     systemBold: {
         name: '系统粗体',
-        fontFamily: 'sans-serif',
+        fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial',
         fontWeight: '800',
         fontStyle: 'normal'
     },
+    // 圆润体
     rounded: {
         name: '圆润体',
-        fontFamily: 'sans-serif',
+        fontFamily: 'Montserrat, Open Sans, sans-serif',
         fontWeight: 'bold',
         fontStyle: 'normal'
     }
 };
 
-// 绘制背景
+// 兼容旧版 Canvas 的圆角矩形
+function _roundRect(ctx, x, y, w, h, r) {
+    ctx.moveTo(x + r, y);
+    ctx.lineTo(x + w - r, y);
+    ctx.quadraticCurveTo(x + w, y, x + w, y + r);
+    ctx.lineTo(x + w, y + h - r);
+    ctx.quadraticCurveTo(x + w, y + h, x + w - r, y + h);
+    ctx.lineTo(x + r, y + h);
+    ctx.quadraticCurveTo(x, y + h, x, y + h - r);
+    ctx.lineTo(x, y + r);
+    ctx.quadraticCurveTo(x, y, x + r, y);
+    ctx.closePath();
+}
+
+// 绘制背景（支持渐变/纯色 + 圆形/圆角/方形 + 边框）
 function drawBackground(ctx, canvasWidth, canvasHeight, template) {
     const style = template.style;
 
@@ -191,8 +217,7 @@ function drawBackground(ctx, canvasWidth, canvasHeight, template) {
     } else if (borderRadius && borderRadius.includes('px')) {
         // 圆角矩形
         const r = Math.min(parseInt(borderRadius), canvasWidth / 2);
-        // 使用 roundRect 方法
-        ctx.roundRect(0, 0, canvasWidth, canvasHeight, r);
+        ctx.roundRect ? ctx.roundRect(0, 0, canvasWidth, canvasHeight, r) : _roundRect(ctx, 0, 0, canvasWidth, canvasHeight, r);
     } else {
         // 方形
         ctx.rect(0, 0, canvasWidth, canvasHeight);
@@ -229,50 +254,65 @@ module.exports = async (req, res) => {
         const selectedTemplate = templates[template] || templates.template1;
         const selectedFontStyle = fontStyles[fontStyle] || fontStyles.sans;
         
-        // 创建 Canvas
-        const canvasWidth = 800;
-        const canvasHeight = 800;
+        // 创建 Canvas（与原始版本一致，使用 200x200 画布）
+        const canvasWidth = 200;
+        const canvasHeight = 200;
         const canvas = createCanvas(canvasWidth, canvasHeight);
         const ctx = canvas.getContext('2d');
+        
+        // 清空画布，实现透明背景
+        ctx.clearRect(0, 0, canvasWidth, canvasHeight);
         
         // 绘制背景
         drawBackground(ctx, canvasWidth, canvasHeight, selectedTemplate);
         
-        // 计算字体大小
+        // 计算字体大小（与原始版本一致）
         const charCount = text.length;
         let fontSize;
-        if (charCount === 1) fontSize = 180;
-        else if (charCount === 2) fontSize = 160;
-        else if (charCount === 3) fontSize = 136;
-        else if (charCount === 4) fontSize = 116;
-        else fontSize = 136;
+        if (charCount === 1) fontSize = 90;
+        else if (charCount === 2) fontSize = 80;
+        else if (charCount === 3) fontSize = 68;
+        else if (charCount === 4) fontSize = 58;
+        else fontSize = 68;
         
         // 设置字体
         ctx.font = `${selectedFontStyle.fontWeight} ${fontSize}px ${selectedFontStyle.fontFamily}`;
         ctx.textAlign = 'center';
         ctx.textBaseline = 'middle';
         
-        // 设置文字颜色
+        // 文字颜色
         let textColor = '#ffffff';
         const isLightBackground = ['template3', 'template7', 'template9'].includes(template);
-        if (isLightBackground) {
-            textColor = '#2c3e50';
+        if (textEffect === 'glow') {
+            textColor = '#00ff9d';
+        } else if (isLightBackground) {
+            if (textEffect === 'stroke') {
+                textColor = '#ffffff'; // 描边效果始终白字
+            } else {
+                textColor = '#2c3e50'; // 浅色背景默认深色字
+            }
         }
         
-        // 应用文字效果
+        // 阴影参数
+        let shadowColor = 'transparent';
+        let shadowBlur = 0;
+        let shadowOffsetX = 0;
+        let shadowOffsetY = 0;
+
         if (textEffect === 'shadow') {
-            ctx.shadowColor = isLightBackground ? 'rgba(0,0,0,0.3)' : 'rgba(0,0,0,0.5)';
-            ctx.shadowBlur = 8;
-            ctx.shadowOffsetX = 3;
-            ctx.shadowOffsetY = 3;
+            shadowColor = isLightBackground ? 'rgba(0,0,0,0.3)' : 'rgba(0,0,0,0.5)';
+            shadowBlur = 8;
+            shadowOffsetX = 3;
+            shadowOffsetY = 3;
         } else if (textEffect === 'glow') {
-            ctx.shadowColor = '#00ff9d';
-            ctx.shadowBlur = 20;
-            ctx.shadowOffsetX = 0;
-            ctx.shadowOffsetY = 0;
-            textColor = '#00ff9d';
-        } else if (textEffect === 'stroke') {
-            // 描边效果
+            shadowColor = '#00ff9d';
+            shadowBlur = 20;
+            shadowOffsetX = 0;
+            shadowOffsetY = 0;
+        }
+        
+        // 描边效果：先画描边，再画主文字
+        if (textEffect === 'stroke') {
             const strokeColor = isLightBackground ? '#2c3e50' : '#2c3e50';
             const strokeOffsets = [
                 [1, 1], [-1, -1], [1, -1], [-1, 1],
@@ -284,15 +324,20 @@ module.exports = async (req, res) => {
             strokeOffsets.forEach(([ox, oy]) => {
                 ctx.fillText(text, canvasWidth / 2 + ox, canvasHeight / 2 + oy);
             });
-        } else if (textEffect === '3d') {
-            // 立体效果
+        }
+
+        // 立体效果：多层阴影模拟
+        if (textEffect === '3d') {
             ctx.fillStyle = 'rgba(0,0,0,0.25)';
             ctx.shadowColor = 'transparent';
             ctx.shadowBlur = 0;
             ctx.fillText(text, canvasWidth / 2 + 4, canvasHeight / 2 + 4);
+            ctx.fillStyle = 'rgba(0,0,0,0.25)';
             ctx.fillText(text, canvasWidth / 2 + 2, canvasHeight / 2 + 2);
-        } else if (textEffect === 'gradient') {
-            // 渐变文字
+        }
+
+        // 设置文字样式（渐变 or 纯色）
+        if (textEffect === 'gradient') {
             const gradient = ctx.createLinearGradient(0, 0, canvasWidth, 0);
             if (isLightBackground) {
                 gradient.addColorStop(0, '#3498db');
@@ -305,10 +350,11 @@ module.exports = async (req, res) => {
             ctx.shadowColor = 'transparent';
             ctx.shadowBlur = 0;
         } else {
-            // 普通效果
             ctx.fillStyle = textColor;
-            ctx.shadowColor = 'transparent';
-            ctx.shadowBlur = 0;
+            ctx.shadowColor = shadowColor;
+            ctx.shadowBlur = shadowBlur;
+            ctx.shadowOffsetX = shadowOffsetX;
+            ctx.shadowOffsetY = shadowOffsetY;
         }
         
         // 绘制文字
