@@ -79,89 +79,89 @@ const templates = {
     }
 };
 
-// 字体样式配置
+// 字体样式配置 - 使用更通用的字体，确保服务器环境支持中文
 const fontStyles = {
     // 无衬线字体
     sans: {
         name: '黑体',
-        fontFamily: 'Inter, sans-serif',
+        fontFamily: 'sans-serif',
         fontWeight: 'bold',
         fontStyle: 'normal'
     },
     // 衬线字体
     serif: {
         name: '宋体',
-        fontFamily: 'Noto Sans SC, serif',
+        fontFamily: 'serif',
         fontWeight: 'bold',
         fontStyle: 'normal'
     },
     // 等宽字体
     mono: {
         name: '等宽',
-        fontFamily: 'Fira Code, JetBrains Mono, monospace',
+        fontFamily: 'monospace',
         fontWeight: 'bold',
         fontStyle: 'normal'
     },
     // 细体无衬线
     sansLight: {
         name: '细体',
-        fontFamily: 'Noto Sans SC, sans-serif',
+        fontFamily: 'sans-serif',
         fontWeight: '300',
         fontStyle: 'normal'
     },
     // 中等无衬线
     sansMedium: {
         name: '中体',
-        fontFamily: 'Inter, Roboto, sans-serif',
+        fontFamily: 'sans-serif',
         fontWeight: '500',
         fontStyle: 'normal'
     },
     // 粗体无衬线
     sansBold: {
         name: '特粗',
-        fontFamily: 'Inter, Roboto, sans-serif',
+        fontFamily: 'sans-serif',
         fontWeight: '900',
         fontStyle: 'normal'
     },
     // 斜体
     sansItalic: {
         name: '斜体',
-        fontFamily: 'Inter, Roboto, sans-serif',
+        fontFamily: 'sans-serif',
         fontWeight: 'bold',
         fontStyle: 'italic'
     },
     // 细宋体
     serifLight: {
         name: '细宋',
-        fontFamily: 'Noto Sans SC, serif',
+        fontFamily: 'serif',
         fontWeight: '300',
         fontStyle: 'normal'
     },
     // 意大利体
     cursive: {
         name: '手写体',
-        fontFamily: 'Pacifico, Dancing Script, cursive',
+        fontFamily: 'cursive',
         fontWeight: 'normal',
         fontStyle: 'normal'
     },
     // 装饰体
     fantasy: {
         name: '艺术体',
-        fontFamily: 'Bangers, Comic Neue, fantasy',
+        fontFamily: 'fantasy',
         fontWeight: 'bold',
         fontStyle: 'normal'
     },
     // 系统默认加粗
     systemBold: {
         name: '系统粗体',
-        fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial',
+        fontFamily: 'sans-serif',
         fontWeight: '800',
         fontStyle: 'normal'
     },
     // 圆润体
     rounded: {
         name: '圆润体',
-        fontFamily: 'Montserrat, Open Sans, sans-serif',
+        fontFamily: 'sans-serif',
         fontWeight: 'bold',
         fontStyle: 'normal'
     }
@@ -254,9 +254,9 @@ module.exports = async (req, res) => {
         const selectedTemplate = templates[template] || templates.template1;
         const selectedFontStyle = fontStyles[fontStyle] || fontStyles.sans;
         
-        // 创建 Canvas（与原始版本一致，使用 200x200 画布）
-        const canvasWidth = 200;
-        const canvasHeight = 200;
+        // 创建 Canvas（使用 1:1 绘制比例，800x800 画布以获得更好的清晰度）
+        const canvasWidth = 800;
+        const canvasHeight = 800;
         const canvas = createCanvas(canvasWidth, canvasHeight);
         const ctx = canvas.getContext('2d');
         
@@ -266,16 +266,16 @@ module.exports = async (req, res) => {
         // 绘制背景
         drawBackground(ctx, canvasWidth, canvasHeight, selectedTemplate);
         
-        // 计算字体大小（与原始版本一致）
+        // 计算字体大小（根据字符数量调整）
         const charCount = text.length;
         let fontSize;
-        if (charCount === 1) fontSize = 90;
-        else if (charCount === 2) fontSize = 80;
-        else if (charCount === 3) fontSize = 68;
-        else if (charCount === 4) fontSize = 58;
-        else fontSize = 68;
+        if (charCount === 1) fontSize = 360;
+        else if (charCount === 2) fontSize = 320;
+        else if (charCount === 3) fontSize = 272;
+        else if (charCount === 4) fontSize = 232;
+        else fontSize = 272;
         
-        // 设置字体
+        // 设置字体 - 使用通用字体确保中文显示
         ctx.font = `${selectedFontStyle.fontWeight} ${fontSize}px ${selectedFontStyle.fontFamily}`;
         ctx.textAlign = 'center';
         ctx.textBaseline = 'middle';
@@ -301,12 +301,12 @@ module.exports = async (req, res) => {
 
         if (textEffect === 'shadow') {
             shadowColor = isLightBackground ? 'rgba(0,0,0,0.3)' : 'rgba(0,0,0,0.5)';
-            shadowBlur = 8;
-            shadowOffsetX = 3;
-            shadowOffsetY = 3;
+            shadowBlur = 16;
+            shadowOffsetX = 6;
+            shadowOffsetY = 6;
         } else if (textEffect === 'glow') {
             shadowColor = '#00ff9d';
-            shadowBlur = 20;
+            shadowBlur = 40;
             shadowOffsetX = 0;
             shadowOffsetY = 0;
         }
@@ -315,8 +315,8 @@ module.exports = async (req, res) => {
         if (textEffect === 'stroke') {
             const strokeColor = isLightBackground ? '#2c3e50' : '#2c3e50';
             const strokeOffsets = [
-                [1, 1], [-1, -1], [1, -1], [-1, 1],
-                [0, 1], [0, -1], [1, 0], [-1, 0]
+                [2, 2], [-2, -2], [2, -2], [-2, 2],
+                [0, 2], [0, -2], [2, 0], [-2, 0]
             ];
             ctx.fillStyle = strokeColor;
             ctx.shadowColor = 'transparent';
@@ -331,9 +331,9 @@ module.exports = async (req, res) => {
             ctx.fillStyle = 'rgba(0,0,0,0.25)';
             ctx.shadowColor = 'transparent';
             ctx.shadowBlur = 0;
-            ctx.fillText(text, canvasWidth / 2 + 4, canvasHeight / 2 + 4);
+            ctx.fillText(text, canvasWidth / 2 + 8, canvasHeight / 2 + 8);
             ctx.fillStyle = 'rgba(0,0,0,0.25)';
-            ctx.fillText(text, canvasWidth / 2 + 2, canvasHeight / 2 + 2);
+            ctx.fillText(text, canvasWidth / 2 + 4, canvasHeight / 2 + 4);
         }
 
         // 设置文字样式（渐变 or 纯色）
