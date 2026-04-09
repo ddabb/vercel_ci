@@ -1,5 +1,8 @@
 {
   "html/24point.html": {
     "msg": "缺少 <h1> 标签"
+  },
+  "html/avatar-generator.html": {
+    "msg": "缺少 <meta name=\"keywords\"> 标签"
   }
 }
