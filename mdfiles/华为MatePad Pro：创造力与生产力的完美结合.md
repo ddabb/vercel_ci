@@ -2,7 +2,7 @@
 title: 华为MatePad Pro：创造力与生产力的完美结合
 category: 科技产品
 tags: [华为, MatePad Pro, 平板电脑, 创造力, 生产力]
-description: 本文分享了华为MatePad Pro的使用体验，包括其设计、性能、功能等方面，展示了它作为创造力与生产力工具的优势。
+description: 分享了华为MatePad Pro的使用体验：其设计、性能、功能等方面，展示了它作为创造力与生产力工具的优势。
 ---
 
 # 华为MatePad Pro：创造力与生产力的完美结合

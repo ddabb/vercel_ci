@@ -1,6 +1,6 @@
 ---
 title: SpaceX上市：2026年航天科技投资新风口
-description: 分析SpaceX上市的意义和影响，探讨2026年航天科技领域的投资机会
+description: SpaceX上市的意义和影响？聊聊2026年航天科技领域的投资机会
 category: 科技前沿
 tags: [科技前沿, 航天科技, 投资策略, 2026]
 ---

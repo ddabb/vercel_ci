@@ -2,7 +2,7 @@
 title: 华为MateBook X Pro：商务人士的理想选择
 category: 科技产品
 tags: [华为, MateBook X Pro, 笔记本电脑, 商务办公, 轻薄本]
-description: 本文分享了华为MateBook X Pro的使用体验，包括其设计、性能、功能等方面，展示了它作为商务人士理想选择的优势。
+description: 分享了华为MateBook X Pro的使用体验：其设计、性能、功能等方面，展示了它作为商务人士理想选择的优势。
 ---
 
 # 华为MateBook X Pro：商务人士的理想选择

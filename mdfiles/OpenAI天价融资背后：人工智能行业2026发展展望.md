@@ -1,6 +1,6 @@
 ---
 title: OpenAI天价融资背后：人工智能行业2026发展展望
-description: 分析OpenAI天价融资的原因，探讨人工智能行业2026年的发展趋势和投资机会
+description: OpenAI天价融资的原因？聊聊人工智能行业2026年的发展趋势和投资机会
 category: 人工智能
 tags: [人工智能, 科技前沿, OpenAI, 2026]
 ---

@@ -2,7 +2,7 @@
 title: 为什么现在的年轻人都开始做Tiktok了
 category: 自媒体观察
 tags: [TikTok, 自媒体, 年轻人, 创业, 短视频]
-description: 分析年轻人做TikTok的现象，探讨短视频创业趋势。
+description: 年轻人做TikTok的现象？聊聊短视频创业趋势。
 ---
 
 # 为什么现在的年轻人都开始做TikTok了
